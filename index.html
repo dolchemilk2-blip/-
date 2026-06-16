@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="meta.title">Nature's Care — Premium qida heyvanlar üçün</title>
+  <meta name="description" data-i18n="meta.description" content="Premium kateqoriyalı pişik və itlər üçün qida. Təbii tərkib, balanslaşdırılmış formula." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <!-- ===== Header ===== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#home" class="logo" aria-label="Nature's Care">
+        <svg class="logo__mark" viewBox="0 0 48 48" width="40" height="40" aria-hidden="true">
+          <path d="M24 4C14 12 8 20 8 29a16 16 0 0 0 32 0c0-9-6-17-16-25z" fill="#3a7d44"/>
+          <path d="M24 12c-5 5-9 11-9 17a9 9 0 0 0 18 0c0-6-4-12-9-17z" fill="#a3c585"/>
+        </svg>
+        <span class="logo__text">Nature's<strong>Care</strong></span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#home" class="nav__link" data-i18n="nav.home">Главная</a>
+        <a href="#products" class="nav__link" data-i18n="nav.products">Продукция</a>
+        <a href="#about" class="nav__link" data-i18n="nav.about">О бренде</a>
+        <a href="#quality" class="nav__link" data-i18n="nav.quality">Качество</a>
+        <a href="#stores" class="nav__link" data-i18n="nav.stores">Где купить</a>
+        <a href="#contact" class="nav__link" data-i18n="nav.contact">Контакты</a>
+      </nav>
+
+      <div class="header__actions">
+        <div class="lang" id="lang">
+          <button class="lang__current" id="langBtn" aria-haspopup="true" aria-expanded="false">
+            <span id="langLabel">RU</span>
+            <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <ul class="lang__menu" id="langMenu" role="menu">
+            <li><button data-lang="az" role="menuitem">AZ — Azərbaycan</button></li>
+            <li><button data-lang="ru" role="menuitem">RU — Русский</button></li>
+            <li><button data-lang="en" role="menuitem">EN — English</button></li>
+          </ul>
+        </div>
+        <button class="burger" id="burger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero" id="home">
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <span class="badge" data-i18n="hero.badge">Премиум-питание</span>
+        <h1 class="hero__title" data-i18n="hero.title">Здоровое питание для вашего любимца</h1>
+        <p class="hero__text" data-i18n="hero.text">Натуральные ингредиенты и сбалансированные формулы для кошек и собак любого возраста.</p>
+        <div class="hero__actions">
+          <a href="#products" class="btn btn--primary" data-i18n="hero.cta1">Смотреть продукцию</a>
+          <a href="#about" class="btn btn--ghost" data-i18n="hero.cta2">О бренде</a>
+        </div>
+        <div class="hero__stats">
+          <div class="stat"><strong>100%</strong><span data-i18n="hero.stat1">натуральный состав</span></div>
+          <div class="stat"><strong>30+</strong><span data-i18n="hero.stat2">видов корма</span></div>
+          <div class="stat"><strong>20</strong><span data-i18n="hero.stat3">лет на рынке</span></div>
+        </div>
+      </div>
+      <div class="hero__visual">
+        <div class="hero__card">
+          <svg viewBox="0 0 64 64" width="80" height="80" aria-hidden="true"><circle cx="22" cy="20" r="6" fill="#3a7d44"/><circle cx="42" cy="20" r="6" fill="#3a7d44"/><circle cx="13" cy="34" r="5.5" fill="#3a7d44"/><circle cx="51" cy="34" r="5.5" fill="#3a7d44"/><path d="M32 30c-8 0-15 6-15 14 0 6 5 9 15 9s15-3 15-9c0-8-7-14-15-14z" fill="#3a7d44"/></svg>
+          <p data-i18n="hero.cardText">Забота о здоровье — в каждой порции</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Features ===== -->
+  <section class="features">
+    <div class="container features__grid">
+      <div class="feature">
+        <div class="feature__icon">🌿</div>
+        <h3 data-i18n="features.f1.title">Натуральный состав</h3>
+        <p data-i18n="features.f1.text">Без искусственных красителей и консервантов.</p>
+      </div>
+      <div class="feature">
+        <div class="feature__icon">⚖️</div>
+        <h3 data-i18n="features.f2.title">Баланс нутриентов</h3>
+        <p data-i18n="features.f2.text">Витамины и минералы для каждого этапа жизни.</p>
+      </div>
+      <div class="feature">
+        <div class="feature__icon">🐾</div>
+        <h3 data-i18n="features.f3.title">Для кошек и собак</h3>
+        <p data-i18n="features.f3.text">Линейки под породу, возраст и потребности.</p>
+      </div>
+      <div class="feature">
+        <div class="feature__icon">🔬</div>
+        <h3 data-i18n="features.f4.title">Контроль качества</h3>
+        <p data-i18n="features.f4.text">Проверка на каждом этапе производства.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Products ===== -->
+  <section class="section" id="products">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__tag" data-i18n="products.tag">Наша продукция</span>
+        <h2 class="section__title" data-i18n="products.title">Линейки кормов</h2>
+        <p class="section__subtitle" data-i18n="products.subtitle">Подберите подходящий рацион для вашего питомца.</p>
+      </div>
+
+      <div class="tabs" id="tabs">
+        <button class="tab is-active" data-tab="cats" data-i18n="products.tabCats">Для кошек</button>
+        <button class="tab" data-tab="dogs" data-i18n="products.tabDogs">Для собак</button>
+      </div>
+
+      <div class="products" id="productsGrid"></div>
+    </div>
+  </section>
+
+  <!-- ===== About ===== -->
+  <section class="about" id="about">
+    <div class="container about__inner">
+      <div class="about__media">
+        <div class="about__imgblock"></div>
+      </div>
+      <div class="about__content">
+        <span class="section__tag" data-i18n="about.tag">О бренде</span>
+        <h2 class="section__title" data-i18n="about.title">Природа в основе питания</h2>
+        <p data-i18n="about.text1">Мы создаём корма, вдохновлённые естественным рационом животных. Тщательно отобранные ингредиенты обеспечивают полноценное питание и поддерживают здоровье вашего любимца на протяжении всей жизни.</p>
+        <p data-i18n="about.text2">Каждая формула разработана при участии ветеринаров и специалистов по питанию.</p>
+        <ul class="about__list">
+          <li data-i18n="about.li1">Отборное мясо как первый ингредиент</li>
+          <li data-i18n="about.li2">Поддержка иммунитета и пищеварения</li>
+          <li data-i18n="about.li3">Здоровая кожа и блестящая шерсть</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Quality ===== -->
+  <section class="section quality" id="quality">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__tag" data-i18n="quality.tag">Качество</span>
+        <h2 class="section__title" data-i18n="quality.title">Как мы заботимся о качестве</h2>
+      </div>
+      <div class="steps">
+        <div class="step"><span class="step__num">01</span><h3 data-i18n="quality.s1.title">Отбор сырья</h3><p data-i18n="quality.s1.text">Только проверенные поставщики и свежие ингредиенты.</p></div>
+        <div class="step"><span class="step__num">02</span><h3 data-i18n="quality.s2.title">Производство</h3><p data-i18n="quality.s2.text">Современные технологии сохраняют пользу продуктов.</p></div>
+        <div class="step"><span class="step__num">03</span><h3 data-i18n="quality.s3.title">Лабораторный контроль</h3><p data-i18n="quality.s3.text">Каждая партия проходит проверку безопасности.</p></div>
+        <div class="step"><span class="step__num">04</span><h3 data-i18n="quality.s4.title">Упаковка</h3><p data-i18n="quality.s4.text">Защита свежести и сохранение питательных свойств.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Stores / CTA ===== -->
+  <section class="cta" id="stores">
+    <div class="container cta__inner">
+      <h2 data-i18n="stores.title">Где купить нашу продукцию</h2>
+      <p data-i18n="stores.text">Наши корма доступны в зоомагазинах и у официальных дистрибьюторов. Свяжитесь с нами, чтобы узнать ближайшую точку продаж.</p>
+      <a href="#contact" class="btn btn--light" data-i18n="stores.cta">Связаться с нами</a>
+    </div>
+  </section>
+
+  <!-- ===== Contact ===== -->
+  <section class="section" id="contact">
+    <div class="container contact__inner">
+      <div class="contact__info">
+        <span class="section__tag" data-i18n="contact.tag">Контакты</span>
+        <h2 class="section__title" data-i18n="contact.title">Свяжитесь с нами</h2>
+        <p data-i18n="contact.text">Есть вопросы о продукции или сотрудничестве? Мы будем рады помочь.</p>
+        <ul class="contact__list">
+          <li><span>📍</span><span data-i18n="contact.address">Баку, Азербайджан</span></li>
+          <li><span>✉️</span><a href="mailto:info@naturescare.az">info@naturescare.az</a></li>
+          <li><span>📞</span><a href="tel:+994000000000">+994 00 000 00 00</a></li>
+        </ul>
+      </div>
+      <form class="contact__form" id="contactForm">
+        <label>
+          <span data-i18n="contact.name">Имя</span>
+          <input type="text" name="name" required />
+        </label>
+        <label>
+          <span data-i18n="contact.email">E-mail</span>
+          <input type="email" name="email" required />
+        </label>
+        <label>
+          <span data-i18n="contact.message">Сообщение</span>
+          <textarea name="message" rows="4" required></textarea>
+        </label>
+        <button type="submit" class="btn btn--primary" data-i18n="contact.send">Отправить</button>
+        <p class="form__ok" id="formOk" data-i18n="contact.ok" hidden>Спасибо! Мы свяжемся с вами.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col">
+        <a href="#home" class="logo logo--light">
+          <svg class="logo__mark" viewBox="0 0 48 48" width="36" height="36" aria-hidden="true"><path d="M24 4C14 12 8 20 8 29a16 16 0 0 0 32 0c0-9-6-17-16-25z" fill="#a3c585"/><path d="M24 12c-5 5-9 11-9 17a9 9 0 0 0 18 0c0-6-4-12-9-17z" fill="#fff"/></svg>
+          <span class="logo__text">Nature's<strong>Care</strong></span>
+        </a>
+        <p data-i18n="footer.about">Премиальное питание для кошек и собак, вдохновлённое природой.</p>
+      </div>
+      <div class="footer__col">
+        <h4 data-i18n="footer.nav">Навигация</h4>
+        <a href="#products" data-i18n="nav.products">Продукция</a>
+        <a href="#about" data-i18n="nav.about">О бренде</a>
+        <a href="#quality" data-i18n="nav.quality">Качество</a>
+        <a href="#contact" data-i18n="nav.contact">Контакты</a>
+      </div>
+      <div class="footer__col">
+        <h4 data-i18n="footer.contacts">Контакты</h4>
+        <a href="mailto:info@naturescare.az">info@naturescare.az</a>
+        <a href="tel:+994000000000">+994 00 000 00 00</a>
+        <span data-i18n="contact.address">Баку, Азербайджан</span>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <span>© <span id="year"></span> Nature's Care. <span data-i18n="footer.rights">Все права защищены.</span></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/translations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
