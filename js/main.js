@@ -31,7 +31,8 @@ function applyTranslations(lang) {
   // Метка языка в кнопке
   document.getElementById('langLabel').textContent = lang.toUpperCase();
 
-  // Перерисовать продукты на нужном языке
+  // Перерисовать линейки и продукты на нужном языке
+  renderRanges(lang);
   renderProducts(currentTab, lang);
 }
 
@@ -41,26 +42,51 @@ function setLang(lang) {
   applyTranslations(lang);
 }
 
-// ===== Продукты =====
+// ===== Линейки бренда =====
+function renderRanges(lang) {
+  const grid = document.getElementById('rangesGrid');
+  if (!grid) return;
+  grid.innerHTML = RANGES.map(r => {
+    const t = r[lang] || r.ru;
+    return `
+      <article class="range">
+        <div class="range__icon">${r.emoji}</div>
+        <h3 class="range__name">${t.name}</h3>
+        <p class="range__desc">${t.desc}</p>
+      </article>`;
+  }).join('');
+}
+
+// ===== Каталог продуктов (сгруппирован) =====
 let currentTab = 'cats';
 
+function productCard(item, lang) {
+  const t = item[lang] || item.ru;
+  const tags = t.tags.map(x => `<span>${x}</span>`).join('');
+  return `
+    <article class="product">
+      <div class="product__img" style="background:linear-gradient(150deg,#eaf1e3,#d4e3c5)">${item.emoji}</div>
+      <div class="product__body">
+        <span class="product__cat">${t.cat}</span>
+        <h3 class="product__name">${t.name}</h3>
+        <p class="product__desc">${t.desc}</p>
+        <div class="product__tags">${tags}</div>
+      </div>
+    </article>`;
+}
+
 function renderProducts(tab, lang) {
-  const grid = document.getElementById('productsGrid');
-  if (!grid) return;
-  const items = PRODUCTS[tab] || [];
-  grid.innerHTML = items.map(p => {
-    const t = p[lang] || p.ru;
-    const tags = t.tags.map(x => `<span>${x}</span>`).join('');
+  const wrap = document.getElementById('productsGrid');
+  if (!wrap) return;
+  const groups = PRODUCTS[tab] || [];
+  wrap.innerHTML = groups.map(g => {
+    const groupName = (g.group && (g.group[lang] || g.group.ru)) || '';
+    const cards = g.items.map(it => productCard(it, lang)).join('');
     return `
-      <article class="product">
-        <div class="product__img" style="background:linear-gradient(150deg,#eaf1e3,#d4e3c5)">${p.emoji}</div>
-        <div class="product__body">
-          <span class="product__cat">${t.cat}</span>
-          <h3 class="product__name">${t.name}</h3>
-          <p class="product__desc">${t.desc}</p>
-          <div class="product__tags">${tags}</div>
-        </div>
-      </article>`;
+      <div class="product-group">
+        <h3 class="product-group__title">${groupName}</h3>
+        <div class="products">${cards}</div>
+      </div>`;
   }).join('');
 }
 

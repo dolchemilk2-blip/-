@@ -141,6 +141,26 @@ h1, h2, h3, h4 { font-family: var(--head); line-height: 1.2; font-weight: 700; }
 .section__title { font-size: clamp(28px, 4vw, 40px); color: var(--ink); }
 .section__subtitle { color: var(--muted); font-size: 17px; margin-top: 14px; }
 
+/* ===== Ranges (линейки бренда) ===== */
+.ranges__title { text-align: center; font-size: 22px; margin-bottom: 24px; color: var(--ink); }
+.ranges { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; margin-bottom: 60px; }
+.range {
+  background: var(--cream); border-radius: var(--radius); padding: 28px 24px;
+  border: 1px solid rgba(31,42,36,.05); text-align: center; transition: .25s;
+}
+.range:hover { background: #fff; box-shadow: var(--shadow); transform: translateY(-4px); }
+.range__icon { font-size: 34px; margin-bottom: 12px; }
+.range__name { font-size: 19px; margin-bottom: 8px; color: var(--green-dark); }
+.range__desc { font-size: 13px; color: var(--muted); }
+
+/* ===== Product groups ===== */
+.product-group { margin-bottom: 50px; }
+.product-group:last-child { margin-bottom: 0; }
+.product-group__title {
+  font-size: 22px; color: var(--ink); margin-bottom: 22px; padding-bottom: 10px;
+  border-bottom: 2px solid rgba(58,125,68,.15); display: inline-block;
+}
+
 /* ===== Tabs + Products ===== */
 .tabs { display: flex; justify-content: center; gap: 10px; margin-bottom: 40px; }
 .tab {
@@ -230,6 +250,7 @@ h1, h2, h3, h4 { font-family: var(--head); line-height: 1.2; font-weight: 700; }
 /* ===== Responsive ===== */
 @media (max-width: 960px) {
   .features__grid { grid-template-columns: repeat(2, 1fr); }
+  .ranges { grid-template-columns: repeat(2, 1fr); }
   .products { grid-template-columns: repeat(2, 1fr); }
   .steps { grid-template-columns: repeat(2, 1fr); }
   .hero__inner { grid-template-columns: 1fr; text-align: center; }
@@ -250,7 +271,7 @@ h1, h2, h3, h4 { font-family: var(--head); line-height: 1.2; font-weight: 700; }
   .burger { display: flex; }
 }
 @media (max-width: 560px) {
-  .features__grid, .products, .steps { grid-template-columns: 1fr; }
+  .features__grid, .ranges, .products, .steps { grid-template-columns: 1fr; }
   .footer__inner { grid-template-columns: 1fr; }
   .section { padding: 64px 0; }
 }

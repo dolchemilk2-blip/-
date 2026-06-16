@@ -30,10 +30,11 @@ const TRANSLATIONS = {
     "features.f4.title": "Keyfiyyət nəzarəti",
     "features.f4.text": "İstehsalın hər mərhələsində yoxlama.",
     "products.tag": "Məhsullarımız",
-    "products.title": "Qida xətləri",
+    "products.title": "Məhsul kataloqu",
     "products.subtitle": "Sevimli heyvanınız üçün uyğun rasionu seçin.",
     "products.tabCats": "Pişiklər üçün",
     "products.tabDogs": "İtlər üçün",
+    "products.rangesTitle": "Məhsul xətlərimiz",
     "about.tag": "Brend haqqında",
     "about.title": "Qidalanmanın əsasında təbiət",
     "about.text1": "Biz heyvanların təbii rasionundan ilhamlanaraq qida yaradırıq. Diqqətlə seçilmiş tərkiblər tam qidalanmanı təmin edir və sevimlinizin sağlamlığını ömür boyu dəstəkləyir.",
@@ -96,10 +97,11 @@ const TRANSLATIONS = {
     "features.f4.title": "Контроль качества",
     "features.f4.text": "Проверка на каждом этапе производства.",
     "products.tag": "Наша продукция",
-    "products.title": "Линейки кормов",
+    "products.title": "Каталог продукции",
     "products.subtitle": "Подберите подходящий рацион для вашего питомца.",
     "products.tabCats": "Для кошек",
     "products.tabDogs": "Для собак",
+    "products.rangesTitle": "Наши линейки",
     "about.tag": "О бренде",
     "about.title": "Природа в основе питания",
     "about.text1": "Мы создаём корма, вдохновлённые естественным рационом животных. Тщательно отобранные ингредиенты обеспечивают полноценное питание и поддерживают здоровье вашего любимца на протяжении всей жизни.",
@@ -162,10 +164,11 @@ const TRANSLATIONS = {
     "features.f4.title": "Quality control",
     "features.f4.text": "Checks at every production stage.",
     "products.tag": "Our products",
-    "products.title": "Food lines",
+    "products.title": "Product catalog",
     "products.subtitle": "Choose the right diet for your pet.",
     "products.tabCats": "For cats",
     "products.tabDogs": "For dogs",
+    "products.rangesTitle": "Our ranges",
     "about.tag": "About",
     "about.title": "Nature at the heart of nutrition",
     "about.text1": "We create foods inspired by the natural diet of animals. Carefully selected ingredients provide complete nutrition and support your pet's health throughout life.",
@@ -202,46 +205,208 @@ const TRANSLATIONS = {
   }
 };
 
-// ===== Данные о продуктах (тоже на 3 языках) =====
+// ===== Линейки бренда (на основе каталога Nature's Protection) =====
+const RANGES = [
+  {
+    emoji: "🌿",
+    az: { name: "Lifestyle", desc: "Gündəlik balanslaşdırılmış qidalanma — sağlam həyat tərzi üçün." },
+    ru: { name: "Lifestyle", desc: "Повседневное сбалансированное питание для здорового образа жизни." },
+    en: { name: "Lifestyle", desc: "Everyday balanced nutrition for a healthy lifestyle." }
+  },
+  {
+    emoji: "⭐",
+    az: { name: "Prime", desc: "Hər gün üçün zəngin tərkibli premium qida." },
+    ru: { name: "Prime", desc: "Премиальный корм с насыщенным составом на каждый день." },
+    en: { name: "Prime", desc: "Premium food with a rich composition for every day." }
+  },
+  {
+    emoji: "🏆",
+    az: { name: "Superior Care", desc: "Tük rənginə görə (açıq/qəhvəyi/tünd) taxılsız funksional qida, göz ləkələrinə qarşı." },
+    ru: { name: "Superior Care", desc: "Беззерновой функциональный корм по цвету шерсти (светлая/коричневая/тёмная), против слёзных дорожек." },
+    en: { name: "Superior Care", desc: "Grain-free functional food by coat color (light/brown/dark), against tear stains." }
+  },
+  {
+    emoji: "🧴",
+    az: { name: "Tauro Pro Line", desc: "Tük və dəri qulluğu üçün professional kosmetika seriyası." },
+    ru: { name: "Tauro Pro Line", desc: "Профессиональная косметика для ухода за шерстью и кожей." },
+    en: { name: "Tauro Pro Line", desc: "Professional grooming cosmetics for coat and skin care." }
+  }
+];
+
+// ===== Полный каталог (на 3 языках), сгруппирован по типам =====
+// Структура: cats / dogs -> массив групп -> { group:{az,ru,en}, items:[...] }
 const PRODUCTS = {
   cats: [
     {
-      icon: "🐱", emoji: "🐟",
-      az: { cat: "Yetkin pişiklər", name: "Sterilised Salmon", desc: "Sterilizasiya olunmuş pişiklər üçün qızılbalıqlı qida.", tags: ["Qızılbalıq", "Sterilised"] },
-      ru: { cat: "Взрослые кошки", name: "Sterilised Salmon", desc: "Корм с лососем для стерилизованных кошек.", tags: ["Лосось", "Sterilised"] },
-      en: { cat: "Adult cats", name: "Sterilised Salmon", desc: "Salmon food for sterilised cats.", tags: ["Salmon", "Sterilised"] }
+      group: { az: "Quru qida", ru: "Сухой корм", en: "Dry food" },
+      items: [
+        { emoji: "🐟",
+          az: { cat: "Superior Care · açıq tük", name: "Light Cats — Siyənək", desc: "Açıq tüklü pişiklər üçün taxılsız qida, göz ləkələrinə qarşı.", tags: ["Siyənək", "Taxılsız"] },
+          ru: { cat: "Superior Care · светлая шерсть", name: "Light Cats — Сельдь", desc: "Беззерновой корм для кошек со светлой шерстью, против слёзных дорожек.", tags: ["Сельдь", "Грейн-фри"] },
+          en: { cat: "Superior Care · light coat", name: "Light Cats — Herring", desc: "Grain-free food for light-coated cats, against tear stains.", tags: ["Herring", "Grain-free"] } },
+        { emoji: "🐠",
+          az: { cat: "Superior Care · qəhvəyi tük", name: "Brown Cats — Qızılbalıq", desc: "Qəhvəyi tüklü pişiklər üçün qızılbalıqlı taxılsız qida.", tags: ["Qızılbalıq", "Taxılsız"] },
+          ru: { cat: "Superior Care · коричневая шерсть", name: "Brown Cats — Лосось", desc: "Беззерновой корм с лососем для кошек с коричневой шерстью.", tags: ["Лосось", "Грейн-фри"] },
+          en: { cat: "Superior Care · brown coat", name: "Brown Cats — Salmon", desc: "Grain-free salmon food for brown-coated cats.", tags: ["Salmon", "Grain-free"] } },
+        { emoji: "🐡",
+          az: { cat: "Superior Care · tünd tük", name: "Dark Cats — Tunes", desc: "Tünd tüklü pişiklər üçün tunes balığı ilə taxılsız qida.", tags: ["Tunes", "Taxılsız"] },
+          ru: { cat: "Superior Care · тёмная шерсть", name: "Dark Cats — Тунец", desc: "Беззерновой корм с тунцом для кошек с тёмной шерстью.", tags: ["Тунец", "Грейн-фри"] },
+          en: { cat: "Superior Care · dark coat", name: "Dark Cats — Tuna", desc: "Grain-free tuna food for dark-coated cats.", tags: ["Tuna", "Grain-free"] } },
+        { emoji: "🐱",
+          az: { cat: "Sterilizə olunmuş", name: "Sterilised", desc: "Sterilizə olunmuş pişiklər üçün balanslaşdırılmış qida.", tags: ["Sterilised"] },
+          ru: { cat: "Стерилизованные", name: "Sterilised", desc: "Сбалансированный корм для стерилизованных кошек.", tags: ["Sterilised"] },
+          en: { cat: "Sterilised", name: "Sterilised", desc: "Balanced food for sterilised cats.", tags: ["Sterilised"] } },
+        { emoji: "🏠",
+          az: { cat: "Ev pişikləri", name: "Indoor", desc: "Az hərəkətli ev pişikləri üçün yüngül formula.", tags: ["Indoor"] },
+          ru: { cat: "Домашние кошки", name: "Indoor", desc: "Лёгкая формула для домашних малоподвижных кошек.", tags: ["Indoor"] },
+          en: { cat: "Indoor cats", name: "Indoor", desc: "Light formula for low-activity indoor cats.", tags: ["Indoor"] } },
+        { emoji: "🐾",
+          az: { cat: "Balaca pişiklər", name: "Kitten — Toyuq", desc: "Böyümə dövründə balaca pişiklər üçün toyuqlu qida.", tags: ["Toyuq", "Kitten"] },
+          ru: { cat: "Котята", name: "Kitten — Курица", desc: "Корм с курицей для котят в период роста.", tags: ["Курица", "Kitten"] },
+          en: { cat: "Kittens", name: "Kitten — Chicken", desc: "Chicken food for kittens during growth.", tags: ["Chicken", "Kitten"] } }
+      ]
     },
     {
-      icon: "🐱", emoji: "🐔",
-      az: { cat: "Balaca pişiklər", name: "Kitten Chicken", desc: "Böyümə dövründə balaca pişiklər üçün toyuqlu qida.", tags: ["Toyuq", "Kitten"] },
-      ru: { cat: "Котята", name: "Kitten Chicken", desc: "Корм с курицей для котят в период роста.", tags: ["Курица", "Kitten"] },
-      en: { cat: "Kittens", name: "Kitten Chicken", desc: "Chicken food for kittens during growth.", tags: ["Chicken", "Kitten"] }
+      group: { az: "Yaş qida", ru: "Влажный корм", en: "Wet food" },
+      items: [
+        { emoji: "🥫",
+          az: { cat: "Yaş qida", name: "Wet Cat — Toyuq", desc: "Sousda incə toyuq parçaları, paketdə.", tags: ["Toyuq", "Paket"] },
+          ru: { cat: "Влажный корм", name: "Wet Cat — Курица", desc: "Нежные кусочки курицы в соусе, пауч.", tags: ["Курица", "Пауч"] },
+          en: { cat: "Wet food", name: "Wet Cat — Chicken", desc: "Tender chicken pieces in gravy, pouch.", tags: ["Chicken", "Pouch"] } },
+        { emoji: "🐟",
+          az: { cat: "Yaş qida", name: "Wet Cat — Tunes", desc: "Jeledə tunes balığı, yetkin pişiklər üçün.", tags: ["Tunes", "Jele"] },
+          ru: { cat: "Влажный корм", name: "Wet Cat — Тунец", desc: "Тунец в желе для взрослых кошек.", tags: ["Тунец", "Желе"] },
+          en: { cat: "Wet food", name: "Wet Cat — Tuna", desc: "Tuna in jelly for adult cats.", tags: ["Tuna", "Jelly"] } }
+      ]
     },
     {
-      icon: "🐱", emoji: "🦃",
-      az: { cat: "Həssas həzm", name: "Sensitive Turkey", desc: "Həssas həzm üçün hinduşka əti ilə yumşaq formula.", tags: ["Hinduşka", "Sensitive"] },
-      ru: { cat: "Чувств. пищеварение", name: "Sensitive Turkey", desc: "Мягкая формула с индейкой для чувствительного пищеварения.", tags: ["Индейка", "Sensitive"] },
-      en: { cat: "Sensitive digestion", name: "Sensitive Turkey", desc: "Gentle turkey formula for sensitive digestion.", tags: ["Turkey", "Sensitive"] }
+      group: { az: "Qida əlavələri", ru: "Добавки", en: "Supplements" },
+      items: [
+        { emoji: "🧶",
+          az: { cat: "Əlavə", name: "Anti-hairball", desc: "Mədədə tük yığılmasının qarşısını alır.", tags: ["Tük topası"] },
+          ru: { cat: "Добавка", name: "Anti-hairball", desc: "Препятствует образованию комков шерсти.", tags: ["Шерсть"] },
+          en: { cat: "Supplement", name: "Anti-hairball", desc: "Helps prevent hairball formation.", tags: ["Hairball"] } },
+        { emoji: "🛡️",
+          az: { cat: "Əlavə", name: "Immune System", desc: "İmmunitetin dəstəklənməsi üçün vitaminlər.", tags: ["İmmunitet"] },
+          ru: { cat: "Добавка", name: "Immune System", desc: "Витамины для поддержки иммунитета.", tags: ["Иммунитет"] },
+          en: { cat: "Supplement", name: "Immune System", desc: "Vitamins to support immunity.", tags: ["Immunity"] } },
+        { emoji: "✨",
+          az: { cat: "Əlavə", name: "Skin & Coat", desc: "Sağlam dəri və parlaq tük üçün Omega yağları.", tags: ["Omega"] },
+          ru: { cat: "Добавка", name: "Skin & Coat", desc: "Омега-кислоты для здоровой кожи и блеска шерсти.", tags: ["Omega"] },
+          en: { cat: "Supplement", name: "Skin & Coat", desc: "Omega acids for healthy skin and shiny coat.", tags: ["Omega"] } },
+        { emoji: "🍼",
+          az: { cat: "Əlavə", name: "Milk Replacer", desc: "Yeni doğulmuş balalar üçün süd əvəzedicisi.", tags: ["Süd"] },
+          ru: { cat: "Добавка", name: "Milk Replacer", desc: "Заменитель молока для новорождённых котят.", tags: ["Молоко"] },
+          en: { cat: "Supplement", name: "Milk Replacer", desc: "Milk replacer for newborn kittens.", tags: ["Milk"] } }
+      ]
+    },
+    {
+      group: { az: "Mükafatlar", ru: "Лакомства", en: "Treats" },
+      items: [
+        { emoji: "🍖",
+          az: { cat: "Mükafat", name: "Semi-moist", desc: "Təlim üçün yumşaq mükafatlar.", tags: ["Yumşaq"] },
+          ru: { cat: "Лакомство", name: "Semi-moist", desc: "Мягкие лакомства для дрессировки.", tags: ["Мягкие"] },
+          en: { cat: "Treat", name: "Semi-moist", desc: "Soft treats for training.", tags: ["Soft"] } },
+        { emoji: "🥓",
+          az: { cat: "Mükafat", name: "Dried Meat", desc: "100% təbii qurudulmuş ət.", tags: ["Ət"] },
+          ru: { cat: "Лакомство", name: "Dried Meat", desc: "100% натуральное сушёное мясо.", tags: ["Мясо"] },
+          en: { cat: "Treat", name: "Dried Meat", desc: "100% natural dried meat.", tags: ["Meat"] } }
+      ]
     }
   ],
+
   dogs: [
     {
-      icon: "🐶", emoji: "🥩",
-      az: { cat: "Yetkin itlər", name: "Adult Beef", desc: "Orta cinsli yetkin itlər üçün mal əti ilə qida.", tags: ["Mal əti", "Adult"] },
-      ru: { cat: "Взрослые собаки", name: "Adult Beef", desc: "Корм с говядиной для взрослых собак средних пород.", tags: ["Говядина", "Adult"] },
-      en: { cat: "Adult dogs", name: "Adult Beef", desc: "Beef food for adult medium-breed dogs.", tags: ["Beef", "Adult"] }
+      group: { az: "Quru qida", ru: "Сухой корм", en: "Dry food" },
+      items: [
+        { emoji: "🐟",
+          az: { cat: "Superior Care · açıq tük", name: "White Dogs — Ağ balıq", desc: "Açıq tüklü itlər üçün taxılsız qida, göz ləkələrinə qarşı.", tags: ["Ağ balıq", "Taxılsız"] },
+          ru: { cat: "Superior Care · светлая шерсть", name: "White Dogs — Белая рыба", desc: "Беззерновой корм для собак со светлой шерстью, против слёзных дорожек.", tags: ["Белая рыба", "Грейн-фри"] },
+          en: { cat: "Superior Care · light coat", name: "White Dogs — White Fish", desc: "Grain-free food for light-coated dogs, against tear stains.", tags: ["White fish", "Grain-free"] } },
+        { emoji: "🐠",
+          az: { cat: "Superior Care · qəhvəyi tük", name: "Brown Dogs — Qızılbalıq", desc: "Qəhvəyi tüklü itlər üçün qızılbalıqlı taxılsız qida.", tags: ["Qızılbalıq", "Taxılsız"] },
+          ru: { cat: "Superior Care · коричневая шерсть", name: "Brown Dogs — Лосось", desc: "Беззерновой корм с лососем для собак с коричневой шерстью.", tags: ["Лосось", "Грейн-фри"] },
+          en: { cat: "Superior Care · brown coat", name: "Brown Dogs — Salmon", desc: "Grain-free salmon food for brown-coated dogs.", tags: ["Salmon", "Grain-free"] } },
+        { emoji: "🥩",
+          az: { cat: "Superior Care · tünd tük", name: "Dark Dogs — Quzu", desc: "Tünd tüklü itlər üçün quzu əti ilə taxılsız qida.", tags: ["Quzu", "Taxılsız"] },
+          ru: { cat: "Superior Care · тёмная шерсть", name: "Dark Dogs — Ягнёнок", desc: "Беззерновой корм с ягнёнком для собак с тёмной шерстью.", tags: ["Ягнёнок", "Грейн-фри"] },
+          en: { cat: "Superior Care · dark coat", name: "Dark Dogs — Lamb", desc: "Grain-free lamb food for dark-coated dogs.", tags: ["Lamb", "Grain-free"] } },
+        { emoji: "🐕",
+          az: { cat: "Kiçik cinslər", name: "Small Breeds", desc: "Kiçik cinsli yetkin itlər üçün xırda dənəli qida.", tags: ["Small breed"] },
+          ru: { cat: "Малые породы", name: "Small Breeds", desc: "Мелкая гранула для взрослых собак малых пород.", tags: ["Small breed"] },
+          en: { cat: "Small breeds", name: "Small Breeds", desc: "Small kibble for adult small-breed dogs.", tags: ["Small breed"] } },
+        { emoji: "🐕‍🦺",
+          az: { cat: "İri cinslər", name: "Large Breeds", desc: "İri cinsli itlərin oynaqlarını dəstəkləyən qida.", tags: ["Large breed"] },
+          ru: { cat: "Крупные породы", name: "Large Breeds", desc: "Корм для поддержки суставов крупных собак.", tags: ["Large breed"] },
+          en: { cat: "Large breeds", name: "Large Breeds", desc: "Food supporting the joints of large dogs.", tags: ["Large breed"] } },
+        { emoji: "🦴",
+          az: { cat: "Bütün cinslər", name: "All Breeds", desc: "Bütün cinsli yetkin itlər üçün universal qida.", tags: ["All breeds"] },
+          ru: { cat: "Все породы", name: "All Breeds", desc: "Универсальный корм для взрослых собак всех пород.", tags: ["All breeds"] },
+          en: { cat: "All breeds", name: "All Breeds", desc: "Universal food for adult dogs of all breeds.", tags: ["All breeds"] } },
+        { emoji: "🐶",
+          az: { cat: "Balaca itlər", name: "Junior — Qızılbalıq", desc: "Sağlam böyümə üçün qızılbalıqlı bala iti qidası.", tags: ["Qızılbalıq", "Junior"] },
+          ru: { cat: "Щенки", name: "Junior — Лосось", desc: "Корм с лососем для здорового роста щенков.", tags: ["Лосось", "Junior"] },
+          en: { cat: "Puppies", name: "Junior — Salmon", desc: "Salmon food for healthy puppy growth.", tags: ["Salmon", "Junior"] } }
+      ]
     },
     {
-      icon: "🐶", emoji: "🐟",
-      az: { cat: "Balaca itlər", name: "Puppy Salmon", desc: "Sağlam böyümə üçün qızılbalıqlı bala iti qidası.", tags: ["Qızılbalıq", "Puppy"] },
-      ru: { cat: "Щенки", name: "Puppy Salmon", desc: "Корм с лососем для здорового роста щенков.", tags: ["Лосось", "Puppy"] },
-      en: { cat: "Puppies", name: "Puppy Salmon", desc: "Salmon food for healthy puppy growth.", tags: ["Salmon", "Puppy"] }
+      group: { az: "Yaş qida", ru: "Влажный корм", en: "Wet food" },
+      items: [
+        { emoji: "🥫",
+          az: { cat: "Yaş qida", name: "Wet Dog — Mal əti", desc: "Sousda mal əti parçaları, yetkin itlər üçün.", tags: ["Mal əti", "Paket"] },
+          ru: { cat: "Влажный корм", name: "Wet Dog — Говядина", desc: "Кусочки говядины в соусе для взрослых собак.", tags: ["Говядина", "Пауч"] },
+          en: { cat: "Wet food", name: "Wet Dog — Beef", desc: "Beef pieces in gravy for adult dogs.", tags: ["Beef", "Pouch"] } },
+        { emoji: "🍗",
+          az: { cat: "Yaş qida", name: "Wet Dog — Hinduşka", desc: "Həssas həzm üçün hinduşka əti ilə yaş qida.", tags: ["Hinduşka"] },
+          ru: { cat: "Влажный корм", name: "Wet Dog — Индейка", desc: "Влажный корм с индейкой для чувствительного пищеварения.", tags: ["Индейка"] },
+          en: { cat: "Wet food", name: "Wet Dog — Turkey", desc: "Turkey wet food for sensitive digestion.", tags: ["Turkey"] } }
+      ]
     },
     {
-      icon: "🐶", emoji: "🦴",
-      az: { cat: "İri cinslər", name: "Maxi Lamb", desc: "İri cinsli itlərin oynaqları üçün quzu əti ilə qida.", tags: ["Quzu", "Maxi"] },
-      ru: { cat: "Крупные породы", name: "Maxi Lamb", desc: "Корм с ягнёнком для суставов крупных собак.", tags: ["Ягнёнок", "Maxi"] },
-      en: { cat: "Large breeds", name: "Maxi Lamb", desc: "Lamb food for the joints of large dogs.", tags: ["Lamb", "Maxi"] }
+      group: { az: "Qida əlavələri", ru: "Добавки", en: "Supplements" },
+      items: [
+        { emoji: "🦴",
+          az: { cat: "Əlavə", name: "Bones, Joints & Muscles", desc: "Oynaqlar və əzələlər üçün xondroprotektorlar.", tags: ["Oynaqlar"] },
+          ru: { cat: "Добавка", name: "Bones, Joints & Muscles", desc: "Хондропротекторы для суставов и мышц.", tags: ["Суставы"] },
+          en: { cat: "Supplement", name: "Bones, Joints & Muscles", desc: "Chondroprotectors for joints and muscles.", tags: ["Joints"] } },
+        { emoji: "🌱",
+          az: { cat: "Əlavə", name: "Bowel & Digestion", desc: "Sağlam həzm üçün prebiotiklər.", tags: ["Həzm"] },
+          ru: { cat: "Добавка", name: "Bowel & Digestion", desc: "Пребиотики для здорового пищеварения.", tags: ["Пищеварение"] },
+          en: { cat: "Supplement", name: "Bowel & Digestion", desc: "Prebiotics for healthy digestion.", tags: ["Digestion"] } },
+        { emoji: "🛡️",
+          az: { cat: "Əlavə", name: "Immune System", desc: "İmmunitetin gücləndirilməsi üçün kompleks.", tags: ["İmmunitet"] },
+          ru: { cat: "Добавка", name: "Immune System", desc: "Комплекс для укрепления иммунитета.", tags: ["Иммунитет"] },
+          en: { cat: "Supplement", name: "Immune System", desc: "Complex to strengthen immunity.", tags: ["Immunity"] } },
+        { emoji: "✨",
+          az: { cat: "Əlavə", name: "Skin & Coat", desc: "Dəri və tük üçün Omega-3 və Omega-6.", tags: ["Omega"] },
+          ru: { cat: "Добавка", name: "Skin & Coat", desc: "Омега-3 и Омега-6 для кожи и шерсти.", tags: ["Omega"] },
+          en: { cat: "Supplement", name: "Skin & Coat", desc: "Omega-3 and Omega-6 for skin and coat.", tags: ["Omega"] } },
+        { emoji: "🐛",
+          az: { cat: "Əlavə", name: "Antiparasitic Care", desc: "Parazitlərdən təbii qoruyucu qulluq.", tags: ["Parazit"] },
+          ru: { cat: "Добавка", name: "Antiparasitic Care", desc: "Натуральная защита от паразитов.", tags: ["Паразиты"] },
+          en: { cat: "Supplement", name: "Antiparasitic Care", desc: "Natural protection against parasites.", tags: ["Parasites"] } },
+        { emoji: "🍼",
+          az: { cat: "Əlavə", name: "Milk Replacer", desc: "Yeni doğulmuş balalar üçün süd əvəzedicisi.", tags: ["Süd"] },
+          ru: { cat: "Добавка", name: "Milk Replacer", desc: "Заменитель молока для новорождённых щенков.", tags: ["Молоко"] },
+          en: { cat: "Supplement", name: "Milk Replacer", desc: "Milk replacer for newborn puppies.", tags: ["Milk"] } }
+      ]
+    },
+    {
+      group: { az: "Mükafatlar", ru: "Лакомства", en: "Treats" },
+      items: [
+        { emoji: "🍖",
+          az: { cat: "Mükafat", name: "Semi-moist", desc: "Təlim üçün yumşaq mükafatlar.", tags: ["Yumşaq"] },
+          ru: { cat: "Лакомство", name: "Semi-moist", desc: "Мягкие лакомства для дрессировки.", tags: ["Мягкие"] },
+          en: { cat: "Treat", name: "Semi-moist", desc: "Soft treats for training.", tags: ["Soft"] } },
+        { emoji: "🥓",
+          az: { cat: "Mükafat", name: "Dried Meat", desc: "100% təbii qurudulmuş ət.", tags: ["Ət"] },
+          ru: { cat: "Лакомство", name: "Dried Meat", desc: "100% натуральное сушёное мясо.", tags: ["Мясо"] },
+          en: { cat: "Treat", name: "Dried Meat", desc: "100% natural dried meat.", tags: ["Meat"] } },
+        { emoji: "🦷",
+          az: { cat: "Mükafat", name: "Chews", desc: "Diş sağlamlığı üçün gəmirmə çubuqları.", tags: ["Dişlər"] },
+          ru: { cat: "Лакомство", name: "Chews", desc: "Жевательные лакомства для здоровья зубов.", tags: ["Зубы"] },
+          en: { cat: "Treat", name: "Chews", desc: "Chews for dental health.", tags: ["Teeth"] } }
+      ]
     }
   ]
 };
