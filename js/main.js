@@ -33,7 +33,7 @@ function applyTranslations(lang) {
 
   // Перерисовать линейки и продукты на нужном языке
   renderRanges(lang);
-  renderProducts(currentTab, lang);
+  renderProducts(currentBrand, lang);
 }
 
 function setLang(lang) {
@@ -57,15 +57,39 @@ function renderRanges(lang) {
   }).join('');
 }
 
-// ===== Каталог продуктов (сгруппирован) =====
-let currentTab = 'cats';
+// ===== Каталог по брендам =====
+let currentBrand = 'np';
+
+// Добавить значок питомца к названию группы (для брендов кормов NP/Araton)
+function prefixGroups(groups, prefix) {
+  return groups.map(g => ({
+    group: {
+      az: prefix + g.group.az,
+      ru: prefix + g.group.ru,
+      en: prefix + g.group.en
+    },
+    items: g.items
+  }));
+}
+
+// Полный каталог: NP собираем из PRODUCTS (кошки+собаки), остальное — из BRANDS_EXTRA
+function buildCatalog() {
+  const extra = (typeof BRANDS_EXTRA !== 'undefined') ? BRANDS_EXTRA : {};
+  return {
+    np: prefixGroups(PRODUCTS.cats, '🐱 ').concat(prefixGroups(PRODUCTS.dogs, '🐶 ')),
+    araton: extra.araton || [],
+    tpl: extra.tpl || [],
+    misoko: extra.misoko || []
+  };
+}
 
 function productCard(item, lang) {
   const t = item[lang] || item.ru;
-  const tags = t.tags.map(x => `<span>${x}</span>`).join('');
+  const tags = (t.tags || []).map(x => `<span>${x}</span>`).join('');
+  const fallback = item.emoji || '🐾';
   const media = item.img
-    ? `<img src="${item.img}" alt="${t.name}" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'product__emoji',textContent:'${item.emoji}'}))">`
-    : `<span class="product__emoji">${item.emoji}</span>`;
+    ? `<img src="${item.img}" alt="${t.name}" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'product__emoji',textContent:'${fallback}'}))">`
+    : `<span class="product__emoji">${fallback}</span>`;
   return `
     <article class="product">
       <div class="product__img">${media}</div>
@@ -78,10 +102,10 @@ function productCard(item, lang) {
     </article>`;
 }
 
-function renderProducts(tab, lang) {
+function renderProducts(brand, lang) {
   const wrap = document.getElementById('productsGrid');
   if (!wrap) return;
-  const groups = PRODUCTS[tab] || [];
+  const groups = buildCatalog()[brand] || [];
   wrap.innerHTML = groups.map(g => {
     const groupName = (g.group && (g.group[lang] || g.group.ru)) || '';
     const cards = g.items.map(it => productCard(it, lang)).join('');
@@ -128,13 +152,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // --- Табы продуктов ---
+  // --- Табы брендов ---
   document.querySelectorAll('.tab').forEach(tab => {
     tab.addEventListener('click', () => {
       document.querySelectorAll('.tab').forEach(t => t.classList.remove('is-active'));
       tab.classList.add('is-active');
-      currentTab = tab.getAttribute('data-tab');
-      renderProducts(currentTab, getLang());
+      currentBrand = tab.getAttribute('data-brand');
+      renderProducts(currentBrand, getLang());
     });
   });
 
