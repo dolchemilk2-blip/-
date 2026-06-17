@@ -63,9 +63,12 @@ let currentTab = 'cats';
 function productCard(item, lang) {
   const t = item[lang] || item.ru;
   const tags = t.tags.map(x => `<span>${x}</span>`).join('');
+  const media = item.img
+    ? `<img src="${item.img}" alt="${t.name}" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'product__emoji',textContent:'${item.emoji}'}))">`
+    : `<span class="product__emoji">${item.emoji}</span>`;
   return `
     <article class="product">
-      <div class="product__img" style="background:linear-gradient(150deg,#eaf1e3,#d4e3c5)">${item.emoji}</div>
+      <div class="product__img">${media}</div>
       <div class="product__body">
         <span class="product__cat">${t.cat}</span>
         <h3 class="product__name">${t.name}</h3>
