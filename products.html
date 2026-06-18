@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="meta.title">Nature's Protection — Каталог</title>
+  <meta name="description" data-i18n="meta.description" content="Каталог продукции для кошек и собак." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <!-- ===== Header ===== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo" aria-label="Nature's Protection">
+        <img src="assets/logo.svg" alt="Nature's Protection — Life at its best" class="logo__img" width="232" height="58" />
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="index.html#home" class="nav__link" data-i18n="nav.home">Главная</a>
+        <a href="products.html" class="nav__link nav__link--active" data-i18n="nav.products">Продукция</a>
+        <a href="index.html#about" class="nav__link" data-i18n="nav.about">О бренде</a>
+        <a href="index.html#quality" class="nav__link" data-i18n="nav.quality">Качество</a>
+        <a href="index.html#stores" class="nav__link" data-i18n="nav.stores">Где купить</a>
+        <a href="index.html#contact" class="nav__link" data-i18n="nav.contact">Контакты</a>
+      </nav>
+
+      <div class="header__actions">
+        <div class="lang" id="lang">
+          <button class="lang__current" id="langBtn" aria-haspopup="true" aria-expanded="false">
+            <span id="langLabel">RU</span>
+            <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <ul class="lang__menu" id="langMenu" role="menu">
+            <li><button data-lang="az" role="menuitem">AZ — Azərbaycan</button></li>
+            <li><button data-lang="ru" role="menuitem">RU — Русский</button></li>
+            <li><button data-lang="en" role="menuitem">EN — English</button></li>
+          </ul>
+        </div>
+        <button class="burger" id="burger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Products page hero ===== -->
+  <section class="page-hero">
+    <div class="container">
+      <a href="index.html" class="page-hero__back" data-i18n="products.backHome">← На главную</a>
+      <span class="section__tag" data-i18n="products.tag">Наша продукция</span>
+      <h1 class="section__title" data-i18n="products.title">Каталог продукции</h1>
+      <p class="section__subtitle" data-i18n="products.intro">Выберите бренд ниже и посмотрите корма, средства ухода и игрушки для кошек и собак.</p>
+    </div>
+  </section>
+
+  <!-- ===== Catalog ===== -->
+  <section class="section section--top" id="products">
+    <div class="container">
+      <h2 class="ranges__title" data-i18n="products.rangesTitle">Линейки Nature's Protection</h2>
+      <div class="ranges" id="rangesGrid"></div>
+
+      <div class="tabs" id="tabs">
+        <button class="tab is-active" data-brand="np">Nature's Protection</button>
+        <button class="tab" data-brand="araton">Araton</button>
+        <button class="tab" data-brand="tpl">Tauro Pro Line</button>
+        <button class="tab" data-brand="misoko">Misoko</button>
+      </div>
+
+      <div id="productsGrid"></div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col">
+        <a href="index.html" class="logo logo--light">
+          <img src="assets/logo-light.svg" alt="Nature's Protection — Life at its best" class="logo__img" width="220" height="55" />
+        </a>
+        <p data-i18n="footer.about">Премиальное питание и уход для кошек и собак, вдохновлённые природой.</p>
+      </div>
+      <div class="footer__col">
+        <h4 data-i18n="footer.nav">Навигация</h4>
+        <a href="index.html#home" data-i18n="nav.home">Главная</a>
+        <a href="index.html#about" data-i18n="nav.about">О бренде</a>
+        <a href="index.html#quality" data-i18n="nav.quality">Качество</a>
+        <a href="index.html#contact" data-i18n="nav.contact">Контакты</a>
+      </div>
+      <div class="footer__col">
+        <h4 data-i18n="footer.contacts">Контакты</h4>
+        <a href="mailto:info@naturesprotection.az">info@naturesprotection.az</a>
+        <a href="tel:+994000000000">+994 00 000 00 00</a>
+        <span data-i18n="contact.address">Баку, Азербайджан</span>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <span>© <span id="year"></span> Nature's Protection. <span data-i18n="footer.rights">Все права защищены.</span></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/translations.js"></script>
+  <script src="js/catalog.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

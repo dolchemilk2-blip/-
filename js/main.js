@@ -153,22 +153,38 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // --- Табы брендов ---
-  document.querySelectorAll('.tab').forEach(tab => {
-    tab.addEventListener('click', () => {
-      document.querySelectorAll('.tab').forEach(t => t.classList.remove('is-active'));
-      tab.classList.add('is-active');
-      currentBrand = tab.getAttribute('data-brand');
-      renderProducts(currentBrand, getLang());
+  const VALID_BRANDS = ['np', 'araton', 'tpl', 'misoko'];
+
+  function activateBrand(brand, updateHash) {
+    if (!VALID_BRANDS.includes(brand)) return;
+    currentBrand = brand;
+    document.querySelectorAll('.tab').forEach(t => {
+      t.classList.toggle('is-active', t.getAttribute('data-brand') === brand);
     });
+    renderProducts(currentBrand, getLang());
+    if (updateHash) history.replaceState(null, '', '#' + brand);
+  }
+
+  document.querySelectorAll('.tab').forEach(tab => {
+    tab.addEventListener('click', () => activateBrand(tab.getAttribute('data-brand'), true));
   });
+
+  // Открыть нужный бренд по адресу (#np / #araton / #tpl / #misoko)
+  if (document.getElementById('productsGrid')) {
+    const hashBrand = location.hash.replace('#', '');
+    if (hashBrand) activateBrand(hashBrand, false);
+    window.addEventListener('hashchange', () => activateBrand(location.hash.replace('#', ''), false));
+  }
 
   // --- Форма обратной связи (демо, без отправки на сервер) ---
   const form = document.getElementById('contactForm');
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    document.getElementById('formOk').hidden = false;
-    form.reset();
-  });
+  if (form) {
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      document.getElementById('formOk').hidden = false;
+      form.reset();
+    });
+  }
 
   // --- Год в подвале ---
   document.getElementById('year').textContent = new Date().getFullYear();

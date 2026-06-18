@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title data-i18n="meta.title">Nature's Care — Premium qida heyvanlar üçün</title>
-  <meta name="description" data-i18n="meta.description" content="Premium kateqoriyalı pişik və itlər üçün qida. Təbii tərkib, balanslaşdırılmış formula." />
+  <title data-i18n="meta.title">Nature's Protection — Premium qida heyvanlar üçün</title>
+  <meta name="description" data-i18n="meta.description" content="Premium kateqoriyalı pişik və itlər üçün qida və qulluq." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -15,17 +15,13 @@
   <!-- ===== Header ===== -->
   <header class="header" id="header">
     <div class="container header__inner">
-      <a href="#home" class="logo" aria-label="Nature's Care">
-        <svg class="logo__mark" viewBox="0 0 48 48" width="40" height="40" aria-hidden="true">
-          <path d="M24 4C14 12 8 20 8 29a16 16 0 0 0 32 0c0-9-6-17-16-25z" fill="#3a7d44"/>
-          <path d="M24 12c-5 5-9 11-9 17a9 9 0 0 0 18 0c0-6-4-12-9-17z" fill="#a3c585"/>
-        </svg>
-        <span class="logo__text">Nature's<strong>Care</strong></span>
+      <a href="index.html" class="logo" aria-label="Nature's Protection">
+        <img src="assets/logo.svg" alt="Nature's Protection — Life at its best" class="logo__img" width="232" height="58" />
       </a>
 
       <nav class="nav" id="nav">
         <a href="#home" class="nav__link" data-i18n="nav.home">Главная</a>
-        <a href="#products" class="nav__link" data-i18n="nav.products">Продукция</a>
+        <a href="products.html" class="nav__link" data-i18n="nav.products">Продукция</a>
         <a href="#about" class="nav__link" data-i18n="nav.about">О бренде</a>
         <a href="#quality" class="nav__link" data-i18n="nav.quality">Качество</a>
         <a href="#stores" class="nav__link" data-i18n="nav.stores">Где купить</a>
@@ -59,20 +55,17 @@
         <h1 class="hero__title" data-i18n="hero.title">Здоровое питание для вашего любимца</h1>
         <p class="hero__text" data-i18n="hero.text">Натуральные ингредиенты и сбалансированные формулы для кошек и собак любого возраста.</p>
         <div class="hero__actions">
-          <a href="#products" class="btn btn--primary" data-i18n="hero.cta1">Смотреть продукцию</a>
+          <a href="products.html" class="btn btn--primary" data-i18n="hero.cta1">Смотреть продукцию</a>
           <a href="#about" class="btn btn--ghost" data-i18n="hero.cta2">О бренде</a>
         </div>
         <div class="hero__stats">
           <div class="stat"><strong>100%</strong><span data-i18n="hero.stat1">натуральный состав</span></div>
-          <div class="stat"><strong>30+</strong><span data-i18n="hero.stat2">видов корма</span></div>
+          <div class="stat"><strong>70+</strong><span data-i18n="hero.stat2">товаров в каталоге</span></div>
           <div class="stat"><strong>20</strong><span data-i18n="hero.stat3">лет на рынке</span></div>
         </div>
       </div>
       <div class="hero__visual">
-        <div class="hero__card">
-          <svg viewBox="0 0 64 64" width="80" height="80" aria-hidden="true"><circle cx="22" cy="20" r="6" fill="#3a7d44"/><circle cx="42" cy="20" r="6" fill="#3a7d44"/><circle cx="13" cy="34" r="5.5" fill="#3a7d44"/><circle cx="51" cy="34" r="5.5" fill="#3a7d44"/><path d="M32 30c-8 0-15 6-15 14 0 6 5 9 15 9s15-3 15-9c0-8-7-14-15-14z" fill="#3a7d44"/></svg>
-          <p data-i18n="hero.cardText">Забота о здоровье — в каждой порции</p>
-        </div>
+        <img src="assets/hero-pets.svg" alt="Кошка и собака" class="hero__pets" />
       </div>
     </div>
   </section>
@@ -103,26 +96,26 @@
     </div>
   </section>
 
-  <!-- ===== Products ===== -->
-  <section class="section" id="products">
+  <!-- ===== Catalog teaser (навигация в каталог) ===== -->
+  <section class="section catalog-cta" id="catalog">
     <div class="container">
-      <div class="section__head">
-        <span class="section__tag" data-i18n="products.tag">Наша продукция</span>
-        <h2 class="section__title" data-i18n="products.title">Линейки кормов</h2>
-        <p class="section__subtitle" data-i18n="products.subtitle">Подберите подходящий рацион для вашего питомца.</p>
+      <div class="catalog-cta__inner">
+        <div class="catalog-cta__text">
+          <span class="section__tag" data-i18n="products.tag">Наша продукция</span>
+          <h2 class="section__title" data-i18n="home.catalogTitle">Каталог продукции</h2>
+          <p data-i18n="home.catalogText">4 бренда, более 70 товаров: сухие и влажные корма, витамины, косметика для ухода и игрушки.</p>
+          <div class="brand-chips">
+            <a href="products.html#np" class="brand-chip">Nature's Protection</a>
+            <a href="products.html#araton" class="brand-chip">Araton</a>
+            <a href="products.html#tpl" class="brand-chip">Tauro Pro Line</a>
+            <a href="products.html#misoko" class="brand-chip">Misoko</a>
+          </div>
+          <a href="products.html" class="btn btn--primary" data-i18n="home.catalogCta">Перейти в каталог</a>
+        </div>
+        <a href="products.html" class="catalog-cta__visual" aria-hidden="true" tabindex="-1">
+          <img src="assets/hero-pets.svg" alt="" />
+        </a>
       </div>
-
-      <h3 class="ranges__title" data-i18n="products.rangesTitle">Наши линейки</h3>
-      <div class="ranges" id="rangesGrid"></div>
-
-      <div class="tabs" id="tabs">
-        <button class="tab is-active" data-brand="np">Nature's Protection</button>
-        <button class="tab" data-brand="araton">Araton</button>
-        <button class="tab" data-brand="tpl">Tauro Pro Line</button>
-        <button class="tab" data-brand="misoko">Misoko</button>
-      </div>
-
-      <div id="productsGrid"></div>
     </div>
   </section>
 
@@ -180,7 +173,7 @@
         <p data-i18n="contact.text">Есть вопросы о продукции или сотрудничестве? Мы будем рады помочь.</p>
         <ul class="contact__list">
           <li><span>📍</span><span data-i18n="contact.address">Баку, Азербайджан</span></li>
-          <li><span>✉️</span><a href="mailto:info@naturescare.az">info@naturescare.az</a></li>
+          <li><span>✉️</span><a href="mailto:info@naturesprotection.az">info@naturesprotection.az</a></li>
           <li><span>📞</span><a href="tel:+994000000000">+994 00 000 00 00</a></li>
         </ul>
       </div>
@@ -207,29 +200,28 @@
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__col">
-        <a href="#home" class="logo logo--light">
-          <svg class="logo__mark" viewBox="0 0 48 48" width="36" height="36" aria-hidden="true"><path d="M24 4C14 12 8 20 8 29a16 16 0 0 0 32 0c0-9-6-17-16-25z" fill="#a3c585"/><path d="M24 12c-5 5-9 11-9 17a9 9 0 0 0 18 0c0-6-4-12-9-17z" fill="#fff"/></svg>
-          <span class="logo__text">Nature's<strong>Care</strong></span>
+        <a href="index.html" class="logo logo--light">
+          <img src="assets/logo-light.svg" alt="Nature's Protection — Life at its best" class="logo__img" width="220" height="55" />
         </a>
-        <p data-i18n="footer.about">Премиальное питание для кошек и собак, вдохновлённое природой.</p>
+        <p data-i18n="footer.about">Премиальное питание и уход для кошек и собак, вдохновлённые природой.</p>
       </div>
       <div class="footer__col">
         <h4 data-i18n="footer.nav">Навигация</h4>
-        <a href="#products" data-i18n="nav.products">Продукция</a>
+        <a href="products.html" data-i18n="nav.products">Продукция</a>
         <a href="#about" data-i18n="nav.about">О бренде</a>
         <a href="#quality" data-i18n="nav.quality">Качество</a>
         <a href="#contact" data-i18n="nav.contact">Контакты</a>
       </div>
       <div class="footer__col">
         <h4 data-i18n="footer.contacts">Контакты</h4>
-        <a href="mailto:info@naturescare.az">info@naturescare.az</a>
+        <a href="mailto:info@naturesprotection.az">info@naturesprotection.az</a>
         <a href="tel:+994000000000">+994 00 000 00 00</a>
         <span data-i18n="contact.address">Баку, Азербайджан</span>
       </div>
     </div>
     <div class="footer__bottom">
       <div class="container">
-        <span>© <span id="year"></span> Nature's Care. <span data-i18n="footer.rights">Все права защищены.</span></span>
+        <span>© <span id="year"></span> Nature's Protection. <span data-i18n="footer.rights">Все права защищены.</span></span>
       </div>
     </div>
   </footer>

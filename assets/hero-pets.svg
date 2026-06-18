@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 540" role="img" aria-label="Кошка и собака">
+  <defs>
+    <linearGradient id="pet-green" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4a9152"/>
+      <stop offset="1" stop-color="#356f3e"/>
+    </linearGradient>
+    <linearGradient id="pet-green-cat" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3f8a49"/>
+      <stop offset="1" stop-color="#2c6135"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ground shadow -->
+  <ellipse cx="300" cy="492" rx="250" ry="26" fill="#2c6135" opacity="0.10"/>
+
+  <!-- ===== DOG (left) ===== -->
+  <g>
+    <!-- ears (behind head) -->
+    <ellipse cx="92"  cy="190" rx="34" ry="74" fill="#2c6135" transform="rotate(-18 92 190)"/>
+    <ellipse cx="258" cy="190" rx="34" ry="74" fill="#2c6135" transform="rotate(18 258 190)"/>
+    <!-- body / haunches -->
+    <path d="M70,486 Q66,300 175,288 Q284,300 280,486 Z" fill="url(#pet-green)"/>
+    <!-- belly highlight -->
+    <path d="M120,486 Q118,360 175,352 Q232,360 230,486 Z" fill="#5aa162" opacity="0.55"/>
+    <!-- front legs -->
+    <rect x="120" y="404" width="44" height="86" rx="22" fill="#43874c"/>
+    <rect x="186" y="404" width="44" height="86" rx="22" fill="#43874c"/>
+    <ellipse cx="142" cy="486" rx="26" ry="14" fill="#356f3e"/>
+    <ellipse cx="208" cy="486" rx="26" ry="14" fill="#356f3e"/>
+    <!-- head -->
+    <circle cx="175" cy="188" r="92" fill="url(#pet-green)"/>
+    <!-- muzzle -->
+    <ellipse cx="175" cy="220" rx="56" ry="44" fill="#f3f7ee"/>
+    <!-- eyes -->
+    <circle cx="143" cy="168" r="12" fill="#27331f"/>
+    <circle cx="207" cy="168" r="12" fill="#27331f"/>
+    <circle cx="147" cy="164" r="4"  fill="#ffffff"/>
+    <circle cx="211" cy="164" r="4"  fill="#ffffff"/>
+    <!-- nose + mouth -->
+    <ellipse cx="175" cy="200" rx="16" ry="12" fill="#27331f"/>
+    <path d="M175,212 Q175,236 156,238 M175,212 Q175,236 194,238" fill="none" stroke="#27331f" stroke-width="4" stroke-linecap="round"/>
+    <!-- tail -->
+    <path d="M278,452 Q344,440 336,372 Q331,338 306,344" fill="none" stroke="url(#pet-green)" stroke-width="34" stroke-linecap="round"/>
+  </g>
+
+  <!-- ===== CAT (right) ===== -->
+  <g>
+    <!-- tail -->
+    <path d="M520,470 Q598,452 584,372 Q576,326 548,338" fill="none" stroke="url(#pet-green-cat)" stroke-width="30" stroke-linecap="round"/>
+    <!-- body -->
+    <path d="M404,488 Q422,322 470,316 Q518,322 536,488 Z" fill="url(#pet-green-cat)"/>
+    <!-- chest highlight -->
+    <path d="M440,488 Q452,372 470,366 Q488,372 500,488 Z" fill="#4e9657" opacity="0.55"/>
+    <!-- front paws -->
+    <ellipse cx="450" cy="486" rx="24" ry="14" fill="#27502f"/>
+    <ellipse cx="492" cy="486" rx="24" ry="14" fill="#27502f"/>
+    <!-- ears -->
+    <path d="M414,210 L432,142 L470,196 Z" fill="url(#pet-green-cat)"/>
+    <path d="M526,210 L508,142 L470,196 Z" fill="url(#pet-green-cat)"/>
+    <path d="M424,200 L436,164 L456,196 Z" fill="#7cbf84"/>
+    <path d="M516,200 L504,164 L484,196 Z" fill="#7cbf84"/>
+    <!-- head -->
+    <circle cx="470" cy="238" r="66" fill="url(#pet-green-cat)"/>
+    <!-- eyes -->
+    <ellipse cx="448" cy="232" rx="9" ry="13" fill="#27331f"/>
+    <ellipse cx="492" cy="232" rx="9" ry="13" fill="#27331f"/>
+    <!-- nose -->
+    <path d="M464,256 L476,256 L470,265 Z" fill="#e58b9a"/>
+    <!-- whiskers -->
+    <path d="M470,262 Q470,276 458,280 M470,262 Q470,276 482,280" fill="none" stroke="#27331f" stroke-width="3" stroke-linecap="round"/>
+    <g stroke="#dfe7df" stroke-width="2.4" stroke-linecap="round" opacity="0.9">
+      <path d="M448,258 L406,250"/>
+      <path d="M448,266 L408,268"/>
+      <path d="M492,258 L534,250"/>
+      <path d="M492,266 L532,268"/>
+    </g>
+  </g>
+</svg>

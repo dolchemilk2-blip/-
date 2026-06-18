@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 150" role="img" aria-label="Nature's Protection — Life at its best">
+  <defs>
+    <linearGradient id="np-spiral-l" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2f8f3f"/>
+      <stop offset="0.55" stop-color="#5cbf63"/>
+      <stop offset="1" stop-color="#bfe6ad"/>
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(8,0)" fill="none" stroke="url(#np-spiral-l)" stroke-width="9" stroke-linecap="round">
+    <path d="M130,75
+      A57,57 0 0 1 16,75
+      A50,50 0 0 1 116,75
+      A43,43 0 0 1 30,75
+      A36,36 0 0 1 102,75
+      A29,29 0 0 1 44,75
+      A22,22 0 0 1 88,75
+      A15,15 0 0 1 58,75
+      A8,8 0 0 1 74,75"/>
+  </g>
+
+  <rect x="162" y="22" width="416" height="94" rx="8" fill="#15a23a"/>
+  <rect x="168" y="28" width="404" height="82" rx="5" fill="none" stroke="#ffffff" stroke-width="2.4" opacity="0.9"/>
+  <text x="188" y="69" font-family="Poppins, 'Arial Black', Arial, sans-serif" font-weight="800" font-size="35" letter-spacing="1.5" fill="#ffffff">NATURE'S</text>
+  <text x="188" y="104" font-family="Poppins, 'Arial Black', Arial, sans-serif" font-weight="800" font-size="33" letter-spacing="1.5" fill="#f6e44b">PROTECTION</text>
+
+  <text x="190" y="140" font-family="Poppins, Arial, sans-serif" font-weight="600" font-size="13.5" letter-spacing="6" fill="#dfe7df">LIFE AT ITS BEST</text>
+</svg>
