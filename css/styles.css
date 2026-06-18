@@ -114,8 +114,8 @@ h1, h2, h3, h4 { font-family: var(--head); line-height: 1.2; font-weight: 700; }
 
 .hero__visual { display: flex; justify-content: center; align-items: center; }
 .hero__pets {
-  width: 100%; max-width: 460px; opacity: 0.92;
-  filter: drop-shadow(0 22px 34px rgba(31, 42, 36, 0.16));
+  width: 100%; max-width: 520px; border-radius: 24px;
+  box-shadow: var(--shadow-lg); display: block; background: #fff;
 }
 .hero__card {
   background: #fff; border-radius: 28px; box-shadow: var(--shadow-lg);
@@ -204,11 +204,10 @@ h1, h2, h3, h4 { font-family: var(--head); line-height: 1.2; font-weight: 700; }
 .catalog-cta__text p { color: var(--muted); font-size: 17px; margin-top: 14px; max-width: 460px; }
 .catalog-cta__text .btn { margin-top: 28px; }
 .catalog-cta__visual {
-  display: flex; align-items: center; justify-content: center;
-  background: linear-gradient(150deg, var(--green-light), var(--green));
-  border-radius: 24px; box-shadow: var(--shadow-lg); padding: 30px; min-height: 280px;
+  display: block; border-radius: 24px; box-shadow: var(--shadow-lg);
+  overflow: hidden; line-height: 0; background: #fff; border: 1px solid rgba(31,42,36,.06);
 }
-.catalog-cta__visual img { width: 100%; max-width: 320px; opacity: 0.96; filter: drop-shadow(0 14px 24px rgba(31,42,36,.22)); }
+.catalog-cta__visual img { width: 100%; height: auto; display: block; }
 
 /* ===== Brand chips ===== */
 .brand-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
