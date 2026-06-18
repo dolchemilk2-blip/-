@@ -60,27 +60,9 @@ function renderRanges(lang) {
 // ===== Каталог по брендам =====
 let currentBrand = 'np';
 
-// Добавить значок питомца к названию группы (для брендов кормов NP/Araton)
-function prefixGroups(groups, prefix) {
-  return groups.map(g => ({
-    group: {
-      az: prefix + g.group.az,
-      ru: prefix + g.group.ru,
-      en: prefix + g.group.en
-    },
-    items: g.items
-  }));
-}
-
-// Полный каталог: NP собираем из PRODUCTS (кошки+собаки), остальное — из BRANDS_EXTRA
+// Полный каталог берём из catalog.js (CATALOG)
 function buildCatalog() {
-  const extra = (typeof BRANDS_EXTRA !== 'undefined') ? BRANDS_EXTRA : {};
-  return {
-    np: prefixGroups(PRODUCTS.cats, '🐱 ').concat(prefixGroups(PRODUCTS.dogs, '🐶 ')),
-    araton: extra.araton || [],
-    tpl: extra.tpl || [],
-    misoko: extra.misoko || []
-  };
+  return (typeof CATALOG !== 'undefined') ? CATALOG : { np: [], araton: [], tpl: [], misoko: [] };
 }
 
 function productCard(item, lang) {
