@@ -37,8 +37,7 @@ css/styles.css          — оформление (цвета, шрифты, ад
 js/translations.js      — тексты интерфейса (3 языка) + каталог Nature's Protection
 js/catalog.js           — каталог брендов Araton / Tauro Pro Line / Misoko
 js/main.js              — логика (языки, меню, бренды, форма)
-assets/logo.svg         — логотип Nature's Protection (для светлого фона)
-assets/logo-light.svg   — логотип для тёмного подвала
+assets/logo.png         — официальный логотип Nature's Protection
 assets/favicon.svg      — иконка сайта во вкладке (спираль-папоротник)
 assets/hero-pets.svg    — иллюстрация кошки и собаки на главной
 assets/products/        — фотографии товаров
