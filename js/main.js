@@ -186,6 +186,39 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // --- Слайдер фото на главной ---
+  const slider = document.getElementById('heroSlider');
+  if (slider) {
+    const slides = Array.from(slider.querySelectorAll('.slider__slide'));
+    const dotsWrap = document.getElementById('heroSliderDots');
+    let idx = 0, timer = null;
+    const dots = slides.map((_, i) => {
+      const b = document.createElement('button');
+      b.className = 'slider__dot' + (i === 0 ? ' is-active' : '');
+      b.type = 'button';
+      b.setAttribute('aria-label', 'Слайд ' + (i + 1));
+      b.addEventListener('click', () => { go(i); restart(); });
+      dotsWrap.appendChild(b);
+      return b;
+    });
+    function go(n) {
+      slides[idx].classList.remove('is-active');
+      dots[idx].classList.remove('is-active');
+      idx = (n + slides.length) % slides.length;
+      slides[idx].classList.add('is-active');
+      dots[idx].classList.add('is-active');
+    }
+    function restart() {
+      clearInterval(timer);
+      timer = setInterval(() => go(idx + 1), 4500);
+    }
+    if (slides.length > 1) {
+      restart();
+      slider.addEventListener('mouseenter', () => clearInterval(timer));
+      slider.addEventListener('mouseleave', restart);
+    }
+  }
+
   // --- Год в подвале ---
   document.getElementById('year').textContent = new Date().getFullYear();
 });

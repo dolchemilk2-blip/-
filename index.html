@@ -23,6 +23,7 @@
         <a href="#home" class="nav__link" data-i18n="nav.home">Главная</a>
         <a href="products.html" class="nav__link" data-i18n="nav.products">Продукция</a>
         <a href="#about" class="nav__link" data-i18n="nav.about">О бренде</a>
+        <a href="#values" class="nav__link" data-i18n="nav.values">Ценности</a>
         <a href="#quality" class="nav__link" data-i18n="nav.quality">Качество</a>
         <a href="#stores" class="nav__link" data-i18n="nav.stores">Где купить</a>
         <a href="#contact" class="nav__link" data-i18n="nav.contact">Контакты</a>
@@ -65,7 +66,14 @@
         </div>
       </div>
       <div class="hero__visual">
-        <img src="assets/hero-pets.jpg" alt="Щенок корги и котёнок" class="hero__pets" />
+        <div class="slider" id="heroSlider">
+          <div class="slider__track">
+            <img src="assets/pets-1.jpg" class="slider__slide is-active" alt="Щенок корги и котёнок" />
+            <img src="assets/pets-2.jpg" class="slider__slide" alt="Собака и кошка" loading="lazy" />
+            <img src="assets/pets-3.jpg" class="slider__slide" alt="Кошка и собака играют" loading="lazy" />
+          </div>
+          <div class="slider__dots" id="heroSliderDots"></div>
+        </div>
       </div>
     </div>
   </section>
@@ -135,6 +143,39 @@
           <li data-i18n="about.li2">Поддержка иммунитета и пищеварения</li>
           <li data-i18n="about.li3">Здоровая кожа и блестящая шерсть</li>
         </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Values (наши ценности) ===== -->
+  <section class="section values" id="values">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__tag" data-i18n="values.tag">Наши ценности</span>
+        <h2 class="section__title" data-i18n="values.title">Во что мы верим</h2>
+        <p class="section__subtitle" data-i18n="values.subtitle">Наша миссия — обеспечить полноценное и сбалансированное питание для домашних животных во всём мире.</p>
+      </div>
+      <div class="values__grid">
+        <article class="value-card">
+          <div class="value-card__icon">🐾</div>
+          <h3 data-i18n="values.v1.title">Питание и уход</h3>
+          <p data-i18n="values.v1.text">Здоровье питомца — это 80% сбалансированного питания и 20% ежедневного и ветеринарного ухода.</p>
+        </article>
+        <article class="value-card">
+          <div class="value-card__icon">🧬</div>
+          <h3 data-i18n="values.v2.title">MicroZeoGen — инновация от природы</h3>
+          <p data-i18n="values.v2.text">Все продукты дополнены природным минералом MicroZeoGen (клиноптилолит): он впитывает токсины и примеси, поддерживая здоровье и жизнеспособность питомца.</p>
+        </article>
+        <article class="value-card">
+          <div class="value-card__icon">🌿</div>
+          <h3 data-i18n="values.v3.title">Без зерна и пшеницы</h3>
+          <p data-i18n="values.v3.text">Первый ингредиент — животный белок: мясо, рыба или личинки насекомых. Без злаков и пшеницы, подходит питомцам с чувствительным пищеварением.</p>
+        </article>
+        <article class="value-card">
+          <div class="value-card__icon">♻️</div>
+          <h3 data-i18n="values.v4.title">Забота о планете</h3>
+          <p data-i18n="values.v4.text">Корма производятся на «зелёной» энергии (солнце, ветер, вода), с экологичными источниками белка и крилем с сертификатом MSC.</p>
+        </article>
       </div>
     </div>
   </section>
@@ -209,6 +250,7 @@
         <h4 data-i18n="footer.nav">Навигация</h4>
         <a href="products.html" data-i18n="nav.products">Продукция</a>
         <a href="#about" data-i18n="nav.about">О бренде</a>
+        <a href="#values" data-i18n="nav.values">Ценности</a>
         <a href="#quality" data-i18n="nav.quality">Качество</a>
         <a href="#contact" data-i18n="nav.contact">Контакты</a>
       </div>
