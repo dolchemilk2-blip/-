@@ -186,40 +186,35 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- Слайдер фото на главной ---
+  // --- Фоновый слайдер на главной (мягкий эффект «стирания», стрелки по бокам) ---
   const heroBg = document.getElementById('heroBg');
   if (heroBg) {
     const slides = Array.from(heroBg.querySelectorAll('.hero-bg__slide'));
-    const dotsWrap = document.getElementById('heroDots');
     let cur = 0, timer = null;
-    const dots = slides.map((_, i) => {
-      const b = document.createElement('button');
-      b.type = 'button';
-      b.className = 'slider__dot' + (i === 0 ? ' is-active' : '');
-      b.setAttribute('aria-label', 'Фото ' + (i + 1));
-      b.addEventListener('click', () => { wipeTo(i); restart(); });
-      dotsWrap.appendChild(b);
-      return b;
-    });
     slides.forEach((s, i) => { s.style.zIndex = i === 0 ? '1' : '0'; });
-    // Плавная смена фоновых фото с эффектом «стирания» (clip-path wipe)
-    function wipeTo(n) {
+    // Плавно показываем следующее фото мягким стиранием (clip-path)
+    function wipeTo(n, dir) {
       if (n === cur || !slides[n]) return;
       const incoming = slides[n], prev = cur;
+      const hidden = dir === 'prev' ? 'inset(0 100% 0 0)' : 'inset(0 0 0 100%)';
       incoming.style.transition = 'none';
       incoming.style.zIndex = '2';
-      incoming.style.clipPath = 'inset(0 0 0 100%)';
+      incoming.style.clipPath = hidden;
       void incoming.offsetWidth; // reflow, чтобы анимация сработала
-      incoming.style.transition = 'clip-path 1.1s ease';
+      incoming.style.transition = 'clip-path 1.4s ease-in-out';
       incoming.style.clipPath = 'inset(0 0 0 0)';
       cur = n;
-      dots.forEach((d, i) => d.classList.toggle('is-active', i === cur));
-      setTimeout(() => { slides[prev].style.zIndex = '0'; incoming.style.zIndex = '1'; }, 1150);
+      setTimeout(() => { slides[prev].style.zIndex = '0'; incoming.style.zIndex = '1'; }, 1450);
     }
-    function restart() {
-      clearInterval(timer);
-      timer = setInterval(() => wipeTo((cur + 1) % slides.length), 5000);
-    }
+    function next() { wipeTo((cur + 1) % slides.length, 'next'); }
+    function prev() { wipeTo((cur - 1 + slides.length) % slides.length, 'prev'); }
+    function restart() { clearInterval(timer); timer = setInterval(next, 7000); }
+
+    const prevBtn = document.getElementById('heroPrev');
+    const nextBtn = document.getElementById('heroNext');
+    if (prevBtn) prevBtn.addEventListener('click', () => { prev(); restart(); });
+    if (nextBtn) nextBtn.addEventListener('click', () => { next(); restart(); });
+
     if (slides.length > 1) {
       restart();
       heroBg.addEventListener('mouseenter', () => clearInterval(timer));

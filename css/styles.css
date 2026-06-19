@@ -110,16 +110,35 @@ h1, h2, h3, h4 { font-family: var(--head); line-height: 1.2; font-weight: 700; }
   position: absolute; inset: 0; width: 100%; height: 100%;
   object-fit: cover; clip-path: inset(0 0 0 0);
 }
+/* Полупрозрачный зелёный тон поверх фото — всё в фирменном цвете */
 .hero-bg__scrim {
   position: absolute; inset: 0; z-index: 1;
-  background: linear-gradient(100deg,
-    rgba(244,247,239,.97) 0%, rgba(244,247,239,.84) 36%,
-    rgba(244,247,239,.4) 66%, rgba(244,247,239,0) 100%);
+  background: linear-gradient(105deg,
+    rgba(26,73,42,.92) 0%, rgba(33,84,46,.8) 42%,
+    rgba(58,125,68,.62) 78%, rgba(58,125,68,.5) 100%);
 }
-.hero__dots {
-  position: absolute; z-index: 3; bottom: 24px; left: 50%; transform: translateX(-50%);
-  display: flex; gap: 9px;
+/* Светлый текст героя поверх затонированного фото */
+.hero__inner--solo .badge { background: rgba(255,255,255,.2); color: #fff; }
+.hero__inner--solo .hero__title { color: #fff; }
+.hero__inner--solo .hero__text { color: rgba(255,255,255,.92); }
+.hero__inner--solo .stat strong { color: #fff; }
+.hero__inner--solo .stat span { color: rgba(255,255,255,.85); }
+.hero__inner--solo .btn--primary { background: #fff; color: var(--green-dark); border-color: #fff; }
+.hero__inner--solo .btn--primary:hover { background: var(--cream); }
+.hero__inner--solo .btn--ghost { border-color: rgba(255,255,255,.85); color: #fff; }
+.hero__inner--solo .btn--ghost:hover { background: #fff; color: var(--green-dark); }
+
+/* Стрелки переключения фото */
+.hero__arrow {
+  position: absolute; z-index: 3; top: 50%; transform: translateY(-50%);
+  width: 50px; height: 50px; border-radius: 50%; border: none; cursor: pointer;
+  background: rgba(255,255,255,.85); color: var(--green-dark);
+  font-size: 26px; line-height: 1; display: flex; align-items: center; justify-content: center;
+  box-shadow: var(--shadow); transition: .2s;
 }
+.hero__arrow:hover { background: #fff; transform: translateY(-50%) scale(1.08); }
+.hero__arrow--prev { left: 20px; }
+.hero__arrow--next { right: 20px; }
 .badge {
   display: inline-block; background: rgba(58,125,68,.12); color: var(--green-dark);
   padding: 6px 16px; border-radius: 999px; font-weight: 600; font-size: 13px; margin-bottom: 18px;
@@ -378,8 +397,11 @@ h1, h2, h3, h4 { font-family: var(--head); line-height: 1.2; font-weight: 700; }
   .hero__inner--solo { min-height: 460px; }
   .hero__inner--solo .hero__content { max-width: none; }
   .hero-bg__scrim {
-    background: linear-gradient(180deg, rgba(244,247,239,.93) 0%, rgba(244,247,239,.72) 55%, rgba(244,247,239,.5) 100%);
+    background: linear-gradient(180deg, rgba(26,73,42,.9) 0%, rgba(33,84,46,.78) 55%, rgba(58,125,68,.62) 100%);
   }
+  .hero__arrow { width: 42px; height: 42px; font-size: 22px; }
+  .hero__arrow--prev { left: 10px; }
+  .hero__arrow--next { right: 10px; }
   .hero__text { margin-left: auto; margin-right: auto; }
   .hero__actions, .hero__stats { justify-content: center; }
   .about__inner { grid-template-columns: 1fr; }

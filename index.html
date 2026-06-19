@@ -72,76 +72,8 @@
         </div>
       </div>
     </div>
-    <div class="hero__dots" id="heroDots" aria-hidden="true"></div>
-  </section>
-
-  <!-- ===== Features ===== -->
-  <section class="features">
-    <div class="container features__grid">
-      <div class="feature">
-        <div class="feature__icon">🌿</div>
-        <h3 data-i18n="features.f1.title">Натуральный состав</h3>
-        <p data-i18n="features.f1.text">Без искусственных красителей и консервантов.</p>
-      </div>
-      <div class="feature">
-        <div class="feature__icon">⚖️</div>
-        <h3 data-i18n="features.f2.title">Баланс нутриентов</h3>
-        <p data-i18n="features.f2.text">Витамины и минералы для каждого этапа жизни.</p>
-      </div>
-      <div class="feature">
-        <div class="feature__icon">🐾</div>
-        <h3 data-i18n="features.f3.title">Для кошек и собак</h3>
-        <p data-i18n="features.f3.text">Линейки под породу, возраст и потребности.</p>
-      </div>
-      <div class="feature">
-        <div class="feature__icon">🔬</div>
-        <h3 data-i18n="features.f4.title">Контроль качества</h3>
-        <p data-i18n="features.f4.text">Проверка на каждом этапе производства.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Catalog teaser (навигация в каталог) ===== -->
-  <section class="section catalog-cta" id="catalog">
-    <div class="container">
-      <div class="catalog-cta__inner">
-        <div class="catalog-cta__text">
-          <span class="section__tag" data-i18n="products.tag">Наша продукция</span>
-          <h2 class="section__title" data-i18n="home.catalogTitle">Каталог продукции</h2>
-          <p data-i18n="home.catalogText">4 бренда, более 70 товаров: сухие и влажные корма, витамины, косметика для ухода и игрушки.</p>
-          <div class="brand-chips">
-            <a href="products.html#np" class="brand-chip">Nature's Protection</a>
-            <a href="products.html#araton" class="brand-chip">Araton</a>
-            <a href="products.html#tpl" class="brand-chip">Tauro Pro Line</a>
-            <a href="products.html#misoko" class="brand-chip">Misoko</a>
-          </div>
-          <a href="products.html" class="btn btn--primary" data-i18n="home.catalogCta">Перейти в каталог</a>
-        </div>
-        <a href="products.html" class="catalog-cta__visual" aria-hidden="true" tabindex="-1">
-          <img src="assets/catalog-pets.jpg" alt="" />
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== About ===== -->
-  <section class="about" id="about">
-    <div class="container about__inner">
-      <div class="about__media">
-        <img src="assets/result-maltese.jpg" class="about__photo" alt="Результат питания Nature's Protection: до и после" />
-      </div>
-      <div class="about__content">
-        <span class="section__tag" data-i18n="about.tag">О бренде</span>
-        <h2 class="section__title" data-i18n="about.title">Природа в основе питания</h2>
-        <p data-i18n="about.text1">Мы создаём корма, вдохновлённые естественным рационом животных. Тщательно отобранные ингредиенты обеспечивают полноценное питание и поддерживают здоровье вашего любимца на протяжении всей жизни.</p>
-        <p data-i18n="about.text2">Каждая формула разработана при участии ветеринаров и специалистов по питанию.</p>
-        <ul class="about__list">
-          <li data-i18n="about.li1">Отборное мясо как первый ингредиент</li>
-          <li data-i18n="about.li2">Поддержка иммунитета и пищеварения</li>
-          <li data-i18n="about.li3">Здоровая кожа и блестящая шерсть</li>
-        </ul>
-      </div>
-    </div>
+    <button class="hero__arrow hero__arrow--prev" id="heroPrev" type="button" aria-label="Предыдущее фото">‹</button>
+    <button class="hero__arrow hero__arrow--next" id="heroNext" type="button" aria-label="Следующее фото">›</button>
   </section>
 
   <!-- ===== Brand tabs (история / послы / ценности / FAQ) ===== -->
@@ -215,6 +147,49 @@
             <details class="faq__item"><summary data-i18n="brand.faq.q5">Как перевести питомца на новый корм?</summary><p data-i18n="brand.faq.a5">Постепенно, за 5–7 дней: смешивайте новый корм со старым, понемногу увеличивая долю Nature's Protection.</p></details>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Catalog teaser (навигация в каталог) ===== -->
+  <section class="section catalog-cta" id="catalog">
+    <div class="container">
+      <div class="catalog-cta__inner">
+        <div class="catalog-cta__text">
+          <span class="section__tag" data-i18n="products.tag">Наша продукция</span>
+          <h2 class="section__title" data-i18n="home.catalogTitle">Каталог продукции</h2>
+          <p data-i18n="home.catalogText">4 бренда, более 70 товаров: сухие и влажные корма, витамины, косметика для ухода и игрушки.</p>
+          <div class="brand-chips">
+            <a href="products.html#np" class="brand-chip">Nature's Protection</a>
+            <a href="products.html#araton" class="brand-chip">Araton</a>
+            <a href="products.html#tpl" class="brand-chip">Tauro Pro Line</a>
+            <a href="products.html#misoko" class="brand-chip">Misoko</a>
+          </div>
+          <a href="products.html" class="btn btn--primary" data-i18n="home.catalogCta">Перейти в каталог</a>
+        </div>
+        <a href="products.html" class="catalog-cta__visual" aria-hidden="true" tabindex="-1">
+          <img src="assets/catalog-pets.jpg" alt="" />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== About ===== -->
+  <section class="about" id="about">
+    <div class="container about__inner">
+      <div class="about__media">
+        <img src="assets/result-maltese.jpg" class="about__photo" alt="Результат питания Nature's Protection: до и после" />
+      </div>
+      <div class="about__content">
+        <span class="section__tag" data-i18n="about.tag">О бренде</span>
+        <h2 class="section__title" data-i18n="about.title">Природа в основе питания</h2>
+        <p data-i18n="about.text1">Мы создаём корма, вдохновлённые естественным рационом животных. Тщательно отобранные ингредиенты обеспечивают полноценное питание и поддерживают здоровье вашего любимца на протяжении всей жизни.</p>
+        <p data-i18n="about.text2">Каждая формула разработана при участии ветеринаров и специалистов по питанию.</p>
+        <ul class="about__list">
+          <li data-i18n="about.li1">Отборное мясо как первый ингредиент</li>
+          <li data-i18n="about.li2">Поддержка иммунитета и пищеварения</li>
+          <li data-i18n="about.li3">Здоровая кожа и блестящая шерсть</li>
+        </ul>
       </div>
     </div>
   </section>
