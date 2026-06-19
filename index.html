@@ -50,7 +50,13 @@
 
   <!-- ===== Hero ===== -->
   <section class="hero" id="home">
-    <div class="container hero__inner">
+    <div class="hero-bg" id="heroBg">
+      <img src="assets/pets-1.jpg" class="hero-bg__slide" alt="" aria-hidden="true" />
+      <img src="assets/pets-2.jpg" class="hero-bg__slide" alt="" aria-hidden="true" loading="lazy" />
+      <img src="assets/pets-3.jpg" class="hero-bg__slide" alt="" aria-hidden="true" loading="lazy" />
+    </div>
+    <div class="hero-bg__scrim" aria-hidden="true"></div>
+    <div class="container hero__inner hero__inner--solo">
       <div class="hero__content">
         <span class="badge" data-i18n="hero.badge">Премиум-питание</span>
         <h1 class="hero__title" data-i18n="hero.title">Здоровое питание для вашего любимца</h1>
@@ -65,17 +71,8 @@
           <div class="stat"><strong>20</strong><span data-i18n="hero.stat3">лет на рынке</span></div>
         </div>
       </div>
-      <div class="hero__visual">
-        <div class="slider" id="heroSlider">
-          <div class="slider__track">
-            <img src="assets/pets-1.jpg" class="slider__slide is-active" alt="Щенок корги и котёнок" />
-            <img src="assets/pets-2.jpg" class="slider__slide" alt="Собака и кошка" loading="lazy" />
-            <img src="assets/pets-3.jpg" class="slider__slide" alt="Кошка и собака играют" loading="lazy" />
-          </div>
-          <div class="slider__dots" id="heroSliderDots"></div>
-        </div>
-      </div>
     </div>
+    <div class="hero__dots" id="heroDots" aria-hidden="true"></div>
   </section>
 
   <!-- ===== Features ===== -->
@@ -131,7 +128,7 @@
   <section class="about" id="about">
     <div class="container about__inner">
       <div class="about__media">
-        <div class="about__imgblock"></div>
+        <img src="assets/result-maltese.jpg" class="about__photo" alt="Результат питания Nature's Protection: до и после" />
       </div>
       <div class="about__content">
         <span class="section__tag" data-i18n="about.tag">О бренде</span>
@@ -147,35 +144,77 @@
     </div>
   </section>
 
-  <!-- ===== Values (наши ценности) ===== -->
-  <section class="section values" id="values">
+  <!-- ===== Brand tabs (история / послы / ценности / FAQ) ===== -->
+  <section class="section brand" id="values">
     <div class="container">
       <div class="section__head">
-        <span class="section__tag" data-i18n="values.tag">Наши ценности</span>
-        <h2 class="section__title" data-i18n="values.title">Во что мы верим</h2>
-        <p class="section__subtitle" data-i18n="values.subtitle">Наша миссия — обеспечить полноценное и сбалансированное питание для домашних животных во всём мире.</p>
+        <span class="section__tag" data-i18n="brand.tag">Узнайте больше</span>
+        <h2 class="section__title" data-i18n="brand.title">О Nature's Protection</h2>
       </div>
-      <div class="values__grid">
-        <article class="value-card">
-          <div class="value-card__icon">🐾</div>
-          <h3 data-i18n="values.v1.title">Питание и уход</h3>
-          <p data-i18n="values.v1.text">Здоровье питомца — это 80% сбалансированного питания и 20% ежедневного и ветеринарного ухода.</p>
-        </article>
-        <article class="value-card">
-          <div class="value-card__icon">🧬</div>
-          <h3 data-i18n="values.v2.title">MicroZeoGen — инновация от природы</h3>
-          <p data-i18n="values.v2.text">Все продукты дополнены природным минералом MicroZeoGen (клиноптилолит): он впитывает токсины и примеси, поддерживая здоровье и жизнеспособность питомца.</p>
-        </article>
-        <article class="value-card">
-          <div class="value-card__icon">🌿</div>
-          <h3 data-i18n="values.v3.title">Без зерна и пшеницы</h3>
-          <p data-i18n="values.v3.text">Первый ингредиент — животный белок: мясо, рыба или личинки насекомых. Без злаков и пшеницы, подходит питомцам с чувствительным пищеварением.</p>
-        </article>
-        <article class="value-card">
-          <div class="value-card__icon">♻️</div>
-          <h3 data-i18n="values.v4.title">Забота о планете</h3>
-          <p data-i18n="values.v4.text">Корма производятся на «зелёной» энергии (солнце, ветер, вода), с экологичными источниками белка и крилем с сертификатом MSC.</p>
-        </article>
+
+      <div class="tabs" role="tablist">
+        <button class="brand-tab is-active" data-tab="values" data-i18n="tab.values">Ценности</button>
+        <button class="brand-tab" data-tab="history" data-i18n="tab.history">История</button>
+        <button class="brand-tab" data-tab="ambassadors" data-i18n="tab.ambassadors">Послы</button>
+        <button class="brand-tab" data-tab="faq" data-i18n="tab.faq">Вопросы</button>
+      </div>
+
+      <div class="brand-panels">
+        <!-- Ценности -->
+        <div class="brand-panel is-active" data-panel="values">
+          <div class="values__grid">
+            <article class="value-card">
+              <div class="value-card__icon">🐾</div>
+              <h3 data-i18n="values.v1.title">Питание и уход</h3>
+              <p data-i18n="values.v1.text">Здоровье питомца — это 80% сбалансированного питания и 20% ежедневного и ветеринарного ухода.</p>
+            </article>
+            <article class="value-card">
+              <div class="value-card__icon">🧬</div>
+              <h3 data-i18n="values.v2.title">MicroZeoGen — инновация от природы</h3>
+              <p data-i18n="values.v2.text">Все продукты дополнены природным минералом MicroZeoGen (клиноптилолит): он впитывает токсины и примеси, поддерживая здоровье и жизнеспособность питомца.</p>
+            </article>
+            <article class="value-card">
+              <div class="value-card__icon">🌿</div>
+              <h3 data-i18n="values.v3.title">Без зерна и пшеницы</h3>
+              <p data-i18n="values.v3.text">Первый ингредиент — животный белок: мясо, рыба или личинки насекомых. Без злаков и пшеницы, подходит питомцам с чувствительным пищеварением.</p>
+            </article>
+            <article class="value-card">
+              <div class="value-card__icon">♻️</div>
+              <h3 data-i18n="values.v4.title">Забота о планете</h3>
+              <p data-i18n="values.v4.text">Корма производятся на «зелёной» энергии (солнце, ветер, вода), с экологичными источниками белка и крилем с сертификатом MSC.</p>
+            </article>
+          </div>
+        </div>
+
+        <!-- История -->
+        <div class="brand-panel" data-panel="history">
+          <p class="brand-intro" data-i18n="brand.hist.intro">Путь Nature's Protection — это история инноваций, науки и любви к животным.</p>
+          <ul class="timeline">
+            <li data-i18n="brand.hist.m1">2004 — Открытие современной фабрики Akvatera LT в Каунасском крае стало основой нашего качества.</li>
+            <li data-i18n="brand.hist.m2">Рождение бренда — Появился Nature's Protection: гармония природы, науки и заботы.</li>
+            <li data-i18n="brand.hist.m3">Superior Care — Запуск линии с минералом MicroZeoGen против слёзных дорожек у питомцев со светлым окрасом.</li>
+            <li data-i18n="brand.hist.m4">Мировые рынки — Продукция вышла в Азию, США и десятки стран; Akvatera LT получила звание «Экспортёр года».</li>
+            <li data-i18n="brand.hist.m5">Akvatera W — Открытие современного завода влажных кормов на возобновляемой энергии (инвестиции €20 млн).</li>
+          </ul>
+          <p class="brand-slogan" data-i18n="brand.hist.slogan">Наша миссия неизменна — подарить вам и вашему питомцу больше лет вместе.</p>
+        </div>
+
+        <!-- Послы -->
+        <div class="brand-panel" data-panel="ambassadors">
+          <p data-i18n="brand.amb.text">Заводчики, грумеры и шоу-хендлеры по всей Европе и Азии выбирают Nature's Protection и Tauro Pro Line. С этими продуктами их питомцы побеждают на Best in Show и выглядят безупречно — здоровая блестящая шерсть, хорошая кожа и отличное самочувствие.</p>
+          <blockquote class="brand-quote" data-i18n="brand.amb.quote">«Лучшее натуральное питание позволило мне и моим клиентам блистать на самых высоких подиумах Европы и Азии» — посол бренда.</blockquote>
+        </div>
+
+        <!-- FAQ -->
+        <div class="brand-panel" data-panel="faq">
+          <div class="faq">
+            <details class="faq__item"><summary data-i18n="brand.faq.q1">Можно ли кормить питомца одним кормом всю жизнь?</summary><p data-i18n="brand.faq.a1">Потребности меняются с возрастом: щенкам и котятам нужно больше белка и энергии, а пожилым — лёгкие, хорошо усваиваемые корма. Подбирайте рацион под этап жизни питомца.</p></details>
+            <details class="faq__item"><summary data-i18n="brand.faq.q2">Можно ли смешивать сухой и влажный корм?</summary><p data-i18n="brand.faq.a2">Да. Главное — соблюдать общую суточную норму по весу и возрасту. Сухой корм помогает чистить зубы, а влажный добавляет влагу и аромат.</p></details>
+            <details class="faq__item"><summary data-i18n="brand.faq.q3">Есть ли в кормах искусственные добавки?</summary><p data-i18n="brand.faq.a3">Нет. Все продукты Nature's Protection — без искусственных красителей, ароматизаторов и консервантов, только натуральные ингредиенты.</p></details>
+            <details class="faq__item"><summary data-i18n="brand.faq.q4">Подходит ли корм чувствительным питомцам?</summary><p data-i18n="brand.faq.a4">Да. Есть линейки Sensitive и Grain Free — без глютена, кукурузы и пшеницы, чтобы снизить риск аллергии и проблем с пищеварением.</p></details>
+            <details class="faq__item"><summary data-i18n="brand.faq.q5">Как перевести питомца на новый корм?</summary><p data-i18n="brand.faq.a5">Постепенно, за 5–7 дней: смешивайте новый корм со старым, понемногу увеличивая долю Nature's Protection.</p></details>
+          </div>
+        </div>
       </div>
     </div>
   </section>

@@ -187,36 +187,58 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --- Слайдер фото на главной ---
-  const slider = document.getElementById('heroSlider');
-  if (slider) {
-    const slides = Array.from(slider.querySelectorAll('.slider__slide'));
-    const dotsWrap = document.getElementById('heroSliderDots');
-    let idx = 0, timer = null;
+  const heroBg = document.getElementById('heroBg');
+  if (heroBg) {
+    const slides = Array.from(heroBg.querySelectorAll('.hero-bg__slide'));
+    const dotsWrap = document.getElementById('heroDots');
+    let cur = 0, timer = null;
     const dots = slides.map((_, i) => {
       const b = document.createElement('button');
-      b.className = 'slider__dot' + (i === 0 ? ' is-active' : '');
       b.type = 'button';
-      b.setAttribute('aria-label', 'Слайд ' + (i + 1));
-      b.addEventListener('click', () => { go(i); restart(); });
+      b.className = 'slider__dot' + (i === 0 ? ' is-active' : '');
+      b.setAttribute('aria-label', 'Фото ' + (i + 1));
+      b.addEventListener('click', () => { wipeTo(i); restart(); });
       dotsWrap.appendChild(b);
       return b;
     });
-    function go(n) {
-      slides[idx].classList.remove('is-active');
-      dots[idx].classList.remove('is-active');
-      idx = (n + slides.length) % slides.length;
-      slides[idx].classList.add('is-active');
-      dots[idx].classList.add('is-active');
+    slides.forEach((s, i) => { s.style.zIndex = i === 0 ? '1' : '0'; });
+    // Плавная смена фоновых фото с эффектом «стирания» (clip-path wipe)
+    function wipeTo(n) {
+      if (n === cur || !slides[n]) return;
+      const incoming = slides[n], prev = cur;
+      incoming.style.transition = 'none';
+      incoming.style.zIndex = '2';
+      incoming.style.clipPath = 'inset(0 0 0 100%)';
+      void incoming.offsetWidth; // reflow, чтобы анимация сработала
+      incoming.style.transition = 'clip-path 1.1s ease';
+      incoming.style.clipPath = 'inset(0 0 0 0)';
+      cur = n;
+      dots.forEach((d, i) => d.classList.toggle('is-active', i === cur));
+      setTimeout(() => { slides[prev].style.zIndex = '0'; incoming.style.zIndex = '1'; }, 1150);
     }
     function restart() {
       clearInterval(timer);
-      timer = setInterval(() => go(idx + 1), 4500);
+      timer = setInterval(() => wipeTo((cur + 1) % slides.length), 5000);
     }
     if (slides.length > 1) {
       restart();
-      slider.addEventListener('mouseenter', () => clearInterval(timer));
-      slider.addEventListener('mouseleave', restart);
+      heroBg.addEventListener('mouseenter', () => clearInterval(timer));
+      heroBg.addEventListener('mouseleave', restart);
     }
+  }
+
+  // --- Вкладки «О бренде» на главной ---
+  const brandTabs = Array.from(document.querySelectorAll('.brand-tab'));
+  if (brandTabs.length) {
+    const panels = document.querySelectorAll('.brand-panel');
+    brandTabs.forEach(t => t.addEventListener('click', () => {
+      brandTabs.forEach(x => x.classList.remove('is-active'));
+      panels.forEach(p => p.classList.remove('is-active'));
+      t.classList.add('is-active');
+      const name = t.getAttribute('data-tab');
+      const panel = document.querySelector('.brand-panel[data-panel="' + name + '"]');
+      if (panel) panel.classList.add('is-active');
+    }));
   }
 
   // --- Год в подвале ---
