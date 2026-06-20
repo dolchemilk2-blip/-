@@ -187,6 +187,72 @@ function renderProducts(brand, lang) {
   revealCards(wrap);
 }
 
+// ===== Парящие фото товаров в фоне (параллакс) =====
+const FLOATIES = [
+  { sel: '.brand', items: [
+    { img: 'assets/float/np-mzg.webp',       css: 'top:14%;left:-46px;width:150px;',  speed: 0.08, delay: 0 },
+    { img: 'assets/float/np-mobility.webp',  css: 'bottom:8%;right:-30px;width:128px;', speed: 0.15, delay: 1.2 }
+  ]},
+  { sel: '.catalog-cta', items: [
+    { img: 'assets/float/np-salmonoil.webp', css: 'top:12%;right:1%;width:118px;',     speed: 0.12, delay: 0.4 },
+    { img: 'assets/float/np-kitten.webp',    css: 'bottom:-24px;left:2%;width:150px;', speed: 0.07, delay: 1.6 }
+  ]},
+  { sel: '.about', items: [
+    { img: 'assets/float/np-beauty.webp',    css: 'top:10%;right:-34px;width:138px;',  speed: 0.10, delay: 0.8 },
+    { img: 'assets/float/np-whitecats.webp', css: 'bottom:8%;left:-26px;width:150px;', speed: 0.16, delay: 2.0 }
+  ]},
+  { sel: '.quality', items: [
+    { img: 'assets/float/np-weight.webp',    css: 'top:14%;left:1%;width:150px;',      speed: 0.09, delay: 0.2 },
+    { img: 'assets/float/np-sensitive.webp', css: 'bottom:10%;right:2%;width:138px;',   speed: 0.13, delay: 1.4 }
+  ]},
+  { sel: '#contact', items: [
+    { img: 'assets/float/np-mobility.webp',  css: 'top:12%;left:1%;width:122px;',       speed: 0.11, delay: 0.6 }
+  ]}
+];
+
+function initFloaties() {
+  if (typeof window === 'undefined' || window.innerWidth <= 720) return;
+  const created = [];
+  FLOATIES.forEach(group => {
+    const section = document.querySelector(group.sel);
+    if (!section) return;
+    section.classList.add('floaties-host');
+    group.items.forEach(it => {
+      const div = document.createElement('div');
+      div.className = 'floatie';
+      div.style.cssText = it.css;
+      div.dataset.speed = it.speed;
+      const img = document.createElement('img');
+      img.src = it.img; img.alt = ''; img.setAttribute('aria-hidden', 'true');
+      img.className = 'floatie__img'; img.style.animationDelay = (it.delay || 0) + 's';
+      div.appendChild(img);
+      section.appendChild(div);
+      created.push(div);
+    });
+  });
+  const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!created.length || reduce) return;
+
+  let centers = [];
+  function measure() {
+    const sy = window.pageYOffset;
+    centers = created.map(f => { f.style.transform = 'none'; const r = f.getBoundingClientRect(); return r.top + sy + r.height / 2; });
+  }
+  function update() {
+    const mid = window.pageYOffset + window.innerHeight / 2;
+    created.forEach((f, i) => {
+      const speed = parseFloat(f.dataset.speed) || 0.1;
+      const delta = (mid - centers[i]) * speed;
+      f.style.transform = 'translate3d(0,' + delta.toFixed(1) + 'px,0)';
+    });
+  }
+  let ticking = false;
+  function onScroll() { if (!ticking) { requestAnimationFrame(() => { update(); ticking = false; }); ticking = true; } }
+  measure(); update();
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', () => { measure(); update(); });
+}
+
 // ===== Инициализация =====
 document.addEventListener('DOMContentLoaded', () => {
   const lang = getLang();
@@ -318,6 +384,9 @@ document.addEventListener('DOMContentLoaded', () => {
       if (panel) panel.classList.add('is-active');
     }));
   }
+
+  // --- Парящие фото товаров в фоне ---
+  initFloaties();
 
   // --- Год в подвале ---
   document.getElementById('year').textContent = new Date().getFullYear();

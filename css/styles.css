@@ -259,6 +259,18 @@ h1, h2, h3, h4 { font-family: var(--head); line-height: 1.2; font-weight: 700; }
 .baby-banner__text h3 { color: var(--green-dark); font-size: 20px; margin-bottom: 4px; }
 .baby-banner__text p { color: var(--muted); font-size: 15px; }
 
+/* ===== Floating product decorations (parallax) ===== */
+.floaties-host { position: relative; overflow: hidden; }
+.floaties-host > .container { position: relative; z-index: 1; }
+.floatie { position: absolute; z-index: 0; pointer-events: none; opacity: .15; will-change: transform; }
+.floatie__img { width: 100%; display: block; filter: saturate(1.05); animation: floatBob 8s ease-in-out infinite; }
+@keyframes floatBob {
+  0%, 100% { transform: translateY(0) rotate(-3deg); }
+  50%      { transform: translateY(-18px) rotate(3deg); }
+}
+@media (max-width: 720px) { .floatie { display: none; } }
+@media (prefers-reduced-motion: reduce) { .floatie__img { animation: none; } }
+
 /* ===== Category quick-nav (чипы) ===== */
 .cat-nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; margin-bottom: 34px; }
 .cat-nav:empty { display: none; }
