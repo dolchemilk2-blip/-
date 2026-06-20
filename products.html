@@ -58,12 +58,9 @@
     </div>
   </section>
 
-  <!-- ===== Catalog ===== -->
-  <section class="section section--top" id="products">
-    <div class="container">
-      <h2 class="ranges__title" data-i18n="products.rangesTitle">Линейки Nature's Protection</h2>
-      <div class="ranges" id="rangesGrid"></div>
-
+  <!-- ===== Sticky catalog toolbar ===== -->
+  <div class="catalog-bar" id="catalogBar">
+    <div class="container catalog-bar__inner">
       <div class="tabs" id="tabs">
         <button class="tab is-active" data-brand="np">Nature's Protection</button>
         <button class="tab" data-brand="araton">Araton</button>
@@ -76,10 +73,20 @@
         <button class="species__btn" type="button" data-species="cats"><span class="species__ico">🐱</span><span data-i18n="products.tabCats">Для кошек</span></button>
         <button class="species__btn" type="button" data-species="dogs"><span class="species__ico">🐶</span><span data-i18n="products.tabDogs">Для собак</span></button>
       </div>
+    </div>
+  </div>
 
+  <!-- ===== Catalog ===== -->
+  <section class="section section--top" id="products">
+    <div class="container">
       <div class="cat-nav" id="catNav"></div>
 
       <div id="productsGrid"></div>
+
+      <div class="ranges-block">
+        <h2 class="ranges__title" data-i18n="products.rangesTitle">Линейки Nature's Protection</h2>
+        <div class="ranges" id="rangesGrid"></div>
+      </div>
     </div>
   </section>
 

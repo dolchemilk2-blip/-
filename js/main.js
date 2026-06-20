@@ -113,6 +113,26 @@ function productCard(item, lang) {
     </article>`;
 }
 
+// Плавное появление карточек при прокрутке (без анимации при reduce-motion)
+function revealCards(wrap) {
+  if (typeof window === 'undefined' || !('IntersectionObserver' in window)) return;
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const c = e.target;
+      c.classList.add('in');
+      io.unobserve(c);
+      setTimeout(() => { c.classList.remove('reveal', 'in'); c.style.transitionDelay = ''; }, 700);
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  wrap.querySelectorAll('.product').forEach((c, i) => {
+    c.classList.add('reveal');
+    c.style.transitionDelay = ((i % 3) * 70) + 'ms';
+    io.observe(c);
+  });
+}
+
 function renderProducts(brand, lang) {
   const wrap = document.getElementById('productsGrid');
   if (!wrap) return;
@@ -152,6 +172,8 @@ function renderProducts(brand, lang) {
       });
     });
   }
+
+  revealCards(wrap);
 }
 
 // ===== Инициализация =====
