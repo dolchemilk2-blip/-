@@ -137,7 +137,15 @@ function renderProducts(brand, lang) {
   const wrap = document.getElementById('productsGrid');
   if (!wrap) return;
   const dict = TRANSLATIONS[lang] || TRANSLATIONS.ru;
-  const groups = filterBySpecies(buildCatalog()[brand] || [], currentSpecies);
+  let groups = buildCatalog()[brand] || [];
+  if (currentSpecies === 'baby') {
+    // Малыши: показываем только товары для щенков и котят из всех групп
+    groups = groups
+      .map(g => Object.assign({}, g, { items: g.items.filter(it => it.baby) }))
+      .filter(g => g.items.length);
+  } else {
+    groups = filterBySpecies(groups, currentSpecies);
+  }
 
   // Быстрые чипы-категории для перехода к группам
   const nav = document.getElementById('catNav');
@@ -153,7 +161,10 @@ function renderProducts(brand, lang) {
     return;
   }
 
-  wrap.innerHTML = groups.map((g, i) => {
+  const banner = currentSpecies === 'baby'
+    ? `<div class="baby-banner"><span class="baby-banner__icon">🍼</span><div class="baby-banner__text"><h3>${dict['products.babiesTitle'] || ''}</h3><p>${dict['products.babiesText'] || ''}</p></div></div>`
+    : '';
+  wrap.innerHTML = banner + groups.map((g, i) => {
     const groupName = (g.group && (g.group[lang] || g.group.ru)) || '';
     const cards = g.items.map(it => productCard(it, lang)).join('');
     return `

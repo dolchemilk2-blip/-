@@ -243,6 +243,21 @@ h1, h2, h3, h4 { font-family: var(--head); line-height: 1.2; font-weight: 700; }
 .species__btn:hover { border-color: var(--green); background: var(--cream); }
 .species__btn.is-active { background: var(--green-light); border-color: var(--green); color: var(--green-dark); }
 .species__ico { font-size: 16px; line-height: 1; }
+/* «Забота о малышах» — выделенная вкладка */
+.species__btn--baby { border-color: var(--green); background: linear-gradient(120deg, #ffffff, #f1f8ea); }
+.species__btn--baby:hover { background: #eef6e4; }
+.species__btn--baby.is-active { background: var(--green); border-color: var(--green); color: #fff; }
+
+/* Баннер «Забота о малышах» */
+.baby-banner {
+  display: flex; align-items: center; gap: 18px;
+  background: linear-gradient(120deg, #f3f7ee, #eaf3df);
+  border: 1px solid rgba(58,125,68,.18); border-radius: var(--radius);
+  padding: 22px 26px; margin-bottom: 36px;
+}
+.baby-banner__icon { font-size: 42px; line-height: 1; }
+.baby-banner__text h3 { color: var(--green-dark); font-size: 20px; margin-bottom: 4px; }
+.baby-banner__text p { color: var(--muted); font-size: 15px; }
 
 /* ===== Category quick-nav (чипы) ===== */
 .cat-nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; margin-bottom: 34px; }

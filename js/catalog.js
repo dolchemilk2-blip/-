@@ -14,7 +14,7 @@ const BRANDS_EXTRA = {
           az: { cat: "Adult · Bütün cinslər", name: "Poultry", desc: "Bütün cins yetkin itlər üçün quş əti ilə tam rasion; sağlam dəri və tük üçün.", tags: ["Quş əti", "Adult"] },
           ru: { cat: "Adult · Все породы", name: "Poultry", desc: "Полнорационный корм с птицей для взрослых собак всех пород; для здоровой кожи и шерсти.", tags: ["Птица", "Adult"] },
           en: { cat: "Adult · All breeds", name: "Poultry", desc: "Complete poultry food for adult dogs of all breeds; for healthy skin and coat.", tags: ["Poultry", "Adult"] } },
-        { img: "assets/products/art-dog-junior.png",
+        { img: "assets/products/art-dog-junior.png", baby: true,
           az: { cat: "Junior · <1 il", name: "Junior", desc: "Bütün cins böyüyən bala itlər üçün qida; sağlam böyümə üçün, 68% heyvani protein.", tags: ["Junior", "<1 il"] },
           ru: { cat: "Junior · <1 года", name: "Junior", desc: "Корм для растущих щенков всех пород; для здорового роста, 68% животного белка.", tags: ["Junior", "<1 года"] },
           en: { cat: "Junior · <1 year", name: "Junior", desc: "Food for growing puppies of all breeds; for healthy growth, 68% animal protein.", tags: ["Junior", "<1 year"] } },
@@ -40,7 +40,7 @@ const BRANDS_EXTRA = {
           az: { cat: "Adult · Bütün cinslər", name: "Sterilised", desc: "Sterilizə olunmuş yetkin pişiklər üçün ideal çəki formulası; 47% heyvani protein.", tags: ["Sterilised", "İdeal çəki"] },
           ru: { cat: "Adult · Все породы", name: "Sterilised", desc: "Формула идеального веса для стерилизованных взрослых кошек; 47% животного белка.", tags: ["Sterilised", "Идеальный вес"] },
           en: { cat: "Adult · All breeds", name: "Sterilised", desc: "Ideal-weight formula for sterilised adult cats; 47% animal protein.", tags: ["Sterilised", "Ideal weight"] } },
-        { img: "assets/products/art-cat-kitten.png",
+        { img: "assets/products/art-cat-kitten.png", baby: true,
           az: { cat: "Kitten · <1 il", name: "Kitten", desc: "Bütün cins böyüyən balaca pişiklər üçün qida.", tags: ["Kitten", "<1 il"] },
           ru: { cat: "Kitten · <1 года", name: "Kitten", desc: "Корм для растущих котят всех пород.", tags: ["Kitten", "<1 года"] },
           en: { cat: "Kitten · <1 year", name: "Kitten", desc: "Food for growing kittens of all breeds.", tags: ["Kitten", "<1 year"] } }
@@ -50,7 +50,7 @@ const BRANDS_EXTRA = {
       group: { az: "İtlər üçün yaş qida (paket)", ru: "Влажный корм для собак (паучи)", en: "Wet food for dogs (pouches)" },
       species: "dogs",
       items: [
-        { img: "assets/products/art-dog-pouch.png",
+        { img: "assets/products/art-dog-pouch.png", baby: true,
           az: { cat: "Junior · Bütün cinslər", name: "Lamb & Rabbit", desc: "Bala itlər üçün quzu və dovşan əti ilə paket; sousda şirəli ət parçaları, 92% heyvani protein, 85 q.", tags: ["Quzu", "Dovşan", "Junior"] },
           ru: { cat: "Junior · Все породы", name: "Lamb & Rabbit", desc: "Пауч с ягнёнком и кроликом для щенков; сочные кусочки мяса в соусе, 92% животного белка, 85 г.", tags: ["Ягнёнок", "Кролик", "Junior"] },
           en: { cat: "Junior · All breeds", name: "Lamb & Rabbit", desc: "Lamb and rabbit pouch for puppies; juicy meaty chunks in gravy, 92% animal protein, 85 g.", tags: ["Lamb", "Rabbit", "Junior"] } }
@@ -107,7 +107,7 @@ const BRANDS_EXTRA = {
           az: { cat: "Şampun", name: "5in1 Shampoo", desc: "Nəmləndirilmiş və güclü tük üçün efir yağı əsaslı universal 5-i-1 şampun; silikon, SLS, paraben və mineral yağsız.", tags: ["5in1", "Efir yağı"] },
           ru: { cat: "Шампунь", name: "5in1 Shampoo", desc: "Универсальный шампунь 5в1 на эфирных маслах для увлажнённой и крепкой шерсти; без силиконов, SLS, парабенов и минеральных масел.", tags: ["5в1", "Эфирные масла"] },
           en: { cat: "Shampoo", name: "5in1 Shampoo", desc: "Universal 5-in-1 essential-oil shampoo for moisturized and strong hair; no silicones, SLS, parabens or mineral oils.", tags: ["5in1", "Essential oils"] } },
-        { img: "assets/products/tpl-pn-puppy.jpg",
+        { img: "assets/products/tpl-pn-puppy.jpg", baby: true,
           az: { cat: "Şampun", name: "Puppy & Kitten Shampoo", desc: "Balalar üçün incə efir yağı əsaslı şampun; həssas qulluq üçün, silikon, SLS, paraben və mineral yağsız.", tags: ["Puppy", "Kitten"] },
           ru: { cat: "Шампунь", name: "Puppy & Kitten Shampoo", desc: "Деликатный шампунь на эфирных маслах для щенков и котят; для бережного ухода, без силиконов, SLS, парабенов и минеральных масел.", tags: ["Puppy", "Kitten"] },
           en: { cat: "Shampoo", name: "Puppy & Kitten Shampoo", desc: "Delicate essential-oil shampoo for puppies and kittens; for gentle care, no silicones, SLS, parabens or mineral oils.", tags: ["Puppy", "Kitten"] } },
