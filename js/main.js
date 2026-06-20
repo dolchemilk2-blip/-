@@ -59,16 +59,18 @@ function renderRanges(lang) {
 
 // ===== Каталог по брендам =====
 let currentBrand = 'np';
+let currentSpecies = 'all'; // all | cats | dogs
 
 // Добавить значок питомца к названию группы (для брендов кормов NP/Araton)
-function prefixGroups(groups, prefix) {
+function prefixGroups(groups, prefix, species) {
   return groups.map(g => ({
     group: {
       az: prefix + g.group.az,
       ru: prefix + g.group.ru,
       en: prefix + g.group.en
     },
-    items: g.items
+    items: g.items,
+    species: species
   }));
 }
 
@@ -76,11 +78,20 @@ function prefixGroups(groups, prefix) {
 function buildCatalog() {
   const extra = (typeof BRANDS_EXTRA !== 'undefined') ? BRANDS_EXTRA : {};
   return {
-    np: prefixGroups(PRODUCTS.cats, '🐱 ').concat(prefixGroups(PRODUCTS.dogs, '🐶 ')),
+    np: prefixGroups(PRODUCTS.cats, '🐱 ', 'cats').concat(prefixGroups(PRODUCTS.dogs, '🐶 ', 'dogs')),
     araton: extra.araton || [],
     tpl: extra.tpl || [],
     misoko: extra.misoko || []
   };
+}
+
+// Оставить группы для выбранного вида (кошки/собаки). species "both"/пусто — показываем всегда.
+function filterBySpecies(groups, species) {
+  if (species === 'all') return groups;
+  return groups.filter(g => {
+    const sp = g.species || 'both';
+    return sp === 'both' || sp === species;
+  });
 }
 
 function productCard(item, lang) {
@@ -105,16 +116,42 @@ function productCard(item, lang) {
 function renderProducts(brand, lang) {
   const wrap = document.getElementById('productsGrid');
   if (!wrap) return;
-  const groups = buildCatalog()[brand] || [];
-  wrap.innerHTML = groups.map(g => {
+  const dict = TRANSLATIONS[lang] || TRANSLATIONS.ru;
+  const groups = filterBySpecies(buildCatalog()[brand] || [], currentSpecies);
+
+  // Быстрые чипы-категории для перехода к группам
+  const nav = document.getElementById('catNav');
+  if (nav) {
+    nav.innerHTML = groups.map((g, i) => {
+      const name = (g.group && (g.group[lang] || g.group.ru)) || '';
+      return `<button class="cat-chip" type="button" data-target="grp-${i}">${name}</button>`;
+    }).join('');
+  }
+
+  if (!groups.length) {
+    wrap.innerHTML = `<p class="catalog-empty">${dict['products.empty'] || ''}</p>`;
+    return;
+  }
+
+  wrap.innerHTML = groups.map((g, i) => {
     const groupName = (g.group && (g.group[lang] || g.group.ru)) || '';
     const cards = g.items.map(it => productCard(it, lang)).join('');
     return `
-      <div class="product-group">
+      <div class="product-group" id="grp-${i}">
         <h3 class="product-group__title">${groupName}</h3>
         <div class="products">${cards}</div>
       </div>`;
   }).join('');
+
+  // Прокрутка к группе по клику на чип
+  if (nav) {
+    nav.querySelectorAll('.cat-chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        const target = document.getElementById(chip.getAttribute('data-target'));
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+  }
 }
 
 // ===== Инициализация =====
@@ -168,6 +205,19 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.tab').forEach(tab => {
     tab.addEventListener('click', () => activateBrand(tab.getAttribute('data-brand'), true));
   });
+
+  // --- Переключатель «Все / Для кошек / Для собак» ---
+  const speciesWrap = document.getElementById('species');
+  if (speciesWrap) {
+    speciesWrap.querySelectorAll('.species__btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        speciesWrap.querySelectorAll('.species__btn').forEach(b => b.classList.remove('is-active'));
+        btn.classList.add('is-active');
+        currentSpecies = btn.getAttribute('data-species') || 'all';
+        renderProducts(currentBrand, getLang());
+      });
+    });
+  }
 
   // Открыть нужный бренд по адресу (#np / #araton / #tpl / #misoko)
   if (document.getElementById('productsGrid')) {

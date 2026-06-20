@@ -216,7 +216,7 @@ h1, h2, h3, h4 { font-family: var(--head); line-height: 1.2; font-weight: 700; }
 .range__desc { font-size: 13px; color: var(--muted); }
 
 /* ===== Product groups ===== */
-.product-group { margin-bottom: 50px; }
+.product-group { margin-bottom: 50px; scroll-margin-top: 100px; }
 .product-group:last-child { margin-bottom: 0; }
 .product-group__title {
   font-size: 22px; color: var(--ink); margin-bottom: 22px; padding-bottom: 10px;
@@ -231,6 +231,29 @@ h1, h2, h3, h4 { font-family: var(--head); line-height: 1.2; font-weight: 700; }
   cursor: pointer; transition: .2s; font-size: 15px;
 }
 .tab.is-active, .brand-tab.is-active { background: var(--green); color: #fff; border-color: var(--green); }
+
+/* ===== Species filter (кошки / собаки) ===== */
+.species { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin: -18px 0 26px; }
+.species__btn {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 8px 18px; border-radius: 999px; border: 1.5px solid rgba(58,125,68,.3);
+  background: #fff; color: var(--green-dark); font-family: var(--head); font-weight: 600;
+  font-size: 14px; cursor: pointer; transition: .2s;
+}
+.species__btn:hover { border-color: var(--green); background: var(--cream); }
+.species__btn.is-active { background: var(--green-light); border-color: var(--green); color: var(--green-dark); }
+.species__ico { font-size: 16px; line-height: 1; }
+
+/* ===== Category quick-nav (чипы) ===== */
+.cat-nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; margin-bottom: 34px; }
+.cat-nav:empty { display: none; }
+.cat-chip {
+  padding: 7px 14px; border-radius: 8px; border: 1px solid rgba(31,42,36,.12);
+  background: #fff; color: var(--muted); font-size: 13px; font-weight: 600;
+  font-family: var(--font); cursor: pointer; transition: .2s;
+}
+.cat-chip:hover { color: var(--green-dark); border-color: var(--green); background: var(--cream); }
+.catalog-empty { text-align: center; color: var(--muted); padding: 40px 0; }
 
 .products { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
 .product {

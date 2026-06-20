@@ -4,6 +4,7 @@ const BRANDS_EXTRA = {
   "araton": [
     {
       group: { az: "İtlər üçün quru qida", ru: "Сухой корм для собак", en: "Dry food for dogs" },
+      species: "dogs",
       items: [
         { img: "assets/products/art-dog-lamb.png",
           az: { cat: "Adult · Bütün cinslər", name: "Lamb", desc: "Bütün cins yetkin itlər üçün quzu əti ilə tam rasion; sağlam dəri və parlaq tük üçün, 65% heyvani protein.", tags: ["Quzu", "Adult"] },
@@ -25,6 +26,7 @@ const BRANDS_EXTRA = {
     },
     {
       group: { az: "Pişiklər üçün quru qida", ru: "Сухой корм для кошек", en: "Dry food for cats" },
+      species: "cats",
       items: [
         { img: "assets/products/art-cat-salmon.png",
           az: { cat: "Adult · Bütün cinslər", name: "Salmon", desc: "Bütün cins yetkin pişiklər üçün qızılbalıqlı qida; 87% ət tərkibi.", tags: ["Qızılbalıq", "Adult"] },
@@ -45,12 +47,19 @@ const BRANDS_EXTRA = {
       ]
     },
     {
-      group: { az: "Yaş qida (paketlər)", ru: "Влажный корм (паучи)", en: "Wet food (pouches)" },
+      group: { az: "İtlər üçün yaş qida (paket)", ru: "Влажный корм для собак (паучи)", en: "Wet food for dogs (pouches)" },
+      species: "dogs",
       items: [
         { img: "assets/products/art-dog-pouch.png",
           az: { cat: "Junior · Bütün cinslər", name: "Lamb & Rabbit", desc: "Bala itlər üçün quzu və dovşan əti ilə paket; sousda şirəli ət parçaları, 92% heyvani protein, 85 q.", tags: ["Quzu", "Dovşan", "Junior"] },
           ru: { cat: "Junior · Все породы", name: "Lamb & Rabbit", desc: "Пауч с ягнёнком и кроликом для щенков; сочные кусочки мяса в соусе, 92% животного белка, 85 г.", tags: ["Ягнёнок", "Кролик", "Junior"] },
-          en: { cat: "Junior · All breeds", name: "Lamb & Rabbit", desc: "Lamb and rabbit pouch for puppies; juicy meaty chunks in gravy, 92% animal protein, 85 g.", tags: ["Lamb", "Rabbit", "Junior"] } },
+          en: { cat: "Junior · All breeds", name: "Lamb & Rabbit", desc: "Lamb and rabbit pouch for puppies; juicy meaty chunks in gravy, 92% animal protein, 85 g.", tags: ["Lamb", "Rabbit", "Junior"] } }
+      ]
+    },
+    {
+      group: { az: "Pişiklər üçün yaş qida (paket)", ru: "Влажный корм для кошек (паучи)", en: "Wet food for cats (pouches)" },
+      species: "cats",
+      items: [
         { img: "assets/products/art-cat-pouch.png",
           az: { cat: "Adult · Bütün cinslər", name: "Salmon & Chicken", desc: "Yetkin pişiklər üçün qızılbalıq və toyuq ilə paket; sousda şirəli ət parçaları, 93% heyvani protein, 85 q.", tags: ["Qızılbalıq", "Toyuq", "Adult"] },
           ru: { cat: "Adult · Все породы", name: "Salmon & Chicken", desc: "Пауч с лососем и курицей для взрослых кошек; сочные кусочки мяса в соусе, 93% животного белка, 85 г.", tags: ["Лосось", "Курица", "Adult"] },
@@ -62,6 +71,7 @@ const BRANDS_EXTRA = {
   "tpl": [
     {
       group: { az: "Ultra Natural Care", ru: "Ultra Natural Care", en: "Ultra Natural Care" },
+      species: "both",
       items: [
         { img: "assets/products/tpl-un-deep.jpg",
           az: { cat: "Şampun · Step 1", name: "Deep Clean Shampoo", desc: "Bütün tük tipləri üçün dərin təmizləyən şampun; dəri və tükdən artıq yağ, çirk və toz hissəciklərini təmizləyir. Adaçayı, pantenol və qliserinlə, 94% təbii.", tags: ["Şampun", "Dərin təmizləmə"] },
@@ -91,6 +101,7 @@ const BRANDS_EXTRA = {
     },
     {
       group: { az: "Pure Nature", ru: "Pure Nature", en: "Pure Nature" },
+      species: "both",
       items: [
         { img: "assets/products/tpl-pn-5in1.jpg",
           az: { cat: "Şampun", name: "5in1 Shampoo", desc: "Nəmləndirilmiş və güclü tük üçün efir yağı əsaslı universal 5-i-1 şampun; silikon, SLS, paraben və mineral yağsız.", tags: ["5in1", "Efir yağı"] },
@@ -124,6 +135,7 @@ const BRANDS_EXTRA = {
     },
     {
       group: { az: "Qulluq aksesuarları", ru: "Аксессуары для груминга", en: "Grooming accessories" },
+      species: "both",
       items: [
         { img: "assets/products/tpl-acc-1.jpg",
           az: { cat: "Aksesuar", name: "Claw Scissors", desc: "Pişik və balaca heyvanlar üçün dırnaq qayçısı; ağac saplı, dəqiq kəsim.", tags: ["Dırnaq", "Qayçı"] },
@@ -144,6 +156,7 @@ const BRANDS_EXTRA = {
   "misoko": [
     {
       group: { az: "Top oyuncaqlar", ru: "Мячики", en: "Balls" },
+      species: "both",
       items: [
         { img: "assets/products/misoko-01.jpg",
           az: { cat: "Oyuncaq", name: "Tennis Balls (3 ədəd)", desc: "İtlər üçün rəngli tennis topları dəsti; aktiv oyun və apportirovka üçün. Champion's Choice.", tags: ["Top", "Oyun"] },
@@ -153,6 +166,7 @@ const BRANDS_EXTRA = {
     },
     {
       group: { az: "Yumşaq oyuncaqlar", ru: "Плюшевые игрушки", en: "Plush toys" },
+      species: "both",
       items: [
         { img: "assets/products/misoko-02.jpg",
           az: { cat: "Yumşaq oyuncaq", name: "Armud", desc: "Səsli yumşaq armud oyuncağı; gəmirmək və oynamaq üçün.", tags: ["Plüş", "Meyvə"] },
@@ -182,6 +196,7 @@ const BRANDS_EXTRA = {
     },
     {
       group: { az: "Lateks oyuncaqlar", ru: "Латексные игрушки", en: "Latex squeaky toys" },
+      species: "both",
       items: [
         { img: "assets/products/misoko-05.jpg",
           az: { cat: "Lateks oyuncaq", name: "Ay", desc: "Səsli lateks oyuncaq «Ay»; yumşaq, gəmirməyə davamlı.", tags: ["Lateks", "Səsli"] },

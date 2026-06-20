@@ -71,6 +71,14 @@
         <button class="tab" data-brand="misoko">Misoko</button>
       </div>
 
+      <div class="species" id="species" role="tablist" aria-label="Кошки или собаки">
+        <button class="species__btn is-active" type="button" data-species="all"><span data-i18n="products.all">Все</span></button>
+        <button class="species__btn" type="button" data-species="cats"><span class="species__ico">🐱</span><span data-i18n="products.tabCats">Для кошек</span></button>
+        <button class="species__btn" type="button" data-species="dogs"><span class="species__ico">🐶</span><span data-i18n="products.tabDogs">Для собак</span></button>
+      </div>
+
+      <div class="cat-nav" id="catNav"></div>
+
       <div id="productsGrid"></div>
     </div>
   </section>
