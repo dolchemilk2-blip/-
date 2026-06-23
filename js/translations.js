@@ -487,6 +487,27 @@ const PRODUCTS = {
           ru: { cat: "Prime · Weight Control", name: "Prime Weight Control — Курица, лосось и тунец", desc: "Для контроля веса: курица, лосось и тунец, 98% животного белка. 85 г.", tags: ["Контроль веса", "Тунец"] },
           en: { cat: "Prime · Weight Control", name: "Prime Weight Control — Chicken, Salmon & Tuna", desc: "For weight control: chicken, salmon and tuna, 98% animal protein. 85 g.", tags: ["Weight control", "Tuna"] } }
       ]
+    },
+    {
+      group: { az: "Superior Care · Yaş qida (paket)", ru: "Superior Care · Влажный корм (паучи)", en: "Superior Care · Wet food (pouches)" },
+      items: [
+        { emoji: "🐰", img: "assets/products/scp-cat-sterilised.webp",
+          az: { cat: "Superior Care · Sterilised", name: "Sterilised — Dovşan, toyuq döşü", desc: "Sterilizə olunmuş pişiklər üçün sousda fileto: dovşan və toyuq döşü, 98% heyvani protein, buğdasız. 85 q.", tags: ["Dovşan", "Sterilised"] },
+          ru: { cat: "Superior Care · Sterilised", name: "Sterilised — Кролик, куриная грудка", desc: "Филе в соусе для стерилизованных кошек: кролик и куриная грудка, 98% животного белка, без пшеницы. 85 г.", tags: ["Кролик", "Sterilised"] },
+          en: { cat: "Superior Care · Sterilised", name: "Sterilised — Rabbit, Chicken breast", desc: "Fillets in gravy for sterilised cats: rabbit and chicken breast, 98% animal protein, no wheat. 85 g.", tags: ["Rabbit", "Sterilised"] } },
+        { emoji: "💧", img: "assets/products/scp-cat-urinary.webp",
+          az: { cat: "Superior Care · Urinary", name: "Urinary — Ördək, toyuq döşü", desc: "Sidik yolları üçün sousda fileto: ördək və toyuq döşü, nəzarət olunan mineral səviyyəsi. 85 q.", tags: ["Ördək", "Urinary"] },
+          ru: { cat: "Superior Care · Urinary", name: "Urinary — Утка, куриная грудка", desc: "Филе в соусе для мочевыводящих путей: утка и куриная грудка, контролируемый уровень минералов. 85 г.", tags: ["Утка", "Urinary"] },
+          en: { cat: "Superior Care · Urinary", name: "Urinary — Duck, Chicken breast", desc: "Fillets in gravy for the urinary tract: duck and chicken breast, controlled mineral levels. 85 g.", tags: ["Duck", "Urinary"] } },
+        { emoji: "🦃", img: "assets/products/scp-cat-kitten.webp", baby: true,
+          az: { cat: "Superior Care · Kitten", name: "Kitten — Hinduşka, toyuq döşü", desc: "Balaca pişiklər üçün sousda fileto: hinduşka və toyuq döşü, sağlam böyümə üçün. 85 q.", tags: ["Hinduşka", "Kitten"] },
+          ru: { cat: "Superior Care · Kitten", name: "Kitten — Индейка, куриная грудка", desc: "Филе в соусе для котят: индейка и куриная грудка, для здорового роста. 85 г.", tags: ["Индейка", "Kitten"] },
+          en: { cat: "Superior Care · Kitten", name: "Kitten — Turkey, Chicken breast", desc: "Fillets in gravy for kittens: turkey and chicken breast, for healthy growth. 85 g.", tags: ["Turkey", "Kitten"] } },
+        { emoji: "⚖️", img: "assets/products/scp-cat-weight.webp",
+          az: { cat: "Superior Care · Weight Control", name: "Weight Control — Siyənək, toyuq döşü", desc: "Çəki nəzarəti üçün sousda fileto: siyənək və toyuq döşü, metabolizmi yaxşılaşdırır. 85 q.", tags: ["Siyənək", "Çəki nəzarəti"] },
+          ru: { cat: "Superior Care · Weight Control", name: "Weight Control — Сельдь, куриная грудка", desc: "Филе в соусе для контроля веса: сельдь и куриная грудка, улучшает обмен веществ. 85 г.", tags: ["Сельдь", "Контроль веса"] },
+          en: { cat: "Superior Care · Weight Control", name: "Weight Control — Herring, Chicken breast", desc: "Fillets in gravy for weight control: herring and chicken breast, improves metabolism. 85 g.", tags: ["Herring", "Weight control"] } }
+      ]
     }
   ],
 
@@ -598,6 +619,27 @@ const PRODUCTS = {
           az: { cat: "Prime · Immune Support", name: "Prime Immune Support — Toyuq və quzu", desc: "İmmunitetin dəstəyi üçün: toyuq və quzu, 98% heyvani protein. 85 q / 500 q.", tags: ["Toyuq", "Quzu", "İmmunitet"] },
           ru: { cat: "Prime · Immune Support", name: "Prime Immune Support — Курица и ягнёнок", desc: "Для поддержки иммунитета: курица и ягнёнок, 98% животного белка. 85 г / 500 г.", tags: ["Курица", "Ягнёнок", "Иммунитет"] },
           en: { cat: "Prime · Immune Support", name: "Prime Immune Support — Chicken & Lamb", desc: "For immune support: chicken and lamb, 98% animal protein. 85 g / 500 g.", tags: ["Chicken", "Lamb", "Immunity"] } }
+      ]
+    },
+    {
+      group: { az: "Superior Care · Yaş qida (paket)", ru: "Superior Care · Влажный корм (паучи)", en: "Superior Care · Wet food (pouches)" },
+      items: [
+        { emoji: "🐰", img: "assets/products/scp-dog-junior.webp", baby: true,
+          az: { cat: "Superior Care · Junior", name: "Junior — Dovşan və kril", desc: "Bala itlər üçün sousda fileto: dovşan və kril, hipoallergen protein mənbəyi, sağlam böyümə. 85 q.", tags: ["Dovşan", "Kril", "Junior"] },
+          ru: { cat: "Superior Care · Junior", name: "Junior — Кролик и криль", desc: "Филе в соусе для щенков: кролик и криль, гипоаллергенный источник белка, здоровый рост. 85 г.", tags: ["Кролик", "Криль", "Junior"] },
+          en: { cat: "Superior Care · Junior", name: "Junior — Rabbit & Krill", desc: "Fillets in gravy for puppies: rabbit and krill, hypoallergenic protein source, healthy growth. 85 g.", tags: ["Rabbit", "Krill", "Junior"] } },
+        { emoji: "🐟", img: "assets/products/scp-dog-white.webp",
+          az: { cat: "Superior Care · White Coat", name: "White Coat — Ağ balıq və kril", desc: "Açıq tüklü itlər üçün sousda fileto: ağ balıq və kril, göz ləkələrinə qarşı, buğdasız. 85 q.", tags: ["Ağ balıq", "Kril", "White Coat"] },
+          ru: { cat: "Superior Care · White Coat", name: "White Coat — Белая рыба и криль", desc: "Филе в соусе для собак со светлой шерстью: белая рыба и криль, против слёзных дорожек, без пшеницы. 85 г.", tags: ["Белая рыба", "Криль", "White Coat"] },
+          en: { cat: "Superior Care · White Coat", name: "White Coat — White Fish & Krill", desc: "Fillets in gravy for light-coated dogs: white fish and krill, against tear stains, no wheat. 85 g.", tags: ["White fish", "Krill", "White Coat"] } },
+        { emoji: "🐟", img: "assets/products/scp-dog-red.webp",
+          az: { cat: "Superior Care · Red Coat", name: "Red Coat — Qızılbalıq və kril", desc: "Qırmızımtıl tüklü itlər üçün sousda fileto: qızılbalıq və kril, RCE kompleksi ilə rəngi canlandırır. 85 q.", tags: ["Qızılbalıq", "Kril", "Red Coat"] },
+          ru: { cat: "Superior Care · Red Coat", name: "Red Coat — Лосось и криль", desc: "Филе в соусе для собак с рыжей шерстью: лосось и криль, комплекс RCE подчёркивает окрас. 85 г.", tags: ["Лосось", "Криль", "Red Coat"] },
+          en: { cat: "Superior Care · Red Coat", name: "Red Coat — Salmon & Krill", desc: "Fillets in gravy for red-coated dogs: salmon and krill, RCE complex enhances colour. 85 g.", tags: ["Salmon", "Krill", "Red Coat"] } },
+        { emoji: "🐟", img: "assets/products/scp-dog-dark.webp",
+          az: { cat: "Superior Care · Dark Coat", name: "Dark Coat — Alabalıq və kril", desc: "Tünd tüklü itlər üçün sousda fileto: alabalıq və kril, DCE kompleksi ilə tünd rəngi qoruyur. 85 q.", tags: ["Alabalıq", "Kril", "Dark Coat"] },
+          ru: { cat: "Superior Care · Dark Coat", name: "Dark Coat — Форель и криль", desc: "Филе в соусе для собак с тёмной шерстью: форель и криль, комплекс DCE сохраняет тёмный окрас. 85 г.", tags: ["Форель", "Криль", "Dark Coat"] },
+          en: { cat: "Superior Care · Dark Coat", name: "Dark Coat — Trout & Krill", desc: "Fillets in gravy for dark-coated dogs: trout and krill, DCE complex preserves the dark colour. 85 g.", tags: ["Trout", "Krill", "Dark Coat"] } }
       ]
     }
   ]
