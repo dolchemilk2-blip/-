@@ -458,6 +458,35 @@ const PRODUCTS = {
           ru: { cat: "Superior Care · Snacks", name: "Sterilised — Функциональные снеки", desc: "Снеки с контролем веса для стерилизованных взрослых кошек; хрустящие, с птицей, 75 г.", tags: ["Контроль веса", "Птица"] },
           en: { cat: "Superior Care · Snacks", name: "Sterilised — Functional snacks", desc: "Weight-control snacks for sterilised adult cats; extra crunchy with poultry, 75 g.", tags: ["Weight control", "Poultry"] } }
       ]
+    },
+    {
+      group: { az: "Prime · Yaş qida (paket)", ru: "Prime · Влажный корм (паучи)", en: "Prime · Wet food (pouches)" },
+      items: [
+        { emoji: "🍗", img: "assets/products/prime-kitten.webp", baby: true,
+          az: { cat: "Prime · Kitten", name: "Prime Kitten — Toyuq və hinduşka", desc: "Balaca pişiklər üçün premium yaş pauç: toyuq və hinduşka, 98% heyvani protein, süni boyasız, tam və balanslaşdırılmış rasion. 85 q.", tags: ["Toyuq", "Hinduşka", "Kitten"] },
+          ru: { cat: "Prime · Котята", name: "Prime Kitten — Курица и индейка", desc: "Премиальный влажный пауч для котят: курица и индейка, 98% животного белка, без искусственных красителей, полнорационный. 85 г.", tags: ["Курица", "Индейка", "Kitten"] },
+          en: { cat: "Prime · Kitten", name: "Prime Kitten — Chicken & Turkey", desc: "Premium wet pouch for kittens: chicken and turkey, 98% animal protein, no artificial colours, complete and balanced. 85 g.", tags: ["Chicken", "Turkey", "Kitten"] } },
+        { emoji: "🐟", img: "assets/products/prime-cat-skincoat.webp",
+          az: { cat: "Prime · Adult", name: "Prime Skin & Coat — Toyuq və ağ balıq", desc: "Yetkin pişiklər üçün premium yaş pauç: toyuq və ağ balıq, sağlam dəri və parlaq tük üçün. 98% heyvani protein. 85 q.", tags: ["Toyuq", "Ağ balıq", "Dəri və tük"] },
+          ru: { cat: "Prime · Взрослые", name: "Prime Skin & Coat — Курица и белая рыба", desc: "Премиальный влажный пауч для взрослых кошек: курица и белая рыба для здоровья кожи и блеска шерсти. 98% животного белка. 85 г.", tags: ["Курица", "Белая рыба", "Кожа и шерсть"] },
+          en: { cat: "Prime · Adult", name: "Prime Skin & Coat — Chicken & White Fish", desc: "Premium wet pouch for adult cats: chicken and white fish for healthy skin and a shiny coat. 98% animal protein. 85 g.", tags: ["Chicken", "White fish", "Skin & coat"] } },
+        { emoji: "🐟", img: "assets/products/prime-cat-sterilised-salmon.webp",
+          az: { cat: "Prime · Sterilised", name: "Prime Sterilised — Qızılbalıq və alabalıq", desc: "Sterilizə olunmuş pişiklər üçün: qızılbalıq və alabalıq, 98% heyvani protein, tam rasion. 85 q.", tags: ["Qızılbalıq", "Alabalıq", "Sterilised"] },
+          ru: { cat: "Prime · Стерилизованные", name: "Prime Sterilised — Лосось и форель", desc: "Для стерилизованных кошек: лосось и форель, 98% животного белка, полнорационный. 85 г.", tags: ["Лосось", "Форель", "Sterilised"] },
+          en: { cat: "Prime · Sterilised", name: "Prime Sterilised — Salmon & Trout", desc: "For sterilised cats: salmon and trout, 98% animal protein, complete diet. 85 g.", tags: ["Salmon", "Trout", "Sterilised"] } },
+        { emoji: "🦃", img: "assets/products/prime-cat-sterilised-turkey.webp",
+          az: { cat: "Prime · Sterilised", name: "Prime Sterilised — Hinduşka, qırqovul və mərcangilə", desc: "Sterilizə olunmuş pişiklər üçün: hinduşka, qırqovul və mərcangilə (klükva), 98% heyvani protein. 85 q.", tags: ["Hinduşka", "Qırqovul", "Sterilised"] },
+          ru: { cat: "Prime · Стерилизованные", name: "Prime Sterilised — Индейка, фазан и клюква", desc: "Для стерилизованных кошек: индейка, фазан и клюква, 98% животного белка. 85 г.", tags: ["Индейка", "Фазан", "Sterilised"] },
+          en: { cat: "Prime · Sterilised", name: "Prime Sterilised — Turkey, Pheasant & Cranberries", desc: "For sterilised cats: turkey, pheasant and cranberries, 98% animal protein. 85 g.", tags: ["Turkey", "Pheasant", "Sterilised"] } },
+        { emoji: "💧", img: "assets/products/prime-cat-urinary.webp",
+          az: { cat: "Prime · Urinary", name: "Prime Urinary — Ağ balıq, ançous və mərcangilə", desc: "Sidik yollarının sağlamlığını dəstəkləmək üçün: ağ balıq, ançous və mərcangilə (klükva), 98% heyvani protein. 85 q.", tags: ["Urinary", "Ağ balıq"] },
+          ru: { cat: "Prime · Urinary", name: "Prime Urinary — Белая рыба, анчоусы и клюква", desc: "Для поддержки мочевыводящих путей: белая рыба, анчоусы и клюква, 98% животного белка. 85 г.", tags: ["Urinary", "Белая рыба"] },
+          en: { cat: "Prime · Urinary", name: "Prime Urinary — White Fish, Anchovies & Cranberries", desc: "For urinary tract support: white fish, anchovies and cranberries, 98% animal protein. 85 g.", tags: ["Urinary", "White fish"] } },
+        { emoji: "⚖️", img: "assets/products/prime-cat-weight.webp",
+          az: { cat: "Prime · Weight Control", name: "Prime Weight Control — Toyuq, qızılbalıq və tunes", desc: "Çəki nəzarəti üçün: toyuq, qızılbalıq və tunes, 98% heyvani protein. 85 q.", tags: ["Çəki nəzarəti", "Tunes"] },
+          ru: { cat: "Prime · Weight Control", name: "Prime Weight Control — Курица, лосось и тунец", desc: "Для контроля веса: курица, лосось и тунец, 98% животного белка. 85 г.", tags: ["Контроль веса", "Тунец"] },
+          en: { cat: "Prime · Weight Control", name: "Prime Weight Control — Chicken, Salmon & Tuna", desc: "For weight control: chicken, salmon and tuna, 98% animal protein. 85 g.", tags: ["Weight control", "Tuna"] } }
+      ]
     }
   ],
 
@@ -544,6 +573,31 @@ const PRODUCTS = {
           az: { cat: "Superior Care · Snacks", name: "White Dogs — Immune Health", desc: "Açıq tüklü yetkin itlər üçün taxılsız yumşaq snacklər; siyənək ilə, immunitetin dəstəyi üçün. 150 q.", tags: ["Adult", "İmmunitet", "Siyənək"] },
           ru: { cat: "Superior Care · Snacks", name: "White Dogs — Immune Health", desc: "Беззерновые мягкие снеки для взрослых собак со светлой шерстью; с сельдью, для поддержки иммунитета. 150 г.", tags: ["Adult", "Иммунитет", "Сельдь"] },
           en: { cat: "Superior Care · Snacks", name: "White Dogs — Immune Health", desc: "Grain-free soft snacks for light-coated adult dogs; with herring, for immune support. 150 g.", tags: ["Adult", "Immunity", "Herring"] } }
+      ]
+    },
+    {
+      group: { az: "Prime · Yaş qida (paket)", ru: "Prime · Влажный корм (паучи)", en: "Prime · Wet food (pouches)" },
+      items: [
+        { emoji: "🐶", img: "assets/products/prime-puppy.webp", baby: true,
+          az: { cat: "Prime · Puppy", name: "Prime Puppy — Toyuq və hinduşka", desc: "Bala itlər üçün premium yaş pauç: toyuq və hinduşka, 98% heyvani protein, süni boyasız, tam rasion. 85 q.", tags: ["Toyuq", "Hinduşka", "Puppy"] },
+          ru: { cat: "Prime · Щенки", name: "Prime Puppy — Курица и индейка", desc: "Премиальный влажный пауч для щенков: курица и индейка, 98% животного белка, без искусственных красителей, полнорационный. 85 г.", tags: ["Курица", "Индейка", "Puppy"] },
+          en: { cat: "Prime · Puppy", name: "Prime Puppy — Chicken & Turkey", desc: "Premium wet pouch for puppies: chicken and turkey, 98% animal protein, no artificial colours, complete diet. 85 g.", tags: ["Chicken", "Turkey", "Puppy"] } },
+        { emoji: "🐟", img: "assets/products/prime-dog-skincoat.webp",
+          az: { cat: "Prime · Adult", name: "Prime Skin & Coat — Toyuq və qızılbalıq", desc: "Yetkin itlər üçün premium yaş pauç: toyuq və qızılbalıq, sağlam dəri və parlaq tük üçün. 98% heyvani protein. 85 q.", tags: ["Toyuq", "Qızılbalıq", "Dəri və tük"] },
+          ru: { cat: "Prime · Взрослые", name: "Prime Skin & Coat — Курица и лосось", desc: "Премиальный влажный пауч для взрослых собак: курица и лосось для здоровья кожи и блеска шерсти. 98% животного белка. 85 г.", tags: ["Курица", "Лосось", "Кожа и шерсть"] },
+          en: { cat: "Prime · Adult", name: "Prime Skin & Coat — Chicken & Salmon", desc: "Premium wet pouch for adult dogs: chicken and salmon for healthy skin and a shiny coat. 98% animal protein. 85 g.", tags: ["Chicken", "Salmon", "Skin & coat"] } },
+        { emoji: "⚖️", img: "assets/products/prime-dog-weight.webp",
+          az: { cat: "Prime · Weight Control", name: "Prime Weight Control — Toyuq və ağ balıq", desc: "İtlər üçün çəki nəzarəti: toyuq və ağ balıq, 98% heyvani protein. 85 q.", tags: ["Çəki nəzarəti", "Ağ balıq"] },
+          ru: { cat: "Prime · Weight Control", name: "Prime Weight Control — Курица и белая рыба", desc: "Контроль веса для собак: курица и белая рыба, 98% животного белка. 85 г.", tags: ["Контроль веса", "Белая рыба"] },
+          en: { cat: "Prime · Weight Control", name: "Prime Weight Control — Chicken & White Fish", desc: "Weight control for dogs: chicken and white fish, 98% animal protein. 85 g.", tags: ["Weight control", "White fish"] } },
+        { emoji: "⚡", img: "assets/products/prime-dog-active.webp",
+          az: { cat: "Prime · Active", name: "Prime Active — Toyuq və mal əti", desc: "Aktiv itlər üçün enerjili yaş pauç: toyuq və mal əti, 98% heyvani protein. 85 q.", tags: ["Toyuq", "Mal əti", "Active"] },
+          ru: { cat: "Prime · Active", name: "Prime Active — Курица и говядина", desc: "Энергетический влажный пауч для активных собак: курица и говядина, 98% животного белка. 85 г.", tags: ["Курица", "Говядина", "Active"] },
+          en: { cat: "Prime · Active", name: "Prime Active — Chicken & Beef", desc: "Energy wet pouch for active dogs: chicken and beef, 98% animal protein. 85 g.", tags: ["Chicken", "Beef", "Active"] } },
+        { emoji: "🛡️", img: "assets/products/prime-dog-immune.webp",
+          az: { cat: "Prime · Immune Support", name: "Prime Immune Support — Toyuq və quzu", desc: "İmmunitetin dəstəyi üçün: toyuq və quzu, 98% heyvani protein. 85 q / 500 q.", tags: ["Toyuq", "Quzu", "İmmunitet"] },
+          ru: { cat: "Prime · Immune Support", name: "Prime Immune Support — Курица и ягнёнок", desc: "Для поддержки иммунитета: курица и ягнёнок, 98% животного белка. 85 г / 500 г.", tags: ["Курица", "Ягнёнок", "Иммунитет"] },
+          en: { cat: "Prime · Immune Support", name: "Prime Immune Support — Chicken & Lamb", desc: "For immune support: chicken and lamb, 98% animal protein. 85 g / 500 g.", tags: ["Chicken", "Lamb", "Immunity"] } }
       ]
     }
   ]
