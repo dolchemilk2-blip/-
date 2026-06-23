@@ -641,6 +641,23 @@ const PRODUCTS = {
           ru: { cat: "Superior Care · Dark Coat", name: "Dark Coat — Форель и криль", desc: "Филе в соусе для собак с тёмной шерстью: форель и криль, комплекс DCE сохраняет тёмный окрас. 85 г.", tags: ["Форель", "Криль", "Dark Coat"] },
           en: { cat: "Superior Care · Dark Coat", name: "Dark Coat — Trout & Krill", desc: "Fillets in gravy for dark-coated dogs: trout and krill, DCE complex preserves the dark colour. 85 g.", tags: ["Trout", "Krill", "Dark Coat"] } }
       ]
+    },
+    {
+      group: { az: "Superior Care · Baytar dieti", ru: "Superior Care · Ветеринарная диета", en: "Superior Care · Veterinary Diet" },
+      items: [
+        { emoji: "🩺", img: "assets/products/scvet-gastro.webp",
+          az: { cat: "Veterinary Diet", name: "Gastrointestinal — Ağ balıq", desc: "İtlər üçün baytar dieti: kəskin bağırsaq pozğunluqlarının azaldılması və bərpa üçün, ağ balıqla, taxılsız. Yetkin, bütün cinslər. 1,5 kq.", tags: ["Həzm", "Ağ balıq", "Vet"] },
+          ru: { cat: "Veterinary Diet", name: "Gastrointestinal — Белая рыба", desc: "Ветеринарная диета для собак: при острых кишечных расстройствах и для восстановления, с белой рыбой, беззерновая. Взрослые, все породы. 1,5 кг.", tags: ["Пищеварение", "Белая рыба", "Вет"] },
+          en: { cat: "Veterinary Diet", name: "Gastrointestinal — White Fish", desc: "Veterinary diet for dogs: for acute intestinal disorders and recovery, with white fish, grain-free. Adult, all breeds. 1.5 kg.", tags: ["Digestion", "White fish", "Vet"] } },
+        { emoji: "🩺", img: "assets/products/scvet-hypo.webp",
+          az: { cat: "Veterinary Diet", name: "Hypoallergenic — Həşərat zülalı", desc: "İtlər üçün baytar dieti: tərkib və qida dözümsüzlüyünün azaldılması üçün, həşərat zülalı ilə, taxılsız. Yetkin, bütün cinslər. 1,5 kq.", tags: ["Hipoallergen", "Vet"] },
+          ru: { cat: "Veterinary Diet", name: "Hypoallergenic — Белок насекомых", desc: "Ветеринарная диета для собак: для снижения пищевой непереносимости, с белком насекомых, беззерновая. Взрослые, все породы. 1,5 кг.", tags: ["Гипоаллергенный", "Вет"] },
+          en: { cat: "Veterinary Diet", name: "Hypoallergenic — Insect protein", desc: "Veterinary diet for dogs: to reduce ingredient and nutrient intolerances, with insect protein, grain-free. Adult, all breeds. 1.5 kg.", tags: ["Hypoallergenic", "Vet"] } },
+        { emoji: "🩺", img: "assets/products/scvet-derma.webp",
+          az: { cat: "Veterinary Diet", name: "Dermatosis — Qızılbalıq", desc: "İtlər üçün baytar dieti: dermatoz və güclü tük tökülməsində dəri funksiyasının dəstəyi üçün, qızılbalıq və yağ turşuları ilə. Yetkin, bütün cinslər.", tags: ["Dəri", "Qızılbalıq", "Vet"] },
+          ru: { cat: "Veterinary Diet", name: "Dermatosis — Лосось", desc: "Ветеринарная диета для собак: поддержка функции кожи при дерматозе и сильной потере шерсти, с лососем и жирными кислотами. Взрослые, все породы.", tags: ["Кожа", "Лосось", "Вет"] },
+          en: { cat: "Veterinary Diet", name: "Dermatosis — Salmon", desc: "Veterinary diet for dogs: skin function support in dermatosis and excessive hair loss, with salmon and fatty acids. Adult, all breeds.", tags: ["Skin", "Salmon", "Vet"] } }
+      ]
     }
   ]
 };
