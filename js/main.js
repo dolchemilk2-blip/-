@@ -97,9 +97,10 @@ function filterBySpecies(groups, species) {
 // Токены берём из английского названия — они одинаковы во всех языках.
 function coatOf(item) {
   const s = (item.en && ((item.en.cat || '') + ' ' + (item.en.name || ''))) || '';
+  if (!/Superior Care/.test(s)) return null; // метка только для линейки Superior Care
   if (/Dark (Cats|Coat)/.test(s)) return 'dark';
   if (/Red (Cats|Coat)/.test(s)) return 'red';
-  if (/White (Cats|Dogs)/.test(s)) return 'white';
+  if (/White (Cats|Dogs|Coat)/.test(s)) return 'white';
   return null;
 }
 
