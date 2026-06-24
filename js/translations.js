@@ -405,7 +405,15 @@ const PRODUCTS = {
         { emoji: "🌱", img: "assets/products/cat-kitten.png",
           az: { cat: "Sensitive Digestion", name: "Sensitive Digestion — Quş əti", desc: "Həssas həzmli yetkin pişiklər üçün quş ətli qida; 92% heyvani protein, buğdasız, bağırsaq problemlərində kömək edir.", tags: ["Quş əti", "Həssas həzm"] },
           ru: { cat: "Sensitive Digestion", name: "Sensitive Digestion — Птица", desc: "Корм с птицей для взрослых кошек с чувствительным пищеварением; 92% животного белка, без пшеницы, помогает при проблемах кишечника.", tags: ["Птица", "Чувствительное пищеварение"] },
-          en: { cat: "Sensitive Digestion", name: "Sensitive Digestion — Poultry", desc: "Poultry food for adult cats with sensitive digestion; 92% animal protein, no wheat, helps with intestinal problems.", tags: ["Poultry", "Sensitive digestion"] } }
+          en: { cat: "Sensitive Digestion", name: "Sensitive Digestion — Poultry", desc: "Poultry food for adult cats with sensitive digestion; 92% animal protein, no wheat, helps with intestinal problems.", tags: ["Poultry", "Sensitive digestion"] } },
+        { emoji: "💧", img: "assets/products/cat-urinary-s.webp",
+          az: { cat: "Urinary · VET", name: "Urinary Formula-S — Quş əti", desc: "Yetkin pişiklər üçün sidik yolu formulu: quş əti ilə, struvit daşlarının əmələ gəlməsini azaldır, buğdasız. 66% heyvani protein.", tags: ["Urinary", "Quş əti", "VET"] },
+          ru: { cat: "Urinary · VET", name: "Urinary Formula-S — Птица", desc: "Корм для взрослых кошек для здоровья мочевыводящих путей: с птицей, снижает образование струвитных камней, без пшеницы. 66% животного белка.", tags: ["Urinary", "Птица", "VET"] },
+          en: { cat: "Urinary · VET", name: "Urinary Formula-S — Poultry", desc: "Food for adult cats for urinary tract health: with poultry, reduces struvite stone formation, no wheat. 66% animal protein.", tags: ["Urinary", "Poultry", "VET"] } },
+        { emoji: "🐱", img: "assets/products/cat-sterilised-dry.webp",
+          az: { cat: "Sterilised", name: "Sterilised — Quş əti", desc: "Sterilizə olunmuş yetkin pişiklər üçün quş ətli quru qida; 62% heyvani protein, buğdasız.", tags: ["Quş əti", "Sterilised"] },
+          ru: { cat: "Sterilised", name: "Sterilised — Птица", desc: "Сухой корм с птицей для стерилизованных взрослых кошек; 62% животного белка, без пшеницы.", tags: ["Птица", "Sterilised"] },
+          en: { cat: "Sterilised", name: "Sterilised — Poultry", desc: "Dry poultry food for sterilised adult cats; 62% animal protein, no wheat.", tags: ["Poultry", "Sterilised"] } }
       ]
     },
     {
@@ -558,7 +566,15 @@ const PRODUCTS = {
         { emoji: "🐕‍🦺", img: "assets/products/dog-junior.png",
           az: { cat: "Maxi Adult", name: "Maxi Adult — Quş əti", desc: "İri cins (25 kq-dan yuxarı) yetkin itlər üçün quş ətli qida; 80% heyvani protein, buğdasız.", tags: ["Quş əti", "Large breed", "Buğdasız"] },
           ru: { cat: "Maxi Adult", name: "Maxi Adult — Птица", desc: "Корм с птицей для взрослых собак крупных пород (от 25 кг); 80% животного белка, без пшеницы.", tags: ["Птица", "Large breed", "Без пшеницы"] },
-          en: { cat: "Maxi Adult", name: "Maxi Adult — Poultry", desc: "Poultry food for adult large-breed dogs (from 25 kg); 80% animal protein, no wheat.", tags: ["Poultry", "Large breed", "No wheat"] } }
+          en: { cat: "Maxi Adult", name: "Maxi Adult — Poultry", desc: "Poultry food for adult large-breed dogs (from 25 kg); 80% animal protein, no wheat.", tags: ["Poultry", "Large breed", "No wheat"] } },
+        { emoji: "🐶", img: "assets/products/dog-junior-lamb.webp", baby: true,
+          az: { cat: "Junior", name: "Junior Lamb — Quzu", desc: "2–18 aylıq bala itlər (bütün cinslər) üçün quzu ətli qida; sağlam böyümə üçün, 56% heyvani protein, buğdasız.", tags: ["Quzu", "Junior"] },
+          ru: { cat: "Junior", name: "Junior Lamb — Ягнёнок", desc: "Корм с ягнёнком для щенков 2–18 месяцев (все породы); для здорового роста, 56% животного белка, без пшеницы.", tags: ["Ягнёнок", "Junior"] },
+          en: { cat: "Junior", name: "Junior Lamb — Lamb", desc: "Lamb food for 2–18 month puppies (all breeds); for healthy growth, 56% animal protein, no wheat.", tags: ["Lamb", "Junior"] } },
+        { emoji: "🐑", img: "assets/products/dog-adult-lamb.webp",
+          az: { cat: "Adult", name: "Adult Lamb — Quzu", desc: "Bütün cins yetkin itlər üçün quzu ətli quru qida; 58% heyvani protein, buğdasız.", tags: ["Quzu", "Adult"] },
+          ru: { cat: "Adult", name: "Adult Lamb — Ягнёнок", desc: "Сухой корм с ягнёнком для взрослых собак всех пород; 58% животного белка, без пшеницы.", tags: ["Ягнёнок", "Adult"] },
+          en: { cat: "Adult", name: "Adult Lamb — Lamb", desc: "Dry lamb food for adult dogs of all breeds; 58% animal protein, no wheat.", tags: ["Lamb", "Adult"] } }
       ]
     },
     {
