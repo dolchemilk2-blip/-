@@ -63,13 +63,12 @@ let currentSpecies = 'all'; // all | cats | dogs
 
 // Добавить значок питомца к названию группы (для брендов кормов NP/Araton)
 function prefixGroups(groups, prefix, species) {
-  return groups.map(g => ({
+  return groups.map(g => Object.assign({}, g, {
     group: {
       az: prefix + g.group.az,
       ru: prefix + g.group.ru,
       en: prefix + g.group.en
     },
-    items: g.items,
     species: species
   }));
 }
@@ -94,16 +93,31 @@ function filterBySpecies(groups, species) {
   });
 }
 
+// Определяем цвет шерсти товара по линейке Superior Care (White / Red / Dark).
+// Токены берём из английского названия — они одинаковы во всех языках.
+function coatOf(item) {
+  const s = (item.en && ((item.en.cat || '') + ' ' + (item.en.name || ''))) || '';
+  if (/Dark (Cats|Coat)/.test(s)) return 'dark';
+  if (/Red (Cats|Coat)/.test(s)) return 'red';
+  if (/White (Cats|Dogs)/.test(s)) return 'white';
+  return null;
+}
+
 function productCard(item, lang) {
   const t = item[lang] || item.ru;
+  const dict = TRANSLATIONS[lang] || TRANSLATIONS.ru;
   const tags = (t.tags || []).map(x => `<span>${x}</span>`).join('');
   const fallback = item.emoji || '🐾';
+  const coat = coatOf(item);
+  const ribbon = coat
+    ? `<span class="coat-ribbon coat-ribbon--${coat}"><span class="coat-ribbon__dot"></span>${dict['coat.' + coat + '.label'] || ''}</span>`
+    : '';
   const media = item.img
     ? `<img src="${item.img}" alt="${t.name}" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'product__emoji',textContent:'${fallback}'}))">`
     : `<span class="product__emoji">${fallback}</span>`;
   return `
-    <article class="product">
-      <div class="product__img">${media}</div>
+    <article class="product${coat ? ' product--coat product--coat-' + coat : ''}">
+      <div class="product__img">${ribbon}${media}</div>
       <div class="product__body">
         <span class="product__cat">${t.cat}</span>
         <h3 class="product__name">${t.name}</h3>
@@ -166,6 +180,32 @@ function renderProducts(brand, lang) {
     : '';
   wrap.innerHTML = banner + groups.map((g, i) => {
     const groupName = (g.group && (g.group[lang] || g.group.ru)) || '';
+    // Группа Superior Care: распределяем по цвету шерсти и добавляем вставки.
+    if (g.coat) {
+      const buckets = { white: [], red: [], dark: [], none: [] };
+      g.items.forEach(it => { buckets[coatOf(it) || 'none'].push(it); });
+      let inner = `<p class="coat-note">${dict['products.coatNote'] || ''}</p>`;
+      ['white', 'red', 'dark'].forEach(c => {
+        if (!buckets[c].length) return;
+        inner += `
+          <div class="coat-insert coat-insert--${c}">
+            <span class="coat-insert__dot"></span>
+            <div class="coat-insert__text">
+              <h4>${dict['coat.' + c + '.title'] || ''}</h4>
+              <p>${dict['coat.' + c + '.desc'] || ''}</p>
+            </div>
+          </div>
+          <div class="products">${buckets[c].map(it => productCard(it, lang)).join('')}</div>`;
+      });
+      if (buckets.none.length) {
+        inner += `<div class="products">${buckets.none.map(it => productCard(it, lang)).join('')}</div>`;
+      }
+      return `
+        <div class="product-group product-group--coat" id="grp-${i}">
+          <h3 class="product-group__title">${groupName}</h3>
+          ${inner}
+        </div>`;
+    }
     const cards = g.items.map(it => productCard(it, lang)).join('');
     return `
       <div class="product-group" id="grp-${i}">

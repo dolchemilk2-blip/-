@@ -40,6 +40,17 @@ const TRANSLATIONS = {
     "products.babies": "Balalar",
     "products.babiesTitle": "Balalara qayğı",
     "products.babiesText": "Küçük və balalar üçün hər şey bir yerdə: başlanğıc qidalar, süd əvəzediciləri, incə qulluq və böyümə üçün mükafatlar.",
+    "products.coatTitle": "Superior Care — tük rənginə görə seçim",
+    "products.coatNote": "Superior Care xətti heyvanın tük rənginə görə seçilir: xüsusi komplekslər rəngi dəstəkləyir və göz ləkələrinə qarşı işləyir. Sevimlinizin rənginə uyğun qidanı seçin.",
+    "coat.white.label": "Açıq tük",
+    "coat.white.title": "Açıq və ağ tük üçün",
+    "coat.white.desc": "White Cats / White Dogs formulları ağ balıq, qızılbalıq və krillə — göz ləkələrinə qarşı, təmiz açıq tük üçün.",
+    "coat.red.label": "Qırmızı tük",
+    "coat.red.title": "Qırmızı və qəhvəyi tük üçün",
+    "coat.red.desc": "Red Coat / Red Cats xətti RCE kompleksi ilə — qırmızı və qəhvəyi rəngin dolğunluğunu vurğulayır.",
+    "coat.dark.label": "Tünd tük",
+    "coat.dark.title": "Qara və tünd tük üçün",
+    "coat.dark.desc": "Dark Coat / Dark Cats xətti DCE kompleksi ilə — dərin tünd və qara rəngi qoruyur.",
     "products.rangesTitle": "Nature's Protection xətləri",
     "products.backHome": "← Ana səhifə",
     "home.catalogTitle": "Məhsul kataloqu",
@@ -154,6 +165,17 @@ const TRANSLATIONS = {
     "products.babies": "Малыши",
     "products.babiesTitle": "Забота о малышах",
     "products.babiesText": "Всё для щенков и котят в одном месте: стартовые корма, заменители молока, нежный уход и лакомства для роста.",
+    "products.coatTitle": "Superior Care — подбор по цвету шерсти",
+    "products.coatNote": "Линейка Superior Care подобрана под цвет шерсти питомца: специальные комплексы поддерживают окрас и борются со слёзными дорожками. Выберите корм под цвет вашего любимца.",
+    "coat.white.label": "Светлая шерсть",
+    "coat.white.title": "Для светлой и белой шерсти",
+    "coat.white.desc": "Формулы White Cats / White Dogs с белой рыбой, лососем и крилем — против слёзных дорожек, для чистой светлой шерсти.",
+    "coat.red.label": "Рыжая шерсть",
+    "coat.red.title": "Для рыжей и коричневой шерсти",
+    "coat.red.desc": "Линия Red Coat / Red Cats с комплексом RCE — подчёркивает насыщенность рыжего и коричневого окраса.",
+    "coat.dark.label": "Тёмная шерсть",
+    "coat.dark.title": "Для чёрной и тёмной шерсти",
+    "coat.dark.desc": "Линия Dark Coat / Dark Cats с комплексом DCE — сохраняет глубокий тёмный и чёрный окрас.",
     "products.rangesTitle": "Линейки Nature's Protection",
     "products.backHome": "← На главную",
     "home.catalogTitle": "Каталог продукции",
@@ -268,6 +290,17 @@ const TRANSLATIONS = {
     "products.babies": "Juniors",
     "products.babiesTitle": "Care for the little ones",
     "products.babiesText": "Everything for puppies and kittens in one place: starter foods, milk replacers, gentle care and growth treats.",
+    "products.coatTitle": "Superior Care — choose by coat colour",
+    "products.coatNote": "The Superior Care range is matched to your pet's coat colour: dedicated complexes support the colour and fight tear stains. Pick the food for your pet's colour.",
+    "coat.white.label": "Light coat",
+    "coat.white.title": "For white & light coats",
+    "coat.white.desc": "White Cats / White Dogs formulas with white fish, salmon and krill — against tear stains, for a clean light coat.",
+    "coat.red.label": "Red coat",
+    "coat.red.title": "For red & brown coats",
+    "coat.red.desc": "The Red Coat / Red Cats line with the RCE complex — enhances the richness of red and brown colour.",
+    "coat.dark.label": "Dark coat",
+    "coat.dark.title": "For black & dark coats",
+    "coat.dark.desc": "The Dark Coat / Dark Cats line with the DCE complex — preserves a deep dark and black colour.",
     "products.rangesTitle": "Nature's Protection ranges",
     "products.backHome": "← Back home",
     "home.catalogTitle": "Product catalog",
@@ -380,7 +413,8 @@ const RANGES = [
 const PRODUCTS = {
   cats: [
     {
-      group: { az: "Quru qida", ru: "Сухой корм", en: "Dry food" },
+      group: { az: "Superior Care — tük rənginə görə seçim", ru: "Superior Care — подбор по цвету шерсти", en: "Superior Care — choose by coat colour" },
+      coat: true,
       items: [
         { emoji: "🐱", img: "assets/products/cat-sc-light.png",
           az: { cat: "Superior Care · White Cats", name: "White Cats — Qızılbalıq və kril", desc: "Açıq və ağ tüklü yetkin pişiklər üçün qızılbalıq və kril ilə qida; tük ətrafında göz ləkələrini azaltmağa kömək edir.", tags: ["Qızılbalıq", "Kril", "Göz ləkələri"] },
@@ -393,7 +427,12 @@ const PRODUCTS = {
         { emoji: "🐱", img: "assets/products/cat-sc-dark.png",
           az: { cat: "Superior Care · Dark Cats", name: "Dark Cats — Qızılbalıq (DCE)", desc: "Qara və tünd tüklü yetkin pişiklər üçün; DCE kompleksi dərin tünd rəngi qoruyur. 1 yaşdan yuxarı.", tags: ["Qızılbalıq", "DCE kompleks"] },
           ru: { cat: "Superior Care · Dark Cats", name: "Dark Cats — Лосось (DCE)", desc: "Для взрослых кошек с чёрной и тёмной шерстью; комплекс DCE сохраняет глубокий тёмный окрас. От 1 года.", tags: ["Лосось", "DCE-комплекс"] },
-          en: { cat: "Superior Care · Dark Cats", name: "Dark Cats — Salmon (DCE)", desc: "For adult cats with black and dark coat; the DCE complex preserves the deep dark colour. From 1 year.", tags: ["Salmon", "DCE complex"] } },
+          en: { cat: "Superior Care · Dark Cats", name: "Dark Cats — Salmon (DCE)", desc: "For adult cats with black and dark coat; the DCE complex preserves the deep dark colour. From 1 year.", tags: ["Salmon", "DCE complex"] } }
+      ]
+    },
+    {
+      group: { az: "Quru qida", ru: "Сухой корм", en: "Dry food" },
+      items: [
         { emoji: "🐾", img: "assets/products/cat-sterilised.png", baby: true,
           az: { cat: "Kitten", name: "Kitten — Quş əti", desc: "1 yaşa qədər bütün cins balaca pişiklər üçün quş ətli qida; 63% heyvani protein, buğdasız, südəmizdirən pişiklər üçün uyğundur.", tags: ["Quş əti", "<1 il", "Buğdasız"] },
           ru: { cat: "Kitten", name: "Kitten — Птица", desc: "Корм с птицей для котят всех пород до 1 года; 63% животного белка, без пшеницы, подходит кормящим кошкам.", tags: ["Птица", "<1 года", "Без пшеницы"] },
@@ -553,7 +592,8 @@ const PRODUCTS = {
 
   dogs: [
     {
-      group: { az: "Quru qida", ru: "Сухой корм", en: "Dry food" },
+      group: { az: "Superior Care — tük rənginə görə seçim", ru: "Superior Care — подбор по цвету шерсти", en: "Superior Care — choose by coat colour" },
+      coat: true,
       items: [
         { emoji: "🐶", img: "assets/products/dog-sc-white.jpg",
           az: { cat: "Superior Care · White Dogs", name: "White Dogs — Ağ balıq", desc: "Açıq və ağ tüklü kiçik və mini cins (1–10 kq) yetkin itlər üçün ağ balıqlı qida; göz ləkələrinə qarşı.", tags: ["Ağ balıq", "Small & mini", "Göz ləkələri"] },
@@ -563,14 +603,19 @@ const PRODUCTS = {
           az: { cat: "Superior Care · Red Coat", name: "Red Coat Junior — Kiçik cinslər", desc: "Qəhvəyi/qırmızımtıl tüklü kiçik cins bala itlər üçün; Omega-3 və Omega-6 ilə zəngin, sağlam böyümə və canlı rəng üçün.", tags: ["Junior", "Omega 3 & 6", "Red Coat"] },
           ru: { cat: "Superior Care · Red Coat", name: "Red Coat Junior — Малые породы", desc: "Для щенков малых пород с коричневой/рыжей шерстью; богат Омега-3 и Омега-6 для здорового роста и яркого окраса.", tags: ["Junior", "Омега 3 и 6", "Red Coat"] },
           en: { cat: "Superior Care · Red Coat", name: "Red Coat Junior — Small breeds", desc: "For small-breed puppies with brown/red coat; rich in Omega-3 and Omega-6 for healthy growth and vivid colour.", tags: ["Junior", "Omega 3 & 6", "Red Coat"] } },
-        { emoji: "🐶", img: "assets/products/dog-sc-dark.jpg",
-          az: { cat: "Superior Care · Dark Coat", name: "Dark Coat — Bütün cinslər", desc: "Qara və tünd tüklü bütün cins yetkin itlər üçün; Omega-3 və Omega-6 ilə zəngin, dərin tünd rəngi qoruyur.", tags: ["Adult", "Omega 3 & 6", "Dark Coat"] },
-          ru: { cat: "Superior Care · Dark Coat", name: "Dark Coat — Все породы", desc: "Для взрослых собак всех пород с чёрной и тёмной шерстью; богат Омега-3 и Омега-6, сохраняет глубокий тёмный окрас.", tags: ["Adult", "Омега 3 и 6", "Dark Coat"] },
-          en: { cat: "Superior Care · Dark Coat", name: "Dark Coat — All breeds", desc: "For adult dogs of all breeds with black and dark coat; rich in Omega-3 and Omega-6, preserves the deep dark colour.", tags: ["Adult", "Omega 3 & 6", "Dark Coat"] } },
         { emoji: "🐶", img: "assets/products/dog-small.png",
           az: { cat: "Superior Care · Red Coat", name: "Red Coat Adult — Kiçik cinslər", desc: "Qəhvəyi/qırmızımtıl tüklü kiçik cins yetkin itlər üçün taxılsız tam rasion; tükün rəngini və parlaqlığını dəstəkləyir.", tags: ["Adult", "Taxılsız", "Red Coat"] },
           ru: { cat: "Superior Care · Red Coat", name: "Red Coat Adult — Малые породы", desc: "Беззерновой полнорацион для взрослых собак малых пород с коричневой/рыжей шерстью; поддерживает цвет и блеск шерсти.", tags: ["Adult", "Грейн-фри", "Red Coat"] },
           en: { cat: "Superior Care · Red Coat", name: "Red Coat Adult — Small breeds", desc: "Grain-free complete diet for adult small-breed dogs with brown/red coat; supports coat colour and shine.", tags: ["Adult", "Grain-free", "Red Coat"] } },
+        { emoji: "🐶", img: "assets/products/dog-sc-dark.jpg",
+          az: { cat: "Superior Care · Dark Coat", name: "Dark Coat — Bütün cinslər", desc: "Qara və tünd tüklü bütün cins yetkin itlər üçün; Omega-3 və Omega-6 ilə zəngin, dərin tünd rəngi qoruyur.", tags: ["Adult", "Omega 3 & 6", "Dark Coat"] },
+          ru: { cat: "Superior Care · Dark Coat", name: "Dark Coat — Все породы", desc: "Для взрослых собак всех пород с чёрной и тёмной шерстью; богат Омега-3 и Омега-6, сохраняет глубокий тёмный окрас.", tags: ["Adult", "Омега 3 и 6", "Dark Coat"] },
+          en: { cat: "Superior Care · Dark Coat", name: "Dark Coat — All breeds", desc: "For adult dogs of all breeds with black and dark coat; rich in Omega-3 and Omega-6, preserves the deep dark colour.", tags: ["Adult", "Omega 3 & 6", "Dark Coat"] } }
+      ]
+    },
+    {
+      group: { az: "Quru qida", ru: "Сухой корм", en: "Dry food" },
+      items: [
         { emoji: "⚖️", img: "assets/products/dog-large.png",
           az: { cat: "Weight Control", name: "Weight Control Sterilised — Quş əti", desc: "Sterilizə olunmuş bütün cins yetkin itlər üçün quş ətli qida; 68% heyvani protein, buğdasız, sağlam çəki üçün.", tags: ["Quş əti", "Sterilised", "Buğdasız"] },
           ru: { cat: "Weight Control", name: "Weight Control Sterilised — Птица", desc: "Корм с птицей для стерилизованных взрослых собак всех пород; 68% животного белка, без пшеницы, для здорового веса.", tags: ["Птица", "Sterilised", "Без пшеницы"] },

@@ -335,6 +335,38 @@ h1, h2, h3, h4 { font-family: var(--head); line-height: 1.2; font-weight: 700; }
 .product__tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
 .product__tags span { font-size: 12px; background: var(--cream); color: var(--green-dark); padding: 5px 12px; border-radius: 999px; font-weight: 600; }
 
+/* ===== Подбор по цвету шерсти (Superior Care) ===== */
+.product__img { position: relative; }
+.coat-ribbon {
+  position: absolute; top: 10px; left: 10px; z-index: 2;
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 5px 11px 5px 9px; border-radius: 999px;
+  font-size: 11.5px; font-weight: 700; letter-spacing: .2px;
+  background: rgba(255,255,255,.92); color: var(--coat);
+  border: 1px solid var(--coat-border); box-shadow: 0 2px 8px rgba(0,0,0,.12);
+}
+.coat-ribbon__dot { width: 9px; height: 9px; border-radius: 50%; background: var(--coat); box-shadow: 0 0 0 2px var(--coat-soft); }
+.coat-ribbon--white { --coat:#1f7fa0; --coat-soft:#d6ecf4; --coat-border:rgba(31,127,160,.3); }
+.coat-ribbon--red   { --coat:#c4622d; --coat-soft:#f7e2d2; --coat-border:rgba(196,98,45,.3); }
+.coat-ribbon--dark  { --coat:#3a3f4a; --coat-soft:#e0e3e9; --coat-border:rgba(58,63,74,.3); }
+
+.product--coat-white { border-top: 3px solid #1f7fa0; }
+.product--coat-red   { border-top: 3px solid #c4622d; }
+.product--coat-dark  { border-top: 3px solid #3a3f4a; }
+
+.product-group--coat .coat-note { color: var(--muted); font-size: 15px; max-width: 760px; margin: -6px 0 22px; }
+.coat-insert {
+  display: flex; align-items: flex-start; gap: 14px;
+  border-left: 4px solid var(--coat); background: var(--coat-bg);
+  border-radius: 12px; padding: 14px 18px; margin: 28px 0 18px;
+}
+.coat-insert__dot { flex: none; width: 16px; height: 16px; border-radius: 50%; background: var(--coat); margin-top: 3px; box-shadow: 0 0 0 4px var(--coat-ring); }
+.coat-insert__text h4 { font-size: 17px; color: var(--coat-ink); margin-bottom: 3px; font-family: var(--head); }
+.coat-insert__text p { font-size: 14px; color: var(--muted); }
+.coat-insert--white { --coat:#1f7fa0; --coat-bg:#eef7fb; --coat-ring:#d6ecf4; --coat-ink:#155b73; }
+.coat-insert--red   { --coat:#c4622d; --coat-bg:#fcf2ea; --coat-ring:#f7e2d2; --coat-ink:#9c4a1d; }
+.coat-insert--dark  { --coat:#3a3f4a; --coat-bg:#f0f1f4; --coat-ring:#e0e3e9; --coat-ink:#2a2e37; }
+
 /* ===== Catalog teaser (home) ===== */
 .catalog-cta { background: var(--cream); }
 .catalog-cta__inner { display: grid; grid-template-columns: 1.2fr .8fr; gap: 50px; align-items: center; }
