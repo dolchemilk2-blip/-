@@ -60,6 +60,7 @@ function renderRanges(lang) {
 // ===== Каталог по брендам =====
 let currentBrand = 'np';
 let currentSpecies = 'all'; // all | cats | dogs
+let MODAL_ITEMS = [];       // реестр карточек текущего рендера для модального окна
 
 // Добавить значок питомца к названию группы (для брендов кормов NP/Araton)
 function prefixGroups(groups, prefix, species) {
@@ -104,7 +105,7 @@ function coatOf(item) {
   return null;
 }
 
-function productCard(item, lang) {
+function productCard(item, lang, id) {
   const t = item[lang] || item.ru;
   const dict = TRANSLATIONS[lang] || TRANSLATIONS.ru;
   const tags = (t.tags || []).map(x => `<span>${x}</span>`).join('');
@@ -116,16 +117,69 @@ function productCard(item, lang) {
   const media = item.img
     ? `<img src="${item.img}" alt="${t.name}" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'product__emoji',textContent:'${fallback}'}))">`
     : `<span class="product__emoji">${fallback}</span>`;
+  const pid = (id === undefined || id === null) ? '' : ` data-pid="${id}" tabindex="0" role="button"`;
+  const more = `<span class="product__more">${dict['products.more'] || 'Подробнее'}<svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>`;
   return `
-    <article class="product${coat ? ' product--coat product--coat-' + coat : ''}">
+    <article class="product${coat ? ' product--coat product--coat-' + coat : ''} is-clickable"${pid}>
       <div class="product__img">${ribbon}${media}</div>
       <div class="product__body">
         <span class="product__cat">${t.cat}</span>
         <h3 class="product__name">${t.name}</h3>
         <p class="product__desc">${t.desc}</p>
         <div class="product__tags">${tags}</div>
+        ${more}
       </div>
     </article>`;
+}
+
+// Построение модального окна товара
+function openProductModal(item, lang) {
+  const modal = document.getElementById('productModal');
+  const body = document.getElementById('pmodalBody');
+  if (!modal || !body || !item) return;
+  const t = item[lang] || item.ru;
+  const dict = TRANSLATIONS[lang] || TRANSLATIONS.ru;
+  const fallback = item.emoji || '🐾';
+  const coat = coatOf(item);
+  const ribbon = coat
+    ? `<span class="coat-ribbon coat-ribbon--${coat}"><span class="coat-ribbon__dot"></span>${dict['coat.' + coat + '.label'] || ''}</span>`
+    : '';
+  const media = item.img
+    ? `<img src="${item.img}" alt="${t.name}" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'product__emoji',textContent:'${fallback}'}))">`
+    : `<span class="product__emoji">${fallback}</span>`;
+  const tags = (t.tags || []).map(x => `<span>${x}</span>`).join('');
+  // Полное описание: «full» (массив абзацев или строка) либо обычное desc
+  const full = t.full || t.desc || '';
+  const paras = (Array.isArray(full) ? full : String(full).split('\n')).filter(Boolean);
+  const descHtml = paras.map(p => `<p>${p}</p>`).join('');
+  const block = (labelKey, val) => {
+    if (!val) return '';
+    const rows = (Array.isArray(val) ? val : String(val).split('\n')).filter(Boolean).map(p => `<p>${p}</p>`).join('');
+    return `<div class="pmodal__section"><h4>${dict[labelKey] || ''}</h4>${rows}</div>`;
+  };
+  body.innerHTML = `
+    <div class="pmodal__media">${ribbon}${media}</div>
+    <div class="pmodal__info">
+      <span class="product__cat">${t.cat}</span>
+      <h3 class="pmodal__name" id="pmodalName">${t.name}</h3>
+      <div class="pmodal__desc">${descHtml}</div>
+      ${block('products.composition', t.comp)}
+      ${block('products.feeding', t.feeding)}
+      ${tags ? `<div class="product__tags">${tags}</div>` : ''}
+    </div>`;
+  modal.classList.add('is-open');
+  modal.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('modal-open');
+  const dlg = modal.querySelector('.pmodal__dialog');
+  if (dlg) dlg.scrollTop = 0;
+}
+
+function closeProductModal() {
+  const modal = document.getElementById('productModal');
+  if (!modal) return;
+  modal.classList.remove('is-open');
+  modal.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('modal-open');
 }
 
 // Плавное появление карточек при прокрутке (без анимации при reduce-motion)
@@ -179,6 +233,9 @@ function renderProducts(brand, lang) {
   const banner = currentSpecies === 'baby'
     ? `<div class="baby-banner"><span class="baby-banner__icon">🍼</span><div class="baby-banner__text"><h3>${dict['products.babiesTitle'] || ''}</h3><p>${dict['products.babiesText'] || ''}</p></div></div>`
     : '';
+  // Реестр карточек для модального окна: id = индекс в MODAL_ITEMS.
+  MODAL_ITEMS = [];
+  const mk = (it) => { const id = MODAL_ITEMS.length; MODAL_ITEMS.push(it); return productCard(it, lang, id); };
   wrap.innerHTML = banner + groups.map((g, i) => {
     const groupName = (g.group && (g.group[lang] || g.group.ru)) || '';
     // Группа Superior Care: распределяем по цвету шерсти и добавляем вставки.
@@ -196,10 +253,10 @@ function renderProducts(brand, lang) {
               <p>${dict['coat.' + c + '.desc'] || ''}</p>
             </div>
           </div>
-          <div class="products">${buckets[c].map(it => productCard(it, lang)).join('')}</div>`;
+          <div class="products">${buckets[c].map(it => mk(it)).join('')}</div>`;
       });
       if (buckets.none.length) {
-        inner += `<div class="products">${buckets.none.map(it => productCard(it, lang)).join('')}</div>`;
+        inner += `<div class="products">${buckets.none.map(it => mk(it)).join('')}</div>`;
       }
       return `
         <div class="product-group product-group--coat" id="grp-${i}">
@@ -207,7 +264,7 @@ function renderProducts(brand, lang) {
           ${inner}
         </div>`;
     }
-    const cards = g.items.map(it => productCard(it, lang)).join('');
+    const cards = g.items.map(it => mk(it)).join('');
     return `
       <div class="product-group" id="grp-${i}">
         <h3 class="product-group__title">${groupName}</h3>
@@ -360,10 +417,31 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Открыть нужный бренд по адресу (#np / #araton / #tpl / #misoko)
-  if (document.getElementById('productsGrid')) {
+  const grid = document.getElementById('productsGrid');
+  if (grid) {
     const hashBrand = location.hash.replace('#', '');
     if (hashBrand) activateBrand(hashBrand, false);
     window.addEventListener('hashchange', () => activateBrand(location.hash.replace('#', ''), false));
+
+    // Открытие карточки товара в модальном окне
+    const openFromEvent = (e) => {
+      const card = e.target.closest('.product[data-pid]');
+      if (!card) return;
+      const item = MODAL_ITEMS[+card.getAttribute('data-pid')];
+      if (item) openProductModal(item, getLang());
+    };
+    grid.addEventListener('click', openFromEvent);
+    grid.addEventListener('keydown', (e) => {
+      if ((e.key === 'Enter' || e.key === ' ') && e.target.closest('.product[data-pid]')) {
+        e.preventDefault();
+        openFromEvent(e);
+      }
+    });
+    const modal = document.getElementById('productModal');
+    if (modal) {
+      modal.addEventListener('click', (e) => { if (e.target.closest('[data-close]')) closeProductModal(); });
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeProductModal(); });
+    }
   }
 
   // --- Форма обратной связи (демо, без отправки на сервер) ---

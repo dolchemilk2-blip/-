@@ -367,6 +367,56 @@ h1, h2, h3, h4 { font-family: var(--head); line-height: 1.2; font-weight: 700; }
 .coat-insert--red   { --coat:#c4622d; --coat-bg:#fcf2ea; --coat-ring:#f7e2d2; --coat-ink:#9c4a1d; }
 .coat-insert--dark  { --coat:#3a3f4a; --coat-bg:#f0f1f4; --coat-ring:#e0e3e9; --coat-ink:#2a2e37; }
 
+/* ===== Кликабельные карточки + модальное окно товара ===== */
+.product.is-clickable { cursor: pointer; }
+.product.is-clickable:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
+.product__more {
+  margin-top: 14px; display: inline-flex; align-items: center; gap: 4px;
+  color: var(--green-dark); font-weight: 700; font-size: 13px; font-family: var(--head);
+}
+.product__more svg { transition: transform .2s; }
+.product.is-clickable:hover .product__more svg { transform: translateX(3px); }
+
+body.modal-open { overflow: hidden; }
+.pmodal { position: fixed; inset: 0; z-index: 100; display: none; }
+.pmodal.is-open { display: block; }
+.pmodal__backdrop { position: absolute; inset: 0; background: rgba(20,30,22,.55); animation: pmFade .2s ease; }
+.pmodal__dialog {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
+  width: min(900px, 94vw); max-height: 90vh; overflow-y: auto;
+  background: #fff; border-radius: 20px; box-shadow: var(--shadow-lg); animation: pmPop .25s ease;
+}
+@keyframes pmFade { from { opacity: 0 } to { opacity: 1 } }
+@keyframes pmPop { from { opacity: 0; transform: translate(-50%,-46%) } to { opacity: 1; transform: translate(-50%,-50%) } }
+.pmodal__close {
+  position: absolute; top: 12px; right: 14px; z-index: 2;
+  width: 38px; height: 38px; border: none; border-radius: 50%;
+  background: rgba(255,255,255,.92); color: var(--ink); font-size: 26px; line-height: 1;
+  cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,.12);
+}
+.pmodal__close:hover { background: var(--cream); }
+.pmodal__body { display: grid; grid-template-columns: .9fr 1.1fr; }
+.pmodal__media {
+  position: relative; background: linear-gradient(150deg,#f3f7ee,#e4eed8);
+  display: flex; align-items: center; justify-content: center; padding: 30px; min-height: 320px;
+  border-radius: 20px 0 0 20px;
+}
+.pmodal__media img { max-width: 100%; max-height: 420px; object-fit: contain; mix-blend-mode: multiply; }
+.pmodal__media .product__emoji { font-size: 96px; }
+.pmodal__info { padding: 34px; }
+.pmodal__name { font-size: 26px; margin: 4px 0 14px; }
+.pmodal__desc p { color: var(--muted); font-size: 15px; line-height: 1.65; margin-bottom: 10px; }
+.pmodal__section { margin-top: 18px; border-top: 1px solid rgba(31,42,36,.08); padding-top: 16px; }
+.pmodal__section h4 { font-size: 14px; text-transform: uppercase; letter-spacing: .5px; color: var(--green); margin-bottom: 6px; font-family: var(--head); }
+.pmodal__section p { color: var(--muted); font-size: 14px; line-height: 1.6; margin-bottom: 6px; }
+.pmodal__info .product__tags { margin-top: 18px; }
+@media (max-width: 720px) {
+  .pmodal__body { grid-template-columns: 1fr; }
+  .pmodal__media { border-radius: 20px 20px 0 0; min-height: 230px; padding: 22px; }
+  .pmodal__info { padding: 24px; }
+  .pmodal__name { font-size: 22px; }
+}
+
 /* ===== Catalog teaser (home) ===== */
 .catalog-cta { background: var(--cream); }
 .catalog-cta__inner { display: grid; grid-template-columns: 1.2fr .8fr; gap: 50px; align-items: center; }
