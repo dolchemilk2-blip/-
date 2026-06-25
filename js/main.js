@@ -61,6 +61,13 @@ function renderRanges(lang) {
 let currentBrand = 'np';
 let currentSpecies = 'all'; // all | cats | dogs
 let MODAL_ITEMS = [];       // реестр карточек текущего рендера для модального окна
+let MODAL_KEYS = [];        // ключи для поиска полного описания (js/descriptions.js)
+
+// Ключ полного описания: только для Nature's Protection (наш сайт-источник)
+function descKeyFor(brand, species, item) {
+  if (brand !== 'np' || !item.en) return null;
+  return species + '||' + (item.en.cat || '') + '||' + (item.en.name || '');
+}
 
 // Добавить значок питомца к названию группы (для брендов кормов NP/Araton)
 function prefixGroups(groups, prefix, species) {
@@ -133,7 +140,7 @@ function productCard(item, lang, id) {
 }
 
 // Построение модального окна товара
-function openProductModal(item, lang) {
+function openProductModal(item, lang, key) {
   const modal = document.getElementById('productModal');
   const body = document.getElementById('pmodalBody');
   if (!modal || !body || !item) return;
@@ -148,8 +155,11 @@ function openProductModal(item, lang) {
     ? `<img src="${item.img}" alt="${t.name}" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'product__emoji',textContent:'${fallback}'}))">`
     : `<span class="product__emoji">${fallback}</span>`;
   const tags = (t.tags || []).map(x => `<span>${x}</span>`).join('');
-  // Полное описание: «full» (массив абзацев или строка) либо обычное desc
-  const full = t.full || t.desc || '';
+  // Полное описание: из item, затем из FULL_DESC (js/descriptions.js), затем обычное desc
+  const ext = (key && typeof FULL_DESC !== 'undefined' && FULL_DESC[key] && FULL_DESC[key][lang]) || null;
+  const comp = t.comp || (ext && ext.comp);
+  const feeding = t.feeding || (ext && ext.feeding);
+  const full = t.full || (ext && ext.full) || t.desc || '';
   const paras = (Array.isArray(full) ? full : String(full).split('\n')).filter(Boolean);
   const descHtml = paras.map(p => `<p>${p}</p>`).join('');
   const block = (labelKey, val) => {
@@ -163,8 +173,8 @@ function openProductModal(item, lang) {
       <span class="product__cat">${t.cat}</span>
       <h3 class="pmodal__name" id="pmodalName">${t.name}</h3>
       <div class="pmodal__desc">${descHtml}</div>
-      ${block('products.composition', t.comp)}
-      ${block('products.feeding', t.feeding)}
+      ${block('products.composition', comp)}
+      ${block('products.feeding', feeding)}
       ${tags ? `<div class="product__tags">${tags}</div>` : ''}
     </div>`;
   modal.classList.add('is-open');
@@ -234,8 +244,13 @@ function renderProducts(brand, lang) {
     ? `<div class="baby-banner"><span class="baby-banner__icon">🍼</span><div class="baby-banner__text"><h3>${dict['products.babiesTitle'] || ''}</h3><p>${dict['products.babiesText'] || ''}</p></div></div>`
     : '';
   // Реестр карточек для модального окна: id = индекс в MODAL_ITEMS.
-  MODAL_ITEMS = [];
-  const mk = (it) => { const id = MODAL_ITEMS.length; MODAL_ITEMS.push(it); return productCard(it, lang, id); };
+  MODAL_ITEMS = []; MODAL_KEYS = [];
+  const mk = (it, species) => {
+    const id = MODAL_ITEMS.length;
+    MODAL_ITEMS.push(it);
+    MODAL_KEYS.push(descKeyFor(brand, species, it));
+    return productCard(it, lang, id);
+  };
   wrap.innerHTML = banner + groups.map((g, i) => {
     const groupName = (g.group && (g.group[lang] || g.group.ru)) || '';
     // Группа Superior Care: распределяем по цвету шерсти и добавляем вставки.
@@ -253,10 +268,10 @@ function renderProducts(brand, lang) {
               <p>${dict['coat.' + c + '.desc'] || ''}</p>
             </div>
           </div>
-          <div class="products">${buckets[c].map(it => mk(it)).join('')}</div>`;
+          <div class="products">${buckets[c].map(it => mk(it, g.species)).join('')}</div>`;
       });
       if (buckets.none.length) {
-        inner += `<div class="products">${buckets.none.map(it => mk(it)).join('')}</div>`;
+        inner += `<div class="products">${buckets.none.map(it => mk(it, g.species)).join('')}</div>`;
       }
       return `
         <div class="product-group product-group--coat" id="grp-${i}">
@@ -264,7 +279,7 @@ function renderProducts(brand, lang) {
           ${inner}
         </div>`;
     }
-    const cards = g.items.map(it => mk(it)).join('');
+    const cards = g.items.map(it => mk(it, g.species)).join('');
     return `
       <div class="product-group" id="grp-${i}">
         <h3 class="product-group__title">${groupName}</h3>
@@ -427,8 +442,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const openFromEvent = (e) => {
       const card = e.target.closest('.product[data-pid]');
       if (!card) return;
-      const item = MODAL_ITEMS[+card.getAttribute('data-pid')];
-      if (item) openProductModal(item, getLang());
+      const pid = +card.getAttribute('data-pid');
+      const item = MODAL_ITEMS[pid];
+      if (item) openProductModal(item, getLang(), MODAL_KEYS[pid]);
     };
     grid.addEventListener('click', openFromEvent);
     grid.addEventListener('keydown', (e) => {
