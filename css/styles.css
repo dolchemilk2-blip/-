@@ -455,15 +455,17 @@ body.modal-open { overflow: hidden; }
   .pmodal__name { font-size: 22px; }
 }
 
-/* ===== Плавный переход между страницами (быстрый кроссфейд) ===== */
-@keyframes pageRise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
-/* Вход на каталог: контент мягко проявляется и чуть приподнимается (шапка/панель — без сдвига) */
+/* ===== Плавный переход между страницами (быстрый кроссфейд, обе стороны) ===== */
+@keyframes pageFadeBody { from { opacity: 0; } to { opacity: 1; } }
+@keyframes pageRise { from { transform: translateY(10px); } to { transform: none; } }
+/* Вход на любую страницу: мягкое проявление; на каталоге контент ещё и чуть приподнимается */
+body.page-enter { animation: pageFadeBody .3s ease both; }
 .page-enter .page-hero { animation: pageRise .34s cubic-bezier(.22,.61,.36,1) both; }
 .page-enter .section--top { animation: pageRise .4s cubic-bezier(.22,.61,.36,1) .04s both; }
 /* Уход со страницы: всё аккуратно гаснет перед переходом */
 body.page-leaving { opacity: 0; transition: opacity .2s ease; }
 @media (prefers-reduced-motion: reduce) {
-  .page-enter .page-hero, .page-enter .section--top { animation: none; }
+  body.page-enter, .page-enter .page-hero, .page-enter .section--top { animation: none; }
   body.page-leaving { opacity: 1; transition: none; }
 }
 

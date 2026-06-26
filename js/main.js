@@ -392,22 +392,26 @@ function initFloaties() {
 }
 
 // ===== Анимация перехода между страницами =====
-// Каталог сам мягко проявляется (CSS, класс .page-enter). Здесь — плавное гашение при уходе на каталог.
+// Каждая страница мягко проявляется (CSS, класс .page-enter). Здесь — плавное гашение
+// при любом переходе на ДРУГУЮ внутреннюю страницу (главная ↔ каталог).
 function initPageTransition() {
   const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (reduce) return;
-  document.querySelectorAll('a[href*="products.html"]').forEach(a => {
-    a.addEventListener('click', (e) => {
-      if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button) return;
-      let url;
-      try { url = new URL(a.href, location.href); } catch (_) { return; }
-      if (url.pathname === location.pathname) return; // та же страница — без перехода
-      e.preventDefault();
-      document.body.classList.add('page-leaving');
-      let navigated = false;
-      const go = () => { if (navigated) return; navigated = true; window.location.href = a.href; };
-      setTimeout(go, 210); // переход после короткого затухания
-    });
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest('a[href]');
+    if (!a) return;
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button) return;
+    if (a.hasAttribute('download') || (a.target && a.target !== '_self')) return;
+    let url;
+    try { url = new URL(a.href, location.href); } catch (_) { return; }
+    if (url.origin !== location.origin) return;       // внешняя ссылка
+    if (url.pathname === location.pathname) return;    // та же страница (якорь) — без перехода
+    e.preventDefault();
+    document.body.classList.remove('page-enter');      // снять fill анимации входа
+    document.body.classList.add('page-leaving');
+    let navigated = false;
+    const go = () => { if (navigated) return; navigated = true; window.location.href = a.href; };
+    setTimeout(go, 210); // переход после короткого затухания
   });
 }
 
