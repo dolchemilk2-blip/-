@@ -2548,5 +2548,343 @@ const FULL_DESC = {
    "feeding": "As this is a veterinary diet, consult your vet before use and follow the feeding table on the pack; fresh water should always be available.",
    "comp": "Enriched with salmon and beneficial fatty acids."
   }
+ },
+ "dogs||Superior Care · White Dogs · Starter||White Dogs Starter — Salmon": {
+  "az": {
+   "full": [
+    "White Dogs Starter — Qızılbalıq, ağ və açıq rəngli xəzə malik bütün cins balalar, eləcə də boğaz və əmizdirən analar üçün hazırlanmış dənsiz başlanğıc qidasıdır. Yumşaq qızılbalıq zülalı ilə zəngin bu resept, körpə orqanizmin sağlam böyüməsi və güclü immunitet üçün möhkəm təməl qoyur.",
+    "Xüsusi olaraq ağ xəz üçün düşünülmüş tərkib, gözətrafı qəhvəyi göz yaşı ləkələrinin azalmasına kömək edir və xəzin təbii parlaqlığını qoruyur. Omega-3 və Omega-6 yağ turşuları sağlam dəri və ipək kimi tük üçün dəstək olur; tərkibində soya, GMO, süni rəng və qoruyucu maddələr yoxdur."
+   ],
+   "feeding": "Qablaşdırma üzərindəki qidalanma cədvəlinə uyğun olaraq, balanın yaşına, çəkisinə və aktivliyinə görə porsiyanı tənzimləyin və daim təmiz, təzə su təmin edin.",
+   "comp": "EU-da yüksək keyfiyyətli heyvan zülalı və diqqətlə seçilmiş təbii inqrediyentlərdən hazırlanır."
+  },
+  "ru": {
+   "full": [
+    "White Dogs Starter — Лосось — это беззерновой стартовый корм для щенков всех пород со светлой шерстью, а также для беременных и кормящих сук. Богатый нежным белком лосося рецепт закладывает прочный фундамент для здорового роста малыша и крепкого иммунитета.",
+    "Состав специально подобран для белой шерсти и помогает уменьшить коричневые слёзные дорожки вокруг глаз, сохраняя естественное сияние шёрстки. Жирные кислоты Омега-3 и Омега-6 поддерживают здоровье кожи и шелковистость шерсти; без сои, ГМО, искусственных красителей и консервантов."
+   ],
+   "feeding": "Кормите согласно таблице на упаковке, корректируя порцию с учётом возраста, веса и активности щенка, и всегда обеспечивайте доступ к свежей воде.",
+   "comp": "Произведён в ЕС из высококачественного животного белка и тщательно отобранных натуральных ингредиентов."
+  },
+  "en": {
+   "full": [
+    "White Dogs Starter — Salmon is a grain-free starter food for puppies of all breeds with a white or light coat, as well as for pregnant and nursing mothers. Rich in gentle salmon protein, this recipe lays a strong foundation for healthy growth and a resilient immune system.",
+    "Crafted specifically for white coats, it helps reduce the brown tear stains around the eyes while preserving the natural brightness of the fur. Omega-3 and Omega-6 fatty acids support healthy skin and a silky coat; with no soy, no GMO, and no artificial colours or preservatives."
+   ],
+   "feeding": "Feed according to the table on the pack, adjusting the portion to your puppy's age, weight and activity, and always keep fresh water available.",
+   "comp": "Made in the EU from high-quality animal protein and carefully selected natural ingredients."
+  }
+ },
+ "dogs||Superior Care · White Dogs · Junior||White Dogs Junior — Salmon": {
+  "az": {
+   "full": [
+    "White Dogs Junior — Qızılbalıq, ağ və açıq xəzli kiçik və mini cins balalar üçün dənsiz qida olub, böyümə dövrünün artan enerji və qidalanma tələblərini ödəmək üçün düşünülmüşdür. Zəngin qızılbalıq zülalı əzələlərin və sümüklərin sağlam inkişafına dəstək olur.",
+    "Resept ağ xəz üçün xüsusi tərtib edilib və gözətrafı qəhvəyi göz yaşı ləkələrinin azalmasına kömək edir. Omega-3 və Omega-6 ilə zənginləşdirilmiş tərkib parlaq, sağlam tük və dəri təmin edir; soya, GMO və süni əlavələr olmadan."
+   ],
+   "feeding": "Qablaşdırma üzərindəki qidalanma cədvəlinə uyğun olaraq balanın yaşına, çəkisinə və aktivliyinə görə porsiyanı tənzimləyin və daim təmiz su təmin edin.",
+   "comp": "EU-da yüksək keyfiyyətli qızılbalıq zülalı və təbii inqrediyentlərdən hazırlanır."
+  },
+  "ru": {
+   "full": [
+    "White Dogs Junior — Лосось — беззерновой корм с лососем для щенков малых и мини-пород со светлой шерстью, разработанный для повышенных потребностей в энергии и питательных веществах в период активного роста. Богатый белок лосося поддерживает гармоничное развитие мышц и костей.",
+    "Рецептура специально создана для белой шерсти и помогает уменьшить коричневые слёзные дорожки вокруг глаз. Обогащённый Омега-3 и Омега-6 состав обеспечивает блестящую, здоровую шерсть и кожу; без сои, ГМО и искусственных добавок."
+   ],
+   "feeding": "Кормите согласно таблице на упаковке, корректируя порцию с учётом возраста, веса и активности щенка, и всегда обеспечивайте доступ к свежей воде.",
+   "comp": "Произведён в ЕС из высококачественного белка лосося и натуральных ингредиентов."
+  },
+  "en": {
+   "full": [
+    "White Dogs Junior — Salmon is a grain-free salmon food for small and mini breed puppies with a white coat, designed to meet the higher energy and nutrient demands of the growth phase. The rich salmon protein supports the balanced development of muscles and bones.",
+    "Formulated specifically for white coats, it helps reduce the brown tear stains around the eyes. Enriched with Omega-3 and Omega-6, it delivers a glossy, healthy coat and skin; with no soy, no GMO and no artificial additives."
+   ],
+   "feeding": "Feed according to the table on the pack, adjusting the portion to your puppy's age, weight and activity, and always keep fresh water available.",
+   "comp": "Made in the EU from high-quality salmon protein and natural ingredients."
+  }
+ },
+ "dogs||Superior Care · White Dogs · Junior||White Dogs Junior — White Fish": {
+  "az": {
+   "full": [
+    "White Dogs Junior — Ağ balıq, ağ və açıq xəzli bütün cins balalar üçün dənsiz qidadır. Asan həzm olunan ağ balıq zülalı böyümə dövründə həssas mədə üçün incə, lakin qidalı seçim təqdim edərək sağlam inkişafı dəstəkləyir.",
+    "Ağ xəz üçün xüsusi hazırlanmış resept gözətrafı qəhvəyi göz yaşı ləkələrinin azalmasına kömək edir və tükün təbii parlaqlığını qoruyur. Omega-3 və Omega-6 sağlam dəri və ipək kimi xəz üçün dəstək olur; soya, GMO və süni qoruyucular olmadan."
+   ],
+   "feeding": "Qablaşdırma üzərindəki qidalanma cədvəlinə uyğun olaraq balanın yaşına, çəkisinə və aktivliyinə görə porsiyanı tənzimləyin və daim təmiz su təmin edin.",
+   "comp": "EU-da yüksək keyfiyyətli ağ balıq zülalı və təbii inqrediyentlərdən hazırlanır."
+  },
+  "ru": {
+   "full": [
+    "White Dogs Junior — Белая рыба — беззерновой корм с белой рыбой для щенков всех пород со светлой шерстью. Легкоусвояемый белок белой рыбы предлагает деликатный, но питательный выбор для чувствительного желудка в период роста и поддерживает здоровое развитие.",
+    "Рецептура, созданная специально для белой шерсти, помогает уменьшить коричневые слёзные дорожки вокруг глаз и сохраняет естественное сияние шёрстки. Омега-3 и Омега-6 поддерживают здоровье кожи и шелковистость шерсти; без сои, ГМО и искусственных консервантов."
+   ],
+   "feeding": "Кормите согласно таблице на упаковке, корректируя порцию с учётом возраста, веса и активности щенка, и всегда обеспечивайте доступ к свежей воде.",
+   "comp": "Произведён в ЕС из высококачественного белка белой рыбы и натуральных ингредиентов."
+  },
+  "en": {
+   "full": [
+    "White Dogs Junior — White Fish is a grain-free white fish food for junior dogs of all breeds with a white coat. The easily digestible white fish protein offers a gentle yet nourishing choice for a sensitive stomach during the growth phase and supports healthy development.",
+    "Created specifically for white coats, it helps reduce the brown tear stains around the eyes while preserving the natural brightness of the fur. Omega-3 and Omega-6 support healthy skin and a silky coat; with no soy, no GMO and no artificial preservatives."
+   ],
+   "feeding": "Feed according to the table on the pack, adjusting the portion to your puppy's age, weight and activity, and always keep fresh water available.",
+   "comp": "Made in the EU from high-quality white fish protein and natural ingredients."
+  }
+ },
+ "dogs||Superior Care · White Dogs · Adult||White Dogs Adult — Lamb": {
+  "az": {
+   "full": [
+    "White Dogs Adult — Quzu, ağ və açıq xəzli kiçik və mini cins (1–10 kq) yetkin itlər üçün quzu əti ilə hazırlanmış qidadır. Asan həzm olunan quzu zülalı həssas həzm sistemi olan itlər üçün incə, ləzzətli və qidalı seçim təqdim edir.",
+    "Ağ xəz üçün xüsusi tərtib edilmiş resept gözətrafı qəhvəyi göz yaşı ləkələrinin azalmasına kömək edir. Omega-3 və Omega-6 sağlam dəri və parlaq tük üçün dəstək olur; soya, GMO və süni əlavələr olmadan."
+   ],
+   "feeding": "Qablaşdırma üzərindəki qidalanma cədvəlinə uyğun olaraq itin çəkisinə və aktivliyinə görə porsiyanı tənzimləyin və daim təmiz su təmin edin.",
+   "comp": "EU-da yüksək keyfiyyətli quzu zülalı və diqqətlə seçilmiş təbii inqrediyentlərdən hazırlanır."
+  },
+  "ru": {
+   "full": [
+    "White Dogs Adult — Ягнёнок — корм с ягнёнком для взрослых собак малых и мини-пород (1–10 кг) со светлой шерстью. Легкоусвояемый белок ягнёнка предлагает деликатный, вкусный и питательный выбор для собак с чувствительным пищеварением.",
+    "Рецептура, разработанная специально для белой шерсти, помогает уменьшить коричневые слёзные дорожки вокруг глаз. Омега-3 и Омега-6 поддерживают здоровье кожи и блеск шерсти; без сои, ГМО и искусственных добавок."
+   ],
+   "feeding": "Кормите согласно таблице на упаковке, корректируя порцию с учётом веса и активности собаки, и всегда обеспечивайте доступ к свежей воде.",
+   "comp": "Произведён в ЕС из высококачественного белка ягнёнка и тщательно отобранных натуральных ингредиентов."
+  },
+  "en": {
+   "full": [
+    "White Dogs Adult — Lamb is a lamb food for adult small and mini breed (1–10 kg) dogs with a white coat. The easily digestible lamb protein offers a gentle, flavourful and nourishing choice for dogs with sensitive digestion.",
+    "Formulated specifically for white coats, it helps reduce the brown tear stains around the eyes. Omega-3 and Omega-6 support healthy skin and a shiny coat; with no soy, no GMO and no artificial additives."
+   ],
+   "feeding": "Feed according to the table on the pack, adjusting the portion to your dog's weight and activity, and always keep fresh water available.",
+   "comp": "Made in the EU from high-quality lamb protein and carefully selected natural ingredients."
+  }
+ },
+ "dogs||Superior Care · White Dogs · Adult||White Dogs Adult — White Fish": {
+  "az": {
+   "full": [
+    "White Dogs Adult — Ağ balıq, ağ və açıq xəzli kiçik və mini cins (1–10 kq) yetkin itlər üçün dənsiz qidadır. Asan həzm olunan ağ balıq zülalı gündəlik enerji və mükəmməl qidalanma üçün incə, yüngül seçim təqdim edir.",
+    "Ağ xəz üçün xüsusi hazırlanmış resept gözətrafı qəhvəyi göz yaşı ləkələrinin azalmasına kömək edir və tükün təbii parlaqlığını qoruyur. Omega-3 və Omega-6 sağlam dəri və ipək kimi xəz üçün dəstək olur; soya, GMO və süni qoruyucular olmadan."
+   ],
+   "feeding": "Qablaşdırma üzərindəki qidalanma cədvəlinə uyğun olaraq itin çəkisinə və aktivliyinə görə porsiyanı tənzimləyin və daim təmiz su təmin edin.",
+   "comp": "EU-da yüksək keyfiyyətli ağ balıq zülalı və təbii inqrediyentlərdən hazırlanır."
+  },
+  "ru": {
+   "full": [
+    "White Dogs Adult — Белая рыба — беззерновой корм с белой рыбой для взрослых собак малых и мини-пород (1–10 кг) со светлой шерстью. Легкоусвояемый белок белой рыбы предлагает деликатный, лёгкий выбор для ежедневной энергии и полноценного питания.",
+    "Рецептура, созданная специально для белой шерсти, помогает уменьшить коричневые слёзные дорожки вокруг глаз и сохраняет естественное сияние шёрстки. Омега-3 и Омега-6 поддерживают здоровье кожи и шелковистость шерсти; без сои, ГМО и искусственных консервантов."
+   ],
+   "feeding": "Кормите согласно таблице на упаковке, корректируя порцию с учётом веса и активности собаки, и всегда обеспечивайте доступ к свежей воде.",
+   "comp": "Произведён в ЕС из высококачественного белка белой рыбы и натуральных ингредиентов."
+  },
+  "en": {
+   "full": [
+    "White Dogs Adult — White Fish is a grain-free white fish food for adult small and mini breed (1–10 kg) dogs with a white coat. The easily digestible white fish protein offers a gentle, light choice for everyday energy and complete nutrition.",
+    "Created specifically for white coats, it helps reduce the brown tear stains around the eyes while preserving the natural brightness of the fur. Omega-3 and Omega-6 support healthy skin and a silky coat; with no soy, no GMO and no artificial preservatives."
+   ],
+   "feeding": "Feed according to the table on the pack, adjusting the portion to your dog's weight and activity, and always keep fresh water available.",
+   "comp": "Made in the EU from high-quality white fish protein and natural ingredients."
+  }
+ },
+ "dogs||Superior Care · White Dogs · Adult||White Dogs Adult — Salmon": {
+  "az": {
+   "full": [
+    "White Dogs Adult — Qızılbalıq, ağ və açıq xəzli kiçik və mini cins (1–10 kq) yetkin itlər üçün dənsiz qidadır. Zəngin qızılbalıq zülalı və təbii balıq yağları gündəlik canlılığı dəstəkləyərək dəri və xəzin sağlamlığına xüsusi qayğı göstərir.",
+    "Ağ xəz üçün xüsusi tərtib edilmiş resept gözətrafı qəhvəyi göz yaşı ləkələrinin azalmasına kömək edir. Omega-3 və Omega-6 ilə zəngin tərkib parlaq, sağlam tük və nəm dəri təmin edir; soya, GMO və süni əlavələr olmadan."
+   ],
+   "feeding": "Qablaşdırma üzərindəki qidalanma cədvəlinə uyğun olaraq itin çəkisinə və aktivliyinə görə porsiyanı tənzimləyin və daim təmiz su təmin edin.",
+   "comp": "EU-da yüksək keyfiyyətli qızılbalıq zülalı və təbii inqrediyentlərdən hazırlanır."
+  },
+  "ru": {
+   "full": [
+    "White Dogs Adult — Лосось — беззерновой корм с лососем для взрослых собак малых и мини-пород (1–10 кг) со светлой шерстью. Богатый белок лосося и натуральные рыбные жиры поддерживают ежедневную бодрость и уделяют особое внимание здоровью кожи и шерсти.",
+    "Рецептура, разработанная специально для белой шерсти, помогает уменьшить коричневые слёзные дорожки вокруг глаз. Богатый Омега-3 и Омега-6 состав обеспечивает блестящую, здоровую шерсть и увлажнённую кожу; без сои, ГМО и искусственных добавок."
+   ],
+   "feeding": "Кормите согласно таблице на упаковке, корректируя порцию с учётом веса и активности собаки, и всегда обеспечивайте доступ к свежей воде.",
+   "comp": "Произведён в ЕС из высококачественного белка лосося и натуральных ингредиентов."
+  },
+  "en": {
+   "full": [
+    "White Dogs Adult — Salmon is a grain-free salmon food for adult small and mini breed (1–10 kg) dogs with a white coat. The rich salmon protein and natural fish oils support everyday vitality while giving special care to skin and coat health.",
+    "Formulated specifically for white coats, it helps reduce the brown tear stains around the eyes. Rich in Omega-3 and Omega-6, it delivers a glossy, healthy coat and well-moisturised skin; with no soy, no GMO and no artificial additives."
+   ],
+   "feeding": "Feed according to the table on the pack, adjusting the portion to your dog's weight and activity, and always keep fresh water available.",
+   "comp": "Made in the EU from high-quality salmon protein and natural ingredients."
+  }
+ },
+ "dogs||Superior Care · White Dogs · Adult||White Dogs Adult — Insect": {
+  "az": {
+   "full": [
+    "White Dogs Adult — Həşərat zülalı, ağ və açıq xəzli kiçik cins yetkin itlər üçün dənsiz, novator qidadır. Yüksək həzm olunan həşərat zülalı dayanıqlı və alternativ zülal mənbəyi axtaran sahiblər üçün incə və ekoloji seçim təqdim edir.",
+    "Tərkibində orqanik inqrediyentlər olan resept ağ xəz üçün düşünülüb və gözətrafı qəhvəyi göz yaşı ləkələrinin azalmasına kömək edir. Omega-3 və Omega-6 sağlam dəri və parlaq tük üçün dəstək olur; soya, GMO və süni əlavələr olmadan."
+   ],
+   "feeding": "Qablaşdırma üzərindəki qidalanma cədvəlinə uyğun olaraq itin çəkisinə və aktivliyinə görə porsiyanı tənzimləyin və daim təmiz su təmin edin.",
+   "comp": "EU-da yüksək keyfiyyətli həşərat zülalı və orqanik inqrediyentlərdən hazırlanır."
+  },
+  "ru": {
+   "full": [
+    "White Dogs Adult — Белок насекомых — беззерновой, инновационный корм для взрослых собак малых пород со светлой шерстью. Высокоусвояемый белок насекомых предлагает деликатный и экологичный выбор для владельцев, ищущих устойчивый альтернативный источник белка.",
+    "Рецептура с органическими ингредиентами создана для белой шерсти и помогает уменьшить коричневые слёзные дорожки вокруг глаз. Омега-3 и Омега-6 поддерживают здоровье кожи и блеск шерсти; без сои, ГМО и искусственных добавок."
+   ],
+   "feeding": "Кормите согласно таблице на упаковке, корректируя порцию с учётом веса и активности собаки, и всегда обеспечивайте доступ к свежей воде.",
+   "comp": "Произведён в ЕС из высококачественного белка насекомых и органических ингредиентов."
+  },
+  "en": {
+   "full": [
+    "White Dogs Adult — Insect is a grain-free, innovative food for adult small-breed dogs with a white coat. The highly digestible insect protein offers a gentle and eco-conscious choice for owners seeking a sustainable alternative protein source.",
+    "With organic ingredients, the recipe is crafted for white coats and helps reduce the brown tear stains around the eyes. Omega-3 and Omega-6 support healthy skin and a shiny coat; with no soy, no GMO and no artificial additives."
+   ],
+   "feeding": "Feed according to the table on the pack, adjusting the portion to your dog's weight and activity, and always keep fresh water available.",
+   "comp": "Made in the EU from high-quality insect protein and organic ingredients."
+  }
+ },
+ "dogs||Superior Care · White Dogs · All Life Stage||White Dogs All Life Stage — White Fish": {
+  "az": {
+   "full": [
+    "White Dogs All Life Stage — Ağ balıq, ağ və açıq xəzli, böyük cinslər də daxil olmaqla bütün ölçülü itlər üçün dənsiz qidadır. Junior, yetkin və yaşlı itlər üçün uyğun olan bu resept, iri itlər üçün rahat gəmirmə təmin edən böyük 13–15 mm dənələrlə təqdim olunur.",
+    "Asan həzm olunan ağ balıq zülalı ağ xəz üçün düşünülüb və gözətrafı qəhvəyi göz yaşı ləkələrinin azalmasına kömək edir. Omega-3 və Omega-6 sağlam dəri və ipək kimi tük üçün dəstək olur; soya, GMO və süni qoruyucular olmadan."
+   ],
+   "feeding": "Qablaşdırma üzərindəki qidalanma cədvəlinə uyğun olaraq itin yaşına, çəkisinə və aktivliyinə görə porsiyanı tənzimləyin və daim təmiz su təmin edin.",
+   "comp": "EU-da yüksək keyfiyyətli ağ balıq zülalı və təbii inqrediyentlərdən hazırlanır."
+  },
+  "ru": {
+   "full": [
+    "White Dogs All Life Stage — Белая рыба — беззерновой корм для собак всех размеров, включая крупных, со светлой шерстью. Подходящий для щенков, взрослых и пожилых собак, этот рецепт выпускается с крупными гранулами 13–15 мм для удобного разгрызания крупными породами.",
+    "Легкоусвояемый белок белой рыбы подобран для белой шерсти и помогает уменьшить коричневые слёзные дорожки вокруг глаз. Омега-3 и Омега-6 поддерживают здоровье кожи и шелковистость шерсти; без сои, ГМО и искусственных консервантов."
+   ],
+   "feeding": "Кормите согласно таблице на упаковке, корректируя порцию с учётом возраста, веса и активности собаки, и всегда обеспечивайте доступ к свежей воде.",
+   "comp": "Произведён в ЕС из высококачественного белка белой рыбы и натуральных ингредиентов."
+  },
+  "en": {
+   "full": [
+    "White Dogs All Life Stage — White Fish is a grain-free food for white-coated dogs of all sizes, including large breeds. Suitable for junior, adult and senior dogs, this recipe comes with larger 13–15 mm kibble for comfortable chewing by bigger breeds.",
+    "The easily digestible white fish protein is tailored for white coats and helps reduce the brown tear stains around the eyes. Omega-3 and Omega-6 support healthy skin and a silky coat; with no soy, no GMO and no artificial preservatives."
+   ],
+   "feeding": "Feed according to the table on the pack, adjusting the portion to your dog's age, weight and activity, and always keep fresh water available.",
+   "comp": "Made in the EU from high-quality white fish protein and natural ingredients."
+  }
+ },
+ "dogs||Superior Care · White Dogs · All Life Stage||White Dogs All Life Stage — Insect": {
+  "az": {
+   "full": [
+    "White Dogs All Life Stage — Həşərat zülalı, ağ və açıq xəzli, böyük cinslər də daxil olmaqla bütün ölçülü itlər üçün dənsiz, novator qidadır. Junior, yetkin və yaşlı itlər üçün uyğun olan resept, iri itlərə rahat gəmirmə üçün böyük 13–15 mm dənələrlə təqdim olunur.",
+    "Yüksək həzm olunan həşərat zülalı dayanıqlı alternativ zülal mənbəyi olub, ağ xəz üçün düşünülüb və gözətrafı qəhvəyi göz yaşı ləkələrinin azalmasına kömək edir. Omega-3 və Omega-6 sağlam dəri və parlaq tük üçün dəstək olur; soya, GMO və süni əlavələr olmadan."
+   ],
+   "feeding": "Qablaşdırma üzərindəki qidalanma cədvəlinə uyğun olaraq itin yaşına, çəkisinə və aktivliyinə görə porsiyanı tənzimləyin və daim təmiz su təmin edin.",
+   "comp": "EU-da yüksək keyfiyyətli həşərat zülalı və təbii inqrediyentlərdən hazırlanır."
+  },
+  "ru": {
+   "full": [
+    "White Dogs All Life Stage — Белок насекомых — беззерновой, инновационный корм для собак всех размеров, включая крупных, со светлой шерстью. Подходящий для щенков, взрослых и пожилых собак, рецепт выпускается с крупными гранулами 13–15 мм для удобного разгрызания крупными породами.",
+    "Высокоусвояемый белок насекомых — устойчивый альтернативный источник белка — подобран для белой шерсти и помогает уменьшить коричневые слёзные дорожки вокруг глаз. Омега-3 и Омега-6 поддерживают здоровье кожи и блеск шерсти; без сои, ГМО и искусственных добавок."
+   ],
+   "feeding": "Кормите согласно таблице на упаковке, корректируя порцию с учётом возраста, веса и активности собаки, и всегда обеспечивайте доступ к свежей воде.",
+   "comp": "Произведён в ЕС из высококачественного белка насекомых и натуральных ингредиентов."
+  },
+  "en": {
+   "full": [
+    "White Dogs All Life Stage — Insect is a grain-free, innovative food for white-coated dogs of all sizes, including large breeds. Suitable for junior, adult and senior dogs, the recipe comes with larger 13–15 mm kibble for comfortable chewing by bigger breeds.",
+    "The highly digestible insect protein is a sustainable alternative protein source, tailored for white coats and helping to reduce the brown tear stains around the eyes. Omega-3 and Omega-6 support healthy skin and a shiny coat; with no soy, no GMO and no artificial additives."
+   ],
+   "feeding": "Feed according to the table on the pack, adjusting the portion to your dog's age, weight and activity, and always keep fresh water available.",
+   "comp": "Made in the EU from high-quality insect protein and natural ingredients."
+  }
+ },
+ "dogs||Superior Care · Red Coat||Red Coat Junior — Salmon & Krill": {
+  "az": {
+   "full": [
+    "Red Coat Junior — Qızılbalıq və kril, qəhvəyi və qırmızımtıl xəzli kiçik cins balalar üçün hazırlanmış qidadır. Qızılbalıq və kril birləşməsi Omega-3 və Omega-6 ilə zəngindir, böyümə dövründə sağlam inkişafı və xəzin canlı, parlaq rəngini dəstəkləyir.",
+    "RCE kompleksi qırmızı-qəhvəyi rəngin dərinliyini və parlaqlığını gücləndirərək balanın təbii çalarlarını ortaya çıxarır. Zəngin balıq yağları sağlam dəri və ipək kimi tük üçün dəstək olur; soya, GMO və süni əlavələr olmadan."
+   ],
+   "feeding": "Qablaşdırma üzərindəki qidalanma cədvəlinə uyğun olaraq balanın yaşına, çəkisinə və aktivliyinə görə porsiyanı tənzimləyin və daim təmiz su təmin edin.",
+   "comp": "EU-da yüksək keyfiyyətli qızılbalıq, kril və təbii inqrediyentlərdən hazırlanır."
+  },
+  "ru": {
+   "full": [
+    "Red Coat Junior — Лосось и криль — корм для щенков малых пород с коричневой/рыжей шерстью. Сочетание лосося и криля богато Омега-3 и Омега-6, поддерживая здоровое развитие в период роста и живой, яркий цвет шерсти.",
+    "Комплекс RCE усиливает глубину и насыщенность красно-коричневого окраса, подчёркивая естественные оттенки малыша. Богатые рыбные жиры поддерживают здоровье кожи и шелковистость шерсти; без сои, ГМО и искусственных добавок."
+   ],
+   "feeding": "Кормите согласно таблице на упаковке, корректируя порцию с учётом возраста, веса и активности щенка, и всегда обеспечивайте доступ к свежей воде.",
+   "comp": "Произведён в ЕС из высококачественного лосося, криля и натуральных ингредиентов."
+  },
+  "en": {
+   "full": [
+    "Red Coat Junior — Salmon & Krill is a food for small-breed puppies with a brown or red coat. The combination of salmon and krill is rich in Omega-3 and Omega-6, supporting healthy development during the growth phase and a vivid, vibrant coat colour.",
+    "The RCE complex enhances the depth and richness of the red-brown colour, bringing out the puppy's natural shades. Rich fish oils support healthy skin and a silky coat; with no soy, no GMO and no artificial additives."
+   ],
+   "feeding": "Feed according to the table on the pack, adjusting the portion to your puppy's age, weight and activity, and always keep fresh water available.",
+   "comp": "Made in the EU from high-quality salmon, krill and natural ingredients."
+  }
+ },
+ "dogs||Superior Care · Red Coat||Red Coat Adult — Lamb": {
+  "az": {
+   "full": [
+    "Red Coat Adult — Quzu, qəhvəyi və qırmızımtıl xəzli kiçik cins yetkin itlər üçün quzu əti ilə hazırlanmış dənsiz tam rasiondur. Asan həzm olunan quzu zülalı gündəlik enerji və mükəmməl qidalanma üçün incə, ləzzətli seçim təqdim edir.",
+    "RCE kompleksi xəzin qırmızı-qəhvəyi rəngini və parlaqlığını gücləndirərək təbii çalarları daha da canlandırır. Omega-3 və Omega-6 sağlam dəri və parlaq tük üçün dəstək olur; soya, GMO və süni əlavələr olmadan."
+   ],
+   "feeding": "Qablaşdırma üzərindəki qidalanma cədvəlinə uyğun olaraq itin çəkisinə və aktivliyinə görə porsiyanı tənzimləyin və daim təmiz su təmin edin.",
+   "comp": "EU-da yüksək keyfiyyətli quzu zülalı və təbii inqrediyentlərdən hazırlanır."
+  },
+  "ru": {
+   "full": [
+    "Red Coat Adult — Ягнёнок — беззерновой полнорацион с ягнёнком для взрослых собак малых пород с коричневой/рыжей шерстью. Легкоусвояемый белок ягнёнка предлагает деликатный, вкусный выбор для ежедневной энергии и полноценного питания.",
+    "Комплекс RCE усиливает красно-коричневый цвет и блеск шерсти, делая естественные оттенки ещё более выразительными. Омега-3 и Омега-6 поддерживают здоровье кожи и блеск шерсти; без сои, ГМО и искусственных добавок."
+   ],
+   "feeding": "Кормите согласно таблице на упаковке, корректируя порцию с учётом веса и активности собаки, и всегда обеспечивайте доступ к свежей воде.",
+   "comp": "Произведён в ЕС из высококачественного белка ягнёнка и натуральных ингредиентов."
+  },
+  "en": {
+   "full": [
+    "Red Coat Adult — Lamb is a grain-free complete diet with lamb for adult small-breed dogs with a brown or red coat. The easily digestible lamb protein offers a gentle, flavourful choice for everyday energy and complete nutrition.",
+    "The RCE complex enhances the red-brown colour and shine of the coat, making the natural shades even more expressive. Omega-3 and Omega-6 support healthy skin and a shiny coat; with no soy, no GMO and no artificial additives."
+   ],
+   "feeding": "Feed according to the table on the pack, adjusting the portion to your dog's weight and activity, and always keep fresh water available.",
+   "comp": "Made in the EU from high-quality lamb protein and natural ingredients."
+  }
+ },
+ "dogs||Superior Care · Red Coat||Red Coat Adult — Salmon": {
+  "az": {
+   "full": [
+    "Red Coat Adult — Qızılbalıq, qəhvəyi və qırmızımtıl xəzli kiçik cins yetkin itlər üçün qızılbalıqla hazırlanmış dənsiz tam rasiondur. Zəngin qızılbalıq zülalı və təbii balıq yağları gündəlik canlılığı dəstəkləyərək dəri və xəzin sağlamlığına qayğı göstərir.",
+    "RCE kompleksi xəzin qırmızı-qəhvəyi rəngini gücləndirərək təbii çalarları daha dolğun və parlaq edir. Omega-3 və Omega-6 sağlam dəri və ipək kimi tük üçün dəstək olur; soya, GMO və süni əlavələr olmadan."
+   ],
+   "feeding": "Qablaşdırma üzərindəki qidalanma cədvəlinə uyğun olaraq itin çəkisinə və aktivliyinə görə porsiyanı tənzimləyin və daim təmiz su təmin edin.",
+   "comp": "EU-da yüksək keyfiyyətli qızılbalıq zülalı və təbii inqrediyentlərdən hazırlanır."
+  },
+  "ru": {
+   "full": [
+    "Red Coat Adult — Лосось — беззерновой полнорацион с лососем для взрослых собак малых пород с коричневой/рыжей шерстью. Богатый белок лосося и натуральные рыбные жиры поддерживают ежедневную бодрость и заботятся о здоровье кожи и шерсти.",
+    "Комплекс RCE подчёркивает красно-коричневый окрас шерсти, делая естественные оттенки более насыщенными и яркими. Омега-3 и Омега-6 поддерживают здоровье кожи и шелковистость шерсти; без сои, ГМО и искусственных добавок."
+   ],
+   "feeding": "Кормите согласно таблице на упаковке, корректируя порцию с учётом веса и активности собаки, и всегда обеспечивайте доступ к свежей воде.",
+   "comp": "Произведён в ЕС из высококачественного белка лосося и натуральных ингредиентов."
+  },
+  "en": {
+   "full": [
+    "Red Coat Adult — Salmon is a grain-free complete diet with salmon for adult small-breed dogs with a brown or red coat. The rich salmon protein and natural fish oils support everyday vitality while caring for skin and coat health.",
+    "The RCE complex enhances the red-brown colour of the coat, making the natural shades richer and more vibrant. Omega-3 and Omega-6 support healthy skin and a silky coat; with no soy, no GMO and no artificial additives."
+   ],
+   "feeding": "Feed according to the table on the pack, adjusting the portion to your dog's weight and activity, and always keep fresh water available.",
+   "comp": "Made in the EU from high-quality salmon protein and natural ingredients."
+  }
+ },
+ "dogs||Veterinary Diet||Sensitive Skin & Stomach — Lamb": {
+  "az": {
+   "full": [
+    "Sensitive Skin & Stomach — Quzu, həssas dəri və həzm sistemi olan bütün cinslərdən yetkin itlər üçün xüsusi baytarlıq pəhriz qidasıdır. Asan həzm olunan quzu zülalı incə, ləzzətli mənbə olaraq həssas mədə üçün rahat və balanslı qidalanma təmin edir.",
+    "100% təmiz hindqozu yağı, Omega-3 və Omega-6 ilə zənginləşdirilmiş tərkib allergiya əlamətlərinin azalmasına kömək edir, sağlam dəri və parlaq tükü dəstəkləyir. Soya, GMO və süni rəng, dad və qoruyucu maddələr yoxdur."
+   ],
+   "feeding": "Qablaşdırma üzərindəki qidalanma cədvəlinə uyğun olaraq itin çəkisinə və aktivliyinə görə porsiyanı tənzimləyin və daim təmiz su təmin edin.",
+   "comp": "EU-da yüksək keyfiyyətli quzu zülalı, 100% təmiz hindqozu yağı və təbii inqrediyentlərdən hazırlanır."
+  },
+  "ru": {
+   "full": [
+    "Sensitive Skin & Stomach — Ягнёнок — специальный ветеринарный диетический корм для взрослых собак всех пород с чувствительной кожей и пищеварением. Легкоусвояемый белок ягнёнка служит деликатным, вкусным источником и обеспечивает комфортное, сбалансированное питание для чувствительного желудка.",
+    "Состав, обогащённый 100% чистым кокосовым маслом, Омега-3 и Омега-6, помогает снизить проявления аллергии, поддерживая здоровую кожу и блестящую шерсть. Без сои, ГМО, искусственных красителей, ароматизаторов и консервантов."
+   ],
+   "feeding": "Кормите согласно таблице на упаковке, корректируя порцию с учётом веса и активности собаки, и всегда обеспечивайте доступ к свежей воде.",
+   "comp": "Произведён в ЕС из высококачественного белка ягнёнка, 100% чистого кокосового масла и натуральных ингредиентов."
+  },
+  "en": {
+   "full": [
+    "Sensitive Skin & Stomach — Lamb is a special veterinary diet food for adult dogs of all breeds with sensitive skin and digestion. The easily digestible lamb protein serves as a gentle, flavourful source and provides comfortable, balanced nutrition for a sensitive stomach.",
+    "Enriched with 100% pure coconut oil, Omega-3 and Omega-6, the formula helps reduce allergy symptoms while supporting healthy skin and a shiny coat. With no soy, no GMO, and no artificial colours, flavours or preservatives."
+   ],
+   "feeding": "Feed according to the table on the pack, adjusting the portion to your dog's weight and activity, and always keep fresh water available.",
+   "comp": "Made in the EU from high-quality lamb protein, 100% pure coconut oil and natural ingredients."
+  }
  }
 };
