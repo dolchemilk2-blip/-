@@ -404,18 +404,37 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Табы брендов ---
   const VALID_BRANDS = ['np', 'araton', 'tpl', 'misoko'];
 
-  function activateBrand(brand, updateHash) {
+  function activateBrand(brand, updateHash, animate) {
     if (!VALID_BRANDS.includes(brand)) return;
+    const changed = currentBrand !== brand;
     currentBrand = brand;
+    document.body.setAttribute('data-brand', brand); // плавная смена тинта страницы
     document.querySelectorAll('.tab').forEach(t => {
       t.classList.toggle('is-active', t.getAttribute('data-brand') === brand);
     });
-    renderProducts(currentBrand, getLang());
+    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const grid = document.getElementById('productsGrid');
+    const nav = document.getElementById('catNav');
+    if (animate && changed && grid && !reduce) {
+      grid.classList.add('brand-leaving');
+      setTimeout(() => {
+        renderProducts(currentBrand, getLang());
+        grid.classList.remove('brand-leaving');
+        grid.classList.add('brand-entering');
+        if (nav) nav.classList.add('brand-entering');
+        setTimeout(() => {
+          grid.classList.remove('brand-entering');
+          if (nav) nav.classList.remove('brand-entering');
+        }, 560);
+      }, 240);
+    } else {
+      renderProducts(currentBrand, getLang());
+    }
     if (updateHash) history.replaceState(null, '', '#' + brand);
   }
 
   document.querySelectorAll('.tab').forEach(tab => {
-    tab.addEventListener('click', () => activateBrand(tab.getAttribute('data-brand'), true));
+    tab.addEventListener('click', () => activateBrand(tab.getAttribute('data-brand'), true, true));
   });
 
   // --- Переключатель «Все / Для кошек / Для собак» ---
@@ -435,8 +454,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const grid = document.getElementById('productsGrid');
   if (grid) {
     const hashBrand = location.hash.replace('#', '');
-    if (hashBrand) activateBrand(hashBrand, false);
-    window.addEventListener('hashchange', () => activateBrand(location.hash.replace('#', ''), false));
+    // Изначальный тинт страницы по текущему/якорному бренду (без анимации)
+    document.body.setAttribute('data-brand', VALID_BRANDS.includes(hashBrand) ? hashBrand : currentBrand);
+    if (hashBrand) activateBrand(hashBrand, false, false);
+    window.addEventListener('hashchange', () => activateBrand(location.hash.replace('#', ''), false, true));
 
     // Открытие карточки товара в модальном окне
     const openFromEvent = (e) => {
