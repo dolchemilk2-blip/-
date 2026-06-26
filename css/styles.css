@@ -16,7 +16,7 @@
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; overflow-x: clip; }
+html { scroll-behavior: smooth; overflow-x: clip; scrollbar-gutter: stable; }
 body {
   font-family: var(--font);
   color: var(--ink);
@@ -289,6 +289,15 @@ h1, h2, h3, h4 { font-family: var(--head); line-height: 1.2; font-weight: 700; }
   position: sticky; top: 84px; z-index: 50;
   background: rgba(255,255,255,.96); backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(31,42,36,.07); padding: 12px 0;
+  transition: transform .42s cubic-bezier(.4,0,.2,1), opacity .42s ease, border-color .7s ease;
+}
+/* При открытии товара «шторку»-панель плавно убираем вверх (закреплена, без рывка), при закрытии — возвращаем */
+body.modal-open .catalog-bar {
+  position: fixed; top: 84px; left: 0; right: 0;
+  transform: translateY(-140%); opacity: 0; pointer-events: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .catalog-bar { transition: none; }
 }
 .catalog-bar__inner { display: flex; align-items: center; justify-content: space-between; gap: 12px 24px; flex-wrap: wrap; }
 .catalog-bar .tabs { margin: 0; justify-content: flex-start; flex-wrap: wrap; gap: 8px; }
@@ -474,7 +483,7 @@ body[data-brand="misoko"] { --tint: #fdf5f9; --tint-soft: #fae6f0; --brand-accen
 
 /* Активная вкладка бренда красится в акцент бренда */
 .catalog-bar .tab.is-active { background: var(--brand-accent); border-color: var(--brand-accent); color: #fff; transition: background-color .4s ease, border-color .4s ease; }
-.catalog-bar { border-bottom: 1px solid rgba(var(--brand-accent-rgb), .18); transition: border-color .7s ease; }
+.catalog-bar { border-bottom-color: rgba(var(--brand-accent-rgb), .18); }
 .cat-chip:hover { border-color: var(--brand-accent); color: var(--brand-accent); }
 .product__more { color: var(--brand-accent); }
 
