@@ -492,9 +492,12 @@ body.modal-open { overflow: hidden; }
 /* Nature's Protection: фон страницы зеленоватый, но подложка карточек — нейтральная (без зелени) */
 body[data-brand="np"]     { --tint: #fcfdfb; --tint-soft: #f1f7ec; --brand-accent: #3a7d44; --brand-accent-rgb: 58,125,68;
   --card-bg: linear-gradient(150deg, #fbfcfd, #eef1f4); }
-body[data-brand="araton"] { --tint: #fdf9f0; --tint-soft: #f6ecd5; --brand-accent: #b3792b; --brand-accent-rgb: 179,121,43; }
-body[data-brand="tpl"]    { --tint: #f7f8fb; --tint-soft: #eceef3; --brand-accent: #6c7480; --brand-accent-rgb: 108,116,128; }
-body[data-brand="misoko"] { --tint: #fdf5f9; --tint-soft: #fae6f0; --brand-accent: #cf7397; --brand-accent-rgb: 207,115,151; }
+body[data-brand="araton"] { --tint: #fdf9f0; --tint-soft: #f6ecd5; --brand-accent: #b3792b; --brand-accent-rgb: 179,121,43;
+  --card-bg: linear-gradient(150deg, #fdf8ec, #f3e6cc); }
+body[data-brand="tpl"]    { --tint: #f7f8fb; --tint-soft: #eceef3; --brand-accent: #6c7480; --brand-accent-rgb: 108,116,128;
+  --card-bg: linear-gradient(150deg, #f8f9fb, #e8ebf0); }
+body[data-brand="misoko"] { --tint: #fdf5f9; --tint-soft: #fae6f0; --brand-accent: #cf7397; --brand-accent-rgb: 207,115,151;
+  --card-bg: linear-gradient(150deg, #fdf3f8, #f7dde9); }
 
 /* Активная вкладка бренда красится в акцент бренда */
 .catalog-bar .tab.is-active { background: var(--brand-accent); border-color: var(--brand-accent); color: #fff; transition: background-color .4s ease, border-color .4s ease; }
