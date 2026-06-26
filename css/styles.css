@@ -455,6 +455,25 @@ body.modal-open { overflow: hidden; }
   .pmodal__name { font-size: 22px; }
 }
 
+/* ===== Шторка перехода между страницами ===== */
+.page-curtain {
+  position: fixed; inset: 0; z-index: 9999; pointer-events: none;
+  background: linear-gradient(135deg, #3a7d44 0%, #2c6135 100%);
+  display: flex; align-items: center; justify-content: center;
+  transform: translateY(100%); will-change: transform;
+}
+.page-curtain__logo { width: 132px; height: auto; filter: brightness(0) invert(1); opacity: .95; }
+/* Вход на каталог: шторка стоит на экране и плавно уезжает вверх, открывая страницу */
+.page-curtain.is-cover { transform: translateY(0); animation: curtainReveal .72s cubic-bezier(.76,0,.24,1) .05s forwards; }
+.page-curtain.is-cover .page-curtain__logo { animation: curtainLogo .55s ease both; }
+/* Уход с главной: шторка наезжает снизу и закрывает экран перед переходом */
+.page-curtain.is-exit { pointer-events: all; animation: curtainCover .5s cubic-bezier(.76,0,.24,1) forwards; }
+.page-curtain.is-exit .page-curtain__logo { animation: curtainLogo .5s ease both; }
+@keyframes curtainCover  { from { transform: translateY(100%); } to { transform: translateY(0); } }
+@keyframes curtainReveal { from { transform: translateY(0); }    to { transform: translateY(-100%); } }
+@keyframes curtainLogo   { from { opacity: 0; transform: scale(.82); } to { opacity: .95; transform: scale(1); } }
+@media (prefers-reduced-motion: reduce) { .page-curtain { display: none !important; } }
+
 /* ===== Catalog teaser (home) ===== */
 .catalog-cta { background: var(--cream); }
 .catalog-cta__inner { display: grid; grid-template-columns: 1.2fr .8fr; gap: 50px; align-items: center; }

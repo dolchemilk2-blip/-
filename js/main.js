@@ -391,6 +391,30 @@ function initFloaties() {
   window.addEventListener('resize', () => { measure(); update(); });
 }
 
+// ===== Анимация перехода между страницами =====
+// На каталоге шторка раскрывается сама (CSS). Здесь — закрытие при уходе с главной.
+function initPageTransition() {
+  const curtain = document.getElementById('pageCurtain');
+  if (!curtain) return;
+  const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce) return;
+  document.querySelectorAll('a[href*="products.html"]').forEach(a => {
+    a.addEventListener('click', (e) => {
+      if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button) return;
+      let url;
+      try { url = new URL(a.href, location.href); } catch (_) { return; }
+      if (url.pathname === location.pathname) return; // та же страница — без перехода
+      e.preventDefault();
+      curtain.classList.remove('is-cover');
+      curtain.classList.add('is-exit');
+      let navigated = false;
+      const go = () => { if (navigated) return; navigated = true; window.location.href = a.href; };
+      curtain.addEventListener('animationend', go, { once: true });
+      setTimeout(go, 560); // запасной таймер
+    });
+  });
+}
+
 // ===== Инициализация =====
 document.addEventListener('DOMContentLoaded', () => {
   const lang = getLang();
@@ -568,6 +592,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Парящие фото товаров в фоне ---
   initFloaties();
+
+  // --- Анимация перехода между страницами (шторка) ---
+  initPageTransition();
 
   // --- Год в подвале ---
   document.getElementById('year').textContent = new Date().getFullYear();
