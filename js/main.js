@@ -392,10 +392,8 @@ function initFloaties() {
 }
 
 // ===== Анимация перехода между страницами =====
-// На каталоге шторка раскрывается сама (CSS). Здесь — закрытие при уходе с главной.
+// Каталог сам мягко проявляется (CSS, класс .page-enter). Здесь — плавное гашение при уходе на каталог.
 function initPageTransition() {
-  const curtain = document.getElementById('pageCurtain');
-  if (!curtain) return;
   const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (reduce) return;
   document.querySelectorAll('a[href*="products.html"]').forEach(a => {
@@ -405,12 +403,10 @@ function initPageTransition() {
       try { url = new URL(a.href, location.href); } catch (_) { return; }
       if (url.pathname === location.pathname) return; // та же страница — без перехода
       e.preventDefault();
-      curtain.classList.remove('is-cover');
-      curtain.classList.add('is-exit');
+      document.body.classList.add('page-leaving');
       let navigated = false;
       const go = () => { if (navigated) return; navigated = true; window.location.href = a.href; };
-      curtain.addEventListener('animationend', go, { once: true });
-      setTimeout(go, 560); // запасной таймер
+      setTimeout(go, 210); // переход после короткого затухания
     });
   });
 }
