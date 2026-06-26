@@ -177,6 +177,7 @@ function openProductModal(item, lang, key) {
       ${block('products.feeding', feeding)}
       ${tags ? `<div class="product__tags">${tags}</div>` : ''}
     </div>`;
+  modal.classList.remove('is-closing');
   modal.classList.add('is-open');
   modal.setAttribute('aria-hidden', 'false');
   document.body.classList.add('modal-open');
@@ -186,10 +187,20 @@ function openProductModal(item, lang, key) {
 
 function closeProductModal() {
   const modal = document.getElementById('productModal');
-  if (!modal) return;
-  modal.classList.remove('is-open');
-  modal.setAttribute('aria-hidden', 'true');
-  document.body.classList.remove('modal-open');
+  if (!modal || !modal.classList.contains('is-open')) return;
+  const finalize = () => {
+    modal.classList.remove('is-open', 'is-closing');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('modal-open');
+  };
+  const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce) { finalize(); return; }
+  const dlg = modal.querySelector('.pmodal__dialog');
+  modal.classList.add('is-closing');
+  let done = false;
+  const onEnd = () => { if (done) return; done = true; if (dlg) dlg.removeEventListener('animationend', onEnd); finalize(); };
+  if (dlg) dlg.addEventListener('animationend', onEnd);
+  setTimeout(onEnd, 340); // запасной таймер, если animationend не сработает
 }
 
 // Плавное появление карточек при прокрутке (без анимации при reduce-motion)

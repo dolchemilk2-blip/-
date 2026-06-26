@@ -325,7 +325,7 @@ h1, h2, h3, h4 { font-family: var(--head); line-height: 1.2; font-weight: 700; }
 .product:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
 .product__img {
   height: 220px; display: flex; align-items: center; justify-content: center;
-  background: linear-gradient(150deg, rgba(var(--brand-accent-rgb, 58,125,68), .06), rgba(var(--brand-accent-rgb, 58,125,68), .15));
+  background: var(--card-bg);
   transition: background .7s ease; padding: 16px;
 }
 .product__img img { max-height: 100%; max-width: 100%; width: auto; object-fit: contain; mix-blend-mode: multiply; }
@@ -382,14 +382,26 @@ h1, h2, h3, h4 { font-family: var(--head); line-height: 1.2; font-weight: 700; }
 body.modal-open { overflow: hidden; }
 .pmodal { position: fixed; inset: 0; z-index: 100; display: none; }
 .pmodal.is-open { display: block; }
-.pmodal__backdrop { position: absolute; inset: 0; background: rgba(20,30,22,.55); animation: pmFade .2s ease; }
+.pmodal__backdrop { position: absolute; inset: 0; background: rgba(20,30,22,.55); }
 .pmodal__dialog {
   position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
   width: min(900px, 94vw); max-height: 90vh; overflow-y: auto;
-  background: #fff; border-radius: 20px; box-shadow: var(--shadow-lg); animation: pmPop .25s ease;
+  background: #fff; border-radius: 20px; box-shadow: var(--shadow-lg); will-change: transform, opacity;
 }
+/* Открытие — зум с лёгким «отскоком» */
+.pmodal.is-open .pmodal__backdrop { animation: pmFade .28s ease both; }
+.pmodal.is-open .pmodal__dialog { animation: pmZoomIn .34s cubic-bezier(.34,1.46,.64,1) both; }
+/* Закрытие — плавный зум обратно */
+.pmodal.is-closing .pmodal__backdrop { animation: pmFadeOut .26s ease both; }
+.pmodal.is-closing .pmodal__dialog { animation: pmZoomOut .26s cubic-bezier(.4,0,.7,.3) both; }
 @keyframes pmFade { from { opacity: 0 } to { opacity: 1 } }
-@keyframes pmPop { from { opacity: 0; transform: translate(-50%,-46%) } to { opacity: 1; transform: translate(-50%,-50%) } }
+@keyframes pmFadeOut { from { opacity: 1 } to { opacity: 0 } }
+@keyframes pmZoomIn { from { opacity: 0; transform: translate(-50%,-50%) scale(.82); } to { opacity: 1; transform: translate(-50%,-50%) scale(1); } }
+@keyframes pmZoomOut { from { opacity: 1; transform: translate(-50%,-50%) scale(1); } to { opacity: 0; transform: translate(-50%,-50%) scale(.9); } }
+@media (prefers-reduced-motion: reduce) {
+  .pmodal.is-open .pmodal__dialog, .pmodal.is-closing .pmodal__dialog,
+  .pmodal.is-open .pmodal__backdrop, .pmodal.is-closing .pmodal__backdrop { animation: none; }
+}
 .pmodal__close {
   position: absolute; top: 12px; right: 14px; z-index: 2;
   width: 38px; height: 38px; border: none; border-radius: 50%;
@@ -399,7 +411,7 @@ body.modal-open { overflow: hidden; }
 .pmodal__close:hover { background: var(--cream); }
 .pmodal__body { display: grid; grid-template-columns: .9fr 1.1fr; }
 .pmodal__media {
-  position: relative; background: linear-gradient(150deg, rgba(var(--brand-accent-rgb, 58,125,68), .06), rgba(var(--brand-accent-rgb, 58,125,68), .15));
+  position: relative; background: var(--card-bg);
   display: flex; align-items: center; justify-content: center; padding: 30px; min-height: 320px;
   border-radius: 20px 0 0 20px;
 }
@@ -451,8 +463,11 @@ body.modal-open { overflow: hidden; }
 .section--top { padding-top: 56px; background-color: var(--tint, var(--white)); transition: background-color .7s ease; }
 
 /* ===== Тинт страницы по бренду + анимация переключения вкладок ===== */
-:root { --tint: var(--white); --tint-soft: #f3f8ef; --brand-accent: var(--green); --brand-accent-rgb: 58,125,68; }
-body[data-brand="np"]     { --tint: #fcfdfb; --tint-soft: #f1f7ec; --brand-accent: #3a7d44; --brand-accent-rgb: 58,125,68; }
+:root { --tint: var(--white); --tint-soft: #f3f8ef; --brand-accent: var(--green); --brand-accent-rgb: 58,125,68;
+  --card-bg: linear-gradient(150deg, rgba(var(--brand-accent-rgb), .06), rgba(var(--brand-accent-rgb), .15)); }
+/* Nature's Protection: фон страницы зеленоватый, но подложка карточек — нейтральная (без зелени) */
+body[data-brand="np"]     { --tint: #fcfdfb; --tint-soft: #f1f7ec; --brand-accent: #3a7d44; --brand-accent-rgb: 58,125,68;
+  --card-bg: linear-gradient(150deg, #fbfcfd, #eef1f4); }
 body[data-brand="araton"] { --tint: #fdf9f0; --tint-soft: #f6ecd5; --brand-accent: #b3792b; --brand-accent-rgb: 179,121,43; }
 body[data-brand="tpl"]    { --tint: #f7f8fb; --tint-soft: #eceef3; --brand-accent: #6c7480; --brand-accent-rgb: 108,116,128; }
 body[data-brand="misoko"] { --tint: #fdf5f9; --tint-soft: #fae6f0; --brand-accent: #cf7397; --brand-accent-rgb: 207,115,151; }
