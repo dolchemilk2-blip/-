@@ -269,6 +269,8 @@ function renderProducts(brand, lang) {
       const buckets = { white: [], red: [], dark: [], none: [] };
       g.items.forEach(it => { buckets[coatOf(it) || 'none'].push(it); });
       let inner = `<p class="coat-note">${dict['products.coatNote'] || ''}</p>`;
+      const LINE_ORDER = ['starter', 'junior', 'adult-small', 'all-life-stage'];
+      const LINE_KEY = { 'starter': 'line.starter', 'junior': 'line.junior', 'adult-small': 'line.adultSmall', 'all-life-stage': 'line.allLifeStage' };
       ['white', 'red', 'dark'].forEach(c => {
         if (!buckets[c].length) return;
         inner += `
@@ -278,8 +280,20 @@ function renderProducts(brand, lang) {
               <h4>${dict['coat.' + c + '.title'] || ''}</h4>
               <p>${dict['coat.' + c + '.desc'] || ''}</p>
             </div>
-          </div>
-          <div class="products">${buckets[c].map(it => mk(it, g.species)).join('')}</div>`;
+          </div>`;
+        // Если в группе есть подлинейки (Starter/Junior/Adult/All Life Stage) — делим по ним
+        if (buckets[c].some(it => it.line)) {
+          LINE_ORDER.forEach(ln => {
+            const items = buckets[c].filter(it => it.line === ln);
+            if (!items.length) return;
+            inner += `<h4 class="coat-subline coat-subline--${c}">${dict[LINE_KEY[ln]] || ''}</h4>
+              <div class="products">${items.map(it => mk(it, g.species)).join('')}</div>`;
+          });
+          const rest = buckets[c].filter(it => !it.line);
+          if (rest.length) inner += `<div class="products">${rest.map(it => mk(it, g.species)).join('')}</div>`;
+        } else {
+          inner += `<div class="products">${buckets[c].map(it => mk(it, g.species)).join('')}</div>`;
+        }
       });
       if (buckets.none.length) {
         inner += `<div class="products">${buckets.none.map(it => mk(it, g.species)).join('')}</div>`;

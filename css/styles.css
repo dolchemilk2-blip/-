@@ -381,6 +381,14 @@ body.modal-open .catalog-bar {
 .coat-insert__dot { flex: none; width: 16px; height: 16px; border-radius: 50%; background: var(--coat); margin-top: 3px; box-shadow: 0 0 0 4px var(--coat-ring); }
 .coat-insert__text h4 { font-size: 17px; color: var(--coat-ink); margin-bottom: 3px; font-family: var(--head); }
 .coat-insert__text p { font-size: 14px; color: var(--muted); }
+.coat-subline {
+  font-family: var(--head); font-size: 15px; font-weight: 700; color: var(--coat, var(--green-dark));
+  margin: 22px 0 12px; padding-left: 12px; border-left: 3px solid var(--coat, var(--green));
+  letter-spacing: .2px;
+}
+.coat-subline--white { --coat:#1f7fa0; }
+.coat-subline--red   { --coat:#c4622d; }
+.coat-subline--dark  { --coat:#3a3f4a; }
 .coat-insert--white { --coat:#1f7fa0; --coat-bg:#eef7fb; --coat-ring:#d6ecf4; --coat-ink:#155b73; }
 .coat-insert--red   { --coat:#c4622d; --coat-bg:#fcf2ea; --coat-ring:#f7e2d2; --coat-ink:#9c4a1d; }
 .coat-insert--dark  { --coat:#3a3f4a; --coat-bg:#f0f1f4; --coat-ring:#e0e3e9; --coat-ink:#2a2e37; }
