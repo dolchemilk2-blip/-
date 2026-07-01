@@ -279,11 +279,16 @@ function renderProducts(brand, lang) {
       MODAL_ITEMS.push(st.item);
       MODAL_KEYS.push(null);
       const nm = (st.item[lang] || st.item.ru).name;
+      const short = (st.short && (st.short[lang] || st.short.ru)) || '';
       return `
         <div class="tpl-bottle" data-pid="${id}" tabindex="0" role="button" style="--c:${st.color};--d:${st.step * 0.6}s" aria-label="STEP ${st.step} — ${nm}">
           <span class="tpl-bottle__num">${st.step}</span>
           <div class="tpl-bottle__img"><img src="${st.img}" alt="${nm}" loading="lazy" /></div>
-          <div class="tpl-bottle__label"><span class="tpl-bottle__step">STEP ${st.step}</span><span class="tpl-bottle__name">${nm}</span></div>
+          <div class="tpl-bottle__label">
+            <span class="tpl-bottle__step">STEP ${st.step}</span>
+            <span class="tpl-bottle__name">${nm}</span>
+            <span class="tpl-bottle__short">${short}</span>
+          </div>
         </div>`;
     }).join('');
     const badges = (sys.badges[lang] || sys.badges.ru).map(b => `<span>${b}</span>`).join('');

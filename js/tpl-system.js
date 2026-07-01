@@ -21,6 +21,7 @@ const TPL_SYSTEM = {
   steps: [
     {
       step: 1, color: "#5aa46a", img: "assets/products/tpl-pn-detox.webp",
+      short: { az: "Yuyur və dərindən təmizləyir — çirki, yağı və qoxunu aparır.", ru: "Моет и глубоко очищает — убирает грязь, жир и запах.", en: "Washes and deep-cleans — removes dirt, grease and odour." },
       item: {
         emoji: "🌿", img: "assets/products/tpl-pn-detox.webp",
         az: { cat: "Pure Nature · STEP 1", name: "Herbal Detox Shampoo",
@@ -54,6 +55,7 @@ const TPL_SYSTEM = {
     },
     {
       step: 2, color: "#4fa6b6", img: "assets/products/tpl-pn-sensitive.webp",
+      short: { az: "Dərini sakitləşdirir — qaşınma və qızartı azalır, nəmlik artır.", ru: "Успокаивает кожу — меньше зуда и покраснений, больше увлажнения.", en: "Calms the skin — less itching and redness, more moisture." },
       item: {
         emoji: "💧", img: "assets/products/tpl-pn-sensitive.webp",
         az: { cat: "Pure Nature · STEP 2", name: "Ultra Sensitive Shampoo",
@@ -87,6 +89,7 @@ const TPL_SYSTEM = {
     },
     {
       step: 3, color: "#4fa6b6", img: "assets/products/tpl-pn-sensitive-cond.webp",
+      short: { az: "Yumşaldır və nəmləndirir — tük itaətkar və parlaq olur.", ru: "Смягчает и увлажняет — шерсть послушная и блестящая.", en: "Softens and hydrates — a smooth, manageable, shiny coat." },
       item: {
         emoji: "✨", img: "assets/products/tpl-pn-sensitive-cond.webp",
         az: { cat: "Pure Nature · STEP 3", name: "Ultra Sensitive Conditioner",
