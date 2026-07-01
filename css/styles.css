@@ -469,6 +469,60 @@ body.page-leaving { opacity: 0; transition: opacity .2s ease; }
   body.page-leaving { opacity: 1; transition: none; }
 }
 
+/* ===== Tauro Pure Nature — витрина «стоящих» флаконов (Step 1·2·3) ===== */
+.tpl-system { margin: 4px 0 54px; }
+.tpl-system__head { text-align: center; max-width: 760px; margin: 0 auto; }
+.tpl-system__title { font-size: 28px; color: var(--ink); margin: 8px 0 12px; }
+.tpl-system__intro { color: var(--muted); font-size: 15.5px; line-height: 1.65; }
+.tpl-system__stage {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+  align-items: end; margin: 30px auto 6px; max-width: 880px; position: relative;
+}
+.tpl-bottle {
+  position: relative; display: flex; flex-direction: column; align-items: center;
+  padding-top: 48px; cursor: pointer; border-radius: 18px;
+}
+.tpl-bottle:focus-visible { outline: 2px solid var(--c); outline-offset: 4px; }
+.tpl-bottle__num {
+  position: absolute; top: 0; font-family: var(--head); font-weight: 800; font-size: 112px;
+  line-height: 1; color: var(--c); opacity: .14; z-index: 0; pointer-events: none; user-select: none;
+}
+.tpl-bottle__img {
+  position: relative; z-index: 1; height: 300px; display: flex; align-items: flex-end; justify-content: center;
+  animation: tplFloat 4.6s ease-in-out infinite; animation-delay: calc(var(--d, 0s) * -1);
+}
+.tpl-bottle__img::after {
+  content: ''; position: absolute; bottom: -12px; left: 50%; transform: translateX(-50%);
+  width: 66%; height: 18px; border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(31,42,36,.22), transparent 70%); z-index: -1; transition: .35s;
+}
+.tpl-bottle__img img { max-height: 300px; max-width: 100%; object-fit: contain; transition: transform .35s ease; filter: drop-shadow(0 12px 16px rgba(31,42,36,.12)); }
+.tpl-bottle:hover .tpl-bottle__img { animation-play-state: paused; }
+.tpl-bottle:hover .tpl-bottle__img img { transform: translateY(-12px) scale(1.05); }
+.tpl-bottle:hover .tpl-bottle__img::after { width: 74%; opacity: .8; }
+.tpl-bottle__label { text-align: center; margin-top: 18px; z-index: 1; }
+.tpl-bottle__step { display: block; font-family: var(--head); font-weight: 800; font-size: 12px; letter-spacing: 1px; color: var(--c); }
+.tpl-bottle__name { display: block; font-family: var(--head); font-weight: 600; font-size: 15px; color: var(--ink); margin-top: 3px; }
+@keyframes tplFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-14px); } }
+.tpl-system__badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 24px; }
+.tpl-system__badges span {
+  font-family: var(--head); font-weight: 600; font-size: 12.5px; color: var(--green-dark);
+  background: #fff; border: 1px solid rgba(31,42,36,.1); border-radius: 999px; padding: 7px 14px;
+}
+.tpl-system__note { text-align: center; color: var(--muted); font-size: 14px; max-width: 720px; margin: 16px auto 0; font-style: italic; }
+/* Список пунктов в секциях модалки (кому подходит / тип шерсти) */
+.pmodal__list { margin: 6px 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+.pmodal__list li { font-size: 13.5px; color: var(--green-dark); background: var(--cream); border-radius: 999px; padding: 5px 12px; }
+@media (max-width: 720px) {
+  .tpl-bottle__img { height: 190px; }
+  .tpl-bottle__img img { max-height: 190px; }
+  .tpl-bottle__num { font-size: 64px; }
+  .tpl-bottle { padding-top: 28px; }
+  .tpl-bottle__name { font-size: 12.5px; }
+  .tpl-system__title { font-size: 22px; }
+}
+@media (prefers-reduced-motion: reduce) { .tpl-bottle__img { animation: none; } }
+
 /* ===== Catalog teaser (home) ===== */
 .catalog-cta { background: var(--cream); }
 .catalog-cta__inner { display: grid; grid-template-columns: 1.2fr .8fr; gap: 50px; align-items: center; }

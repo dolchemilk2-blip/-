@@ -167,12 +167,20 @@ function openProductModal(item, lang, key) {
     const rows = (Array.isArray(val) ? val : String(val).split('\n')).filter(Boolean).map(p => `<p>${p}</p>`).join('');
     return `<div class="pmodal__section"><h4>${dict[labelKey] || ''}</h4>${rows}</div>`;
   };
+  // Структурированные секции (напр. шаги Tauro: кому подходит / тип шерсти / описание / применение)
+  const sectionsHtml = (t.sections || []).map(s => {
+    const inner = s.list
+      ? `<ul class="pmodal__list">${s.list.map(x => `<li>${x}</li>`).join('')}</ul>`
+      : `<p>${s.text || ''}</p>`;
+    return `<div class="pmodal__section"><h4>${s.title}</h4>${inner}</div>`;
+  }).join('');
   body.innerHTML = `
     <div class="pmodal__media">${ribbon}${media}</div>
     <div class="pmodal__info">
       <span class="product__cat">${t.cat}</span>
       <h3 class="pmodal__name" id="pmodalName">${t.name}</h3>
       <div class="pmodal__desc">${descHtml}</div>
+      ${sectionsHtml}
       ${block('products.composition', comp)}
       ${block('products.feeding', feeding)}
       ${tags ? `<div class="product__tags">${tags}</div>` : ''}
@@ -262,7 +270,36 @@ function renderProducts(brand, lang) {
     MODAL_KEYS.push(descKeyFor(brand, species, it));
     return productCard(it, lang, id);
   };
-  wrap.innerHTML = banner + groups.map((g, i) => {
+  // Витрина «стоящих» флаконов Tauro Pure Nature (Step 1·2·3) — только на вкладке Tauro
+  let showcase = '';
+  if (brand === 'tpl' && typeof TPL_SYSTEM !== 'undefined') {
+    const sys = TPL_SYSTEM;
+    const bottles = sys.steps.map(st => {
+      const id = MODAL_ITEMS.length;
+      MODAL_ITEMS.push(st.item);
+      MODAL_KEYS.push(null);
+      const nm = (st.item[lang] || st.item.ru).name;
+      return `
+        <div class="tpl-bottle" data-pid="${id}" tabindex="0" role="button" style="--c:${st.color};--d:${st.step * 0.6}s" aria-label="STEP ${st.step} — ${nm}">
+          <span class="tpl-bottle__num">${st.step}</span>
+          <div class="tpl-bottle__img"><img src="${st.img}" alt="${nm}" loading="lazy" /></div>
+          <div class="tpl-bottle__label"><span class="tpl-bottle__step">STEP ${st.step}</span><span class="tpl-bottle__name">${nm}</span></div>
+        </div>`;
+    }).join('');
+    const badges = (sys.badges[lang] || sys.badges.ru).map(b => `<span>${b}</span>`).join('');
+    showcase = `
+      <section class="tpl-system">
+        <div class="tpl-system__head">
+          <span class="section__tag">${(sys.tag[lang] || sys.tag.ru)}</span>
+          <h2 class="tpl-system__title">${(sys.title[lang] || sys.title.ru)}</h2>
+          <p class="tpl-system__intro">${(sys.intro[lang] || sys.intro.ru)}</p>
+        </div>
+        <div class="tpl-system__stage">${bottles}</div>
+        <div class="tpl-system__badges">${badges}</div>
+        <p class="tpl-system__note">${(sys.note[lang] || sys.note.ru)}</p>
+      </section>`;
+  }
+  wrap.innerHTML = banner + showcase + groups.map((g, i) => {
     const groupName = (g.group && (g.group[lang] || g.group.ru)) || '';
     // Группа Superior Care: распределяем по цвету шерсти и добавляем вставки.
     if (g.coat) {
@@ -510,7 +547,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Открытие карточки товара в модальном окне
     const openFromEvent = (e) => {
-      const card = e.target.closest('.product[data-pid]');
+      const card = e.target.closest('[data-pid]');
       if (!card) return;
       const pid = +card.getAttribute('data-pid');
       const item = MODAL_ITEMS[pid];
@@ -518,7 +555,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     grid.addEventListener('click', openFromEvent);
     grid.addEventListener('keydown', (e) => {
-      if ((e.key === 'Enter' || e.key === ' ') && e.target.closest('.product[data-pid]')) {
+      if ((e.key === 'Enter' || e.key === ' ') && e.target.closest('[data-pid]')) {
         e.preventDefault();
         openFromEvent(e);
       }
