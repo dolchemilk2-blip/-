@@ -98,181 +98,1299 @@ const BRANDS_EXTRA = {
 
   "tpl": [
     {
-      group: { az: "Ultra Natural Care", ru: "Ultra Natural Care", en: "Ultra Natural Care" },
-      species: "both",
-      items: [
-        { img: "assets/products/tpl-un-deep.webp",
-          az: { cat: "Şampun · Step 1", name: "Deep Clean Shampoo", desc: "Bütün tük tipləri üçün dərin təmizləyən şampun; dəri və tükdən artıq yağ, çirk və toz hissəciklərini təmizləyir. Adaçayı, pantenol və qliserinlə, 94% təbii.", tags: ["Şampun", "Dərin təmizləmə"] },
-          ru: { cat: "Шампунь · Step 1", name: "Deep Clean Shampoo", desc: "Глубоко очищающий шампунь для всех типов шерсти; удаляет излишки жира, грязь и частицы пыли с кожи и шерсти. С шалфеем, пантенолом и глицерином, 94% натуральных компонентов.", tags: ["Шампунь", "Глубокое очищение"] },
-          en: { cat: "Shampoo · Step 1", name: "Deep Clean Shampoo", desc: "Deep cleansing shampoo for all coat types; wicks away excess oil, dirt and dust particles from skin and coat. With sage, panthenol and glycerin, 94% natural.", tags: ["Shampoo", "Deep clean"] } },
-        { img: "assets/products/tpl-un-repair-sh.webp",
-          az: { cat: "Şampun · Step 2", name: "Repair & Nourish Shampoo", desc: "Bütün tük tipləri üçün bərpa edən və qidalandıran şampun; tükün quruluşunu bərpa edir, susuzlaşmış dərini və zədələnmiş tükü canlandırır. 95% təbii.", tags: ["Şampun", "Bərpa"] },
-          ru: { cat: "Шампунь · Step 2", name: "Repair & Nourish Shampoo", desc: "Восстанавливающий и питающий шампунь для всех типов шерсти; восстанавливает структуру волоса, оживляет обезвоженную кожу и повреждённую шерсть. 95% натуральных компонентов.", tags: ["Шампунь", "Восстановление"] },
-          en: { cat: "Shampoo · Step 2", name: "Repair & Nourish Shampoo", desc: "Repairing and nourishing shampoo for all coat types; repairs hair structure, revitalizes dehydrated skin and damaged coat. 95% natural.", tags: ["Shampoo", "Repair"] } },
-        { img: "assets/products/tpl-un-repair-mask.webp",
-          az: { cat: "Maska · Step 3", name: "Repair & Nourish Mask", desc: "Bütün tük tipləri üçün bərpaedici maska; şi yağı və hidrolizə olunmuş ipəklə tükü dərindən bərpa edir. 97% təbii.", tags: ["Maska", "Bərpa"] },
-          ru: { cat: "Маска · Step 3", name: "Repair & Nourish Mask", desc: "Восстанавливающая маска для всех типов шерсти; глубоко восстанавливает с маслом ши и гидролизованным шёлком. 97% натуральных компонентов.", tags: ["Маска", "Восстановление"] },
-          en: { cat: "Mask · Step 3", name: "Repair & Nourish Mask", desc: "Repairing mask for all coat types; deeply restores with shea butter and hydrolyzed silk. 97% natural.", tags: ["Mask", "Repair"] } },
-        { img: "assets/products/tpl-un-volume.webp",
-          az: { cat: "Şampun", name: "Volume Boost Shampoo", desc: "Hər növ tükə heyrətamiz həcm verən şampun; buğda proteini və qliserinlə. 90% təbii.", tags: ["Şampun", "Həcm"] },
-          ru: { cat: "Шампунь", name: "Volume Boost Shampoo", desc: "Шампунь, придающий потрясающий объём любому типу шерсти; с пшеничным протеином и глицерином. 90% натуральных компонентов.", tags: ["Шампунь", "Объём"] },
-          en: { cat: "Shampoo", name: "Volume Boost Shampoo", desc: "Shampoo that adds astonishing volume to any kind of coat; with wheat protein and glycerin. 90% natural.", tags: ["Shampoo", "Volume"] } },
-        { img: "assets/products/tpl-un-whitening.webp",
-          az: { cat: "Şampun · Ağ tük", name: "Whitening Shampoo", desc: "Ağ və açıq tüklər üçün ağardıcı şampun; açıq və ağ tükü canlandırır və nəmləndirir. 92% təbii.", tags: ["Şampun", "Ağ tük"] },
-          ru: { cat: "Шампунь · Белая шерсть", name: "Whitening Shampoo", desc: "Отбеливающий шампунь для белой и светлой шерсти; интенсивно осветляет и увлажняет светлую и белую шерсть. 92% натуральных компонентов.", tags: ["Шампунь", "Белая шерсть"] },
-          en: { cat: "Shampoo · White coat", name: "Whitening Shampoo", desc: "Whitening shampoo for white and light coats; intensely brightens and hydrates light and white coats. 92% natural.", tags: ["Shampoo", "White coat"] } },
-        { img: "assets/products/tpl-un-hydrate-mask.webp",
-          az: { cat: "Maska · Açıq tük", name: "Intense Hydrate Mask", desc: "Ağ və açıq tüklər üçün intensiv nəmləndirici maska; quru dərinin və açıq tükün təbii nəm balansını bərpa edir. 97% təbii.", tags: ["Maska", "Nəmləndirmə"] },
-          ru: { cat: "Маска · Светлая шерсть", name: "Intense Hydrate Mask", desc: "Интенсивно увлажняющая маска для белой и светлой шерсти; восстанавливает естественный баланс влаги сухой кожи и светлой шерсти. 97% натуральных компонентов.", tags: ["Маска", "Увлажнение"] },
-          en: { cat: "Mask · Light coat", name: "Intense Hydrate Mask", desc: "Intensive hydrating mask for white and light coats; restores the natural moisture balance of dry skin and light coat. 97% natural.", tags: ["Mask", "Hydration"] } },
-        { img: "assets/products/tpl-un-hydrate-sh.webp",
-          az: { cat: "Şampun · Açıq tük", name: "Intense Hydrate Shampoo", desc: "Ağ və açıq tüklər üçün intensiv nəmləndirici şampun; quru dərini və açıq tükü nəmləndirir və təbii nəm balansını bərpa edir. Badam, üreya və bal ekstraktı ilə, 96% təbii.", tags: ["Şampun", "Nəmləndirmə"] },
-          ru: { cat: "Шампунь · Светлая шерсть", name: "Intense Hydrate Shampoo", desc: "Интенсивно увлажняющий шампунь для белой и светлой шерсти; увлажняет сухую кожу и светлую шерсть, восстанавливает естественный баланс влаги. С миндалём, мочевиной и экстрактом мёда, 96% натуральных компонентов.", tags: ["Шампунь", "Увлажнение"] },
-          en: { cat: "Shampoo · Light coat", name: "Intense Hydrate Shampoo", desc: "Intensively hydrating shampoo for white and light coats; hydrates dry skin and light coat and restores the natural moisture balance. With almond, urea and honey extract, 96% natural.", tags: ["Shampoo", "Hydration"] } },
-        { img: "assets/products/tpl-un-wc-deep.webp",
-          az: { cat: "Şampun · Ağ tük", name: "White Coat Deep Clean Shampoo", desc: "Ağ və açıq tüklər üçün dərin təmizləyən şampun; sapı ağardan effekt verir, çirk və ləkələri təmizləyir. Bütün tük tipləri üçün.", tags: ["Şampun", "Ağ tük"] },
-          ru: { cat: "Шампунь · Белая шерсть", name: "White Coat Deep Clean Shampoo", desc: "Глубоко очищающий шампунь для белой и светлой шерсти; придаёт осветляющий эффект, удаляет грязь и пятна. Для всех типов шерсти.", tags: ["Шампунь", "Белая шерсть"] },
-          en: { cat: "Shampoo · White coat", name: "White Coat Deep Clean Shampoo", desc: "Deep cleansing shampoo for white and light coats; gives a brightening effect, removes dirt and stains. For all coat types.", tags: ["Shampoo", "White coat"] } },
-        { img: "assets/products/tpl-un-detangling.webp",
-          az: { cat: "Kondisioner · Step 3", name: "Detangling Leave-in Conditioner", desc: "Bütün tük tipləri üçün yuyulmayan dolaşma açan kondisioner; keratin və günəbaxan ekstraktı ilə tükü asan daranan və nəmli saxlayır. 97% təbii.", tags: ["Kondisioner", "Dolaşma açan"] },
-          ru: { cat: "Кондиционер · Step 3", name: "Detangling Leave-in Conditioner", desc: "Несмываемый кондиционер для всех типов шерсти; с кератином и экстрактом подсолнечника облегчает расчёсывание и удерживает влагу. 97% натуральных компонентов.", tags: ["Кондиционер", "Распутывание"] },
-          en: { cat: "Conditioner · Step 3", name: "Detangling Leave-in Conditioner", desc: "Leave-in conditioner for all coat types; with keratin and sunflower seed extract it acts as a detangler and moisture-retaining product for easy combing. 97% natural.", tags: ["Conditioner", "Detangling"] } },
-        { img: "assets/products/tpl-un-volume-leavein.webp",
-          az: { cat: "Kondisioner · Step 3", name: "Volume Boost Leave-in Conditioner", desc: "Bütün tük tipləri üçün yuyulmayan həcm verən kondisioner; buğda proteini və pantenol ilə hər tük tipinə heyrətamiz sıxlıq verir. 97% təbii.", tags: ["Kondisioner", "Həcm"] },
-          ru: { cat: "Кондиционер · Step 3", name: "Volume Boost Leave-in Conditioner", desc: "Несмываемый кондиционер для объёма для всех типов шерсти; с пшеничным протеином и пантенолом придаёт потрясающую густоту любой шерсти. 97% натуральных компонентов.", tags: ["Кондиционер", "Объём"] },
-          en: { cat: "Conditioner · Step 3", name: "Volume Boost Leave-in Conditioner", desc: "Leave-in volume conditioner for all coat types; with wheat protein and panthenol it adds astonishing density to any kind of coat. 97% natural.", tags: ["Conditioner", "Volume"] } },
-        { img: "assets/products/tpl-un-puremist.webp",
-          az: { cat: "Sprey · 6in1", name: "Pure Mist 6in1", desc: "Gündəlik qulluq üçün 6-i-1 çoxfunksiyalı sprey; tükü, pəncələri, gözləri və qulaqları təzələyir, balalar üçün də uyğundur. Bütün tük tipləri üçün.", tags: ["Sprey", "6in1", "Gündəlik"] },
-          ru: { cat: "Спрей · 6в1", name: "Pure Mist 6in1", desc: "Многофункциональный спрей 6в1 для ежедневного ухода; освежает шерсть, лапы, глаза и уши, подходит и для щенков и котят. Для всех типов шерсти.", tags: ["Спрей", "6в1", "Ежедневно"] },
-          en: { cat: "Spray · 6in1", name: "Pure Mist 6in1", desc: "6-in-1 multi-functional spray for daily pet care; refreshes coat, paws, eyes and ears, suitable for growing pets too. For all coat types.", tags: ["Spray", "6in1", "Daily"] } }
+      "group": {
+        "az": "Volume Boost — həcm",
+        "ru": "Volume Boost — объём",
+        "en": "Volume Boost — volume"
+      },
+      "species": "both",
+      "items": [
+        {
+          "img": "assets/products/tpl-un-volume.webp",
+          "az": {
+            "cat": "Şampun",
+            "name": "Volume Boost Shampoo",
+            "desc": "Hər növ tükə heyrətamiz həcm verən şampun; buğda proteini və qliserinlə. 90% təbii.",
+            "tags": [
+              "Şampun",
+              "Həcm"
+            ]
+          },
+          "ru": {
+            "cat": "Шампунь",
+            "name": "Volume Boost Shampoo",
+            "desc": "Шампунь, придающий потрясающий объём любому типу шерсти; с пшеничным протеином и глицерином. 90% натуральных компонентов.",
+            "tags": [
+              "Шампунь",
+              "Объём"
+            ]
+          },
+          "en": {
+            "cat": "Shampoo",
+            "name": "Volume Boost Shampoo",
+            "desc": "Shampoo that adds astonishing volume to any kind of coat; with wheat protein and glycerin. 90% natural.",
+            "tags": [
+              "Shampoo",
+              "Volume"
+            ]
+          }
+        },
+        {
+          "img": "assets/products/tpl-un-volume-leavein.webp",
+          "az": {
+            "cat": "Kondisioner · Step 3",
+            "name": "Volume Boost Leave-in Conditioner",
+            "desc": "Bütün tük tipləri üçün yuyulmayan həcm verən kondisioner; buğda proteini və pantenol ilə hər tük tipinə heyrətamiz sıxlıq verir. 97% təbii.",
+            "tags": [
+              "Kondisioner",
+              "Həcm"
+            ]
+          },
+          "ru": {
+            "cat": "Кондиционер · Step 3",
+            "name": "Volume Boost Leave-in Conditioner",
+            "desc": "Несмываемый кондиционер для объёма для всех типов шерсти; с пшеничным протеином и пантенолом придаёт потрясающую густоту любой шерсти. 97% натуральных компонентов.",
+            "tags": [
+              "Кондиционер",
+              "Объём"
+            ]
+          },
+          "en": {
+            "cat": "Conditioner · Step 3",
+            "name": "Volume Boost Leave-in Conditioner",
+            "desc": "Leave-in volume conditioner for all coat types; with wheat protein and panthenol it adds astonishing density to any kind of coat. 97% natural.",
+            "tags": [
+              "Conditioner",
+              "Volume"
+            ]
+          }
+        }
       ]
     },
     {
-      group: { az: "Pure Nature", ru: "Pure Nature", en: "Pure Nature" },
-      species: "both",
-      items: [
-        { img: "assets/products/tpl-pn-5in1.webp",
-          az: { cat: "Şampun", name: "5in1 Shampoo", desc: "Nəmləndirilmiş və güclü tük üçün efir yağı əsaslı universal 5-i-1 şampun; silikon, SLS, paraben və mineral yağsız.", tags: ["5in1", "Efir yağı"] },
-          ru: { cat: "Шампунь", name: "5in1 Shampoo", desc: "Универсальный шампунь 5в1 на эфирных маслах для увлажнённой и крепкой шерсти; без силиконов, SLS, парабенов и минеральных масел.", tags: ["5в1", "Эфирные масла"] },
-          en: { cat: "Shampoo", name: "5in1 Shampoo", desc: "Universal 5-in-1 essential-oil shampoo for moisturized and strong hair; no silicones, SLS, parabens or mineral oils.", tags: ["5in1", "Essential oils"] } },
-        { img: "assets/products/tpl-pn-puppy.webp", baby: true,
-          az: { cat: "Şampun", name: "Puppy & Kitten Shampoo", desc: "Balalar üçün incə efir yağı əsaslı şampun; həssas qulluq üçün, silikon, SLS, paraben və mineral yağsız.", tags: ["Puppy", "Kitten"] },
-          ru: { cat: "Шампунь", name: "Puppy & Kitten Shampoo", desc: "Деликатный шампунь на эфирных маслах для щенков и котят; для бережного ухода, без силиконов, SLS, парабенов и минеральных масел.", tags: ["Puppy", "Kitten"] },
-          en: { cat: "Shampoo", name: "Puppy & Kitten Shampoo", desc: "Delicate essential-oil shampoo for puppies and kittens; for gentle care, no silicones, SLS, parabens or mineral oils.", tags: ["Puppy", "Kitten"] } },
-        { img: "assets/products/tpl-pn-furgrowth.webp",
-          az: { cat: "Şampun", name: "Fur Growth Shampoo", desc: "Tükün sıxlığı və yenidən böyüməsi üçün efir yağı əsaslı şampun.", tags: ["Tük böyüməsi"] },
-          ru: { cat: "Шампунь", name: "Fur Growth Shampoo", desc: "Шампунь на эфирных маслах для густоты и роста шерсти.", tags: ["Рост шерсти"] },
-          en: { cat: "Shampoo", name: "Fur Growth Shampoo", desc: "Essential-oil shampoo for coat density and regrowth.", tags: ["Fur growth"] } },
-        { img: "assets/products/tpl-pn-magicplex.webp",
-          az: { cat: "Şampun", name: "Magic-Plex Shampoo", desc: "Tükü ani canlandıran efir yağı əsaslı bərpaedici şampun.", tags: ["Bərpa"] },
-          ru: { cat: "Шампунь", name: "Magic-Plex Shampoo", desc: "Восстанавливающий шампунь на эфирных маслах для мгновенного оживления шерсти.", tags: ["Восстановление"] },
-          en: { cat: "Shampoo", name: "Magic-Plex Shampoo", desc: "Repairing essential-oil shampoo for instant revitalization.", tags: ["Repair"] } },
-        { img: "assets/products/tpl-pn-pawbalm.webp",
-          az: { cat: "Balzam", name: "Paw & Nose Balm", desc: "Pəncə və burun üçün nəmləndirici balzam; şirin badam yağı, hindqozu və sidr ağacı ilə. Pure Nature.", tags: ["Pəncə", "Burun", "Nəmləndirmə"] },
-          ru: { cat: "Бальзам", name: "Paw & Nose Balm", desc: "Увлажняющий бальзам для лап и носа; со сладким миндальным маслом, кокосом и кедром. Pure Nature.", tags: ["Лапы", "Нос", "Увлажнение"] },
-          en: { cat: "Balm", name: "Paw & Nose Balm", desc: "Hydrating balm for paws and nose; with sweet almond oil, coconut and cedarwood. Pure Nature.", tags: ["Paw", "Nose", "Hydration"] } },
-        { img: "assets/products/tpl-pn-pawbalm-repair.webp",
-          az: { cat: "Balzam", name: "Paw Balm — Repairs & Protects", desc: "Pəncələri bərpa edən və qoruyan balzam; şirin badam yağı, aloe və lavanda ilə. Pure Nature.", tags: ["Pəncə", "Bərpa"] },
-          ru: { cat: "Бальзам", name: "Paw Balm — Repairs & Protects", desc: "Бальзам для лап, который восстанавливает и защищает; со сладким миндальным маслом, алоэ и лавандой. Pure Nature.", tags: ["Лапы", "Защита"] },
-          en: { cat: "Balm", name: "Paw Balm — Repairs & Protects", desc: "Paw balm that repairs and protects; with sweet almond oil, aloe and lavender. Pure Nature.", tags: ["Paw", "Repair"] } },
-        { img: "assets/products/tpl-pn-pawbalm-nourish.webp",
-          az: { cat: "Balzam", name: "Paw Balm — Nourishes & Restores", desc: "Pəncələri qidalandıran və bərpa edən balzam; aloe, çətənə yağı və may chang ilə. Pure Nature.", tags: ["Pəncə", "Qidalandırma"] },
-          ru: { cat: "Бальзам", name: "Paw Balm — Nourishes & Restores", desc: "Бальзам для лап, который питает и восстанавливает; с алоэ, конопляным маслом и may chang. Pure Nature.", tags: ["Лапы", "Питание"] },
-          en: { cat: "Balm", name: "Paw Balm — Nourishes & Restores", desc: "Paw balm that nourishes and restores; with aloe, hemp oil and may chang. Pure Nature.", tags: ["Paw", "Nourish"] } },
-        { img: "assets/products/tpl-pn-5in1-cond.webp",
-          az: { cat: "Kondisioner", name: "5in1 Conditioner", desc: "Nəmləndirilmiş və güclü tük üçün efir yağı əsaslı universal 5-i-1 kondisioner; silikon, SLS, paraben və mineral yağsız.", tags: ["5in1", "Efir yağı"] },
-          ru: { cat: "Кондиционер", name: "5in1 Conditioner", desc: "Универсальный кондиционер 5в1 на эфирных маслах для увлажнённой и крепкой шерсти; без силиконов, SLS, парабенов и минеральных масел.", tags: ["5в1", "Эфирные масла"] },
-          en: { cat: "Conditioner", name: "5in1 Conditioner", desc: "Universal 5-in-1 essential-oil conditioner for moisturized and strong hair; no silicones, SLS, parabens or mineral oils.", tags: ["5in1", "Essential oils"] } },
-        { img: "assets/products/tpl-pn-puppy-cond.webp", baby: true,
-          az: { cat: "Kondisioner", name: "Puppy & Kitten Conditioner", desc: "Balalar üçün incə efir yağı əsaslı kondisioner; həssas qulluq üçün, silikon, SLS, paraben və mineral yağsız.", tags: ["Puppy", "Kitten"] },
-          ru: { cat: "Кондиционер", name: "Puppy & Kitten Conditioner", desc: "Деликатный кондиционер на эфирных маслах для щенков и котят; для бережного ухода, без силиконов, SLS, парабенов и минеральных масел.", tags: ["Puppy", "Kitten"] },
-          en: { cat: "Conditioner", name: "Puppy & Kitten Conditioner", desc: "Delicate essential-oil conditioner for puppies and kittens; for gentle care, no silicones, SLS, parabens or mineral oils.", tags: ["Puppy", "Kitten"] } },
-        { img: "assets/products/tpl-pn-furgrowth-cond.webp",
-          az: { cat: "Kondisioner", name: "Fur Growth Conditioner", desc: "Tükün sıxlığı və yenidən böyüməsi üçün efir yağı əsaslı kondisioner.", tags: ["Tük böyüməsi"] },
-          ru: { cat: "Кондиционер", name: "Fur Growth Conditioner", desc: "Кондиционер на эфирных маслах для густоты и роста шерсти.", tags: ["Рост шерсти"] },
-          en: { cat: "Conditioner", name: "Fur Growth Conditioner", desc: "Essential-oil conditioner for coat density and regrowth.", tags: ["Fur growth"] } },
-        { img: "assets/products/tpl-pn-furgrowth-leavein.webp",
-          az: { cat: "Kondisioner · Yuyulmayan", name: "Fur Growth Leave-in Conditioner", desc: "Tükün sıxlığı və böyüməsi üçün efir yağı əsaslı yuyulmayan kondisioner; gün ərzində qoruyur və nəmləndirir. 250 ml.", tags: ["Tük böyüməsi", "Yuyulmayan"] },
-          ru: { cat: "Кондиционер · Несмываемый", name: "Fur Growth Leave-in Conditioner", desc: "Несмываемый кондиционер на эфирных маслах для густоты и роста шерсти; защищает и увлажняет в течение дня. 250 мл.", tags: ["Рост шерсти", "Несмываемый"] },
-          en: { cat: "Conditioner · Leave-in", name: "Fur Growth Leave-in Conditioner", desc: "Leave-in essential-oil conditioner for coat density and regrowth; protects and moisturizes throughout the day. 250 ml.", tags: ["Fur growth", "Leave-in"] } },
-        { img: "assets/products/tpl-pn-magicplex-cond.webp",
-          az: { cat: "Kondisioner", name: "Magic-Plex Conditioner", desc: "Tükü ani canlandıran efir yağı əsaslı bərpaedici kondisioner.", tags: ["Bərpa"] },
-          ru: { cat: "Кондиционер", name: "Magic-Plex Conditioner", desc: "Восстанавливающий кондиционер на эфирных маслах для мгновенного оживления шерсти.", tags: ["Восстановление"] },
-          en: { cat: "Conditioner", name: "Magic-Plex Conditioner", desc: "Repairing essential-oil conditioner for instant revitalization.", tags: ["Repair"] } },
-        { img: "assets/products/tpl-pn-stainless.webp",
-          az: { cat: "Maska · 3in1", name: "Stainless Look", desc: "Pişik və itlərdə qəhvəyi göz yaşı ləkələrinə qarşı 3-i-1 gil qoruyucu maska; kaolin və MZG ilə, təbii və təhlükəsiz. 50 ml.", tags: ["Göz yaşı ləkələri", "Gil maska"] },
-          ru: { cat: "Маска · 3в1", name: "Stainless Look", desc: "Глиняная защитная маска 3в1 против коричневых слёзных пятен у кошек и собак; с каолином и MZG, натуральная и безопасная. 50 мл.", tags: ["Слёзные пятна", "Глиняная маска"] },
-          en: { cat: "Mask · 3in1", name: "Stainless Look", desc: "3-in-1 clay shield mask against brown tear stains for dogs and cats; with kaolin and MZG, natural and safe. 50 ml.", tags: ["Tear stains", "Clay mask"] } }
+      "group": {
+        "az": "Keçələşməyə qarşı vasitə",
+        "ru": "Средство от колтунов",
+        "en": "Anti-mat & detangling"
+      },
+      "species": "both",
+      "items": [
+        {
+          "img": "assets/products/tpl-un-detangling.webp",
+          "az": {
+            "cat": "Kondisioner · Keçələşməyə qarşı",
+            "name": "Detangling Leave-in Conditioner",
+            "desc": "Keçələşməyə (dolaşıq tüklərə) qarşı vasitə — bütün tük tipləri üçün yuyulmayan kondisioner; keratin və günəbaxan ekstraktı ilə tükü açır, daranmanı asanlaşdırır və nəmi saxlayır. 97% təbii.",
+            "tags": [
+              "Keçələşməyə qarşı",
+              "Yuyulmayan"
+            ]
+          },
+          "ru": {
+            "cat": "Кондиционер · От колтунов",
+            "name": "Detangling Leave-in Conditioner",
+            "desc": "Средство от колтунов — несмываемый кондиционер для всех типов шерсти; с кератином и экстрактом подсолнечника распутывает шерсть, облегчает расчёсывание и удерживает влагу. 97% натуральных компонентов.",
+            "tags": [
+              "От колтунов",
+              "Несмываемый"
+            ]
+          },
+          "en": {
+            "cat": "Conditioner · Anti-mat",
+            "name": "Detangling Leave-in Conditioner",
+            "desc": "Anti-mat detangler — leave-in conditioner for all coat types; with keratin and sunflower seed extract it detangles the coat, eases combing and retains moisture. 97% natural.",
+            "tags": [
+              "Anti-mat",
+              "Leave-in"
+            ]
+          }
+        }
       ]
     },
     {
-      group: { az: "Qulluq aksesuarları", ru: "Аксессуары для груминга", en: "Grooming accessories" },
-      species: "both",
-      items: [
-        { img: "assets/products/tpl-acc-scissors.webp",
-          az: { cat: "Aksesuar", name: "Claw Scissors", desc: "Pişik və balaca heyvanlar üçün dırnaq qayçısı; ağac saplı, dəqiq kəsim.", tags: ["Dırnaq", "Qayçı"] },
-          ru: { cat: "Аксессуар", name: "Claw Scissors", desc: "Когтерез-ножницы для кошек и мелких животных; деревянные ручки, аккуратный срез.", tags: ["Когти", "Ножницы"] },
-          en: { cat: "Accessory", name: "Claw Scissors", desc: "Claw scissors for cats and small pets; wooden handles, precise cut.", tags: ["Claws", "Scissors"] } },
-        { img: "assets/products/tpl-acc-slicker.webp",
-          az: { cat: "Aksesuar", name: "Slicker Brush", desc: "Tükü daramaq və ölü tükü çıxarmaq üçün puxoderka (slicker) fırçası.", tags: ["Fırça", "Daraq"] },
-          ru: { cat: "Аксессуар", name: "Slicker Brush", desc: "Пуходёрка (slicker) для расчёсывания и удаления отмершей шерсти.", tags: ["Щётка", "Расчёсывание"] },
-          en: { cat: "Accessory", name: "Slicker Brush", desc: "Slicker brush for detangling and removing loose, dead hair.", tags: ["Brush", "Grooming"] } },
-        { img: "assets/products/tpl-acc-towel.webp",
-          az: { cat: "Aksesuar", name: "Microfiber Towel", desc: "Ultra-hopdurucu mikrofiber dəsmal; çimdikdən sonra tez qurutma üçün, bütün tük tipləri. Ölçülər 60×90 / 80×120 sm.", tags: ["Dəsmal", "Mikrofiber"] },
-          ru: { cat: "Аксессуар", name: "Microfiber Towel", desc: "Ультравпитывающее полотенце из микрофибры; для быстрой сушки после купания, для всех типов шерсти. Размеры 60×90 / 80×120 см.", tags: ["Полотенце", "Микрофибра"] },
-          en: { cat: "Accessory", name: "Microfiber Towel", desc: "Ultra-absorbent microfiber towel; for quick drying after bathing, for all coat types. Sizes 60×90 / 80×120 cm.", tags: ["Towel", "Microfiber"] } },
-        { img: "assets/products/tpl-acc-towel-ultra.webp",
-          az: { cat: "Aksesuar", name: "Ultra-Absorbent Microfiber Towel", desc: "Premium ultra-hopdurucu mikrofiber dəsmal; xüsusilə yumşaq və yüksək hopdurma qabiliyyəti, səyahət üçün rahat. 80×160 sm-ə qədər.", tags: ["Dəsmal", "Premium"] },
-          ru: { cat: "Аксессуар", name: "Ultra-Absorbent Microfiber Towel", desc: "Премиальное ультравпитывающее полотенце из микрофибры; особенно мягкое, с высокой впитываемостью, удобно в поездках. До 80×160 см.", tags: ["Полотенце", "Премиум"] },
-          en: { cat: "Accessory", name: "Ultra-Absorbent Microfiber Towel", desc: "Premium ultra-absorbent microfiber towel; exceptionally soft with superior absorption, travel-friendly. Up to 80×160 cm.", tags: ["Towel", "Premium"] } },
-        { img: "assets/products/tpl-acc-towel-cool.webp",
-          az: { cat: "Aksesuar", name: "Drying & Cooling Towel", desc: "Quruducu və sərinləşdirici PVA dəsmal; isti havada sərinlədir, yumşaq və tez hopdurur, təkrar istifadə olunur. 64×43 sm, müxtəlif rənglər.", tags: ["Dəsmal", "Sərinləşdirici"] },
-          ru: { cat: "Аксессуар", name: "Drying & Cooling Towel", desc: "Сушащее и охлаждающее PVA-полотенце; охлаждает в жару, мягкое и быстро впитывает, многоразовое. 64×43 см, разные цвета.", tags: ["Полотенце", "Охлаждение"] },
-          en: { cat: "Accessory", name: "Drying & Cooling Towel", desc: "Drying and cooling PVA towel; cools in hot weather, soft, fast-absorbing and reusable. 64×43 cm, several colours.", tags: ["Towel", "Cooling"] } },
-        { img: "assets/products/tpl-acc-clipper.webp",
-          az: { cat: "Alət", name: "Pro Hair Clipper", desc: "Peşəkar simsiz tük maşını; məcburi hava soyutma sistemi, Turbo rejimi və LCD ekran. Bütün tük tipləri üçün.", tags: ["Maşın", "Peşəkar"] },
-          ru: { cat: "Инструмент", name: "Pro Hair Clipper", desc: "Профессиональная беспроводная машинка для стрижки; система воздушного охлаждения, режим Turbo и LCD-дисплей. Для всех типов шерсти.", tags: ["Машинка", "Профессиональная"] },
-          en: { cat: "Tool", name: "Pro Hair Clipper", desc: "Professional cordless hair clipper; forced-air cooling system, Turbo mode and LCD display. For all coat types.", tags: ["Clipper", "Professional"] } },
-        { img: "assets/products/tpl-acc-trimmer.webp",
-          az: { cat: "Alət", name: "Cordless Trimmer", desc: "Simsiz dəqiq trimmer; pəncə, üz və həssas nahiyələrin səliqəli kəsimi üçün, sakit və yüngül.", tags: ["Trimmer", "Pəncə"] },
-          ru: { cat: "Инструмент", name: "Cordless Trimmer", desc: "Беспроводной триммер для точной стрижки; для аккуратной стрижки лап, морды и чувствительных зон, тихий и лёгкий.", tags: ["Триммер", "Лапы"] },
-          en: { cat: "Tool", name: "Cordless Trimmer", desc: "Cordless precision trimmer; for neat trimming of paws, face and sensitive areas, quiet and lightweight.", tags: ["Trimmer", "Paws"] } },
-        { img: "assets/products/tpl-acc-vacuum.webp",
-          az: { cat: "Alət", name: "Grooming Vacuum Kit", desc: "Peşəkar qulluq vakuum dəsti; tük maşını və nasadkaları ilə tükü kəsərkən eyni anda toplayır — təmiz qulluq üçün.", tags: ["Vakuum", "Qulluq"] },
-          ru: { cat: "Инструмент", name: "Grooming Vacuum Kit", desc: "Профессиональный груминговый вакуумный набор; с машинкой и насадками собирает шерсть прямо во время стрижки — для чистого ухода.", tags: ["Вакуум", "Груминг"] },
-          en: { cat: "Tool", name: "Grooming Vacuum Kit", desc: "Professional grooming vacuum kit; with clipper and attachments it collects hair while trimming — for clean grooming.", tags: ["Vacuum", "Grooming"] } },
-        { img: "assets/products/tpl-acc-blade.webp",
-          az: { cat: "Ehtiyat hissə", name: "Clipper Blade", desc: "Tauro Pro Line tük maşınları üçün əvəzedici kəsici baş; iti və davamlı.", tags: ["Bıçaq", "Ehtiyat"] },
-          ru: { cat: "Запчасть", name: "Clipper Blade", desc: "Сменный режущий блок для машинок Tauro Pro Line; острый и долговечный.", tags: ["Лезвие", "Запчасть"] },
-          en: { cat: "Spare part", name: "Clipper Blade", desc: "Replacement cutting blade for Tauro Pro Line clippers; sharp and durable.", tags: ["Blade", "Spare"] } },
-        { img: "assets/products/tpl-acc-woodbrush.webp",
-          az: { cat: "Aksesuar", name: "Wooden Pin Brush", desc: "Ağac saplı pin fırça (Almaniyada istehsal); gündəlik daramaq və tükə parıltı vermək üçün.", tags: ["Fırça", "Ağac"] },
-          ru: { cat: "Аксессуар", name: "Wooden Pin Brush", desc: "Деревянная щётка с пинами (сделано в Германии); для ежедневного расчёсывания и придания блеска шерсти.", tags: ["Щётка", "Дерево"] },
-          en: { cat: "Accessory", name: "Wooden Pin Brush", desc: "Wooden pin brush (made in Germany); for daily brushing and adding shine to the coat.", tags: ["Brush", "Wood"] } },
-        { img: "assets/products/tpl-acc-comb.webp",
-          az: { cat: "Aksesuar", name: "Metal Grooming Comb", desc: "Paslanmayan polad daraq; seyrək və sıx dişlər, dolaşıqlığı açmaq və tükü səliqəyə salmaq üçün. Düz və əyri variantlarda.", tags: ["Daraq", "Metal"] },
-          ru: { cat: "Аксессуар", name: "Metal Grooming Comb", desc: "Металлический гребень из нержавеющей стали; редкие и частые зубья, для распутывания и укладки шерсти. Прямой и изогнутый варианты.", tags: ["Гребень", "Металл"] },
-          en: { cat: "Accessory", name: "Metal Grooming Comb", desc: "Stainless-steel grooming comb; coarse and fine teeth for detangling and finishing the coat. Straight and curved versions.", tags: ["Comb", "Metal"] } },
-        { img: "assets/products/tpl-acc-clawclip.webp",
-          az: { cat: "Aksesuar", name: "Claw Clipper", desc: "Ağac saplı dırnaq kəskisi; pişik və itlərin dırnaqlarının təhlükəsiz və dəqiq kəsimi üçün.", tags: ["Dırnaq", "Kəski"] },
-          ru: { cat: "Аксессуар", name: "Claw Clipper", desc: "Когтерез с деревянными ручками; для безопасной и точной стрижки когтей кошек и собак.", tags: ["Когти", "Когтерез"] },
-          en: { cat: "Accessory", name: "Claw Clipper", desc: "Claw clipper with wooden handles; for safe and precise trimming of cats' and dogs' claws.", tags: ["Claws", "Clipper"] } },
-        { img: "assets/products/tpl-acc-toothbrush.webp",
-          az: { cat: "Diş qulluğu", name: "Toothbrush for Pets", desc: "Pişik və itlər üçün ikitərəfli diş fırçası (Pure Nature); gündəlik ağız qulluğu üçün.", tags: ["Diş", "Fırça"] },
-          ru: { cat: "Уход за зубами", name: "Toothbrush for Pets", desc: "Двусторонняя зубная щётка для кошек и собак (Pure Nature); для ежедневного ухода за полостью рта.", tags: ["Зубы", "Щётка"] },
-          en: { cat: "Dental care", name: "Toothbrush for Pets", desc: "Double-ended toothbrush for cats and dogs (Pure Nature); for daily oral care.", tags: ["Teeth", "Brush"] } },
-        { img: "assets/products/tpl-acc-fingerbrush.webp",
-          az: { cat: "Diş qulluğu", name: "Finger Brushes Set", desc: "Pişik və itlər üçün barmaq diş fırçaları dəsti (Pure Nature); diş ərpini yumşaq təmizləyir, çətin nahiyələrə çatır.", tags: ["Diş", "Barmaq fırça"] },
-          ru: { cat: "Уход за зубами", name: "Finger Brushes Set", desc: "Набор пальчиковых зубных щёток для кошек и собак (Pure Nature); мягко удаляет налёт и достаёт до труднодоступных зон.", tags: ["Зубы", "Пальчиковая щётка"] },
-          en: { cat: "Dental care", name: "Finger Brushes Set", desc: "Finger toothbrush set for cats and dogs (Pure Nature); gently removes plaque and reaches hard-to-reach areas.", tags: ["Teeth", "Finger brush"] } },
-        { img: "assets/products/tpl-acc-toothpaste.webp",
-          az: { cat: "Diş qulluğu", name: "Toothpaste — Kaolin & Nano Silver", desc: "Pişik və itlər üçün antibakterial diş pastası; kaolin gili və nano gümüş ilə, ağız sağlamlığını qoruyur. 100 ml. Pure Nature.", tags: ["Diş", "Antibakterial"] },
-          ru: { cat: "Уход за зубами", name: "Toothpaste — Kaolin & Nano Silver", desc: "Антибактериальная зубная паста для кошек и собак; с каолиновой глиной и наносеребром, поддерживает здоровье полости рта. 100 мл. Pure Nature.", tags: ["Зубы", "Антибактериальная"] },
-          en: { cat: "Dental care", name: "Toothpaste — Kaolin & Nano Silver", desc: "Antibacterial toothpaste for cats and dogs; with kaolin clay and nano silver, supports oral health. 100 ml. Pure Nature.", tags: ["Teeth", "Antibacterial"] } },
-        { img: "assets/products/tpl-acc-toothpaste2.webp",
-          az: { cat: "Diş qulluğu", name: "Toothpaste 2in1 — Kaolin & Green Tea", desc: "Pişik və itlər üçün 2-i-1 diş pastası; kaolin gili və yaşıl çay ekstraktı ilə, ərpi təmizləyir və nəfəsi təravətləndirir. 100 ml. Pure Nature.", tags: ["Diş", "Yaşıl çay"] },
-          ru: { cat: "Уход за зубами", name: "Toothpaste 2in1 — Kaolin & Green Tea", desc: "Зубная паста 2в1 для кошек и собак; с каолиновой глиной и экстрактом зелёного чая, удаляет налёт и освежает дыхание. 100 мл. Pure Nature.", tags: ["Зубы", "Зелёный чай"] },
-          en: { cat: "Dental care", name: "Toothpaste 2in1 — Kaolin & Green Tea", desc: "2-in-1 toothpaste for cats and dogs; with kaolin clay and green tea extract, removes plaque and freshens breath. 100 ml. Pure Nature.", tags: ["Teeth", "Green tea"] } }
+      "group": {
+        "az": "Balalar üçün — Puppy & Kitten",
+        "ru": "Для щенков и котят — Puppy & Kitten",
+        "en": "For puppies & kittens — Puppy & Kitten"
+      },
+      "species": "both",
+      "items": [
+        {
+          "img": "assets/products/tpl-pn-puppy.webp",
+          "baby": true,
+          "az": {
+            "cat": "Şampun",
+            "name": "Puppy & Kitten Shampoo",
+            "desc": "Balalar üçün incə efir yağı əsaslı şampun; həssas qulluq üçün, silikon, SLS, paraben və mineral yağsız.",
+            "tags": [
+              "Puppy",
+              "Kitten"
+            ]
+          },
+          "ru": {
+            "cat": "Шампунь",
+            "name": "Puppy & Kitten Shampoo",
+            "desc": "Деликатный шампунь на эфирных маслах для щенков и котят; для бережного ухода, без силиконов, SLS, парабенов и минеральных масел.",
+            "tags": [
+              "Puppy",
+              "Kitten"
+            ]
+          },
+          "en": {
+            "cat": "Shampoo",
+            "name": "Puppy & Kitten Shampoo",
+            "desc": "Delicate essential-oil shampoo for puppies and kittens; for gentle care, no silicones, SLS, parabens or mineral oils.",
+            "tags": [
+              "Puppy",
+              "Kitten"
+            ]
+          }
+        },
+        {
+          "img": "assets/products/tpl-pn-puppy-cond.webp",
+          "baby": true,
+          "az": {
+            "cat": "Kondisioner",
+            "name": "Puppy & Kitten Conditioner",
+            "desc": "Balalar üçün incə efir yağı əsaslı kondisioner; həssas qulluq üçün, silikon, SLS, paraben və mineral yağsız.",
+            "tags": [
+              "Puppy",
+              "Kitten"
+            ]
+          },
+          "ru": {
+            "cat": "Кондиционер",
+            "name": "Puppy & Kitten Conditioner",
+            "desc": "Деликатный кондиционер на эфирных маслах для щенков и котят; для бережного ухода, без силиконов, SLS, парабенов и минеральных масел.",
+            "tags": [
+              "Puppy",
+              "Kitten"
+            ]
+          },
+          "en": {
+            "cat": "Conditioner",
+            "name": "Puppy & Kitten Conditioner",
+            "desc": "Delicate essential-oil conditioner for puppies and kittens; for gentle care, no silicones, SLS, parabens or mineral oils.",
+            "tags": [
+              "Puppy",
+              "Kitten"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "group": {
+        "az": "Pəncə və burun balzamları",
+        "ru": "Бальзамы для лап и носа",
+        "en": "Paw & nose balms"
+      },
+      "species": "both",
+      "items": [
+        {
+          "img": "assets/products/tpl-pn-pawbalm.webp",
+          "az": {
+            "cat": "Balzam",
+            "name": "Paw & Nose Balm",
+            "desc": "Pəncə və burun üçün nəmləndirici balzam; şirin badam yağı, hindqozu və sidr ağacı ilə. Pure Nature.",
+            "tags": [
+              "Pəncə",
+              "Burun",
+              "Nəmləndirmə"
+            ]
+          },
+          "ru": {
+            "cat": "Бальзам",
+            "name": "Paw & Nose Balm",
+            "desc": "Увлажняющий бальзам для лап и носа; со сладким миндальным маслом, кокосом и кедром. Pure Nature.",
+            "tags": [
+              "Лапы",
+              "Нос",
+              "Увлажнение"
+            ]
+          },
+          "en": {
+            "cat": "Balm",
+            "name": "Paw & Nose Balm",
+            "desc": "Hydrating balm for paws and nose; with sweet almond oil, coconut and cedarwood. Pure Nature.",
+            "tags": [
+              "Paw",
+              "Nose",
+              "Hydration"
+            ]
+          }
+        },
+        {
+          "img": "assets/products/tpl-pn-pawbalm-repair.webp",
+          "az": {
+            "cat": "Balzam",
+            "name": "Paw Balm — Repairs & Protects",
+            "desc": "Pəncələri bərpa edən və qoruyan balzam; şirin badam yağı, aloe və lavanda ilə. Pure Nature.",
+            "tags": [
+              "Pəncə",
+              "Bərpa"
+            ]
+          },
+          "ru": {
+            "cat": "Бальзам",
+            "name": "Paw Balm — Repairs & Protects",
+            "desc": "Бальзам для лап, который восстанавливает и защищает; со сладким миндальным маслом, алоэ и лавандой. Pure Nature.",
+            "tags": [
+              "Лапы",
+              "Защита"
+            ]
+          },
+          "en": {
+            "cat": "Balm",
+            "name": "Paw Balm — Repairs & Protects",
+            "desc": "Paw balm that repairs and protects; with sweet almond oil, aloe and lavender. Pure Nature.",
+            "tags": [
+              "Paw",
+              "Repair"
+            ]
+          }
+        },
+        {
+          "img": "assets/products/tpl-pn-pawbalm-nourish.webp",
+          "az": {
+            "cat": "Balzam",
+            "name": "Paw Balm — Nourishes & Restores",
+            "desc": "Pəncələri qidalandıran və bərpa edən balzam; aloe, çətənə yağı və may chang ilə. Pure Nature.",
+            "tags": [
+              "Pəncə",
+              "Qidalandırma"
+            ]
+          },
+          "ru": {
+            "cat": "Бальзам",
+            "name": "Paw Balm — Nourishes & Restores",
+            "desc": "Бальзам для лап, который питает и восстанавливает; с алоэ, конопляным маслом и may chang. Pure Nature.",
+            "tags": [
+              "Лапы",
+              "Питание"
+            ]
+          },
+          "en": {
+            "cat": "Balm",
+            "name": "Paw Balm — Nourishes & Restores",
+            "desc": "Paw balm that nourishes and restores; with aloe, hemp oil and may chang. Pure Nature.",
+            "tags": [
+              "Paw",
+              "Nourish"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "group": {
+        "az": "Gündəlik qulluq",
+        "ru": "Ежедневный уход",
+        "en": "Daily care"
+      },
+      "species": "both",
+      "items": [
+        {
+          "img": "assets/products/tpl-un-puremist.webp",
+          "az": {
+            "cat": "Sprey · 6in1",
+            "name": "Pure Mist 6in1",
+            "desc": "Gündəlik qulluq üçün 6-i-1 çoxfunksiyalı sprey; tükü, pəncələri, gözləri və qulaqları təzələyir, balalar üçün də uyğundur. Bütün tük tipləri üçün.",
+            "tags": [
+              "Sprey",
+              "6in1",
+              "Gündəlik"
+            ]
+          },
+          "ru": {
+            "cat": "Спрей · 6в1",
+            "name": "Pure Mist 6in1",
+            "desc": "Многофункциональный спрей 6в1 для ежедневного ухода; освежает шерсть, лапы, глаза и уши, подходит и для щенков и котят. Для всех типов шерсти.",
+            "tags": [
+              "Спрей",
+              "6в1",
+              "Ежедневно"
+            ]
+          },
+          "en": {
+            "cat": "Spray · 6in1",
+            "name": "Pure Mist 6in1",
+            "desc": "6-in-1 multi-functional spray for daily pet care; refreshes coat, paws, eyes and ears, suitable for growing pets too. For all coat types.",
+            "tags": [
+              "Spray",
+              "6in1",
+              "Daily"
+            ]
+          }
+        },
+        {
+          "img": "assets/products/tpl-pn-stainless.webp",
+          "az": {
+            "cat": "Maska · 3in1",
+            "name": "Stainless Look",
+            "desc": "Pişik və itlərdə qəhvəyi göz yaşı ləkələrinə qarşı 3-i-1 gil qoruyucu maska; kaolin və MZG ilə, təbii və təhlükəsiz. 50 ml.",
+            "tags": [
+              "Göz yaşı ləkələri",
+              "Gil maska"
+            ]
+          },
+          "ru": {
+            "cat": "Маска · 3в1",
+            "name": "Stainless Look",
+            "desc": "Глиняная защитная маска 3в1 против коричневых слёзных пятен у кошек и собак; с каолином и MZG, натуральная и безопасная. 50 мл.",
+            "tags": [
+              "Слёзные пятна",
+              "Глиняная маска"
+            ]
+          },
+          "en": {
+            "cat": "Mask · 3in1",
+            "name": "Stainless Look",
+            "desc": "3-in-1 clay shield mask against brown tear stains for dogs and cats; with kaolin and MZG, natural and safe. 50 ml.",
+            "tags": [
+              "Tear stains",
+              "Clay mask"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "group": {
+        "az": "Dəsmallar, daraqlar və diş qulluğu",
+        "ru": "Полотенца, расчёски и уход за зубами",
+        "en": "Towels, brushes & dental care"
+      },
+      "species": "both",
+      "items": [
+        {
+          "img": "assets/products/tpl-acc-towel.webp",
+          "az": {
+            "cat": "Aksesuar",
+            "name": "Microfiber Towel",
+            "desc": "Ultra-hopdurucu mikrofiber dəsmal; çimdikdən sonra tez qurutma üçün, bütün tük tipləri. Ölçülər 60×90 / 80×120 sm.",
+            "tags": [
+              "Dəsmal",
+              "Mikrofiber"
+            ]
+          },
+          "ru": {
+            "cat": "Аксессуар",
+            "name": "Microfiber Towel",
+            "desc": "Ультравпитывающее полотенце из микрофибры; для быстрой сушки после купания, для всех типов шерсти. Размеры 60×90 / 80×120 см.",
+            "tags": [
+              "Полотенце",
+              "Микрофибра"
+            ]
+          },
+          "en": {
+            "cat": "Accessory",
+            "name": "Microfiber Towel",
+            "desc": "Ultra-absorbent microfiber towel; for quick drying after bathing, for all coat types. Sizes 60×90 / 80×120 cm.",
+            "tags": [
+              "Towel",
+              "Microfiber"
+            ]
+          }
+        },
+        {
+          "img": "assets/products/tpl-acc-towel-ultra.webp",
+          "az": {
+            "cat": "Aksesuar",
+            "name": "Ultra-Absorbent Microfiber Towel",
+            "desc": "Premium ultra-hopdurucu mikrofiber dəsmal; xüsusilə yumşaq və yüksək hopdurma qabiliyyəti, səyahət üçün rahat. 80×160 sm-ə qədər.",
+            "tags": [
+              "Dəsmal",
+              "Premium"
+            ]
+          },
+          "ru": {
+            "cat": "Аксессуар",
+            "name": "Ultra-Absorbent Microfiber Towel",
+            "desc": "Премиальное ультравпитывающее полотенце из микрофибры; особенно мягкое, с высокой впитываемостью, удобно в поездках. До 80×160 см.",
+            "tags": [
+              "Полотенце",
+              "Премиум"
+            ]
+          },
+          "en": {
+            "cat": "Accessory",
+            "name": "Ultra-Absorbent Microfiber Towel",
+            "desc": "Premium ultra-absorbent microfiber towel; exceptionally soft with superior absorption, travel-friendly. Up to 80×160 cm.",
+            "tags": [
+              "Towel",
+              "Premium"
+            ]
+          }
+        },
+        {
+          "img": "assets/products/tpl-acc-towel-cool.webp",
+          "az": {
+            "cat": "Aksesuar",
+            "name": "Drying & Cooling Towel",
+            "desc": "Quruducu və sərinləşdirici PVA dəsmal; isti havada sərinlədir, yumşaq və tez hopdurur, təkrar istifadə olunur. 64×43 sm, müxtəlif rənglər.",
+            "tags": [
+              "Dəsmal",
+              "Sərinləşdirici"
+            ]
+          },
+          "ru": {
+            "cat": "Аксессуар",
+            "name": "Drying & Cooling Towel",
+            "desc": "Сушащее и охлаждающее PVA-полотенце; охлаждает в жару, мягкое и быстро впитывает, многоразовое. 64×43 см, разные цвета.",
+            "tags": [
+              "Полотенце",
+              "Охлаждение"
+            ]
+          },
+          "en": {
+            "cat": "Accessory",
+            "name": "Drying & Cooling Towel",
+            "desc": "Drying and cooling PVA towel; cools in hot weather, soft, fast-absorbing and reusable. 64×43 cm, several colours.",
+            "tags": [
+              "Towel",
+              "Cooling"
+            ]
+          }
+        },
+        {
+          "img": "assets/products/tpl-acc-slicker.webp",
+          "az": {
+            "cat": "Aksesuar",
+            "name": "Slicker Brush",
+            "desc": "Tükü daramaq və ölü tükü çıxarmaq üçün puxoderka (slicker) fırçası.",
+            "tags": [
+              "Fırça",
+              "Daraq"
+            ]
+          },
+          "ru": {
+            "cat": "Аксессуар",
+            "name": "Slicker Brush",
+            "desc": "Пуходёрка (slicker) для расчёсывания и удаления отмершей шерсти.",
+            "tags": [
+              "Щётка",
+              "Расчёсывание"
+            ]
+          },
+          "en": {
+            "cat": "Accessory",
+            "name": "Slicker Brush",
+            "desc": "Slicker brush for detangling and removing loose, dead hair.",
+            "tags": [
+              "Brush",
+              "Grooming"
+            ]
+          }
+        },
+        {
+          "img": "assets/products/tpl-acc-woodbrush.webp",
+          "az": {
+            "cat": "Aksesuar",
+            "name": "Wooden Pin Brush",
+            "desc": "Ağac saplı pin fırça (Almaniyada istehsal); gündəlik daramaq və tükə parıltı vermək üçün.",
+            "tags": [
+              "Fırça",
+              "Ağac"
+            ]
+          },
+          "ru": {
+            "cat": "Аксессуар",
+            "name": "Wooden Pin Brush",
+            "desc": "Деревянная щётка с пинами (сделано в Германии); для ежедневного расчёсывания и придания блеска шерсти.",
+            "tags": [
+              "Щётка",
+              "Дерево"
+            ]
+          },
+          "en": {
+            "cat": "Accessory",
+            "name": "Wooden Pin Brush",
+            "desc": "Wooden pin brush (made in Germany); for daily brushing and adding shine to the coat.",
+            "tags": [
+              "Brush",
+              "Wood"
+            ]
+          }
+        },
+        {
+          "img": "assets/products/tpl-acc-comb.webp",
+          "az": {
+            "cat": "Aksesuar",
+            "name": "Metal Grooming Comb",
+            "desc": "Paslanmayan polad daraq; seyrək və sıx dişlər, dolaşıqlığı açmaq və tükü səliqəyə salmaq üçün. Düz və əyri variantlarda.",
+            "tags": [
+              "Daraq",
+              "Metal"
+            ]
+          },
+          "ru": {
+            "cat": "Аксессуар",
+            "name": "Metal Grooming Comb",
+            "desc": "Металлический гребень из нержавеющей стали; редкие и частые зубья, для распутывания и укладки шерсти. Прямой и изогнутый варианты.",
+            "tags": [
+              "Гребень",
+              "Металл"
+            ]
+          },
+          "en": {
+            "cat": "Accessory",
+            "name": "Metal Grooming Comb",
+            "desc": "Stainless-steel grooming comb; coarse and fine teeth for detangling and finishing the coat. Straight and curved versions.",
+            "tags": [
+              "Comb",
+              "Metal"
+            ]
+          }
+        },
+        {
+          "img": "assets/products/tpl-acc-toothbrush.webp",
+          "az": {
+            "cat": "Diş qulluğu",
+            "name": "Toothbrush for Pets",
+            "desc": "Pişik və itlər üçün ikitərəfli diş fırçası (Pure Nature); gündəlik ağız qulluğu üçün.",
+            "tags": [
+              "Diş",
+              "Fırça"
+            ]
+          },
+          "ru": {
+            "cat": "Уход за зубами",
+            "name": "Toothbrush for Pets",
+            "desc": "Двусторонняя зубная щётка для кошек и собак (Pure Nature); для ежедневного ухода за полостью рта.",
+            "tags": [
+              "Зубы",
+              "Щётка"
+            ]
+          },
+          "en": {
+            "cat": "Dental care",
+            "name": "Toothbrush for Pets",
+            "desc": "Double-ended toothbrush for cats and dogs (Pure Nature); for daily oral care.",
+            "tags": [
+              "Teeth",
+              "Brush"
+            ]
+          }
+        },
+        {
+          "img": "assets/products/tpl-acc-fingerbrush.webp",
+          "az": {
+            "cat": "Diş qulluğu",
+            "name": "Finger Brushes Set",
+            "desc": "Pişik və itlər üçün barmaq diş fırçaları dəsti (Pure Nature); diş ərpini yumşaq təmizləyir, çətin nahiyələrə çatır.",
+            "tags": [
+              "Diş",
+              "Barmaq fırça"
+            ]
+          },
+          "ru": {
+            "cat": "Уход за зубами",
+            "name": "Finger Brushes Set",
+            "desc": "Набор пальчиковых зубных щёток для кошек и собак (Pure Nature); мягко удаляет налёт и достаёт до труднодоступных зон.",
+            "tags": [
+              "Зубы",
+              "Пальчиковая щётка"
+            ]
+          },
+          "en": {
+            "cat": "Dental care",
+            "name": "Finger Brushes Set",
+            "desc": "Finger toothbrush set for cats and dogs (Pure Nature); gently removes plaque and reaches hard-to-reach areas.",
+            "tags": [
+              "Teeth",
+              "Finger brush"
+            ]
+          }
+        },
+        {
+          "img": "assets/products/tpl-acc-toothpaste.webp",
+          "az": {
+            "cat": "Diş qulluğu",
+            "name": "Toothpaste — Kaolin & Nano Silver",
+            "desc": "Pişik və itlər üçün antibakterial diş pastası; kaolin gili və nano gümüş ilə, ağız sağlamlığını qoruyur. 100 ml. Pure Nature.",
+            "tags": [
+              "Diş",
+              "Antibakterial"
+            ]
+          },
+          "ru": {
+            "cat": "Уход за зубами",
+            "name": "Toothpaste — Kaolin & Nano Silver",
+            "desc": "Антибактериальная зубная паста для кошек и собак; с каолиновой глиной и наносеребром, поддерживает здоровье полости рта. 100 мл. Pure Nature.",
+            "tags": [
+              "Зубы",
+              "Антибактериальная"
+            ]
+          },
+          "en": {
+            "cat": "Dental care",
+            "name": "Toothpaste — Kaolin & Nano Silver",
+            "desc": "Antibacterial toothpaste for cats and dogs; with kaolin clay and nano silver, supports oral health. 100 ml. Pure Nature.",
+            "tags": [
+              "Teeth",
+              "Antibacterial"
+            ]
+          }
+        },
+        {
+          "img": "assets/products/tpl-acc-toothpaste2.webp",
+          "az": {
+            "cat": "Diş qulluğu",
+            "name": "Toothpaste 2in1 — Kaolin & Green Tea",
+            "desc": "Pişik və itlər üçün 2-i-1 diş pastası; kaolin gili və yaşıl çay ekstraktı ilə, ərpi təmizləyir və nəfəsi təravətləndirir. 100 ml. Pure Nature.",
+            "tags": [
+              "Diş",
+              "Yaşıl çay"
+            ]
+          },
+          "ru": {
+            "cat": "Уход за зубами",
+            "name": "Toothpaste 2in1 — Kaolin & Green Tea",
+            "desc": "Зубная паста 2в1 для кошек и собак; с каолиновой глиной и экстрактом зелёного чая, удаляет налёт и освежает дыхание. 100 мл. Pure Nature.",
+            "tags": [
+              "Зубы",
+              "Зелёный чай"
+            ]
+          },
+          "en": {
+            "cat": "Dental care",
+            "name": "Toothpaste 2in1 — Kaolin & Green Tea",
+            "desc": "2-in-1 toothpaste for cats and dogs; with kaolin clay and green tea extract, removes plaque and freshens breath. 100 ml. Pure Nature.",
+            "tags": [
+              "Teeth",
+              "Green tea"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "group": {
+        "az": "Qırxım maşınları və trimmerlər",
+        "ru": "Машинки и триммеры",
+        "en": "Clippers & trimmers"
+      },
+      "species": "both",
+      "items": [
+        {
+          "img": "assets/products/tpl-acc-clipper.webp",
+          "az": {
+            "cat": "Alət",
+            "name": "Pro Hair Clipper",
+            "desc": "Peşəkar simsiz tük maşını; məcburi hava soyutma sistemi, Turbo rejimi və LCD ekran. Bütün tük tipləri üçün.",
+            "tags": [
+              "Maşın",
+              "Peşəkar"
+            ]
+          },
+          "ru": {
+            "cat": "Инструмент",
+            "name": "Pro Hair Clipper",
+            "desc": "Профессиональная беспроводная машинка для стрижки; система воздушного охлаждения, режим Turbo и LCD-дисплей. Для всех типов шерсти.",
+            "tags": [
+              "Машинка",
+              "Профессиональная"
+            ]
+          },
+          "en": {
+            "cat": "Tool",
+            "name": "Pro Hair Clipper",
+            "desc": "Professional cordless hair clipper; forced-air cooling system, Turbo mode and LCD display. For all coat types.",
+            "tags": [
+              "Clipper",
+              "Professional"
+            ]
+          }
+        },
+        {
+          "img": "assets/products/tpl-acc-trimmer.webp",
+          "az": {
+            "cat": "Alət",
+            "name": "Cordless Trimmer",
+            "desc": "Simsiz dəqiq trimmer; pəncə, üz və həssas nahiyələrin səliqəli kəsimi üçün, sakit və yüngül.",
+            "tags": [
+              "Trimmer",
+              "Pəncə"
+            ]
+          },
+          "ru": {
+            "cat": "Инструмент",
+            "name": "Cordless Trimmer",
+            "desc": "Беспроводной триммер для точной стрижки; для аккуратной стрижки лап, морды и чувствительных зон, тихий и лёгкий.",
+            "tags": [
+              "Триммер",
+              "Лапы"
+            ]
+          },
+          "en": {
+            "cat": "Tool",
+            "name": "Cordless Trimmer",
+            "desc": "Cordless precision trimmer; for neat trimming of paws, face and sensitive areas, quiet and lightweight.",
+            "tags": [
+              "Trimmer",
+              "Paws"
+            ]
+          }
+        },
+        {
+          "img": "assets/products/tpl-acc-vacuum.webp",
+          "az": {
+            "cat": "Alət",
+            "name": "Grooming Vacuum Kit",
+            "desc": "Peşəkar qulluq vakuum dəsti; tük maşını və nasadkaları ilə tükü kəsərkən eyni anda toplayır — təmiz qulluq üçün.",
+            "tags": [
+              "Vakuum",
+              "Qulluq"
+            ]
+          },
+          "ru": {
+            "cat": "Инструмент",
+            "name": "Grooming Vacuum Kit",
+            "desc": "Профессиональный груминговый вакуумный набор; с машинкой и насадками собирает шерсть прямо во время стрижки — для чистого ухода.",
+            "tags": [
+              "Вакуум",
+              "Груминг"
+            ]
+          },
+          "en": {
+            "cat": "Tool",
+            "name": "Grooming Vacuum Kit",
+            "desc": "Professional grooming vacuum kit; with clipper and attachments it collects hair while trimming — for clean grooming.",
+            "tags": [
+              "Vacuum",
+              "Grooming"
+            ]
+          }
+        },
+        {
+          "img": "assets/products/tpl-acc-blade.webp",
+          "az": {
+            "cat": "Ehtiyat hissə",
+            "name": "Clipper Blade",
+            "desc": "Tauro Pro Line tük maşınları üçün əvəzedici kəsici baş; iti və davamlı.",
+            "tags": [
+              "Bıçaq",
+              "Ehtiyat"
+            ]
+          },
+          "ru": {
+            "cat": "Запчасть",
+            "name": "Clipper Blade",
+            "desc": "Сменный режущий блок для машинок Tauro Pro Line; острый и долговечный.",
+            "tags": [
+              "Лезвие",
+              "Запчасть"
+            ]
+          },
+          "en": {
+            "cat": "Spare part",
+            "name": "Clipper Blade",
+            "desc": "Replacement cutting blade for Tauro Pro Line clippers; sharp and durable.",
+            "tags": [
+              "Blade",
+              "Spare"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "group": {
+        "az": "Dırnaq qulluğu",
+        "ru": "Уход за когтями",
+        "en": "Claw care"
+      },
+      "species": "both",
+      "items": [
+        {
+          "img": "assets/products/tpl-acc-scissors.webp",
+          "az": {
+            "cat": "Aksesuar",
+            "name": "Claw Scissors",
+            "desc": "Pişik və balaca heyvanlar üçün dırnaq qayçısı; ağac saplı, dəqiq kəsim.",
+            "tags": [
+              "Dırnaq",
+              "Qayçı"
+            ]
+          },
+          "ru": {
+            "cat": "Аксессуар",
+            "name": "Claw Scissors",
+            "desc": "Когтерез-ножницы для кошек и мелких животных; деревянные ручки, аккуратный срез.",
+            "tags": [
+              "Когти",
+              "Ножницы"
+            ]
+          },
+          "en": {
+            "cat": "Accessory",
+            "name": "Claw Scissors",
+            "desc": "Claw scissors for cats and small pets; wooden handles, precise cut.",
+            "tags": [
+              "Claws",
+              "Scissors"
+            ]
+          }
+        },
+        {
+          "img": "assets/products/tpl-acc-clawclip.webp",
+          "az": {
+            "cat": "Aksesuar",
+            "name": "Claw Clipper",
+            "desc": "Ağac saplı dırnaq kəskisi; pişik və itlərin dırnaqlarının təhlükəsiz və dəqiq kəsimi üçün.",
+            "tags": [
+              "Dırnaq",
+              "Kəski"
+            ]
+          },
+          "ru": {
+            "cat": "Аксессуар",
+            "name": "Claw Clipper",
+            "desc": "Когтерез с деревянными ручками; для безопасной и точной стрижки когтей кошек и собак.",
+            "tags": [
+              "Когти",
+              "Когтерез"
+            ]
+          },
+          "en": {
+            "cat": "Accessory",
+            "name": "Claw Clipper",
+            "desc": "Claw clipper with wooden handles; for safe and precise trimming of cats' and dogs' claws.",
+            "tags": [
+              "Claws",
+              "Clipper"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "group": {
+        "az": "Ultra Natural Care",
+        "ru": "Ultra Natural Care",
+        "en": "Ultra Natural Care"
+      },
+      "species": "both",
+      "items": [
+        {
+          "img": "assets/products/tpl-un-deep.webp",
+          "az": {
+            "cat": "Şampun · Step 1",
+            "name": "Deep Clean Shampoo",
+            "desc": "Bütün tük tipləri üçün dərin təmizləyən şampun; dəri və tükdən artıq yağ, çirk və toz hissəciklərini təmizləyir. Adaçayı, pantenol və qliserinlə, 94% təbii.",
+            "tags": [
+              "Şampun",
+              "Dərin təmizləmə"
+            ]
+          },
+          "ru": {
+            "cat": "Шампунь · Step 1",
+            "name": "Deep Clean Shampoo",
+            "desc": "Глубоко очищающий шампунь для всех типов шерсти; удаляет излишки жира, грязь и частицы пыли с кожи и шерсти. С шалфеем, пантенолом и глицерином, 94% натуральных компонентов.",
+            "tags": [
+              "Шампунь",
+              "Глубокое очищение"
+            ]
+          },
+          "en": {
+            "cat": "Shampoo · Step 1",
+            "name": "Deep Clean Shampoo",
+            "desc": "Deep cleansing shampoo for all coat types; wicks away excess oil, dirt and dust particles from skin and coat. With sage, panthenol and glycerin, 94% natural.",
+            "tags": [
+              "Shampoo",
+              "Deep clean"
+            ]
+          }
+        },
+        {
+          "img": "assets/products/tpl-un-repair-sh.webp",
+          "az": {
+            "cat": "Şampun · Step 2",
+            "name": "Repair & Nourish Shampoo",
+            "desc": "Bütün tük tipləri üçün bərpa edən və qidalandıran şampun; tükün quruluşunu bərpa edir, susuzlaşmış dərini və zədələnmiş tükü canlandırır. 95% təbii.",
+            "tags": [
+              "Şampun",
+              "Bərpa"
+            ]
+          },
+          "ru": {
+            "cat": "Шампунь · Step 2",
+            "name": "Repair & Nourish Shampoo",
+            "desc": "Восстанавливающий и питающий шампунь для всех типов шерсти; восстанавливает структуру волоса, оживляет обезвоженную кожу и повреждённую шерсть. 95% натуральных компонентов.",
+            "tags": [
+              "Шампунь",
+              "Восстановление"
+            ]
+          },
+          "en": {
+            "cat": "Shampoo · Step 2",
+            "name": "Repair & Nourish Shampoo",
+            "desc": "Repairing and nourishing shampoo for all coat types; repairs hair structure, revitalizes dehydrated skin and damaged coat. 95% natural.",
+            "tags": [
+              "Shampoo",
+              "Repair"
+            ]
+          }
+        },
+        {
+          "img": "assets/products/tpl-un-repair-mask.webp",
+          "az": {
+            "cat": "Maska · Step 3",
+            "name": "Repair & Nourish Mask",
+            "desc": "Bütün tük tipləri üçün bərpaedici maska; şi yağı və hidrolizə olunmuş ipəklə tükü dərindən bərpa edir. 97% təbii.",
+            "tags": [
+              "Maska",
+              "Bərpa"
+            ]
+          },
+          "ru": {
+            "cat": "Маска · Step 3",
+            "name": "Repair & Nourish Mask",
+            "desc": "Восстанавливающая маска для всех типов шерсти; глубоко восстанавливает с маслом ши и гидролизованным шёлком. 97% натуральных компонентов.",
+            "tags": [
+              "Маска",
+              "Восстановление"
+            ]
+          },
+          "en": {
+            "cat": "Mask · Step 3",
+            "name": "Repair & Nourish Mask",
+            "desc": "Repairing mask for all coat types; deeply restores with shea butter and hydrolyzed silk. 97% natural.",
+            "tags": [
+              "Mask",
+              "Repair"
+            ]
+          }
+        },
+        {
+          "img": "assets/products/tpl-un-whitening.webp",
+          "az": {
+            "cat": "Şampun · Ağ tük",
+            "name": "Whitening Shampoo",
+            "desc": "Ağ və açıq tüklər üçün ağardıcı şampun; açıq və ağ tükü canlandırır və nəmləndirir. 92% təbii.",
+            "tags": [
+              "Şampun",
+              "Ağ tük"
+            ]
+          },
+          "ru": {
+            "cat": "Шампунь · Белая шерсть",
+            "name": "Whitening Shampoo",
+            "desc": "Отбеливающий шампунь для белой и светлой шерсти; интенсивно осветляет и увлажняет светлую и белую шерсть. 92% натуральных компонентов.",
+            "tags": [
+              "Шампунь",
+              "Белая шерсть"
+            ]
+          },
+          "en": {
+            "cat": "Shampoo · White coat",
+            "name": "Whitening Shampoo",
+            "desc": "Whitening shampoo for white and light coats; intensely brightens and hydrates light and white coats. 92% natural.",
+            "tags": [
+              "Shampoo",
+              "White coat"
+            ]
+          }
+        },
+        {
+          "img": "assets/products/tpl-un-hydrate-mask.webp",
+          "az": {
+            "cat": "Maska · Açıq tük",
+            "name": "Intense Hydrate Mask",
+            "desc": "Ağ və açıq tüklər üçün intensiv nəmləndirici maska; quru dərinin və açıq tükün təbii nəm balansını bərpa edir. 97% təbii.",
+            "tags": [
+              "Maska",
+              "Nəmləndirmə"
+            ]
+          },
+          "ru": {
+            "cat": "Маска · Светлая шерсть",
+            "name": "Intense Hydrate Mask",
+            "desc": "Интенсивно увлажняющая маска для белой и светлой шерсти; восстанавливает естественный баланс влаги сухой кожи и светлой шерсти. 97% натуральных компонентов.",
+            "tags": [
+              "Маска",
+              "Увлажнение"
+            ]
+          },
+          "en": {
+            "cat": "Mask · Light coat",
+            "name": "Intense Hydrate Mask",
+            "desc": "Intensive hydrating mask for white and light coats; restores the natural moisture balance of dry skin and light coat. 97% natural.",
+            "tags": [
+              "Mask",
+              "Hydration"
+            ]
+          }
+        },
+        {
+          "img": "assets/products/tpl-un-hydrate-sh.webp",
+          "az": {
+            "cat": "Şampun · Açıq tük",
+            "name": "Intense Hydrate Shampoo",
+            "desc": "Ağ və açıq tüklər üçün intensiv nəmləndirici şampun; quru dərini və açıq tükü nəmləndirir və təbii nəm balansını bərpa edir. Badam, üreya və bal ekstraktı ilə, 96% təbii.",
+            "tags": [
+              "Şampun",
+              "Nəmləndirmə"
+            ]
+          },
+          "ru": {
+            "cat": "Шампунь · Светлая шерсть",
+            "name": "Intense Hydrate Shampoo",
+            "desc": "Интенсивно увлажняющий шампунь для белой и светлой шерсти; увлажняет сухую кожу и светлую шерсть, восстанавливает естественный баланс влаги. С миндалём, мочевиной и экстрактом мёда, 96% натуральных компонентов.",
+            "tags": [
+              "Шампунь",
+              "Увлажнение"
+            ]
+          },
+          "en": {
+            "cat": "Shampoo · Light coat",
+            "name": "Intense Hydrate Shampoo",
+            "desc": "Intensively hydrating shampoo for white and light coats; hydrates dry skin and light coat and restores the natural moisture balance. With almond, urea and honey extract, 96% natural.",
+            "tags": [
+              "Shampoo",
+              "Hydration"
+            ]
+          }
+        },
+        {
+          "img": "assets/products/tpl-un-wc-deep.webp",
+          "az": {
+            "cat": "Şampun · Ağ tük",
+            "name": "White Coat Deep Clean Shampoo",
+            "desc": "Ağ və açıq tüklər üçün dərin təmizləyən şampun; sapı ağardan effekt verir, çirk və ləkələri təmizləyir. Bütün tük tipləri üçün.",
+            "tags": [
+              "Şampun",
+              "Ağ tük"
+            ]
+          },
+          "ru": {
+            "cat": "Шампунь · Белая шерсть",
+            "name": "White Coat Deep Clean Shampoo",
+            "desc": "Глубоко очищающий шампунь для белой и светлой шерсти; придаёт осветляющий эффект, удаляет грязь и пятна. Для всех типов шерсти.",
+            "tags": [
+              "Шампунь",
+              "Белая шерсть"
+            ]
+          },
+          "en": {
+            "cat": "Shampoo · White coat",
+            "name": "White Coat Deep Clean Shampoo",
+            "desc": "Deep cleansing shampoo for white and light coats; gives a brightening effect, removes dirt and stains. For all coat types.",
+            "tags": [
+              "Shampoo",
+              "White coat"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "group": {
+        "az": "Pure Nature",
+        "ru": "Pure Nature",
+        "en": "Pure Nature"
+      },
+      "species": "both",
+      "items": [
+        {
+          "img": "assets/products/tpl-pn-5in1.webp",
+          "az": {
+            "cat": "Şampun",
+            "name": "5in1 Shampoo",
+            "desc": "Nəmləndirilmiş və güclü tük üçün efir yağı əsaslı universal 5-i-1 şampun; silikon, SLS, paraben və mineral yağsız.",
+            "tags": [
+              "5in1",
+              "Efir yağı"
+            ]
+          },
+          "ru": {
+            "cat": "Шампунь",
+            "name": "5in1 Shampoo",
+            "desc": "Универсальный шампунь 5в1 на эфирных маслах для увлажнённой и крепкой шерсти; без силиконов, SLS, парабенов и минеральных масел.",
+            "tags": [
+              "5в1",
+              "Эфирные масла"
+            ]
+          },
+          "en": {
+            "cat": "Shampoo",
+            "name": "5in1 Shampoo",
+            "desc": "Universal 5-in-1 essential-oil shampoo for moisturized and strong hair; no silicones, SLS, parabens or mineral oils.",
+            "tags": [
+              "5in1",
+              "Essential oils"
+            ]
+          }
+        },
+        {
+          "img": "assets/products/tpl-pn-furgrowth.webp",
+          "az": {
+            "cat": "Şampun",
+            "name": "Fur Growth Shampoo",
+            "desc": "Tükün sıxlığı və yenidən böyüməsi üçün efir yağı əsaslı şampun.",
+            "tags": [
+              "Tük böyüməsi"
+            ]
+          },
+          "ru": {
+            "cat": "Шампунь",
+            "name": "Fur Growth Shampoo",
+            "desc": "Шампунь на эфирных маслах для густоты и роста шерсти.",
+            "tags": [
+              "Рост шерсти"
+            ]
+          },
+          "en": {
+            "cat": "Shampoo",
+            "name": "Fur Growth Shampoo",
+            "desc": "Essential-oil shampoo for coat density and regrowth.",
+            "tags": [
+              "Fur growth"
+            ]
+          }
+        },
+        {
+          "img": "assets/products/tpl-pn-magicplex.webp",
+          "az": {
+            "cat": "Şampun",
+            "name": "Magic-Plex Shampoo",
+            "desc": "Tükü ani canlandıran efir yağı əsaslı bərpaedici şampun.",
+            "tags": [
+              "Bərpa"
+            ]
+          },
+          "ru": {
+            "cat": "Шампунь",
+            "name": "Magic-Plex Shampoo",
+            "desc": "Восстанавливающий шампунь на эфирных маслах для мгновенного оживления шерсти.",
+            "tags": [
+              "Восстановление"
+            ]
+          },
+          "en": {
+            "cat": "Shampoo",
+            "name": "Magic-Plex Shampoo",
+            "desc": "Repairing essential-oil shampoo for instant revitalization.",
+            "tags": [
+              "Repair"
+            ]
+          }
+        },
+        {
+          "img": "assets/products/tpl-pn-5in1-cond.webp",
+          "az": {
+            "cat": "Kondisioner",
+            "name": "5in1 Conditioner",
+            "desc": "Nəmləndirilmiş və güclü tük üçün efir yağı əsaslı universal 5-i-1 kondisioner; silikon, SLS, paraben və mineral yağsız.",
+            "tags": [
+              "5in1",
+              "Efir yağı"
+            ]
+          },
+          "ru": {
+            "cat": "Кондиционер",
+            "name": "5in1 Conditioner",
+            "desc": "Универсальный кондиционер 5в1 на эфирных маслах для увлажнённой и крепкой шерсти; без силиконов, SLS, парабенов и минеральных масел.",
+            "tags": [
+              "5в1",
+              "Эфирные масла"
+            ]
+          },
+          "en": {
+            "cat": "Conditioner",
+            "name": "5in1 Conditioner",
+            "desc": "Universal 5-in-1 essential-oil conditioner for moisturized and strong hair; no silicones, SLS, parabens or mineral oils.",
+            "tags": [
+              "5in1",
+              "Essential oils"
+            ]
+          }
+        },
+        {
+          "img": "assets/products/tpl-pn-furgrowth-cond.webp",
+          "az": {
+            "cat": "Kondisioner",
+            "name": "Fur Growth Conditioner",
+            "desc": "Tükün sıxlığı və yenidən böyüməsi üçün efir yağı əsaslı kondisioner.",
+            "tags": [
+              "Tük böyüməsi"
+            ]
+          },
+          "ru": {
+            "cat": "Кондиционер",
+            "name": "Fur Growth Conditioner",
+            "desc": "Кондиционер на эфирных маслах для густоты и роста шерсти.",
+            "tags": [
+              "Рост шерсти"
+            ]
+          },
+          "en": {
+            "cat": "Conditioner",
+            "name": "Fur Growth Conditioner",
+            "desc": "Essential-oil conditioner for coat density and regrowth.",
+            "tags": [
+              "Fur growth"
+            ]
+          }
+        },
+        {
+          "img": "assets/products/tpl-pn-furgrowth-leavein.webp",
+          "az": {
+            "cat": "Kondisioner · Yuyulmayan",
+            "name": "Fur Growth Leave-in Conditioner",
+            "desc": "Tükün sıxlığı və böyüməsi üçün efir yağı əsaslı yuyulmayan kondisioner; gün ərzində qoruyur və nəmləndirir. 250 ml.",
+            "tags": [
+              "Tük böyüməsi",
+              "Yuyulmayan"
+            ]
+          },
+          "ru": {
+            "cat": "Кондиционер · Несмываемый",
+            "name": "Fur Growth Leave-in Conditioner",
+            "desc": "Несмываемый кондиционер на эфирных маслах для густоты и роста шерсти; защищает и увлажняет в течение дня. 250 мл.",
+            "tags": [
+              "Рост шерсти",
+              "Несмываемый"
+            ]
+          },
+          "en": {
+            "cat": "Conditioner · Leave-in",
+            "name": "Fur Growth Leave-in Conditioner",
+            "desc": "Leave-in essential-oil conditioner for coat density and regrowth; protects and moisturizes throughout the day. 250 ml.",
+            "tags": [
+              "Fur growth",
+              "Leave-in"
+            ]
+          }
+        },
+        {
+          "img": "assets/products/tpl-pn-magicplex-cond.webp",
+          "az": {
+            "cat": "Kondisioner",
+            "name": "Magic-Plex Conditioner",
+            "desc": "Tükü ani canlandıran efir yağı əsaslı bərpaedici kondisioner.",
+            "tags": [
+              "Bərpa"
+            ]
+          },
+          "ru": {
+            "cat": "Кондиционер",
+            "name": "Magic-Plex Conditioner",
+            "desc": "Восстанавливающий кондиционер на эфирных маслах для мгновенного оживления шерсти.",
+            "tags": [
+              "Восстановление"
+            ]
+          },
+          "en": {
+            "cat": "Conditioner",
+            "name": "Magic-Plex Conditioner",
+            "desc": "Repairing essential-oil conditioner for instant revitalization.",
+            "tags": [
+              "Repair"
+            ]
+          }
+        }
       ]
     }
   ],
