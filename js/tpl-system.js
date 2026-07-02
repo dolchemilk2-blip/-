@@ -3376,7 +3376,7 @@ const TPL_SYSTEMS = [
           "img": "assets/products/tpl-dc-deep.webp",
           "az": {
             "cat": "Derma Care · STEP 1",
-            "name": "Derma Care Deep Clean Shampoo",
+            "name": "Amber Scrub Shampoo",
             "desc": "Step 1 — dərin təmizlənmə. Peşəkar qulluğun ilk mərhələsi.",
             "sections": [
               {
@@ -3427,7 +3427,7 @@ const TPL_SYSTEMS = [
           },
           "ru": {
             "cat": "Derma Care · STEP 1",
-            "name": "Derma Care Deep Clean Shampoo",
+            "name": "Amber Scrub Shampoo",
             "desc": "Шаг 1 — глубокое очищение. Первый этап профессионального ухода.",
             "sections": [
               {
@@ -3478,7 +3478,7 @@ const TPL_SYSTEMS = [
           },
           "en": {
             "cat": "Derma Care · STEP 1",
-            "name": "Derma Care Deep Clean Shampoo",
+            "name": "Amber Scrub Shampoo",
             "desc": "Step 1 — deep cleansing. The first stage of professional care.",
             "sections": [
               {
@@ -3543,7 +3543,7 @@ const TPL_SYSTEMS = [
           "img": "assets/products/tpl-dc-intensive.webp",
           "az": {
             "cat": "Derma Care · STEP 2",
-            "name": "Derma Care Intensive Shampoo",
+            "name": "Dry & Itchy Skin Relief Shampoo",
             "desc": "Step 2 — əsas qulluq. Həssas dərini sakitləşdirir və bariyeri bərpa edir.",
             "sections": [
               {
@@ -3590,7 +3590,7 @@ const TPL_SYSTEMS = [
           },
           "ru": {
             "cat": "Derma Care · STEP 2",
-            "name": "Derma Care Intensive Shampoo",
+            "name": "Dry & Itchy Skin Relief Shampoo",
             "desc": "Шаг 2 — основной уход. Успокаивает чувствительную кожу и восстанавливает барьер.",
             "sections": [
               {
@@ -3637,7 +3637,7 @@ const TPL_SYSTEMS = [
           },
           "en": {
             "cat": "Derma Care · STEP 2",
-            "name": "Derma Care Intensive Shampoo",
+            "name": "Dry & Itchy Skin Relief Shampoo",
             "desc": "Step 2 — main care. Soothes sensitive skin and restores the barrier.",
             "sections": [
               {
@@ -3698,7 +3698,7 @@ const TPL_SYSTEMS = [
           "img": "assets/products/tpl-dc-cond.webp",
           "az": {
             "cat": "Derma Care · STEP 3",
-            "name": "Derma Care Conditioner",
+            "name": "Dry & Itchy Skin Relief Conditioner",
             "desc": "Step 3 — yekunlaşdırıcı qulluq. Tükü yumşaq və itaətkar edir.",
             "sections": [
               {
@@ -3743,7 +3743,7 @@ const TPL_SYSTEMS = [
           },
           "ru": {
             "cat": "Derma Care · STEP 3",
-            "name": "Derma Care Conditioner",
+            "name": "Dry & Itchy Skin Relief Conditioner",
             "desc": "Шаг 3 — завершающий уход. Делает шерсть мягкой и послушной.",
             "sections": [
               {
@@ -3788,7 +3788,7 @@ const TPL_SYSTEMS = [
           },
           "en": {
             "cat": "Derma Care · STEP 3",
-            "name": "Derma Care Conditioner",
+            "name": "Dry & Itchy Skin Relief Conditioner",
             "desc": "Step 3 — finishing care. Makes the coat soft and manageable.",
             "sections": [
               {
@@ -3847,7 +3847,7 @@ const TPL_SYSTEMS = [
           "img": "assets/products/tpl-dc-leavein.webp",
           "az": {
             "cat": "Derma Care · Leave-in",
-            "name": "Derma Care Leave-in Conditioner",
+            "name": "Dry & Itchy Skin Relief Leave-In Conditioner",
             "desc": "Yuyulmayan kondisioner — çimizdirmələr arasında əlavə nəmləndirmə və qoruma.",
             "sections": [
               {
@@ -3891,7 +3891,7 @@ const TPL_SYSTEMS = [
           },
           "ru": {
             "cat": "Derma Care · Leave-in",
-            "name": "Derma Care Leave-in Conditioner",
+            "name": "Dry & Itchy Skin Relief Leave-In Conditioner",
             "desc": "Несмываемый кондиционер — дополнительное увлажнение и защита между купаниями.",
             "sections": [
               {
@@ -3935,7 +3935,7 @@ const TPL_SYSTEMS = [
           },
           "en": {
             "cat": "Derma Care · Leave-in",
-            "name": "Derma Care Leave-in Conditioner",
+            "name": "Dry & Itchy Skin Relief Leave-In Conditioner",
             "desc": "Leave-in conditioner — extra moisture and protection between baths.",
             "sections": [
               {
@@ -3998,7 +3998,7 @@ const TPL_SYSTEMS = [
           "img": "assets/products/tpl-dc-cream.webp",
           "az": {
             "cat": "Derma Care · Cream",
-            "name": "Derma Care Cream",
+            "name": "Dry & Itchy Skin Relief Cream",
             "desc": "Krem — quru və qıcıqlanmış dəri nahiyələri üçün lokal qulluq.",
             "sections": [
               {
@@ -4047,7 +4047,7 @@ const TPL_SYSTEMS = [
           },
           "ru": {
             "cat": "Derma Care · Cream",
-            "name": "Derma Care Cream",
+            "name": "Dry & Itchy Skin Relief Cream",
             "desc": "Крем — локальный уход за сухими и раздраженными участками кожи.",
             "sections": [
               {
@@ -4096,7 +4096,7 @@ const TPL_SYSTEMS = [
           },
           "en": {
             "cat": "Derma Care · Cream",
-            "name": "Derma Care Cream",
+            "name": "Dry & Itchy Skin Relief Cream",
             "desc": "Cream — local care for dry and irritated areas of skin.",
             "sections": [
               {
