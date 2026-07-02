@@ -457,9 +457,9 @@ const BRANDS_EXTRA = {
     },
     {
       "group": {
-        "az": "Dəsmallar, daraqlar və diş qulluğu",
-        "ru": "Полотенца, расчёски и уход за зубами",
-        "en": "Towels, brushes & dental care"
+        "az": "Dəsmallar",
+        "ru": "Полотенца",
+        "en": "Towels"
       },
       "species": "both",
       "items": [
@@ -552,7 +552,17 @@ const BRANDS_EXTRA = {
               "Cooling"
             ]
           }
-        },
+        }
+      ]
+    },
+    {
+      "group": {
+        "az": "Daraqlar və fırçalar",
+        "ru": "Расчёски и щётки",
+        "en": "Brushes & combs"
+      },
+      "species": "both",
+      "items": [
         {
           "img": "assets/products/tpl-acc-slicker.webp",
           "az": {
@@ -642,7 +652,17 @@ const BRANDS_EXTRA = {
               "Metal"
             ]
           }
-        },
+        }
+      ]
+    },
+    {
+      "group": {
+        "az": "Diş qulluğu",
+        "ru": "Уход за зубами",
+        "en": "Dental care"
+      },
+      "species": "both",
+      "items": [
         {
           "img": "assets/products/tpl-acc-toothbrush.webp",
           "az": {
