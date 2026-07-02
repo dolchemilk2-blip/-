@@ -475,8 +475,8 @@ body.page-leaving { opacity: 0; transition: opacity .2s ease; }
 .tpl-system__title { font-size: 28px; color: var(--ink); margin: 8px 0 12px; }
 .tpl-system__intro { color: var(--muted); font-size: 15.5px; line-height: 1.65; }
 .tpl-system__stage {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
-  align-items: end; margin: 30px auto 6px; max-width: 880px; position: relative;
+  display: grid; grid-template-columns: repeat(var(--cols, 3), minmax(0, 1fr)); gap: 16px;
+  align-items: end; margin: 30px auto 6px; max-width: min(1060px, calc(var(--cols, 3) * 265px)); position: relative;
 }
 .tpl-bottle {
   position: relative; display: flex; flex-direction: column; align-items: center;
@@ -509,6 +509,7 @@ body.page-leaving { opacity: 0; transition: opacity .2s ease; }
 .pmodal__list { margin: 6px 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
 .pmodal__list li { font-size: 13.5px; color: var(--green-dark); background: var(--cream); border-radius: 999px; padding: 5px 12px; }
 @media (max-width: 720px) {
+  .tpl-system__stage { grid-template-columns: repeat(2, 1fr); max-width: 460px; row-gap: 30px; }
   .tpl-bottle__img { height: 190px; }
   .tpl-bottle__img img { max-height: 190px; }
   .tpl-bottle__num { font-size: 64px; }

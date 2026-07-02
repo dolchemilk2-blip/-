@@ -245,6 +245,15 @@ function renderProducts(brand, lang) {
     groups = filterBySpecies(groups, currentSpecies);
   }
 
+  // Tauro: товары, вошедшие в витрины-комплексы (Step-системы), не дублируем карточками.
+  if (brand === 'tpl' && typeof TPL_SYSTEMS !== 'undefined') {
+    const inShowcase = new Set();
+    TPL_SYSTEMS.forEach(sys => sys.steps.forEach(st => inShowcase.add(st.img)));
+    groups = groups
+      .map(g => Object.assign({}, g, { items: g.items.filter(it => !inShowcase.has(it.img)) }))
+      .filter(g => g.items.length);
+  }
+
   // Быстрые чипы-категории для перехода к группам
   const nav = document.getElementById('catNav');
   if (nav) {
@@ -270,39 +279,41 @@ function renderProducts(brand, lang) {
     MODAL_KEYS.push(descKeyFor(brand, species, it));
     return productCard(it, lang, id);
   };
-  // Витрина «стоящих» флаконов Tauro Pure Nature (Step 1·2·3) — только на вкладке Tauro
+  // Витрины «стоящих» флаконов Tauro Pro Line (Step-системы) — только на вкладке Tauro
   let showcase = '';
-  if (brand === 'tpl' && typeof TPL_SYSTEM !== 'undefined') {
-    const sys = TPL_SYSTEM;
-    const bottles = sys.steps.map(st => {
-      const id = MODAL_ITEMS.length;
-      MODAL_ITEMS.push(st.item);
-      MODAL_KEYS.push(null);
-      const nm = (st.item[lang] || st.item.ru).name;
-      const short = (st.short && (st.short[lang] || st.short.ru)) || '';
+  if (brand === 'tpl' && typeof TPL_SYSTEMS !== 'undefined') {
+    showcase = TPL_SYSTEMS.map(sys => {
+      const bottles = sys.steps.map((st, bi) => {
+        const id = MODAL_ITEMS.length;
+        MODAL_ITEMS.push(st.item);
+        MODAL_KEYS.push(null);
+        const nm = (st.item[lang] || st.item.ru).name;
+        const short = (st.short && (st.short[lang] || st.short.ru)) || '';
+        const smallLabel = st.label ? (st.label[lang] || st.label.ru) : ('STEP ' + st.step);
+        return `
+          <div class="tpl-bottle" data-pid="${id}" tabindex="0" role="button" style="--c:${st.color};--d:${(bi + 1) * 0.6}s" aria-label="${smallLabel} — ${nm}">
+            <span class="tpl-bottle__num">${st.step}</span>
+            <div class="tpl-bottle__img"><img src="${st.img}" alt="${nm}" loading="lazy" /></div>
+            <div class="tpl-bottle__label">
+              <span class="tpl-bottle__step">${smallLabel}</span>
+              <span class="tpl-bottle__name">${nm}</span>
+              <span class="tpl-bottle__short">${short}</span>
+            </div>
+          </div>`;
+      }).join('');
+      const badges = (sys.badges[lang] || sys.badges.ru).map(b => `<span>${b}</span>`).join('');
       return `
-        <div class="tpl-bottle" data-pid="${id}" tabindex="0" role="button" style="--c:${st.color};--d:${st.step * 0.6}s" aria-label="STEP ${st.step} — ${nm}">
-          <span class="tpl-bottle__num">${st.step}</span>
-          <div class="tpl-bottle__img"><img src="${st.img}" alt="${nm}" loading="lazy" /></div>
-          <div class="tpl-bottle__label">
-            <span class="tpl-bottle__step">STEP ${st.step}</span>
-            <span class="tpl-bottle__name">${nm}</span>
-            <span class="tpl-bottle__short">${short}</span>
+        <section class="tpl-system">
+          <div class="tpl-system__head">
+            <span class="section__tag">${(sys.tag[lang] || sys.tag.ru)}</span>
+            <h2 class="tpl-system__title">${(sys.title[lang] || sys.title.ru)}</h2>
+            <p class="tpl-system__intro">${(sys.intro[lang] || sys.intro.ru)}</p>
           </div>
-        </div>`;
+          <div class="tpl-system__stage" style="--cols:${sys.steps.length}">${bottles}</div>
+          <div class="tpl-system__badges">${badges}</div>
+          <p class="tpl-system__note">${(sys.note[lang] || sys.note.ru)}</p>
+        </section>`;
     }).join('');
-    const badges = (sys.badges[lang] || sys.badges.ru).map(b => `<span>${b}</span>`).join('');
-    showcase = `
-      <section class="tpl-system">
-        <div class="tpl-system__head">
-          <span class="section__tag">${(sys.tag[lang] || sys.tag.ru)}</span>
-          <h2 class="tpl-system__title">${(sys.title[lang] || sys.title.ru)}</h2>
-          <p class="tpl-system__intro">${(sys.intro[lang] || sys.intro.ru)}</p>
-        </div>
-        <div class="tpl-system__stage">${bottles}</div>
-        <div class="tpl-system__badges">${badges}</div>
-        <p class="tpl-system__note">${(sys.note[lang] || sys.note.ru)}</p>
-      </section>`;
   }
   wrap.innerHTML = banner + showcase + groups.map((g, i) => {
     const groupName = (g.group && (g.group[lang] || g.group.ru)) || '';
