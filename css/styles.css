@@ -470,6 +470,37 @@ body.page-leaving { opacity: 0; transition: opacity .2s ease; }
 }
 
 /* ===== Tauro Pure Nature — витрина «стоящих» флаконов (Step 1·2·3) ===== */
+/* Вставка «зачем нужны степы» в самом верху вкладки Tauro */
+.tpl-why {
+  background: #fff; border: 1px solid rgba(31,42,36,.08); border-radius: 24px;
+  padding: 34px 34px 30px; margin: 4px 0 46px;
+  box-shadow: 0 10px 30px rgba(31,42,36,.05);
+}
+.tpl-why__head { text-align: center; max-width: 700px; margin: 0 auto 24px; }
+.tpl-why__title { font-size: 24px; color: var(--ink); margin: 0 0 10px; }
+.tpl-why__text { color: var(--muted); font-size: 15px; line-height: 1.65; margin: 0; }
+.tpl-why__steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.tpl-why__step {
+  position: relative; background: var(--tint-soft, #f3f5f8); border-radius: 18px;
+  padding: 20px 20px 18px 20px;
+}
+.tpl-why__step--1 { --wc: #5aa46a; }
+.tpl-why__step--2 { --wc: #d9812f; }
+.tpl-why__step--3 { --wc: #c99a2a; }
+.tpl-why__num {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 34px; height: 34px; border-radius: 50%;
+  background: var(--wc); color: #fff;
+  font-family: var(--head); font-weight: 800; font-size: 16px; margin-bottom: 10px;
+}
+.tpl-why__step h4 { font-family: var(--head); font-weight: 700; font-size: 15.5px; color: var(--ink); margin: 0 0 6px; }
+.tpl-why__step p { color: var(--muted); font-size: 13.5px; line-height: 1.55; margin: 0; }
+@media (max-width: 720px) {
+  .tpl-why { padding: 24px 18px 20px; }
+  .tpl-why__steps { grid-template-columns: 1fr; gap: 12px; }
+  .tpl-why__title { font-size: 20px; }
+}
+
 .tpl-system { margin: 4px 0 54px; }
 .tpl-system__head { text-align: center; max-width: 760px; margin: 0 auto; }
 .tpl-system__title { font-size: 28px; color: var(--ink); margin: 8px 0 12px; }

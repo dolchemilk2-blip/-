@@ -279,6 +279,25 @@ function renderProducts(brand, lang) {
     MODAL_KEYS.push(descKeyFor(brand, species, it));
     return productCard(it, lang, id);
   };
+  // Вставка «зачем нужны степы» — в самом верху вкладки Tauro
+  let tplWhy = '';
+  if (brand === 'tpl') {
+    tplWhy = `
+      <section class="tpl-why">
+        <div class="tpl-why__head">
+          <h2 class="tpl-why__title">${dict['tplWhy.title'] || ''}</h2>
+          <p class="tpl-why__text">${dict['tplWhy.text'] || ''}</p>
+        </div>
+        <div class="tpl-why__steps">
+          ${[1, 2, 3].map(n => `
+            <div class="tpl-why__step tpl-why__step--${n}">
+              <span class="tpl-why__num">${n}</span>
+              <h4>${dict['tplWhy.s' + n + '.title'] || ''}</h4>
+              <p>${dict['tplWhy.s' + n + '.text'] || ''}</p>
+            </div>`).join('')}
+        </div>
+      </section>`;
+  }
   // Витрины «стоящих» флаконов Tauro Pro Line (Step-системы) — только на вкладке Tauro
   let showcase = '';
   if (brand === 'tpl' && typeof TPL_SYSTEMS !== 'undefined') {
@@ -315,7 +334,7 @@ function renderProducts(brand, lang) {
         </section>`;
     }).join('');
   }
-  wrap.innerHTML = banner + showcase + groups.map((g, i) => {
+  wrap.innerHTML = banner + tplWhy + showcase + groups.map((g, i) => {
     const groupName = (g.group && (g.group[lang] || g.group.ru)) || '';
     // Группа Superior Care: распределяем по цвету шерсти и добавляем вставки.
     if (g.coat) {
