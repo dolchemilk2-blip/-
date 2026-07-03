@@ -282,13 +282,65 @@ function renderProducts(brand, lang) {
   // Вставка «зачем нужны степы» — в самом верху вкладки Tauro
   let tplWhy = '';
   if (brand === 'tpl') {
+    // Ботанический декор — то, что входит в составы шампуней (травы, экстракты, капли)
+    const deco = `
+      <svg class="tpl-why__deco tpl-why__deco--rosemary" viewBox="0 0 70 120" aria-hidden="true">
+        <path d="M35 8 C32 45 38 80 35 112" fill="none" stroke="#4e9a60" stroke-width="3" stroke-linecap="round"/>
+        ${[20,32,44,56,68,80,92].map(y => `
+          <path d="M35 ${y} L${12 + (y % 3)} ${y - 12}" stroke="#5fae72" stroke-width="2.6" stroke-linecap="round"/>
+          <path d="M35 ${y + 5} L${58 - (y % 3)} ${y - 7}" stroke="#5fae72" stroke-width="2.6" stroke-linecap="round"/>`).join('')}
+      </svg>
+      <svg class="tpl-why__deco tpl-why__deco--chamomile" viewBox="0 0 100 100" aria-hidden="true">
+        ${[0,45,90,135,180,225,270,315].map(a => `<ellipse cx="50" cy="26" rx="9" ry="20" fill="#fff" stroke="#eadfc4" stroke-width="1.5" transform="rotate(${a} 50 50)"/>`).join('')}
+        <circle cx="50" cy="50" r="13" fill="#f2b93b"/>
+        <circle cx="50" cy="50" r="13" fill="none" stroke="#e0a52a" stroke-width="2"/>
+      </svg>
+      <svg class="tpl-why__deco tpl-why__deco--lavender" viewBox="0 0 60 130" aria-hidden="true">
+        <path d="M30 128 C28 95 32 70 30 40" fill="none" stroke="#7fa16a" stroke-width="3" stroke-linecap="round"/>
+        ${[[30,16],[21,28],[39,28],[24,42],[36,42],[27,55],[33,55]].map(([x,y]) => `<ellipse cx="${x}" cy="${y}" rx="7.5" ry="10" fill="#9b7fd4" opacity=".9"/>`).join('')}
+      </svg>
+      <svg class="tpl-why__deco tpl-why__deco--citrus" viewBox="0 0 110 110" aria-hidden="true">
+        <circle cx="55" cy="55" r="50" fill="#f6c04a"/>
+        <circle cx="55" cy="55" r="43" fill="#fbe4a9"/>
+        ${[0,60,120,180,240,300].map(a => `<path d="M55 55 L55 17 A38 38 0 0 1 87 36 Z" fill="#f3b32d" transform="rotate(${a} 55 55)"/>`).join('')}
+        <circle cx="55" cy="55" r="5" fill="#fbe4a9"/>
+      </svg>
+      <svg class="tpl-why__deco tpl-why__deco--leaf" viewBox="0 0 90 70" aria-hidden="true">
+        <path d="M6 60 C10 20 50 4 84 10 C80 44 46 66 6 60 Z" fill="#7cc08d"/>
+        <path d="M10 58 C34 44 58 28 80 13" fill="none" stroke="#57a06a" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+      <svg class="tpl-why__deco tpl-why__deco--drop" viewBox="0 0 50 70" aria-hidden="true">
+        <path d="M25 4 C34 24 45 36 45 48 A20 20 0 1 1 5 48 C5 36 16 24 25 4 Z" fill="#79c6d8" opacity=".95"/>
+        <circle cx="18" cy="48" r="6" fill="#a7dde8"/>
+      </svg>
+      <svg class="tpl-why__deco tpl-why__deco--amber" viewBox="0 0 50 70" aria-hidden="true">
+        <path d="M25 4 C34 24 45 36 45 48 A20 20 0 1 1 5 48 C5 36 16 24 25 4 Z" fill="#e8a34c"/>
+        <circle cx="18" cy="48" r="6" fill="#f5c98a"/>
+      </svg>`;
+    // Волна, проходящая через номера степов (гребни — вверх, чтобы не прятались за карточками)
+    const wave = `
+      <svg class="tpl-why__wave" viewBox="0 0 1200 140" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="tplWaveG" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#5aa46a"/><stop offset=".5" stop-color="#d9812f"/><stop offset="1" stop-color="#c99a2a"/>
+          </linearGradient>
+        </defs>
+        <path d="M -20 96 C 60 110, 140 70, 200 70 C 260 70, 300 16, 400 14 C 500 12, 550 70, 600 70 C 650 70, 690 24, 790 20 C 880 17, 950 70, 1000 70 C 1060 70, 1110 108, 1230 92"
+          fill="none" stroke="url(#tplWaveG)" stroke-width="5" stroke-linecap="round" opacity=".8"/>
+        <path d="M -20 108 C 60 122, 140 82, 200 82 C 260 82, 300 28, 400 26 C 500 24, 550 82, 600 82 C 650 82, 690 36, 790 32 C 880 29, 950 82, 1000 82 C 1060 82, 1110 120, 1230 104"
+          fill="none" stroke="url(#tplWaveG)" stroke-width="2" stroke-linecap="round" opacity=".3"/>
+        <circle cx="400" cy="14" r="6" fill="#d9812f" opacity=".85"/>
+        <circle cx="790" cy="20" r="6" fill="#c99a2a" opacity=".85"/>
+      </svg>`;
     tplWhy = `
       <section class="tpl-why">
+        ${deco}
         <div class="tpl-why__head">
           <h2 class="tpl-why__title">${dict['tplWhy.title'] || ''}</h2>
           <p class="tpl-why__text">${dict['tplWhy.text'] || ''}</p>
         </div>
         <div class="tpl-why__steps">
+          ${wave}
           ${[1, 2, 3].map(n => `
             <div class="tpl-why__step tpl-why__step--${n}">
               <span class="tpl-why__num">${n}</span>

@@ -472,33 +472,58 @@ body.page-leaving { opacity: 0; transition: opacity .2s ease; }
 /* ===== Tauro Pure Nature — витрина «стоящих» флаконов (Step 1·2·3) ===== */
 /* Вставка «зачем нужны степы» в самом верху вкладки Tauro */
 .tpl-why {
-  background: #fff; border: 1px solid rgba(31,42,36,.08); border-radius: 24px;
-  padding: 34px 34px 30px; margin: 4px 0 46px;
-  box-shadow: 0 10px 30px rgba(31,42,36,.05);
+  position: relative; overflow: hidden;
+  background: linear-gradient(115deg, #eef8e9 0%, #fdf6e3 48%, #fdecd9 100%);
+  border: 1px solid rgba(31,42,36,.07); border-radius: 28px;
+  padding: 40px 38px 36px; margin: 4px 0 46px;
+  box-shadow: 0 12px 34px rgba(31,42,36,.07);
 }
-.tpl-why__head { text-align: center; max-width: 700px; margin: 0 auto 24px; }
-.tpl-why__title { font-size: 24px; color: var(--ink); margin: 0 0 10px; }
-.tpl-why__text { color: var(--muted); font-size: 15px; line-height: 1.65; margin: 0; }
-.tpl-why__steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+/* ботанический декор на заднем плане */
+.tpl-why__deco { position: absolute; pointer-events: none; z-index: 0; }
+.tpl-why__deco--rosemary  { width: 64px;  top: -8px;   left: 22px;  transform: rotate(14deg); opacity: .8; }
+.tpl-why__deco--chamomile { width: 84px;  top: 14px;   right: 34px; transform: rotate(-14deg); opacity: .9; }
+.tpl-why__deco--lavender  { width: 52px;  bottom: -12px; left: 8%;  transform: rotate(-10deg); opacity: .8; }
+.tpl-why__deco--citrus    { width: 78px;  bottom: -26px; right: 8%; transform: rotate(18deg); opacity: .85; }
+.tpl-why__deco--leaf      { width: 66px;  bottom: 26px;  left: 36%; transform: rotate(-24deg); opacity: .55; }
+.tpl-why__deco--drop      { width: 26px;  top: 52px;   left: 13%;  transform: rotate(-8deg); opacity: .75; }
+.tpl-why__deco--amber     { width: 24px;  top: 40px;   right: 15%; transform: rotate(10deg); opacity: .8; }
+.tpl-why__head { position: relative; z-index: 1; text-align: center; max-width: 700px; margin: 0 auto 58px; }
+.tpl-why__title { font-size: 26px; color: var(--ink); margin: 0 0 10px; }
+.tpl-why__text { color: #5c6459; font-size: 15px; line-height: 1.65; margin: 0; }
+/* ряд степов + волна, проходящая через номера */
+.tpl-why__steps { position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.tpl-why__wave {
+  position: absolute; left: -38px; right: -38px; width: calc(100% + 76px);
+  top: -70px; height: 140px; z-index: 0; pointer-events: none;
+}
 .tpl-why__step {
-  position: relative; background: var(--tint-soft, #f3f5f8); border-radius: 18px;
-  padding: 20px 20px 18px 20px;
+  position: relative; z-index: 1; text-align: center;
+  background: var(--wbg); border: 1.5px solid var(--wbr); border-radius: 20px;
+  padding: 34px 20px 20px;
+  box-shadow: 0 8px 20px rgba(31,42,36,.06);
 }
-.tpl-why__step--1 { --wc: #5aa46a; }
-.tpl-why__step--2 { --wc: #d9812f; }
-.tpl-why__step--3 { --wc: #c99a2a; }
+.tpl-why__step--1 { --wc: #4e9a60; --wc2: #7cc08d; --wbg: #eaf6ec; --wbr: rgba(90,164,106,.4); --wt: #35703f; }
+.tpl-why__step--2 { --wc: #d9812f; --wc2: #eea45e; --wbg: #fdeede; --wbr: rgba(217,129,47,.38); --wt: #a85e1c; }
+.tpl-why__step--3 { --wc: #c99a2a; --wc2: #e0b955; --wbg: #faf3d9; --wbr: rgba(201,154,42,.4); --wt: #94701a; }
 .tpl-why__num {
+  position: absolute; top: -23px; left: 50%; transform: translateX(-50%);
   display: inline-flex; align-items: center; justify-content: center;
-  width: 34px; height: 34px; border-radius: 50%;
-  background: var(--wc); color: #fff;
-  font-family: var(--head); font-weight: 800; font-size: 16px; margin-bottom: 10px;
+  width: 46px; height: 46px; border-radius: 50%;
+  background: linear-gradient(145deg, var(--wc2), var(--wc)); color: #fff;
+  border: 3px solid #fff;
+  font-family: var(--head); font-weight: 800; font-size: 19px;
+  box-shadow: 0 8px 18px rgba(31,42,36,.22); z-index: 2;
 }
-.tpl-why__step h4 { font-family: var(--head); font-weight: 700; font-size: 15.5px; color: var(--ink); margin: 0 0 6px; }
-.tpl-why__step p { color: var(--muted); font-size: 13.5px; line-height: 1.55; margin: 0; }
+.tpl-why__step h4 { font-family: var(--head); font-weight: 700; font-size: 16px; color: var(--wt); margin: 0 0 6px; }
+.tpl-why__step p { color: #5c6459; font-size: 13.5px; line-height: 1.55; margin: 0; }
 @media (max-width: 720px) {
-  .tpl-why { padding: 24px 18px 20px; }
-  .tpl-why__steps { grid-template-columns: 1fr; gap: 12px; }
-  .tpl-why__title { font-size: 20px; }
+  .tpl-why { padding: 28px 18px 24px; }
+  .tpl-why__head { margin-bottom: 40px; }
+  .tpl-why__steps { grid-template-columns: 1fr; gap: 34px; }
+  .tpl-why__wave { display: none; }
+  .tpl-why__title { font-size: 21px; }
+  .tpl-why__deco--leaf, .tpl-why__deco--drop, .tpl-why__deco--amber { display: none; }
+  .tpl-why__deco--rosemary { left: 6px; } .tpl-why__deco--chamomile { right: 8px; width: 64px; }
 }
 
 .tpl-system { margin: 4px 0 54px; }
