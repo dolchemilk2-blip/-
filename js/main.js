@@ -317,21 +317,37 @@ function renderProducts(brand, lang) {
         <path d="M25 4 C34 24 45 36 45 48 A20 20 0 1 1 5 48 C5 36 16 24 25 4 Z" fill="#e8a34c"/>
         <circle cx="18" cy="48" r="6" fill="#f5c98a"/>
       </svg>`;
-    // Волна, проходящая через номера степов (гребни — вверх, чтобы не прятались за карточками)
-    const wave = `
-      <svg class="tpl-why__wave" viewBox="0 0 1200 140" preserveAspectRatio="none" aria-hidden="true">
+    // Извилистая линия-маршрут через весь экран; степы — остановки на ней.
+    // y в px (высота journey фиксирована 430px), x — растягивается на всю ширину (viewBox 1000).
+    const path = `
+      <svg class="tpl-why__path" viewBox="0 0 1000 430" preserveAspectRatio="none" aria-hidden="true">
         <defs>
           <linearGradient id="tplWaveG" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0" stop-color="#5aa46a"/><stop offset=".5" stop-color="#d9812f"/><stop offset="1" stop-color="#c99a2a"/>
+            <stop offset="0" stop-color="#4e9a60"/><stop offset=".5" stop-color="#d9812f"/><stop offset="1" stop-color="#c99a2a"/>
           </linearGradient>
         </defs>
-        <path d="M -20 96 C 60 110, 140 70, 200 70 C 260 70, 300 16, 400 14 C 500 12, 550 70, 600 70 C 650 70, 690 24, 790 20 C 880 17, 950 70, 1000 70 C 1060 70, 1110 108, 1230 92"
+        <path d="M -30 60 C 60 70, 110 120, 200 120 C 290 120, 270 200, 350 235 C 420 262, 450 250, 520 250 C 600 250, 630 165, 710 148 C 755 139, 790 150, 830 150 C 890 150, 940 200, 1030 245"
           fill="none" stroke="url(#tplWaveG)" stroke-width="5" stroke-linecap="round" opacity=".8"/>
-        <path d="M -20 108 C 60 122, 140 82, 200 82 C 260 82, 300 28, 400 26 C 500 24, 550 82, 600 82 C 650 82, 690 36, 790 32 C 880 29, 950 82, 1000 82 C 1060 82, 1110 120, 1230 104"
-          fill="none" stroke="url(#tplWaveG)" stroke-width="2" stroke-linecap="round" opacity=".3"/>
-        <circle cx="400" cy="14" r="6" fill="#d9812f" opacity=".85"/>
-        <circle cx="790" cy="20" r="6" fill="#c99a2a" opacity=".85"/>
+        <path d="M -30 74 C 60 84, 112 134, 202 134 C 288 134, 272 212, 352 247 C 420 274, 450 262, 520 262 C 598 262, 632 177, 712 160 C 756 151, 790 162, 830 162 C 888 162, 938 212, 1028 257"
+          fill="none" stroke="url(#tplWaveG)" stroke-width="2" stroke-linecap="round" opacity=".28"/>
+        <circle cx="350" cy="235" r="5.5" fill="#d9812f" opacity=".9"/>
+        <circle cx="710" cy="148" r="5.5" fill="#c99a2a" opacity=".9"/>
+        <circle cx="110" cy="97" r="4" fill="#4e9a60" opacity=".75"/>
       </svg>`;
+    // Лапка в конце маршрута — результат :)
+    const paw = `
+      <svg class="tpl-why__paw" viewBox="0 0 60 60" aria-hidden="true">
+        <ellipse cx="30" cy="38" rx="13" ry="11" fill="#c9822f"/>
+        <ellipse cx="12" cy="24" rx="6" ry="8" fill="#c9822f"/>
+        <ellipse cx="25" cy="16" rx="6" ry="8" fill="#c9822f"/>
+        <ellipse cx="39" cy="17" rx="6" ry="8" fill="#c9822f"/>
+        <ellipse cx="50" cy="27" rx="6" ry="8" fill="#c9822f"/>
+      </svg>`;
+    const stops = [
+      { n: 1, x: 20, y: 120, side: 'above' },
+      { n: 2, x: 52, y: 250, side: 'below' },
+      { n: 3, x: 83, y: 150, side: 'above' },
+    ];
     tplWhy = `
       <section class="tpl-why">
         ${deco}
@@ -339,14 +355,17 @@ function renderProducts(brand, lang) {
           <h2 class="tpl-why__title">${dict['tplWhy.title'] || ''}</h2>
           <p class="tpl-why__text">${dict['tplWhy.text'] || ''}</p>
         </div>
-        <div class="tpl-why__steps">
-          ${wave}
-          ${[1, 2, 3].map(n => `
-            <div class="tpl-why__step tpl-why__step--${n}">
-              <span class="tpl-why__num">${n}</span>
-              <h4>${dict['tplWhy.s' + n + '.title'] || ''}</h4>
-              <p>${dict['tplWhy.s' + n + '.text'] || ''}</p>
+        <div class="tpl-why__journey">
+          ${path}
+          ${stops.map(s => `
+            <div class="tpl-why__stop tpl-why__stop--${s.n} tpl-why__stop--${s.side}" style="left:${s.x}%;top:${s.y}px">
+              <span class="tpl-why__num">${s.n}</span>
+              <div class="tpl-why__bubble">
+                <h4>${dict['tplWhy.s' + s.n + '.title'] || ''}</h4>
+                <p>${dict['tplWhy.s' + s.n + '.text'] || ''}</p>
+              </div>
             </div>`).join('')}
+          ${paw}
         </div>
       </section>`;
   }
