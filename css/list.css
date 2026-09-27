@@ -1,0 +1,197 @@
+/* ===== «Мой список» (js/list.js) ===== */
+:root {
+  --like-color: #e0245e;
+  --like-pop-ease: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-like-pop: 300ms;
+  --toast-open: 350ms;
+  --toast-close: 250ms;
+}
+
+/* --- сердечко --- */
+.np-heart {
+  width: 40px; height: 40px; display: inline-grid; place-items: center;
+  border: 0; border-radius: 50%; padding: 0; cursor: pointer;
+  background-color: var(--material-thick, rgba(255,255,255,.85));
+  -webkit-backdrop-filter: var(--blur-thick, none); backdrop-filter: var(--blur-thick, none);
+  color: var(--ink-2, #555);
+  box-shadow: 0 1px 2px rgba(0,0,0,.08), 0 0 0 1px var(--hairline, rgba(0,0,0,.06));
+  transition: transform var(--dur-like-pop) var(--like-pop-ease), color var(--dur-hover) var(--ease-out);
+  -webkit-tap-highlight-color: transparent;
+}
+.np-heart svg { fill: transparent; stroke: currentColor; stroke-width: 1.8; stroke-linejoin: round;
+  transition: fill 150ms var(--ease-out); }
+.np-heart[aria-pressed="true"] { color: var(--like-color); }
+.np-heart[aria-pressed="true"] svg { fill: currentColor; }
+.np-heart:active { transform: scale(var(--press-scale, .97)); transition-duration: var(--dur-press); }
+.np-heart.is-pop-start { transform: scale(.85); transition: none; }
+.np-heart:focus-visible, .np-fab:focus-visible, .np-listpanel button:focus-visible, .np-toast__undo:focus-visible {
+  outline: var(--focus-ring, 2px solid currentColor); outline-offset: 2px;
+}
+@media (hover: hover) and (pointer: fine) {
+  .np-heart:hover { color: var(--like-color); }
+}
+
+/* --- toast --- */
+.np-toast-region {
+  position: fixed; left: 50%; bottom: max(24px, env(safe-area-inset-bottom)); translate: -50% 0;
+  z-index: 1200; pointer-events: none; width: max-content; max-width: calc(100vw - 32px);
+}
+.np-toast {
+  pointer-events: auto; display: flex; align-items: center; gap: 14px;
+  padding: 10px 10px 10px 18px; border-radius: var(--r-panel, 14px);
+  background: var(--night, #1d1d1f); color: var(--night-ink, #fff);
+  font: 500 var(--t-callout, 15px)/1.3 var(--font, system-ui);
+  box-shadow: var(--shadow-lg, 0 10px 30px rgba(0,0,0,.2));
+  opacity: 0; transform: translateY(16px) scale(.97); visibility: hidden;
+  transition: opacity var(--toast-close) var(--ease-out), transform var(--toast-close) var(--ease-out), visibility 0s linear var(--toast-close);
+}
+.np-toast.is-open {
+  opacity: 1; transform: none; visibility: visible;
+  transition: opacity var(--toast-open) var(--ease-out), transform var(--toast-open) var(--ease-out), visibility 0s;
+}
+.np-toast__undo {
+  border: 0; border-radius: var(--r-pill, 999px); padding: 7px 14px; cursor: pointer;
+  background: rgba(255,255,255,.14); color: inherit; font: inherit; font-weight: 600;
+  transition: background-color var(--dur-hover) var(--ease-out);
+}
+.np-toast__undo[hidden] { display: none; }
+@media (hover: hover) and (pointer: fine) { .np-toast__undo:hover { background: rgba(255,255,255,.24); } }
+
+/* --- плавающая кнопка --- */
+.np-fab {
+  position: fixed; right: max(16px, env(safe-area-inset-right)); bottom: max(20px, env(safe-area-inset-bottom));
+  z-index: 1100; display: inline-flex; align-items: center; gap: 8px;
+  height: 48px; padding: 0 8px 0 16px; border: 0; border-radius: var(--r-pill, 999px); cursor: pointer;
+  background: var(--night, #1d1d1f); color: var(--night-ink, #fff);
+  font: 600 var(--t-footnote, 14px)/1 var(--font, system-ui);
+  box-shadow: var(--shadow-lg, 0 10px 30px rgba(0,0,0,.2));
+  opacity: 0; visibility: hidden; transform: translateY(12px) scale(.96);
+  transition: opacity var(--dur-pop-out) var(--ease-out), transform var(--dur-pop-out) var(--ease-out), visibility 0s linear var(--dur-pop-out);
+}
+.np-fab.is-visible {
+  opacity: 1; visibility: visible; transform: none;
+  transition: opacity var(--dur-pop-in) var(--ease-out), transform var(--dur-spring-snappy) var(--spring, var(--ease-out)), visibility 0s;
+}
+.np-fab svg { fill: var(--like-color); stroke: none; width: 18px; height: 18px; }
+.np-fab__count {
+  min-width: 28px; height: 28px; padding: 0 8px; display: inline-grid; place-items: center;
+  border-radius: var(--r-pill, 999px); background: rgba(255,255,255,.16);
+  font-variant-numeric: tabular-nums;
+  transition: transform var(--dur-like-pop) var(--like-pop-ease), opacity var(--dur-pop-in) var(--ease-out), filter var(--dur-pop-in) var(--ease-out);
+}
+.np-fab__count.is-pop-start { transform: translateY(4px) scale(.8); opacity: .4; filter: blur(2px); transition: none; }
+.np-fab:active { transform: scale(var(--press-scale, .97)); transition-duration: var(--dur-press); }
+@media (max-width: 640px) {
+  .np-fab__label { display: none; }
+  .np-fab { padding: 0 8px 0 14px; }
+  .np-toast-region { bottom: calc(max(20px, env(safe-area-inset-bottom)) + 60px); }
+}
+html.modal-open .np-fab, html:has(body.modal-open) .np-fab { opacity: 0; visibility: hidden; }
+
+/* --- панель --- */
+html.np-list-open { overflow: hidden; }
+.np-listpanel { position: fixed; inset: 0; z-index: 1150; }
+.np-listpanel[hidden] { display: none; }
+.np-listpanel__scrim {
+  position: absolute; inset: 0; background: var(--backdrop, rgba(0,0,0,.35));
+  opacity: 0; transition: opacity var(--dur-drawer-out, 250ms) var(--ease-out);
+}
+.np-listpanel.is-open .np-listpanel__scrim { opacity: 1; transition-duration: var(--dur-drawer-in, 500ms); }
+.np-listpanel__sheet {
+  position: absolute; top: 0; right: 0; bottom: 0; width: min(420px, 100vw);
+  display: flex; flex-direction: column; overflow: hidden; overscroll-behavior: contain;
+  background: var(--paper, #fff); color: var(--ink, #1d1d1f);
+  box-shadow: var(--shadow-modal, -10px 0 40px rgba(0,0,0,.18));
+  transform: translate3d(100%, 0, 0);
+  transition: transform var(--dur-drawer-out, 250ms) var(--ease-drawer);
+  outline: none;
+}
+.np-listpanel.is-open .np-listpanel__sheet { transform: none; transition-duration: var(--dur-drawer-in, 500ms); }
+.np-listpanel__grip { display: none; }
+.np-listpanel.is-sheet .np-listpanel__sheet {
+  top: auto; left: 0; width: 100%; max-height: 86vh; max-height: 86dvh;
+  border-radius: var(--r-panel, 16px) var(--r-panel, 16px) 0 0;
+  padding-bottom: env(safe-area-inset-bottom);
+  transform: translate3d(0, 100%, 0);
+}
+.np-listpanel.is-sheet.is-open .np-listpanel__sheet { transform: none; }
+.np-listpanel.is-sheet .np-listpanel__grip {
+  display: block; width: 36px; height: 5px; margin: 8px auto 0; border-radius: 3px; background: var(--hairline-strong, rgba(0,0,0,.2));
+  touch-action: none;
+}
+.np-listpanel.is-sheet .np-listpanel__head { touch-action: none; cursor: grab; }
+.np-listpanel__head {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 16px 16px 12px 20px; border-bottom: 1px solid var(--hairline, rgba(0,0,0,.08));
+}
+.np-listpanel__title { margin: 0; font: 600 var(--t-headline, 20px)/1.2 var(--head, var(--font, system-ui)); letter-spacing: var(--track-headline, 0); }
+.np-listpanel__close {
+  width: 36px; height: 36px; border: 0; border-radius: 50%; cursor: pointer; font-size: 22px; line-height: 1;
+  background: var(--paper-2, #f2f2f2); color: var(--ink-2, #555);
+}
+.np-listpanel__empty { margin: 0; padding: 32px 20px; color: var(--ink-2, #555); font-size: var(--t-body, 16px); line-height: 1.5; }
+.np-listpanel__empty[hidden] { display: none; }
+.np-listpanel__list { list-style: none; margin: 0; padding: 8px 8px; overflow-y: auto; flex: 1 1 auto; overscroll-behavior: contain; }
+.np-li { display: flex; align-items: center; gap: 4px; }
+.np-li__open {
+  flex: 1 1 auto; min-width: 0; display: flex; align-items: center; gap: 12px; text-align: left;
+  padding: 8px 10px; border: 0; border-radius: var(--r-input, 12px); background: transparent; color: inherit; font: inherit; cursor: pointer;
+  transition: background-color var(--dur-hover) var(--ease-out);
+}
+.np-li__thumb {
+  flex: 0 0 52px; width: 52px; height: 52px; display: grid; place-items: center; overflow: hidden;
+  border-radius: 10px; background: var(--card-bg, var(--paper-2, #f5f5f7)); font-size: 24px;
+}
+.np-li__thumb img { width: 100%; height: 100%; object-fit: contain; }
+.np-li__text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.np-li__name { font-weight: 600; font-size: var(--t-callout, 15px); line-height: 1.3; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.np-li__brand { color: var(--ink-3, #86868b); font-size: var(--t-footnote, 13px); }
+.np-li__remove {
+  flex: 0 0 auto; width: 36px; height: 36px; border: 0; border-radius: 50%; background: transparent; cursor: pointer;
+  color: var(--ink-3, #86868b); font-size: 20px; line-height: 1;
+  transition: background-color var(--dur-hover) var(--ease-out), color var(--dur-hover) var(--ease-out);
+}
+@media (hover: hover) and (pointer: fine) {
+  .np-li__open:hover { background: var(--paper-2, #f5f5f7); }
+  .np-li__remove:hover { background: var(--paper-2, #f5f5f7); color: var(--ink, #1d1d1f); }
+  .np-listpanel__close:hover { color: var(--ink, #1d1d1f); }
+}
+.np-listpanel__foot { display: flex; gap: 8px; padding: 12px 16px 16px; border-top: 1px solid var(--hairline, rgba(0,0,0,.08)); }
+.np-listpanel__foot[hidden] { display: none; }
+.np-btn {
+  flex: 1 1 0; height: 44px; border-radius: var(--r-pill, 999px); cursor: pointer;
+  border: 1px solid var(--hairline-strong, rgba(0,0,0,.15)); background: transparent; color: var(--ink, #1d1d1f);
+  font: 600 var(--t-footnote, 14px)/1 var(--font, system-ui);
+  transition: background-color var(--dur-hover) var(--ease-out), transform var(--dur-release) var(--ease-out);
+}
+.np-btn--primary { background: var(--accent, #1d1d1f); border-color: transparent; color: var(--white, #fff); }
+.np-btn:active { transform: scale(var(--press-scale, .97)); transition-duration: var(--dur-press); }
+
+/* --- системные настройки --- */
+@media (prefers-reduced-motion: reduce) {
+  .np-heart, .np-heart svg, .np-fab, .np-fab.is-visible, .np-fab__count { transition: opacity 150ms linear, color 150ms linear, fill 150ms linear, visibility 0s; transform: none !important; }
+  .np-toast, .np-toast.is-open { transform: none; transition: opacity 150ms linear, visibility 0s linear 150ms; }
+  .np-toast.is-open { transition: opacity 150ms linear, visibility 0s; }
+  .np-listpanel__sheet, .np-listpanel.is-sheet .np-listpanel__sheet { transform: none; opacity: 0; transition: opacity 150ms linear; }
+  .np-listpanel.is-open .np-listpanel__sheet { opacity: 1; }
+  .np-listpanel__scrim { transition: opacity 150ms linear; }
+}
+@media (prefers-reduced-transparency: reduce) {
+  .np-heart { background-color: var(--paper, #fff); -webkit-backdrop-filter: none; backdrop-filter: none; }
+}
+@media (forced-colors: active) {
+  .np-heart[aria-pressed="true"] { color: Highlight; }
+  .np-fab, .np-toast, .np-btn { border: 1px solid CanvasText; }
+}
+
+/* --- печать: только чек-лист списка --- */
+.np-print { display: none; }
+@media print {
+  html.np-printing body > *:not(.np-print) { display: none !important; }
+  html.np-printing .np-print { display: block !important; color: #000; font: 12pt/1.5 var(--font, system-ui); }
+  .np-print h1 { font-size: 18pt; margin: 0 0 12pt; }
+  .np-print ul { list-style: none; margin: 0; padding: 0; }
+  .np-print li { display: flex; align-items: center; gap: 10pt; padding: 6pt 0; border-bottom: 0.5pt solid #bbb; break-inside: avoid; }
+  .np-print__box { flex: 0 0 12pt; width: 12pt; height: 12pt; border: 1pt solid #000; border-radius: 2pt; }
+  .np-fab, .np-toast-region, .np-listpanel { display: none !important; }
+}

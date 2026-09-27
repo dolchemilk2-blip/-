@@ -3,15 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title data-i18n="meta.title">Nature's Protection — Premium qida heyvanlar üçün</title>
-  <meta name="description" data-i18n="meta.description" content="Premium kateqoriyalı pişik və itlər üçün qida və qulluq." />
+  <title data-i18n="meta.title">Nature's Protection — премиальное питание для кошек и собак</title>
+  <meta name="description" data-i18n="meta.description" content="Премиальные корма, уход и игрушки для кошек и собак: Nature's Protection, Araton, Tauro Pro Line и Misoko." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/tokens.css" />
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/home.css" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 </head>
-<body class="page-enter">
+<body class="page-enter home">
+  <a class="skip-link" href="#main" data-i18n="home.skip">Перейти к содержанию</a>
+
   <!-- ===== Header ===== -->
   <header class="header" id="header">
     <div class="container header__inner">
@@ -19,8 +23,7 @@
         <img src="assets/logo.png" alt="Nature's Protection — Life at its best" class="logo__img" width="178" height="60" />
       </a>
 
-      <nav class="nav" id="nav">
-        <a href="#home" class="nav__link" data-i18n="nav.home">Главная</a>
+      <nav class="nav" id="nav" aria-label="Main">
         <a href="products.html" class="nav__link" data-i18n="nav.products">Продукция</a>
         <a href="#about" class="nav__link" data-i18n="nav.about">О бренде</a>
         <a href="#values" class="nav__link" data-i18n="nav.values">Ценности</a>
@@ -31,225 +34,288 @@
 
       <div class="header__actions">
         <div class="lang" id="lang">
-          <button class="lang__current" id="langBtn" aria-haspopup="true" aria-expanded="false">
+          <button class="lang__current" id="langBtn" type="button" aria-expanded="false" aria-controls="langMenu">
             <span id="langLabel">RU</span>
             <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
-          <ul class="lang__menu" id="langMenu" role="menu">
-            <li><button data-lang="az" role="menuitem">AZ — Azərbaycan</button></li>
-            <li><button data-lang="ru" role="menuitem">RU — Русский</button></li>
-            <li><button data-lang="en" role="menuitem">EN — English</button></li>
+          <ul class="lang__menu" id="langMenu">
+            <li><button type="button" data-lang="az" lang="az">AZ — Azərbaycan</button></li>
+            <li><button type="button" data-lang="ru" lang="ru">RU — Русский</button></li>
+            <li><button type="button" data-lang="en" lang="en">EN — English</button></li>
           </ul>
         </div>
-        <button class="burger" id="burger" aria-label="Menu">
+        <button class="burger" id="burger" type="button" aria-label="Menu" aria-controls="nav" aria-expanded="false" data-i18n-aria="home.menu">
           <span></span><span></span><span></span>
         </button>
       </div>
     </div>
   </header>
 
-  <!-- ===== Hero ===== -->
-  <section class="hero" id="home">
-    <div class="hero-bg" id="heroBg">
-      <img src="assets/pets-1.jpg" class="hero-bg__slide" alt="" aria-hidden="true" />
-      <img src="assets/pets-2.jpg" class="hero-bg__slide" alt="" aria-hidden="true" loading="lazy" />
-      <img src="assets/pets-3.jpg" class="hero-bg__slide" alt="" aria-hidden="true" loading="lazy" />
-    </div>
-    <div class="hero-bg__scrim" aria-hidden="true"></div>
-    <div class="container hero__inner hero__inner--solo">
-      <div class="hero__content">
-        <span class="badge" data-i18n="hero.badge">Премиум-питание</span>
-        <h1 class="hero__title" data-i18n="hero.title">Здоровое питание для вашего любимца</h1>
-        <p class="hero__text" data-i18n="hero.text">Натуральные ингредиенты и сбалансированные формулы для кошек и собак любого возраста.</p>
-        <div class="hero__actions">
-          <a href="products.html" class="btn btn--primary" data-i18n="hero.cta1">Смотреть продукцию</a>
-          <a href="#about" class="btn btn--ghost" data-i18n="hero.cta2">О бренде</a>
+  <div id="npLive" class="sr-only" aria-live="polite"></div>
+
+  <main id="main" tabindex="-1">
+    <!-- ===== 1. Hero ===== -->
+    <section class="hero hero--home" id="home" aria-labelledby="heroTitle">
+      <div class="hero-bg" id="heroBg">
+        <img src="assets/pets-1.jpg" class="hero-bg__slide" alt="" aria-hidden="true" fetchpriority="high" />
+        <img src="assets/pets-2.jpg" class="hero-bg__slide" alt="" aria-hidden="true" loading="lazy" />
+        <img src="assets/pets-3.jpg" class="hero-bg__slide" alt="" aria-hidden="true" loading="lazy" />
+      </div>
+      <div class="hero-bg__scrim" aria-hidden="true"></div>
+
+      <div class="container hero-home__inner">
+        <div class="hero-home__content">
+          <p class="hero-home__eyebrow" data-i18n="hero.badge">Премиум-питание</p>
+          <h1 class="hero-home__title" id="heroTitle" data-i18n="hero.title">Здоровое питание для вашего любимца</h1>
+          <p class="hero-home__text" data-i18n="hero.text">Натуральные ингредиенты и сбалансированные формулы для кошек и собак любого возраста.</p>
+          <div class="hero-home__actions">
+            <a href="products.html" class="btn btn--primary" data-i18n="home.hero.cta">Смотреть каталог</a>
+            <a href="#coat" class="hero-home__link"><span data-i18n="home.hero.cta2">Подобрать по окрасу</span> <span aria-hidden="true">›</span></a>
+          </div>
+
+          <nav class="intents" aria-labelledby="intentsLabel">
+            <p class="intents__label" id="intentsLabel" data-i18n="home.intent.label">Быстрый выбор</p>
+            <ul class="intents__list">
+              <li><a class="intent" href="products.html#q=Sterilised" data-i18n="home.intent.steril">Для стерилизованных кошек</a></li>
+              <li><a class="intent" href="products.html#q=Detangling" data-i18n="home.intent.mats">От колтунов</a></li>
+              <li><a class="intent" href="products.html#q=Grain%20Free" data-i18n="home.intent.grain">Беззерновой корм</a></li>
+              <li><a class="intent" href="products.html#brand=misoko" data-i18n="home.intent.misoko">Игрушки Misoko</a></li>
+            </ul>
+          </nav>
         </div>
-        <div class="hero__stats">
-          <div class="stat"><strong>100%</strong><span data-i18n="hero.stat1">натуральный состав</span></div>
-          <div class="stat"><strong>70+</strong><span data-i18n="hero.stat2">товаров в каталоге</span></div>
-          <div class="stat"><strong>20</strong><span data-i18n="hero.stat3">лет на рынке</span></div>
+
+        <dl class="hero-stats">
+          <div class="hero-stats__item"><dt data-i18n="home.stat.brands.n">4</dt><dd data-i18n="home.stat.brands">бренда</dd></div>
+          <div class="hero-stats__item"><dt data-i18n="home.stat.products.n">260+</dt><dd data-i18n="home.stat.products">товаров в каталоге</dd></div>
+          <div class="hero-stats__item"><dt>2004</dt><dd data-i18n="home.stat.since">год открытия фабрики</dd></div>
+        </dl>
+      </div>
+
+      <div class="hero-home__controls">
+        <button class="hero-ctl" id="heroPrev" type="button" aria-label="Предыдущее фото" data-i18n-aria="home.hero.prev">
+          <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M11 4L6 9l5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="hero-ctl" id="heroNext" type="button" aria-label="Следующее фото" data-i18n-aria="home.hero.next">
+          <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M7 4l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- ===== 2. Coat colour chapter (scene) ===== -->
+    <section class="coat" id="coat" data-scene aria-labelledby="coatTitle">
+      <div class="container coat__inner">
+        <div class="coat__copy">
+          <p class="coat__eyebrow">Nature's Protection Superior Care</p>
+          <h2 class="coat__title" id="coatTitle" data-i18n="home.coat.title">Цвет шерсти — тоже забота</h2>
+          <p class="coat__lead" data-i18n="home.coat.lead">Три линии Superior Care учитывают окрас. Выберите цвет шерсти вашего питомца.</p>
+
+          <fieldset class="coat-seg">
+            <legend class="sr-only" data-i18n="home.coat.group">Цвет шерсти</legend>
+            <span class="coat-seg__ind" aria-hidden="true"></span>
+            <input type="radio" name="coat" id="coatWhite" value="white" checked />
+            <label for="coatWhite"><span class="coat-seg__dot coat-seg__dot--white" aria-hidden="true"></span><span data-i18n="home.coat.white">Белая</span></label>
+            <input type="radio" name="coat" id="coatRed" value="red" />
+            <label for="coatRed"><span class="coat-seg__dot coat-seg__dot--red" aria-hidden="true"></span><span data-i18n="home.coat.red">Рыжая</span></label>
+            <input type="radio" name="coat" id="coatDark" value="dark" />
+            <label for="coatDark"><span class="coat-seg__dot coat-seg__dot--dark" aria-hidden="true"></span><span data-i18n="home.coat.dark">Тёмная</span></label>
+          </fieldset>
+
+          <div class="coat__texts" aria-live="polite">
+            <div class="coat__text" data-coat="white"><h3 data-i18n="coat.white.title">Для светлой и белой шерсти</h3><p data-i18n="coat.white.desc">Формулы White Cats / White Dogs с белой рыбой, лососем и крилем — против слёзных дорожек, для чистой светлой шерсти.</p></div>
+            <div class="coat__text" data-coat="red"><h3 data-i18n="coat.red.title">Для рыжей и коричневой шерсти</h3><p data-i18n="coat.red.desc">Линия Red Coat / Red Cats с комплексом RCE — подчёркивает насыщенность рыжего и коричневого окраса.</p></div>
+            <div class="coat__text" data-coat="dark"><h3 data-i18n="coat.dark.title">Для чёрной и тёмной шерсти</h3><p data-i18n="coat.dark.desc">Линия Dark Coat / Dark Cats с комплексом DCE — сохраняет глубокий тёмный и чёрный окрас.</p></div>
+          </div>
+
+          <a class="btn btn--primary coat__cta" href="products.html#brand=np"><span data-i18n="home.coat.cta">Смотреть линейку</span> <span aria-hidden="true">›</span></a>
+        </div>
+
+        <div class="coat__stage" aria-hidden="true">
+          <div class="coat__glow"></div>
+          <figure class="coat__pack" data-coat="white">
+            <img class="coat__cat" src="assets/products/cat-sc-light.png" alt="" width="600" height="600" loading="lazy" />
+            <img class="coat__dog" src="assets/products/scp-dog-white.webp" alt="" width="700" height="700" loading="lazy" />
+          </figure>
+          <figure class="coat__pack" data-coat="red">
+            <img class="coat__cat" src="assets/products/cat-sc-brown.png" alt="" width="600" height="600" loading="lazy" />
+            <img class="coat__dog" src="assets/products/scp-dog-red.webp" alt="" width="700" height="700" loading="lazy" />
+          </figure>
+          <figure class="coat__pack" data-coat="dark">
+            <img class="coat__cat" src="assets/products/cat-sc-dark.png" alt="" width="600" height="600" loading="lazy" />
+            <img class="coat__dog" src="assets/products/scp-dog-dark.webp" alt="" width="700" height="700" loading="lazy" />
+          </figure>
         </div>
       </div>
-    </div>
-    <button class="hero__arrow hero__arrow--prev" id="heroPrev" type="button" aria-label="Предыдущее фото">‹</button>
-    <button class="hero__arrow hero__arrow--next" id="heroNext" type="button" aria-label="Следующее фото">›</button>
-  </section>
+    </section>
 
-  <!-- ===== Brand tabs (история / послы / ценности / FAQ) ===== -->
-  <section class="section brand" id="values">
-    <div class="container">
-      <div class="section__head">
-        <span class="section__tag" data-i18n="brand.tag">Узнайте больше</span>
-        <h2 class="section__title" data-i18n="brand.title">О Nature's Protection</h2>
+    <!-- ===== 3. Four brands ===== -->
+    <section class="section lineup" id="brands" aria-labelledby="brandsTitle">
+      <div class="container">
+        <div class="home-head" data-reveal>
+          <p class="home-head__tag" data-i18n="products.tag">Наша продукция</p>
+          <h2 class="home-head__title" id="brandsTitle" data-i18n="home.brands.title">Четыре бренда</h2>
+        </div>
+        <ul class="lineup__grid">
+          <li data-reveal><a class="tile tile--np" href="products.html#brand=np">
+            <span class="tile__name">Nature's Protection</span>
+            <span class="tile__line" data-i18n="home.brands.np">Корма и витамины для кошек и собак</span>
+            <img class="tile__img" src="assets/products/cat-sc-light.png" alt="" width="600" height="600" loading="lazy" />
+          </a></li>
+          <li data-reveal><a class="tile tile--araton" href="products.html#brand=araton">
+            <span class="tile__name">Araton</span>
+            <span class="tile__line" data-i18n="home.brands.araton">Сбалансированные корма на каждый день</span>
+            <img class="tile__img" src="assets/products/art-cat-kitten.png" alt="" loading="lazy" />
+          </a></li>
+          <li data-reveal><a class="tile tile--tpl" href="products.html#brand=tpl">
+            <span class="tile__name">Tauro Pro Line</span>
+            <span class="tile__line" data-i18n="home.brands.tpl">Профессиональный груминг</span>
+            <img class="tile__img" src="assets/products/tpl-pn-5in1.webp" alt="" loading="lazy" />
+          </a></li>
+          <li data-reveal><a class="tile tile--misoko" href="products.html#brand=misoko">
+            <span class="tile__name">Misoko</span>
+            <span class="tile__line" data-i18n="home.brands.misoko">Игрушки и аксессуары</span>
+            <img class="tile__img" src="assets/products/misoko-beimr01182.webp" alt="" loading="lazy" />
+          </a></li>
+        </ul>
       </div>
+    </section>
 
-      <div class="tabs" role="tablist">
-        <button class="brand-tab is-active" data-tab="values" data-i18n="tab.values">Ценности</button>
-        <button class="brand-tab" data-tab="history" data-i18n="tab.history">История</button>
-        <button class="brand-tab" data-tab="ambassadors" data-i18n="tab.ambassadors">Послы</button>
-        <button class="brand-tab" data-tab="faq" data-i18n="tab.faq">Вопросы</button>
-      </div>
+    <!-- ===== 4. About NP: values / history / ambassadors / FAQ ===== -->
+    <section class="section home-values" id="values" aria-labelledby="valuesTitle">
+      <div class="container">
+        <div class="home-head home-head--center" data-reveal>
+          <p class="home-head__tag" data-i18n="brand.tag">Узнайте больше</p>
+          <h2 class="home-head__title" id="valuesTitle" data-i18n="brand.title">О Nature's Protection</h2>
+        </div>
 
-      <div class="brand-panels">
-        <!-- Ценности -->
-        <div class="brand-panel is-active" data-panel="values">
-          <div class="values__grid">
-            <article class="value-card">
-              <div class="value-card__icon">🐾</div>
-              <h3 data-i18n="values.v1.title">Питание и уход</h3>
-              <p data-i18n="values.v1.text">Здоровье питомца — это 80% сбалансированного питания и 20% ежедневного и ветеринарного ухода.</p>
-            </article>
-            <article class="value-card">
-              <div class="value-card__icon">🧬</div>
-              <h3 data-i18n="values.v2.title">MicroZeoGen — инновация от природы</h3>
-              <p data-i18n="values.v2.text">Все продукты дополнены природным минералом MicroZeoGen (клиноптилолит): он впитывает токсины и примеси, поддерживая здоровье и жизнеспособность питомца.</p>
-            </article>
-            <article class="value-card">
-              <div class="value-card__icon">🌿</div>
-              <h3 data-i18n="values.v3.title">Без зерна и пшеницы</h3>
-              <p data-i18n="values.v3.text">Первый ингредиент — животный белок: мясо, рыба или личинки насекомых. Без злаков и пшеницы, подходит питомцам с чувствительным пищеварением.</p>
-            </article>
-            <article class="value-card">
-              <div class="value-card__icon">♻️</div>
-              <h3 data-i18n="values.v4.title">Забота о планете</h3>
-              <p data-i18n="values.v4.text">Корма производятся на «зелёной» энергии (солнце, ветер, вода), с экологичными источниками белка и крилем с сертификатом MSC.</p>
-            </article>
+        <div class="tabs" role="tablist" aria-labelledby="valuesTitle">
+          <button class="brand-tab is-active" type="button" role="tab" id="tab-values" aria-controls="panel-values" aria-selected="true" data-tab="values" data-i18n="tab.values">Ценности</button>
+          <button class="brand-tab" type="button" role="tab" id="tab-history" aria-controls="panel-history" aria-selected="false" tabindex="-1" data-tab="history" data-i18n="tab.history">История</button>
+          <button class="brand-tab" type="button" role="tab" id="tab-ambassadors" aria-controls="panel-ambassadors" aria-selected="false" tabindex="-1" data-tab="ambassadors" data-i18n="tab.ambassadors">Послы</button>
+          <button class="brand-tab" type="button" role="tab" id="tab-faq" aria-controls="panel-faq" aria-selected="false" tabindex="-1" data-tab="faq" data-i18n="tab.faq">Вопросы</button>
+        </div>
+
+        <div class="brand-panels">
+          <div class="brand-panel is-active" data-panel="values" id="panel-values" role="tabpanel" aria-labelledby="tab-values" tabindex="0">
+            <div class="values__grid">
+              <article class="value-card">
+                <svg class="value-card__icon" viewBox="0 0 32 32" aria-hidden="true"><circle cx="10" cy="11" r="3"/><circle cx="22" cy="11" r="3"/><circle cx="6" cy="18" r="2.5"/><circle cx="26" cy="18" r="2.5"/><path d="M16 16c-4 0-7 5-7 8 0 2 2 3 4 2.5s4-.5 6 0 4-.5 4-2.5c0-3-3-8-7-8z"/></svg>
+                <h3 data-i18n="values.v1.title">Питание и уход</h3>
+                <p data-i18n="values.v1.text">Здоровье питомца — это 80% сбалансированного питания и 20% ежедневного и ветеринарного ухода.</p>
+              </article>
+              <article class="value-card">
+                <svg class="value-card__icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4l10 6v12l-10 6-10-6V10z"/><path d="M16 4v24M6 10l20 12M26 10L6 22"/></svg>
+                <h3 data-i18n="values.v2.title">MicroZeoGen — инновация от природы</h3>
+                <p data-i18n="values.v2.text">Все продукты дополнены природным минералом MicroZeoGen (клиноптилолит): он впитывает токсины и примеси, поддерживая здоровье и жизнеспособность питомца.</p>
+              </article>
+              <article class="value-card">
+                <svg class="value-card__icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 28V12"/><path d="M16 18c-5 0-8-3-9-8 5 0 8 3 9 8zM16 14c4 0 7-3 8-7-4 0-7 3-8 7z"/></svg>
+                <h3 data-i18n="values.v3.title">Без зерна и пшеницы</h3>
+                <p data-i18n="values.v3.text">Первый ингредиент — животный белок: мясо, рыба или личинки насекомых. Без злаков и пшеницы, подходит питомцам с чувствительным пищеварением.</p>
+              </article>
+              <article class="value-card">
+                <svg class="value-card__icon" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="11"/><path d="M5 16h22M16 5c3 3 4.5 7 4.5 11S19 24 16 27M16 5c-3 3-4.5 7-4.5 11S13 24 16 27"/></svg>
+                <h3 data-i18n="values.v4.title">Забота о планете</h3>
+                <p data-i18n="values.v4.text">Корма производятся на «зелёной» энергии (солнце, ветер, вода), с экологичными источниками белка и крилем с сертификатом MSC.</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="brand-panel" data-panel="history" id="panel-history" role="tabpanel" aria-labelledby="tab-history" tabindex="0">
+            <p class="brand-intro" data-i18n="brand.hist.intro">Путь Nature's Protection — это история инноваций, науки и любви к животным.</p>
+            <ul class="timeline">
+              <li data-i18n="brand.hist.m1">2004 — Открытие современной фабрики Akvatera LT в Каунасском крае стало основой нашего качества.</li>
+              <li data-i18n="brand.hist.m2">Рождение бренда — Появился Nature's Protection: гармония природы, науки и заботы.</li>
+              <li data-i18n="brand.hist.m3">Superior Care — Запуск линии с минералом MicroZeoGen против слёзных дорожек у питомцев со светлым окрасом.</li>
+              <li data-i18n="brand.hist.m4">Мировые рынки — Продукция вышла в Азию, США и десятки стран; Akvatera LT получила звание «Экспортёр года».</li>
+              <li data-i18n="brand.hist.m5">Akvatera W — Открытие современного завода влажных кормов на возобновляемой энергии (инвестиции €20 млн).</li>
+            </ul>
+            <p class="brand-slogan" data-i18n="brand.hist.slogan">Наша миссия неизменна — подарить вам и вашему питомцу больше лет вместе.</p>
+          </div>
+
+          <div class="brand-panel" data-panel="ambassadors" id="panel-ambassadors" role="tabpanel" aria-labelledby="tab-ambassadors" tabindex="0">
+            <p data-i18n="brand.amb.text">Заводчики, грумеры и шоу-хендлеры по всей Европе и Азии выбирают Nature's Protection и Tauro Pro Line.</p>
+            <blockquote class="brand-quote" data-i18n="brand.amb.quote">«Лучшее натуральное питание позволило мне и моим клиентам блистать на самых высоких подиумах Европы и Азии» — посол бренда.</blockquote>
+          </div>
+
+          <div class="brand-panel" data-panel="faq" id="panel-faq" role="tabpanel" aria-labelledby="tab-faq" tabindex="0">
+            <div class="faq">
+              <details class="faq__item"><summary data-i18n="brand.faq.q1">Можно ли кормить питомца одним кормом всю жизнь?</summary><p data-i18n="brand.faq.a1">Потребности меняются с возрастом.</p></details>
+              <details class="faq__item"><summary data-i18n="brand.faq.q2">Можно ли смешивать сухой и влажный корм?</summary><p data-i18n="brand.faq.a2">Да.</p></details>
+              <details class="faq__item"><summary data-i18n="brand.faq.q3">Есть ли в кормах искусственные добавки?</summary><p data-i18n="brand.faq.a3">Нет.</p></details>
+              <details class="faq__item"><summary data-i18n="brand.faq.q4">Подходит ли корм чувствительным питомцам?</summary><p data-i18n="brand.faq.a4">Да.</p></details>
+              <details class="faq__item"><summary data-i18n="brand.faq.q5">Как перевести питомца на новый корм?</summary><p data-i18n="brand.faq.a5">Постепенно, за 5–7 дней.</p></details>
+            </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- История -->
-        <div class="brand-panel" data-panel="history">
-          <p class="brand-intro" data-i18n="brand.hist.intro">Путь Nature's Protection — это история инноваций, науки и любви к животным.</p>
-          <ul class="timeline">
-            <li data-i18n="brand.hist.m1">2004 — Открытие современной фабрики Akvatera LT в Каунасском крае стало основой нашего качества.</li>
-            <li data-i18n="brand.hist.m2">Рождение бренда — Появился Nature's Protection: гармония природы, науки и заботы.</li>
-            <li data-i18n="brand.hist.m3">Superior Care — Запуск линии с минералом MicroZeoGen против слёзных дорожек у питомцев со светлым окрасом.</li>
-            <li data-i18n="brand.hist.m4">Мировые рынки — Продукция вышла в Азию, США и десятки стран; Akvatera LT получила звание «Экспортёр года».</li>
-            <li data-i18n="brand.hist.m5">Akvatera W — Открытие современного завода влажных кормов на возобновляемой энергии (инвестиции €20 млн).</li>
+    <!-- ===== 5. About / proof ===== -->
+    <section class="section home-about" id="about" aria-labelledby="aboutTitle">
+      <div class="container home-about__inner">
+        <figure class="home-about__media" data-reveal>
+          <img src="assets/result-maltese.jpg" class="home-about__photo" alt="Мальтезе до и после: меньше слёзных дорожек на рационе Superior Care White" data-i18n-alt="home.about.alt" loading="lazy" />
+          <figcaption data-i18n="home.about.caption">До и после: слёзные дорожки у мальтезе на рационе Superior Care White.</figcaption>
+        </figure>
+        <div class="home-about__content">
+          <p class="home-head__tag" data-reveal data-i18n="about.tag">О бренде</p>
+          <h2 class="home-head__title" id="aboutTitle" data-reveal data-i18n="about.title">Природа в основе питания</h2>
+          <p data-reveal data-i18n="about.text1">Мы создаём корма, вдохновлённые естественным рационом животных.</p>
+          <p data-reveal data-i18n="about.text2">Каждая формула разработана при участии ветеринаров и специалистов по питанию.</p>
+          <ul class="home-about__list" data-reveal>
+            <li data-i18n="about.li1">Отборное мясо как первый ингредиент</li>
+            <li data-i18n="about.li2">Поддержка иммунитета и пищеварения</li>
+            <li data-i18n="about.li3">Здоровая кожа и блестящая шерсть</li>
           </ul>
-          <p class="brand-slogan" data-i18n="brand.hist.slogan">Наша миссия неизменна — подарить вам и вашему питомцу больше лет вместе.</p>
-        </div>
-
-        <!-- Послы -->
-        <div class="brand-panel" data-panel="ambassadors">
-          <p data-i18n="brand.amb.text">Заводчики, грумеры и шоу-хендлеры по всей Европе и Азии выбирают Nature's Protection и Tauro Pro Line. С этими продуктами их питомцы побеждают на Best in Show и выглядят безупречно — здоровая блестящая шерсть, хорошая кожа и отличное самочувствие.</p>
-          <blockquote class="brand-quote" data-i18n="brand.amb.quote">«Лучшее натуральное питание позволило мне и моим клиентам блистать на самых высоких подиумах Европы и Азии» — посол бренда.</blockquote>
-        </div>
-
-        <!-- FAQ -->
-        <div class="brand-panel" data-panel="faq">
-          <div class="faq">
-            <details class="faq__item"><summary data-i18n="brand.faq.q1">Можно ли кормить питомца одним кормом всю жизнь?</summary><p data-i18n="brand.faq.a1">Потребности меняются с возрастом: щенкам и котятам нужно больше белка и энергии, а пожилым — лёгкие, хорошо усваиваемые корма. Подбирайте рацион под этап жизни питомца.</p></details>
-            <details class="faq__item"><summary data-i18n="brand.faq.q2">Можно ли смешивать сухой и влажный корм?</summary><p data-i18n="brand.faq.a2">Да. Главное — соблюдать общую суточную норму по весу и возрасту. Сухой корм помогает чистить зубы, а влажный добавляет влагу и аромат.</p></details>
-            <details class="faq__item"><summary data-i18n="brand.faq.q3">Есть ли в кормах искусственные добавки?</summary><p data-i18n="brand.faq.a3">Нет. Все продукты Nature's Protection — без искусственных красителей, ароматизаторов и консервантов, только натуральные ингредиенты.</p></details>
-            <details class="faq__item"><summary data-i18n="brand.faq.q4">Подходит ли корм чувствительным питомцам?</summary><p data-i18n="brand.faq.a4">Да. Есть линейки Sensitive и Grain Free — без глютена, кукурузы и пшеницы, чтобы снизить риск аллергии и проблем с пищеварением.</p></details>
-            <details class="faq__item"><summary data-i18n="brand.faq.q5">Как перевести питомца на новый корм?</summary><p data-i18n="brand.faq.a5">Постепенно, за 5–7 дней: смешивайте новый корм со старым, понемногу увеличивая долю Nature's Protection.</p></details>
-          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ===== Catalog teaser (навигация в каталог) ===== -->
-  <section class="section catalog-cta" id="catalog">
-    <div class="container">
-      <div class="catalog-cta__inner">
-        <div class="catalog-cta__text">
-          <span class="section__tag" data-i18n="products.tag">Наша продукция</span>
-          <h2 class="section__title" data-i18n="home.catalogTitle">Каталог продукции</h2>
-          <p data-i18n="home.catalogText">4 бренда, более 70 товаров: сухие и влажные корма, витамины, косметика для ухода и игрушки.</p>
-          <div class="brand-chips">
-            <a href="products.html#np" class="brand-chip">Nature's Protection</a>
-            <a href="products.html#araton" class="brand-chip">Araton</a>
-            <a href="products.html#tpl" class="brand-chip">Tauro Pro Line</a>
-            <a href="products.html#misoko" class="brand-chip">Misoko</a>
-          </div>
-          <a href="products.html" class="btn btn--primary" data-i18n="home.catalogCta">Перейти в каталог</a>
+    <!-- ===== 6. Quality ===== -->
+    <section class="section home-quality" id="quality" aria-labelledby="qualityTitle">
+      <div class="container">
+        <div class="home-head home-head--center" data-reveal>
+          <p class="home-head__tag" data-i18n="quality.tag">Качество</p>
+          <h2 class="home-head__title" id="qualityTitle" data-i18n="quality.title">Как мы заботимся о качестве</h2>
         </div>
-        <a href="products.html" class="catalog-cta__visual" aria-hidden="true" tabindex="-1">
-          <img src="assets/catalog-pets.jpg" alt="" />
-        </a>
+        <ol class="journey">
+          <li class="journey__stop" data-reveal><span class="journey__num">01</span><h3 data-i18n="quality.s1.title">Отбор сырья</h3><p data-i18n="quality.s1.text">Только проверенные поставщики и свежие ингредиенты.</p></li>
+          <li class="journey__stop" data-reveal><span class="journey__num">02</span><h3 data-i18n="quality.s2.title">Производство</h3><p data-i18n="quality.s2.text">Современные технологии сохраняют пользу продуктов.</p></li>
+          <li class="journey__stop" data-reveal><span class="journey__num">03</span><h3 data-i18n="quality.s3.title">Лабораторный контроль</h3><p data-i18n="quality.s3.text">Каждая партия проходит проверку безопасности.</p></li>
+          <li class="journey__stop" data-reveal><span class="journey__num">04</span><h3 data-i18n="quality.s4.title">Упаковка</h3><p data-i18n="quality.s4.text">Защита свежести и сохранение питательных свойств.</p></li>
+        </ol>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ===== About ===== -->
-  <section class="about" id="about">
-    <div class="container about__inner">
-      <div class="about__media">
-        <img src="assets/result-maltese.jpg" class="about__photo" alt="Результат питания Nature's Protection: до и после" />
-      </div>
-      <div class="about__content">
-        <span class="section__tag" data-i18n="about.tag">О бренде</span>
-        <h2 class="section__title" data-i18n="about.title">Природа в основе питания</h2>
-        <p data-i18n="about.text1">Мы создаём корма, вдохновлённые естественным рационом животных. Тщательно отобранные ингредиенты обеспечивают полноценное питание и поддерживают здоровье вашего любимца на протяжении всей жизни.</p>
-        <p data-i18n="about.text2">Каждая формула разработана при участии ветеринаров и специалистов по питанию.</p>
-        <ul class="about__list">
-          <li data-i18n="about.li1">Отборное мясо как первый ингредиент</li>
-          <li data-i18n="about.li2">Поддержка иммунитета и пищеварения</li>
-          <li data-i18n="about.li3">Здоровая кожа и блестящая шерсть</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+    <!-- ===== 7. Where to buy + contact ===== -->
+    <section class="section buy" id="stores" aria-labelledby="storesTitle">
+      <div class="container buy__inner" id="contact">
+        <div class="buy__info">
+          <p class="home-head__tag" data-i18n="contact.tag">Контакты</p>
+          <h2 class="home-head__title" id="storesTitle" data-i18n="stores.title">Где купить нашу продукцию</h2>
+          <p class="buy__text" data-i18n="stores.text">Наши корма доступны в зоомагазинах и у официальных дистрибьюторов. Свяжитесь с нами, чтобы узнать ближайшую точку продаж.</p>
+          <ul class="buy__list">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span data-i18n="contact.address">Баку, Азербайджан</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 7l8 6 8-6"/></svg><a href="mailto:info@naturesprotection.az">info@naturesprotection.az</a></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h3l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 4 5a2 2 0 0 1 2-2z"/></svg><a href="tel:+994000000000">+994 00 000 00 00</a></li>
+          </ul>
+        </div>
 
-  <!-- ===== Quality ===== -->
-  <section class="section quality" id="quality">
-    <div class="container">
-      <div class="section__head">
-        <span class="section__tag" data-i18n="quality.tag">Качество</span>
-        <h2 class="section__title" data-i18n="quality.title">Как мы заботимся о качестве</h2>
+        <form class="contact__form buy__form" id="contactForm" aria-labelledby="contactTitle">
+          <h3 class="buy__formTitle" id="contactTitle" data-i18n="contact.title">Свяжитесь с нами</h3>
+          <p class="buy__hint" id="contactHint" data-i18n="home.contact.hint">Нажмите «Отправить» — откроется ваша почтовая программа с готовым письмом.</p>
+          <label for="cfName"><span data-i18n="contact.name">Имя</span></label>
+          <input type="text" id="cfName" name="name" autocomplete="name" required />
+          <label for="cfEmail"><span data-i18n="contact.email">E-mail</span></label>
+          <input type="email" id="cfEmail" name="email" autocomplete="email" inputmode="email" spellcheck="false" required />
+          <label for="cfMsg"><span data-i18n="contact.message">Сообщение</span></label>
+          <textarea id="cfMsg" name="message" rows="4" required aria-describedby="contactHint"></textarea>
+          <button type="submit" class="btn btn--primary" data-i18n="contact.send">Отправить</button>
+          <p class="form__ok" id="formOk" role="status" data-i18n="home.contact.ok" hidden>Письмо открыто в вашей почтовой программе — осталось нажать «Отправить».</p>
+        </form>
       </div>
-      <div class="steps">
-        <div class="step"><span class="step__num">01</span><h3 data-i18n="quality.s1.title">Отбор сырья</h3><p data-i18n="quality.s1.text">Только проверенные поставщики и свежие ингредиенты.</p></div>
-        <div class="step"><span class="step__num">02</span><h3 data-i18n="quality.s2.title">Производство</h3><p data-i18n="quality.s2.text">Современные технологии сохраняют пользу продуктов.</p></div>
-        <div class="step"><span class="step__num">03</span><h3 data-i18n="quality.s3.title">Лабораторный контроль</h3><p data-i18n="quality.s3.text">Каждая партия проходит проверку безопасности.</p></div>
-        <div class="step"><span class="step__num">04</span><h3 data-i18n="quality.s4.title">Упаковка</h3><p data-i18n="quality.s4.text">Защита свежести и сохранение питательных свойств.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Stores / CTA ===== -->
-  <section class="cta" id="stores">
-    <div class="container cta__inner">
-      <h2 data-i18n="stores.title">Где купить нашу продукцию</h2>
-      <p data-i18n="stores.text">Наши корма доступны в зоомагазинах и у официальных дистрибьюторов. Свяжитесь с нами, чтобы узнать ближайшую точку продаж.</p>
-      <a href="#contact" class="btn btn--light" data-i18n="stores.cta">Связаться с нами</a>
-    </div>
-  </section>
-
-  <!-- ===== Contact ===== -->
-  <section class="section" id="contact">
-    <div class="container contact__inner">
-      <div class="contact__info">
-        <span class="section__tag" data-i18n="contact.tag">Контакты</span>
-        <h2 class="section__title" data-i18n="contact.title">Свяжитесь с нами</h2>
-        <p data-i18n="contact.text">Есть вопросы о продукции или сотрудничестве? Мы будем рады помочь.</p>
-        <ul class="contact__list">
-          <li><span>📍</span><span data-i18n="contact.address">Баку, Азербайджан</span></li>
-          <li><span>✉️</span><a href="mailto:info@naturesprotection.az">info@naturesprotection.az</a></li>
-          <li><span>📞</span><a href="tel:+994000000000">+994 00 000 00 00</a></li>
-        </ul>
-      </div>
-      <form class="contact__form" id="contactForm">
-        <label>
-          <span data-i18n="contact.name">Имя</span>
-          <input type="text" name="name" required />
-        </label>
-        <label>
-          <span data-i18n="contact.email">E-mail</span>
-          <input type="email" name="email" required />
-        </label>
-        <label>
-          <span data-i18n="contact.message">Сообщение</span>
-          <textarea name="message" rows="4" required></textarea>
-        </label>
-        <button type="submit" class="btn btn--primary" data-i18n="contact.send">Отправить</button>
-        <p class="form__ok" id="formOk" data-i18n="contact.ok" hidden>Спасибо! Мы свяжемся с вами.</p>
-      </form>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <!-- ===== Footer ===== -->
   <footer class="footer">
@@ -260,16 +326,17 @@
         </a>
         <p data-i18n="footer.about">Премиальное питание и уход для кошек и собак, вдохновлённые природой.</p>
       </div>
-      <div class="footer__col">
-        <h4 data-i18n="footer.nav">Навигация</h4>
+      <nav class="footer__col" aria-labelledby="footNav">
+        <h2 class="footer__h" id="footNav" data-i18n="footer.nav">Навигация</h2>
         <a href="products.html" data-i18n="nav.products">Продукция</a>
         <a href="#about" data-i18n="nav.about">О бренде</a>
         <a href="#values" data-i18n="nav.values">Ценности</a>
         <a href="#quality" data-i18n="nav.quality">Качество</a>
+        <a href="#stores" data-i18n="nav.stores">Где купить</a>
         <a href="#contact" data-i18n="nav.contact">Контакты</a>
-      </div>
+      </nav>
       <div class="footer__col">
-        <h4 data-i18n="footer.contacts">Контакты</h4>
+        <h2 class="footer__h" data-i18n="footer.contacts">Контакты</h2>
         <a href="mailto:info@naturesprotection.az">info@naturesprotection.az</a>
         <a href="tel:+994000000000">+994 00 000 00 00</a>
         <span data-i18n="contact.address">Баку, Азербайджан</span>
@@ -283,7 +350,7 @@
   </footer>
 
   <script src="js/translations.js"></script>
-  <script src="js/catalog.js"></script>
+  <script src="js/home.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

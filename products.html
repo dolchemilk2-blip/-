@@ -7,11 +7,16 @@
   <meta name="description" data-i18n="meta.description" content="Каталог продукции для кошек и собак." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/tokens.css" />
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/search.css" />
+  <link rel="stylesheet" href="css/list.css" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 </head>
 <body class="page-enter">
+  <a class="skip-link" href="#products" data-i18n="a11y.skip">Перейти к каталогу</a>
+
   <!-- ===== Header ===== -->
   <header class="header" id="header">
     <div class="container header__inner">
@@ -31,7 +36,7 @@
 
       <div class="header__actions">
         <div class="lang" id="lang">
-          <button class="lang__current" id="langBtn" aria-haspopup="true" aria-expanded="false">
+          <button class="lang__current" id="langBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="langMenu">
             <span id="langLabel">RU</span>
             <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
@@ -41,13 +46,14 @@
             <li><button data-lang="en" role="menuitem">EN — English</button></li>
           </ul>
         </div>
-        <button class="burger" id="burger" aria-label="Menu">
+        <button class="burger" id="burger" type="button" aria-label="Menu" aria-controls="nav" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
       </div>
     </div>
   </header>
 
+  <main id="main">
   <!-- ===== Products page hero ===== -->
   <section class="page-hero">
     <div class="container">
@@ -61,28 +67,30 @@
   <!-- ===== Sticky catalog toolbar ===== -->
   <div class="catalog-bar" id="catalogBar">
     <div class="container catalog-bar__inner">
-      <div class="tabs" id="tabs">
-        <button class="tab is-active" data-brand="np">Nature's Protection</button>
-        <button class="tab" data-brand="araton">Araton</button>
-        <button class="tab" data-brand="tpl">Tauro Pro Line</button>
-        <button class="tab" data-brand="misoko">Misoko</button>
+      <div class="tabs" id="tabs" role="tablist" aria-label="Бренды">
+        <button class="tab is-active" type="button" role="tab" id="tab-np" aria-selected="true" aria-controls="productsGrid" data-brand="np">Nature's Protection</button>
+        <button class="tab" type="button" role="tab" id="tab-araton" aria-selected="false" aria-controls="productsGrid" tabindex="-1" data-brand="araton">Araton</button>
+        <button class="tab" type="button" role="tab" id="tab-tpl" aria-selected="false" aria-controls="productsGrid" tabindex="-1" data-brand="tpl">Tauro Pro Line</button>
+        <button class="tab" type="button" role="tab" id="tab-misoko" aria-selected="false" aria-controls="productsGrid" tabindex="-1" data-brand="misoko">Misoko</button>
       </div>
 
-      <div class="species" id="species" role="tablist" aria-label="Кошки или собаки">
-        <button class="species__btn is-active" type="button" data-species="all"><span data-i18n="products.all">Все</span></button>
-        <button class="species__btn" type="button" data-species="cats"><span class="species__ico">🐱</span><span data-i18n="products.tabCats">Для кошек</span></button>
-        <button class="species__btn" type="button" data-species="dogs"><span class="species__ico">🐶</span><span data-i18n="products.tabDogs">Для собак</span></button>
-        <button class="species__btn species__btn--baby" type="button" data-species="baby"><span class="species__ico">🍼</span><span data-i18n="products.babies">Малыши</span></button>
+      <div class="catalog-bar__search" id="catalogSearch"></div>
+
+      <div class="species" id="species" role="radiogroup" aria-label="Для кого">
+        <button class="species__btn is-active" type="button" role="radio" aria-checked="true" data-species="all"><span data-i18n="products.all">Все</span></button>
+        <button class="species__btn" type="button" role="radio" aria-checked="false" tabindex="-1" data-species="cats"><span class="species__ico" aria-hidden="true">🐱</span><span data-i18n="products.tabCats">Для кошек</span></button>
+        <button class="species__btn" type="button" role="radio" aria-checked="false" tabindex="-1" data-species="dogs"><span class="species__ico" aria-hidden="true">🐶</span><span data-i18n="products.tabDogs">Для собак</span></button>
+        <button class="species__btn species__btn--baby" type="button" role="radio" aria-checked="false" tabindex="-1" data-species="baby"><span class="species__ico" aria-hidden="true">🍼</span><span data-i18n="products.babies">Малыши</span></button>
       </div>
     </div>
   </div>
 
   <!-- ===== Catalog ===== -->
-  <section class="section section--top" id="products">
+  <section class="section section--top" id="products" tabindex="-1">
     <div class="container">
       <div class="cat-nav" id="catNav"></div>
 
-      <div id="productsGrid"></div>
+      <div id="productsGrid" role="tabpanel" aria-labelledby="tab-np"></div>
 
       <div class="ranges-block">
         <h2 class="ranges__title" data-i18n="products.rangesTitle">Линейки Nature's Protection</h2>
@@ -90,6 +98,7 @@
       </div>
     </div>
   </section>
+  </main>
 
   <!-- ===== Footer ===== -->
   <footer class="footer">
@@ -122,10 +131,13 @@
     </div>
   </footer>
 
+  <div id="npLive" class="sr-only" aria-live="polite"></div>
+
   <!-- ===== Product detail modal ===== -->
-  <div class="pmodal" id="productModal" aria-hidden="true">
+  <div class="pmodal" id="productModal" aria-hidden="true" inert>
     <div class="pmodal__backdrop" data-close></div>
-    <div class="pmodal__dialog" role="dialog" aria-modal="true" aria-labelledby="pmodalName">
+    <div class="pmodal__dialog" role="dialog" aria-modal="true" aria-labelledby="pmodalName" tabindex="-1">
+      <div class="pmodal__actions"></div>
       <button class="pmodal__close" type="button" data-close aria-label="Закрыть">&times;</button>
       <div class="pmodal__body" id="pmodalBody"></div>
     </div>
@@ -135,6 +147,8 @@
   <script src="js/catalog.js"></script>
   <script src="js/descriptions.js"></script>
   <script src="js/tpl-system.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/list.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

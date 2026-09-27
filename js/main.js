@@ -3,9 +3,97 @@
 const LANGS = ['az', 'ru', 'en'];
 const DEFAULT_LANG = 'ru';
 
+// ===== Ключи переводов модуля CORE (translations.js не редактируем) =====
+Object.assign(TRANSLATIONS.az, {
+  'a11y.skip': 'Kataloqa keç',
+  'a11y.brands': 'Brendlər',
+  'a11y.species': 'Kimin üçün',
+  'a11y.close': 'Bağla',
+  'a11y.lang': 'Dil seçimi',
+  'species.none.cats': '{brand} brendinin pişiklər üçün məhsulu yoxdur',
+  'species.none.dogs': '{brand} brendinin itlər üçün məhsulu yoxdur',
+  'species.none.baby': '{brand} brendinin küçüklər və pişik balaları üçün məhsulu yoxdur',
+  'live.count': 'Göstərilən məhsul sayı: {n}',
+  'hero.carousel': 'karusel',
+  'hero.label': 'Ev heyvanlarının fotoları',
+  'hero.pause': 'Slayderi dayandır',
+  'hero.play': 'Slayderi başlat'
+});
+Object.assign(TRANSLATIONS.ru, {
+  'a11y.skip': 'Перейти к каталогу',
+  'a11y.brands': 'Бренды',
+  'a11y.species': 'Для кого',
+  'a11y.close': 'Закрыть',
+  'a11y.lang': 'Выбор языка',
+  'species.none.cats': 'У {brand} нет товаров для кошек',
+  'species.none.dogs': 'У {brand} нет товаров для собак',
+  'species.none.baby': 'У {brand} нет товаров для малышей',
+  'live.count': 'Показано товаров: {n}',
+  'hero.carousel': 'карусель',
+  'hero.label': 'Фотографии питомцев',
+  'hero.pause': 'Остановить слайдер',
+  'hero.play': 'Запустить слайдер'
+});
+Object.assign(TRANSLATIONS.en, {
+  'a11y.skip': 'Skip to catalog',
+  'a11y.brands': 'Brands',
+  'a11y.species': 'Who it is for',
+  'a11y.close': 'Close',
+  'a11y.lang': 'Choose language',
+  'species.none.cats': '{brand} has no products for cats',
+  'species.none.dogs': '{brand} has no products for dogs',
+  'species.none.baby': '{brand} has no products for puppies and kittens',
+  'live.count': '{n} products shown',
+  'hero.carousel': 'carousel',
+  'hero.label': 'Pet photos',
+  'hero.pause': 'Pause slideshow',
+  'hero.play': 'Play slideshow'
+});
+
+// ===== Общие утилиты =====
+const VALID_BRANDS = ['np', 'araton', 'tpl', 'misoko'];
+const BRAND_NAMES = { np: "Nature's Protection", araton: 'Araton', tpl: 'Tauro Pro Line', misoko: 'Misoko' };
+const EASE_OUT = 'cubic-bezier(0.23, 1, 0.32, 1)';
+const reduceMotion = () => !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+const emit = (name, detail) => document.dispatchEvent(new CustomEvent(name, { detail: detail || {} }));
+const cssEsc = (s) => (window.CSS && CSS.escape) ? CSS.escape(s) : String(s).replace(/["\\]/g, '\\$&');
+const LANG_HOOKS = [];   // функции, которые нужно перезапустить после смены языка (aria-метки, индикаторы)
+
+// Перевод по ключу для текущего языка, с подстановкой {vars}
+function tr(key, vars) {
+  const dict = TRANSLATIONS[getLang()] || TRANSLATIONS.ru;
+  let s = dict[key];
+  if (s === undefined) s = TRANSLATIONS.ru[key] || '';
+  if (vars) s = s.replace(/\{(\w+)\}/g, (m, k) => (vars[k] !== undefined ? vars[k] : m));
+  return s;
+}
+
+// Сообщение для скринридера (live-регион #npLive)
+function announce(text) {
+  const live = document.getElementById('npLive');
+  if (!live) return;
+  live.textContent = '';
+  setTimeout(() => { live.textContent = text; }, 30);
+}
+
+// Базовые стили-страховки с нулевой специфичностью (любое правило в CSS их перекрывает)
+(function injectBaseStyles() {
+  if (document.getElementById('np-core-base')) return;
+  const st = document.createElement('style');
+  st.id = 'np-core-base';
+  st.textContent =
+    ':where(.sr-only){position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}' +
+    ':where(.skip-link){position:fixed;left:16px;top:12px;z-index:1000;padding:10px 16px;border-radius:10px;background:#1f2a24;color:#fff;font-weight:600;text-decoration:none;transform:translateY(-200%)}' +
+    ':where(.skip-link:focus-visible,.skip-link:focus){transform:none}' +
+    ':where(.hero-bg__toggle){position:absolute;right:16px;bottom:16px;z-index:5;width:40px;height:40px;border-radius:50%;border:0;display:grid;place-items:center;background:rgba(255,255,255,.85);color:#1f2a24;cursor:pointer}' +
+    ':where(.species__btn[aria-disabled="true"]){opacity:.45;cursor:not-allowed}';
+  (document.head || document.documentElement).insertBefore(st, (document.head || document.documentElement).firstChild);
+})();
+
 // Текущий язык: из localStorage или по умолчанию
 function getLang() {
-  const saved = localStorage.getItem('lang');
+  let saved = null;
+  try { saved = localStorage.getItem('lang'); } catch (e) { /* private mode */ }
   return LANGS.includes(saved) ? saved : DEFAULT_LANG;
 }
 
@@ -29,17 +117,20 @@ function applyTranslations(lang) {
   if (dict['meta.title']) document.title = dict['meta.title'];
 
   // Метка языка в кнопке
-  document.getElementById('langLabel').textContent = lang.toUpperCase();
+  const langLabel = document.getElementById('langLabel');
+  if (langLabel) langLabel.textContent = lang.toUpperCase();
 
-  // Перерисовать линейки и продукты на нужном языке
+  // Перерисовать линейки и продукты на нужном языке (без анимации — текст меняется мгновенно)
   renderRanges(lang);
   renderProducts(currentBrand, lang);
+  LANG_HOOKS.forEach(fn => { try { fn(lang); } catch (e) { /* ignore */ } });
 }
 
 function setLang(lang) {
   if (!LANGS.includes(lang)) return;
-  localStorage.setItem('lang', lang);
+  try { localStorage.setItem('lang', lang); } catch (e) { /* private mode */ }
   applyTranslations(lang);
+  emit('np:lang', { lang });
 }
 
 // ===== Линейки бренда =====
@@ -82,14 +173,17 @@ function prefixGroups(groups, prefix, species) {
 }
 
 // Полный каталог: NP собираем из PRODUCTS (кошки+собаки), остальное — из BRANDS_EXTRA
+let CATALOG_CACHE = null;
 function buildCatalog() {
+  if (CATALOG_CACHE) return CATALOG_CACHE;
   const extra = (typeof BRANDS_EXTRA !== 'undefined') ? BRANDS_EXTRA : {};
-  return {
+  CATALOG_CACHE = {
     np: prefixGroups(PRODUCTS.cats, '🐱 ', 'cats').concat(prefixGroups(PRODUCTS.dogs, '🐶 ', 'dogs')),
     araton: extra.araton || [],
     tpl: extra.tpl || [],
     misoko: extra.misoko || []
   };
+  return CATALOG_CACHE;
 }
 
 // Оставить группы для выбранного вида (кошки/собаки). species "both"/пусто — показываем всегда.
@@ -99,6 +193,54 @@ function filterBySpecies(groups, species) {
     const sp = g.species || 'both';
     return sp === 'both' || sp === species;
   });
+}
+
+// Группы бренда для фильтра «Все / Кошки / Собаки / Малыши»
+function groupsFor(brand, species) {
+  const groups = buildCatalog()[brand] || [];
+  if (species === 'baby') {
+    // Малыши: только товары для щенков и котят из всех групп
+    return groups
+      .map(g => Object.assign({}, g, { items: g.items.filter(it => it.baby) }))
+      .filter(g => g.items.length);
+  }
+  return filterBySpecies(groups, species);
+}
+
+// Сколько карточек покажет фильтр (как в renderProducts: товары из витрин Tauro не дублируются)
+function countFor(brand, species) {
+  let skip = null;
+  if (brand === 'tpl' && typeof TPL_SYSTEMS !== 'undefined') {
+    skip = new Set();
+    TPL_SYSTEMS.forEach(sys => sys.steps.forEach(st => skip.add(st.img)));
+  }
+  return groupsFor(brand, species).reduce((sum, g) =>
+    sum + (skip ? g.items.filter(it => !skip.has(it.img)).length : g.items.length), 0);
+}
+
+// Стабильный id товара: бренд + ':' + путь к фото
+function productId(item, brand) {
+  if (!item) return '';
+  const k = item.img || (item.en && item.en.name) || (item.ru && item.ru.name) || '';
+  return brand + ':' + k;
+}
+
+function findById(id) {
+  id = String(id || '');
+  const i = id.indexOf(':');
+  if (i < 0) return null;
+  const brand = id.slice(0, i);
+  const cat = buildCatalog();
+  if (!cat[brand]) return null;
+  for (const g of cat[brand]) {
+    for (const it of g.items) if (productId(it, brand) === id) return { item: it, brand, species: g.species || 'both' };
+  }
+  if (brand === 'tpl' && typeof TPL_SYSTEMS !== 'undefined') {
+    for (const sys of TPL_SYSTEMS) for (const st of sys.steps) {
+      if (productId(st.item, 'tpl') === id) return { item: st.item, brand, species: 'both' };
+    }
+  }
+  return null;
 }
 
 // Определяем цвет шерсти товара по линейке Superior Care (White / Red / Dark).
@@ -112,7 +254,7 @@ function coatOf(item) {
   return null;
 }
 
-function productCard(item, lang, id) {
+function productCard(item, lang, id, uid) {
   const t = item[lang] || item.ru;
   const dict = TRANSLATIONS[lang] || TRANSLATIONS.ru;
   const tags = (t.tags || []).map(x => `<span>${x}</span>`).join('');
@@ -125,10 +267,11 @@ function productCard(item, lang, id) {
     ? `<img src="${item.img}" alt="${t.name}" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'product__emoji',textContent:'${fallback}'}))">`
     : `<span class="product__emoji">${fallback}</span>`;
   const pid = (id === undefined || id === null) ? '' : ` data-pid="${id}" tabindex="0" role="button"`;
+  const did = uid ? ` data-id="${uid}"` : '';
   const more = `<span class="product__more">${dict['products.more'] || 'Подробнее'}<svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>`;
   return `
-    <article class="product${coat ? ' product--coat product--coat-' + coat : ''} is-clickable"${pid}>
-      <div class="product__img">${ribbon}${media}</div>
+    <article class="product${coat ? ' product--coat product--coat-' + coat : ''} is-clickable"${pid}${did}>
+      <div class="product__img">${ribbon}${media}<div class="product__actions"></div></div>
       <div class="product__body">
         <span class="product__cat">${t.cat}</span>
         <h3 class="product__name">${t.name}</h3>
@@ -140,7 +283,8 @@ function productCard(item, lang, id) {
 }
 
 // Построение модального окна товара
-function openProductModal(item, lang, key) {
+// opts: {id, brand, card, keyboard}
+function openProductModal(item, lang, key, opts) {
   const modal = document.getElementById('productModal');
   const body = document.getElementById('pmodalBody');
   if (!modal || !body || !item) return;
@@ -185,65 +329,153 @@ function openProductModal(item, lang, key) {
       ${block('products.feeding', feeding)}
       ${tags ? `<div class="product__tags">${tags}</div>` : ''}
     </div>`;
-  modal.classList.remove('is-closing');
-  modal.classList.add('is-open');
-  modal.setAttribute('aria-hidden', 'false');
-  document.body.classList.add('modal-open');
-  const dlg = modal.querySelector('.pmodal__dialog');
-  if (dlg) dlg.scrollTop = 0;
+  showModal(modal, body, opts || {}, item);
 }
 
-function closeProductModal() {
+// ===== Модальное окно: состояние, фокус, inert, анимация с поколениями =====
+let modalGen = 0;
+let modalState = 'closed';   // closed | open | closing
+let modalOrigin = null;      // элемент, на который вернуть фокус
+let modalId = null;
+
+// Фон под модалкой — inert (помечаем только то, что заинертили сами)
+function setBackgroundInert(on) {
   const modal = document.getElementById('productModal');
-  if (!modal || !modal.classList.contains('is-open')) return;
-  const finalize = () => {
-    modal.classList.remove('is-open', 'is-closing');
-    modal.setAttribute('aria-hidden', 'true');
-    document.body.classList.remove('modal-open');
-  };
-  const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (reduce) { finalize(); return; }
-  const dlg = modal.querySelector('.pmodal__dialog');
-  modal.classList.add('is-closing');
-  let done = false;
-  const onEnd = () => { if (done) return; done = true; if (dlg) dlg.removeEventListener('animationend', onEnd); finalize(); };
-  if (dlg) dlg.addEventListener('animationend', onEnd);
-  setTimeout(onEnd, 340); // запасной таймер, если animationend не сработает
-}
-
-// Плавное появление карточек при прокрутке (без анимации при reduce-motion)
-function revealCards(wrap) {
-  if (typeof window === 'undefined' || !('IntersectionObserver' in window)) return;
-  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (!e.isIntersecting) return;
-      const c = e.target;
-      c.classList.add('in');
-      io.unobserve(c);
-      setTimeout(() => { c.classList.remove('reveal', 'in'); c.style.transitionDelay = ''; }, 700);
-    });
-  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-  wrap.querySelectorAll('.product').forEach((c, i) => {
-    c.classList.add('reveal');
-    c.style.transitionDelay = ((i % 3) * 70) + 'ms';
-    io.observe(c);
+  Array.from(document.body.children).forEach(el => {
+    if (el === modal || el.tagName === 'SCRIPT' || el.id === 'npLive') return;
+    if (on) {
+      if (!el.hasAttribute('inert')) { el.setAttribute('inert', ''); el.setAttribute('data-np-inert', ''); }
+    } else if (el.hasAttribute('data-np-inert')) {
+      el.removeAttribute('inert'); el.removeAttribute('data-np-inert');
+    }
   });
 }
 
-function renderProducts(brand, lang) {
+function setModalLock(on) {
+  document.documentElement.classList.toggle('modal-open', on);
+  document.body.classList.toggle('modal-open', on);   // на body висит «скольжение» шапки и тулбара
+}
+
+function showModal(modal, body, opts, item) {
+  const dlg = modal.querySelector('.pmodal__dialog');
+  const instant = !!opts.keyboard || reduceMotion();
+  modalGen++;
+  modalId = opts.id || null;
+  if (modalState === 'closed') {
+    const active = document.activeElement;
+    modalOrigin = opts.card || (active && active !== document.body ? active : null);
+  } else if (opts.card) {
+    modalOrigin = opts.card;
+  }
+  // Точка «вылета»: 15% пути к карточке, не дальше ±60px
+  if (dlg) {
+    const r = (!instant && opts.card) ? opts.card.getBoundingClientRect() : null;
+    const c = v => Math.max(-60, Math.min(60, v * 0.15)).toFixed(1) + 'px';
+    dlg.style.setProperty('--from-x', r ? c(r.left + r.width / 2 - window.innerWidth / 2) : '0px');
+    dlg.style.setProperty('--from-y', r ? c(r.top + r.height / 2 - window.innerHeight / 2) : '0px');
+    if (!dlg.hasAttribute('tabindex')) dlg.setAttribute('tabindex', '-1');
+    void dlg.offsetWidth;   // зафиксировать стартовое состояние до .is-open
+  }
+  modal.classList.toggle('is-instant', instant);
+  modal.classList.remove('is-closing');
+  modal.inert = false;
+  modal.setAttribute('aria-hidden', 'false');
+  setModalLock(true);
+  setBackgroundInert(true);
+  modal.classList.add('is-open');
+  modalState = 'open';
+  if (dlg) { dlg.scrollTop = 0; dlg.focus({ preventScroll: true }); }
+  emit('np:modal-open', { id: modalId, item, brand: opts.brand || currentBrand, dialog: dlg });
+}
+
+function closeProductModal(instant) {
+  const modal = document.getElementById('productModal');
+  if (!modal || modalState !== 'open') return;
+  const dlg = modal.querySelector('.pmodal__dialog');
+  const g = ++modalGen;
+  const id = modalId;
+  modalState = 'closing';
+  let cleanup = () => {};
+  const finalize = () => {
+    if (g !== modalGen || modalState !== 'closing') return;   // модалку успели открыть заново
+    cleanup();
+    modalState = 'closed';
+    modal.classList.remove('is-open', 'is-closing', 'is-instant');
+    modal.setAttribute('aria-hidden', 'true');
+    modal.inert = true;
+    setModalLock(false);
+    setBackgroundInert(false);
+    const grid = document.getElementById('productsGrid');
+    let back = (id && grid) ? grid.querySelector('[data-id="' + cssEsc(id) + '"]') : null;
+    if (!back || !back.isConnected) back = modalOrigin;
+    if (back && back.isConnected && typeof back.focus === 'function') back.focus({ preventScroll: true });
+    modalOrigin = null;
+    emit('np:modal-close', { id });
+  };
+  if (instant || reduceMotion()) { modal.classList.add('is-instant'); finalize(); return; }
+  modal.classList.remove('is-instant');
+  modal.classList.add('is-closing');
+  // Стили на keyframes держат .is-open и играют .is-closing; стили на transitions — просто снимаем .is-open
+  const keyframed = dlg && getComputedStyle(dlg).animationName !== 'none';
+  if (!keyframed) modal.classList.remove('is-open');
+  const onEnd = (e) => { if (e.target === dlg && (e.type === 'animationend' || e.propertyName === 'opacity')) finalize(); };
+  if (dlg) { dlg.addEventListener('animationend', onEnd); dlg.addEventListener('transitionend', onEnd); }
+  const timer = setTimeout(finalize, 320);   // запасной таймер
+  cleanup = () => {
+    clearTimeout(timer);
+    if (dlg) { dlg.removeEventListener('animationend', onEnd); dlg.removeEventListener('transitionend', onEnd); }
+  };
+}
+
+// Ловушка фокуса внутри модалки
+function trapModalFocus(e) {
+  if (modalState !== 'open' || e.key !== 'Tab') return;
+  const modal = document.getElementById('productModal');
+  const dlg = modal && modal.querySelector('.pmodal__dialog');
+  if (!dlg) return;
+  const f = Array.from(dlg.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'))
+    .filter(el => !el.disabled && el.getAttribute('aria-hidden') !== 'true' && el.getClientRects().length);
+  if (!f.length) { e.preventDefault(); dlg.focus(); return; }
+  const first = f[0], last = f[f.length - 1], a = document.activeElement;
+  if (e.shiftKey && (a === first || a === dlg || !dlg.contains(a))) { e.preventDefault(); last.focus(); }
+  else if (!e.shiftKey && (a === last || !dlg.contains(a))) { e.preventDefault(); first.focus(); }
+}
+
+// Каскад появления: только первые 8 видимых карточек, 300ms, шаг --stagger (40ms)
+let staggerGen = 0;
+function staggerCards(wrap) {
+  const g = ++staggerGen;
+  if (!wrap || typeof wrap.animate !== 'function') return;
+  const reduce = reduceMotion();
+  const vh = window.innerHeight || 800;
+  const step = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--stagger'));
+  const stagger = reduce ? 0 : (isNaN(step) ? 40 : step);
+  const cards = Array.from(wrap.querySelectorAll('.product, .tpl-bottle'))
+    .filter(c => { const r = c.getBoundingClientRect(); return r.bottom > 0 && r.top < vh; })
+    .slice(0, 8);
+  const frames = reduce
+    ? [{ opacity: 0 }, { opacity: 1 }]
+    : [{ opacity: 0, transform: 'translateY(8px)' }, { opacity: 1, transform: 'translateY(0)' }];
+  cards.forEach((c, i) => {
+    if (g !== staggerGen) return;
+    c.animate(frames, { duration: reduce ? 150 : 300, delay: i * stagger, easing: EASE_OUT, fill: 'backwards' });
+  });
+}
+
+// opts: {stagger: true} — каскад первых 8 карточек (первый рендер / смена бренда мышью)
+let firstRenderDone = false;
+function renderProducts(brand, lang, opts) {
   const wrap = document.getElementById('productsGrid');
   if (!wrap) return;
   const dict = TRANSLATIONS[lang] || TRANSLATIONS.ru;
-  let groups = buildCatalog()[brand] || [];
-  if (currentSpecies === 'baby') {
-    // Малыши: показываем только товары для щенков и котят из всех групп
-    groups = groups
-      .map(g => Object.assign({}, g, { items: g.items.filter(it => it.baby) }))
-      .filter(g => g.items.length);
-  } else {
-    groups = filterBySpecies(groups, currentSpecies);
-  }
+  const doStagger = (opts && opts.stagger) || !firstRenderDone;
+  firstRenderDone = true;
+  const finish = () => {
+    updateSpeciesAvailability();
+    if (doStagger) staggerCards(wrap);
+    emit('np:render', { brand, lang, species: currentSpecies });
+  };
+  let groups = groupsFor(brand, currentSpecies);
 
   // Tauro: товары, вошедшие в витрины-комплексы (Step-системы), не дублируем карточками.
   if (brand === 'tpl' && typeof TPL_SYSTEMS !== 'undefined') {
@@ -265,6 +497,8 @@ function renderProducts(brand, lang) {
 
   if (!groups.length) {
     wrap.innerHTML = `<p class="catalog-empty">${dict['products.empty'] || ''}</p>`;
+    MODAL_ITEMS = []; MODAL_KEYS = [];
+    finish();
     return;
   }
 
@@ -277,7 +511,7 @@ function renderProducts(brand, lang) {
     const id = MODAL_ITEMS.length;
     MODAL_ITEMS.push(it);
     MODAL_KEYS.push(descKeyFor(brand, species, it));
-    return productCard(it, lang, id);
+    return productCard(it, lang, id, productId(it, brand));
   };
   // Вставка «зачем нужны степы» — в самом верху вкладки Tauro
   let tplWhy = '';
@@ -381,7 +615,7 @@ function renderProducts(brand, lang) {
         const short = (st.short && (st.short[lang] || st.short.ru)) || '';
         const smallLabel = st.label ? (st.label[lang] || st.label.ru) : ('STEP ' + st.step);
         return `
-          <div class="tpl-bottle" data-pid="${id}" tabindex="0" role="button" style="--c:${st.color};--d:${(bi + 1) * 0.6}s" aria-label="${smallLabel} — ${nm}">
+          <div class="tpl-bottle" data-pid="${id}" data-id="${productId(st.item, 'tpl')}" tabindex="0" role="button" style="--c:${st.color};--d:${(bi + 1) * 0.6}s" aria-label="${smallLabel} — ${nm}">
             <span class="tpl-bottle__num">${st.step}</span>
             <div class="tpl-bottle__img"><img src="${st.img}" alt="${nm}" loading="lazy" /></div>
             <div class="tpl-bottle__label">
@@ -465,7 +699,7 @@ function renderProducts(brand, lang) {
     });
   }
 
-  revealCards(wrap);
+  finish();
 }
 
 // ===== Парящие фото товаров в фоне (параллакс) =====
@@ -558,166 +792,505 @@ function initPageTransition() {
   });
 }
 
-// ===== Инициализация =====
-document.addEventListener('DOMContentLoaded', () => {
-  const lang = getLang();
-  applyTranslations(lang);
+// ===== Индикаторы вкладок (.tabs__indicator / .species__indicator) =====
+// Позиция передаётся CSS-переменными --ind-x/--ind-w (и --ind-y/--ind-h для переноса строк)
+function placeIndicator(list, cls, instant) {
+  if (!list) return;
+  let ind = list.querySelector(':scope > .' + cls);
+  if (!ind) {
+    ind = document.createElement('span');
+    ind.className = cls;
+    ind.setAttribute('aria-hidden', 'true');
+    list.appendChild(ind);
+    list.classList.add('has-indicator');
+    instant = true;   // первое размещение — без анимации
+  }
+  const act = list.querySelector('.is-active');
+  if (!act) return;
+  const lr = list.getBoundingClientRect(), ar = act.getBoundingClientRect();
+  if (!ar.width) return;
+  const vals = {
+    '--ind-x': (ar.left - lr.left - list.clientLeft + list.scrollLeft).toFixed(1) + 'px',
+    '--ind-y': (ar.top - lr.top - list.clientTop + list.scrollTop).toFixed(1) + 'px',
+    '--ind-w': ar.width.toFixed(1) + 'px',
+    '--ind-h': ar.height.toFixed(1) + 'px'
+  };
+  if (instant) { ind.classList.add('is-instant'); ind.style.transition = 'none'; }
+  Object.keys(vals).forEach(k => { list.style.setProperty(k, vals[k]); ind.style.setProperty(k, vals[k]); });
+  if (instant) {
+    void ind.offsetWidth;
+    requestAnimationFrame(() => { ind.style.transition = ''; ind.classList.remove('is-instant'); });
+  }
+}
+function placeIndicators(instant) {
+  placeIndicator(document.getElementById('tabs'), 'tabs__indicator', instant);
+  placeIndicator(document.getElementById('species'), 'species__indicator', instant);
+}
 
-  // --- Переключатель языка ---
+// Фильтр вида: варианты без товаров у бренда — aria-disabled + причина (никогда не скрываем)
+function updateSpeciesAvailability() {
+  const wrap = document.getElementById('species');
+  if (!wrap) return;
+  wrap.querySelectorAll('.species__btn').forEach(btn => {
+    const sp = btn.getAttribute('data-species') || 'all';
+    const empty = sp !== 'all' && countFor(currentBrand, sp) === 0;
+    btn.classList.toggle('is-disabled', empty);
+    if (empty) {
+      const reason = tr('species.none.' + sp, { brand: BRAND_NAMES[currentBrand] || currentBrand });
+      btn.setAttribute('aria-disabled', 'true');
+      btn.setAttribute('title', reason);
+      btn.setAttribute('aria-description', reason);
+    } else {
+      btn.removeAttribute('aria-disabled');
+      btn.removeAttribute('title');
+      btn.removeAttribute('aria-description');
+    }
+  });
+}
+
+// ===== Глубокие ссылки: #brand=tpl, #p=<id> (а также старые #tpl). #q= принадлежит поиску =====
+function parseHash() {
+  const raw = location.hash.slice(1);
+  const out = {};
+  if (!raw) return out;
+  if (VALID_BRANDS.includes(raw)) { out.brand = raw; return out; }
+  raw.split('&').forEach(part => {
+    const i = part.indexOf('=');
+    if (i < 0) return;
+    let v = part.slice(i + 1);
+    try { v = decodeURIComponent(v); } catch (e) { /* keep raw */ }
+    const k = part.slice(0, i);
+    if (k === 'brand' && VALID_BRANDS.includes(v)) out.brand = v;
+    if (k === 'p' && v) out.p = v;
+  });
+  return out;
+}
+function setHashBrand(brand) {
+  const raw = location.hash.slice(1);
+  const parts = (raw && !VALID_BRANDS.includes(raw) ? raw.split('&') : [])
+    .filter(p => p && !/^(brand|p)=/.test(p) && p.indexOf('=') > 0);
+  parts.unshift('brand=' + brand);
+  history.replaceState(null, '', '#' + parts.join('&'));
+}
+
+// Контроллер каталога (заполняется при инициализации products.html)
+const NPCtl = {};
+
+function openProduct(id, opts) {
+  const found = findById(id);
+  if (!found) return false;
+  const grid = document.getElementById('productsGrid');
+  if (!grid) { window.location.href = 'products.html#p=' + encodeURIComponent(id); return true; }
+  if (found.brand !== currentBrand && NPCtl.activateBrand) NPCtl.activateBrand(found.brand, { animate: false, updateHash: true });
+  const card = grid.querySelector('[data-id="' + cssEsc(id) + '"]');
+  const o = { id, brand: found.brand, card, keyboard: !!(opts && opts.keyboard) };
+  if (card) {
+    const pid = +card.getAttribute('data-pid');
+    openProductModal(MODAL_ITEMS[pid] || found.item, getLang(), MODAL_KEYS[pid], o);
+  } else {
+    openProductModal(found.item, getLang(), descKeyFor(found.brand, found.species, found.item), o);
+  }
+  return true;
+}
+
+// ===== Публичный API для остальных модулей =====
+window.NP = {
+  lang: () => getLang(),
+  brand: () => currentBrand,
+  species: () => currentSpecies,
+  setBrand: (b) => {
+    if (NPCtl.activateBrand) return NPCtl.activateBrand(b, { animate: true, updateHash: true });
+    if (VALID_BRANDS.includes(b)) window.location.href = 'products.html#brand=' + b;
+  },
+  setSpecies: (sp) => { if (NPCtl.setSpecies) NPCtl.setSpecies(sp, { animate: true }); },
+  catalog: () => buildCatalog(),
+  productId,
+  findById,
+  openProduct,
+  t: (key) => tr(key)
+};
+
+// ===== Переключатель языка =====
+function initLangMenu() {
   const langWrap = document.getElementById('lang');
   const langBtn = document.getElementById('langBtn');
+  if (!langWrap || !langBtn) return;
+  const items = () => Array.from(langWrap.querySelectorAll('#langMenu button'));
+  const setOpen = (open, instant) => {
+    langWrap.classList.toggle('is-instant', !!instant);
+    langWrap.classList.toggle('is-open', open);
+    langBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  };
   langBtn.addEventListener('click', e => {
     e.stopPropagation();
-    langWrap.classList.toggle('is-open');
-    langBtn.setAttribute('aria-expanded', langWrap.classList.contains('is-open'));
+    const kb = e.detail === 0;
+    const open = !langWrap.classList.contains('is-open');
+    setOpen(open, kb);
+    if (open && kb) {
+      const cur = items().find(b => b.getAttribute('data-lang') === getLang()) || items()[0];
+      if (cur) cur.focus();
+    }
   });
-  document.querySelectorAll('#langMenu button').forEach(btn => {
-    btn.addEventListener('click', () => {
+  items().forEach(btn => {
+    btn.addEventListener('click', e => {
+      const kb = e.detail === 0;
       setLang(btn.getAttribute('data-lang'));
-      langWrap.classList.remove('is-open');
+      setOpen(false, kb);
+      if (kb) langBtn.focus();
     });
   });
-  document.addEventListener('click', () => langWrap.classList.remove('is-open'));
-
-  // --- Бургер-меню ---
-  const burger = document.getElementById('burger');
-  const nav = document.getElementById('nav');
-  burger.addEventListener('click', () => {
-    burger.classList.toggle('is-open');
-    nav.classList.toggle('is-open');
+  langWrap.addEventListener('keydown', e => {
+    if (!langWrap.classList.contains('is-open')) return;
+    if (e.key === 'Escape') { e.preventDefault(); e.stopPropagation(); setOpen(false, true); langBtn.focus(); return; }
+    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+      e.preventDefault();
+      const list = items(), i = list.indexOf(document.activeElement);
+      const n = e.key === 'ArrowDown' ? (i + 1) % list.length : (i - 1 + list.length) % list.length;
+      list[n].focus();
+    }
   });
-  nav.querySelectorAll('.nav__link').forEach(link => {
-    link.addEventListener('click', () => {
-      burger.classList.remove('is-open');
-      nav.classList.remove('is-open');
+  langWrap.addEventListener('focusout', e => {
+    if (e.relatedTarget && !langWrap.contains(e.relatedTarget)) setOpen(false, true);
+  });
+  document.addEventListener('click', () => setOpen(false, false));
+  const relabel = () => langBtn.setAttribute('aria-label', tr('a11y.lang') + ': ' + getLang().toUpperCase());
+  relabel();
+  LANG_HOOKS.push(relabel);
+}
+
+// ===== Каталог: вкладки брендов, фильтр вида, модалка =====
+function initCatalog(initial) {
+  const grid = document.getElementById('productsGrid');
+  if (!grid) return;
+  const tabsWrap = document.getElementById('tabs');
+  const tabs = Array.from(document.querySelectorAll('#tabs .tab'));
+  const speciesWrap = document.getElementById('species');
+  const spBtns = speciesWrap ? Array.from(speciesWrap.querySelectorAll('.species__btn')) : [];
+  const nav = document.getElementById('catNav');
+  let brandGen = 0;
+  let leaveAnims = [];
+
+  const cardCount = () => grid.querySelectorAll('[data-id]').length;
+
+  function syncTabs() {
+    tabs.forEach(t => {
+      const on = t.getAttribute('data-brand') === currentBrand;
+      t.classList.toggle('is-active', on);
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.tabIndex = on ? 0 : -1;
     });
-  });
+    const act = tabs.find(t => t.classList.contains('is-active'));
+    if (act && act.id) grid.setAttribute('aria-labelledby', act.id);
+  }
+  function syncSpecies() {
+    spBtns.forEach(b => {
+      const on = (b.getAttribute('data-species') || 'all') === currentSpecies;
+      b.classList.toggle('is-active', on);
+      b.setAttribute('aria-checked', on ? 'true' : 'false');
+      b.tabIndex = on ? 0 : -1;
+    });
+  }
+  const cancelLeave = () => { leaveAnims.forEach(a => a.cancel()); leaveAnims = []; };
 
-  // --- Табы брендов ---
-  const VALID_BRANDS = ['np', 'araton', 'tpl', 'misoko'];
-
-  function activateBrand(brand, updateHash, animate) {
+  // opts: {animate, updateHash}
+  function activateBrand(brand, opts) {
+    opts = opts || {};
     if (!VALID_BRANDS.includes(brand)) return;
     const changed = currentBrand !== brand;
     currentBrand = brand;
     document.body.setAttribute('data-brand', brand); // плавная смена тинта страницы
-    document.querySelectorAll('.tab').forEach(t => {
-      t.classList.toggle('is-active', t.getAttribute('data-brand') === brand);
-    });
-    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const grid = document.getElementById('productsGrid');
-    const nav = document.getElementById('catNav');
-    if (animate && changed && grid && !reduce) {
-      grid.classList.add('brand-leaving');
-      setTimeout(() => {
-        renderProducts(currentBrand, getLang());
-        grid.classList.remove('brand-leaving');
-        grid.classList.add('brand-entering');
-        if (nav) nav.classList.add('brand-entering');
-        setTimeout(() => {
-          grid.classList.remove('brand-entering');
-          if (nav) nav.classList.remove('brand-entering');
-        }, 560);
-      }, 240);
+    // выбранный вид пропал у нового бренда — возвращаемся к «Все»
+    if (currentSpecies !== 'all' && countFor(brand, currentSpecies) === 0) currentSpecies = 'all';
+    syncTabs(); syncSpecies();
+    placeIndicator(tabsWrap, 'tabs__indicator', !opts.animate);
+    if (opts.updateHash) setHashBrand(brand);
+    if (!changed) return;
+    const g = ++brandGen;
+    let finished = false;
+    const done = () => {
+      if (g !== brandGen || finished) return;
+      finished = true;
+      renderProducts(currentBrand, getLang(), { stagger: !!opts.animate });
+      cancelLeave();
+      placeIndicator(speciesWrap, 'species__indicator', !opts.animate);
+      announce(tr('live.count', { n: cardCount() }));
+    };
+    if (opts.animate && typeof grid.animate === 'function') {
+      // уход 150ms (только прозрачность), затем рендер и каскад; повторный клик перенацеливает
+      const els = [grid].concat(nav ? [nav] : []);
+      els.forEach(el => leaveAnims.push(el.animate({ opacity: 0 }, { duration: 150, easing: EASE_OUT, fill: 'forwards' })));
+      const a = leaveAnims[leaveAnims.length - els.length];
+      a.onfinish = done;
+      setTimeout(done, 400);   // запасной путь (фоновые вкладки не играют анимации)
     } else {
-      renderProducts(currentBrand, getLang());
+      cancelLeave();
+      done();
     }
-    if (updateHash) history.replaceState(null, '', '#' + brand);
   }
 
-  document.querySelectorAll('.tab').forEach(tab => {
-    tab.addEventListener('click', () => activateBrand(tab.getAttribute('data-brand'), true, true));
+  function setSpecies(sp, opts) {
+    opts = opts || {};
+    const btn = spBtns.find(b => (b.getAttribute('data-species') || 'all') === sp);
+    if (!btn || btn.getAttribute('aria-disabled') === 'true' || sp === currentSpecies) return;
+    currentSpecies = sp;
+    syncSpecies();
+    placeIndicator(speciesWrap, 'species__indicator', !opts.animate);
+    renderProducts(currentBrand, getLang());
+    if (opts.animate && typeof grid.animate === 'function') {
+      grid.animate([{ opacity: 0.4 }, { opacity: 1 }], { duration: 150, easing: EASE_OUT });   // лёгкий «провал» без движения
+    }
+    announce(tr('live.count', { n: cardCount() }));
+  }
+  NPCtl.activateBrand = activateBrand;
+  NPCtl.setSpecies = setSpecies;
+
+  // Роуминг-табиндекс + стрелки/Home/End (с клавиатуры — мгновенно)
+  function rovingKeys(items, isEnabled, onPick) {
+    return (e) => {
+      const keys = ['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown', 'Home', 'End'];
+      if (!keys.includes(e.key)) return;
+      const list = items.filter(isEnabled);
+      if (!list.length) return;
+      const i = list.indexOf(document.activeElement);
+      let n;
+      if (e.key === 'Home') n = 0;
+      else if (e.key === 'End') n = list.length - 1;
+      else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') n = (i - 1 + list.length) % list.length;
+      else n = (i + 1) % list.length;
+      e.preventDefault();
+      list[n].focus();
+      onPick(list[n]);
+    };
+  }
+
+  if (tabsWrap) {
+    tabsWrap.setAttribute('role', 'tablist');
+    tabs.forEach(t => {
+      t.setAttribute('role', 'tab');
+      t.setAttribute('aria-controls', 'productsGrid');
+      if (!t.id) t.id = 'tab-' + t.getAttribute('data-brand');
+      t.addEventListener('click', e => activateBrand(t.getAttribute('data-brand'), { animate: e.detail !== 0, updateHash: true }));
+    });
+    tabsWrap.addEventListener('keydown', rovingKeys(tabs, () => true,
+      t => activateBrand(t.getAttribute('data-brand'), { animate: false, updateHash: true })));
+    grid.setAttribute('role', 'tabpanel');
+  }
+  if (speciesWrap) {
+    speciesWrap.setAttribute('role', 'radiogroup');
+    spBtns.forEach(b => {
+      b.setAttribute('role', 'radio');
+      b.addEventListener('click', e => {
+        if (b.getAttribute('aria-disabled') === 'true') { e.preventDefault(); return; }
+        setSpecies(b.getAttribute('data-species') || 'all', { animate: e.detail !== 0 });
+      });
+    });
+    speciesWrap.addEventListener('keydown', rovingKeys(spBtns, b => b.getAttribute('aria-disabled') !== 'true',
+      b => setSpecies(b.getAttribute('data-species') || 'all', { animate: false })));
+  }
+  const relabel = () => {
+    if (tabsWrap) tabsWrap.setAttribute('aria-label', tr('a11y.brands'));
+    if (speciesWrap) speciesWrap.setAttribute('aria-label', tr('a11y.species'));
+    const close = document.querySelector('#productModal .pmodal__close');
+    if (close) close.setAttribute('aria-label', tr('a11y.close'));
+    placeIndicators(true);
+  };
+  syncTabs(); syncSpecies(); relabel();
+  LANG_HOOKS.push(relabel);
+
+  // Индикаторы: при ресайзе и после загрузки шрифтов — без анимации
+  if ('ResizeObserver' in window) {
+    let raf = 0;
+    const ro = new ResizeObserver(() => { cancelAnimationFrame(raf); raf = requestAnimationFrame(() => placeIndicators(true)); });
+    if (tabsWrap) ro.observe(tabsWrap);
+    if (speciesWrap) ro.observe(speciesWrap);
+  } else {
+    window.addEventListener('resize', () => placeIndicators(true));
+  }
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => placeIndicators(true));
+
+  // Открытие карточки товара (мышь / Enter / Space); кнопки внутри карточки (избранное) не открывают модалку
+  const openFromCard = (card, keyboard) => {
+    const pid = +card.getAttribute('data-pid');
+    const item = MODAL_ITEMS[pid];
+    if (!item) return;
+    openProductModal(item, getLang(), MODAL_KEYS[pid], { id: card.getAttribute('data-id'), brand: currentBrand, card, keyboard });
+  };
+  grid.addEventListener('click', e => {
+    const card = e.target.closest('[data-pid]');
+    if (!card) return;
+    const ctl = e.target.closest('button, a, input, select, textarea, .product__actions');
+    if (ctl && card.contains(ctl) && ctl !== card) return;
+    openFromCard(card, e.detail === 0);
+  });
+  grid.addEventListener('keydown', e => {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    const card = e.target.closest('[data-pid]');
+    if (!card || e.target !== card) return;
+    e.preventDefault();
+    openFromCard(card, true);
   });
 
-  // --- Переключатель «Все / Для кошек / Для собак» ---
-  const speciesWrap = document.getElementById('species');
-  if (speciesWrap) {
-    speciesWrap.querySelectorAll('.species__btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        speciesWrap.querySelectorAll('.species__btn').forEach(b => b.classList.remove('is-active'));
-        btn.classList.add('is-active');
-        currentSpecies = btn.getAttribute('data-species') || 'all';
-        renderProducts(currentBrand, getLang());
+  // Прямые ссылки после первого рендера
+  window.addEventListener('hashchange', () => {
+    const h = parseHash();
+    if (h.brand && h.brand !== currentBrand) activateBrand(h.brand, { animate: true, updateHash: false });
+    if (h.p) openProduct(h.p);
+  });
+  if (initial.p) openProduct(initial.p);
+}
+
+function initModal() {
+  const modal = document.getElementById('productModal');
+  if (!modal) return;
+  modal.inert = true;
+  modal.addEventListener('click', e => { if (e.target.closest('[data-close]')) closeProductModal(e.detail === 0); });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && modalState === 'open') { e.preventDefault(); closeProductModal(true); return; }
+    trapModalFocus(e);
+  });
+}
+
+// ===== Фоновый слайдер на главной (мягкое «стирание», стрелки, пауза) =====
+function initHeroSlider() {
+  const heroBg = document.getElementById('heroBg');
+  if (!heroBg) return;
+  const slides = Array.from(heroBg.querySelectorAll('.hero-bg__slide'));
+  if (!slides.length) return;
+  const hero = heroBg.closest('section') || heroBg.parentElement;
+  const reduce = reduceMotion();
+  let cur = 0, timer = null, gen = 0;
+  let paused = reduce;          // без автопрокрутки при prefers-reduced-motion
+  let hovered = false, offscreen = false;
+  slides.forEach((s, i) => { s.style.zIndex = i === 0 ? '1' : '0'; });
+
+  function settle() {
+    slides.forEach((s, i) => {
+      s.style.transition = 'none';
+      if (i === cur) s.style.clipPath = 'inset(0 0 0 0)';
+      s.style.zIndex = i === cur ? '1' : '0';
+    });
+  }
+  function wipeTo(n, dir, instant) {
+    if (n === cur || !slides[n]) return;
+    settle();   // прерываем незавершённое стирание
+    const g = ++gen;
+    const incoming = slides[n], prev = cur;
+    cur = n;
+    if (instant || reduce) { settle(); return; }
+    incoming.style.zIndex = '2';
+    incoming.style.clipPath = dir === 'prev' ? 'inset(0 100% 0 0)' : 'inset(0 0 0 100%)';
+    void incoming.offsetWidth; // reflow, чтобы переход сработал
+    incoming.style.transition = 'clip-path 1.4s var(--ease-in-out, ease-in-out)';
+    incoming.style.clipPath = 'inset(0 0 0 0)';
+    setTimeout(() => { if (g !== gen) return; slides[prev].style.zIndex = '0'; incoming.style.zIndex = '1'; }, 1450);
+  }
+  const next = (instant) => wipeTo((cur + 1) % slides.length, 'next', instant);
+  const prev = (instant) => wipeTo((cur - 1 + slides.length) % slides.length, 'prev', instant);
+
+  const running = () => slides.length > 1 && !paused && !hovered && !offscreen && !document.hidden;
+  function sync() {
+    clearInterval(timer);
+    timer = running() ? setInterval(() => next(false), 7000) : null;
+  }
+
+  // Доступность: карусель + кнопка паузы (создаём здесь, index.html не меняем)
+  if (hero) {
+    hero.setAttribute('aria-roledescription', tr('hero.carousel'));
+    hero.setAttribute('aria-label', tr('hero.label'));
+    if (!hero.getAttribute('role')) hero.setAttribute('role', 'region');
+  }
+  let toggle = null;
+  const ICON_PAUSE = '<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><rect x="3.5" y="2.5" width="3" height="11" rx="1" fill="currentColor"/><rect x="9.5" y="2.5" width="3" height="11" rx="1" fill="currentColor"/></svg>';
+  const ICON_PLAY = '<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 2.8v10.4a.6.6 0 0 0 .9.5l8.2-5.2a.6.6 0 0 0 0-1L5.4 2.3a.6.6 0 0 0-.9.5z" fill="currentColor"/></svg>';
+  const relabel = () => {
+    if (hero) {
+      hero.setAttribute('aria-roledescription', tr('hero.carousel'));
+      hero.setAttribute('aria-label', tr('hero.label'));
+    }
+    if (!toggle) return;
+    toggle.innerHTML = paused ? ICON_PLAY : ICON_PAUSE;
+    toggle.setAttribute('aria-label', tr(paused ? 'hero.play' : 'hero.pause'));
+    toggle.classList.toggle('is-paused', paused);
+  };
+  if (slides.length > 1 && hero) {
+    toggle = document.createElement('button');
+    toggle.type = 'button';
+    toggle.className = 'hero-bg__toggle';
+    toggle.id = 'heroToggle';
+    const nextBtnEl = document.getElementById('heroNext');
+    if (nextBtnEl && nextBtnEl.parentNode) nextBtnEl.parentNode.insertBefore(toggle, nextBtnEl.nextSibling);
+    else hero.appendChild(toggle);
+    toggle.addEventListener('click', () => { paused = !paused; relabel(); sync(); });
+  }
+  relabel();
+  LANG_HOOKS.push(relabel);
+
+  const prevBtn = document.getElementById('heroPrev');
+  const nextBtn = document.getElementById('heroNext');
+  if (prevBtn) prevBtn.addEventListener('click', e => { prev(e.detail === 0); sync(); });
+  if (nextBtn) nextBtn.addEventListener('click', e => { next(e.detail === 0); sync(); });
+  if (hero) {
+    hero.addEventListener('keydown', e => {
+      if (e.target.closest('input, textarea, select')) return;
+      if (e.key === 'ArrowLeft') { e.preventDefault(); prev(true); sync(); }
+      else if (e.key === 'ArrowRight') { e.preventDefault(); next(true); sync(); }
+    });
+    heroBg.addEventListener('mouseenter', () => { hovered = true; sync(); });
+    heroBg.addEventListener('mouseleave', () => { hovered = false; sync(); });
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(entries => { offscreen = !entries[0].isIntersecting; sync(); }, { threshold: 0.05 }).observe(hero);
+    }
+  }
+  document.addEventListener('visibilitychange', sync);
+  sync();
+}
+
+// ===== Инициализация =====
+document.addEventListener('DOMContentLoaded', () => {
+  const lang = getLang();
+  // Бренд из адреса выбираем ДО первого рендера (#brand=tpl, #tpl, #p=<id>)
+  const initial = parseHash();
+  if (initial.brand) currentBrand = initial.brand;
+  else if (initial.p) { const f = findById(initial.p); if (f) currentBrand = f.brand; }
+  if (document.getElementById('productsGrid')) document.body.setAttribute('data-brand', currentBrand);
+
+  applyTranslations(lang);
+
+  initLangMenu();
+
+  // --- Бургер-меню ---
+  const burger = document.getElementById('burger');
+  const nav = document.getElementById('nav');
+  if (burger && nav) {
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('is-open');
+      nav.classList.toggle('is-open');
+      burger.setAttribute('aria-expanded', nav.classList.contains('is-open') ? 'true' : 'false');
+    });
+    nav.querySelectorAll('.nav__link').forEach(link => {
+      link.addEventListener('click', () => {
+        burger.classList.remove('is-open');
+        nav.classList.remove('is-open');
+        burger.setAttribute('aria-expanded', 'false');
       });
     });
   }
 
-  // Открыть нужный бренд по адресу (#np / #araton / #tpl / #misoko)
-  const grid = document.getElementById('productsGrid');
-  if (grid) {
-    const hashBrand = location.hash.replace('#', '');
-    // Изначальный тинт страницы по текущему/якорному бренду (без анимации)
-    document.body.setAttribute('data-brand', VALID_BRANDS.includes(hashBrand) ? hashBrand : currentBrand);
-    if (hashBrand) activateBrand(hashBrand, false, false);
-    window.addEventListener('hashchange', () => activateBrand(location.hash.replace('#', ''), false, true));
-
-    // Открытие карточки товара в модальном окне
-    const openFromEvent = (e) => {
-      const card = e.target.closest('[data-pid]');
-      if (!card) return;
-      const pid = +card.getAttribute('data-pid');
-      const item = MODAL_ITEMS[pid];
-      if (item) openProductModal(item, getLang(), MODAL_KEYS[pid]);
-    };
-    grid.addEventListener('click', openFromEvent);
-    grid.addEventListener('keydown', (e) => {
-      if ((e.key === 'Enter' || e.key === ' ') && e.target.closest('[data-pid]')) {
-        e.preventDefault();
-        openFromEvent(e);
-      }
-    });
-    const modal = document.getElementById('productModal');
-    if (modal) {
-      modal.addEventListener('click', (e) => { if (e.target.closest('[data-close]')) closeProductModal(); });
-      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeProductModal(); });
-    }
-  }
+  initModal();
+  initCatalog(initial);
 
   // --- Форма обратной связи (демо, без отправки на сервер) ---
   const form = document.getElementById('contactForm');
   if (form) {
     form.addEventListener('submit', e => {
       e.preventDefault();
-      document.getElementById('formOk').hidden = false;
+      const ok = document.getElementById('formOk');
+      if (ok) ok.hidden = false;
       form.reset();
     });
   }
 
-  // --- Фоновый слайдер на главной (мягкий эффект «стирания», стрелки по бокам) ---
-  const heroBg = document.getElementById('heroBg');
-  if (heroBg) {
-    const slides = Array.from(heroBg.querySelectorAll('.hero-bg__slide'));
-    let cur = 0, timer = null;
-    slides.forEach((s, i) => { s.style.zIndex = i === 0 ? '1' : '0'; });
-    // Плавно показываем следующее фото мягким стиранием (clip-path)
-    function wipeTo(n, dir) {
-      if (n === cur || !slides[n]) return;
-      const incoming = slides[n], prev = cur;
-      const hidden = dir === 'prev' ? 'inset(0 100% 0 0)' : 'inset(0 0 0 100%)';
-      incoming.style.transition = 'none';
-      incoming.style.zIndex = '2';
-      incoming.style.clipPath = hidden;
-      void incoming.offsetWidth; // reflow, чтобы анимация сработала
-      incoming.style.transition = 'clip-path 1.4s ease-in-out';
-      incoming.style.clipPath = 'inset(0 0 0 0)';
-      cur = n;
-      setTimeout(() => { slides[prev].style.zIndex = '0'; incoming.style.zIndex = '1'; }, 1450);
-    }
-    function next() { wipeTo((cur + 1) % slides.length, 'next'); }
-    function prev() { wipeTo((cur - 1 + slides.length) % slides.length, 'prev'); }
-    function restart() { clearInterval(timer); timer = setInterval(next, 7000); }
-
-    const prevBtn = document.getElementById('heroPrev');
-    const nextBtn = document.getElementById('heroNext');
-    if (prevBtn) prevBtn.addEventListener('click', () => { prev(); restart(); });
-    if (nextBtn) nextBtn.addEventListener('click', () => { next(); restart(); });
-
-    if (slides.length > 1) {
-      restart();
-      heroBg.addEventListener('mouseenter', () => clearInterval(timer));
-      heroBg.addEventListener('mouseleave', restart);
-    }
-  }
+  initHeroSlider();
 
   // --- Вкладки «О бренде» на главной ---
   const brandTabs = Array.from(document.querySelectorAll('.brand-tab'));
@@ -740,5 +1313,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initPageTransition();
 
   // --- Год в подвале ---
-  document.getElementById('year').textContent = new Date().getFullYear();
+  const year = document.getElementById('year');
+  if (year) year.textContent = new Date().getFullYear();
+
+  emit('np:ready', {});
 });

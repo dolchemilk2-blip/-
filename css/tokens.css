@@ -1,0 +1,180 @@
+/* =====================================================================
+   Design tokens — Nature's Protection site
+   Load order: tokens.css → styles.css → search.css → list.css (→ home.css)
+   Motion source of truth: brief_emil_motion.md §1. Visual: concept A "Quiet Premium".
+   Every retuned owner-approved value lives in ONE token so it can be reverted in one line.
+   ===================================================================== */
+:root {
+  /* ---------- Motion: curves (never ease-in) ---------- */
+  --ease-out:    cubic-bezier(0.23, 1, 0.32, 1);    /* enter, exit, press, default */
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);   /* on-screen movement: indicators, morphs, clip reveals */
+  --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);    /* iOS-like drawer: header/toolbar glide, mobile nav */
+  --ease-color:  ease;                              /* hover / colour change */
+
+  /* Apple springs emulated with linear(); fallback first, upgraded in @supports below */
+  --spring: var(--ease-out);          /* critically damped (damping 1.0) */
+  --spring-bounce: var(--ease-out);   /* damping 0.8 — momentum only */
+  --dur-spring-snappy: 410ms;         /* response 0.3 */
+  --dur-spring-smooth: 540ms;         /* response 0.4 */
+  --dur-spring-bounce: 520ms;
+
+  /* ---------- Motion: durations ---------- */
+  --dur-press: 100ms;   --dur-release: 160ms;
+  --dur-hover: 200ms;   --dur-tooltip: 125ms;
+  --dur-pop-in: 200ms;  --dur-pop-out: 150ms;
+  --dur-indicator: 250ms;
+  --dur-modal-fade: 200ms; --dur-modal-out: 200ms;
+  --dur-swap-in: 300ms; --dur-swap-out: 150ms;
+  --dur-page-in: 300ms; --dur-page-out: 200ms;
+  --dur-drawer-in: 500ms; --dur-drawer-out: 250ms;
+  --dur-bar: 320ms;     /* header / toolbar glide when the modal opens */
+  --dur-reveal: 600ms;
+  --dur-tint: 700ms;    /* owner-approved brand tint */
+  --dur-counter: 1000ms;
+  --dur-float: 4.6s;    /* owner-approved Tauro tplFloat period — do not change */
+
+  /* ---------- Motion: distances and scales ---------- */
+  --stagger: 40ms;
+  --press-scale: 0.97; --press-scale-card: 0.98;
+  --pop-scale: 0.95; --modal-scale: 0.96; --tooltip-scale: 0.97;
+  --rise: 24px; --rise-sm: 8px; --lift: -4px; --swap-shift: 16px;
+  --float-amp: 8px;     /* Tauro levitation amplitude (was 14px) */
+
+  /* ---------- Colour: neutrals (Apple-calm) ---------- */
+  --paper: #ffffff; --paper-2: #f5f5f7; --paper-3: #e8e8ed;
+  --ink: #1d1d1f;          /* 16.83 on white */
+  --ink-2: #6e6e73;        /* 5.07 on white, 4.66 on paper-2 */
+  --ink-2-tint: #5f5f64;   /* secondary text on tinted grounds */
+  --ink-3: #8e8e93;        /* disabled / decor only */
+  --hairline: rgba(0,0,0,.08); --hairline-strong: rgba(0,0,0,.14);
+
+  /* ---------- Colour: brand ---------- */
+  --accent: #007a3d;       /* from logo #009a4d; white on it 5.45 */
+  --accent-hover: #006833;
+  --accent-soft: #e6f2ea;
+  --leaf: #009a4d;         /* logo green: lines, icons, >=24px text only */
+  --night: #0b0f0d; --night-ink: #f5f5f7; --night-ink-2: #a1a1a6; --night-accent: #3ddc84;
+  --statement-base: #86868b;
+
+  /* Page tint defaults (per-brand values are set on body[data-brand] in styles.css) */
+  --tint: var(--paper); --tint-soft: #f1f7ec;
+  --brand-accent: #3a7d44; --brand-accent-rgb: 58,125,68;   /* decoration only */
+  --brand-ink: var(--accent);                                /* text / white-on-accent */
+  --card-bg: #f2f4f5;                                        /* flat, so it can interpolate */
+
+  /* ---------- Legacy aliases (kept so older rules / other packages keep working) ---------- */
+  --green: var(--accent);
+  --green-dark: var(--accent-hover);
+  --green-light: #a3c585;
+  --cream: var(--paper-2);
+  --muted: var(--ink-2);
+  --white: #ffffff;
+
+  /* ---------- Typography ---------- */
+  --font: 'Onest', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+  --head: var(--font);
+  --t-hero: 700 clamp(44px, 7vw, 96px)/1.02 var(--font);
+  --t-display: 700 clamp(36px, 5vw, 64px)/1.05 var(--font);
+  --t-statement: 600 clamp(28px, 3.6vw, 48px)/1.18 var(--font);
+  --t-title: 600 clamp(28px, 3.2vw, 40px)/1.1 var(--font);
+  --t-headline: 600 21px/1.35 var(--font);
+  --t-body-lg: 400 19px/1.5 var(--font);
+  --t-body: 400 17px/1.55 var(--font);
+  --t-callout: 400 15px/1.45 var(--font);
+  --t-footnote: 500 13px/1.4 var(--font);
+  --track-hero: -0.035em; --track-display: -0.03em; --track-statement: -0.02em;
+  --track-title: -0.022em; --track-headline: -0.012em; --track-footnote: .005em;
+
+  /* ---------- Spacing (4-based) and layout ---------- */
+  --s-1: 4px; --s-2: 8px; --s-3: 12px; --s-4: 16px; --s-5: 20px; --s-6: 24px; --s-8: 32px;
+  --s-10: 40px; --s-12: 48px; --s-16: 64px; --s-20: 80px; --s-30: 120px; --s-40: 160px;
+  --container: 1200px; --text-col: 980px; --gutter: 24px;
+  --header-h: 64px;
+
+  /* ---------- Shape ---------- */
+  --r-chip: 8px; --r-input: 12px; --r-card: 20px; --r-panel: 28px; --r-pill: 999px;
+  --radius: var(--r-card);
+
+  /* ---------- Elevation (Apple-flat) ---------- */
+  --shadow: 0 1px 2px rgba(0,0,0,.04), 0 4px 14px rgba(0,0,0,.04);
+  --shadow-lg: 0 12px 32px rgba(0,0,0,.08), 0 2px 6px rgba(0,0,0,.04);
+  --shadow-modal: 0 24px 80px rgba(0,0,0,.18);
+  --shadow-thumb: 0 1px 2px rgba(0,0,0,.08), 0 3px 10px rgba(0,0,0,.06);
+
+  /* ---------- Materials ---------- */
+  --material-bar: rgba(255,255,255,.72);
+  --material-thick: rgba(250,250,252,.86);
+  --material-dark: rgba(29,29,31,.82);
+  --blur-bar: saturate(180%) blur(20px);
+  --blur-thick: saturate(180%) blur(30px);
+  --backdrop: rgba(0,0,0,.36);
+
+  /* ---------- Focus ---------- */
+  --focus-ring: 0 0 0 3px rgba(0,122,61,.35);
+  --focus-color: var(--accent);
+  --focus-width: 2px;
+}
+
+@supports (transition-timing-function: linear(0, 1)) {
+  :root {
+    --spring: linear(0, 0.099, 0.286, 0.472, 0.626, 0.742, 0.826, 0.885, 0.925,
+                     0.951, 0.969, 0.98, 0.987, 0.992, 0.995, 0.997, 1);
+    --spring-bounce: linear(0, 0.048, 0.16, 0.3, 0.443, 0.575, 0.689, 0.783, 0.856,
+                     0.912, 0.952, 0.979, 0.997, 1.008, 1.013, 1.015, 1.015, 1.013,
+                     1.011, 1.009, 1.007, 1.005, 1.004, 1.003, 1);
+  }
+}
+
+/* ---------- System preferences ---------- */
+@media (max-width: 720px) {
+  :root { --header-h: 56px; --gutter: 16px; }
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --hairline: rgba(0,0,0,.4); --hairline-strong: rgba(0,0,0,.6);
+    --ink-2: #3a3a3c; --ink-2-tint: #3a3a3c; --ink-3: #5f5f64;
+    --material-bar: rgba(255,255,255,.97); --material-thick: rgba(255,255,255,.98);
+    --focus-width: 3px;
+  }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  :root {
+    --material-bar: #ffffff; --material-thick: #fafafc; --material-dark: #1d1d1f;
+    --blur-bar: none; --blur-thick: none;
+  }
+}
+
+/* Reduced motion: movement tokens collapse to zero, opacity stays (≤150ms) */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --press-scale: 1; --press-scale-card: 1; --pop-scale: 1; --modal-scale: 1; --tooltip-scale: 1;
+    --rise: 0px; --rise-sm: 0px; --lift: 0px; --swap-shift: 0px; --float-amp: 0px;
+    --spring: linear; --spring-bounce: linear;
+    --dur-spring-snappy: 150ms; --dur-spring-smooth: 150ms; --dur-spring-bounce: 150ms;
+    --dur-pop-in: 150ms; --dur-modal-fade: 150ms; --dur-modal-out: 150ms;
+    --dur-swap-in: 150ms; --dur-page-in: 150ms; --dur-page-out: 150ms;
+    --dur-drawer-in: 150ms; --dur-drawer-out: 150ms; --dur-bar: 150ms;
+    --dur-indicator: 0ms; --dur-reveal: 150ms;
+    --stagger: 0ms;
+  }
+  html { scroll-behavior: auto !important; }
+}
+
+/* ---------- Utilities ---------- */
+.sr-only {
+  position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; border: 0;
+}
+.skip-link {
+  position: fixed; top: 12px; left: 12px; z-index: 1000;
+  padding: 10px 18px; border-radius: var(--r-pill);
+  background: var(--ink); color: #fff; font: 600 15px/1.2 var(--font);
+  transform: translateY(calc(-100% - 24px)); opacity: 0;
+  transition: transform var(--dur-pop-out) var(--ease-out), opacity var(--dur-pop-out) var(--ease-out);
+}
+.skip-link:focus, .skip-link:focus-visible {
+  transform: none; opacity: 1; outline: var(--focus-width) solid var(--focus-color); outline-offset: 2px;
+  transition-duration: 0ms; /* keyboard-initiated: instant */
+}
