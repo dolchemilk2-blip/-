@@ -95,14 +95,22 @@ html { scroll-padding-top: calc(var(--header-h) + 8px); }
   .hero-ctl:hover, .hero-home__controls .hero-bg__toggle:hover { background-color: rgba(255,255,255,.16); }
 }
 
-/* The single first-screen flourish: the hero copy rises in once */
+/* The single first-screen flourish: hero lines rise + fade once, 60ms apart */
 @keyframes homeRise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
-.hero-home__content > *, .hero-stats { animation: homeRise var(--dur-reveal) var(--ease-out) backwards; }
-.hero-home__title { animation-delay: 40ms; }
-.hero-home__text { animation-delay: 80ms; }
-.hero-home__actions { animation-delay: 120ms; }
-.intents { animation-delay: 160ms; }
-.hero-stats { animation-delay: 200ms; }
+.hero-home__content > *, .hero-stats { animation: homeRise 700ms var(--ease-out) backwards; }
+.hero-home__eyebrow { animation-delay: 60ms; }
+.hero-home__title { animation-delay: 120ms; }
+.hero-home__text { animation-delay: 180ms; }
+.hero-home__actions { animation-delay: 240ms; }
+.intents { animation-delay: 300ms; }
+.hero-stats { animation-delay: 360ms; }
+
+/* Background slides: soft crossfade + 1.04→1 settle instead of the clip-path wipe.
+   main.js drives the stacking via inline z-index (top = incoming, 1 = current, 0 = idle) and the fade;
+   we neutralise the inline clip-path of the old wipe. */
+.hero--home .hero-bg { overflow: hidden; }
+.hero--home .hero-bg__slide { clip-path: none !important; backface-visibility: hidden; }
+/* The fade itself runs in main.js (WAAPI, 600ms --ease-out, interruptible: an interrupted slide keeps its opacity). */
 
 @media (max-width: 720px) {
   .hero--home { min-height: calc(100svh - var(--header-h)); }
@@ -121,18 +129,25 @@ html { scroll-padding-top: calc(var(--header-h) + 8px); }
 
 /* ---------- 2. Coat colour chapter ---------- */
 .coat {
-  --coat-bg: #f6f4ef; --coat-ink: var(--ink); --coat-ink-2: #5f5f64; --coat-track: rgba(0,0,0,.06); --coat-ind: #fff; --coat-glow: rgba(255,255,255,.9);
-  --q: calc(1 - var(--p, 1));
-  position: relative; overflow: hidden; padding: 140px 0;
-  background-color: var(--coat-bg); color: var(--coat-ink);
-  transition: background-color var(--dur-tint) var(--ease-color), color var(--dur-tint) var(--ease-color);
+  --coat-ink: var(--ink); --coat-ink-2: #5f5f64; --coat-track: rgba(0,0,0,.06); --coat-ind: #fff;
+  position: relative; overflow: hidden; padding: 140px 0; isolation: isolate;
+  background-color: #f6f4ef; color: var(--coat-ink);
+  transition: color var(--dur-tint) var(--ease-color);
 }
-.coat[data-coat="red"], .coat:has(#coatRed:checked) { --coat-bg: #f7e9e0; --coat-ind: #fff; --coat-glow: rgba(255,236,222,.95); }
+/* Recolour = two full-bleed tint layers crossfading on opacity (compositor-only; no big-area background repaint) */
+.coat::before, .coat::after {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; opacity: 0;
+  transition: opacity var(--dur-tint) var(--ease-in-out);
+}
+.coat::before { background-color: #f7e9e0; }   /* red */
+.coat::after  { background-color: #2b2724; }   /* dark (stacked above red) */
+.coat[data-coat="red"]::before, .coat:has(#coatRed:checked)::before,
+.coat[data-coat="dark"]::after, .coat:has(#coatDark:checked)::after { opacity: 1; }
 .coat[data-coat="dark"], .coat:has(#coatDark:checked) {
-  --coat-bg: #2b2724; --coat-ink: #f5f5f7; --coat-ink-2: #c7c3be; --coat-track: rgba(255,255,255,.1); --coat-ind: rgba(255,255,255,.18); --coat-glow: rgba(255,255,255,.08);
+  --coat-ink: #f5f5f7; --coat-ink-2: #c7c3be; --coat-track: rgba(255,255,255,.1); --coat-ind: rgba(255,255,255,.18);
 }
 .coat__inner { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: 64px; align-items: center; }
-.coat__copy { transform: translateY(calc(var(--q) * 40px)); opacity: calc(1 - var(--q) * .8); }
+/* Scroll scene: js/home.js writes transform/opacity inline on these two (no-JS / reduced motion = final state) */
 .coat__eyebrow { font: var(--t-footnote); letter-spacing: var(--track-footnote); color: var(--coat-ink-2); margin-bottom: 12px; transition: color var(--dur-tint) var(--ease-color); }
 .coat__title { font: var(--t-display); letter-spacing: var(--track-display); text-wrap: balance; }
 .coat__lead { font: var(--t-body-lg); color: var(--coat-ink-2); margin: 18px 0 32px; max-width: 42ch; transition: color var(--dur-tint) var(--ease-color); }
@@ -162,21 +177,23 @@ html { scroll-padding-top: calc(var(--header-h) + 8px); }
 .coat[data-coat="red"] .coat-seg__ind, .coat-seg:has(#coatRed:checked) .coat-seg__ind { transform: translateX(100%); }
 .coat[data-coat="dark"] .coat-seg__ind, .coat-seg:has(#coatDark:checked) .coat-seg__ind { transform: translateX(200%); }
 .coat.is-kbd .coat-seg__ind { transition: background-color var(--dur-tint) var(--ease-color); }  /* keyboard = instant move */
+/* keyboard (arrow keys on the radiogroup) = instant text + pack swap too; the tint crossfade stays */
+.coat.is-kbd .coat__text, .coat.is-kbd .coat__pack { transition: none !important; }
 
 .coat__texts { display: grid; margin: 32px 0 28px; min-height: 120px; }
-.coat__text { grid-area: 1 / 1; opacity: 0; visibility: hidden; transition: opacity var(--dur-swap-out) var(--ease-out), visibility 0s linear var(--dur-swap-out); }
+.coat__text { grid-area: 1 / 1; opacity: 0; visibility: hidden; transform: translateY(6px); transition: opacity var(--dur-swap-out) var(--ease-out), transform 0s linear var(--dur-swap-out), visibility 0s linear var(--dur-swap-out); }
 .coat__text h3 { font: var(--t-headline); letter-spacing: var(--track-headline); margin-bottom: 8px; }
 .coat__text p { font: var(--t-body); color: var(--coat-ink-2); max-width: 46ch; transition: color var(--dur-tint) var(--ease-color); }
 .coat__cta { min-height: 48px; }
 .coat:has(#coatDark:checked) .coat__cta, .coat[data-coat="dark"] .coat__cta { background-color: #fff; color: var(--ink); }
 
 /* Stage: matching NP Superior Care packs crossfade */
-.coat__stage {
-  position: relative; aspect-ratio: 1 / .92;
-  transform: translateY(calc(var(--q) * 90px)) scale(calc(1 - var(--q) * .08));
-  opacity: calc(1 - var(--q) * .9);
+.coat__stage { position: relative; aspect-ratio: 1 / .92; }
+.coat__glow {
+  position: absolute; inset: 8% 6%; border-radius: 50%; background: radial-gradient(closest-side, rgba(255,246,238,.95), transparent);
+  transition: opacity var(--dur-tint) var(--ease-in-out);
 }
-.coat__glow { position: absolute; inset: 8% 6%; border-radius: 50%; background: radial-gradient(closest-side, var(--coat-glow), transparent); transition: background var(--dur-tint) var(--ease-color); }
+.coat[data-coat="dark"] .coat__glow, .coat:has(#coatDark:checked) .coat__glow { opacity: .1; }
 .coat__pack { position: absolute; inset: 0; margin: 0; opacity: 0; transform: scale(.97); transition: opacity 300ms var(--ease-out), transform 300ms var(--ease-out); }
 .coat__cat { position: absolute; left: 4%; top: 2%; width: 66%; height: auto; filter: drop-shadow(0 24px 30px rgba(40,30,20,.22)); }
 .coat__dog { position: absolute; right: 2%; bottom: 4%; width: 40%; height: auto; border-radius: var(--r-card); background: #fff; box-shadow: var(--shadow-lg); }
@@ -189,7 +206,8 @@ html { scroll-padding-top: calc(var(--header-h) + 8px); }
 .coat[data-coat="white"] .coat__text[data-coat="white"],
 .coat[data-coat="red"] .coat__text[data-coat="red"],
 .coat[data-coat="dark"] .coat__text[data-coat="dark"] {
-  opacity: 1; visibility: visible; transition: opacity var(--dur-swap-in) var(--ease-out) 80ms, visibility 0s;
+  opacity: 1; visibility: visible; transform: none;
+  transition: opacity var(--dur-swap-in) var(--ease-out) 80ms, transform 400ms var(--ease-out) 80ms, visibility 0s;
 }
 .coat:has(#coatWhite:checked) .coat__pack[data-coat="white"],
 .coat:has(#coatRed:checked) .coat__pack[data-coat="red"],
@@ -197,7 +215,7 @@ html { scroll-padding-top: calc(var(--header-h) + 8px); }
 .coat[data-coat="white"] .coat__pack[data-coat="white"],
 .coat[data-coat="red"] .coat__pack[data-coat="red"],
 .coat[data-coat="dark"] .coat__pack[data-coat="dark"] {
-  opacity: 1; transform: none; transition: opacity 500ms var(--ease-out) 80ms, transform 500ms var(--ease-out) 80ms;
+  opacity: 1; transform: none; transition: opacity 300ms var(--ease-out), transform 300ms var(--ease-out);
 }
 
 @media (max-width: 860px) {
@@ -232,6 +250,41 @@ html { scroll-padding-top: calc(var(--header-h) + 8px); }
   .lineup__grid::-webkit-scrollbar { display: none; }
   .lineup__grid > li { flex: 0 0 85%; scroll-snap-align: center; }
   .tile { min-height: 360px; padding: 28px; }
+}
+
+/* ---------- 3b. Categories (deep links into catalogue sections) ---------- */
+.cats { background-color: var(--paper); padding-top: 0 !important; }
+.cats__head { display: grid; grid-template-columns: 1fr auto; align-items: end; column-gap: 24px; max-width: none; }
+.cats__head .home-head__tag { grid-column: 1 / -1; }
+.cats__all { font-weight: 500; font-size: 17px; color: var(--accent); padding: 8px 0; white-space: nowrap; }
+.cats__all span[aria-hidden] { display: inline-block; transition: transform var(--dur-hover) var(--ease-out); }
+.cats__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; list-style: none; margin: 0; padding: 0; }
+.cat-tile {
+  display: flex; align-items: center; gap: 18px; height: 100%; min-height: 120px; padding: 16px 20px 16px 16px;
+  border-radius: var(--r-card); background-color: var(--paper-2); color: var(--ink);
+  transition: transform var(--dur-release) var(--ease-out), box-shadow var(--dur-hover) var(--ease-out);
+}
+.cat-tile__img {
+  flex: none; width: 88px; height: 88px; object-fit: contain; mix-blend-mode: multiply;
+  transition: transform var(--dur-indicator) var(--ease-out);
+}
+.cat-tile__text { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.cat-tile__name { font: var(--t-headline); letter-spacing: var(--track-headline); text-wrap: balance; }
+.cat-tile__brand { font: var(--t-footnote); color: var(--ink-2); }
+.cat-tile:active { transform: scale(var(--press-scale-card)); transition-duration: var(--dur-press); }
+.cat-tile:focus-visible { outline: var(--focus-width) solid var(--focus-color); outline-offset: 3px; }
+@media (hover: hover) and (pointer: fine) {
+  .cat-tile:hover { box-shadow: var(--shadow-md, 0 8px 24px rgba(0,0,0,.08)); }
+  .cat-tile:hover .cat-tile__img { transform: scale(1.06); }
+  .cats__all:hover span[aria-hidden] { transform: translateX(3px); }
+}
+@media (max-width: 960px) { .cats__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) {
+  .cats__grid { gap: 10px; }
+  .cat-tile { flex-direction: column; align-items: flex-start; gap: 10px; min-height: 0; padding: 14px; }
+  .cat-tile__img { width: 64px; height: 64px; }
+  .cat-tile__name { font-size: 16px; line-height: 1.25; }
+  .cats__all { font-size: 15px; }
 }
 
 /* ---------- 4. Values / history / FAQ tabs ---------- */
@@ -312,10 +365,11 @@ html { scroll-padding-top: calc(var(--header-h) + 8px); }
 /* ---------- Reduced motion: no movement, short fades only ---------- */
 @media (prefers-reduced-motion: reduce) {
   .hero-home__content > *, .hero-stats { animation: fadeIn 150ms var(--ease-out) backwards; animation-delay: 0ms; }
-  .coat__copy, .coat__stage { transform: none; opacity: 1; }
+  .coat__copy, .coat__stage { transform: none !important; opacity: 1 !important; }
   .coat-seg__ind { transition: background-color var(--dur-tint) var(--ease-color); }
   .coat__pack { transform: none !important; }
-  .tile, .tile__img, .intent, .hero-ctl, .hero-home__controls .hero-bg__toggle { transform: none !important; }
+  .tile, .tile__img, .intent, .hero-ctl, .hero-home__controls .hero-bg__toggle, .cat-tile, .cat-tile__img, .coat__text { transform: none !important; }
+  .hero--home .hero-bg__slide { animation: none !important; }
   .home-js main [data-reveal] { opacity: 1; transform: none; }
 }
 
@@ -330,5 +384,5 @@ html { scroll-padding-top: calc(var(--header-h) + 8px); }
 @media (forced-colors: active) {
   .coat-seg__ind { background-color: Highlight; forced-color-adjust: none; }
   .coat-seg input:checked + label { color: HighlightText; forced-color-adjust: none; }
-  .tile, .intent { border: 1px solid CanvasText; }
+  .tile, .intent, .cat-tile { border: 1px solid CanvasText; }
 }

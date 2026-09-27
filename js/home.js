@@ -37,7 +37,16 @@ Object.assign(TRANSLATIONS.az, {
   'home.about.caption': 'Əvvəl və sonra: Superior Care White rasionunda maltezdə göz ləkələri.',
   'home.contact.hint': '«Göndər» düyməsini basın — poçt proqramınız hazır məktubla açılacaq.',
   'home.contact.ok': 'Məktub poçt proqramınızda açıldı — yalnız «Göndər» düyməsini basın.',
-  'home.contact.subject': 'Saytdan müraciət'
+  'home.contact.subject': 'Saytdan müraciət',
+  'home.cats.tag': 'Kataloq',
+  'home.cats.title': 'Kateqoriyalar',
+  'home.cats.all': 'Bütün kataloq',
+  'home.cats.dry': 'Quru qida',
+  'home.cats.wet': 'Yaş qida',
+  'home.cats.treats': 'Mükafatlar',
+  'home.cats.vet': 'Baytar dieti',
+  'home.cats.coat': 'Tük qulluğu',
+  'home.cats.toys': 'Yumşaq oyuncaqlar'
 });
 Object.assign(TRANSLATIONS.ru, {
   'meta.title': "Nature's Protection — премиальное питание для кошек и собак",
@@ -74,7 +83,16 @@ Object.assign(TRANSLATIONS.ru, {
   'home.about.caption': 'До и после: слёзные дорожки у мальтезе на рационе Superior Care White.',
   'home.contact.hint': 'Нажмите «Отправить» — откроется ваша почтовая программа с готовым письмом.',
   'home.contact.ok': 'Письмо открыто в вашей почтовой программе — осталось нажать «Отправить».',
-  'home.contact.subject': 'Сообщение с сайта'
+  'home.contact.subject': 'Сообщение с сайта',
+  'home.cats.tag': 'Каталог',
+  'home.cats.title': 'Категории',
+  'home.cats.all': 'Весь каталог',
+  'home.cats.dry': 'Сухой корм',
+  'home.cats.wet': 'Влажный корм',
+  'home.cats.treats': 'Лакомства',
+  'home.cats.vet': 'Ветеринарная диета',
+  'home.cats.coat': 'Уход за шерстью',
+  'home.cats.toys': 'Мягкие игрушки'
 });
 Object.assign(TRANSLATIONS.en, {
   'meta.title': "Nature's Protection — premium nutrition for cats and dogs",
@@ -111,7 +129,16 @@ Object.assign(TRANSLATIONS.en, {
   'home.about.caption': 'Before and after: tear stains on a Maltese fed Superior Care White.',
   'home.contact.hint': 'Press “Send” and your email app opens with the message ready.',
   'home.contact.ok': 'Your email app has the message ready — just press Send.',
-  'home.contact.subject': 'Message from the website'
+  'home.contact.subject': 'Message from the website',
+  'home.cats.tag': 'Catalogue',
+  'home.cats.title': 'Categories',
+  'home.cats.all': 'Full catalogue',
+  'home.cats.dry': 'Dry food',
+  'home.cats.wet': 'Wet food',
+  'home.cats.treats': 'Treats',
+  'home.cats.vet': 'Veterinary diet',
+  'home.cats.coat': 'Coat care',
+  'home.cats.toys': 'Soft toys'
 });
 
 (function () {
@@ -133,59 +160,103 @@ Object.assign(TRANSLATIONS.en, {
     document.querySelectorAll('[data-i18n-aria]').forEach(el => { const v = t(el.getAttribute('data-i18n-aria')); if (v) el.setAttribute('aria-label', v); });
   }
 
-  // --- Scene engine: IO-gated rAF пишет --p (0→1) на секцию; CSS читает var(--p,1) ---
+  // --- Scene engine: глава #coat «въезжает» при прокрутке.
+  // rAF крутится только пока секция в зоне видимости (IO вешает/снимает scroll-слушатель).
+  // За кадр: одно чтение layout на сцену (фаза чтения), затем только запись transform/opacity (фаза записи).
   function initScenes() {
     if (reduce() || !('IntersectionObserver' in window)) return;
-    const scenes = Array.from(document.querySelectorAll('[data-scene]'));
+    const scenes = Array.from(document.querySelectorAll('[data-scene]')).map(el => ({
+      el,
+      copy: el.querySelector('.coat__copy'),
+      stage: el.querySelector('.coat__stage'),
+      last: -1
+    }));
     if (!scenes.length) return;
     const live = new Set();
-    let raf = 0;
+    let raf = 0, listening = false;
+    const progress = (top, vh) => Math.min(1, Math.max(0, (vh - top) / (vh * 0.75)));
+    const paint = (s, p) => {
+      const q = Math.round((1 - p) * 1000) / 1000;           // 0 = на месте
+      if (q === s.last) return;
+      s.last = q;
+      if (s.copy) {
+        s.copy.style.transform = q ? 'translate3d(0,' + (q * 40).toFixed(1) + 'px,0)' : '';
+        s.copy.style.opacity = q ? String(1 - q * 0.8) : '';
+      }
+      if (s.stage) {
+        s.stage.style.transform = q ? 'translate3d(0,' + (q * 90).toFixed(1) + 'px,0) scale(' + (1 - q * 0.08).toFixed(4) + ')' : '';
+        s.stage.style.opacity = q ? String(1 - q * 0.9) : '';
+      }
+    };
     const frame = () => {
       raf = 0;
       const vh = window.innerHeight || 1;
-      live.forEach(el => {
-        const r = el.getBoundingClientRect();
-        // 0 — верх секции у нижнего края экрана, 1 — верх секции на 25% высоты экрана
-        const p = Math.min(1, Math.max(0, (vh - r.top) / (vh * 0.75)));
-        el.style.setProperty('--p', p.toFixed(3));
-      });
+      const list = Array.from(live);
+      const tops = list.map(s => s.el.getBoundingClientRect().top);   // чтение
+      list.forEach((s, i) => paint(s, progress(tops[i], vh)));        // запись
     };
     const request = () => { if (!raf && live.size) raf = requestAnimationFrame(frame); };
+    const listen = on => {
+      if (on === listening) return;
+      listening = on;
+      if (on) { window.addEventListener('scroll', request, { passive: true }); window.addEventListener('resize', request); }
+      else { window.removeEventListener('scroll', request); window.removeEventListener('resize', request); if (raf) { cancelAnimationFrame(raf); raf = 0; } }
+    };
+    const byEl = new Map(scenes.map(s => [s.el, s]));
     const io = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) live.add(e.target); else live.delete(e.target); });
+      const vh = window.innerHeight || 1;
+      entries.forEach(e => {
+        const s = byEl.get(e.target);
+        if (e.isIntersecting) live.add(s);
+        else { live.delete(s); paint(s, progress(e.boundingClientRect.top, vh)); }  // финальный кадр при выходе
+      });
+      listen(live.size > 0);
       request();
     }, { rootMargin: '10% 0px 10% 0px' });
-    scenes.forEach(el => { el.style.setProperty('--p', '0'); io.observe(el); });
-    frame();
-    // Секции, уже пролистанные выше (reload в середине страницы), — финальное состояние
-    scenes.forEach(el => { if (el.getBoundingClientRect().bottom < 0) el.style.setProperty('--p', '1'); });
-    window.addEventListener('scroll', request, { passive: true });
-    window.addEventListener('resize', request);
+    // Начальное состояние без отдельного чтения layout: IO сразу пришлёт первые записи
+    scenes.forEach(s => io.observe(s.el));
   }
 
-  // --- Reveal: opacity + подъём 16px, один раз, stagger ≤40ms, не более 6 в группе ---
+  // --- Reveal: opacity + подъём 16px, 600ms, один раз. Stagger 40ms считается по «пачке»,
+  // которая появилась одновременно (не более 6 шагов), — одиночный элемент не ждёт чужих задержек.
   function initReveal() {
     if (!root.classList.contains('home-js')) return;
     const els = Array.from(document.querySelectorAll('main [data-reveal]'));
-    const groups = new Map();
-    els.forEach(el => {
-      const key = el.closest('section');
-      const list = groups.get(key) || []; list.push(el); groups.set(key, list);
-      el.style.setProperty('--ri', String(Math.min(list.length - 1, 5)));
-    });
+    const order = new Map(els.map((el, i) => [el, i]));
+    const show = (batch) => {
+      batch.sort((a, b) => order.get(a) - order.get(b))
+        .forEach((el, i) => { el.style.setProperty('--ri', String(Math.min(i, 5))); el.classList.add('is-in'); });
+    };
     const io = new IntersectionObserver(entries => {
+      const batch = new Set();
       entries.forEach(e => {
         if (!e.isIntersecting) return;
         // Соседи в том же ряду (горизонтальный скролл на мобильном) появляются вместе
         const sibs = e.target.parentElement ? Array.from(e.target.parentElement.children).filter(x => x.hasAttribute('data-reveal')) : [e.target];
-        sibs.forEach(x => { x.classList.add('is-in'); io.unobserve(x); });
+        sibs.forEach(x => { if (!x.classList.contains('is-in')) batch.add(x); io.unobserve(x); });
       });
+      if (batch.size) show(Array.from(batch));
     }, { rootMargin: '0px 0px -8% 0px', threshold: 0.01 });
-    els.forEach(el => {
+    const vh = window.innerHeight;
+    const tops = els.map(el => el.getBoundingClientRect().top);   // одно чтение на элемент, до любых записей
+    els.forEach((el, i) => {
       // Уже на экране при загрузке — показываем без анимации
-      if (el.getBoundingClientRect().top < window.innerHeight * 0.92) el.classList.add('is-in', 'is-instant');
+      if (tops[i] < vh * 0.92) el.classList.add('is-in', 'is-instant');
       else io.observe(el);
     });
+  }
+
+  // --- Слайды героя: заранее декодируем 2-й/3-й кадр в простое, чтобы первый кроссфейд не дёргался ---
+  function predecodeSlides() {
+    const imgs = Array.from(document.querySelectorAll('#heroBg .hero-bg__slide')).slice(1);
+    if (!imgs.length) return;
+    const go = () => imgs.forEach(img => {
+      img.loading = 'eager';
+      if (img.decode) img.decode().catch(() => { /* не критично */ });
+    });
+    const idle = window.requestIdleCallback || (fn => setTimeout(fn, 600));
+    if (document.readyState === 'complete') idle(go);
+    else window.addEventListener('load', () => idle(go), { once: true });
   }
 
   // --- Глава «Цвет шерсти»: радиогруппа (CSS :has делает всю работу), клавиатура — мгновенно ---
@@ -265,6 +336,7 @@ Object.assign(TRANSLATIONS.en, {
     applyAttrs();
     initCoat();
     initScenes();
+    predecodeSlides();
     initReveal();
     initTabs();
     initForm();

@@ -7,11 +7,15 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html {
-  scroll-behavior: smooth; overflow-x: clip; scrollbar-gutter: stable;
-  scroll-padding-top: calc(var(--header-h) + var(--bar-h, 0px) + 16px);
+  overflow-x: clip; scrollbar-gutter: stable;
+  /* Anchors / scrollIntoView land below the whole sticky stack (header + toolbar + chip row) */
+  scroll-padding-top: calc(var(--sticky-offset) + 16px);
   -webkit-text-size-adjust: 100%;
 }
-html:has(body.modal-open) { overflow: hidden; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+/* Scroll lock lives on <html> (cleared after the close fade); body.modal-open only drives the chrome glide,
+   so the header/toolbar/chips start returning the moment the dialog starts closing */
+html.modal-open { overflow: hidden; }
 body {
   font-family: var(--font); font-size: 16px;
   color: var(--ink);
@@ -65,7 +69,10 @@ p { text-wrap: pretty; }
   transition: transform var(--dur-bar) var(--ease-drawer), opacity var(--dur-modal-fade) var(--ease-out);
 }
 /* Товар открыт: шапка плавно уезжает вверх, оставаясь sticky (без рывка раскладки) */
-body.modal-open .header { transform: translateY(-100%); opacity: 0; pointer-events: none; }
+/* Header, toolbar and chip row travel ONE distance (the whole sticky stack) so they glide as one sheet */
+body.modal-open .header { transform: translateY(calc(-1 * var(--sticky-offset) - 8px)); opacity: 0; pointer-events: none; }
+/* Hidden under the modal scrim anyway: skip the per-frame re-blur while the dialog springs in */
+body.modal-open .header, body.modal-open .catalog-bar { -webkit-backdrop-filter: none; backdrop-filter: none; }
 .header__inner { display: flex; align-items: center; justify-content: space-between; height: var(--header-h); gap: 16px; }
 .logo { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
 .logo__img { height: 44px; width: auto; display: block; }
@@ -245,7 +252,9 @@ body.modal-open .header { transform: translateY(-100%); opacity: 0; pointer-even
 .range__desc { font-size: 14px; line-height: 1.45; color: var(--ink-2); }
 
 /* ===== Product groups ===== */
-.product-group { margin-bottom: 64px; scroll-margin-top: calc(var(--header-h) + var(--bar-h, 110px) + 16px); }
+.product-group { margin-bottom: 64px; }
+/* content-visibility (catalog.css) implies paint containment: let hover lift + shadow paint past the edge */
+.product-group { overflow-clip-margin: 48px; }
 .product-group:last-child { margin-bottom: 0; }
 .product-group__title {
   font: var(--t-title); letter-spacing: var(--track-title); font-size: clamp(24px, 2.6vw, 32px);
@@ -288,6 +297,17 @@ body.modal-open .header { transform: translateY(-100%); opacity: 0; pointer-even
 .tabs__indicator { background-color: var(--accent); }
 .tabs:has(.tabs__indicator) .tab.is-active,
 .tabs:has(.tabs__indicator) .brand-tab.is-active { background-color: transparent; }
+/* Label colour split around the pill's glide: the old label darkens as the pill leaves (first half),
+   the new one turns white as the pill lands (second half) — never white text on the light track */
+.tabs:has(.tabs__indicator) .tab {
+  transition:
+    color calc(var(--dur-indicator) / 2) var(--ease-out),
+    background-color var(--dur-hover) var(--ease-color),
+    border-color var(--dur-hover) var(--ease-color),
+    transform var(--dur-release) var(--ease-out);
+}
+.tabs:has(.tabs__indicator) .tab.is-active { transition-delay: calc(var(--dur-indicator) / 2), 0s, 0s, 0s; }
+.tabs:has(.tabs__indicator) .tab:active { transition-duration: calc(var(--dur-indicator) / 2), var(--dur-hover), var(--dur-hover), var(--dur-press); }
 /* Keyboard-initiated or first placement: CORE may add .is-instant to skip the glide */
 .tabs__indicator.is-instant, .species__indicator.is-instant { transition: none; }
 
@@ -323,6 +343,14 @@ body.modal-open .header { transform: translateY(-100%); opacity: 0; pointer-even
 }
 .species__indicator { background-color: #fff; box-shadow: var(--shadow-thumb); }
 .species:has(.species__indicator) .species__btn.is-active { background-color: transparent; box-shadow: none; }
+.species:has(.species__indicator) .species__btn {
+  transition:
+    color calc(var(--dur-indicator) / 2) var(--ease-out),
+    opacity var(--dur-hover) var(--ease-color),
+    transform var(--dur-release) var(--ease-out);
+}
+.species:has(.species__indicator) .species__btn.is-active { transition-delay: calc(var(--dur-indicator) / 2), 0s, 0s; }
+.species:has(.species__indicator) .species__btn:active { transition-duration: calc(var(--dur-indicator) / 2), var(--dur-hover), var(--dur-press); }
 /* Нулевые варианты: не скрываем, а приглушаем (фокус сохраняется, причина — в title) */
 .species__btn[aria-disabled="true"] { opacity: .42; cursor: not-allowed; }
 .species__btn[aria-disabled="true"]:active { transform: none; }
@@ -335,7 +363,7 @@ body.modal-open .header { transform: translateY(-100%); opacity: 0; pointer-even
   padding: 22px 26px; margin-bottom: 40px;
 }
 .baby-banner__icon { font-size: 40px; line-height: 1; }
-.baby-banner__text h3 { color: var(--brand-ink); font: var(--t-headline); letter-spacing: var(--track-headline); margin-bottom: 4px; }
+.baby-banner__text h2, .baby-banner__text h3 { color: var(--brand-ink); font: var(--t-headline); letter-spacing: var(--track-headline); margin-bottom: 4px; }
 .baby-banner__text p { color: var(--ink-2-tint); font-size: 15px; }
 
 /* ===== Floating product decorations (parallax) ===== */
@@ -372,8 +400,8 @@ body.modal-open .header { transform: translateY(-100%); opacity: 0; pointer-even
 /* ===== Sticky catalog toolbar (translucent material, tinted per brand) ===== */
 .catalog-bar {
   position: sticky; top: var(--header-h); z-index: 50;
-  background-color: color-mix(in srgb, var(--tint) 72%, transparent);
-  -webkit-backdrop-filter: var(--blur-bar); backdrop-filter: var(--blur-bar);
+  background-color: color-mix(in srgb, var(--tint) var(--material-tint-mix), transparent);
+  -webkit-backdrop-filter: var(--blur-bar-lite); backdrop-filter: var(--blur-bar-lite);
   border-bottom: 1px solid var(--hairline); padding: 10px 0;
   transition:
     transform var(--dur-bar) var(--ease-drawer),
@@ -384,7 +412,7 @@ body.modal-open .header { transform: translateY(-100%); opacity: 0; pointer-even
   .catalog-bar { background-color: var(--material-bar); }
 }
 /* Товар открыт: панель «шторкой» уходит вверх из своего реального положения, при закрытии — возвращается */
-body.modal-open .catalog-bar { transform: translateY(-140%); opacity: 0; pointer-events: none; }
+body.modal-open .catalog-bar { transform: translateY(calc(-1 * var(--sticky-offset) - 8px)); opacity: 0; pointer-events: none; }
 .catalog-bar__inner { display: flex; align-items: center; justify-content: space-between; gap: 10px 24px; flex-wrap: wrap; }
 .catalog-bar .tabs {
   margin: 0; justify-content: flex-start; flex-wrap: wrap; gap: 2px;
@@ -394,7 +422,15 @@ body.modal-open .catalog-bar { transform: translateY(-140%); opacity: 0; pointer
 .catalog-bar .species { margin: 0; }
 .catalog-bar .tab { padding-top: 7px; padding-bottom: 7px; }
 .catalog-bar .tab.is-active { background-color: var(--brand-ink); color: #fff; }
-.catalog-bar .tabs__indicator { background-color: var(--brand-ink); }
+.catalog-bar .tabs__indicator {
+  background-color: var(--brand-ink);
+  /* the pill is the control: its colour lands with its motion (the page tint keeps its 700ms) */
+  transition:
+    transform var(--dur-indicator) var(--ease-in-out),
+    width var(--dur-indicator) var(--ease-in-out),
+    height var(--dur-indicator) var(--ease-in-out),
+    background-color var(--dur-indicator) var(--ease-in-out);
+}
 .catalog-bar .tabs:has(.tabs__indicator) .tab.is-active { background-color: transparent; }
 .catalog-bar__search { flex: 0 1 320px; min-width: 0; }
 .catalog-bar__search:empty { display: none; }
@@ -426,7 +462,10 @@ body.modal-open .catalog-bar { transform: translateY(-140%); opacity: 0; pointer
 .product {
   background-color: var(--card-bg); border-radius: var(--r-card);
   display: flex; flex-direction: column;
-  transition: transform var(--dur-hover) var(--ease-out), background-color var(--dur-tint) var(--ease-color);
+  contain: layout;
+  /* No background-color transition: 100+ cards re-tinting for 700ms was the costliest part of a brand
+     switch. The grid itself cross-fades (view transition / .brand-leaving), which hides the colour swap. */
+  transition: transform var(--dur-release) var(--ease-out);
 }
 .product__img {
   position: relative; overflow: hidden; border-radius: var(--r-card) var(--r-card) 0 0;
@@ -441,7 +480,7 @@ body.modal-open .catalog-bar { transform: translateY(-140%); opacity: 0; pointer
 .product__img img {
   position: relative; z-index: 1;
   max-height: 100%; max-width: 100%; width: auto; object-fit: contain; mix-blend-mode: multiply;
-  transition: transform 300ms var(--ease-out);
+  transition: transform var(--dur-swap-in) var(--ease-out);
 }
 .product__emoji { font-size: 64px; position: relative; z-index: 1; }
 .product__body { padding: 4px 22px 22px; flex: 1; display: flex; flex-direction: column; }
@@ -504,8 +543,16 @@ body.modal-open .catalog-bar { transform: translateY(-140%); opacity: 0; pointer
 
 /* ===== Кликабельные карточки ===== */
 .product.is-clickable { cursor: pointer; }
-.product.is-clickable:focus-visible { outline: var(--focus-width) solid var(--focus-color); outline-offset: 3px; }
-.product.is-clickable:active { transform: scale(var(--press-scale-card)); transition-duration: var(--dur-press), var(--dur-tint); }
+.product.is-clickable:focus-visible,
+.product.is-clickable:has(.product__open:focus-visible) { outline: var(--focus-width) solid var(--focus-color); outline-offset: 3px; }
+/* The product name is the card's button; its ::after stretches over the whole card (heart/ribbon sit above it) */
+.product__open {
+  appearance: none; -webkit-appearance: none; background: none; border: 0; padding: 0; margin: 0;
+  font: inherit; color: inherit; letter-spacing: inherit; line-height: inherit; text-align: inherit; cursor: pointer;
+}
+.product__open::after { content: ''; position: absolute; inset: 0; z-index: 1; border-radius: var(--r-card); }
+.product__open:focus-visible { outline: none; }
+.product.is-clickable:active { transform: scale(var(--press-scale-card)); transition-duration: var(--dur-press); }
 .product__more {
   margin-top: 14px; display: inline-flex; align-items: center; gap: 4px;
   color: var(--brand-ink); font-weight: 500; font-size: 14px; font-family: var(--head);
@@ -514,6 +561,7 @@ body.modal-open .catalog-bar { transform: translateY(-140%); opacity: 0; pointer
 
 @media (hover: hover) and (pointer: fine) {
   .feature:hover, .value-card:hover, .product:hover { transform: translateY(var(--lift)); }
+  .product:hover { transition-duration: var(--dur-hover); }
   .range:hover, .step:hover { transform: translateY(-3px); background-color: #fff; }
   .feature:hover::after, .value-card:hover::after, .range:hover::after, .step:hover::after, .product:hover::after { opacity: 1; }
   .product:hover .product__img img { transform: scale(1.04); }
@@ -542,7 +590,8 @@ body.modal-open .catalog-bar { transform: translateY(-140%); opacity: 0; pointer
   overflow-y: auto; overscroll-behavior: contain;
   background: var(--paper); border-radius: var(--r-panel); box-shadow: var(--shadow-modal);
   transform-origin: var(--pm-origin, 50% 50%);
-  opacity: 0; transform: translate(-50%,-50%) scale(var(--modal-scale));
+  opacity: 0;
+  transform: translate(calc(-50% + var(--from-x, 0px)), calc(-50% + var(--from-y, 0px))) scale(var(--modal-scale));
   transition:
     opacity var(--dur-modal-out) var(--ease-out),
     transform var(--dur-modal-out) var(--ease-out);
@@ -553,13 +602,17 @@ body.modal-open .catalog-bar { transform: translateY(-140%); opacity: 0; pointer
     opacity var(--dur-modal-fade) var(--ease-out),
     transform var(--dur-spring-snappy) var(--spring);
 }
+/* At rest (fully closed) the dialog must not transition: main.js writes --from-x/--from-y (the "fly-out"
+   point toward the clicked card) right before .is-open — animating that write would cancel the offset. */
+.pmodal:not(.is-open):not(.is-closing) .pmodal__dialog { transition: none; }
+/* Keyboard open/close (Enter / Esc) and reduced motion: main.js adds .is-instant — no motion at all */
+.pmodal.is-instant, .pmodal.is-instant .pmodal__backdrop, .pmodal.is-instant .pmodal__dialog { transition: none !important; }
 /* Шапка модалки: закрыть + действия (heart/share) */
 .pmodal__close {
   position: absolute; top: 14px; right: 14px; z-index: 4;
   width: 36px; height: 36px; border: none; border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  background-color: var(--material-thick);
-  -webkit-backdrop-filter: var(--blur-thick); backdrop-filter: var(--blur-thick);
+  background-color: var(--material-thick); /* flat ground under it: no backdrop blur needed */
   color: var(--ink); font-size: 24px; line-height: 1;
   cursor: pointer; box-shadow: 0 0 0 1px var(--hairline);
   transition: background-color var(--dur-hover) var(--ease-color), transform var(--dur-release) var(--ease-out);
@@ -579,7 +632,7 @@ body.modal-open .catalog-bar { transform: translateY(-140%); opacity: 0; pointer
 .pmodal__header .pmodal__close, .pmodal__header .pmodal__actions { position: static; }
 .pmodal__header.is-stuck {
   background-color: var(--material-thick);
-  -webkit-backdrop-filter: var(--blur-thick); backdrop-filter: var(--blur-thick);
+  -webkit-backdrop-filter: var(--blur-bar-lite); backdrop-filter: var(--blur-bar-lite);
   box-shadow: 0 1px 0 var(--hairline);
 }
 @media (hover: hover) and (pointer: fine) {
@@ -713,8 +766,8 @@ body.page-leaving { opacity: 0; transition: opacity var(--dur-page-out) var(--ea
 }
 .tpl-bottle__img img {
   max-height: 300px; max-width: 100%; object-fit: contain;
-  filter: drop-shadow(0 16px 14px rgba(31,42,36,.14));
-  transition: transform 300ms var(--ease-out);
+  filter: drop-shadow(0 16px 14px rgba(31,42,36,.14)); /* static: rasterised once inside the floating layer */
+  transition: transform var(--dur-swap-in) var(--ease-out);
 }
 .tpl-bottle:active .tpl-bottle__img img { transform: translateY(-6px) scale(var(--press-scale-card)); transition-duration: 120ms; }
 @media (hover: hover) and (pointer: fine) {
@@ -814,6 +867,33 @@ body[data-brand="misoko"] { --tint: #fdf5f9; --tint-soft: #fae6f0; --brand-accen
 #productsGrid.brand-entering, .cat-nav.brand-entering { animation: brandIn 320ms var(--ease-out); }
 @keyframes brandIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+/* ===== View Transitions for NP.swap(updateFn, type) — brand / species / section =====
+   main.js sets html[data-vt=<type>] for the duration of document.startViewTransition().
+   Root does NOT animate — it is not even captured: the page stays live under the overlay, so header,
+   toolbar, tab/species indicators and the brand tint keep running their own CSS transitions, and clicks
+   pass through. Only the grid and the chip row are captured. Old grid leaves fast, new one arrives a beat later.
+   The overlay is clipped below header + toolbar so a grid scrolled under the sticky bars never paints over them. */
+:root { view-transition-name: none; }
+html[data-vt] #productsGrid { view-transition-name: np-grid; } /* also named by catalog.css */
+::view-transition { pointer-events: none; clip-path: inset(calc(var(--header-h) + var(--bar-h)) 0 0 0); }
+::view-transition-old(root), ::view-transition-new(root), ::view-transition-group(root) { animation: none; }
+/* No size/position morph on the grid: its top edge doesn't move, only its height changes */
+::view-transition-group(np-grid) { animation: none; }
+/* If the update scrolled the page (sticky-bar click deep in the grid → jump to the results), the group sits at the
+   NEW grid box; shift the old snapshot by the scroll delta so the cards that were on screen fade out in place */
+::view-transition-old(np-grid) { translate: 0 var(--vt-dy, 0px); }
+::view-transition-old(np-grid) { animation: npVtOut var(--dur-vt-out) var(--ease-out) both; }
+::view-transition-new(np-grid) { animation: npVtIn var(--dur-vt-in) var(--ease-out) var(--vt-delay) both; }
+::view-transition-group(np-sections) { animation-duration: var(--dur-vt-chips); animation-timing-function: var(--ease-out); }
+::view-transition-old(np-sections), ::view-transition-new(np-sections) {
+  animation-duration: var(--dur-vt-chips); animation-timing-function: var(--ease-out);
+}
+@keyframes npVtOut { to { opacity: 0; } }
+@keyframes npVtIn  { from { opacity: 0; transform: translateY(var(--rise-sm)); } }
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
+}
 
 /* ===== Values (наши ценности) ===== */
 .values { background-color: var(--paper-2); }
@@ -948,7 +1028,6 @@ body[data-brand="misoko"] { --tint: #fdf5f9; --tint-soft: #fae6f0; --brand-accen
 }
 @media (max-width: 720px) {
   .catalog-bar { position: static; }
-  .product-group { scroll-margin-top: calc(var(--header-h) + 16px); }
   .products { gap: 12px; }
   .product__img { height: 180px; padding: 14px; }
   .product__body { padding: 2px 14px 16px; }
@@ -988,7 +1067,7 @@ body[data-brand="misoko"] { --tint: #fdf5f9; --tint-soft: #fae6f0; --brand-accen
   .page-hero__back, .hero__arrow { transform: none !important; }
   .hero__arrow { transform: translateY(-50%) !important; }
   .pmodal__dialog, .pmodal.is-open:not(.is-closing) .pmodal__dialog {
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%) !important;
     transition: opacity 150ms var(--ease-out);
   }
   .product.reveal { transform: none; transition: opacity 150ms var(--ease-out); }

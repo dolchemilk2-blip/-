@@ -1,0 +1,237 @@
+/* =====================================================================
+   Catalog information architecture (products.html only; loaded right after styles.css)
+   Brand → SECTIONS (one filter chip each) → groups (sub-headers) → cards.
+   Motion: tokens from css/tokens.css; only transform/opacity/colour animate;
+   keyboard changes are instant (main.js adds .is-instant / skips transitions).
+   ===================================================================== */
+
+/* ===== Section chip row: one row, horizontally scrollable, sticky under the toolbar ===== */
+.cat-nav {
+  position: sticky; top: calc(var(--header-h) + var(--bar-h, 0px)); z-index: 40;
+  display: block; margin: 0 0 6px; padding: 8px 0;
+  transition:
+    transform var(--dur-bar) var(--ease-drawer),
+    opacity var(--dur-modal-fade, 200ms) var(--ease-out);
+}
+.cat-nav[hidden] { display: none; }
+/* At scroll-top the chip row sits flush under the toolbar (same place it sticks to) — no floating band */
+.section--top:has(> .container > .cat-nav:not([hidden])) { padding-top: 0; }
+/* Full-bleed translucent material behind the row (same material as the toolbar) */
+.cat-nav::before {
+  content: ''; position: absolute; top: 0; bottom: 0; left: calc(50% - 50vw); right: calc(50% - 50vw); z-index: -1;
+  background-color: color-mix(in srgb, var(--tint, var(--paper)) var(--material-tint-mix, 84%), transparent);
+  -webkit-backdrop-filter: var(--blur-bar-lite); backdrop-filter: var(--blur-bar-lite);
+  border-bottom: 1px solid var(--hairline);
+  transition: background-color var(--dur-tint) var(--ease-color);
+}
+@supports not (background-color: color-mix(in srgb, red 50%, transparent)) {
+  .cat-nav::before { background-color: var(--material-bar); }
+}
+body.modal-open .cat-nav { transform: translateY(calc(-1 * var(--sticky-offset) - 8px)); opacity: 0; pointer-events: none; }
+/* Под затемнением модалки размытие не видно — не пересчитываем его каждый кадр */
+body.modal-open .cat-nav::before { -webkit-backdrop-filter: none; backdrop-filter: none; }
+
+.cat-nav__scroller {
+  position: relative; isolation: isolate;
+  display: flex; flex-wrap: nowrap; gap: 6px;
+  overflow-x: auto; overflow-y: hidden; overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity; scroll-padding-inline: 24px;
+  scrollbar-width: none; -webkit-overflow-scrolling: touch;
+  padding: 2px 1px;
+}
+.cat-nav__scroller::-webkit-scrollbar { display: none; }
+/* «↑ brand» — back to the (non-sticky) toolbar; phones only */
+.cat-nav__up { display: none; }
+/* Edge fade masks — only on the side that can still scroll */
+.cat-nav.is-fade-r .cat-nav__scroller {
+  -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 48px), transparent);
+          mask-image: linear-gradient(to right, #000 calc(100% - 48px), transparent);
+}
+.cat-nav.is-fade-l .cat-nav__scroller {
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 48px);
+          mask-image: linear-gradient(to right, transparent, #000 48px);
+}
+.cat-nav.is-fade-l.is-fade-r .cat-nav__scroller {
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 48px, #000 calc(100% - 48px), transparent);
+          mask-image: linear-gradient(to right, transparent, #000 48px, #000 calc(100% - 48px), transparent);
+}
+
+/* Chips: transparent fill so the sliding indicator stays visible while it glides under them */
+.cat-nav .cat-chip {
+  position: relative; z-index: 1; flex: 0 0 auto; scroll-snap-align: start;
+  display: inline-flex; align-items: center; gap: 6px; white-space: nowrap;
+  background-color: transparent; border-color: var(--hairline-strong, rgba(0,0,0,.14));
+  color: var(--ink-2-tint);
+}
+.cat-chip__n {
+  font-size: 12px; font-weight: 600; font-variant-numeric: tabular-nums;
+  opacity: .62; transition: opacity var(--dur-hover) var(--ease-color);
+}
+.cat-nav .cat-chip.is-active { color: #fff; border-color: transparent; background-color: var(--ink); }
+.cat-nav__scroller.has-indicator .cat-chip.is-active { background-color: transparent; }
+.cat-nav .cat-chip.is-active .cat-chip__n { opacity: .8; }
+/* Label colour split around the pill's glide (old label darkens as it leaves, new one whitens as it lands) */
+.cat-nav__scroller.has-indicator .cat-chip {
+  transition:
+    color calc(var(--dur-indicator) / 2) var(--ease-out),
+    border-color var(--dur-hover) var(--ease-color),
+    transform var(--dur-release) var(--ease-out);
+}
+.cat-nav__scroller.has-indicator .cat-chip.is-active { transition-delay: calc(var(--dur-indicator) / 2), 0s, 0s; }
+.cat-nav__scroller.has-indicator .cat-chip:active { transition-duration: calc(var(--dur-indicator) / 2), var(--dur-hover), var(--dur-press); }
+/* Scroll-spy (режим «Все»): раздел, который сейчас под лентой */
+.cat-nav .cat-chip.is-spy:not(.is-active) { color: var(--brand-ink); border-color: var(--brand-ink); }
+.cat-nav .cat-chip[aria-disabled="true"] { opacity: .4; cursor: not-allowed; }
+.cat-nav .cat-chip[aria-disabled="true"]:active { transform: none; }
+@media (hover: hover) and (pointer: fine) {
+  .cat-nav .cat-chip.is-active:hover { color: #fff; border-color: transparent; }
+  .cat-nav .cat-chip[aria-disabled="true"]:hover { color: var(--ink-2-tint); border-color: var(--hairline-strong, rgba(0,0,0,.14)); }
+}
+
+/* Sliding indicator (main.js sets --ind-x/--ind-w/--ind-y/--ind-h, same contract as the tabs) */
+.cat-nav__indicator {
+  position: absolute; left: 0; top: var(--ind-y, 2px); z-index: 0;
+  width: var(--ind-w, 0px); height: var(--ind-h, 32px);
+  border-radius: var(--r-pill); pointer-events: none;
+  background-color: var(--ink);
+  transform: translateX(var(--ind-x, 0px));
+  transition:
+    transform var(--dur-indicator) var(--ease-in-out),
+    width var(--dur-indicator) var(--ease-in-out);
+}
+.cat-nav__indicator.is-instant { transition: none; }
+
+/* ===== «Показано N товаров» ===== */
+.cat-result {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px;
+  min-height: 20px; margin: 10px 0 26px;
+  font: var(--t-footnote); letter-spacing: var(--track-footnote, 0); color: var(--ink-2-tint);
+  font-variant-numeric: tabular-nums;
+}
+.cat-result:empty { display: none; }
+.cat-result__sec { color: var(--ink); font-weight: 600; }
+.cat-result__sec::before { content: '·'; margin-right: 10px; color: var(--ink-2-tint); font-weight: 400; }
+.cat-result__reset {
+  border: 0; background: none; padding: 2px 0; cursor: pointer;
+  font: inherit; font-weight: 600; color: var(--brand-ink);
+  text-decoration: underline; text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
+  text-underline-offset: 3px;
+  transition: text-decoration-color var(--dur-hover) var(--ease-color);
+}
+@media (hover: hover) and (pointer: fine) {
+  .cat-result__reset:hover { text-decoration-color: currentColor; }
+}
+
+/* Explanation after the count (section dropped by a filter / Tauro: every product suits both species) */
+.cat-result__note { flex-basis: 100%; color: var(--ink-2-tint); }
+
+/* NP «Сухой корм» → Superior Care dry foods (they live in their own coat-colour section) */
+.cat-xlink {
+  display: inline-flex; align-items: center; gap: 6px; margin: -8px 0 24px; padding: 8px 14px; min-height: 40px;
+  border: 1px solid var(--hairline-strong, rgba(0,0,0,.14)); border-radius: var(--r-pill); background-color: var(--paper);
+  font: 600 14px/1.3 var(--font); color: var(--brand-ink); cursor: pointer; text-align: left;
+  transition: border-color var(--dur-hover) var(--ease-color), transform var(--dur-release) var(--ease-out);
+}
+.cat-xlink:active { transform: scale(var(--press-scale)); transition-duration: var(--dur-hover), var(--dur-press); }
+@media (hover: hover) and (pointer: fine) { .cat-xlink:hover { border-color: var(--brand-ink); } }
+
+/* ===== Sections → groups ===== */
+.cat-section { margin-bottom: 72px; }   /* offset for anchors: html scroll-padding-top (--sticky-offset) */
+.cat-section:last-child { margin-bottom: 0; }
+.cat-section__title {
+  display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px 12px;
+  font: var(--t-title); letter-spacing: var(--track-title, -0.02em); font-size: clamp(26px, 3vw, 36px);
+  color: var(--ink); margin: 0 0 24px;
+}
+.cat-section__count {
+  font: var(--t-footnote); font-variant-numeric: tabular-nums; color: var(--ink-2-tint);
+  padding: 3px 10px; border-radius: var(--r-pill); background-color: rgba(0,0,0,.05);
+  transform: translateY(-4px);
+}
+.cat-section > .coat-note { color: var(--ink-2-tint); font: var(--t-body); max-width: 64ch; margin: -12px 0 24px; }
+
+/* Groups inside a section: lighter sub-header. Off-screen groups skip rendering work. */
+.cat-section .product-group {
+  margin: 0 -10px 44px; padding: 4px 10px 10px;
+  content-visibility: auto; contain-intrinsic-size: auto 760px;
+}
+.cat-section .product-group:last-child { margin-bottom: 0; }
+.cat-section .product-group__title {
+  display: flex; align-items: center; gap: 8px;
+  font: var(--t-headline); letter-spacing: -0.01em; color: var(--ink);
+  margin: 0 0 16px;
+}
+.product-group__ico { font-size: 1.1em; line-height: 1; }
+.product-subgroup__title {
+  display: flex; align-items: center; gap: 12px;
+  font: var(--t-footnote); letter-spacing: .02em; text-transform: uppercase; color: var(--ink-2-tint);
+  margin: 22px 0 12px;
+}
+.product-subgroup__title:first-of-type { margin-top: 4px; }
+.product-subgroup__title::after { content: ''; flex: 1; height: 1px; background: var(--hairline); }
+
+/* ===== Grid density: 4 / 3 / 2 / 2 compact ===== */
+.products { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.products .product__img { height: 210px; }
+.products .product__body { padding: 4px 18px 20px; }
+.products .product__name { font-size: 17px; }
+@media (max-width: 1199px) {
+  .products { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .products .product__img { height: 220px; }
+}
+@media (max-width: 899px) {
+  .products { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+}
+@media (max-width: 720px) {
+  .cat-nav { top: var(--header-h); }   /* toolbar is static here */
+  .cat-nav:not([hidden]) { display: flex; flex-wrap: nowrap; justify-content: flex-start; align-items: center; gap: 8px; }
+  .cat-nav__scroller { flex: 1 1 auto; min-width: 0; }
+  .cat-nav__up {
+    display: inline-flex; align-items: center; gap: 4px; flex: none; min-height: 40px; padding: 0 12px;
+    border: 0; border-radius: var(--r-pill); background-color: var(--brand-ink); color: #fff;
+    font: 600 13px/1 var(--font); cursor: pointer; transition: transform var(--dur-release) var(--ease-out);
+  }
+  .cat-nav__up:active { transform: scale(var(--press-scale)); transition-duration: var(--dur-press); }
+  .cat-section { margin-bottom: 56px; }
+}
+@media (max-width: 599px) {
+  .products { gap: 10px; }
+  .products .product__img { height: 140px; padding: 10px 10px 8px; }
+  .products .product__body { padding: 2px 12px 14px; }
+  .products .product__cat { font-size: 11px; margin-bottom: 4px; }
+  .products .product__name { font-size: 14px; line-height: 1.3; margin-bottom: 4px; }
+  .products .product__desc { font-size: 12.5px; line-height: 1.4; -webkit-line-clamp: 2; }
+  .products .product__tags { display: none; }
+  .products .product__more { margin-top: 8px; font-size: 13px; }
+  .products .coat-ribbon { transform: scale(.86); transform-origin: top left; }
+  .cat-section__title { font-size: 24px; margin-bottom: 18px; }
+  .cat-section .product-group { margin-bottom: 32px; }
+  .cat-nav .cat-chip { min-height: 40px; padding: 8px 14px; font-size: 13px; }
+}
+
+/* ===== View Transitions (NP.swap): names exist only while a transition runs =====
+   MOTION styles ::view-transition-*(np-grid | np-sections). For type "section" the chip row
+   stays in the (non-animated, live) root so its indicator glides instead of crossfading. */
+html[data-vt] #productsGrid { view-transition-name: np-grid; }
+html[data-vt="brand"] .cat-nav,
+html[data-vt="species"] .cat-nav { view-transition-name: np-sections; }
+/* type "section": the chip row stays live, so clip the overlay below it too (else the grid snapshot
+   scrolled under the sticky chip row would paint over it for the duration of the crossfade) */
+html[data-vt="section"]::view-transition { clip-path: inset(var(--sticky-offset) 0 0 0); }
+/* While a transition runs the grid under the bars is only a snapshot over the plain page background:
+   re-blurring it every frame is most of the slow frames and shows nothing (tint is already 84%) */
+html[data-vt] .catalog-bar, html[data-vt] .cat-nav::before { -webkit-backdrop-filter: none; backdrop-filter: none; }
+
+/* ===== Reduced motion: no gliding ===== */
+@media (prefers-reduced-motion: reduce) {
+  .cat-nav__indicator { transition: none; }
+  body.modal-open .cat-nav { transform: none; }
+  .cat-nav { transition: opacity 150ms var(--ease-out); }
+}
+
+/* ===== Forced colours ===== */
+@media (forced-colors: active) {
+  .cat-nav__indicator { background-color: Highlight; forced-color-adjust: none; }
+  .cat-nav__scroller.has-indicator .cat-chip.is-active { color: HighlightText; forced-color-adjust: none; }
+  .cat-nav::before { backdrop-filter: none; -webkit-backdrop-filter: none; background: Canvas; }
+}

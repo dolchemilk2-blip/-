@@ -57,9 +57,9 @@
     <!-- ===== 1. Hero ===== -->
     <section class="hero hero--home" id="home" aria-labelledby="heroTitle">
       <div class="hero-bg" id="heroBg">
-        <img src="assets/pets-1.jpg" class="hero-bg__slide" alt="" aria-hidden="true" fetchpriority="high" />
-        <img src="assets/pets-2.jpg" class="hero-bg__slide" alt="" aria-hidden="true" loading="lazy" />
-        <img src="assets/pets-3.jpg" class="hero-bg__slide" alt="" aria-hidden="true" loading="lazy" />
+        <img src="assets/pets-1.jpg" class="hero-bg__slide" alt="" aria-hidden="true" fetchpriority="high" decoding="async" />
+        <img src="assets/pets-2.jpg" class="hero-bg__slide" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+        <img src="assets/pets-3.jpg" class="hero-bg__slide" alt="" aria-hidden="true" loading="lazy" decoding="async" />
       </div>
       <div class="hero-bg__scrim" aria-hidden="true"></div>
 
@@ -174,6 +174,43 @@
             <span class="tile__name">Misoko</span>
             <span class="tile__line" data-i18n="home.brands.misoko">Игрушки и аксессуары</span>
             <img class="tile__img" src="assets/products/misoko-beimr01182.webp" alt="" loading="lazy" />
+          </a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== 3b. Categories: deep links into catalogue sections (#brand=…&sec=…) ===== -->
+    <section class="section cats" id="cats" aria-labelledby="catsTitle">
+      <div class="container">
+        <div class="home-head cats__head" data-reveal>
+          <p class="home-head__tag" data-i18n="home.cats.tag">Каталог</p>
+          <h2 class="home-head__title" id="catsTitle" data-i18n="home.cats.title">Категории</h2>
+          <a class="cats__all" href="products.html"><span data-i18n="home.cats.all">Весь каталог</span> <span aria-hidden="true">›</span></a>
+        </div>
+        <ul class="cats__grid">
+          <li data-reveal><a class="cat-tile" href="products.html#brand=np&amp;sec=dry">
+            <img class="cat-tile__img" src="assets/products/dog-wd-adult-salmon.webp" alt="" width="200" height="200" loading="lazy" decoding="async" />
+            <span class="cat-tile__text"><span class="cat-tile__name" data-i18n="home.cats.dry">Сухой корм</span><span class="cat-tile__brand">Nature's Protection</span></span>
+          </a></li>
+          <li data-reveal><a class="cat-tile" href="products.html#brand=np&amp;sec=wet">
+            <img class="cat-tile__img" src="assets/products/cat-can-whitefish.webp" alt="" width="200" height="200" loading="lazy" decoding="async" />
+            <span class="cat-tile__text"><span class="cat-tile__name" data-i18n="home.cats.wet">Влажный корм</span><span class="cat-tile__brand">Nature's Protection</span></span>
+          </a></li>
+          <li data-reveal><a class="cat-tile" href="products.html#brand=np&amp;sec=treats">
+            <img class="cat-tile__img" src="assets/products/cat-snack-urinary.webp" alt="" width="200" height="200" loading="lazy" decoding="async" />
+            <span class="cat-tile__text"><span class="cat-tile__name" data-i18n="home.cats.treats">Лакомства</span><span class="cat-tile__brand">Nature's Protection</span></span>
+          </a></li>
+          <li data-reveal><a class="cat-tile" href="products.html#brand=np&amp;sec=vet">
+            <img class="cat-tile__img" src="assets/products/scvet-derma.webp" alt="" width="200" height="200" loading="lazy" decoding="async" />
+            <span class="cat-tile__text"><span class="cat-tile__name" data-i18n="home.cats.vet">Ветеринарная диета</span><span class="cat-tile__brand">Nature's Protection</span></span>
+          </a></li>
+          <li data-reveal><a class="cat-tile" href="products.html#brand=tpl&amp;sec=coat">
+            <img class="cat-tile__img" src="assets/products/tpl-un-volume.webp" alt="" width="200" height="200" loading="lazy" decoding="async" />
+            <span class="cat-tile__text"><span class="cat-tile__name" data-i18n="home.cats.coat">Уход за шерстью</span><span class="cat-tile__brand">Tauro Pro Line</span></span>
+          </a></li>
+          <li data-reveal><a class="cat-tile" href="products.html#brand=misoko&amp;sec=soft">
+            <img class="cat-tile__img" src="assets/products/misoko-beimr01182.webp" alt="" width="200" height="200" loading="lazy" decoding="async" />
+            <span class="cat-tile__text"><span class="cat-tile__name" data-i18n="home.cats.toys">Мягкие игрушки</span><span class="cat-tile__brand">Misoko</span></span>
           </a></li>
         </ul>
       </div>

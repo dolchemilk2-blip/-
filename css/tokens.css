@@ -32,6 +32,8 @@
   --dur-tint: 700ms;    /* owner-approved brand tint */
   --dur-counter: 1000ms;
   --dur-float: 4.6s;    /* owner-approved Tauro tplFloat period — do not change */
+  /* View Transitions (NP.swap: brand / species / section) — contract round 2 */
+  --dur-vt-out: 120ms;  --dur-vt-in: 260ms;  --vt-delay: 40ms;  --dur-vt-chips: 150ms;
 
   /* ---------- Motion: distances and scales ---------- */
   --stagger: 40ms;
@@ -90,6 +92,11 @@
   --s-10: 40px; --s-12: 48px; --s-16: 64px; --s-20: 80px; --s-30: 120px; --s-40: 160px;
   --container: 1200px; --text-col: 980px; --gutter: 24px;
   --header-h: 64px;
+  /* Sticky stack on the catalog: header + toolbar + section-chip row.
+     --bar-h / --chips-h are 0 on pages without them; products page sets them via :has() below
+     (JS may override --bar-h / --chips-h on <html> with measured values). Used by scroll-padding. */
+  --bar-h: 0px; --chips-h: 0px;
+  --sticky-offset: calc(var(--header-h) + var(--bar-h) + var(--chips-h));
 
   /* ---------- Shape ---------- */
   --r-chip: 8px; --r-input: 12px; --r-card: 20px; --r-panel: 28px; --r-pill: 999px;
@@ -107,6 +114,10 @@
   --material-dark: rgba(29,29,31,.82);
   --blur-bar: saturate(180%) blur(20px);
   --blur-thick: saturate(180%) blur(30px);
+  /* Lighter material for large sticky surfaces over busy, animating content (toolbar, chip row,
+     sticky modal header): smaller radius = far cheaper per-frame re-blur; a denser tint hides the difference. */
+  --blur-bar-lite: saturate(170%) blur(12px);
+  --material-tint-mix: 84%;
   --backdrop: rgba(0,0,0,.36);
 
   /* ---------- Focus ---------- */
@@ -129,6 +140,10 @@
 @media (max-width: 720px) {
   :root { --header-h: 56px; --gutter: 16px; }
 }
+/* Catalog toolbar heights (measured: 118px one row pair, 168px when it wraps ≤960px, static ≤720px) */
+:root:has(.catalog-bar) { --bar-h: 118px; }
+@media (max-width: 960px) { :root:has(.catalog-bar) { --bar-h: 168px; } }
+@media (max-width: 720px) { :root:has(.catalog-bar) { --bar-h: 0px; } }
 
 @media (prefers-contrast: more) {
   :root {
@@ -142,7 +157,7 @@
 @media (prefers-reduced-transparency: reduce) {
   :root {
     --material-bar: #ffffff; --material-thick: #fafafc; --material-dark: #1d1d1f;
-    --blur-bar: none; --blur-thick: none;
+    --blur-bar: none; --blur-thick: none; --blur-bar-lite: none; --material-tint-mix: 96%;
   }
 }
 
@@ -157,10 +172,15 @@
     --dur-swap-in: 150ms; --dur-page-in: 150ms; --dur-page-out: 150ms;
     --dur-drawer-in: 150ms; --dur-drawer-out: 150ms; --dur-bar: 150ms;
     --dur-indicator: 0ms; --dur-reveal: 150ms;
+    --dur-vt-out: 0ms; --dur-vt-in: 0ms; --vt-delay: 0ms; --dur-vt-chips: 0ms;
     --stagger: 0ms;
   }
   html { scroll-behavior: auto !important; }
 }
+
+/* First render (products.html <html class="is-booting">, removed by main.js two frames after DOMContentLoaded):
+   no transitions, so the brand tint / indicators don't animate from their defaults on every load */
+.is-booting *, .is-booting *::before, .is-booting *::after { transition: none !important; }
 
 /* ---------- Utilities ---------- */
 .sr-only {

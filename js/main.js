@@ -14,10 +14,26 @@ Object.assign(TRANSLATIONS.az, {
   'species.none.dogs': '{brand} brendinin itlər üçün məhsulu yoxdur',
   'species.none.baby': '{brand} brendinin küçüklər və pişik balaları üçün məhsulu yoxdur',
   'live.count': 'Göstərilən məhsul sayı: {n}',
+  'sections.label': 'Kataloq bölmələri',
+  'sections.all': 'Hamısı',
+  'sections.both': 'Pişiklər və itlər üçün',
+  'sections.none': 'Bu seçimdə məhsul yoxdur',
+  'result.shown.one': '{n} məhsul göstərilir',
+  'result.shown.other': '{n} məhsul göstərilir',
+  'result.reset': 'Bütün bölmələr',
   'hero.carousel': 'karusel',
   'hero.label': 'Ev heyvanlarının fotoları',
   'hero.pause': 'Slayderi dayandır',
-  'hero.play': 'Slayderi başlat'
+  'hero.play': 'Slayderi başlat',
+  'sections.toFilters': 'Brend və filtrlər',
+  'sections.scDry': 'Superior Care quru qidası tük rənginə görə',
+  'treats.general': "Nature's Protection funksional qəlyanaltıları",
+  'result.bothSpecies': 'Tauro-nun bütün məhsulları həm pişiklər, həm də itlər üçündür',
+  'result.sectionEmpty': '«{sec}» — bu seçimdə məhsul yoxdur, bütün bölmələr göstərilir',
+  'products.babiesTextCare': 'Balalar üçün zərif qulluq',
+  'coat.red.label': 'Kürən tük',
+  'coat.red.title': 'Kürən və qəhvəyi tük üçün',
+  'coat.red.desc': 'Red Coat / Red Cats xətti RCE kompleksi ilə — kürən və qəhvəyi rəngin dolğunluğunu vurğulayır.'
 });
 Object.assign(TRANSLATIONS.ru, {
   'a11y.skip': 'Перейти к каталогу',
@@ -29,10 +45,25 @@ Object.assign(TRANSLATIONS.ru, {
   'species.none.dogs': 'У {brand} нет товаров для собак',
   'species.none.baby': 'У {brand} нет товаров для малышей',
   'live.count': 'Показано товаров: {n}',
+  'sections.label': 'Разделы каталога',
+  'sections.all': 'Все',
+  'sections.both': 'Для кошек и собак',
+  'sections.none': 'Для этого фильтра товаров нет',
+  'result.shown.one': 'Показан {n} товар',
+  'result.shown.few': 'Показано {n} товара',
+  'result.shown.many': 'Показано {n} товаров',
+  'result.shown.other': 'Показано {n} товара',
+  'result.reset': 'Все разделы',
   'hero.carousel': 'карусель',
   'hero.label': 'Фотографии питомцев',
   'hero.pause': 'Остановить слайдер',
-  'hero.play': 'Запустить слайдер'
+  'hero.play': 'Запустить слайдер',
+  'sections.toFilters': 'Бренд и фильтры',
+  'sections.scDry': 'сухих кормов Superior Care по цвету шерсти',
+  'treats.general': "Функциональные лакомства Nature's Protection",
+  'result.bothSpecies': 'Все товары Tauro подходят и кошкам, и собакам',
+  'result.sectionEmpty': '«{sec}» — нет товаров для этого фильтра, показаны все разделы',
+  'products.babiesTextCare': 'Мягкий уход для щенков и котят'
 });
 Object.assign(TRANSLATIONS.en, {
   'a11y.skip': 'Skip to catalog',
@@ -44,10 +75,23 @@ Object.assign(TRANSLATIONS.en, {
   'species.none.dogs': '{brand} has no products for dogs',
   'species.none.baby': '{brand} has no products for puppies and kittens',
   'live.count': '{n} products shown',
+  'sections.label': 'Catalogue sections',
+  'sections.all': 'All',
+  'sections.both': 'For cats and dogs',
+  'sections.none': 'No products for this filter',
+  'result.shown.one': 'Showing {n} product',
+  'result.shown.other': 'Showing {n} products',
+  'result.reset': 'All sections',
   'hero.carousel': 'carousel',
   'hero.label': 'Pet photos',
   'hero.pause': 'Pause slideshow',
-  'hero.play': 'Play slideshow'
+  'hero.play': 'Play slideshow',
+  'sections.toFilters': 'Brand & filters',
+  'sections.scDry': 'Superior Care dry foods by coat colour',
+  'treats.general': "Nature's Protection functional treats",
+  'result.bothSpecies': 'All Tauro products suit both cats and dogs',
+  'result.sectionEmpty': '«{sec}» has no products for this filter — showing all sections',
+  'products.babiesTextCare': 'Gentle care for puppies and kittens'
 });
 
 // ===== Общие утилиты =====
@@ -150,7 +194,8 @@ function renderRanges(lang) {
 
 // ===== Каталог по брендам =====
 let currentBrand = 'np';
-let currentSpecies = 'all'; // all | cats | dogs
+let currentSpecies = 'all'; // all | cats | dogs | baby
+let currentSection = 'all'; // 'all' | sectionId (CATALOG_SECTIONS)
 let MODAL_ITEMS = [];       // реестр карточек текущего рендера для модального окна
 let MODAL_KEYS = [];        // ключи для поиска полного описания (js/descriptions.js)
 
@@ -160,15 +205,71 @@ function descKeyFor(brand, species, item) {
   return species + '||' + (item.en.cat || '') + '||' + (item.en.name || '');
 }
 
-// Добавить значок питомца к названию группы (для брендов кормов NP/Araton)
+// ===== Разделы каталога (см. CATALOG_SECTIONS в js/catalog.js) =====
+function sectionDefs(brand) {
+  return (typeof CATALOG_SECTIONS !== 'undefined' && CATALOG_SECTIONS[brand]) || [];
+}
+function sectionDef(brand, id) {
+  return sectionDefs(brand).find(d => d.id === id) || null;
+}
+// Раздел для группы Nature's Protection — по английскому названию группы из PRODUCTS
+function npSectionId(g) {
+  if (g.coat) return 'superior-care';
+  const en = (g.group && g.group.en) || '';
+  if (/pouch/i.test(en)) return 'pouches';
+  if (/veterinary/i.test(en)) return 'vet';
+  if (/dry/i.test(en)) return 'dry';
+  if (/wet/i.test(en)) return 'wet';
+  if (/treat|snack/i.test(en)) return 'treats';
+  if (/supplement|vitamin/i.test(en)) return 'supplements';
+  return 'other';
+}
+
+// Добавить значок питомца к названию группы (для NP) + раздел и короткое название (sub)
 function prefixGroups(groups, prefix, species) {
-  return groups.map(g => Object.assign({}, g, {
-    group: {
-      az: prefix + g.group.az,
-      ru: prefix + g.group.ru,
-      en: prefix + g.group.en
-    },
-    species: species
+  return groups.map(g => {
+    const sid = npSectionId(g);
+    const def = sectionDef('np', sid);
+    return Object.assign({}, g, {
+      group: {
+        az: prefix + g.group.az,
+        ru: prefix + g.group.ru,
+        en: prefix + g.group.en
+      },
+      sub: g.group,
+      species: species,
+      sectionId: sid,
+      section: def ? { az: def.az, ru: def.ru, en: def.en } : g.group
+    });
+  });
+}
+
+// Возрастной порядок внутри группы: щенки/котята → взрослые → пожилые (стабильно: внутри этапа — исходный порядок)
+const stageRank = it => {
+  if (it.baby) return 0;
+  const s = (it.en && ((it.en.cat || '') + ' ' + (it.en.name || ''))) || '';
+  return /senior|ageing|mature/i.test(s) ? 2 : 1;
+};
+const byStage = items => items.map((it, i) => [it, i])
+  .sort((a, b) => stageRank(a[0]) - stageRank(b[0]) || a[1] - b[1]).map(x => x[0]);
+const stageSorted = groups => groups.map(g => (g.coat ? g : Object.assign({}, g, { items: byStage(g.items) })));
+
+// Азербайджанские названия в PRODUCTS (translations.js не правим): кальки → принятые в магазинах слова
+const AZ_FIX = [
+  [/Funksional snacklər/g, 'Funksional qəlyanaltılar'], [/snackləri/g, 'qəlyanaltıları'], [/snacklər/g, 'qəlyanaltılar'],
+  [/Mükafatlar/g, 'Qəlyanaltılar'], [/\(paket\)/g, '(pauç)'], [/Baytar dieti/g, 'Baytarlıq pəhrizi']
+];
+function fixAz(o, keys) {
+  if (!o) return;
+  keys.forEach(k => {
+    if (typeof o[k] === 'string') AZ_FIX.forEach(([re, to]) => { o[k] = o[k].replace(re, to); });
+    else if (Array.isArray(o[k])) o[k] = o[k].map(x => AZ_FIX.reduce((v, [re, to]) => v.replace(re, to), String(x)));
+  });
+}
+function patchAzProducts() {
+  ['cats', 'dogs'].forEach(sp => (PRODUCTS[sp] || []).forEach(g => {
+    fixAz(g.group, ['az']);
+    (g.items || []).forEach(it => fixAz(it.az, ['cat', 'name', 'desc', 'tags']));
   }));
 }
 
@@ -177,9 +278,10 @@ let CATALOG_CACHE = null;
 function buildCatalog() {
   if (CATALOG_CACHE) return CATALOG_CACHE;
   const extra = (typeof BRANDS_EXTRA !== 'undefined') ? BRANDS_EXTRA : {};
+  patchAzProducts();
   CATALOG_CACHE = {
-    np: prefixGroups(PRODUCTS.cats, '🐱 ', 'cats').concat(prefixGroups(PRODUCTS.dogs, '🐶 ', 'dogs')),
-    araton: extra.araton || [],
+    np: stageSorted(prefixGroups(PRODUCTS.cats, '🐱 ', 'cats').concat(prefixGroups(PRODUCTS.dogs, '🐶 ', 'dogs'))),
+    araton: stageSorted(extra.araton || []),
     tpl: extra.tpl || [],
     misoko: extra.misoko || []
   };
@@ -207,15 +309,54 @@ function groupsFor(brand, species) {
   return filterBySpecies(groups, species);
 }
 
-// Сколько карточек покажет фильтр (как в renderProducts: товары из витрин Tauro не дублируются)
-function countFor(brand, species) {
-  let skip = null;
-  if (brand === 'tpl' && typeof TPL_SYSTEMS !== 'undefined') {
-    skip = new Set();
-    TPL_SYSTEMS.forEach(sys => sys.steps.forEach(st => skip.add(st.img)));
+// Товары, вошедшие в витрины-комплексы Tauro (Step-системы): карточками их не дублируем
+let TPL_SHOWCASE = null;
+function tplShowcaseSet() {
+  if (!TPL_SHOWCASE) {
+    TPL_SHOWCASE = new Set();
+    if (typeof TPL_SYSTEMS !== 'undefined') TPL_SYSTEMS.forEach(sys => sys.steps.forEach(st => TPL_SHOWCASE.add(st.img)));
   }
-  return groupsFor(brand, species).reduce((sum, g) =>
-    sum + (skip ? g.items.filter(it => !skip.has(it.img)).length : g.items.length), 0);
+  return TPL_SHOWCASE;
+}
+function tplBottleCount() {
+  return (typeof TPL_SYSTEMS !== 'undefined') ? TPL_SYSTEMS.reduce((s, sys) => s + sys.steps.length, 0) : 0;
+}
+
+// Группы, которые реально выводятся карточками (без витринных товаров Tauro)
+function visibleGroups(brand, species) {
+  let groups = groupsFor(brand, species);
+  if (brand === 'tpl' && typeof TPL_SYSTEMS !== 'undefined') {
+    const skip = tplShowcaseSet();
+    groups = groups
+      .map(g => Object.assign({}, g, { items: g.items.filter(it => !skip.has(it.img)) }))
+      .filter(g => g.items.length);
+  }
+  return groups;
+}
+
+// Сколько карточек покажет фильтр вида (без витрин Tauro)
+function countFor(brand, species) {
+  return visibleGroups(brand, species).reduce((sum, g) => sum + g.items.length, 0);
+}
+
+// Разделы бренда для вида: [{id, def:{az,ru,en}, groups, count}] в порядке чипов.
+// Tauro: раздел «Комплексы Step» = витрины флаконов (count = число флаконов).
+function sectionsFor(brand, species) {
+  const out = sectionDefs(brand).map(d => ({ id: d.id, def: d, groups: [], count: 0 }));
+  const byId = {};
+  out.forEach(s => { byId[s.id] = s; });
+  visibleGroups(brand, species).forEach(g => {
+    let s = byId[g.sectionId];
+    if (!s) {
+      const id = g.sectionId || 'other';
+      s = byId[id] = { id, def: g.section || g.group, groups: [], count: 0 };
+      out.push(s);
+    }
+    s.groups.push(g);
+    s.count += g.items.length;
+  });
+  if (byId.systems) byId.systems.count = (brand === 'tpl' && species !== 'baby') ? tplBottleCount() : 0;   // флаконы Step — не детские товары
+  return out;
 }
 
 // Стабильный id товара: бренд + ':' + путь к фото
@@ -263,10 +404,15 @@ function productCard(item, lang, id, uid) {
   const ribbon = coat
     ? `<span class="coat-ribbon coat-ribbon--${coat}"><span class="coat-ribbon__dot"></span>${dict['coat.' + coat + '.label'] || ''}</span>`
     : '';
+  // первые 8 карточек выдачи грузим сразу: они попадают в снимок View Transition (NP.swap ждёт их декодирования)
+  const eager = typeof id === 'number' && id < 8;
   const media = item.img
-    ? `<img src="${item.img}" alt="${t.name}" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'product__emoji',textContent:'${fallback}'}))">`
+    ? `<img src="${item.img}" alt="" ${eager ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"'} decoding="async" width="240" height="240" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'product__emoji',textContent:'${fallback}'}))">`
     : `<span class="product__emoji">${fallback}</span>`;
-  const pid = (id === undefined || id === null) ? '' : ` data-pid="${id}" tabindex="0" role="button"`;
+  // Карточка — не кнопка: открывает её кнопка-название, растянутая на всю карточку (::after);
+  // сердечко — соседний элемент выше по z-index (без вложенных интерактивных элементов)
+  const hasPid = !(id === undefined || id === null);
+  const pid = hasPid ? ` data-pid="${id}"` : '';
   const did = uid ? ` data-id="${uid}"` : '';
   const more = `<span class="product__more">${dict['products.more'] || 'Подробнее'}<svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>`;
   return `
@@ -274,7 +420,7 @@ function productCard(item, lang, id, uid) {
       <div class="product__img">${ribbon}${media}<div class="product__actions"></div></div>
       <div class="product__body">
         <span class="product__cat">${t.cat}</span>
-        <h3 class="product__name">${t.name}</h3>
+        <h4 class="product__name">${hasPid ? `<button class="product__open" type="button">${t.name}</button>` : t.name}</h4>
         <p class="product__desc">${t.desc}</p>
         <div class="product__tags">${tags}</div>
         ${more}
@@ -408,13 +554,20 @@ function closeProductModal(instant) {
     const grid = document.getElementById('productsGrid');
     let back = (id && grid) ? grid.querySelector('[data-id="' + cssEsc(id) + '"]') : null;
     if (!back || !back.isConnected) back = modalOrigin;
-    if (back && back.isConnected && typeof back.focus === 'function') back.focus({ preventScroll: true });
+    if (back && back.isConnected) {
+      const btn = back.querySelector && back.querySelector('.product__open');   // карточка открывается кнопкой-названием
+      const f = btn || back;
+      if (typeof f.focus === 'function') f.focus({ preventScroll: true });
+    }
     modalOrigin = null;
     emit('np:modal-close', { id });
   };
   if (instant || reduceMotion()) { modal.classList.add('is-instant'); finalize(); return; }
   modal.classList.remove('is-instant');
   modal.classList.add('is-closing');
+  // Шапка, тулбар и чипы возвращаются одновременно с растворением диалога (одним движением);
+  // блокировка прокрутки (html.modal-open) и inert снимаются в finalize
+  document.body.classList.remove('modal-open');
   // Стили на keyframes держат .is-open и играют .is-closing; стили на transitions — просто снимаем .is-open
   const keyframed = dlg && getComputedStyle(dlg).animationName !== 'none';
   if (!keyframed) modal.classList.remove('is-open');
@@ -462,57 +615,8 @@ function staggerCards(wrap) {
   });
 }
 
-// opts: {stagger: true} — каскад первых 8 карточек (первый рендер / смена бренда мышью)
-let firstRenderDone = false;
-function renderProducts(brand, lang, opts) {
-  const wrap = document.getElementById('productsGrid');
-  if (!wrap) return;
-  const dict = TRANSLATIONS[lang] || TRANSLATIONS.ru;
-  const doStagger = (opts && opts.stagger) || !firstRenderDone;
-  firstRenderDone = true;
-  const finish = () => {
-    updateSpeciesAvailability();
-    if (doStagger) staggerCards(wrap);
-    emit('np:render', { brand, lang, species: currentSpecies });
-  };
-  let groups = groupsFor(brand, currentSpecies);
-
-  // Tauro: товары, вошедшие в витрины-комплексы (Step-системы), не дублируем карточками.
-  if (brand === 'tpl' && typeof TPL_SYSTEMS !== 'undefined') {
-    const inShowcase = new Set();
-    TPL_SYSTEMS.forEach(sys => sys.steps.forEach(st => inShowcase.add(st.img)));
-    groups = groups
-      .map(g => Object.assign({}, g, { items: g.items.filter(it => !inShowcase.has(it.img)) }))
-      .filter(g => g.items.length);
-  }
-
-  // Быстрые чипы-категории для перехода к группам
-  const nav = document.getElementById('catNav');
-  if (nav) {
-    nav.innerHTML = groups.map((g, i) => {
-      const name = (g.group && (g.group[lang] || g.group.ru)) || '';
-      return `<button class="cat-chip" type="button" data-target="grp-${i}">${name}</button>`;
-    }).join('');
-  }
-
-  if (!groups.length) {
-    wrap.innerHTML = `<p class="catalog-empty">${dict['products.empty'] || ''}</p>`;
-    MODAL_ITEMS = []; MODAL_KEYS = [];
-    finish();
-    return;
-  }
-
-  const banner = currentSpecies === 'baby'
-    ? `<div class="baby-banner"><span class="baby-banner__icon">🍼</span><div class="baby-banner__text"><h3>${dict['products.babiesTitle'] || ''}</h3><p>${dict['products.babiesText'] || ''}</p></div></div>`
-    : '';
-  // Реестр карточек для модального окна: id = индекс в MODAL_ITEMS.
-  MODAL_ITEMS = []; MODAL_KEYS = [];
-  const mk = (it, species) => {
-    const id = MODAL_ITEMS.length;
-    MODAL_ITEMS.push(it);
-    MODAL_KEYS.push(descKeyFor(brand, species, it));
-    return productCard(it, lang, id, productId(it, brand));
-  };
+// Tauro: вставка «зачем нужны степы» + витрины «левитирующих» флаконов (Step-системы)
+function tplIntroHtml(brand, lang, dict) {
   // Вставка «зачем нужны степы» — в самом верху вкладки Tauro
   let tplWhy = '';
   if (brand === 'tpl') {
@@ -617,7 +721,7 @@ function renderProducts(brand, lang, opts) {
         return `
           <div class="tpl-bottle" data-pid="${id}" data-id="${productId(st.item, 'tpl')}" tabindex="0" role="button" style="--c:${st.color};--d:${(bi + 1) * 0.6}s" aria-label="${smallLabel} — ${nm}">
             <span class="tpl-bottle__num">${st.step}</span>
-            <div class="tpl-bottle__img"><img src="${st.img}" alt="${nm}" loading="lazy" /></div>
+            <div class="tpl-bottle__img"><img src="${st.img}" alt="${nm}" loading="lazy" decoding="async" width="200" height="260" /></div>
             <div class="tpl-bottle__label">
               <span class="tpl-bottle__step">${smallLabel}</span>
               <span class="tpl-bottle__name">${nm}</span>
@@ -639,66 +743,174 @@ function renderProducts(brand, lang, opts) {
         </section>`;
     }).join('');
   }
-  wrap.innerHTML = banner + tplWhy + showcase + groups.map((g, i) => {
-    const groupName = (g.group && (g.group[lang] || g.group.ru)) || '';
-    // Группа Superior Care: распределяем по цвету шерсти и добавляем вставки.
-    if (g.coat) {
-      const buckets = { white: [], red: [], dark: [], none: [] };
-      g.items.forEach(it => { buckets[coatOf(it) || 'none'].push(it); });
-      let inner = `<p class="coat-note">${dict['products.coatNote'] || ''}</p>`;
-      const LINE_ORDER = ['starter', 'junior', 'adult-small', 'all-life-stage'];
-      const LINE_KEY = { 'starter': 'line.starter', 'junior': 'line.junior', 'adult-small': 'line.adultSmall', 'all-life-stage': 'line.allLifeStage' };
-      ['white', 'red', 'dark'].forEach(c => {
-        if (!buckets[c].length) return;
-        inner += `
-          <div class="coat-insert coat-insert--${c}">
-            <span class="coat-insert__dot"></span>
-            <div class="coat-insert__text">
-              <h4>${dict['coat.' + c + '.title'] || ''}</h4>
-              <p>${dict['coat.' + c + '.desc'] || ''}</p>
-            </div>
-          </div>`;
-        // Если в группе есть подлинейки (Starter/Junior/Adult/All Life Stage) — делим по ним
-        if (buckets[c].some(it => it.line)) {
-          LINE_ORDER.forEach(ln => {
-            const items = buckets[c].filter(it => it.line === ln);
-            if (!items.length) return;
-            inner += `<h4 class="coat-subline coat-subline--${c}">${dict[LINE_KEY[ln]] || ''}</h4>
-              <div class="products">${items.map(it => mk(it, g.species)).join('')}</div>`;
-          });
-          const rest = buckets[c].filter(it => !it.line);
-          if (rest.length) inner += `<div class="products">${rest.map(it => mk(it, g.species)).join('')}</div>`;
-        } else {
-          inner += `<div class="products">${buckets[c].map(it => mk(it, g.species)).join('')}</div>`;
-        }
-      });
-      if (buckets.none.length) {
-        inner += `<div class="products">${buckets.none.map(it => mk(it, g.species)).join('')}</div>`;
-      }
-      return `
-        <div class="product-group product-group--coat" id="grp-${i}">
-          <h3 class="product-group__title">${groupName}</h3>
-          ${inner}
-        </div>`;
-    }
-    const cards = g.items.map(it => mk(it, g.species)).join('');
-    return `
-      <div class="product-group" id="grp-${i}">
-        <h3 class="product-group__title">${groupName}</h3>
-        <div class="products">${cards}</div>
-      </div>`;
-  }).join('');
+  return { tplWhy, showcase };
+}
 
-  // Прокрутка к группе по клику на чип
-  if (nav) {
-    nav.querySelectorAll('.cat-chip').forEach(chip => {
-      chip.addEventListener('click', () => {
-        const target = document.getElementById(chip.getAttribute('data-target'));
-        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+// Суперпремиум-группа Superior Care: карточки по цвету шерсти со вставками и подлинейками (Starter → All life stage)
+function coatGroupInner(g, dict, mk) {
+  const buckets = { white: [], red: [], dark: [], none: [] };
+  g.items.forEach(it => { buckets[coatOf(it) || 'none'].push(it); });
+  let inner = '';
+  const LINE_ORDER = ['starter', 'junior', 'adult-small', 'all-life-stage'];
+  const LINE_KEY = { 'starter': 'line.starter', 'junior': 'line.junior', 'adult-small': 'line.adultSmall', 'all-life-stage': 'line.allLifeStage' };
+  ['white', 'red', 'dark'].forEach(c => {
+    if (!buckets[c].length) return;
+    inner += `
+      <div class="coat-insert coat-insert--${c}">
+        <span class="coat-insert__dot"></span>
+        <div class="coat-insert__text">
+          <h4>${dict['coat.' + c + '.title'] || ''}</h4>
+          <p>${dict['coat.' + c + '.desc'] || ''}</p>
+        </div>
+      </div>`;
+    // Если в группе есть подлинейки (Starter/Junior/Adult/All Life Stage) — делим по ним
+    if (buckets[c].some(it => it.line)) {
+      LINE_ORDER.forEach(ln => {
+        const items = buckets[c].filter(it => it.line === ln);
+        if (!items.length) return;
+        inner += `<h4 class="coat-subline coat-subline--${c}">${dict[LINE_KEY[ln]] || ''}</h4>
+          <div class="products">${items.map(it => mk(it, g.species)).join('')}</div>`;
       });
+      const rest = buckets[c].filter(it => !it.line);
+      if (rest.length) inner += `<div class="products">${rest.map(it => mk(it, g.species)).join('')}</div>`;
+    } else {
+      inner += `<div class="products">${buckets[c].map(it => mk(it, g.species)).join('')}</div>`;
+    }
+  });
+  if (buckets.none.length) {
+    inner += `<div class="products">${buckets.none.map(it => mk(it, g.species)).join('')}</div>`;
+  }
+  return inner;
+}
+
+// Короткое название группы внутри раздела: «Prime · Влажный корм (паучи)» → «Prime»
+function shortGroupLabel(g, lang) {
+  const src = g.sub || g.group || {};
+  const n = src[lang] || src.ru || '';
+  return n.indexOf(' · ') > 0 ? n.split(' · ')[0] : n;
+}
+const SPECIES_HEAD = { cats: ['🐱', 'products.tabCats'], dogs: ['🐶', 'products.tabDogs'], both: ['🐾', 'sections.both'] };
+
+// Раздел: заголовок + группы-подзаголовки. NP/Araton при «Все»/«Малыши» — подзаголовки «Для кошек» / «Для собак».
+// NP «Лакомства»: внутри группы — подзаголовки по цвету шерсти (White / Red) и функциональные NP; молодые — первыми
+function treatsGroupInner(g, dict, mk) {
+  const b = { white: [], red: [], other: [] };
+  g.items.forEach(it => { const c = coatOf(it); (b[c === 'white' || c === 'red' ? c : 'other']).push(it); });
+  const filled = ['white', 'red', 'other'].filter(k => b[k].length);
+  if (filled.length < 2) return `<div class="products">${byStage(g.items).map(it => mk(it, g.species)).join('')}</div>`;
+  const head = { white: dict['coat.white.title'], red: dict['coat.red.title'], other: dict['treats.general'] || tr('treats.general') };
+  return filled.map(k => `<h4 class="product-subgroup__title${k !== 'other' ? ' coat-subline--' + k : ''}">${head[k] || ''}</h4>` +
+    `<div class="products">${byStage(b[k]).map(it => mk(it, g.species)).join('')}</div>`).join('');
+}
+
+function sectionHtml(s, brand, lang, dict, mk) {
+  const title = (s.def && (s.def[lang] || s.def.ru)) || '';
+  const groupBody = g => g.coat ? coatGroupInner(g, dict, mk)
+    : (brand === 'np' && s.id === 'treats') ? treatsGroupInner(g, dict, mk)
+    : `<div class="products">${g.items.map(it => mk(it, g.species)).join('')}</div>`;
+  const wrapGroup = (inner, head, coat) => `
+      <div class="product-group${coat ? ' product-group--coat' : ''}">
+        ${head ? `<h3 class="product-group__title">${head}</h3>` : ''}
+        ${inner}
+      </div>`;
+  let body = '';
+  if (brand === 'np' && s.id === 'superior-care') body += `<p class="coat-note">${dict['products.coatNote'] || ''}</p>`;
+  // «Сухой корм» NP: сухие корма Superior Care (по цвету шерсти) живут в своём разделе — даём прямой переход
+  if (brand === 'np' && s.id === 'dry' && currentSection === 'dry') {
+    const sc = sectionsFor('np', currentSpecies).find(x => x.id === 'superior-care');
+    if (sc && sc.count) body += `<button class="cat-xlink" type="button" data-sec="superior-care">+ ${sc.count} ${tr('sections.scDry')} <span aria-hidden="true">→</span></button>`;
+  }
+  if (brand === 'np' || brand === 'araton') {
+    const bySpecies = currentSpecies === 'all' || currentSpecies === 'baby';
+    ['cats', 'dogs', 'both'].forEach(sp => {
+      const gs = s.groups.filter(g => (g.species || 'both') === sp);
+      if (!gs.length) return;
+      const multi = gs.length > 1;
+      const coat = gs.some(g => g.coat);
+      if (bySpecies) {
+        const h = SPECIES_HEAD[sp];
+        const head = `<span class="product-group__ico" aria-hidden="true">${h[0]}</span>${dict[h[1]] || tr(h[1])}`;
+        const inner = gs.map(g => (multi ? `<h4 class="product-subgroup__title">${shortGroupLabel(g, lang)}</h4>` : '') + groupBody(g)).join('');
+        body += wrapGroup(inner, head, coat);
+      } else {
+        gs.forEach(g => { body += wrapGroup(groupBody(g), multi ? shortGroupLabel(g, lang) : '', g.coat); });
+      }
+    });
+  } else {
+    const multi = s.groups.length > 1;
+    s.groups.forEach(g => {
+      const name = (g.group && (g.group[lang] || g.group.ru)) || '';
+      body += wrapGroup(groupBody(g), multi ? name : '', g.coat);
     });
   }
+  return `
+    <section class="cat-section" id="sec-${s.id}" data-sec="${s.id}" aria-labelledby="sec-${s.id}-t">
+      <h2 class="cat-section__title" id="sec-${s.id}-t"><span class="cat-section__name">${title}</span><span class="cat-section__count">${s.count}</span></h2>
+      ${body}
+    </section>`;
+}
 
+// opts: {stagger: true} — каскад первых 8 карточек (только смена бренда мышью без View Transitions;
+// первый рендер уже покрыт появлением страницы — второй слой движения не добавляем)
+let firstRenderDone = false;
+let resultNote = '';   // пояснение к выдаче (раздел сброшен фильтром / Tauro: все товары для обоих видов)
+function renderProducts(brand, lang, opts) {
+  const wrap = document.getElementById('productsGrid');
+  if (!wrap) return;
+  const dict = TRANSLATIONS[lang] || TRANSLATIONS.ru;
+  const doStagger = !!(opts && opts.stagger);
+  const finish = () => {
+    updateSpeciesAvailability();
+    updateResultLine();
+    if (doStagger) staggerCards(wrap);
+    requestAnimationFrame(() => spySections());
+    emit('np:render', { brand, lang, species: currentSpecies, section: currentSection });
+  };
+
+  const secs = sectionsFor(brand, currentSpecies);
+  resultNote = '';
+  if (currentSection !== 'all' && !secs.some(s => s.id === currentSection && s.count)) {
+    const def = sectionDef(brand, currentSection);
+    if (def && firstRenderDone) resultNote = tr('result.sectionEmpty', { sec: def[lang] || def.ru });
+    currentSection = 'all';
+  }
+  if (!resultNote && brand === 'tpl' && (currentSpecies === 'cats' || currentSpecies === 'dogs') &&
+      countFor(brand, 'cats') === countFor(brand, 'all') && countFor(brand, 'dogs') === countFor(brand, 'all')) {
+    resultNote = tr('result.bothSpecies');
+  }
+  firstRenderDone = true;
+  renderSectionNav(secs, lang);
+  const total = secs.reduce((n, s) => n + s.count, 0);
+
+  if (!total) {
+    wrap.innerHTML = `<p class="catalog-empty">${dict['products.empty'] || ''}</p>`;
+    MODAL_ITEMS = []; MODAL_KEYS = [];
+    finish();
+    return;
+  }
+
+  // Малыши: у брендов без кормов (Tauro, Misoko) — текст про уход, а не про стартовые корма
+  const babyText = (brand === 'np' || brand === 'araton') ? dict['products.babiesText'] : (dict['products.babiesTextCare'] || tr('products.babiesTextCare'));
+  const banner = currentSpecies === 'baby'
+    ? `<div class="baby-banner"><span class="baby-banner__icon">🍼</span><div class="baby-banner__text"><h2>${dict['products.babiesTitle'] || ''}</h2><p>${babyText || ''}</p></div></div>`
+    : '';
+  // Реестр карточек для модального окна: id = индекс в MODAL_ITEMS.
+  MODAL_ITEMS = []; MODAL_KEYS = [];
+  const mk = (it, species) => {
+    const id = MODAL_ITEMS.length;
+    MODAL_ITEMS.push(it);
+    MODAL_KEYS.push(descKeyFor(brand, species, it));
+    return productCard(it, lang, id, productId(it, brand));
+  };
+  // Tauro: «зачем нужны степы» + витрины флаконов — при «Все» и в разделе «Комплексы Step»
+  let intro = '';
+  if (brand === 'tpl' && currentSpecies !== 'baby' && (currentSection === 'all' || currentSection === 'systems')) {
+    const t = tplIntroHtml(brand, lang, dict);
+    const label = (sectionDef('tpl', 'systems') || {})[lang] || '';
+    intro = `<section class="cat-section cat-section--systems" id="sec-systems" data-sec="systems" aria-label="${label}">${t.tplWhy}${t.showcase}</section>`;
+  }
+  const shown = secs.filter(s => s.id !== 'systems' && s.count && (currentSection === 'all' || s.id === currentSection));
+  wrap.innerHTML = banner + intro + shown.map(s => sectionHtml(s, brand, lang, dict, mk)).join('');
   finish();
 }
 
@@ -778,6 +990,7 @@ function initPageTransition() {
     const a = e.target.closest('a[href]');
     if (!a) return;
     if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button) return;
+    if (e.detail === 0) return;   // Enter с клавиатуры — переходим сразу, без затухания
     if (a.hasAttribute('download') || (a.target && a.target !== '_self')) return;
     let url;
     try { url = new URL(a.href, location.href); } catch (_) { return; }
@@ -825,6 +1038,189 @@ function placeIndicator(list, cls, instant) {
 function placeIndicators(instant) {
   placeIndicator(document.getElementById('tabs'), 'tabs__indicator', instant);
   placeIndicator(document.getElementById('species'), 'species__indicator', instant);
+  placeIndicator(sectionChipsEl(), 'cat-nav__indicator', instant);
+}
+
+// ===== Чипы разделов: одна прокручиваемая строка, sticky под тулбаром, скользящий индикатор =====
+let navSig = '';
+function sectionChipsEl() {
+  const nav = document.getElementById('catNav');
+  return nav ? nav.querySelector('.cat-nav__scroller') : null;
+}
+function renderSectionNav(secs, lang) {
+  const nav = document.getElementById('catNav');
+  if (!nav) return;
+  const total = secs.reduce((n, s) => n + s.count, 0);
+  const sig = [currentBrand, lang, currentSpecies].concat(secs.map(s => s.id + ':' + s.count)).join('|');
+  if (sig === navSig && sectionChipsEl()) { syncSectionNav(false); return; }
+  navSig = sig;
+  const hadFocus = nav.contains(document.activeElement);
+  const reason = tr('sections.none');
+  // Чип — короткое название (def.chip), полное — в title / заголовке раздела / строке результата
+  const chip = (id, label, n, full) =>
+    `<button class="cat-chip" type="button" data-sec="${id}" aria-pressed="false" tabindex="-1"` +
+    (n ? (full && full !== label ? ` title="${full}" aria-label="${full} ${n}"` : '') : ` aria-disabled="true" title="${reason}"`) + `>` +
+    `<span class="cat-chip__label">${label}</span><span class="cat-chip__n">${n}</span></button>`;
+  const full = s => (s.def && (s.def[lang] || s.def.ru)) || s.id;
+  const short = s => (s.def && s.def.chip && (s.def.chip[lang] || s.def.chip.ru)) || full(s);
+  // Телефон: тулбар (бренд, поиск, вид) не липкий — кнопка «↑ бренд» возвращает к нему из глубины выдачи
+  const brandShort = { np: 'NP', araton: 'Araton', tpl: 'Tauro', misoko: 'Misoko' }[currentBrand] || currentBrand;
+  const up = `<button class="cat-nav__up" type="button" title="${tr('sections.toFilters')}">` +
+    `<svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>` +
+    `<span>${brandShort}</span><span class="sr-only"> — ${tr('sections.toFilters')}</span></button>`;
+  nav.innerHTML = up + `<div class="cat-nav__scroller" role="toolbar" aria-label="${tr('sections.label')}">` +
+    chip('all', tr('sections.all'), total) +
+    secs.map(s => chip(s.id, short(s), s.count, full(s))).join('') +
+    `</div>`;
+  nav.hidden = secs.length < 2;
+  spyId = null;
+  syncSectionNav(true);
+  if (hadFocus) { const a = nav.querySelector('.cat-chip.is-active'); if (a) a.focus({ preventScroll: true }); }
+}
+function syncSectionNav(instant) {
+  const sc = sectionChipsEl();
+  if (!sc) return;
+  let active = null;
+  sc.querySelectorAll('.cat-chip').forEach(c => {
+    const on = c.getAttribute('data-sec') === currentSection;
+    c.classList.toggle('is-active', on);
+    c.setAttribute('aria-pressed', on ? 'true' : 'false');
+    c.tabIndex = on ? 0 : -1;
+    if (on) active = c;
+  });
+  placeIndicator(sc, 'cat-nav__indicator', instant);
+  if (active) revealChip(active, instant);
+  updateNavFades();
+}
+// Держим чип в зоне видимости горизонтальной ленты (центрируем, если он за краем)
+function revealChip(chip, instant) {
+  const sc = chip && chip.parentElement;
+  if (!sc || sc.scrollWidth <= sc.clientWidth + 1) return;
+  const l = chip.offsetLeft, r = l + chip.offsetWidth;
+  if (l >= sc.scrollLeft + 24 && r <= sc.scrollLeft + sc.clientWidth - 24) return;
+  const left = Math.max(0, l - (sc.clientWidth - chip.offsetWidth) / 2);
+  if (instant || reduceMotion() || typeof sc.scrollTo !== 'function') sc.scrollLeft = left;
+  else sc.scrollTo({ left, behavior: 'smooth' });
+}
+// Маски-затухания по краям — только если ленту можно прокрутить в эту сторону
+function updateNavFades() {
+  const nav = document.getElementById('catNav');
+  const sc = sectionChipsEl();
+  if (!nav || !sc) return;
+  const max = sc.scrollWidth - sc.clientWidth;
+  nav.classList.toggle('is-fade-l', sc.scrollLeft > 2);
+  nav.classList.toggle('is-fade-r', max > 2 && sc.scrollLeft < max - 2);
+}
+
+// Scroll-spy (только в режиме «Все»): подсвечиваем чип раздела, который сейчас под лентой
+let spyId = null;
+function spySections() {
+  const nav = document.getElementById('catNav');
+  const grid = document.getElementById('productsGrid');
+  const sc = sectionChipsEl();
+  if (!nav || !grid || !sc) return;
+  let id = null;
+  if (currentSection === 'all') {
+    const line = nav.getBoundingClientRect().bottom + 24;
+    grid.querySelectorAll(':scope > .cat-section').forEach(s => {
+      if (s.getBoundingClientRect().top <= line) id = s.getAttribute('data-sec');
+    });
+  }
+  if (id === spyId) return;
+  spyId = id;
+  let spied = null;
+  sc.querySelectorAll('.cat-chip').forEach(c => {
+    const on = !!id && c.getAttribute('data-sec') === id;
+    c.classList.toggle('is-spy', on);
+    if (on) spied = c;
+  });
+  revealChip(spied || sc.querySelector('.cat-chip.is-active'), false);
+}
+
+// Строка «Показано N товаров» над сеткой (Intl.PluralRules по языку)
+function shownText(n) {
+  let cat = 'other';
+  try { cat = new Intl.PluralRules(getLang()).select(n); } catch (e) { /* old browser */ }
+  return tr('result.shown.' + cat, { n }) || tr('result.shown.other', { n });
+}
+function updateResultLine() {
+  const el = document.getElementById('catResult');
+  const grid = document.getElementById('productsGrid');
+  if (!el || !grid) return;
+  const n = grid.querySelectorAll('[data-id]').length;
+  let html = `<span class="cat-result__count">${shownText(n)}</span>`;
+  if (currentSection !== 'all') {
+    const def = sectionDef(currentBrand, currentSection);
+    const name = def ? (def[getLang()] || def.ru) : '';
+    html += `<span class="cat-result__sec">${name}</span>` +
+      `<button class="cat-result__reset" type="button" data-sec="all">${tr('result.reset')}</button>`;
+  }
+  if (resultNote) html += `<span class="cat-result__note">${resultNote}</span>`;
+  el.innerHTML = html;
+}
+
+// Прокрутить так, чтобы начало выдачи оказалось сразу под липкой лентой (только если ушли ниже)
+function scrollToResults(smooth) {
+  const nav = document.getElementById('catNav');
+  const anchor = document.getElementById('catResult') || document.getElementById('productsGrid');
+  if (!anchor) return;
+  const stick = nav && !nav.hidden ? (parseFloat(getComputedStyle(nav).top) || 0) + nav.offsetHeight : 0;
+  const y = Math.max(0, Math.round(window.pageYOffset + anchor.getBoundingClientRect().top - stick - 8));
+  if (window.pageYOffset <= y + 1) return;
+  if (smooth && !reduceMotion()) { window.scrollTo({ top: y, behavior: 'smooth' }); return; }
+  const root = document.documentElement;
+  const prev = root.style.scrollBehavior;
+  root.style.scrollBehavior = 'auto';
+  window.scrollTo(0, y);
+  root.style.scrollBehavior = prev;
+}
+
+// ===== View Transitions: NP.swap(updateFn, type) — type: 'brand' | 'species' | 'section' =====
+// MOTION стилизует ::view-transition-*(np-grid / np-sections); имена элементам даёт css/catalog.css по html[data-vt].
+let vtCurrent = null;
+function vtAvailable() {
+  return typeof document.startViewTransition === 'function' && !reduceMotion() && !document.hidden;
+}
+// Первые карточки новой выдачи — декодированы до снимка (иначе пустые карточки «дозаполняются» после кроссфейда)
+function firstImagesReady(grid) {
+  const imgs = grid ? Array.from(grid.querySelectorAll('img')).slice(0, 8) : [];
+  if (!imgs.length) return Promise.resolve();
+  return Promise.race([
+    Promise.all(imgs.map(i => (typeof i.decode === 'function' ? i.decode() : Promise.resolve()).catch(() => {}))),
+    new Promise(r => setTimeout(r, 80))    // не больше 80ms (обычно 30–60ms) — ввод не должен «зависать»
+  ]);
+}
+// opts: {keyboard, after} — after() выполняется последним (в т.ч. внутри перехода, когда снимок новой выдачи готов):
+// там запускаем скольжение индикаторов, чтобы оно началось на первом видимом кадре, а не «проглатывалось» заморозкой
+function swap(updateFn, type, opts) {
+  const keyboard = !!(opts && opts.keyboard);
+  const after = (opts && opts.after) || null;
+  if (keyboard || !vtAvailable()) { updateFn(); if (after) after(); return null; }
+  const root = document.documentElement;
+  root.dataset.vt = type || 'brand';
+  const grid = document.getElementById('productsGrid');
+  const top0 = grid ? grid.getBoundingClientRect().top : 0;
+  let t;
+  try {
+    t = document.startViewTransition(async () => {
+      updateFn();
+      // обновление могло прокрутить страницу к началу выдачи: сдвигаем старый снимок на ту же величину (styles.css)
+      if (grid) root.style.setProperty('--vt-dy', (top0 - grid.getBoundingClientRect().top).toFixed(1) + 'px');
+      await firstImagesReady(grid);
+      if (after) after();
+    });
+  } catch (e) {
+    delete root.dataset.vt;
+    updateFn();
+    if (after) after();
+    return null;
+  }
+  vtCurrent = t;
+  const clear = () => { if (vtCurrent === t) { vtCurrent = null; delete root.dataset.vt; root.style.removeProperty('--vt-dy'); } };
+  t.finished.then(clear, clear);
+  if (t.ready) t.ready.catch(() => {});
+  if (t.updateCallbackDone) t.updateCallbackDone.catch(() => {});
+  return t;
 }
 
 // Фильтр вида: варианты без товаров у бренда — aria-disabled + причина (никогда не скрываем)
@@ -848,7 +1244,7 @@ function updateSpeciesAvailability() {
   });
 }
 
-// ===== Глубокие ссылки: #brand=tpl, #p=<id> (а также старые #tpl). #q= принадлежит поиску =====
+// ===== Глубокие ссылки: #brand=np&sec=dry, #p=<id> (а также старые #tpl). #q= принадлежит поиску =====
 function parseHash() {
   const raw = location.hash.slice(1);
   const out = {};
@@ -862,15 +1258,17 @@ function parseHash() {
     const k = part.slice(0, i);
     if (k === 'brand' && VALID_BRANDS.includes(v)) out.brand = v;
     if (k === 'p' && v) out.p = v;
+    if (k === 'sec' && /^[\w-]+$/.test(v)) out.sec = v;
   });
   return out;
 }
-function setHashBrand(brand) {
+function setHashState() {
   const raw = location.hash.slice(1);
   const parts = (raw && !VALID_BRANDS.includes(raw) ? raw.split('&') : [])
-    .filter(p => p && !/^(brand|p)=/.test(p) && p.indexOf('=') > 0);
-  parts.unshift('brand=' + brand);
-  history.replaceState(null, '', '#' + parts.join('&'));
+    .filter(p => p && !/^(brand|p|sec)=/.test(p) && p.indexOf('=') > 0);
+  if (currentSection && currentSection !== 'all') parts.unshift('sec=' + encodeURIComponent(currentSection));
+  parts.unshift('brand=' + currentBrand);
+  try { history.replaceState(null, '', '#' + parts.join('&')); } catch (e) { /* file:// quirks */ }
 }
 
 // Контроллер каталога (заполняется при инициализации products.html)
@@ -881,7 +1279,7 @@ function openProduct(id, opts) {
   if (!found) return false;
   const grid = document.getElementById('productsGrid');
   if (!grid) { window.location.href = 'products.html#p=' + encodeURIComponent(id); return true; }
-  if (found.brand !== currentBrand && NPCtl.activateBrand) NPCtl.activateBrand(found.brand, { animate: false, updateHash: true });
+  if (found.brand !== currentBrand && NPCtl.activateBrand) NPCtl.activateBrand(found.brand, { animate: false, updateHash: true, keepScroll: true });
   const card = grid.querySelector('[data-id="' + cssEsc(id) + '"]');
   const o = { id, brand: found.brand, card, keyboard: !!(opts && opts.keyboard) };
   if (card) {
@@ -903,6 +1301,11 @@ window.NP = {
     if (VALID_BRANDS.includes(b)) window.location.href = 'products.html#brand=' + b;
   },
   setSpecies: (sp) => { if (NPCtl.setSpecies) NPCtl.setSpecies(sp, { animate: true }); },
+  section: () => currentSection,
+  setSection: (id) => { if (NPCtl.setSection) NPCtl.setSection(id, { animate: true }); },
+  sections: (brand, species) => sectionsFor(brand || currentBrand, species || currentSpecies)
+    .map(s => ({ id: s.id, label: s.def, count: s.count })),
+  swap: (updateFn, type, opts) => swap(updateFn, type, opts),
   catalog: () => buildCatalog(),
   productId,
   findById,
@@ -958,7 +1361,7 @@ function initLangMenu() {
   LANG_HOOKS.push(relabel);
 }
 
-// ===== Каталог: вкладки брендов, фильтр вида, модалка =====
+// ===== Каталог: вкладки брендов, фильтр вида, разделы, модалка =====
 function initCatalog(initial) {
   const grid = document.getElementById('productsGrid');
   if (!grid) return;
@@ -967,10 +1370,12 @@ function initCatalog(initial) {
   const speciesWrap = document.getElementById('species');
   const spBtns = speciesWrap ? Array.from(speciesWrap.querySelectorAll('.species__btn')) : [];
   const nav = document.getElementById('catNav');
+  const bar = document.getElementById('catalogBar');
   let brandGen = 0;
   let leaveAnims = [];
 
   const cardCount = () => grid.querySelectorAll('[data-id]').length;
+  const announceCount = () => announce(tr('live.count', { n: cardCount() }) + (resultNote ? '. ' + resultNote : ''));
 
   function syncTabs() {
     tabs.forEach(t => {
@@ -991,36 +1396,56 @@ function initCatalog(initial) {
     });
   }
   const cancelLeave = () => { leaveAnims.forEach(a => a.cancel()); leaveAnims = []; };
+  // Запасной путь без View Transitions: лёгкий «провал» прозрачности без движения
+  const dip = () => {
+    if (typeof grid.animate === 'function' && !reduceMotion()) grid.animate([{ opacity: 0.4 }, { opacity: 1 }], { duration: 150, easing: EASE_OUT });
+  };
 
-  // opts: {animate, updateHash}
+  // opts: {animate, updateHash, section, keyboard}
   function activateBrand(brand, opts) {
     opts = opts || {};
     if (!VALID_BRANDS.includes(brand)) return;
     const changed = currentBrand !== brand;
+    if (!changed) {
+      if (opts.section && opts.section !== currentSection) setSection(opts.section, { animate: opts.animate, updateHash: opts.updateHash });
+      else if (opts.updateHash) setHashState();
+      return;
+    }
     currentBrand = brand;
-    document.body.setAttribute('data-brand', brand); // плавная смена тинта страницы
+    currentSection = opts.section || 'all';
     // выбранный вид пропал у нового бренда — возвращаемся к «Все»
     if (currentSpecies !== 'all' && countFor(brand, currentSpecies) === 0) currentSpecies = 'all';
-    syncTabs(); syncSpecies();
-    placeIndicator(tabsWrap, 'tabs__indicator', !opts.animate);
-    if (opts.updateHash) setHashBrand(brand);
-    if (!changed) return;
     const g = ++brandGen;
+    const useVT = !!opts.animate && vtAvailable();
+    // Состояние вкладок + скольжение индикаторов. С View Transition — в конце обновления (swap → after),
+    // иначе скольжение стартует во время «заморозки» кадров и выглядит прыжком.
+    const paintTabs = () => {
+      document.body.setAttribute('data-brand', currentBrand); // плавная смена тинта страницы (новый снимок — уже в новом тинте)
+      syncTabs(); syncSpecies();
+      placeIndicator(tabsWrap, 'tabs__indicator', !opts.animate);
+      placeIndicator(speciesWrap, 'species__indicator', !opts.animate);
+    };
+    if (!useVT) paintTabs();
     let finished = false;
     const done = () => {
       if (g !== brandGen || finished) return;
       finished = true;
-      renderProducts(currentBrand, getLang(), { stagger: !!opts.animate });
+      renderProducts(currentBrand, getLang(), { stagger: !!opts.animate && !useVT });
       cancelLeave();
-      placeIndicator(speciesWrap, 'species__indicator', !opts.animate);
-      announce(tr('live.count', { n: cardCount() }));
+      if (!useVT) placeIndicator(speciesWrap, 'species__indicator', !opts.animate);
+      if (opts.updateHash) setHashState();
+      if (!opts.keepScroll) scrollToResults(false);
+      announceCount();
     };
-    if (opts.animate && typeof grid.animate === 'function') {
+    if (useVT) {
+      cancelLeave();
+      swap(done, 'brand', { after: () => { if (g === brandGen) paintTabs(); } });
+    } else if (opts.animate && typeof grid.animate === 'function' && !reduceMotion()) {
       // уход 150ms (только прозрачность), затем рендер и каскад; повторный клик перенацеливает
+      cancelLeave();
       const els = [grid].concat(nav ? [nav] : []);
       els.forEach(el => leaveAnims.push(el.animate({ opacity: 0 }, { duration: 150, easing: EASE_OUT, fill: 'forwards' })));
-      const a = leaveAnims[leaveAnims.length - els.length];
-      a.onfinish = done;
+      leaveAnims[0].onfinish = done;
       setTimeout(done, 400);   // запасной путь (фоновые вкладки не играют анимации)
     } else {
       cancelLeave();
@@ -1033,23 +1458,42 @@ function initCatalog(initial) {
     const btn = spBtns.find(b => (b.getAttribute('data-species') || 'all') === sp);
     if (!btn || btn.getAttribute('aria-disabled') === 'true' || sp === currentSpecies) return;
     currentSpecies = sp;
-    syncSpecies();
-    placeIndicator(speciesWrap, 'species__indicator', !opts.animate);
-    renderProducts(currentBrand, getLang());
-    if (opts.animate && typeof grid.animate === 'function') {
-      grid.animate([{ opacity: 0.4 }, { opacity: 1 }], { duration: 150, easing: EASE_OUT });   // лёгкий «провал» без движения
-    }
-    announce(tr('live.count', { n: cardCount() }));
+    const useVT = !!opts.animate && vtAvailable();
+    const paintSpecies = () => { syncSpecies(); placeIndicator(speciesWrap, 'species__indicator', !opts.animate); };
+    if (!useVT) paintSpecies();
+    const update = () => { renderProducts(currentBrand, getLang()); setHashState(); announceCount(); };
+    if (useVT) swap(update, 'species', { after: () => { if (currentSpecies === sp) paintSpecies(); } });
+    else { update(); if (opts.animate) dip(); }
+  }
+
+  // Раздел-фильтр: чип фильтрует выдачу (не якорь) и возвращает к началу сетки
+  function setSection(id, opts) {
+    opts = opts || {};
+    const secs = sectionsFor(currentBrand, currentSpecies);
+    const ok = id === 'all' || secs.some(s => s.id === id && s.count);
+    if (!ok) return;
+    if (id === currentSection) { scrollToResults(!!opts.animate); return; }
+    const useVT = !!opts.animate && vtAvailable();
+    const update = () => {
+      currentSection = id;
+      renderProducts(currentBrand, getLang());
+      if (opts.updateHash !== false) setHashState();
+      if (!opts.animate || useVT) scrollToResults(false);   // внутри перехода скачок скрыт кроссфейдом
+      announceCount();
+    };
+    if (useVT) swap(update, 'section');
+    else { update(); if (opts.animate) { dip(); scrollToResults(true); } }
   }
   NPCtl.activateBrand = activateBrand;
   NPCtl.setSpecies = setSpecies;
+  NPCtl.setSection = setSection;
 
   // Роуминг-табиндекс + стрелки/Home/End (с клавиатуры — мгновенно)
   function rovingKeys(items, isEnabled, onPick) {
     return (e) => {
       const keys = ['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown', 'Home', 'End'];
       if (!keys.includes(e.key)) return;
-      const list = items.filter(isEnabled);
+      const list = (typeof items === 'function' ? items() : items).filter(isEnabled);
       if (!list.length) return;
       const i = list.indexOf(document.activeElement);
       let n;
@@ -1072,7 +1516,7 @@ function initCatalog(initial) {
       t.addEventListener('click', e => activateBrand(t.getAttribute('data-brand'), { animate: e.detail !== 0, updateHash: true }));
     });
     tabsWrap.addEventListener('keydown', rovingKeys(tabs, () => true,
-      t => activateBrand(t.getAttribute('data-brand'), { animate: false, updateHash: true })));
+      t => activateBrand(t.getAttribute('data-brand'), { animate: false, updateHash: true, keepScroll: true })));
     grid.setAttribute('role', 'tabpanel');
   }
   if (speciesWrap) {
@@ -1087,6 +1531,43 @@ function initCatalog(initial) {
     speciesWrap.addEventListener('keydown', rovingKeys(spBtns, b => b.getAttribute('aria-disabled') !== 'true',
       b => setSpecies(b.getAttribute('data-species') || 'all', { animate: false })));
   }
+  // Чипы разделов: клик фильтрует; стрелки двигают фокус (Enter/Space — выбрать, мгновенно)
+  if (nav) {
+    nav.addEventListener('click', e => {
+      if (e.target.closest('.cat-nav__up')) {
+        if (bar) bar.scrollIntoView({ behavior: (reduceMotion() || e.detail === 0) ? 'auto' : 'smooth', block: 'start' });
+        const t = tabsWrap && tabsWrap.querySelector('.tab.is-active');
+        if (t) t.focus({ preventScroll: true });
+        return;
+      }
+      const chip = e.target.closest('.cat-chip');
+      if (!chip || !nav.contains(chip)) return;
+      if (chip.getAttribute('aria-disabled') === 'true') { e.preventDefault(); return; }
+      setSection(chip.getAttribute('data-sec'), { animate: e.detail !== 0 });
+    });
+    nav.addEventListener('keydown', rovingKeys(() => Array.from(nav.querySelectorAll('.cat-chip')),
+      c => c.getAttribute('aria-disabled') !== 'true',
+      c => {
+        nav.querySelectorAll('.cat-chip').forEach(x => { x.tabIndex = x === c ? 0 : -1; });
+        revealChip(c, true);
+      }));
+    nav.addEventListener('scroll', () => updateNavFades(), { capture: true, passive: true });
+  }
+  const result = document.getElementById('catResult');
+  if (result) {
+    result.addEventListener('click', e => {
+      const b = e.target.closest('.cat-result__reset');
+      if (b) setSection('all', { animate: e.detail !== 0 });
+    });
+  }
+
+  // Scroll-spy для режима «Все» (rAF-троттлинг)
+  let spyRaf = 0;
+  window.addEventListener('scroll', () => {
+    if (spyRaf) return;
+    spyRaf = requestAnimationFrame(() => { spyRaf = 0; spySections(); });
+  }, { passive: true });
+
   const relabel = () => {
     if (tabsWrap) tabsWrap.setAttribute('aria-label', tr('a11y.brands'));
     if (speciesWrap) speciesWrap.setAttribute('aria-label', tr('a11y.species'));
@@ -1097,16 +1578,31 @@ function initCatalog(initial) {
   syncTabs(); syncSpecies(); relabel();
   LANG_HOOKS.push(relabel);
 
+  // Высота липкого тулбара → --bar-h (лента разделов прилипает сразу под ним)
+  // Пишем 0, если тулбар не липкий (≤720px он static) — иначе scroll-padding и лента съезжают вниз.
+  // --chips-h: высота липкой ленты разделов (0, если скрыта) → входит в --sticky-offset (tokens.css).
+  const setBarH = () => {
+    const rs = document.documentElement.style;
+    if (bar) rs.setProperty('--bar-h', (getComputedStyle(bar).position === 'sticky' ? bar.offsetHeight : 0) + 'px');
+    if (nav) rs.setProperty('--chips-h', (!nav.hidden && getComputedStyle(nav).position === 'sticky' ? nav.offsetHeight : 0) + 'px');
+  };
+  setBarH();
+
   // Индикаторы: при ресайзе и после загрузки шрифтов — без анимации
   if ('ResizeObserver' in window) {
     let raf = 0;
-    const ro = new ResizeObserver(() => { cancelAnimationFrame(raf); raf = requestAnimationFrame(() => placeIndicators(true)); });
+    const ro = new ResizeObserver(() => {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => { setBarH(); placeIndicators(true); updateNavFades(); });
+    });
     if (tabsWrap) ro.observe(tabsWrap);
     if (speciesWrap) ro.observe(speciesWrap);
+    if (nav) ro.observe(nav);
+    if (bar) ro.observe(bar);
   } else {
-    window.addEventListener('resize', () => placeIndicators(true));
+    window.addEventListener('resize', () => { setBarH(); placeIndicators(true); updateNavFades(); });
   }
-  if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => placeIndicators(true));
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => { setBarH(); placeIndicators(true); });
 
   // Открытие карточки товара (мышь / Enter / Space); кнопки внутри карточки (избранное) не открывают модалку
   const openFromCard = (card, keyboard) => {
@@ -1116,10 +1612,12 @@ function initCatalog(initial) {
     openProductModal(item, getLang(), MODAL_KEYS[pid], { id: card.getAttribute('data-id'), brand: currentBrand, card, keyboard });
   };
   grid.addEventListener('click', e => {
+    const x = e.target.closest('.cat-xlink');
+    if (x) { setSection(x.getAttribute('data-sec'), { animate: e.detail !== 0 }); return; }
     const card = e.target.closest('[data-pid]');
     if (!card) return;
     const ctl = e.target.closest('button, a, input, select, textarea, .product__actions');
-    if (ctl && card.contains(ctl) && ctl !== card) return;
+    if (ctl && card.contains(ctl) && ctl !== card && !ctl.classList.contains('product__open')) return;
     openFromCard(card, e.detail === 0);
   });
   grid.addEventListener('keydown', e => {
@@ -1133,7 +1631,8 @@ function initCatalog(initial) {
   // Прямые ссылки после первого рендера
   window.addEventListener('hashchange', () => {
     const h = parseHash();
-    if (h.brand && h.brand !== currentBrand) activateBrand(h.brand, { animate: true, updateHash: false });
+    if (h.brand && h.brand !== currentBrand) activateBrand(h.brand, { animate: true, updateHash: false, section: h.sec });
+    else if (h.sec && h.sec !== currentSection) setSection(h.sec, { animate: true, updateHash: false });
     if (h.p) openProduct(h.p);
   });
   if (initial.p) openProduct(initial.p);
@@ -1170,8 +1669,38 @@ function initHeroSlider() {
       s.style.zIndex = i === cur ? '1' : '0';
     });
   }
+  // Главная (.hero--home): мягкий кроссфейд 1.04→1 через WAAPI — прерываемый: новый слайд проявляется
+  // поверх текущей картинки (незавершённый слайд фиксирует свою прозрачность, а не «прыгает» до 1)
+  const fadeMode = !!(hero && hero.classList.contains('hero--home'));
+  let fadeAnim = null;
+  function fadeTo(n, instant) {
+    const g = ++gen;
+    const incoming = slides[n];
+    if (fadeAnim) {
+      if (fadeAnim.playState === 'running') { try { fadeAnim.commitStyles(); } catch (e) { /* not rendered */ } }
+      fadeAnim.cancel();
+      fadeAnim = null;
+    }
+    cur = n;
+    const clear = () => slides.forEach((s, i) => {
+      s.style.transition = 'none';
+      s.style.zIndex = i === cur ? '1' : '0';
+      s.style.opacity = ''; s.style.transform = '';
+    });
+    if (instant || reduce || typeof incoming.animate !== 'function') { clear(); return; }
+    const top = Math.max.apply(null, slides.map(s => +s.style.zIndex || 0));
+    const from = parseFloat(incoming.style.opacity);
+    incoming.style.opacity = ''; incoming.style.transform = '';
+    incoming.style.zIndex = String(top + 1);
+    fadeAnim = incoming.animate(
+      [{ opacity: isNaN(from) ? 0 : from, transform: 'scale(1.04)' }, { opacity: 1, transform: 'none' }],
+      { duration: 600, easing: EASE_OUT, fill: 'both' });
+    const a = fadeAnim;
+    a.onfinish = () => { if (g !== gen || a !== fadeAnim) return; clear(); a.cancel(); fadeAnim = null; };
+  }
   function wipeTo(n, dir, instant) {
     if (n === cur || !slides[n]) return;
+    if (fadeMode) { fadeTo(n, instant); return; }
     settle();   // прерываем незавершённое стирание
     const g = ++gen;
     const incoming = slides[n], prev = cur;
@@ -1252,6 +1781,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const initial = parseHash();
   if (initial.brand) currentBrand = initial.brand;
   else if (initial.p) { const f = findById(initial.p); if (f) currentBrand = f.brand; }
+  if (initial.sec && initial.brand) currentSection = initial.sec;   // проверяется при рендере
   if (document.getElementById('productsGrid')) document.body.setAttribute('data-brand', currentBrand);
 
   applyTranslations(lang);
@@ -1317,4 +1847,9 @@ document.addEventListener('DOMContentLoaded', () => {
   if (year) year.textContent = new Date().getFullYear();
 
   emit('np:ready', {});
+
+  // Первый кадр отрисован без переходов (html.is-booting) — дальше включаем их
+  const booted = () => document.documentElement.classList.remove('is-booting');
+  requestAnimationFrame(() => requestAnimationFrame(booted));
+  setTimeout(booted, 600);   // фоновая вкладка: rAF не идёт
 });

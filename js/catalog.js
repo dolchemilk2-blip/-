@@ -85,13 +85,13 @@ const BRANDS_EXTRA = {
           ru: { cat: "Adult · Все породы", name: "Beef & Chicken", desc: "Пауч с говядиной и курицей для взрослых кошек; сочные кусочки мяса в соусе, 93% животного белка, 85 г.", tags: ["Говядина", "Курица", "Adult"] },
           en: { cat: "Adult · All breeds", name: "Beef & Chicken", desc: "Beef and chicken pouch for adult cats; juicy meaty chunks in gravy, 93% animal protein, 85 g.", tags: ["Beef", "Chicken", "Adult"] } },
         { img: "assets/products/art-cat-pouch-turkey.webp",
-          az: { cat: "Adult · Sterilised", name: "Turkey & Chicken", desc: "Sterilizə olunmuş yetkin pişiklər üçün hinduşka və toyuq ilə paket; sousda şirəli ət parçaları, 93% heyvani protein, 85 q.", tags: ["Hinduşka", "Toyuq", "Sterilised"] },
-          ru: { cat: "Adult · Sterilised", name: "Turkey & Chicken", desc: "Пауч с индейкой и курицей для стерилизованных взрослых кошек; сочные кусочки мяса в соусе, 93% животного белка, 85 г.", tags: ["Индейка", "Курица", "Sterilised"] },
-          en: { cat: "Adult · Sterilised", name: "Turkey & Chicken", desc: "Turkey and chicken pouch for sterilised adult cats; juicy meaty chunks in gravy, 93% animal protein, 85 g.", tags: ["Turkey", "Chicken", "Sterilised"] } },
+          az: { cat: "Adult · Sterilised", name: "Sterilised — Turkey & Chicken", desc: "Sterilizə olunmuş yetkin pişiklər üçün hinduşka və toyuq ilə paket; sousda şirəli ət parçaları, 93% heyvani protein, 85 q.", tags: ["Hinduşka", "Toyuq", "Sterilised"] },
+          ru: { cat: "Adult · Sterilised", name: "Sterilised — Turkey & Chicken", desc: "Пауч с индейкой и курицей для стерилизованных взрослых кошек; сочные кусочки мяса в соусе, 93% животного белка, 85 г.", tags: ["Индейка", "Курица", "Sterilised"] },
+          en: { cat: "Adult · Sterilised", name: "Sterilised — Turkey & Chicken", desc: "Turkey and chicken pouch for sterilised adult cats; juicy meaty chunks in gravy, 93% animal protein, 85 g.", tags: ["Turkey", "Chicken", "Sterilised"] } },
         { img: "assets/products/art-cat-pouch-kitten.webp", baby: true,
-          az: { cat: "Kitten · Bütün cinslər", name: "Turkey & Chicken", desc: "Balaca pişiklər üçün hinduşka və toyuq ilə paket; sousda şirəli ət parçaları, 95% heyvani protein, 85 q.", tags: ["Hinduşka", "Toyuq", "Kitten"] },
-          ru: { cat: "Kitten · Все породы", name: "Turkey & Chicken", desc: "Пауч с индейкой и курицей для котят; сочные кусочки мяса в соусе, 95% животного белка, 85 г.", tags: ["Индейка", "Курица", "Kitten"] },
-          en: { cat: "Kitten · All breeds", name: "Turkey & Chicken", desc: "Turkey and chicken pouch for kittens; juicy meaty chunks in gravy, 95% animal protein, 85 g.", tags: ["Turkey", "Chicken", "Kitten"] } }
+          az: { cat: "Kitten · Bütün cinslər", name: "Kitten — Turkey & Chicken", desc: "Balaca pişiklər üçün hinduşka və toyuq ilə paket; sousda şirəli ət parçaları, 95% heyvani protein, 85 q.", tags: ["Hinduşka", "Toyuq", "Kitten"] },
+          ru: { cat: "Kitten · Все породы", name: "Kitten — Turkey & Chicken", desc: "Пауч с индейкой и курицей для котят; сочные кусочки мяса в соусе, 95% животного белка, 85 г.", tags: ["Индейка", "Курица", "Kitten"] },
+          en: { cat: "Kitten · All breeds", name: "Kitten — Turkey & Chicken", desc: "Turkey and chicken pouch for kittens; juicy meaty chunks in gravy, 95% animal protein, 85 g.", tags: ["Turkey", "Chicken", "Kitten"] } }
       ]
     }
   ],
@@ -1707,11 +1707,11 @@ const BRANDS_EXTRA = {
       species: "dogs",
       items: [
         { img: "assets/products/misoko-shnpakdt5903.webp",
-          az: { cat: "Kəndir oyuncaq", name: "Düyünlü kəndir oyuncağı", desc: "Kəndir oyuncaq «Düyünlü kəndir oyuncağı»; çəkişmə oyunu və dişlərin təbii təmizlənməsi üçün.", tags: ["Kəndir", "Dartışma"] },
+          az: { cat: "Kəndir oyuncaq", name: "Düyünlü pambıq çəkişmə kəndiri", desc: "Kəndir oyuncaq «Düyünlü pambıq çəkişmə kəndiri»; çəkişmə oyunu və dişlərin təbii təmizlənməsi üçün.", tags: ["Kəndir", "Dartışma"] },
           ru: { cat: "Канатная игрушка", name: "Канатная игрушка-погрызушка с узлами", desc: "Канатная игрушка «Канатная игрушка-погрызушка с узлами»; для перетягивания и естественной чистки зубов.", tags: ["Канат", "Перетягивание"] },
           en: { cat: "Rope toy", name: "Cotton rope tug toy with knots", desc: "Rope toy “Cotton rope tug toy with knots”; for tug-of-war and natural teeth cleaning.", tags: ["Rope", "Tug"] } },
         { img: "assets/products/misoko-mskakdt5905.webp",
-          az: { cat: "Kəndir oyuncaq", name: "Düyünlü kəndir oyuncağı", desc: "Kəndir oyuncaq «Düyünlü kəndir oyuncağı»; çəkişmə oyunu və dişlərin təbii təmizlənməsi üçün. Bir neçə rəngdə mövcuddur.", tags: ["Kəndir", "Dartışma"] },
+          az: { cat: "Kəndir oyuncaq", name: "Düyünlü kəndir", desc: "Kəndir oyuncaq «Düyünlü kəndir»; çəkişmə oyunu və dişlərin təbii təmizlənməsi üçün. Bir neçə rəngdə mövcuddur.", tags: ["Kəndir", "Dartışma"] },
           ru: { cat: "Канатная игрушка", name: "Канат с узлами", desc: "Канатная игрушка «Канат с узлами»; для перетягивания и естественной чистки зубов. Доступно в нескольких цветах.", tags: ["Канат", "Перетягивание"] },
           en: { cat: "Rope toy", name: "Knotted rope toy", desc: "Rope toy “Knotted rope toy”; for tug-of-war and natural teeth cleaning. Available in several colours.", tags: ["Rope", "Tug"] } },
         { img: "assets/products/misoko-mskakdt5903.webp",
@@ -1731,11 +1731,11 @@ const BRANDS_EXTRA = {
           ru: { cat: "Канатная игрушка", name: "Канат с резиновой спиралью", desc: "Канатная игрушка «Канат с резиновой спиралью»; для перетягивания и естественной чистки зубов. Доступно в нескольких цветах.", tags: ["Канат", "Перетягивание"] },
           en: { cat: "Rope toy", name: "Rope with rubber spiral", desc: "Rope toy “Rope with rubber spiral”; for tug-of-war and natural teeth cleaning. Available in several colours.", tags: ["Rope", "Tug"] } },
         { img: "assets/products/misoko-msktxdt5303.webp",
-          az: { cat: "Kəndir oyuncaq", name: "Parça sümük və kəndir oyuncağı", desc: "Kəndir oyuncaq «Parça sümük və kəndir oyuncağı»; çəkişmə oyunu və dişlərin təbii təmizlənməsi üçün.", tags: ["Kəndir", "Dartışma"] },
+          az: { cat: "Kəndir oyuncaq", name: "Kəndirli parça sümük", desc: "Kəndir oyuncaq «Kəndirli parça sümük»; çəkişmə oyunu və dişlərin təbii təmizlənməsi üçün.", tags: ["Kəndir", "Dartışma"] },
           ru: { cat: "Канатная игрушка", name: "Тканевая косточка с канатом", desc: "Канатная игрушка «Тканевая косточка с канатом»; для перетягивания и естественной чистки зубов.", tags: ["Канат", "Перетягивание"] },
           en: { cat: "Rope toy", name: "Canvas bone with rope", desc: "Rope toy “Canvas bone with rope”; for tug-of-war and natural teeth cleaning.", tags: ["Rope", "Tug"] } },
         { img: "assets/products/misoko-msktxdt5204.webp",
-          az: { cat: "Kəndir oyuncaq", name: "Parça sümük və kəndir oyuncağı", desc: "Kəndir oyuncaq «Parça sümük və kəndir oyuncağı»; çəkişmə oyunu və dişlərin təbii təmizlənməsi üçün.", tags: ["Kəndir", "Dartışma"] },
+          az: { cat: "Kəndir oyuncaq", name: "Kəndirli Y formalı parça sümük", desc: "Kəndir oyuncaq «Kəndirli Y formalı parça sümük»; çəkişmə oyunu və dişlərin təbii təmizlənməsi üçün.", tags: ["Kəndir", "Dartışma"] },
           ru: { cat: "Канатная игрушка", name: "Тканевая косточка-игрек с канатом", desc: "Канатная игрушка «Тканевая косточка-игрек с канатом»; для перетягивания и естественной чистки зубов.", tags: ["Канат", "Перетягивание"] },
           en: { cat: "Rope toy", name: "Canvas Y-bone with rope", desc: "Rope toy “Canvas Y-bone with rope”; for tug-of-war and natural teeth cleaning.", tags: ["Rope", "Tug"] } }
       ]
@@ -1787,17 +1787,17 @@ const BRANDS_EXTRA = {
       species: "dogs",
       items: [
         { img: "assets/products/misoko-beirj06757.webp",
-          az: { cat: "Gəmirək oyuncaq", name: "Tülkü", desc: "Gəmirək oyuncaq «Tülkü»; dişlərin və diş ətinin sağlamlığı üçün.", tags: ["Tülkü", "Diş"] },
-          ru: { cat: "Жевательная игрушка", name: "Лиса", desc: "Жевательная игрушка «Лиса»; для чистки зубов и здоровья дёсен.", tags: ["Лиса", "Зубы"] },
-          en: { cat: "Chew toy", name: "Fox", desc: "Chew toy “Fox”; for teeth cleaning and gum health.", tags: ["Fox", "Dental"] } },
+          az: { cat: "Gəmirək oyuncaq", name: "Gəmirmə tülkü", desc: "Gəmirək oyuncaq «Gəmirmə tülkü»; dişlərin və diş ətinin sağlamlığı üçün.", tags: ["Tülkü", "Diş"] },
+          ru: { cat: "Жевательная игрушка", name: "Жевательная лиса", desc: "Жевательная игрушка «Жевательная лиса»; для чистки зубов и здоровья дёсен.", tags: ["Лиса", "Зубы"] },
+          en: { cat: "Chew toy", name: "Chew fox", desc: "Chew toy “Chew fox”; for teeth cleaning and gum health.", tags: ["Fox", "Dental"] } },
         { img: "assets/products/misoko-beirj06756.webp",
           az: { cat: "Gəmirək oyuncaq", name: "Qarğıdalı-it", desc: "Gəmirək oyuncaq «Qarğıdalı-it»; dişlərin və diş ətinin sağlamlığı üçün.", tags: ["Qarğıdalı-it", "Diş"] },
           ru: { cat: "Жевательная игрушка", name: "Собачка-кукуруза", desc: "Жевательная игрушка «Собачка-кукуруза»; для чистки зубов и здоровья дёсен.", tags: ["Собачка-кукуруза", "Зубы"] },
           en: { cat: "Chew toy", name: "Corn dog", desc: "Chew toy “Corn dog”; for teeth cleaning and gum health.", tags: ["Corn dog", "Dental"] } },
         { img: "assets/products/misoko-beirj06758.webp",
-          az: { cat: "Gəmirək oyuncaq", name: "Timsah", desc: "Gəmirək oyuncaq «Timsah»; dişlərin və diş ətinin sağlamlığı üçün.", tags: ["Timsah", "Diş"] },
-          ru: { cat: "Жевательная игрушка", name: "Крокодил", desc: "Жевательная игрушка «Крокодил»; для чистки зубов и здоровья дёсен.", tags: ["Крокодил", "Зубы"] },
-          en: { cat: "Chew toy", name: "Crocodile", desc: "Chew toy “Crocodile”; for teeth cleaning and gum health.", tags: ["Crocodile", "Dental"] } },
+          az: { cat: "Gəmirək oyuncaq", name: "Gəmirmə timsah", desc: "Gəmirək oyuncaq «Gəmirmə timsah»; dişlərin və diş ətinin sağlamlığı üçün.", tags: ["Timsah", "Diş"] },
+          ru: { cat: "Жевательная игрушка", name: "Жевательный крокодил", desc: "Жевательная игрушка «Жевательный крокодил»; для чистки зубов и здоровья дёсен.", tags: ["Крокодил", "Зубы"] },
+          en: { cat: "Chew toy", name: "Chew crocodile", desc: "Chew toy “Chew crocodile”; for teeth cleaning and gum health.", tags: ["Crocodile", "Dental"] } },
         { img: "assets/products/misoko-beirj04182.webp",
           az: { cat: "Lateks oyuncaq", name: "Sümük", desc: "Səsli lateks/rezin oyuncaq «Sümük»; yumşaq və gəmirməyə davamlı. Bir neçə rəngdə mövcuddur.", tags: ["Lateks", "Səsli"] },
           ru: { cat: "Латексная игрушка", name: "Косточка", desc: "Латексная/резиновая игрушка-пищалка «Косточка»; мягкая и устойчивая к покусыванию. Доступно в нескольких цветах.", tags: ["Латекс", "Пищалка"] },
@@ -1817,11 +1817,11 @@ const BRANDS_EXTRA = {
       species: "dogs",
       items: [
         { img: "assets/products/misoko-hanyt133740.webp",
-          az: { cat: "İnteraktiv oyuncaq", name: "Lemur, vakuum ilə", desc: "İnteraktiv oyuncaq «Lemur, vakuum ilə»; zəkanı inkişaf etdirir və ev heyvanını məşğul edir.", tags: ["Lemur, vakuum ilə", "İnteraktiv"] },
+          az: { cat: "İnteraktiv oyuncaq", name: "Vantuzlu lemur", desc: "İnteraktiv oyuncaq «Vantuzlu lemur»; zəkanı inkişaf etdirir və ev heyvanını məşğul edir.", tags: ["Vantuzlu lemur", "İnteraktiv"] },
           ru: { cat: "Интерактивная игрушка", name: "Лемур на присоске", desc: "Интерактивная игрушка «Лемур на присоске»; развивает сообразительность и увлекает питомца.", tags: ["Лемур на присоске", "Интерактив"] },
           en: { cat: "Interactive toy", name: "Lemur with suction cup", desc: "Interactive toy “Lemur with suction cup”; develops cleverness and keeps your pet engaged.", tags: ["Lemur with suction cup", "Interactive"] } },
         { img: "assets/products/misoko-hanyt133741.webp",
-          az: { cat: "İnteraktiv oyuncaq", name: "Meymun, vakuum ilə", desc: "İnteraktiv oyuncaq «Meymun, vakuum ilə»; zəkanı inkişaf etdirir və ev heyvanını məşğul edir.", tags: ["Meymun, vakuum ilə", "İnteraktiv"] },
+          az: { cat: "İnteraktiv oyuncaq", name: "Vantuzlu meymun", desc: "İnteraktiv oyuncaq «Vantuzlu meymun»; zəkanı inkişaf etdirir və ev heyvanını məşğul edir.", tags: ["Vantuzlu meymun", "İnteraktiv"] },
           ru: { cat: "Интерактивная игрушка", name: "Обезьяна на присоске", desc: "Интерактивная игрушка «Обезьяна на присоске»; развивает сообразительность и увлекает питомца.", tags: ["Обезьяна на присоске", "Интерактив"] },
           en: { cat: "Interactive toy", name: "Monkey with suction cup", desc: "Interactive toy “Monkey with suction cup”; develops cleverness and keeps your pet engaged.", tags: ["Monkey with suction cup", "Interactive"] } },
         { img: "assets/products/misoko-beixj00089.webp",
@@ -1882,3 +1882,77 @@ const BRANDS_EXTRA = {
     }
   ]
 };
+
+// ===== Разделы каталога (фильтр-чипы): бренд → РАЗДЕЛЫ → группы (подзаголовки) → карточки =====
+// Порядок в массиве = порядок чипов. Группы Araton / Tauro / Misoko получают section + стабильный sectionId ниже;
+// группы Nature's Protection (из PRODUCTS в translations.js) распределяются по разделам в main.js.
+const CATALOG_SECTIONS = {
+  np: [
+    { id: "superior-care", az: "Superior Care — quru qida, tük rənginə görə", ru: "Superior Care — сухой корм по цвету шерсти", en: "Superior Care — dry food by coat colour",
+      chip: { az: "Superior Care", ru: "Superior Care", en: "Superior Care" } },
+    { id: "dry",           az: "Quru qida",                        ru: "Сухой корм",                      en: "Dry food" },
+    { id: "wet",           az: "Yaş qida (konservlər)",            ru: "Влажный корм (консервы)",         en: "Wet food (cans)",
+      chip: { az: "Konservlər", ru: "Консервы", en: "Cans" } },
+    { id: "pouches",       az: "Pauçlar",                          ru: "Паучи",                           en: "Pouches" },
+    { id: "vet",           az: "Baytarlıq pəhrizi",                ru: "Ветеринарная диета",              en: "Veterinary diet",
+      chip: { az: "Baytarlıq pəhrizi", ru: "Ветдиета", en: "Vet diet" } },
+    { id: "treats",        az: "Qəlyanaltılar",                     ru: "Лакомства",                       en: "Treats" },
+    { id: "supplements",   az: "Qida əlavələri və vitaminlər",     ru: "Добавки и витамины",              en: "Supplements & vitamins",
+      chip: { az: "Əlavələr", ru: "Добавки", en: "Supplements" } }
+  ],
+  araton: [
+    { id: "dry", az: "Quru qida",            ru: "Сухой корм",            en: "Dry food" },
+    { id: "wet", az: "Yaş qida (pauçlar)",  ru: "Влажный корм (паучи)",  en: "Wet food (pouches)" }
+  ],
+  tpl: [
+    { id: "systems",     az: "Step kompleksləri",  ru: "Комплексы Step",   en: "Step systems" },
+    { id: "coat",        az: "Tük qulluğu",        ru: "Уход за шерстью",  en: "Coat care" },
+    { id: "paws",        az: "Pəncə və burun",     ru: "Лапы и нос",       en: "Paws & nose" },
+    { id: "accessories", az: "Aksesuarlar",        ru: "Аксессуары",       en: "Accessories" }
+  ],
+  misoko: [
+    { id: "soft",        az: "Yumşaq oyuncaqlar",           ru: "Мягкие игрушки",            en: "Soft toys" },
+    { id: "latex",       az: "Lateks oyuncaqlar",           ru: "Латексные игрушки",         en: "Latex toys" },
+    { id: "balls",       az: "Toplar",                      ru: "Мячи",                      en: "Balls" },
+    { id: "rope",        az: "Kəndir və möhkəm oyuncaqlar", ru: "Канаты и прочные игрушки",  en: "Rope & tough toys",
+      chip: { az: "Kəndirlər", ru: "Канаты", en: "Rope & tough" } },
+    { id: "interactive", az: "İnteraktiv oyuncaqlar",       ru: "Интерактивные",             en: "Interactive" },
+    { id: "walk",        az: "Gəzinti və gigiyena",         ru: "Прогулка и гигиена",        en: "Walks & hygiene" }
+  ]
+};
+
+// Привязка групп к разделам — по английскому названию группы (оно стабильно)
+(function assignSections() {
+  const MAP = {
+    araton: {
+      "Dry food for dogs": "dry", "Dry food for cats": "dry",
+      "Wet food for dogs (pouches)": "wet", "Wet food for cats (pouches)": "wet"
+    },
+    tpl: {
+      "Volume Boost — volume": "coat", "Anti-mat & detangling": "coat",
+      "For puppies & kittens — Puppy & Kitten": "coat", "Daily care": "coat",
+      "Ultra Natural Care": "coat", "Pure Nature": "coat",       // целиком в витринах Step — карточками не выводятся
+      "Paw & nose balms": "paws",
+      "Towels": "accessories", "Brushes & combs": "accessories", "Dental care": "accessories",
+      "Clippers & trimmers": "accessories", "Claw care": "accessories"
+    },
+    misoko: {
+      "Plush toys": "soft", "Comforter toys with blanket": "soft",
+      "Latex animals & figures": "latex", "Latex dinosaurs & reptiles": "latex", "Latex food & drinks": "latex",
+      "Latex toys with ribbons & legs": "latex", "Latex toys with rope": "latex",
+      "Squeaky latex balls": "balls", "Soccer & tennis balls": "balls",
+      "Rope & tug toys": "rope", "Strong — tough fabric toys": "rope", "Dental chew toys": "rope",
+      "Interactive toys": "interactive",
+      "Travel water bottles": "walk", "Dog diapers": "walk", "Pee pads & stain remover": "walk"
+    }
+  };
+  Object.keys(MAP).forEach(brand => {
+    const defs = CATALOG_SECTIONS[brand];
+    (BRANDS_EXTRA[brand] || []).forEach(g => {
+      const id = MAP[brand][g.group && g.group.en] || defs[defs.length - 1].id;
+      const def = defs.find(d => d.id === id);
+      g.sectionId = id;
+      g.section = { az: def.az, ru: def.ru, en: def.en };
+    });
+  });
+})();

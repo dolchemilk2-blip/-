@@ -10,7 +10,7 @@ Object.assign(TRANSLATIONS.az, {
   'search.results': 'Axtarış nəticələri',
   'search.more': '+ daha {n}',
   'search.empty': 'Heç nə tapılmadı',
-  'search.emptyHint': 'Başqa sözü yoxlayın: məsələn, "qızılbalıq", "şampun" və ya "top".',
+  'search.emptyHint': 'Başqa sözü yoxlayın: məsələn, "qızılbalıq", "лосось", "şampun" və ya "top".',
   'search.count': 'Tapıldı: {n}',
   'search.slash': 'Qısa düymə /',
   'search.shortcut': 'Ctrl K — axtarış'
@@ -22,7 +22,7 @@ Object.assign(TRANSLATIONS.ru, {
   'search.results': 'Результаты поиска',
   'search.more': '+ ещё {n}',
   'search.empty': 'Ничего не найдено',
-  'search.emptyHint': 'Попробуйте другое слово: например, «лосось», «шампунь» или «мяч».',
+  'search.emptyHint': 'Попробуйте другое слово: например, «лосось», «qızılbalıq», «шампунь» или «мяч».',
   'search.count': 'Найдено: {n}',
   'search.slash': 'Горячая клавиша /',
   'search.shortcut': 'Ctrl K — поиск'
@@ -49,7 +49,8 @@ Object.assign(TRANSLATIONS.en, {
 
   let INDEX = [];
   let wrap, field, input, mirror, fakePh, clearBtn, pop, list, empty, countEl, slashBox, slashTxt, labelEl, emptyTitle, emptyHint;
-  let results = [];      // плоский список видимых опций (entries)
+  let results = [];      // плоский список видимых опций (entries; {more: brand} — строка «+ ещё N»)
+  const expanded = new Set();   // бренды, раскрытые кнопкой «+ ещё N»
   let active = -1;
   let debounceT, clearT, liveT;
 
@@ -83,7 +84,9 @@ Object.assign(TRANSLATIONS.en, {
       seen.set(id, {
         id, brand, item,
         name: tr.name || en.name || '', cat: tr.cat || '',
-        n: norm(tr.name), nEn: norm(en.name), nTags: norm(tags), nCat: norm(tr.cat), nDesc: norm(tr.desc)
+        n: norm(tr.name), nEn: norm(en.name), nTags: norm(tags), nCat: norm(tr.cat), nDesc: norm(tr.desc),
+        // другие языки интерфейса: двуязычные покупатели (RU ↔ AZ, AZ без диакритики)
+        nAlt: norm(['az', 'ru', 'en'].filter(k => k !== L).map(k => { const x = item[k] || {}; return [x.name, (x.tags || []).join(' ')].join(' '); }).join(' '))
       });
     };
     BRAND_ORDER.forEach(b => (cat[b] || []).forEach(g => (g.items || []).forEach(it => add(it, b))));
@@ -103,6 +106,8 @@ Object.assign(TRANSLATIONS.en, {
       else if (e.n.includes(w)) best = 60;
       else if (startsWord(e.nEn, w)) best = 55;
       else if (e.nEn.includes(w)) best = 45;
+      else if (startsWord(e.nAlt, w)) best = 50;
+      else if (e.nAlt.includes(w)) best = 40;
       else if (e.nTags.includes(w) || e.nCat.includes(w)) best = 30;
       else if (e.nDesc.includes(w)) best = 10;
       if (!best) return 0;
@@ -152,16 +157,16 @@ Object.assign(TRANSLATIONS.en, {
   }
 
   // --- Рендер выпадающего списка ---
-  function render(announceIt) {
+  function render(announceIt, instant) {
     const q = input.value;
     const groups = search(q);
     results = []; active = -1;
     input.removeAttribute('aria-activedescendant');
-    if (!groups) { clearTimeout(liveT); list.innerHTML = ''; setOpen(false); return; }
+    if (!groups) { clearTimeout(liveT); list.innerHTML = ''; setOpen(false, instant); return; }
     let total = 0, html = '';
     groups.forEach((g, gi) => {
       total += g.hits.length;
-      const shown = g.hits.slice(0, PER_BRAND);
+      const shown = g.hits.slice(0, expanded.has(g.brand) ? Infinity : PER_BRAND);
       const gid = 'npsG' + gi;
       html += `<li role="presentation" class="np-search__group"><div class="np-search__ghead" id="${gid}"><span>${esc(BRAND_NAMES[g.brand])}</span><span class="np-search__gcount">${g.hits.length}</span></div>`
         + `<ul role="group" aria-labelledby="${gid}">`;
@@ -172,15 +177,17 @@ Object.assign(TRANSLATIONS.en, {
           + `<span class="np-search__txt"><span class="np-search__name">${highlight(e.name, q)}</span>`
           + `<span class="np-search__meta">${esc(e.cat)}<span class="np-search__dot" aria-hidden="true"> · </span>${esc(BRAND_NAMES[e.brand])}</span></span></li>`;
       });
-      html += '</ul>';
-      if (g.hits.length > PER_BRAND) html += `<div class="np-search__more" aria-hidden="true">${esc(t('search.more', { n: g.hits.length - PER_BRAND }))}</div>`;
-      html += '</li>';
+      if (shown.length < g.hits.length) {
+        const i = results.length; results.push({ more: g.brand });
+        html += `<li role="option" id="npsO${i}" class="np-search__opt np-search__more" aria-selected="false" data-i="${i}">${esc(t('search.more', { n: g.hits.length - shown.length }))}</li>`;
+      }
+      html += '</ul></li>';
     });
     list.innerHTML = html;
     list.hidden = !total;
     empty.hidden = !!total;
     countEl.textContent = t('search.count', { n: total });
-    setOpen(true);
+    setOpen(true, instant);
     if (announceIt !== false) {
       clearTimeout(liveT);
       liveT = setTimeout(() => announce(total ? t('search.count', { n: total }) : t('search.empty')), 450);
@@ -194,7 +201,9 @@ Object.assign(TRANSLATIONS.en, {
     setTimeout(() => { live.textContent = text; }, 30);
   }
 
-  function setOpen(open) {
+  // instant: открытие/закрытие с клавиатуры (набор текста, Esc, стрелки) — без анимации
+  function setOpen(open, instant) {
+    if (open !== wrap.classList.contains('is-open')) wrap.classList.toggle('is-instant', !!instant);
     wrap.classList.toggle('is-open', open);
     input.setAttribute('aria-expanded', open ? 'true' : 'false');
     if (!open) { active = -1; input.removeAttribute('aria-activedescendant'); }
@@ -212,10 +221,17 @@ Object.assign(TRANSLATIONS.en, {
     el.scrollIntoView({ block: 'nearest' });
   }
 
-  function choose(i) {
+  function choose(i, instant) {
     const e = results[i];
     if (!e) return;
-    setOpen(false);
+    if (e.more) {   // «+ ещё N»: раскрыть бренд целиком, фокус — на первый новый результат
+      expanded.add(e.more);
+      render(false, true);
+      const k = results.findIndex(r => !r.more && r.brand === e.more);
+      setActive(k >= 0 && results[k + PER_BRAND] ? k + PER_BRAND : k);
+      return;
+    }
+    setOpen(false, instant);
     NP.openProduct(e.id);
   }
 
@@ -236,8 +252,9 @@ Object.assign(TRANSLATIONS.en, {
   function syncValue() { field.classList.toggle('has-value', input.value.length > 0); }
 
   // «Растворение» текста при очистке (brief_transitions §13)
-  function clearSearch() {
+  function clearSearch(instant) {
     if (!input.value) return;
+    expanded.clear();
     mirror.textContent = input.value;
     input.value = '';
     syncValue();
@@ -245,7 +262,7 @@ Object.assign(TRANSLATIONS.en, {
     clearTimeout(clearT);
     clearT = setTimeout(() => { field.classList.remove('is-clearing'); mirror.textContent = ''; }, OUT_MS);
     clearTimeout(debounceT);
-    render(false);
+    render(false, instant === true);
     writeHashQ();
     input.focus({ preventScroll: true });
   }
@@ -310,8 +327,9 @@ Object.assign(TRANSLATIONS.en, {
     input.addEventListener('input', () => {
       if (input.value) field.classList.remove('is-clearing');
       syncValue();
+      expanded.clear();
       clearTimeout(debounceT);
-      debounceT = setTimeout(() => { render(); writeHashQ(); }, 80);
+      debounceT = setTimeout(() => { render(undefined, true); writeHashQ(); }, 80);
     });
     input.addEventListener('focus', () => { if (input.value && !wrap.classList.contains('is-open')) render(false); });
     input.addEventListener('keydown', e => {
@@ -319,7 +337,7 @@ Object.assign(TRANSLATIONS.en, {
       if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
         if (!input.value) return;
         e.preventDefault();
-        if (!open) { clearTimeout(debounceT); render(false); }
+        if (!open) { clearTimeout(debounceT); render(false, true); }
         if (!results.length) return;
         const n = results.length, d = e.key === 'ArrowDown' ? 1 : -1;
         setActive(active < 0 ? (d > 0 ? 0 : n - 1) : (active + d + n) % n);
@@ -327,15 +345,15 @@ Object.assign(TRANSLATIONS.en, {
         if (!input.value) return;
         e.preventDefault();
         clearTimeout(debounceT);
-        if (!open) render(false);
-        choose(active >= 0 ? active : 0);
+        if (!open) render(false, true);
+        choose(active >= 0 ? active : 0, true);
       } else if (e.key === 'Escape') {
-        if (input.value) { e.preventDefault(); clearSearch(); }
-        else if (open) { e.preventDefault(); setOpen(false); }
+        if (input.value) { e.preventDefault(); clearSearch(true); }
+        else if (open) { e.preventDefault(); setOpen(false, true); }
       }
     });
     clearBtn.addEventListener('pointerdown', e => e.preventDefault());
-    clearBtn.addEventListener('click', clearSearch);
+    clearBtn.addEventListener('click', e => clearSearch(e.detail === 0));
     list.addEventListener('pointerdown', e => e.preventDefault()); // фокус остаётся в поле
     list.addEventListener('click', e => {
       const o = e.target.closest('[role="option"]');
@@ -373,7 +391,7 @@ Object.assign(TRANSLATIONS.en, {
       buildIndex();
       if (wrap.classList.contains('is-open')) render(false);
     });
-    document.addEventListener('np:modal-open', () => setOpen(false));
+    document.addEventListener('np:modal-open', () => setOpen(false, true));
     window.addEventListener('hashchange', () => {
       const q = readHashQ();
       if (q != null && q !== input.value) { input.value = q; syncValue(); render(); }

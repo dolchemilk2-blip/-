@@ -68,7 +68,7 @@
   background-color: var(--paper); color: var(--ink);
   border-radius: var(--r-panel, 18px); box-shadow: 0 0 0 1px var(--hairline), var(--shadow-lg);
   overflow: hidden; display: flex; flex-direction: column;
-  transform-origin: top center;
+  transform-origin: 20% 0; /* grows out of the field, which sits at the pop's left */
   opacity: 0; transform: scale(.98); visibility: hidden; pointer-events: none;
   transition: opacity var(--dur-pop-out) var(--ease-out), transform var(--dur-pop-out) var(--ease-out), visibility 0s linear var(--dur-pop-out);
 }
@@ -89,7 +89,7 @@
 .np-search__gcount { font-weight: 500; color: var(--ink-3); }
 .np-search__opt {
   display: flex; align-items: center; gap: 12px; padding: 6px 10px; border-radius: 12px; cursor: pointer;
-  transition: background-color var(--dur-tooltip, 125ms) var(--ease-color);
+  /* Highlight follows arrow keys: instant (keyboard-driven, dozens of times per search) */
 }
 .np-search__opt[aria-selected="true"] { background-color: var(--accent-soft); }
 .np-search__thumb {
@@ -102,7 +102,9 @@
 .np-search__name { font: 500 14px/1.3 var(--font); color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .np-search__name mark { background: none; color: var(--accent); font-weight: 600; }
 .np-search__meta { font: 12px/1.3 var(--font); color: var(--ink-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.np-search__more { padding: 4px 10px 6px 62px; font: 12px/1.3 var(--font); color: var(--ink-2); }
+.np-search__opt.np-search__more { padding: 8px 10px 8px 62px; font: 600 13px/1.3 var(--font); color: var(--accent); }
+/* Opened / closed from the keyboard (typing, arrows, Esc): no scale-fade */
+.np-search.is-instant .np-search__pop { transition: none; }
 .np-search__list[hidden] { display: none; }
 
 .np-search__empty { padding: 20px 18px 16px; text-align: center; }
