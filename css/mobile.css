@@ -75,3 +75,17 @@ a, button, label, summary, [role="button"], [role="tab"], [role="radio"], [role=
   .catalog-bar .species__btn { padding: 8px 8px; font-size: 13px; }
   .catalog-bar .species__ico { display: none; }
 }
+
+/* Phones in landscape: the screen is too short for a sticky toolbar + section row */
+@media (max-height: 500px) and (orientation: landscape) {
+  .catalog-bar { position: static; }
+  .page-hero { padding: 16px 0 14px; }
+  .page-hero .section__title { font-size: 30px; }
+  .page-hero .section__subtitle { display: none; }
+}
+
+/* Tablet widths: keep the top menu on one line */
+@media (min-width: 721px) and (max-width: 1100px) {
+  .nav { gap: 18px; }
+  .nav__link { white-space: nowrap; font-size: 13.5px; }
+}
