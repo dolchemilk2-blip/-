@@ -1,0 +1,77 @@
+/* ===== Mobile fit — loaded last on both pages ===== */
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+a, button, label, summary, [role="button"], [role="tab"], [role="radio"], [role="option"] {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+@media (max-width: 720px) {
+  /* iOS Safari zooms the page into any field with text under 16px */
+  input:not([type="checkbox"]):not([type="radio"]):not([type="range"]), textarea, select { font-size: 16px; }
+  .np-search__field > input, .t-clear-mirror, .t-clear-placeholder { font-size: 16px; }
+  .np-search__field { height: 44px; }
+  .np-search__kbd, .np-search__slash { display: none; }
+
+  /* Catalogue hero: one compact block instead of a third of the screen */
+  .page-hero { padding: 18px 0 16px; }
+  .page-hero .section__tag { margin-bottom: 0; }
+  .page-hero .section__title { font-size: clamp(28px, 8.4vw, 34px); line-height: 1.08; margin-top: 4px; }
+  .page-hero .section__subtitle { font-size: 14.5px; line-height: 1.45; margin-top: 8px; }
+  .page-hero::before, .page-hero::after { display: none; }
+
+  /* Toolbar: each control is one line; overflow scrolls sideways instead of wrapping */
+  .catalog-bar__inner { flex-direction: column; flex-wrap: nowrap; align-items: stretch; gap: 8px; }
+  .catalog-bar .tabs,
+  .catalog-bar .species,
+  .brand .tabs {
+    flex-wrap: nowrap; overflow-x: auto; overflow-y: hidden;
+    overscroll-behavior-x: contain; scrollbar-width: none;
+    scroll-padding-inline: 12px;
+  }
+  .catalog-bar .tabs::-webkit-scrollbar,
+  .catalog-bar .species::-webkit-scrollbar,
+  .brand .tabs::-webkit-scrollbar { display: none; }
+  .catalog-bar .tabs { justify-content: flex-start; align-self: stretch; }
+  .catalog-bar .tab { flex: 0 0 auto; padding: 8px 14px; font-size: 14.5px; }
+  .catalog-bar .species { align-self: stretch; width: auto; justify-content: space-between; }
+  .catalog-bar .species__btn { flex: 1 0 auto; justify-content: center; padding: 8px 10px; font-size: 13.5px; gap: 4px; }
+  .catalog-bar__search { flex: 0 0 auto; }
+
+  /* Home "about" tabs: keep one row, centred when it fits, scrollable when it doesn't */
+  .brand .tabs { justify-content: flex-start; margin-left: calc(var(--gutter, 16px) * -1); margin-right: calc(var(--gutter, 16px) * -1); padding-left: var(--gutter, 16px); padding-right: var(--gutter, 16px); }
+  .brand .tabs > .brand-tab:first-of-type { margin-left: auto; }
+  .brand .tabs > .brand-tab:last-of-type { margin-right: auto; }
+  .brand .brand-tab { flex: 0 0 auto; padding: 9px 16px; font-size: 14.5px; }
+
+  /* Search results: a sheet pinned right under the field, above everything else */
+  /* the toolbar is its own stacking layer (backdrop blur) — lift it while results are open */
+  .catalog-bar:has(.np-search.is-open) { position: relative; z-index: 1001; }
+  .np-search__pop {
+    position: fixed; z-index: 1000;
+    top: var(--pop-top, 120px); left: 12px; right: 12px;
+    width: auto; max-width: none;
+    max-height: calc(var(--vvh, 100dvh) - var(--pop-top, 120px) - 12px);
+    border-radius: var(--r-panel, 18px);
+    transform-origin: 50% 0;
+  }
+  .np-search__list { flex: 1 1 auto; min-height: 0; max-height: none; overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
+  .np-search__opt { min-height: 48px; }
+
+  /* Product modal: full-height sheet with its own scroll, close button always reachable */
+  .pmodal__dialog { width: calc(100vw - 20px); max-height: calc(var(--vvh, 100dvh) - 20px); }
+  .pmodal__media { min-height: 0; padding: 20px 18px 12px; }
+  .pmodal__media img { max-height: 210px; }
+  .pmodal__info { padding: 18px 18px 24px; }
+  .pmodal__close { width: 44px; height: 44px; }
+
+  /* Tap targets: at least 44px for small controls */
+  .product__actions button, .pmodal__actions button { min-width: 44px; min-height: 44px; }
+  .cat-chip { min-height: 40px; }
+}
+
+/* Very narrow phones (iPhone SE / 360px Android) */
+@media (max-width: 380px) {
+  .catalog-bar .tab { padding: 8px 12px; font-size: 14px; }
+  .catalog-bar .species__btn { padding: 8px 8px; font-size: 13px; }
+  .catalog-bar .species__ico { display: none; }
+}

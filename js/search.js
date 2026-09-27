@@ -207,6 +207,7 @@ Object.assign(TRANSLATIONS.en, {
     wrap.classList.toggle('is-open', open);
     input.setAttribute('aria-expanded', open ? 'true' : 'false');
     if (!open) { active = -1; input.removeAttribute('aria-activedescendant'); }
+    else if (window.NPMobile) window.NPMobile.placeSearch();
   }
 
   function setActive(i) {
