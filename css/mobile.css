@@ -89,3 +89,20 @@ a, button, label, summary, [role="button"], [role="tab"], [role="radio"], [role=
   .nav { gap: 18px; }
   .nav__link { white-space: nowrap; font-size: 13.5px; }
 }
+
+@media (max-width: 720px) {
+  /* Burger menu: solid sheet over a dimmed page instead of a see-through panel */
+  .nav { background-color: var(--paper); -webkit-backdrop-filter: none; backdrop-filter: none; box-shadow: -16px 0 40px rgba(0, 0, 0, .14); width: min(300px, 82vw); }
+  .nav-scrim {
+    position: fixed; inset: var(--header-h) 0 0 0; z-index: 98;
+    background-color: rgba(10, 14, 12, .32);
+    opacity: 0; visibility: hidden;
+    transition: opacity var(--dur-drawer-out) var(--ease-out), visibility 0s linear var(--dur-drawer-out);
+  }
+  .nav-scrim.is-open { opacity: 1; visibility: visible; transition: opacity var(--dur-drawer-in) var(--ease-out), visibility 0s; }
+  html.nav-open { overflow: hidden; }
+
+  /* Toast sits above the round "My list" button instead of covering it */
+  .np-toast-region { bottom: calc(max(20px, env(safe-area-inset-bottom)) + 64px); max-width: calc(100vw - 24px); }
+}
+@media (prefers-reduced-motion: reduce) { .nav-scrim, .nav-scrim.is-open { transition: none; } }

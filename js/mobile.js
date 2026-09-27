@@ -59,3 +59,24 @@
     setTimeout(placeSearch, 350);
   });
 })();
+
+// ===== Burger menu: dimmed backdrop, tap-outside and Esc close, page scroll locked =====
+(function () {
+  function init() {
+    const nav = document.getElementById('nav'), burger = document.getElementById('burger');
+    if (!nav || !burger) return;
+    const scrim = document.createElement('div');
+    scrim.className = 'nav-scrim';
+    scrim.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(scrim);
+    const close = () => { if (nav.classList.contains('is-open')) burger.click(); };
+    scrim.addEventListener('click', close);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && nav.classList.contains('is-open')) { close(); burger.focus(); } });
+    new MutationObserver(() => {
+      const open = nav.classList.contains('is-open');
+      scrim.classList.toggle('is-open', open);
+      document.documentElement.classList.toggle('nav-open', open);
+    }).observe(nav, { attributes: true, attributeFilter: ['class'] });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();
