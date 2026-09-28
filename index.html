@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="css/home.css" />
   <link rel="stylesheet" href="css/mobile.css" />
   <link rel="stylesheet" href="css/mobile-home.css" />
+  <link rel="stylesheet" href="css/motion-home.css" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 </head>
 <body class="page-enter home">
@@ -73,7 +74,7 @@
       <div class="container hero-home__inner">
         <div class="hero-home__content">
           <p class="hero-home__eyebrow" data-i18n="hero.badge">Премиум-питание</p>
-          <h1 class="hero-home__title" id="heroTitle" data-i18n="hero.title">Здоровое питание для вашего любимца</h1>
+          <h1 class="hero-home__title" id="heroTitle" data-mh-lines="hero" data-i18n="hero.title">Здоровое питание для вашего любимца</h1>
           <p class="hero-home__text" data-i18n="hero.text">Натуральные ингредиенты и сбалансированные формулы для кошек и собак любого возраста.</p>
           <div class="hero-home__actions">
             <a href="products.html" class="btn btn--primary" data-i18n="home.hero.cta">Смотреть каталог</a>
@@ -91,7 +92,7 @@
           </nav>
         </div>
 
-        <dl class="hero-stats">
+        <dl class="hero-stats" data-mh-count>
           <div class="hero-stats__item"><dt data-i18n="home.stat.brands.n">4</dt><dd data-i18n="home.stat.brands">бренда</dd></div>
           <div class="hero-stats__item"><dt data-i18n="home.stat.products.n">260+</dt><dd data-i18n="home.stat.products">товаров в каталоге</dd></div>
           <div class="hero-stats__item"><dt>2004</dt><dd data-i18n="home.stat.since">год открытия фабрики</dd></div>
@@ -157,9 +158,9 @@
     <!-- ===== 3. Four brands ===== -->
     <section class="section lineup" id="brands" aria-labelledby="brandsTitle">
       <div class="container">
-        <div class="home-head" data-reveal>
-          <p class="home-head__tag" data-i18n="products.tag">Наша продукция</p>
-          <h2 class="home-head__title" id="brandsTitle" data-i18n="home.brands.title">Четыре бренда</h2>
+        <div class="home-head">
+          <p class="home-head__tag" data-reveal data-i18n="products.tag">Наша продукция</p>
+          <h2 class="home-head__title" id="brandsTitle" data-mh-lines data-i18n="home.brands.title">Четыре бренда</h2>
         </div>
         <ul class="lineup__grid">
           <li data-reveal><a class="tile tile--np" href="products.html#brand=np">
@@ -189,10 +190,10 @@
     <!-- ===== 3b. Categories: deep links into catalogue sections (#brand=…&sec=…) ===== -->
     <section class="section cats" id="cats" aria-labelledby="catsTitle">
       <div class="container">
-        <div class="home-head cats__head" data-reveal>
-          <p class="home-head__tag" data-i18n="home.cats.tag">Каталог</p>
-          <h2 class="home-head__title" id="catsTitle" data-i18n="home.cats.title">Категории</h2>
-          <a class="cats__all" href="products.html"><span data-i18n="home.cats.all">Весь каталог</span> <span aria-hidden="true">›</span></a>
+        <div class="home-head cats__head">
+          <p class="home-head__tag" data-reveal data-i18n="home.cats.tag">Каталог</p>
+          <h2 class="home-head__title" id="catsTitle" data-mh-lines data-i18n="home.cats.title">Категории</h2>
+          <a class="cats__all" data-reveal href="products.html"><span data-i18n="home.cats.all">Весь каталог</span> <span aria-hidden="true">›</span></a>
         </div>
         <ul class="cats__grid">
           <li data-reveal><a class="cat-tile" href="products.html#brand=np&amp;sec=dry">
@@ -226,9 +227,9 @@
     <!-- ===== 4. About NP: values / history / ambassadors / FAQ ===== -->
     <section class="section home-values" id="values" aria-labelledby="valuesTitle">
       <div class="container">
-        <div class="home-head home-head--center" data-reveal>
-          <p class="home-head__tag" data-i18n="brand.tag">Узнайте больше</p>
-          <h2 class="home-head__title" id="valuesTitle" data-i18n="brand.title">О Nature's Protection</h2>
+        <div class="home-head home-head--center">
+          <p class="home-head__tag" data-reveal data-i18n="brand.tag">Узнайте больше</p>
+          <h2 class="home-head__title" id="valuesTitle" data-mh-lines data-i18n="brand.title">О Nature's Protection</h2>
         </div>
 
         <div class="tabs" role="tablist" aria-labelledby="valuesTitle">
@@ -297,14 +298,14 @@
     <!-- ===== 5. About / proof ===== -->
     <section class="section home-about" id="about" aria-labelledby="aboutTitle">
       <div class="container home-about__inner">
-        <figure class="home-about__media" data-reveal>
-          <img src="assets/result-maltese.jpg" class="home-about__photo" alt="Мальтезе до и после: меньше слёзных дорожек на рационе Superior Care White" data-i18n-alt="home.about.alt" loading="lazy" />
-          <figcaption data-i18n="home.about.caption">До и после: слёзные дорожки у мальтезе на рационе Superior Care White.</figcaption>
+        <figure class="home-about__media">
+          <img src="assets/result-maltese.jpg" class="home-about__photo" data-mh-wipe alt="Мальтезе до и после: меньше слёзных дорожек на рационе Superior Care White" data-i18n-alt="home.about.alt" loading="lazy" />
+          <figcaption data-reveal data-i18n="home.about.caption">До и после: слёзные дорожки у мальтезе на рационе Superior Care White.</figcaption>
         </figure>
         <div class="home-about__content">
           <p class="home-head__tag" data-reveal data-i18n="about.tag">О бренде</p>
-          <h2 class="home-head__title" id="aboutTitle" data-reveal data-i18n="about.title">Природа в основе питания</h2>
-          <p data-reveal data-i18n="about.text1">Мы создаём корма, вдохновлённые естественным рационом животных.</p>
+          <h2 class="home-head__title" id="aboutTitle" data-mh-lines data-i18n="about.title">Природа в основе питания</h2>
+          <p class="home-about__lead" data-mh-words data-i18n="about.text1">Мы создаём корма, вдохновлённые естественным рационом животных.</p>
           <p data-reveal data-i18n="about.text2">Каждая формула разработана при участии ветеринаров и специалистов по питанию.</p>
           <ul class="home-about__list" data-reveal>
             <li data-i18n="about.li1">Отборное мясо как первый ингредиент</li>
@@ -318,15 +319,15 @@
     <!-- ===== 6. Quality ===== -->
     <section class="section home-quality" id="quality" aria-labelledby="qualityTitle">
       <div class="container">
-        <div class="home-head home-head--center" data-reveal>
-          <p class="home-head__tag" data-i18n="quality.tag">Качество</p>
-          <h2 class="home-head__title" id="qualityTitle" data-i18n="quality.title">Как мы заботимся о качестве</h2>
+        <div class="home-head home-head--center">
+          <p class="home-head__tag" data-reveal data-i18n="quality.tag">Качество</p>
+          <h2 class="home-head__title" id="qualityTitle" data-mh-lines data-i18n="quality.title">Как мы заботимся о качестве</h2>
         </div>
-        <ol class="journey">
-          <li class="journey__stop" data-reveal><span class="journey__num">01</span><h3 data-i18n="quality.s1.title">Отбор сырья</h3><p data-i18n="quality.s1.text">Только проверенные поставщики и свежие ингредиенты.</p></li>
-          <li class="journey__stop" data-reveal><span class="journey__num">02</span><h3 data-i18n="quality.s2.title">Производство</h3><p data-i18n="quality.s2.text">Современные технологии сохраняют пользу продуктов.</p></li>
-          <li class="journey__stop" data-reveal><span class="journey__num">03</span><h3 data-i18n="quality.s3.title">Лабораторный контроль</h3><p data-i18n="quality.s3.text">Каждая партия проходит проверку безопасности.</p></li>
-          <li class="journey__stop" data-reveal><span class="journey__num">04</span><h3 data-i18n="quality.s4.title">Упаковка</h3><p data-i18n="quality.s4.text">Защита свежести и сохранение питательных свойств.</p></li>
+        <ol class="journey" data-mh-journey>
+          <li class="journey__stop"><span class="journey__num">01</span><h3 data-i18n="quality.s1.title">Отбор сырья</h3><p data-i18n="quality.s1.text">Только проверенные поставщики и свежие ингредиенты.</p></li>
+          <li class="journey__stop"><span class="journey__num">02</span><h3 data-i18n="quality.s2.title">Производство</h3><p data-i18n="quality.s2.text">Современные технологии сохраняют пользу продуктов.</p></li>
+          <li class="journey__stop"><span class="journey__num">03</span><h3 data-i18n="quality.s3.title">Лабораторный контроль</h3><p data-i18n="quality.s3.text">Каждая партия проходит проверку безопасности.</p></li>
+          <li class="journey__stop"><span class="journey__num">04</span><h3 data-i18n="quality.s4.title">Упаковка</h3><p data-i18n="quality.s4.text">Защита свежести и сохранение питательных свойств.</p></li>
         </ol>
       </div>
     </section>
@@ -335,8 +336,8 @@
     <section class="section buy" id="stores" aria-labelledby="storesTitle">
       <div class="container buy__inner" id="contact">
         <div class="buy__info">
-          <p class="home-head__tag" data-i18n="contact.tag">Контакты</p>
-          <h2 class="home-head__title" id="storesTitle" data-i18n="stores.title">Где купить нашу продукцию</h2>
+          <p class="home-head__tag" data-reveal data-i18n="contact.tag">Контакты</p>
+          <h2 class="home-head__title" id="storesTitle" data-mh-lines data-i18n="stores.title">Где купить нашу продукцию</h2>
           <p class="buy__text" data-i18n="stores.text">Наши корма доступны в зоомагазинах и у официальных дистрибьюторов. Свяжитесь с нами, чтобы узнать ближайшую точку продаж.</p>
           <ul class="buy__list">
             <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span data-i18n="contact.address">Баку, Азербайджан</span></li>
@@ -396,6 +397,7 @@
   <script src="js/translations.js"></script>
   <script src="js/home.js"></script>
   <script src="js/mobile.js"></script>
+  <script src="js/motion-home.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

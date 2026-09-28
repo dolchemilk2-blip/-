@@ -1,0 +1,126 @@
+/* =====================================================================
+   Home page motion (Apple-style). Loaded after mobile-home.css; driven by js/motion-home.js.
+   Rules: transform / opacity / clip-path only; --ease-out for entrances, --ease-in-out for the
+   clip wipe, linear for everything scroll-linked. Everything plays once or is scrubbed by scroll.
+   All hidden/start states live under .mh-js (set by the script only when motion is allowed),
+   so no-JS and prefers-reduced-motion get the final state.
+
+   Scrubbed parts read one number, --mh-p (0→1). Browsers with scroll-driven animations get it
+   from a view() timeline below; others get it from the IntersectionObserver-gated rAF fallback
+   in motion-home.js, which reads --mh-a/--mh-b (range, in "cover" fractions) from here.
+   ===================================================================== */
+
+@property --mh-p { syntax: '<number>'; inherits: true; initial-value: 0; }
+@keyframes mhP { from { --mh-p: 0; } to { --mh-p: 1; } }
+@keyframes mhLine { from { transform: translateY(105%); } }
+@keyframes mhSettle { from { scale: 1.06; } }
+@keyframes mhImgIn { from { scale: .92; } }
+
+/* ---------- Line mask (hero headline + section titles) ---------- */
+.mh-line { display: block; overflow: hidden; margin-bottom: -.14em; }
+.mh-line__in { display: block; padding-bottom: .14em; }
+.mh-lines:not(.mh-in) .mh-line__in { transform: translateY(105%); }
+.mh-lines.mh-in .mh-line__in {
+  animation: mhLine 700ms var(--ease-out) backwards;
+  animation-delay: calc(var(--li, 0) * 60ms);
+}
+/* the hero headline: 800ms, 70ms per line, after a short beat */
+.hero-home__title.mh-in .mh-line__in {
+  animation-duration: 800ms;
+  animation-delay: calc(80ms + var(--li, 0) * 70ms);
+}
+
+/* ---------- 1. Hero ---------- */
+.mh-js .hero-home__title { animation: none; }                       /* the lines replace homeRise */
+.mh-js .hero-home__title:not(.mh-lines):not(.mh-done) { opacity: 0; } /* one frame, until split */
+/* sub-text, buttons, chips and stats follow the headline (homeRise from home.css: 16px, 700ms) */
+.mh-js .hero-home__eyebrow { animation-delay: 0ms; }
+.mh-js .hero-home__text { animation-delay: 300ms; }
+.mh-js .hero-home__actions { animation-delay: 380ms; }
+.mh-js .intents { animation-delay: 460ms; }
+.mh-js .hero-stats { animation-delay: 540ms; }
+.hero-stats dt { font-variant-numeric: tabular-nums; }              /* mobile-home's font shorthand resets it */
+/* background settles 1.06 → 1 (the `scale` property, so it composes with the scrubbed transform) */
+.mh-js .hero--home .hero-bg { animation: mhSettle 1400ms var(--ease-out) backwards; }
+/* scrubbed exit: content lifts 40px and fades to .2, image grows to 1.05 */
+.mh-js .hero--home .hero-home__inner {
+  transform: translate3d(0, calc(var(--mh-p) * -40px), 0);
+  opacity: calc(1 - var(--mh-p) * .8);
+}
+.mh-js .hero--home .hero-bg { transform: scale(calc(1 + var(--mh-p) * .05)); }
+
+/* ---------- 3. Brand statement: words light up 25% → 100% as it scrolls through ---------- */
+.home-about__content > p.home-about__lead {
+  font: 500 clamp(21px, 1.9vw, 26px)/1.4 var(--font); letter-spacing: -0.012em;
+  color: var(--ink); max-width: 34ch;
+}
+.mh-js .mh-words { --mh-a: .16; --mh-b: .62; }
+.mh-js .mh-words .mh-w {
+  opacity: clamp(.25, calc(.25 + (var(--mh-p) * (var(--mh-n, 1) + 3) - var(--i, 0)) * .375), 1);
+}
+
+/* ---------- 4. Coat chapter: the bag and the pouch drift at different rates ---------- */
+.mh-js .coat { --mh-a: 0; --mh-b: 1; }   /* timeline on .coat: overflow:hidden makes it the stage's scroll container */
+.mh-js .coat__cat { translate: 0 calc((.5 - var(--mh-p)) * 24px); }
+.mh-js .coat__dog { translate: 0 calc((.5 - var(--mh-p)) * 72px); }
+
+/* ---------- 5. Brand tiles + category rows: the product image grows in with its card ---------- */
+.mh-js.home-js main [data-reveal].is-in :is(.tile__img, .cat-tile__img) {
+  animation: mhImgIn 700ms var(--ease-out) backwards;
+  animation-delay: calc(var(--ri, 0) * var(--stagger));
+}
+.mh-js.home-js main [data-reveal].is-instant :is(.tile__img, .cat-tile__img) { animation: none; }
+
+/* ---------- 7. Quality journey: the line draws with scroll, each dot fills as it is passed ---------- */
+.mh-js .journey { --mh-a: .2; --mh-b: .55; }
+.mh-js .journey__stop { z-index: 1; }
+.mh-js .journey::after {
+  content: ""; position: absolute; z-index: 0; left: 0; right: 0; top: 13.5px; height: 2px;
+  background-color: var(--leaf); transform-origin: 0 50%;
+  transform: scaleX(var(--mh-p));
+}
+.mh-js .journey__stop::after {
+  content: ""; position: absolute; left: 0; top: 9px; width: 11px; height: 11px; border-radius: 50%;
+  background-color: var(--leaf);
+  scale: clamp(0, calc((var(--mh-p) - var(--mh-at, 0)) * 14), 1);
+}
+@media (max-width: 860px) {
+  .mh-js .journey { --mh-a: .14; --mh-b: .67; }
+  .mh-js .journey::after { left: 4.5px; right: auto; top: 0; bottom: 0; width: 2px; height: auto; transform-origin: 50% 0; transform: scaleY(var(--mh-p)); }
+  .mh-js .journey__stop::after { left: -28px; top: 4px; }
+}
+
+/* ---------- 8. Before/after photo: one clip-path wipe, left to right ---------- */
+.mh-js [data-mh-wipe] { clip-path: inset(0 100% 0 0 round var(--r-panel)); }
+.mh-js [data-mh-wipe].mh-in {
+  clip-path: inset(0 0 0 0 round var(--r-panel));
+  transition: clip-path 1100ms var(--ease-in-out);
+}
+.mh-js [data-mh-wipe].mh-done { clip-path: none; transition: none; }
+@media (max-width: 720px) {
+  .home-about__content > p.home-about__lead { font: 500 20px/1.4 var(--font); max-width: none; }
+  .mh-js [data-mh-wipe] { clip-path: inset(0 100% 0 0 round 20px); }
+  .mh-js [data-mh-wipe].mh-in { clip-path: inset(0 0 0 0 round 20px); }
+}
+
+/* ---------- Scroll-driven timelines (the rAF fallback writes --mh-p when these are missing) ---------- */
+@supports (animation-timeline: view()) {
+  .mh-js .hero--home {
+    animation: mhP linear both; animation-timeline: view();
+    animation-range: exit-crossing 0% exit-crossing 100%;
+  }
+  .mh-js :is(.coat, .mh-words, .journey) {
+    animation: mhP linear both; animation-timeline: view();
+    animation-range: cover calc(var(--mh-a) * 100%) cover calc(var(--mh-b) * 100%);
+  }
+}
+
+/* ---------- Reduced motion: final state, no movement (the script also stays off) ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .hero--home, .coat, .mh-words, .journey { animation: none !important; --mh-p: 1; }
+  .hero--home { --mh-p: 0; }
+  .mh-line__in, .hero-home__title, .hero--home .hero-bg, .tile__img, .cat-tile__img { animation: none !important; transform: none; }
+  .hero--home .hero-bg, .hero--home .hero-home__inner, .coat__cat, .coat__dog { transform: none !important; translate: none !important; opacity: 1 !important; }
+  [data-mh-wipe] { clip-path: none !important; }
+  .mh-w { opacity: 1 !important; }
+}
