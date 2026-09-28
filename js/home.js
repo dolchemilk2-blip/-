@@ -165,6 +165,8 @@ Object.assign(TRANSLATIONS.en, {
   // За кадр: одно чтение layout на сцену (фаза чтения), затем только запись transform/opacity (фаза записи).
   function initScenes() {
     if (reduce() || !('IntersectionObserver' in window)) return;
+    // Phones: #coat is a static, compact layout (mobile-home.css); the scroll scene would open an empty band
+    if (window.matchMedia && window.matchMedia('(max-width: 720px)').matches) return;
     const scenes = Array.from(document.querySelectorAll('[data-scene]')).map(el => ({
       el,
       copy: el.querySelector('.coat__copy'),

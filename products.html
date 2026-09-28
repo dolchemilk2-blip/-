@@ -15,6 +15,8 @@
   <link rel="stylesheet" href="css/search.css" />
   <link rel="stylesheet" href="css/list.css" />
   <link rel="stylesheet" href="css/mobile.css" />
+  <link rel="stylesheet" href="css/mobile-catalog.css" />
+  <link rel="stylesheet" href="css/mobile-tauro.css" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 </head>
 <body class="page-enter">
@@ -35,6 +37,7 @@
         <a href="index.html#quality" class="nav__link" data-i18n="nav.quality">Качество</a>
         <a href="index.html#stores" class="nav__link" data-i18n="nav.stores">Где купить</a>
         <a href="index.html#contact" class="nav__link" data-i18n="nav.contact">Контакты</a>
+        <div class="nav-extra"><div class="nav-lang" role="group" aria-label="Выбор языка"><button type="button" class="nav-lang__btn" data-lang-pick="az" lang="az" aria-pressed="false">AZ</button><button type="button" class="nav-lang__btn" data-lang-pick="ru" lang="ru" aria-pressed="true">RU</button><button type="button" class="nav-lang__btn" data-lang-pick="en" lang="en" aria-pressed="false">EN</button></div></div>
       </nav>
 
       <div class="header__actions">
@@ -81,10 +84,12 @@
 
       <div class="species" id="species" role="radiogroup" aria-label="Для кого">
         <button class="species__btn is-active" type="button" role="radio" aria-checked="true" data-species="all"><span data-i18n="products.all">Все</span></button>
-        <button class="species__btn" type="button" role="radio" aria-checked="false" tabindex="-1" data-species="cats"><span class="species__ico" aria-hidden="true">🐱</span><span data-i18n="products.tabCats">Для кошек</span></button>
-        <button class="species__btn" type="button" role="radio" aria-checked="false" tabindex="-1" data-species="dogs"><span class="species__ico" aria-hidden="true">🐶</span><span data-i18n="products.tabDogs">Для собак</span></button>
+        <button class="species__btn" type="button" role="radio" aria-checked="false" tabindex="-1" data-species="cats"><span class="species__ico" aria-hidden="true">🐱</span><span class="species__lbl" data-i18n="products.tabCats">Для кошек</span><span class="species__lbl--s" data-i18n="m.sp.cats">Кошки</span></button>
+        <button class="species__btn" type="button" role="radio" aria-checked="false" tabindex="-1" data-species="dogs"><span class="species__ico" aria-hidden="true">🐶</span><span class="species__lbl" data-i18n="products.tabDogs">Для собак</span><span class="species__lbl--s" data-i18n="m.sp.dogs">Собаки</span></button>
         <button class="species__btn species__btn--baby" type="button" role="radio" aria-checked="false" tabindex="-1" data-species="baby"><span class="species__ico" aria-hidden="true">🍼</span><span data-i18n="products.babies">Малыши</span></button>
       </div>
+
+      <button class="m-search-btn" id="mSearchBtn" type="button" aria-label="Поиск" aria-controls="npSearchInput"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-3.5-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
     </div>
   </div>
 

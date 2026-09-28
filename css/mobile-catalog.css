@@ -1,0 +1,300 @@
+/* ===== Catalog on phones (products.html; loaded after mobile.css) =====
+   "Compact native": one-line title, a static 2-row toolbar (brand 2×2 + species segment + search icon),
+   a sticky chip row, sticky group heads, compact 2-column cards, the product as a bottom sheet,
+   and search as a full-screen overlay. Everything here is ≤720px only. */
+@media (max-width: 720px) {
+  /* ---------- D1 Title: one line on the page tint ---------- */
+  .page-hero { padding: 14px 0 2px; text-align: left; background-color: transparent; }
+  .page-hero::before, .page-hero::after { display: none; }
+  .page-hero__back, .page-hero .section__tag, .page-hero .section__subtitle { display: none; }
+  .page-hero .section__title { margin: 0; font: 700 28px/1.1 var(--font); letter-spacing: -0.02em; }
+
+  /* ---------- D2 Toolbar (static): brand 2×2, species segment + search button ---------- */
+  .catalog-bar {
+    position: static; padding: 10px 0 10px;
+    background: transparent; -webkit-backdrop-filter: none; backdrop-filter: none; border-bottom: 0;
+  }
+  .catalog-bar__inner { display: grid; grid-template-columns: minmax(0, 1fr) 48px; gap: 8px; align-items: center; }
+  .catalog-bar .tabs {
+    grid-column: 1 / -1;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 4px;
+    padding: 4px; margin: 0; border-radius: 16px;
+    background-color: rgba(0, 0, 0, .045); overflow: visible;
+  }
+  .catalog-bar .tab {
+    display: flex; align-items: center; justify-content: center;
+    min-height: 44px; padding: 0 10px; border-radius: 12px;
+    font: 600 14px/1.2 var(--font); letter-spacing: -0.005em; white-space: nowrap;
+  }
+  /* main.js writes --ind-x/--ind-y/--ind-w/--ind-h: the thumb glides across both rows */
+  .catalog-bar .tabs__indicator { top: 0; transform: translate3d(var(--ind-x, 0px), var(--ind-y, 0px), 0); border-radius: 12px; }
+  .catalog-bar__search { display: none; }
+  .catalog-bar .species {
+    grid-column: 1;
+    display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0;
+    padding: 2px; margin: 0; width: auto; max-width: none; overflow: visible;
+  }
+  .catalog-bar .species__btn { justify-content: center; min-height: 44px; padding: 0 4px; font-size: 14px; gap: 0; }
+  .catalog-bar .species__ico, .species__lbl { display: none; }
+  .species__lbl--s { display: inline; }
+  .catalog-bar .species__btn[aria-disabled="true"] { opacity: 1; color: var(--ink-3); }
+  .m-search-btn {
+    grid-column: 2;
+    display: grid; place-items: center; width: 48px; height: 48px;
+    border: 0; border-radius: 50%; background-color: var(--tint-soft); color: var(--ink); cursor: pointer;
+    transition: transform var(--dur-release) var(--ease-out), background-color var(--dur-tint) var(--ease-color);
+  }
+  .m-search-btn:active { transform: scale(var(--press-scale)); transition-duration: var(--dur-press), var(--dur-tint); }
+
+  /* ---------- D3 Sticky chip row (right under the header) ---------- */
+  .cat-nav:not([hidden]) { padding: 6px 0; gap: 8px; }
+  .cat-nav::before {
+    background-color: color-mix(in srgb, var(--tint, var(--paper)) 97%, transparent);
+    -webkit-backdrop-filter: none; backdrop-filter: none;
+  }
+  .cat-nav__scroller { margin-left: calc(var(--gutter) * -1); padding: 2px 1px 2px var(--gutter); scroll-padding-inline: var(--gutter); }
+  .cat-nav .cat-chip { min-height: 40px; padding: 0 14px; font-size: 14px; }
+  .cat-nav .cat-chip::before { content: ''; position: absolute; inset: -2px 0; }
+  /* «Brand & filters»: a 44px round icon at the right end; a tap scrolls back to the toolbar (main.js) */
+  .cat-nav__up {
+    order: 2; position: relative;
+    width: 44px; height: 44px; min-height: 44px; padding: 0; justify-content: center;
+    border-radius: 50%; background-color: var(--paper); color: var(--brand-ink);
+    box-shadow: inset 0 0 0 1px var(--hairline-strong);
+  }
+  .cat-nav__up > svg, .cat-nav__up > span:not(.sr-only) { display: none; }
+  .cat-nav__up::before {
+    content: ''; width: 20px; height: 20px; background-color: currentColor;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M4 7h9M17 7h3M4 17h3M11 17h9'/%3E%3Ccircle cx='15' cy='7' r='2'/%3E%3Ccircle cx='9' cy='17' r='2'/%3E%3C/svg%3E") center / contain no-repeat;
+            mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M4 7h9M17 7h3M4 17h3M11 17h9'/%3E%3Ccircle cx='15' cy='7' r='2'/%3E%3Ccircle cx='9' cy='17' r='2'/%3E%3C/svg%3E") center / contain no-repeat;
+  }
+  .cat-nav__up::after {
+    content: ''; position: absolute; top: 9px; right: 9px; width: 8px; height: 8px; border-radius: 50%;
+    background-color: var(--brand-ink); box-shadow: 0 0 0 2px var(--paper);
+  }
+  .cat-result { margin: 8px 0 14px; font-size: 13px; }
+
+  /* ---------- D4 Sections and groups ---------- */
+  .cat-section { margin-bottom: 40px; }
+  .cat-section__title {
+    display: block; margin: 0 0 12px;
+    font: 600 22px/1.2 var(--font); letter-spacing: -0.015em; text-wrap: balance;
+  }
+  .cat-section__count {
+    display: inline; margin-left: 6px; padding: 0; background: none; transform: none;
+    font: 500 15px/1 var(--font); color: var(--ink-2-tint);
+  }
+  .cat-section > .coat-note, .product-group--coat .coat-note { display: none; }   /* the inserts carry it */
+  .cat-section .product-group { margin-bottom: 28px; padding-top: 0; }
+  .cat-section .product-group__title {
+    position: sticky; top: calc(var(--sticky-offset) - 1px); z-index: 4;
+    margin: 0 -10px 8px; padding: 8px 10px;
+    font: 600 17px/1.3 var(--font);
+    background-color: color-mix(in srgb, var(--tint, var(--paper)) 97%, transparent);
+  }
+  .product-subgroup__title { margin: 16px 0 10px; font-size: 12px; }
+  .coat-subline { margin: 16px 0 10px; font-size: 13px; }
+  .cat-xlink { min-height: 44px; margin: -4px 0 16px; }
+  .baby-banner { gap: 12px; padding: 14px 16px; border-radius: 16px; }
+  .baby-banner__icon { font-size: 28px; }
+  .ranges-block { margin-top: 48px; padding-top: 32px; }
+  .ranges { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .range { padding: 16px; border-radius: 16px; }
+  .range__icon { font-size: 24px; margin-bottom: 8px; }
+  .range__name { font-size: 16px; }
+  .range__desc { font-size: 13px; }
+  #products { padding-bottom: calc(96px + env(safe-area-inset-bottom)); }   /* room for the FAB */
+
+  /* ---------- D5 Coat insert: a collapsed disclosure row (js/mobile.js C5) ---------- */
+  .coat-insert {
+    position: relative; align-items: flex-start; gap: 12px;
+    min-height: 56px; padding: 14px 44px 14px 14px; margin: 20px 0 12px;
+    border-radius: 16px; cursor: pointer;
+  }
+  .coat-insert__dot { width: 14px; height: 14px; margin-top: 4px; box-shadow: 0 0 0 4px var(--coat-ring); }
+  .coat-insert__text h4 { margin: 0; font: 600 16px/1.3 var(--font); }
+  .coat-insert__text p { display: none; margin-top: 6px; font: 400 14px/1.45 var(--font); }
+  .coat-insert.is-open .coat-insert__text p { display: block; animation: mFade 160ms var(--ease-out); }
+  .coat-insert::after {
+    content: ''; position: absolute; right: 18px; top: 22px; width: 8px; height: 8px;
+    border-right: 2px solid var(--coat-ink-2, var(--ink-2-tint)); border-bottom: 2px solid var(--coat-ink-2, var(--ink-2-tint));
+    transform: rotate(45deg); transition: transform 200ms var(--ease-out);
+  }
+  .coat-insert.is-open::after { transform: translateY(3px) rotate(-135deg); }
+  .coat-insert:focus-visible { outline: var(--focus-width) solid var(--focus-color); outline-offset: 2px; }
+  .product-group__title + .coat-insert { margin-top: 8px; }   /* first insert sits right under its group head */
+
+  /* ---------- D6 Product cards: compact, always 2 columns ---------- */
+  .products { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 10px; }
+  .products .product { border-radius: 18px; }
+  .products .product__img { height: 136px; padding: 12px 10px 10px; border-radius: 18px 18px 0 0; }
+  .products .product__img img { width: 100%; height: 100%; object-fit: contain; }   /* one pack scale */
+  .products .product__body { padding: 8px 12px 14px; }
+  .products .product__cat {
+    margin-bottom: 4px; font: 500 12px/1.3 var(--font); letter-spacing: 0;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .products .product__name {
+    margin-bottom: 4px; font: 600 15px/1.25 var(--font); letter-spacing: -0.01em;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 2.5em;
+  }
+  /* The name is a <button>, an atomic box the h4's line-clamp cannot cut: clamp the button itself
+     (every brand). Its ::after hit area belongs to the card, so the overflow does not clip it. */
+  .products .product__open { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .products .product__desc { font: 400 13px/1.4 var(--font); -webkit-line-clamp: 2; }
+  .products .product__tags, .products .product__more { display: none; }   /* the whole card is the target */
+  .products .product__actions { top: 2px; right: 2px; }
+  .products .np-heart { position: relative; isolation: isolate; width: 44px; height: 44px; background: transparent; box-shadow: none; }
+  .products .np-heart::before {
+    content: ''; position: absolute; inset: 5px; z-index: -1; border-radius: 50%;
+    background-color: rgba(255, 255, 255, .92);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .08), 0 0 0 1px var(--hairline);
+  }
+  /* Coat ribbon: bottom-left, off the heart, at a real 12px (catalog.css ≤599 scaled it to .86) */
+  .products .coat-ribbon {
+    top: auto; bottom: 8px; left: 8px; transform: none;
+    max-width: calc(100% - 16px); overflow: hidden; white-space: nowrap;
+    padding: 3px 8px 3px 6px; font-size: 12px; box-shadow: 0 0 0 1px var(--hairline);
+  }
+  /* A lone card becomes one full-width horizontal card */
+  .products > .product:only-child { grid-column: 1 / -1; flex-direction: row; min-height: 136px; }
+  .products > .product:only-child .product__img { flex: 0 0 42%; height: auto; min-height: 136px; border-radius: 18px 0 0 18px; }
+  .products > .product:only-child .product__body { flex: 1 1 auto; min-width: 0; justify-content: center; padding: 14px 14px 14px 6px; }
+  .products > .product:only-child .product__name { min-height: 0; }
+  .products > .product:only-child .product__desc { -webkit-line-clamp: 3; flex: 0 1 auto; max-height: calc(13px * 1.4 * 3); }
+
+  /* ---------- D7 Product modal → bottom sheet ---------- */
+  .pmodal__dialog {
+    left: 0; right: 0; top: auto; bottom: 0; width: 100%; max-width: none;
+    max-height: calc(var(--vvh, 100dvh) - 12px);
+    display: flex; flex-direction: column; overflow: hidden;
+    border-radius: 20px 20px 0 0; padding-bottom: env(safe-area-inset-bottom);
+    opacity: 1; transform: translate3d(0, 100%, 0);
+  }
+  /* Closing keeps the base 200ms ease-out transform (styles.css); main.js finalises with its 320ms timer */
+  .pmodal.is-open:not(.is-closing) .pmodal__dialog {
+    opacity: 1; transform: none;
+    transition: transform 420ms var(--ease-drawer), opacity var(--dur-modal-fade) var(--ease-out);
+  }
+  .pmodal__dialog::before {
+    content: ''; position: absolute; top: 6px; left: 50%; z-index: 5;
+    width: 36px; height: 5px; margin-left: -18px; border-radius: 3px; background-color: rgba(0, 0, 0, .18);
+  }
+  .pmodal__close { top: 12px; right: 12px; width: 44px; height: 44px; }
+  .pmodal__actions { top: 12px; right: 64px; }
+  .pmodal__actions .np-heart { width: 44px; height: 44px; }
+  .pmodal__body {
+    display: block; flex: 1 1 auto; min-height: 0;
+    overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch;
+  }
+  .pmodal__media { min-height: 0; height: 196px; padding: 28px 16px 12px; border-radius: 0; }
+  .pmodal__media img { max-height: 156px; }
+  .pmodal__media .product__emoji { font-size: 72px; }
+  .pmodal__media .coat-ribbon { top: 16px; left: 16px; transform: none; }
+  .pmodal__info { padding: 16px 20px 28px; }
+  .pmodal__info .product__cat { display: block; margin-bottom: 4px; font-size: 13px; }
+  .pmodal__name { margin: 0 0 12px; padding-right: 0; font: 600 22px/1.2 var(--font); letter-spacing: -0.015em; }
+  .pmodal__desc p { font: 400 15.5px/1.55 var(--font); margin-bottom: 8px; }
+  .pmodal__desc.is-clamped {
+    max-height: calc(15.5px * 1.55 * 5); overflow: hidden;
+    -webkit-mask-image: linear-gradient(#000 55%, transparent); mask-image: linear-gradient(#000 55%, transparent);
+  }
+  .pmodal__section { margin-top: 0; padding-top: 0; border-top: 1px solid var(--hairline); }
+  .pmodal__desc + .pmodal__section, .m-more + .pmodal__section { margin-top: 12px; }
+  .pmodal__section h4 { margin: 0; }
+  .pmodal__sectoggle {
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    width: 100%; min-height: 52px; padding: 0; border: 0; background: none;
+    font: 600 15px/1.3 var(--font); color: var(--ink); text-align: left; cursor: pointer;
+  }
+  .pmodal__sectoggle::after {
+    content: ''; flex: none; width: 8px; height: 8px; margin-right: 4px;
+    border-right: 2px solid var(--ink-3); border-bottom: 2px solid var(--ink-3);
+    transform: rotate(45deg); transition: transform 200ms var(--ease-out);
+  }
+  .pmodal__section.is-open .pmodal__sectoggle::after { transform: translateY(3px) rotate(-135deg); }
+  .pmodal__section.is-collapsible:not(.is-open) > :not(h4) { display: none; }
+  .pmodal__section.is-open > :not(h4) { animation: mFade 160ms var(--ease-out); }
+  .pmodal__section > p:last-child, .pmodal__section > ul:last-child { margin-bottom: 14px; }
+  .pmodal__info .product__tags { margin-top: 16px; }
+
+  /* ---------- D8 Generic "more" button (Tauro clamps, modal description) ---------- */
+  .m-more {
+    display: inline-flex; align-items: center; min-height: 44px; min-width: 44px; padding: 0;
+    border: 0; background: none; font: 600 14px/1 var(--font); color: var(--brand-ink); cursor: pointer;
+  }
+
+  /* ---------- D9 Search: full-screen overlay ---------- */
+  html.m-search { overflow: hidden; }
+  html.m-search .catalog-bar__search {
+    display: block; position: fixed; left: 0; right: 0; top: 0; z-index: 1120;
+    height: var(--vvh, 100dvh);
+    padding: calc(8px + env(safe-area-inset-top)) var(--gutter) 0;
+    background-color: var(--paper);
+    animation: mSearchIn 200ms var(--ease-out);
+  }
+  html.m-search .np-search {
+    display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-rows: 44px minmax(0, 1fr);
+    column-gap: 4px; row-gap: 8px; height: 100%;
+  }
+  html.m-search .np-search__field { grid-area: 1 / 1; height: 44px; }
+  html.m-search .m-search-cancel {
+    display: inline-flex; grid-area: 1 / 2; align-items: center; min-height: 44px; padding: 0 4px 0 8px;
+    border: 0; background: none; font: 500 16px/1 var(--font); color: var(--brand-ink); cursor: pointer;
+  }
+  html.m-search .np-search__pop {
+    grid-area: 2 / 1 / 3 / 3; position: static;
+    width: auto; max-width: none; max-height: none; min-height: 0;
+    margin: 0 calc(var(--gutter) * -1); border-radius: 0; box-shadow: none; border-top: 1px solid var(--hairline);
+    opacity: 1; visibility: visible; transform: none; pointer-events: auto; transition: none;
+  }
+  /* search.js closes .is-open on blur — the overlay keeps the results, so hiding the keyboard loses nothing */
+  html.m-search .np-search:not(:has(.t-clear.has-value)) .np-search__pop { visibility: hidden; }
+  html.m-search .np-search__list { flex: 1 1 auto; max-height: none; min-height: 0; padding: 0 8px 16px; }
+  .np-search__foot { padding-bottom: calc(8px + env(safe-area-inset-bottom)); }
+  .np-search__ghead { position: sticky; top: 0; z-index: 1; background-color: var(--paper); padding: 12px 10px 6px; }
+  .np-search__opt { min-height: 60px; padding: 8px 10px; }
+  .np-search__thumb { flex-basis: 44px; width: 44px; height: 44px; }
+  .np-search__name { white-space: normal; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; font-size: 15px; }
+  .np-search__meta { font-size: 12.5px; }
+  .t-clear-btn { width: 36px; height: 36px; right: 4px; }
+  .t-clear-btn::before { content: ''; position: absolute; inset: -4px; }
+
+  /* ---------- D10 Hint pill (disabled filter reason) ---------- */
+  .m-hint {
+    position: fixed; left: 50%; bottom: calc(max(20px, env(safe-area-inset-bottom)) + 64px); z-index: 1130;
+    max-width: calc(100vw - 32px); padding: 10px 16px; border-radius: var(--r-pill);
+    background-color: #1d1d1f; color: #fff; font: 500 14px/1.35 var(--font); text-align: center;
+    pointer-events: none; opacity: 0; transform: translate(-50%, 8px);
+    transition: opacity 150ms var(--ease-out), transform 150ms var(--ease-out);
+  }
+  .m-hint.is-on { opacity: 1; transform: translate(-50%, 0); transition-duration: 160ms; }
+
+  /* ---------- D11 My list sheet ---------- */
+  .np-listpanel__close, .np-li__remove { width: 44px; height: 44px; }
+  .np-listpanel__foot { flex-direction: column; }
+  .np-listpanel__foot .np-btn { flex: none; width: 100%; height: 48px; }
+}
+
+@media (max-width: 380px) {
+  .catalog-bar .species__btn { font-size: 13px; }
+  /* RU «Для рыжей и коричневой шерсти» stays on one line (collapsed row 56px) */
+  .coat-insert { gap: 10px; padding-right: 40px; }
+  .coat-insert__text h4 { font-size: 15px; }
+}
+
+@keyframes mFade { from { opacity: 0; } }
+@keyframes mSearchIn { from { opacity: 0; transform: translateY(8px); } }
+
+/* Reduced motion: opacity only, ≤150ms; the sheet fades instead of sliding.
+   Same specificity as styles.css's reduced-motion translate(-50%,-50%) !important, later file → wins. */
+@media (max-width: 720px) and (prefers-reduced-motion: reduce) {
+  .pmodal__dialog, .pmodal.is-open:not(.is-closing) .pmodal__dialog { transform: none !important; transition: opacity 150ms var(--ease-out); }
+  .pmodal__dialog { opacity: 0; }
+  .pmodal.is-open:not(.is-closing) .pmodal__dialog { opacity: 1; }
+  html.m-search .catalog-bar__search { animation: mFade 150ms var(--ease-out); }
+  .coat-insert.is-open .coat-insert__text p, .pmodal__section.is-open > :not(h4) { animation-duration: 150ms; }
+  .coat-insert::after, .pmodal__sectoggle::after { transition: none; }
+  .m-hint, .m-hint.is-on { transform: translate(-50%, 0); transition: opacity 150ms var(--ease-out); }
+  .m-search-btn:active { transform: none; }
+}

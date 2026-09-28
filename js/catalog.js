@@ -1681,25 +1681,25 @@ const BRANDS_EXTRA = {
       species: "dogs",
       items: [
         { img: "assets/products/misoko-kinmsk70106.webp",
-          az: { cat: "Top", name: "Tutacaqlı futbol topu", desc: "Oyun topu «Tutacaqlı futbol topu»; aktiv oyun, atma və apportirovka üçün.", tags: ["Tutacaqlı futbol topu", "Top"] },
-          ru: { cat: "Мячик", name: "Футбольный мяч с захватами", desc: "Игровой мячик «Футбольный мяч с захватами»; для активной игры, бросков и апортировки.", tags: ["Футбольный мяч с захватами", "Мяч"] },
-          en: { cat: "Ball", name: "Soccer ball with tabs", desc: "Play ball “Soccer ball with tabs”; for active play, throwing and fetch.", tags: ["Soccer ball with tabs", "Ball"] } },
+          az: { cat: "Top", name: "Tutacaqlı futbol topu", desc: "Oyun topu «Tutacaqlı futbol topu»; aktiv oyun, atma və apportirovka üçün.", tags: ["Top"] },
+          ru: { cat: "Мячик", name: "Футбольный мяч с захватами", desc: "Игровой мячик «Футбольный мяч с захватами»; для активной игры, бросков и апортировки.", tags: ["Мяч"] },
+          en: { cat: "Ball", name: "Soccer ball with tabs", desc: "Play ball “Soccer ball with tabs”; for active play, throwing and fetch.", tags: ["Ball"] } },
         { img: "assets/products/misoko-kinmsk70555.webp",
-          az: { cat: "Top", name: "Tutacaqlı Lime futbol topu", desc: "Oyun topu «Tutacaqlı Lime futbol topu»; aktiv oyun, atma və apportirovka üçün.", tags: ["Tutacaqlı Lime futbol topu", "Top"] },
-          ru: { cat: "Мячик", name: "Футбольный мяч Лайм с захватами", desc: "Игровой мячик «Футбольный мяч Лайм с захватами»; для активной игры, бросков и апортировки.", tags: ["Футбольный мяч Лайм с захватами", "Мяч"] },
-          en: { cat: "Ball", name: "Lime soccer ball with tabs", desc: "Play ball “Lime soccer ball with tabs”; for active play, throwing and fetch.", tags: ["Lime soccer ball with tabs", "Ball"] } },
+          az: { cat: "Top", name: "Tutacaqlı Lime futbol topu", desc: "Oyun topu «Tutacaqlı Lime futbol topu»; aktiv oyun, atma və apportirovka üçün.", tags: ["Top"] },
+          ru: { cat: "Мячик", name: "Футбольный мяч Лайм с захватами", desc: "Игровой мячик «Футбольный мяч Лайм с захватами»; для активной игры, бросков и апортировки.", tags: ["Мяч"] },
+          en: { cat: "Ball", name: "Lime soccer ball with tabs", desc: "Play ball “Lime soccer ball with tabs”; for active play, throwing and fetch.", tags: ["Ball"] } },
         { img: "assets/products/misoko-kinmsk70556.webp",
-          az: { cat: "Top", name: "Tutacaqlı Qarpız futbol topu", desc: "Oyun topu «Tutacaqlı Qarpız futbol topu»; aktiv oyun, atma və apportirovka üçün.", tags: ["Tutacaqlı Qarpız futbol topu", "Top"] },
-          ru: { cat: "Мячик", name: "Футбольный мяч Арбуз с захватами", desc: "Игровой мячик «Футбольный мяч Арбуз с захватами»; для активной игры, бросков и апортировки.", tags: ["Футбольный мяч Арбуз с захватами", "Мяч"] },
-          en: { cat: "Ball", name: "Watermelon soccer ball with tabs", desc: "Play ball “Watermelon soccer ball with tabs”; for active play, throwing and fetch.", tags: ["Watermelon soccer ball with tabs", "Ball"] } },
+          az: { cat: "Top", name: "Tutacaqlı Qarpız futbol topu", desc: "Oyun topu «Tutacaqlı Qarpız futbol topu»; aktiv oyun, atma və apportirovka üçün.", tags: ["Top"] },
+          ru: { cat: "Мячик", name: "Футбольный мяч Арбуз с захватами", desc: "Игровой мячик «Футбольный мяч Арбуз с захватами»; для активной игры, бросков и апортировки.", tags: ["Мяч"] },
+          en: { cat: "Ball", name: "Watermelon soccer ball with tabs", desc: "Play ball “Watermelon soccer ball with tabs”; for active play, throwing and fetch.", tags: ["Ball"] } },
         { img: "assets/products/misoko-anhmsk70139.webp",
-          az: { cat: "Top", name: "Tennis topu dəsti", desc: "Oyun topu «Tennis topu dəsti»; aktiv oyun, atma və apportirovka üçün.", tags: ["Tennis topu dəsti", "Top"] },
-          ru: { cat: "Мячик", name: "Набор теннисных мячей", desc: "Игровой мячик «Набор теннисных мячей»; для активной игры, бросков и апортировки.", tags: ["Набор теннисных мячей", "Мяч"] },
-          en: { cat: "Ball", name: "Tennis ball set", desc: "Play ball “Tennis ball set”; for active play, throwing and fetch.", tags: ["Tennis ball set", "Ball"] } },
+          az: { cat: "Top", name: "Tennis topu dəsti", desc: "Oyun topu «Tennis topu dəsti»; aktiv oyun, atma və apportirovka üçün.", tags: ["Top"] },
+          ru: { cat: "Мячик", name: "Набор теннисных мячей", desc: "Игровой мячик «Набор теннисных мячей»; для активной игры, бросков и апортировки.", tags: ["Мяч"] },
+          en: { cat: "Ball", name: "Tennis ball set", desc: "Play ball “Tennis ball set”; for active play, throwing and fetch.", tags: ["Ball"] } },
         { img: "assets/products/misoko-msktxdt12501.webp",
-          az: { cat: "Top", name: "Kəndirli tennis topu", desc: "Oyun topu «Kəndirli tennis topu»; aktiv oyun, atma və apportirovka üçün.", tags: ["Kəndirli tennis topu", "Top"] },
-          ru: { cat: "Мячик", name: "Теннисный мяч на канате", desc: "Игровой мячик «Теннисный мяч на канате»; для активной игры, бросков и апортировки.", tags: ["Теннисный мяч на канате", "Мяч"] },
-          en: { cat: "Ball", name: "Tennis ball on rope", desc: "Play ball “Tennis ball on rope”; for active play, throwing and fetch.", tags: ["Tennis ball on rope", "Ball"] } }
+          az: { cat: "Top", name: "Kəndirli tennis topu", desc: "Oyun topu «Kəndirli tennis topu»; aktiv oyun, atma və apportirovka üçün.", tags: ["Top"] },
+          ru: { cat: "Мячик", name: "Теннисный мяч на канате", desc: "Игровой мячик «Теннисный мяч на канате»; для активной игры, бросков и апортировки.", tags: ["Мяч"] },
+          en: { cat: "Ball", name: "Tennis ball on rope", desc: "Play ball “Tennis ball on rope”; for active play, throwing and fetch.", tags: ["Ball"] } }
       ]
     },
     {
@@ -1791,9 +1791,9 @@ const BRANDS_EXTRA = {
           ru: { cat: "Жевательная игрушка", name: "Жевательная лиса", desc: "Жевательная игрушка «Жевательная лиса»; для чистки зубов и здоровья дёсен.", tags: ["Лиса", "Зубы"] },
           en: { cat: "Chew toy", name: "Chew fox", desc: "Chew toy “Chew fox”; for teeth cleaning and gum health.", tags: ["Fox", "Dental"] } },
         { img: "assets/products/misoko-beirj06756.webp",
-          az: { cat: "Gəmirək oyuncaq", name: "Qarğıdalı-it", desc: "Gəmirək oyuncaq «Qarğıdalı-it»; dişlərin və diş ətinin sağlamlığı üçün.", tags: ["Qarğıdalı-it", "Diş"] },
-          ru: { cat: "Жевательная игрушка", name: "Собачка-кукуруза", desc: "Жевательная игрушка «Собачка-кукуруза»; для чистки зубов и здоровья дёсен.", tags: ["Собачка-кукуруза", "Зубы"] },
-          en: { cat: "Chew toy", name: "Corn dog", desc: "Chew toy “Corn dog”; for teeth cleaning and gum health.", tags: ["Corn dog", "Dental"] } },
+          az: { cat: "Gəmirək oyuncaq", name: "Qarğıdalı-it", desc: "Gəmirək oyuncaq «Qarğıdalı-it»; dişlərin və diş ətinin sağlamlığı üçün.", tags: ["Diş"] },
+          ru: { cat: "Жевательная игрушка", name: "Собачка-кукуруза", desc: "Жевательная игрушка «Собачка-кукуруза»; для чистки зубов и здоровья дёсен.", tags: ["Зубы"] },
+          en: { cat: "Chew toy", name: "Corn dog", desc: "Chew toy “Corn dog”; for teeth cleaning and gum health.", tags: ["Dental"] } },
         { img: "assets/products/misoko-beirj06758.webp",
           az: { cat: "Gəmirək oyuncaq", name: "Gəmirmə timsah", desc: "Gəmirək oyuncaq «Gəmirmə timsah»; dişlərin və diş ətinin sağlamlığı üçün.", tags: ["Timsah", "Diş"] },
           ru: { cat: "Жевательная игрушка", name: "Жевательный крокодил", desc: "Жевательная игрушка «Жевательный крокодил»; для чистки зубов и здоровья дёсен.", tags: ["Крокодил", "Зубы"] },
@@ -1803,13 +1803,13 @@ const BRANDS_EXTRA = {
           ru: { cat: "Латексная игрушка", name: "Косточка", desc: "Латексная/резиновая игрушка-пищалка «Косточка»; мягкая и устойчивая к покусыванию. Доступно в нескольких цветах.", tags: ["Латекс", "Пищалка"] },
           en: { cat: "Latex toy", name: "Bone", desc: "Latex/rubber squeaky toy “Bone”; soft and chew-resistant. Available in several colours.", tags: ["Latex", "Squeaky"] } },
         { img: "assets/products/misoko-beirj03457.webp",
-          az: { cat: "Gəmirək oyuncaq", name: "Kəndirli timsah", desc: "Gəmirək oyuncaq «Kəndirli timsah»; dişlərin və diş ətinin sağlamlığı üçün.", tags: ["Kəndirli timsah", "Diş"] },
-          ru: { cat: "Жевательная игрушка", name: "Крокодил с канатом", desc: "Жевательная игрушка «Крокодил с канатом»; для чистки зубов и здоровья дёсен.", tags: ["Крокодил с канатом", "Зубы"] },
-          en: { cat: "Chew toy", name: "Crocodile with rope", desc: "Chew toy “Crocodile with rope”; for teeth cleaning and gum health.", tags: ["Crocodile with rope", "Dental"] } },
+          az: { cat: "Gəmirək oyuncaq", name: "Kəndirli timsah", desc: "Gəmirək oyuncaq «Kəndirli timsah»; dişlərin və diş ətinin sağlamlığı üçün.", tags: ["Diş"] },
+          ru: { cat: "Жевательная игрушка", name: "Крокодил с канатом", desc: "Жевательная игрушка «Крокодил с канатом»; для чистки зубов и здоровья дёсен.", tags: ["Зубы"] },
+          en: { cat: "Chew toy", name: "Crocodile with rope", desc: "Chew toy “Crocodile with rope”; for teeth cleaning and gum health.", tags: ["Dental"] } },
         { img: "assets/products/misoko-mskakdt5108.webp",
-          az: { cat: "Gəmirək oyuncaq", name: "Kauçuk və kəndir çubuğu", desc: "Gəmirək oyuncaq «Kauçuk və kəndir çubuğu»; dişlərin və diş ətinin sağlamlığı üçün.", tags: ["Kauçuk və kəndir çubuğu", "Diş"] },
-          ru: { cat: "Жевательная игрушка", name: "Резиновая палочка с канатом", desc: "Жевательная игрушка «Резиновая палочка с канатом»; для чистки зубов и здоровья дёсен.", tags: ["Резиновая палочка с канатом", "Зубы"] },
-          en: { cat: "Chew toy", name: "Rubber and rope chew stick", desc: "Chew toy “Rubber and rope chew stick”; for teeth cleaning and gum health.", tags: ["Rubber and rope chew stick", "Dental"] } }
+          az: { cat: "Gəmirək oyuncaq", name: "Kauçuk və kəndir çubuğu", desc: "Gəmirək oyuncaq «Kauçuk və kəndir çubuğu»; dişlərin və diş ətinin sağlamlığı üçün.", tags: ["Diş"] },
+          ru: { cat: "Жевательная игрушка", name: "Резиновая палочка с канатом", desc: "Жевательная игрушка «Резиновая палочка с канатом»; для чистки зубов и здоровья дёсен.", tags: ["Зубы"] },
+          en: { cat: "Chew toy", name: "Rubber and rope chew stick", desc: "Chew toy “Rubber and rope chew stick”; for teeth cleaning and gum health.", tags: ["Dental"] } }
       ]
     },
     {
@@ -1817,17 +1817,17 @@ const BRANDS_EXTRA = {
       species: "dogs",
       items: [
         { img: "assets/products/misoko-hanyt133740.webp",
-          az: { cat: "İnteraktiv oyuncaq", name: "Vantuzlu lemur", desc: "İnteraktiv oyuncaq «Vantuzlu lemur»; zəkanı inkişaf etdirir və ev heyvanını məşğul edir.", tags: ["Vantuzlu lemur", "İnteraktiv"] },
-          ru: { cat: "Интерактивная игрушка", name: "Лемур на присоске", desc: "Интерактивная игрушка «Лемур на присоске»; развивает сообразительность и увлекает питомца.", tags: ["Лемур на присоске", "Интерактив"] },
-          en: { cat: "Interactive toy", name: "Lemur with suction cup", desc: "Interactive toy “Lemur with suction cup”; develops cleverness and keeps your pet engaged.", tags: ["Lemur with suction cup", "Interactive"] } },
+          az: { cat: "İnteraktiv oyuncaq", name: "Vantuzlu lemur", desc: "İnteraktiv oyuncaq «Vantuzlu lemur»; zəkanı inkişaf etdirir və ev heyvanını məşğul edir.", tags: ["İnteraktiv"] },
+          ru: { cat: "Интерактивная игрушка", name: "Лемур на присоске", desc: "Интерактивная игрушка «Лемур на присоске»; развивает сообразительность и увлекает питомца.", tags: ["Интерактив"] },
+          en: { cat: "Interactive toy", name: "Lemur with suction cup", desc: "Interactive toy “Lemur with suction cup”; develops cleverness and keeps your pet engaged.", tags: ["Interactive"] } },
         { img: "assets/products/misoko-hanyt133741.webp",
-          az: { cat: "İnteraktiv oyuncaq", name: "Vantuzlu meymun", desc: "İnteraktiv oyuncaq «Vantuzlu meymun»; zəkanı inkişaf etdirir və ev heyvanını məşğul edir.", tags: ["Vantuzlu meymun", "İnteraktiv"] },
-          ru: { cat: "Интерактивная игрушка", name: "Обезьяна на присоске", desc: "Интерактивная игрушка «Обезьяна на присоске»; развивает сообразительность и увлекает питомца.", tags: ["Обезьяна на присоске", "Интерактив"] },
-          en: { cat: "Interactive toy", name: "Monkey with suction cup", desc: "Interactive toy “Monkey with suction cup”; develops cleverness and keeps your pet engaged.", tags: ["Monkey with suction cup", "Interactive"] } },
+          az: { cat: "İnteraktiv oyuncaq", name: "Vantuzlu meymun", desc: "İnteraktiv oyuncaq «Vantuzlu meymun»; zəkanı inkişaf etdirir və ev heyvanını məşğul edir.", tags: ["İnteraktiv"] },
+          ru: { cat: "Интерактивная игрушка", name: "Обезьяна на присоске", desc: "Интерактивная игрушка «Обезьяна на присоске»; развивает сообразительность и увлекает питомца.", tags: ["Интерактив"] },
+          en: { cat: "Interactive toy", name: "Monkey with suction cup", desc: "Interactive toy “Monkey with suction cup”; develops cleverness and keeps your pet engaged.", tags: ["Interactive"] } },
         { img: "assets/products/misoko-beixj00089.webp",
-          az: { cat: "İnteraktiv oyuncaq", name: "Yem paylayan reqbi topu", desc: "İnteraktiv oyuncaq «Yem paylayan reqbi topu»; zəkanı inkişaf etdirir və ev heyvanını məşğul edir.", tags: ["Yem paylayan reqbi topu", "İnteraktiv"] },
-          ru: { cat: "Интерактивная игрушка", name: "Мяч-регби для лакомств", desc: "Интерактивная игрушка «Мяч-регби для лакомств»; развивает сообразительность и увлекает питомца.", tags: ["Мяч-регби для лакомств", "Интерактив"] },
-          en: { cat: "Interactive toy", name: "Treat-dispensing rugby ball", desc: "Interactive toy “Treat-dispensing rugby ball”; develops cleverness and keeps your pet engaged.", tags: ["Treat-dispensing rugby ball", "Interactive"] } }
+          az: { cat: "İnteraktiv oyuncaq", name: "Yem paylayan reqbi topu", desc: "İnteraktiv oyuncaq «Yem paylayan reqbi topu»; zəkanı inkişaf etdirir və ev heyvanını məşğul edir.", tags: ["İnteraktiv"] },
+          ru: { cat: "Интерактивная игрушка", name: "Мяч-регби для лакомств", desc: "Интерактивная игрушка «Мяч-регби для лакомств»; развивает сообразительность и увлекает питомца.", tags: ["Интерактив"] },
+          en: { cat: "Interactive toy", name: "Treat-dispensing rugby ball", desc: "Interactive toy “Treat-dispensing rugby ball”; develops cleverness and keeps your pet engaged.", tags: ["Interactive"] } }
       ]
     },
     {
@@ -1835,13 +1835,13 @@ const BRANDS_EXTRA = {
       species: "both",
       items: [
         { img: "assets/products/misoko-hanmsk70477.webp",
-          az: { cat: "Qab", name: "Səyahət üçün su qabı-butulka", desc: "«Səyahət üçün su qabı-butulka» — yem və su üçün.", tags: ["Səyahət üçün su qabı-butulka", "Qab"] },
-          ru: { cat: "Миска", name: "Дорожная поилка-бутылка", desc: "«Дорожная поилка-бутылка» — для корма и воды.", tags: ["Дорожная поилка-бутылка", "Миска"] },
-          en: { cat: "Bowl", name: "Travel water bottle", desc: "“Travel water bottle” — for food and water.", tags: ["Travel water bottle", "Bowl"] } },
+          az: { cat: "Qab", name: "Səyahət üçün su qabı-butulka", desc: "«Səyahət üçün su qabı-butulka» — yem və su üçün.", tags: ["Qab"] },
+          ru: { cat: "Миска", name: "Дорожная поилка-бутылка", desc: "«Дорожная поилка-бутылка» — для корма и воды.", tags: ["Миска"] },
+          en: { cat: "Bowl", name: "Travel water bottle", desc: "“Travel water bottle” — for food and water.", tags: ["Bowl"] } },
         { img: "assets/products/misoko-hanmsk70478.webp",
-          az: { cat: "Qab", name: "Yığılan su qabı-butulka", desc: "«Yığılan su qabı-butulka» — yem və su üçün.", tags: ["Yığılan su qabı-butulka", "Qab"] },
-          ru: { cat: "Миска", name: "Складная поилка-бутылка", desc: "«Складная поилка-бутылка» — для корма и воды.", tags: ["Складная поилка-бутылка", "Миска"] },
-          en: { cat: "Bowl", name: "Collapsible water bottle", desc: "“Collapsible water bottle” — for food and water.", tags: ["Collapsible water bottle", "Bowl"] } }
+          az: { cat: "Qab", name: "Yığılan su qabı-butulka", desc: "«Yığılan su qabı-butulka» — yem və su üçün.", tags: ["Qab"] },
+          ru: { cat: "Миска", name: "Складная поилка-бутылка", desc: "«Складная поилка-бутылка» — для корма и воды.", tags: ["Миска"] },
+          en: { cat: "Bowl", name: "Collapsible water bottle", desc: "“Collapsible water bottle” — for food and water.", tags: ["Bowl"] } }
       ]
     },
     {
@@ -1849,17 +1849,17 @@ const BRANDS_EXTRA = {
       species: "dogs",
       items: [
         { img: "assets/products/misoko-shamsk63047.webp",
-          az: { cat: "Aksesuar", name: "Birdəfəlik bezlər", desc: "«Birdəfəlik bezlər» — gəzinti və gündəlik qulluq üçün aksesuar.", tags: ["Birdəfəlik bezlər", "Aksesuar"] },
-          ru: { cat: "Аксессуар", name: "Одноразовые подгузники", desc: "«Одноразовые подгузники» — аксессуар для прогулок и повседневного ухода.", tags: ["Одноразовые подгузники", "Аксессуар"] },
-          en: { cat: "Accessory", name: "Disposable diapers", desc: "“Disposable diapers” — an accessory for walks and everyday care.", tags: ["Disposable diapers", "Accessory"] } },
+          az: { cat: "Aksesuar", name: "Birdəfəlik bezlər", desc: "«Birdəfəlik bezlər» — gəzinti və gündəlik qulluq üçün aksesuar.", tags: ["Aksesuar"] },
+          ru: { cat: "Аксессуар", name: "Одноразовые подгузники", desc: "«Одноразовые подгузники» — аксессуар для прогулок и повседневного ухода.", tags: ["Аксессуар"] },
+          en: { cat: "Accessory", name: "Disposable diapers", desc: "“Disposable diapers” — an accessory for walks and everyday care.", tags: ["Accessory"] } },
         { img: "assets/products/misoko-shamsk63048.webp",
-          az: { cat: "Gigiyena", name: "Birdəfəlik it bezləri (mavi naxış)", desc: "«Birdəfəlik it bezləri (mavi naxış)».", tags: ["Birdəfəlik it bezləri (mavi naxış)", "Gigiyena"] },
-          ru: { cat: "Гигиена", name: "Одноразовые подгузники для собак (синий принт)", desc: "«Одноразовые подгузники для собак (синий принт)».", tags: ["Одноразовые подгузники для собак (синий принт)", "Гигиена"] },
-          en: { cat: "Hygiene", name: "Disposable dog diapers (blue dogs print)", desc: "“Disposable dog diapers (blue dogs print)”.", tags: ["Disposable dog diapers (blue dogs print)", "Hygiene"] } },
+          az: { cat: "Gigiyena", name: "Birdəfəlik it bezləri (mavi naxış)", desc: "«Birdəfəlik it bezləri (mavi naxış)».", tags: ["Gigiyena"] },
+          ru: { cat: "Гигиена", name: "Одноразовые подгузники для собак (синий принт)", desc: "«Одноразовые подгузники для собак (синий принт)».", tags: ["Гигиена"] },
+          en: { cat: "Hygiene", name: "Disposable dog diapers (blue dogs print)", desc: "“Disposable dog diapers (blue dogs print)”.", tags: ["Hygiene"] } },
         { img: "assets/products/misoko-shamsk63138.webp",
-          az: { cat: "Gigiyena", name: "Birdəfəlik it bezləri (narıncı-bənövşəyi naxış)", desc: "«Birdəfəlik it bezləri (narıncı-bənövşəyi naxış)».", tags: ["Birdəfəlik it bezləri (narıncı-bənövşəyi naxış)", "Gigiyena"] },
-          ru: { cat: "Гигиена", name: "Одноразовые подгузники для собак (оранжево-фиолетовый принт)", desc: "«Одноразовые подгузники для собак (оранжево-фиолетовый принт)».", tags: ["Одноразовые подгузники для собак (оранжево-фиолетовый принт)", "Гигиена"] },
-          en: { cat: "Hygiene", name: "Disposable dog diapers (orange/purple dogs print)", desc: "“Disposable dog diapers (orange/purple dogs print)”.", tags: ["Disposable dog diapers (orange/purple dogs print)", "Hygiene"] } }
+          az: { cat: "Gigiyena", name: "Birdəfəlik it bezləri (narıncı-bənövşəyi naxış)", desc: "«Birdəfəlik it bezləri (narıncı-bənövşəyi naxış)».", tags: ["Gigiyena"] },
+          ru: { cat: "Гигиена", name: "Одноразовые подгузники для собак (оранжево-фиолетовый принт)", desc: "«Одноразовые подгузники для собак (оранжево-фиолетовый принт)».", tags: ["Гигиена"] },
+          en: { cat: "Hygiene", name: "Disposable dog diapers (orange/purple dogs print)", desc: "“Disposable dog diapers (orange/purple dogs print)”.", tags: ["Hygiene"] } }
       ]
     },
     {
@@ -1867,17 +1867,17 @@ const BRANDS_EXTRA = {
       species: "both",
       items: [
         { img: "assets/products/misoko-shamsk63055.webp",
-          az: { cat: "Gigiyena", name: "Birdəfəlik uducu altlıqlar (it naxışlı)", desc: "«Birdəfəlik uducu altlıqlar (it naxışlı)».", tags: ["Birdəfəlik uducu altlıqlar (it naxışlı)", "Gigiyena"] },
-          ru: { cat: "Гигиена", name: "Одноразовые впитывающие пеленки (принт с собаками)", desc: "«Одноразовые впитывающие пеленки (принт с собаками)».", tags: ["Одноразовые впитывающие пеленки (принт с собаками)", "Гигиена"] },
-          en: { cat: "Hygiene", name: "Disposable training pee pads (dog print)", desc: "“Disposable training pee pads (dog print)”.", tags: ["Disposable training pee pads (dog print)", "Hygiene"] } },
+          az: { cat: "Gigiyena", name: "Birdəfəlik uducu altlıqlar (it naxışlı)", desc: "«Birdəfəlik uducu altlıqlar (it naxışlı)».", tags: ["Gigiyena"] },
+          ru: { cat: "Гигиена", name: "Одноразовые впитывающие пеленки (принт с собаками)", desc: "«Одноразовые впитывающие пеленки (принт с собаками)».", tags: ["Гигиена"] },
+          en: { cat: "Hygiene", name: "Disposable training pee pads (dog print)", desc: "“Disposable training pee pads (dog print)”.", tags: ["Hygiene"] } },
         { img: "assets/products/misoko-shamsk63057.webp",
-          az: { cat: "Gigiyena", name: "Birdəfəlik kömürlü altlıqlar", desc: "«Birdəfəlik kömürlü altlıqlar».", tags: ["Birdəfəlik kömürlü altlıqlar", "Gigiyena"] },
-          ru: { cat: "Гигиена", name: "Одноразовые угольные пеленки", desc: "«Одноразовые угольные пеленки».", tags: ["Одноразовые угольные пеленки", "Гигиена"] },
-          en: { cat: "Hygiene", name: "Disposable charcoal pee pads", desc: "“Disposable charcoal pee pads”.", tags: ["Disposable charcoal pee pads", "Hygiene"] } },
+          az: { cat: "Gigiyena", name: "Birdəfəlik kömürlü altlıqlar", desc: "«Birdəfəlik kömürlü altlıqlar».", tags: ["Gigiyena"] },
+          ru: { cat: "Гигиена", name: "Одноразовые угольные пеленки", desc: "«Одноразовые угольные пеленки».", tags: ["Гигиена"] },
+          en: { cat: "Hygiene", name: "Disposable charcoal pee pads", desc: "“Disposable charcoal pee pads”.", tags: ["Hygiene"] } },
         { img: "assets/products/misoko-misok70743.webp",
-          az: { cat: "Gigiyena", name: "Ləkə və qoxu təmizləyici sprey", desc: "«Ləkə və qoxu təmizləyici sprey».", tags: ["Ləkə və qoxu təmizləyici sprey", "Gigiyena"] },
-          ru: { cat: "Гигиена", name: "Спрей для удаления пятен и запахов", desc: "«Спрей для удаления пятен и запахов».", tags: ["Спрей для удаления пятен и запахов", "Гигиена"] },
-          en: { cat: "Hygiene", name: "Stain & odour remover spray", desc: "“Stain & odour remover spray”.", tags: ["Stain & odour remover spray", "Hygiene"] } }
+          az: { cat: "Gigiyena", name: "Ləkə və qoxu təmizləyici sprey", desc: "«Ləkə və qoxu təmizləyici sprey».", tags: ["Gigiyena"] },
+          ru: { cat: "Гигиена", name: "Спрей для удаления пятен и запахов", desc: "«Спрей для удаления пятен и запахов».", tags: ["Гигиена"] },
+          en: { cat: "Hygiene", name: "Stain & odour remover spray", desc: "“Stain & odour remover spray”.", tags: ["Hygiene"] } }
       ]
     }
   ]

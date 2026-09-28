@@ -1,0 +1,232 @@
+/* =====================================================================
+   Home page on phones ("compact native"). Loaded after home.css and mobile.css.
+   Phones only: every rule lives inside @media (max-width: 720px);
+   narrow-phone overrides in @media (max-width: 380px). Desktop and tablet
+   (>720px) are untouched. Shared chrome (.header, .nav, .lang, .footer)
+   is styled elsewhere and deliberately not touched here.
+   ===================================================================== */
+
+@media (max-width: 720px) {
+
+  /* ---------- Section rhythm ---------- */
+  .home .section { padding: 56px 0; }
+  .home-head { margin-bottom: 20px; }
+  .home-head__tag { margin-bottom: 6px; }
+  .home-head__title {
+    font: 700 clamp(28px, 8vw, 34px)/1.1 var(--font);
+    letter-spacing: -0.025em; text-wrap: balance;
+  }
+
+  /* ---------- 1. Hero: one screen, bottom-anchored ---------- */
+  .hero-home__inner { padding-top: 76px; padding-bottom: calc(20px + env(safe-area-inset-bottom)); gap: 20px; }
+  .hero-home__eyebrow { margin-bottom: 10px; font-size: 12px; }
+  .hero-home__title {
+    max-width: none;
+    font: 700 clamp(34px, 9.6vw, 42px)/1.05 var(--font);
+    letter-spacing: -0.03em;
+  }
+  .hero-home__text { max-width: none; margin: 12px 0 20px; font: 400 16px/1.5 var(--font); }
+  .hero-home__actions { flex-direction: column; align-items: stretch; gap: 4px; }
+  .hero--home .btn--primary { width: 100%; min-height: 48px; justify-content: center; }
+  .hero-home__link {
+    align-self: center; display: inline-flex; align-items: center; gap: 4px;
+    min-height: 44px; padding: 0 12px; font-size: 16px;
+  }
+
+  /* Quick chips: one sideways row, first chip on the gutter, fade at the right edge */
+  .intents { margin-top: 20px; }
+  .intents__label { margin-bottom: 8px; }
+  .intents__list {
+    scroll-padding-inline: var(--gutter); scroll-snap-type: x proximity;
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 40px), transparent);
+    mask-image: linear-gradient(to right, #000 calc(100% - 40px), transparent);
+  }
+  .intent { min-height: 44px; padding: 0 14px; font-size: 14px; white-space: nowrap; }
+
+  /* Stats: three equal columns with hairline dividers */
+  .hero-stats {
+    display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0; padding-top: 16px; max-width: none;
+  }
+  .hero-stats__item {
+    flex-direction: column; align-items: flex-start; gap: 2px; min-width: 0;
+    padding: 0 10px; border-left: 1px solid rgba(255, 255, 255, .2);
+  }
+  .hero-stats__item:first-child { padding-left: 0; border-left: 0; }
+  .hero-stats dt { font: 600 22px/1.1 var(--font); }
+  .hero-stats dd { font-size: 12.5px; line-height: 1.3; }
+
+  /* Slider controls: a compact pill in the empty top-right corner (buttons stay 44×44) */
+  .hero-home__controls { top: 16px; bottom: auto; right: var(--gutter); padding: 2px; gap: 0; }
+
+  /* ---------- 2. Coat chapter: static and compact (the scroll scene is off on phones) ---------- */
+  .coat { padding: 48px 0; }
+  .coat__inner { display: flex; flex-direction: column; align-items: stretch; gap: 0; }
+  .coat__copy { display: contents; }
+  .coat__eyebrow { order: 1; margin-bottom: 8px; }
+  .coat__title {
+    order: 2;
+    font: 700 clamp(28px, 8vw, 32px)/1.1 var(--font);
+    letter-spacing: -0.025em;
+  }
+  .coat__lead {
+    order: 3; margin: 8px 0 16px;
+    font: 400 15.5px/1.45 var(--font);
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+  }
+  .coat-seg { order: 4; width: 100%; }
+  .coat__stage { order: 5; width: min(100%, 320px); aspect-ratio: 4 / 3; margin: 16px auto 0; }
+  .coat__texts { order: 6; margin: 16px 0 20px; min-height: 104px; }
+  .coat__text h3 { font: 600 17px/1.3 var(--font); margin-bottom: 6px; }
+  .coat__text p { font: 400 15px/1.45 var(--font); }
+  .coat__cta { order: 7; width: 100%; justify-content: center; }
+
+  /* ---------- 3. Four brands: a 2×2 grid instead of a carousel ---------- */
+  .lineup__grid {
+    display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px;
+    overflow: visible; margin: 0; padding: 0; scroll-snap-type: none;
+  }
+  .lineup__grid > li { flex: none; scroll-snap-align: none; }
+  .tile { min-height: 200px; padding: 16px; border-radius: 20px; }
+  .tile__name { font: 700 18px/1.15 var(--font); letter-spacing: -0.015em; }
+  .tile__line {
+    max-width: none; margin-top: 4px;
+    font: 400 13px/1.35 var(--font);
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+  }
+  /* centred with auto margins, not transform (the fine-pointer hover lifts it with translateY) */
+  .tile__img {
+    left: 0; right: 0; bottom: 10px; margin: 0 auto;
+    width: 64%; max-width: none; height: 50%;
+    object-position: bottom center;
+  }
+
+  /* ---------- 3b. Categories: stacked head, inset list, full-width "whole catalogue" button ---------- */
+  .cats > .container { display: flex; flex-direction: column; }
+  .cats__head { display: contents; }
+  .cats__head .home-head__tag { order: 0; }
+  .cats__head .home-head__title { order: 1; margin-bottom: 16px; }
+  .cats__grid {
+    order: 2; grid-template-columns: 1fr; gap: 0;
+    border-radius: 20px; overflow: hidden; background-color: var(--paper-2);
+  }
+  .cats__all {
+    order: 3; display: flex; align-items: center; justify-content: center; gap: 4px;
+    min-height: 48px; margin-top: 12px; padding: 0 20px;
+    border-radius: var(--r-pill); box-shadow: inset 0 0 0 1px var(--hairline-strong);
+    font-size: 16px; font-weight: 600;
+  }
+  .cat-tile {
+    position: relative; flex-direction: row; align-items: center; gap: 12px;
+    min-height: 64px; padding: 8px 16px 8px 12px;
+    border-radius: 0; background: transparent;
+  }
+  .cats__grid li + li .cat-tile::before {
+    content: ''; position: absolute; top: 0; left: 72px; right: 0; height: 1px;
+    background-color: var(--hairline);
+  }
+  .cat-tile::after {
+    content: '›'; margin-left: auto; padding-left: 8px;
+    font-size: 22px; line-height: 1; color: var(--ink-3);
+  }
+  .cat-tile__img { width: 48px; height: 48px; }
+  .cat-tile__text { gap: 2px; }
+  .cat-tile__name {
+    font: 600 16px/1.25 var(--font);
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .cat-tile__brand { font-size: 13px; }
+  .cat-tile:active { transform: none; background-color: rgba(0, 0, 0, .04); }
+
+  /* ---------- 4. About tabs: one full-width row, content-proportional segments ---------- */
+  .home-values .tabs {
+    display: flex; flex-wrap: nowrap; width: 100%; max-width: none;
+    margin: 0 0 24px; padding: 2px; gap: 0;
+    border-radius: var(--r-pill); background-color: rgba(0, 0, 0, .05);
+  }
+  .home-values .brand-tab {
+    flex: 1 1 auto; min-width: 0; min-height: 44px; padding: 0 8px;
+    font-size: 14px; text-align: center;
+  }
+
+  /* Values, history, ambassadors and FAQ panels */
+  .home-values .values__grid { gap: 10px; }
+  .home-values .value-card {
+    display: grid; grid-template-columns: 28px minmax(0, 1fr); column-gap: 12px; align-items: center;
+    padding: 16px 16px 18px; border-radius: 20px;
+  }
+  .home-values .value-card__icon { width: 28px; height: 28px; margin: 0; }
+  .home-values .value-card h3 { margin: 0; font: 600 17px/1.3 var(--font); }
+  .home-values .value-card p { grid-column: 1 / -1; margin-top: 6px; font: 400 14.5px/1.45 var(--font); }
+  .home-values .timeline li { padding: 14px 16px 14px 40px; font-size: 15px; line-height: 1.5; }
+  .home-values .timeline li::before { left: 16px; top: 21px; }
+  .home-values .brand-intro, .home-values .brand-slogan { font-size: 15.5px; }
+  .home-values .brand-quote { font-size: 17px; }
+  .home-values .faq__item { padding: 0 16px; border-radius: 16px; }
+  /* summary: a flex row, question left, "+" right and vertically centred */
+  .home-values .faq__item summary {
+    display: flex; align-items: center; gap: 12px;
+    min-height: 52px; padding: 12px 0; font-size: 15.5px; line-height: 1.35;
+  }
+  .home-values .faq__item p { margin-bottom: 16px; font: 400 15px/1.5 var(--font); }
+  .home-values .faq__item summary::after {
+    position: static; flex: none; width: 24px; margin-left: auto;
+    text-align: center; line-height: 1;
+  }
+
+  /* ---------- 5. About ---------- */
+  .home-about__inner { gap: 24px; }
+  /* square before/after photo → 4:3 (both faces stay; only the logo strip and paws are trimmed) */
+  .home-about__photo { aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 58%; border-radius: 20px; }
+  .home-about__media figcaption { margin-top: 8px; }
+  .home-about__media figcaption { font-size: 13px; }
+  .home-about__content > p:not(.home-head__tag) { font: 400 16px/1.5 var(--font); }
+  .home-about__content > p:not(.home-head__tag) + p { margin-top: 12px; }
+  .home-about__list { margin-top: 20px; gap: 10px; }
+  .home-about__list li { font-size: 15px; }
+
+  /* ---------- 6. Quality journey ---------- */
+  /* each stop: "01  Title" on one line, text below */
+  .journey { gap: 20px; }
+  .journey__stop { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 10px; align-items: baseline; }
+  .journey__num { grid-column: 1; }
+  .journey__stop h3 { grid-column: 2; margin: 0; font: 600 17px/1.3 var(--font); }
+  .journey__stop p { grid-column: 1 / -1; margin-top: 4px; font: 400 15px/1.45 var(--font); }
+
+  /* ---------- 7. Where to buy + contact ---------- */
+  .buy__inner { gap: 32px; }
+  .buy__text { margin-top: 12px; font: 400 15.5px/1.5 var(--font); }
+  .buy__list {
+    gap: 0; margin-top: 20px;
+    border-radius: 16px; overflow: hidden; background-color: var(--paper-2);
+  }
+  .buy__list li { position: relative; min-height: 52px; padding: 0 16px; gap: 12px; }
+  .buy__list li + li::before {
+    content: ''; position: absolute; top: 0; left: 64px; right: 0; height: 1px;
+    background-color: var(--hairline);
+  }
+  .buy__list svg {
+    width: 36px; height: 36px; padding: 8px; box-sizing: border-box;
+    border-radius: 50%; background-color: var(--accent-soft);
+  }
+  .buy__list a {
+    flex: 1; min-width: 0; align-self: stretch; display: flex; align-items: center;
+    min-height: 52px; font-size: 16px;
+  }
+  .buy__list a::after {
+    content: '›'; margin-left: auto; padding-left: 8px;
+    font-size: 22px; color: var(--ink-3);
+  }
+  .buy__form { gap: 8px; padding: 20px; border-radius: 20px; }
+  .buy__hint { margin-bottom: 0; font-size: 14px; }
+  .buy__form label { margin-top: 12px; font-size: 14px; }
+  .buy__form input, .buy__form textarea { border-radius: 12px; }
+  .buy__form input { min-height: 48px; }
+  .buy__form textarea { height: 104px; }
+  .buy__form .btn { width: 100%; margin-top: 16px; justify-content: center; }
+}
+
+@media (max-width: 380px) {
+  .home .section { padding: 48px 0; }
+  .home-values .brand-tab { padding: 0 6px; }
+}
