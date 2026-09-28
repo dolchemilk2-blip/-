@@ -113,8 +113,11 @@
   }
   .coat-insert__dot { width: 14px; height: 14px; margin-top: 4px; box-shadow: 0 0 0 4px var(--coat-ring); }
   .coat-insert__text h4 { margin: 0; font: 600 16px/1.3 var(--font); }
-  .coat-insert__text p { display: none; margin-top: 6px; font: 400 14px/1.45 var(--font); }
-  .coat-insert.is-open .coat-insert__text p { display: block; animation: mFade 160ms var(--ease-out); }
+  /* The text is a 0fr → 1fr grid row (css/motion-catalog.css animates it); closed = hidden from AT too */
+  .coat-insert__text { display: grid; grid-template-rows: auto 0fr; row-gap: 0; min-width: 0; }
+  .coat-insert__text p { min-height: 0; overflow: hidden; margin: 0; visibility: hidden; font: 400 14px/1.45 var(--font); }
+  .coat-insert.is-open .coat-insert__text { grid-template-rows: auto 1fr; row-gap: 6px; }
+  .coat-insert.is-open .coat-insert__text p { visibility: visible; }
   .coat-insert::after {
     content: ''; position: absolute; right: 18px; top: 22px; width: 8px; height: 8px;
     border-right: 2px solid var(--coat-ink-2, var(--ink-2-tint)); border-bottom: 2px solid var(--coat-ink-2, var(--ink-2-tint));
@@ -174,7 +177,7 @@
   /* Closing keeps the base 200ms ease-out transform (styles.css); main.js finalises with its 320ms timer */
   .pmodal.is-open:not(.is-closing) .pmodal__dialog {
     opacity: 1; transform: none;
-    transition: transform 420ms var(--ease-drawer), opacity var(--dur-modal-fade) var(--ease-out);
+    transition: transform 450ms var(--ease-drawer), opacity var(--dur-modal-fade) var(--ease-out);
   }
   .pmodal__dialog::before {
     content: ''; position: absolute; top: 6px; left: 50%; z-index: 5;
@@ -213,9 +216,11 @@
     transform: rotate(45deg); transition: transform 200ms var(--ease-out);
   }
   .pmodal__section.is-open .pmodal__sectoggle::after { transform: translateY(3px) rotate(-135deg); }
-  .pmodal__section.is-collapsible:not(.is-open) > :not(h4) { display: none; }
-  .pmodal__section.is-open > :not(h4) { animation: mFade 160ms var(--ease-out); }
-  .pmodal__section > p:last-child, .pmodal__section > ul:last-child { margin-bottom: 14px; }
+  /* js/mobile.js wraps a section's content in .pmodal__secbody > .pmodal__secinner: a 0fr ↔ 1fr grid row */
+  .pmodal__secbody { display: grid; grid-template-rows: 0fr; visibility: hidden; }
+  .pmodal__section.is-open > .pmodal__secbody { grid-template-rows: 1fr; visibility: visible; }
+  .pmodal__secinner { min-height: 0; overflow: hidden; }
+  .pmodal__secinner > :last-child { margin-bottom: 14px; }
   .pmodal__info .product__tags { margin-top: 16px; }
 
   /* ---------- D8 Generic "more" button (Tauro clamps, modal description) ---------- */
@@ -231,7 +236,6 @@
     height: var(--vvh, 100dvh);
     padding: calc(8px + env(safe-area-inset-top)) var(--gutter) 0;
     background-color: var(--paper);
-    animation: mSearchIn 200ms var(--ease-out);
   }
   html.m-search .np-search {
     display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-rows: 44px minmax(0, 1fr);
@@ -284,7 +288,6 @@
 }
 
 @keyframes mFade { from { opacity: 0; } }
-@keyframes mSearchIn { from { opacity: 0; transform: translateY(8px); } }
 
 /* Reduced motion: opacity only, ≤150ms; the sheet fades instead of sliding.
    Same specificity as styles.css's reduced-motion translate(-50%,-50%) !important, later file → wins. */
@@ -293,7 +296,6 @@
   .pmodal__dialog { opacity: 0; }
   .pmodal.is-open:not(.is-closing) .pmodal__dialog { opacity: 1; }
   html.m-search .catalog-bar__search { animation: mFade 150ms var(--ease-out); }
-  .coat-insert.is-open .coat-insert__text p, .pmodal__section.is-open > :not(h4) { animation-duration: 150ms; }
   .coat-insert::after, .pmodal__sectoggle::after { transition: none; }
   .m-hint, .m-hint.is-on { transform: translate(-50%, 0); transition: opacity 150ms var(--ease-out); }
   .m-search-btn:active { transform: none; }

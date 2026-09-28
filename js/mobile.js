@@ -27,7 +27,11 @@ if (typeof TRANSLATIONS !== 'undefined') {
   (vv || window).addEventListener('resize', setVvh);
 
   // search.js still calls NPMobile.placeSearch(): the results are a full-screen overlay now, nothing to place
-  window.NPMobile = { placeSearch: function () {}, syncRows: function () {} };
+  window.NPMobile = { exitSearch: (clear, instant) => exitSearch(clear, instant), placeSearch: function () {}, syncRows: function () {} };
+  // css/motion-catalog.js: animated height for clamp toggles (falls back to an instant toggle)
+  const clampAnim = (el, open, instant, apply) => {
+    if (window.NPMotion && NPMotion.clamp) NPMotion.clamp(el, open, instant, apply); else apply(open);
+  };
 
   // ---------- C1 Burger language segment (both pages) ----------
   document.addEventListener('click', e => {
@@ -66,11 +70,13 @@ if (typeof TRANSLATIONS !== 'undefined') {
 
   // ---------- C3 Search: full-screen overlay (products) ----------
   const input = () => document.getElementById('npSearchInput');
-  let reopenAfterModal = false;
+  let reopenAfterModal = false, searchOutT = 0;
   function enterSearch() {
     if (!mq.matches || !document.getElementById('catalogSearch')) return false;
     const wrap = document.querySelector('#catalogSearch .np-search');
     if (!wrap) return false;
+    clearTimeout(searchOutT);
+    root.classList.remove('m-search-out');   // an exit in flight reverses (css/motion-catalog.css transitions)
     root.classList.add('m-search');
     if (!wrap.querySelector('.m-search-cancel')) {
       const c = document.createElement('button');
@@ -80,13 +86,20 @@ if (typeof TRANSLATIONS !== 'undefined') {
     }
     return true;
   }
-  function exitSearch(clear) {
+  // instant: keyboard (Esc / Enter on «Cancel»), the product sheet taking over, or reduced motion
+  function exitSearch(clear, instant) {
     const inp = input();
     if (inp) {
       if (clear && inp.value) { inp.value = ''; inp.dispatchEvent(new Event('input', { bubbles: true })); }
       inp.blur();
     }
-    root.classList.remove('m-search');
+    clearTimeout(searchOutT);
+    if (instant || reduce() || !mq.matches || !root.classList.contains('m-search')) {
+      root.classList.remove('m-search', 'm-search-out');
+      return;
+    }
+    root.classList.add('m-search-out');   // slides down 250ms, then the overlay is removed
+    searchOutT = setTimeout(() => root.classList.remove('m-search', 'm-search-out'), 260);
   }
   document.addEventListener('click', e => {
     if (e.target.closest('#mSearchBtn')) {
@@ -95,7 +108,7 @@ if (typeof TRANSLATIONS !== 'undefined') {
       if (inp) inp.focus({ preventScroll: true });   // same tap: the iOS keyboard opens
       return;
     }
-    if (e.target.closest('.m-search-cancel')) exitSearch(true);
+    if (e.target.closest('.m-search-cancel')) exitSearch(true, e.detail === 0);
   });
   document.addEventListener('focusin', e => {
     if (mq.matches && e.target.closest && e.target.closest('#catalogSearch .np-search__field')) enterSearch();
@@ -104,12 +117,12 @@ if (typeof TRANSLATIONS !== 'undefined') {
     // capture: runs before search.js — with text, its Esc clears; on an empty field Esc leaves the overlay
     if (e.key !== 'Escape' || !root.classList.contains('m-search')) return;
     const inp = input();
-    if (!inp || !inp.value) exitSearch(false);
+    if (!inp || !inp.value) exitSearch(false, true);
   }, true);
   document.addEventListener('np:modal-open', () => {
     if (!root.classList.contains('m-search')) return;
     reopenAfterModal = true;
-    exitSearch(false);   // the query stays; results come back when the product closes
+    exitSearch(false, true);   // the query stays; results come back when the product closes
   });
   document.addEventListener('np:modal-close', () => {
     if (!reopenAfterModal) return;
@@ -220,9 +233,9 @@ if (typeof TRANSLATIONS !== 'undefined') {
     const el = b.previousElementSibling;
     if (!el) return;
     const open = !el.classList.contains('is-expanded');
-    el.classList.toggle('is-expanded', open);
     b.setAttribute('aria-expanded', open ? 'true' : 'false');
     b.textContent = T(open ? 'm.less' : 'm.more');
+    clampAnim(el, open, e.detail === 0, st => el.classList.toggle('is-expanded', st));
   });
 
   // ---------- C8 Filters button in the chip row: icon-only on phones ----------
@@ -239,7 +252,7 @@ if (typeof TRANSLATIONS !== 'undefined') {
   window.addEventListener('resize', () => { clearTimeout(rsT); rsT = setTimeout(syncMore, 150); });
   const onMq = () => {
     prepCoat(); syncMore();
-    if (!mq.matches && root.classList.contains('m-search')) exitSearch(false);
+    if (!mq.matches && root.classList.contains('m-search')) exitSearch(false, true);
   };
   if (mq.addEventListener) mq.addEventListener('change', onMq); else if (mq.addListener) mq.addListener(onMq);
 
@@ -256,7 +269,10 @@ if (typeof TRANSLATIONS !== 'undefined') {
       if (d.scrollHeight > d.clientHeight + 2) {
         const b = document.createElement('button');
         b.type = 'button'; b.className = 'm-more'; b.textContent = T('m.readAll');
-        b.addEventListener('click', () => { d.classList.remove('is-clamped'); b.remove(); });
+        b.addEventListener('click', e => {
+          b.remove();
+          clampAnim(d, true, e.detail === 0, st => d.classList.toggle('is-clamped', !st));
+        });
         d.after(b);
       } else d.classList.remove('is-clamped');
     }
@@ -270,6 +286,11 @@ if (typeof TRANSLATIONS !== 'undefined') {
       b.textContent = h.textContent;
       h.textContent = '';
       h.appendChild(b);
+      // content → one grid row that animates 0fr ↔ 1fr (css/mobile-catalog.css D7, css/motion-catalog.css)
+      const wrap = document.createElement('div'), inner = document.createElement('div');
+      wrap.className = 'pmodal__secbody'; inner.className = 'pmodal__secinner';
+      Array.from(s.children).forEach(c => { if (c !== h) inner.appendChild(c); });
+      wrap.appendChild(inner); s.appendChild(wrap);
       s.classList.add('is-collapsible');
       b.addEventListener('click', () => {
         const open = !s.classList.contains('is-open');
@@ -281,70 +302,9 @@ if (typeof TRANSLATIONS !== 'undefined') {
       secs[0].classList.add('is-open');
       secs[0].querySelector('.pmodal__sectoggle').setAttribute('aria-expanded', 'true');
     }
-    bindSwipe();
   });
 
-  // d) swipe down to close
-  let swipeBound = false;
-  function bindSwipe() {
-    if (swipeBound) return;
-    const modal = document.getElementById('productModal');
-    const dlg = modal && modal.querySelector('.pmodal__dialog');
-    const body = document.getElementById('pmodalBody');
-    const back = modal && modal.querySelector('.pmodal__backdrop');
-    if (!dlg || !body) return;
-    swipeBound = true;
-    let y0 = 0, t0 = 0, dy = 0, tracking = false, active = false, topZone = false, snapT = 0;
-    const reset = () => {
-      dlg.style.transition = ''; dlg.style.transform = '';
-      if (back) { back.style.transition = ''; back.style.opacity = ''; }
-    };
-    dlg.addEventListener('touchstart', e => {
-      tracking = false; active = false;
-      if (!mq.matches || !modal.classList.contains('is-open') || modal.classList.contains('is-closing') || e.touches.length !== 1) return;
-      if (e.target.closest('button, a, input, .pmodal__actions')) return;
-      const y = e.touches[0].clientY;
-      topZone = y - dlg.getBoundingClientRect().top < 56;
-      if (!topZone && body.scrollTop > 0) return;
-      clearTimeout(snapT);
-      tracking = true; y0 = y; t0 = performance.now(); dy = 0;
-    }, { passive: true });
-    dlg.addEventListener('touchmove', e => {
-      if (!tracking) return;
-      dy = e.touches[0].clientY - y0;
-      if (!active) {
-        if (dy < -6) { tracking = false; return; }
-        if (dy > 6 && (topZone || body.scrollTop <= 0)) active = true;
-        else return;
-      }
-      e.preventDefault();
-      const d = Math.max(0, dy);
-      dlg.style.transition = 'none';
-      dlg.style.transform = `translate3d(0,${d}px,0)`;
-      if (back) { back.style.transition = 'none'; back.style.opacity = String(1 - Math.min(1, d / dlg.offsetHeight) * 0.8); }
-    }, { passive: false });
-    const end = () => {
-      if (!tracking) return;
-      tracking = false;
-      if (!active) return;
-      active = false;
-      const ms = Math.max(1, performance.now() - t0);
-      const v = dy / ms;
-      if (dy > 120 || (v > 0.5 && dy > 40)) {
-        reset();
-        const close = modal.querySelector('.pmodal__close');
-        if (close) close.dispatchEvent(new MouseEvent('click', { bubbles: true, detail: 1 }));
-        return;
-      }
-      if (reduce()) { reset(); return; }
-      dlg.style.transition = 'transform 300ms var(--ease-drawer)';
-      dlg.style.transform = '';
-      if (back) { back.style.transition = 'opacity 300ms var(--ease-drawer)'; back.style.opacity = ''; }
-      snapT = setTimeout(() => { dlg.style.transition = ''; if (back) back.style.transition = ''; }, 300);
-    };
-    dlg.addEventListener('touchend', end);
-    dlg.addEventListener('touchcancel', end);
-  }
+  // d) swipe down to close: js/motion-catalog.js (shared bottom-sheet drag, also for My list / search)
 })();
 
 // ===== Burger menu: dimmed backdrop, tap-outside and Esc close, page scroll locked =====
