@@ -206,15 +206,22 @@ if (typeof TRANSLATIONS !== 'undefined') {
   // ---------- C6 "More" toggles for clamped Tauro text ----------
   const MORE_SEL = '.tpl-system__intro, .tpl-system__note';
   function syncMore() {
-    document.querySelectorAll(MORE_SEL).forEach(el => {
+    const els = Array.from(document.querySelectorAll(MORE_SEL));
+    if (!mq.matches) {
+      els.forEach(el => { const n = el.nextElementSibling; if (n && n.classList.contains('m-more')) n.remove(); el.classList.remove('is-expanded'); });
+      return;
+    }
+    // Сначала все замеры (одна раскладка), потом все вставки/удаления — без чередования чтения и записи
+    const plan = els.map(el => {
       const next = el.nextElementSibling;
-      const has = next && next.classList.contains('m-more');
-      if (!mq.matches) { if (has) next.remove(); el.classList.remove('is-expanded'); return; }
-      if (has) {
-        if (!el.classList.contains('is-expanded') && el.scrollHeight <= el.clientHeight + 2) next.remove();
-        return;
-      }
-      if (el.classList.contains('is-expanded') || el.scrollHeight <= el.clientHeight + 2) return;
+      const has = !!(next && next.classList.contains('m-more'));
+      const expanded = el.classList.contains('is-expanded');
+      const clamped = expanded ? true : el.scrollHeight > el.clientHeight + 2;
+      return { el, next, has, expanded, clamped };
+    });
+    plan.forEach(({ el, next, has, expanded, clamped }) => {
+      if (has && !expanded && !clamped) { next.remove(); return; }
+      if (has || expanded || !clamped) return;
       const b = document.createElement('button');
       b.type = 'button'; b.className = 'm-more'; b.setAttribute('data-m-more', 'clamp');
       b.setAttribute('aria-expanded', 'false');

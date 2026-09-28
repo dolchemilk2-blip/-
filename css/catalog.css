@@ -235,3 +235,7 @@ html[data-vt] .catalog-bar, html[data-vt] .cat-nav::before { -webkit-backdrop-fi
   .cat-nav__scroller.has-indicator .cat-chip.is-active { color: HighlightText; forced-color-adjust: none; }
   .cat-nav::before { backdrop-filter: none; -webkit-backdrop-filter: none; background: Canvas; }
 }
+
+/* Tauro Step showcases are tall and heavy: skip layout/paint while far off screen */
+.tpl-system { content-visibility: auto; contain-intrinsic-size: auto 1100px; }
+@media (max-width: 720px) { .tpl-system { contain-intrinsic-size: auto 900px; } }

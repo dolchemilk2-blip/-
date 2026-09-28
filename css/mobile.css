@@ -111,3 +111,14 @@ a, button, label, summary, [role="button"], [role="tab"], [role="radio"], [role=
   .nav-scrim, .nav-scrim.is-open { transition: none; }
   .nav-lang__btn:active { transform: none; }
 }
+
+/* Phones: no live backdrop blur anywhere — it re-renders every frame while sheets, pills and
+   scroll-linked effects move over it, which is the main source of dropped frames on real devices. */
+@media (max-width: 720px) {
+  .catalog-bar, .lang__menu, .hero__arrow, .pmodal__header.is-stuck {
+    -webkit-backdrop-filter: none !important; backdrop-filter: none !important;
+  }
+  .catalog-bar { background-color: var(--tint, var(--paper)); }
+  .lang__menu, .pmodal__header.is-stuck { background-color: var(--paper); }
+  .hero__arrow { background-color: rgba(20, 24, 22, .55); }
+}

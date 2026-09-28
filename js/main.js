@@ -603,9 +603,13 @@ function staggerCards(wrap) {
   const vh = window.innerHeight || 800;
   const step = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--stagger'));
   const stagger = reduce ? 0 : (isNaN(step) ? 40 : step);
-  const cards = Array.from(wrap.querySelectorAll('.product, .tpl-bottle'))
-    .filter(c => { const r = c.getBoundingClientRect(); return r.bottom > 0 && r.top < vh; })
-    .slice(0, 8);
+  const cards = [];
+  for (const c of wrap.querySelectorAll('.product, .tpl-bottle')) {
+    const r = c.getBoundingClientRect();
+    if (r.top >= vh) break;               // карточки идут сверху вниз — дальше только невидимые
+    if (r.bottom > 0) cards.push(c);
+    if (cards.length === 8) break;
+  }
   const frames = reduce
     ? [{ opacity: 0 }, { opacity: 1 }]
     : [{ opacity: 0, transform: 'translateY(8px)' }, { opacity: 1, transform: 'translateY(0)' }];
@@ -1178,8 +1182,11 @@ function scrollToResults(smooth) {
 // ===== View Transitions: NP.swap(updateFn, type) — type: 'brand' | 'species' | 'section' =====
 // MOTION стилизует ::view-transition-*(np-grid / np-sections); имена элементам даёт css/catalog.css по html[data-vt].
 let vtCurrent = null;
+// View Transitions отключены: снимок страницы замораживал ввод на 0.2–0.5s (особенно на телефонах).
+// Лёгкий путь — индикатор скользит сразу (композитор), сетка гаснет 150ms, новая выдача поднимается каскадом.
+const VT_ENABLED = false;
 function vtAvailable() {
-  return typeof document.startViewTransition === 'function' && !reduceMotion() && !document.hidden;
+  return VT_ENABLED && typeof document.startViewTransition === 'function' && !reduceMotion() && !document.hidden;
 }
 // Первые карточки новой выдачи — декодированы до снимка (иначе пустые карточки «дозаполняются» после кроссфейда)
 function firstImagesReady(grid) {
