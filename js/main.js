@@ -580,8 +580,8 @@ function showModal(modal, body, opts, item) {
   }
 }
 
-// Close without waiting (Монтажка's ghost-out): a copy of the modal leaves — desktop: fades and settles back a
-// little (180ms); phone sheet: slides down from wherever it is now (200ms, drawer curve) — while the real one is
+// Close without waiting (Монтажка's ghost-out): a copy of the modal leaves — desktop: shrinks back into its card
+// (360ms); phone sheet: slides down from wherever it is now (320ms, drawer curve) — while the real one is
 // closed at once (focus, scroll lock and inert come back immediately; a new open is not blocked by the exit).
 function modalGhostOut(modal) {
   if (!sprOK()) return false;
@@ -602,12 +602,31 @@ function modalGhostOut(modal) {
   if (st) gd.scrollTop = st;
   if (gbody && bst) gbody.scrollTop = bst;
   const t0 = tr === 'none' ? 'none' : tr;
-  const ms = phone ? 200 : 180;
+  // Desktop: the mirror of the open — the panel shrinks back into the card it came from (its centre, roughly its
+  // size) while the content fades first, so text is never seen squashed. No card on screen — settles back softly.
+  let target = null;
+  if (!phone) {
+    const grid = document.getElementById('productsGrid');
+    let card = (modalId && grid) ? grid.querySelector('[data-id="' + cssEsc(modalId) + '"]') : null;
+    if (!card || !card.isConnected) card = modalOrigin && modalOrigin.isConnected ? modalOrigin : null;
+    const r = card && card.getBoundingClientRect(), d = dlg.getBoundingClientRect();
+    if (r && r.width && r.bottom > 0 && r.top < window.innerHeight) {
+      target = {
+        x: r.left + r.width / 2 - (d.left + d.width / 2), y: r.top + r.height / 2 - (d.top + d.height / 2),
+        s: Math.max(0.25, Math.min(0.9, Math.sqrt((r.width * r.height) / (d.width * d.height))))
+      };
+    }
+  }
+  const ms = phone ? 320 : target ? 360 : 260;
   const frames = phone
     ? [{ transform: t0 }, { transform: 'translate3d(0, ' + (h + 24) + 'px, 0)' }]
-    : [{ transform: t0, opacity: op }, { transform: (t0 === 'none' ? '' : t0 + ' ') + 'translateY(8px) scale(0.97)', opacity: 0 }];
-  const a = gd.animate(frames, { duration: ms, easing: phone ? 'cubic-bezier(0.32, 0.72, 0, 1)' : NPSpring.EASE, fill: 'forwards' });
-  gb.animate([{ opacity: bop }, { opacity: 0 }], { duration: ms, easing: 'ease-out', fill: 'forwards' });
+    : target
+      ? [{ transform: 'translate(0px, 0px) ' + (t0 === 'none' ? '' : t0 + ' ') + 'scale(1)', opacity: op }, { opacity: op, offset: 0.55 },
+         { transform: 'translate(' + target.x.toFixed(1) + 'px, ' + target.y.toFixed(1) + 'px) ' + (t0 === 'none' ? '' : t0 + ' ') + 'scale(' + target.s.toFixed(3) + ')', opacity: 0 }]
+      : [{ transform: t0, opacity: op }, { transform: (t0 === 'none' ? '' : t0 + ' ') + 'translateY(12px) scale(0.96)', opacity: 0 }];
+  const a = gd.animate(frames, { duration: ms, easing: phone ? 'cubic-bezier(0.32, 0.72, 0, 1)' : 'cubic-bezier(0.4, 0, 0.2, 1)', fill: 'forwards' });
+  if (target && gbody) gbody.animate([{ opacity: 1 }, { opacity: 0 }], { duration: ms * 0.45, easing: 'ease-out', fill: 'forwards' });
+  gb.animate([{ opacity: bop }, { opacity: 0 }], { duration: ms, easing: 'cubic-bezier(0.22, 1, 0.36, 1)', fill: 'forwards' });
   a.onfinish = a.oncancel = () => g.remove();
   return true;
 }
