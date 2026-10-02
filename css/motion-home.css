@@ -13,6 +13,7 @@
 @property --mh-p { syntax: '<number>'; inherits: true; initial-value: 0; }
 @keyframes mhP { from { --mh-p: 0; } to { --mh-p: 1; } }
 @keyframes mhLine { from { transform: translateY(105%); } }
+@keyframes mhLineBlur { from { filter: blur(3px); opacity: .35; } }
 @keyframes mhSettle { from { scale: 1.06; } }
 @keyframes mhImgIn { from { scale: .92; } }
 
@@ -20,15 +21,21 @@
 .mh-line { display: block; overflow: hidden; margin-bottom: -.14em; }
 .mh-line__in { display: block; padding-bottom: .14em; }
 .mh-lines:not(.mh-in) .mh-line__in { transform: translateY(105%); }
+/* lines rise on a spring (Монтажка): --spring-pane = damping .9 / response .5 — a hair of overshoot, then rest;
+   motion-home.js waits the same spring's duration before it restores plain text */
 .mh-lines.mh-in .mh-line__in {
-  animation: mhLine 700ms var(--ease-out) backwards;
+  animation: mhLine var(--spring-pane-dur, 700ms) var(--spring-pane, var(--ease-out)) backwards;
   animation-delay: calc(var(--li, 0) * 60ms);
 }
-/* the hero headline: 800ms, 70ms per line, after a short beat */
+/* the hero headline: 70ms per line after a short beat; each line also clears a light 3px blur (a few lines, once) */
 .hero-home__title.mh-in .mh-line__in {
-  animation-duration: 800ms;
+  animation:
+    mhLine var(--spring-pane-dur, 800ms) var(--spring-pane, var(--ease-out)) backwards,
+    mhLineBlur var(--duration-slow, 400ms) var(--ease-smooth-out) backwards;
   animation-delay: calc(80ms + var(--li, 0) * 70ms);
 }
+/* quick-intent chips: motion-home.js staggers them in on springs (40ms), so the row itself does not rise */
+.mh-js .intents.mh-chips { animation: none; }
 
 /* ---------- 1. Hero ---------- */
 .mh-js .hero-home__title { animation: none; }                       /* the lines replace homeRise */
