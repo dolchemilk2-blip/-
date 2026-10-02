@@ -110,40 +110,43 @@
     });
   }
 
-  // ---------- Счёт чисел героя ----------
+  // ---------- Счёт чисел героя: цифры «Монтажки» ----------
+  // Не перебор текста каждый кадр, а несколько шагов через NPSpring.num: меняются только изменившиеся цифры, каждая
+  // выпрыгивает снизу на пружине (150 → 228 → 256 → 260). Шаги через 150ms — реже порога «тика» (140ms). Один раз,
+  // когда строка в кадре; без ядра пружин — сразу финал.
   var counters = [];
-  var easeOut = function (t) { return 1 - Math.pow(1 - t, 5); };   // ≈ cubic-bezier(.23,1,.32,1)
+  var easeOut = function (t) { return 1 - Math.pow(1 - t, 3); };
   function initCount() {
     var dl = document.querySelector('[data-mh-count]');
-    if (!dl) return;
+    var S = window.NPSpring && NPSpring.num ? NPSpring : null;
+    if (!dl || !S) return;
     var dts = Array.prototype.slice.call(dl.querySelectorAll('dt'));
     var items = dts.map(function (dt) {
       var m = /^(\D*)(\d+)(\D*)$/.exec(dt.textContent.trim());
       if (!m) return null;
-      var to = +m[2];
-      return { dt: dt, pre: m[1], suf: m[3], to: to, from: (m[2].length === 4 && to >= 1900) ? to - 24 : 0, text: dt.textContent };
+      var to = +m[2], from = (m[2].length === 4 && to >= 1900) ? to - 24 : 0, steps = [];
+      if (to - from <= 6) for (var v = from; v <= to; v++) steps.push(v);
+      else for (var k = 0; k <= 4; k++) steps.push(Math.round(from + (to - from) * easeOut(k / 4)));
+      steps = steps.filter(function (v, i) { return !i || v !== steps[i - 1]; });
+      return { dt: dt, pre: m[1], suf: m[3], steps: steps, text: dt.textContent };
     }).filter(Boolean);
     var widths = items.map(function (it) { return it.dt.getBoundingClientRect().width; });   // чтение до записей
     items.forEach(function (it, i) {
       it.dt.style.minWidth = Math.ceil(widths[i]) + 'px';
-      it.dt.textContent = it.pre + it.from + it.suf;
+      S.num(it.dt, it.pre + it.steps[0] + it.suf);   // первый показ — без движения
     });
     counters = items;
     var io = new IntersectionObserver(function (entries) {
       if (!entries.some(function (e) { return e.isIntersecting; })) return;
       io.disconnect();
-      setTimeout(function () {
-        var t0 = performance.now();
-        var tick = function (now) {
-          var t = Math.min(1, (now - t0) / 1000);
-          items.forEach(function (it) {
+      items.forEach(function (it, i) {
+        it.steps.slice(1).forEach(function (v, k) {
+          setTimeout(function () {
             if (it.dead) return;
-            it.dt.textContent = t < 1 ? it.pre + Math.round(it.from + (it.to - it.from) * easeOut(t)) + it.suf : it.text;
-          });
-          if (t < 1) requestAnimationFrame(tick);
-        };
-        requestAnimationFrame(tick);
-      }, 540);   // вместе с появлением строки статистики
+            S.num(it.dt, k === it.steps.length - 2 ? it.text : it.pre + v + it.suf);
+          }, 540 + i * 70 + k * 150);   // вместе с появлением строки статистики
+        });
+      });
     }, { threshold: 0.5 });
     io.observe(dl);
   }
