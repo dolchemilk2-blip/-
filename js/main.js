@@ -1039,7 +1039,7 @@ function sectionHtml(s, brand, lang, dict, mk) {
 // The first render is covered by the page's own entrance — no second layer of motion.
 let firstRenderDone = false;
 let resultNote = '';   // пояснение к выдаче (раздел сброшен фильтром / Tauro: все товары для обоих видов)
-function renderProducts(brand, lang) {
+function renderProducts(brand, lang, chunk) {
   const wrap = document.getElementById('productsGrid');
   if (!wrap) return;
   const dict = TRANSLATIONS[lang] || TRANSLATIONS.ru;
@@ -1093,9 +1093,39 @@ function renderProducts(brand, lang) {
     intro = `<section class="cat-section cat-section--systems" id="sec-systems" data-sec="systems" aria-label="${label}">${t.tplWhy}${t.showcase}</section>`;
   }
   const shown = secs.filter(s => s.id !== 'systems' && s.count && (currentSection === 'all' || s.id === currentSection));
-  wrap.innerHTML = banner + intro + shown.map(s => sectionHtml(s, brand, lang, dict, mk)).join('');
+  const parts = shown.map(s => sectionHtml(s, brand, lang, dict, mk));
+  const head = banner + intro;
+  const ids = str => str.split(' data-id="').length - 1;
+  RENDER_COUNT = ids(head) + parts.reduce((n, x) => n + ids(x), 0);
+  // An animated switch (chunk) renders in pieces: the first screen at once, the remaining sections one per idle
+  // slot. One big innerHTML of 100+ cards froze phones for a whole frame mid-way through the pill / fade springs.
+  let k = parts.length;
+  if (chunk && renderedOnce) { k = 0; for (let n = ids(head); k < parts.length && (k === 0 || n < 12); k++) n += ids(parts[k]); }
+  wrap.innerHTML = head + parts.slice(0, k).join('');
+  renderedOnce = true;
+  renderRest(wrap, parts.slice(k), { brand, lang, species: currentSpecies, section: currentSection });
   finish();
 }
+
+// The rest of a render, one section per idle slot. flushRender() appends it all at once (deep links, search).
+let RENDER_COUNT = 0, renderedOnce = false, renderGen = 0, pendingRest = null;
+function renderRest(wrap, rest, detail) {
+  const gen = ++renderGen;
+  pendingRest = null;
+  if (!rest.length) return;
+  const idle = window.requestIdleCallback ? f => requestIdleCallback(f, { timeout: 250 }) : f => setTimeout(f, 32);
+  const step = all => {
+    if (gen !== renderGen) return;
+    do wrap.insertAdjacentHTML('beforeend', rest.shift()); while (all && rest.length);
+    if (rest.length) { idle(() => step(false)); return; }
+    pendingRest = null;
+    spySections();
+    emit('np:render-more', detail);
+  };
+  pendingRest = () => step(true);
+  idle(() => step(false));
+}
+function flushRender() { if (pendingRest) pendingRest(); }
 
 // ===== Парящие фото товаров в фоне (параллакс) =====
 const FLOATIES = [
@@ -1353,7 +1383,7 @@ function updateResultLine() {
   const el = document.getElementById('catResult');
   const grid = document.getElementById('productsGrid');
   if (!el || !grid) return;
-  const n = grid.querySelectorAll('[data-id]').length;
+  const n = RENDER_COUNT || grid.querySelectorAll('[data-id]').length;
   // the count's digits pop in (NPSpring.num, keyed across re-renders by data-num): only the changed ones move —
   // up from below when the number grows, from above when it shrinks
   const count = shownText(n);
@@ -1493,6 +1523,7 @@ function openProduct(id, opts) {
   const grid = document.getElementById('productsGrid');
   if (!grid) { window.location.href = 'products.html#p=' + encodeURIComponent(id); return true; }
   if (found.brand !== currentBrand && NPCtl.activateBrand) NPCtl.activateBrand(found.brand, { animate: false, updateHash: true, keepScroll: true });
+  flushRender();
   const card = grid.querySelector('[data-id="' + cssEsc(id) + '"]');
   const o = { id, brand: found.brand, card, keyboard: !!(opts && opts.keyboard) };
   if (card) {
@@ -1589,7 +1620,7 @@ function initCatalog(initial) {
   let brandGen = 0;
   let leaveAnims = [];
 
-  const cardCount = () => grid.querySelectorAll('[data-id]').length;
+  const cardCount = () => RENDER_COUNT || grid.querySelectorAll('[data-id]').length;
   const announceCount = () => announce(tr('live.count', { n: cardCount() }) + (resultNote ? '. ' + resultNote : ''));
 
   function syncTabs() {
@@ -1642,7 +1673,7 @@ function initCatalog(initial) {
       if (g !== brandGen || finished) return;
       finished = true;
       const tail = opts.animate ? tailRecord() : null;
-      renderProducts(currentBrand, getLang());
+      renderProducts(currentBrand, getLang(), !!opts.animate);
       if (!useVT) placeIndicator(speciesWrap, 'species__indicator', !opts.animate);
       if (opts.updateHash) setHashState();
       if (!opts.keepScroll) scrollToResults(false);
@@ -1684,7 +1715,7 @@ function initCatalog(initial) {
     const useVT = !!opts.animate && vtAvailable();
     const paintSpecies = () => { syncSpecies(); placeIndicator(speciesWrap, 'species__indicator', !opts.animate); };
     if (!useVT) paintSpecies();
-    const update = () => { renderProducts(currentBrand, getLang()); setHashState(); announceCount(); };
+    const update = () => { renderProducts(currentBrand, getLang(), !!opts.animate); setHashState(); announceCount(); };
     if (useVT) swap(update, 'species', { after: () => { if (currentSpecies === sp) paintSpecies(); } });
     else morphGrid(update, !!opts.animate);
   }
@@ -1699,7 +1730,7 @@ function initCatalog(initial) {
     const useVT = !!opts.animate && vtAvailable();
     const update = () => {
       currentSection = id;
-      renderProducts(currentBrand, getLang());
+      renderProducts(currentBrand, getLang(), !!opts.animate);
       if (opts.updateHash !== false) setHashState();
       // back to the start of the results at once: morphGrid compares screen positions before / after, so the
       // blocks on screen glide, rise or fade in place and the jump itself is never seen

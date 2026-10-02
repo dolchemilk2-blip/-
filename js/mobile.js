@@ -234,6 +234,21 @@ if (typeof TRANSLATIONS !== 'undefined') {
       els.forEach(el => { const n = el.nextElementSibling; if (n && n.classList.contains('m-more')) n.remove(); el.classList.remove('is-expanded'); });
       return;
     }
+    // Мерим только то, что рядом с экраном: scrollHeight у текста внутри свёрнутой системы Tauro
+    // (content-visibility: auto) заставлял браузер раскладывать все 7 систем сразу — фриз при переключении бренда
+    if ('IntersectionObserver' in window) {
+      moreIO = moreIO || new IntersectionObserver(es => {
+        const near = es.filter(en => en.isIntersecting).map(en => en.target);
+        near.forEach(el => moreIO.unobserve(el));
+        if (near.length && mq.matches) measureMore(near);
+      }, { rootMargin: '400px 0px' });
+      els.forEach(el => moreIO.observe(el));
+      return;
+    }
+    measureMore(els);
+  }
+  let moreIO = null;
+  function measureMore(els) {
     // Сначала все замеры (одна раскладка), потом все вставки/удаления — без чередования чтения и записи
     const plan = els.map(el => {
       const next = el.nextElementSibling;
@@ -276,6 +291,7 @@ if (typeof TRANSLATIONS !== 'undefined') {
   // np:render / np:lang / np:ready / resize → re-sync the per-render phone bits
   function onRender() { prepCoat(); labelUp(); requestAnimationFrame(() => { syncMore(); relabelMore(); }); }
   document.addEventListener('np:render', onRender);
+  document.addEventListener('np:render-more', onRender);
   document.addEventListener('np:ready', onRender);
   document.addEventListener('np:lang', onRender);
   let rsT = 0;

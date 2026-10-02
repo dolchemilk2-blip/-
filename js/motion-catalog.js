@@ -208,25 +208,28 @@
     floatIO = floatIO || new IntersectionObserver(es => es.forEach(en => en.target.classList.toggle('is-offscreen', !en.isIntersecting)), { rootMargin: '40px 0px' });
     document.querySelectorAll('.tpl-system:not([data-m-float])').forEach(s => { s.setAttribute('data-m-float', ''); floatIO.observe(s); });
     if (!phone() || reduce()) return;
+    // The first IO entry decides (its boundingClientRect comes with the IO pass, so no forced layout of the whole
+    // freshly rendered Tauro page): already on screen → drawn at once; below → steps wait hidden and rise later.
+    const seen = new WeakSet();
+    const draw = g => { g.classList.add('m-drawn'); g.querySelectorAll('.tpl-why__stop').forEach(c => c.classList.add('m-drawn')); };
     riseIO = riseIO || new IntersectionObserver(es => es.forEach(en => {
-      if (!en.isIntersecting) return;
-      riseIO.unobserve(en.target);
-      en.target.classList.add('m-drawn');
-      en.target.querySelectorAll('.m-rise').forEach(c => c.classList.add('m-rise-in'));
-      en.target.querySelectorAll('.tpl-why__stop').forEach(c => c.classList.add('m-drawn'));
-    }), { threshold: 0.12 });
-    document.querySelectorAll('.tpl-system__stage:not([data-m-rise]), .tpl-why__journey:not([data-m-rise])').forEach(g => {
-      g.setAttribute('data-m-rise', '');
-      const below = g.getBoundingClientRect().top > window.innerHeight - 40;
-      if (below) {
+      const g = en.target;
+      if (!seen.has(g)) {
+        seen.add(g);
+        if (en.boundingClientRect.top <= window.innerHeight - 40) { draw(g); riseIO.unobserve(g); return; }
         g.querySelectorAll(':scope > .tpl-bottle, :scope > .tpl-why__stop').forEach((c, i) => {
           c.style.setProperty('--rd', Math.min(i, 7) * 40 + 'ms');
           c.classList.add('m-rise');
         });
-      } else {
-        g.classList.add('m-drawn');
-        g.querySelectorAll('.tpl-why__stop').forEach(c => c.classList.add('m-drawn'));
-      }
+        if (!en.isIntersecting) return;
+      } else if (!en.isIntersecting) return;
+      riseIO.unobserve(g);
+      g.classList.add('m-drawn');
+      g.querySelectorAll('.m-rise').forEach(c => c.classList.add('m-rise-in'));
+      g.querySelectorAll('.tpl-why__stop').forEach(c => c.classList.add('m-drawn'));
+    }), { threshold: 0.12 });
+    document.querySelectorAll('.tpl-system__stage:not([data-m-rise]), .tpl-why__journey:not([data-m-rise])').forEach(g => {
+      g.setAttribute('data-m-rise', '');
       riseIO.observe(g);
     });
   }
@@ -234,5 +237,6 @@
   // Brand / species / section switches (stagger, FLIP, ghosts) and «Показано N» (NPSpring.num) live in main.js —
   // one implementation for every width.
   document.addEventListener('np:render', setupTauro);
+  document.addEventListener('np:render-more', setupTauro);
   document.addEventListener('np:ready', () => { bindSearch(); setupTauro(); });
 })();

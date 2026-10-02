@@ -598,6 +598,7 @@
 
   // --- события ---
   document.addEventListener('np:render', injectCards);
+  document.addEventListener('np:render-more', injectCards);
   document.addEventListener('np:modal-open', (e) => {
     const d = e.detail || {};
     const root = d.dialog || document;
