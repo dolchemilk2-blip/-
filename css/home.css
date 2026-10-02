@@ -386,3 +386,10 @@ html:not(.spr) .cat-tile:active { transform: scale(var(--press-scale-card)); tra
   .coat-seg input:checked + label { color: HighlightText; forced-color-adjust: none; }
   .tile, .intent, .cat-tile { border: 1px solid CanvasText; }
 }
+
+/* ---------- About tabs on springs (home.js initTabs) ----------
+   The pill rides NPSpring.indicator; a label turns white exactly while the pill covers it (.is-lit) — no timed
+   colour fade running ahead of the spring. The new panel's enter is a WAAPI spring (paneIn), so the CSS fade is off. */
+.home-values .tabs.spr-lit .brand-tab { color: var(--ink); transition: background-color var(--dur-hover) var(--ease-color); }
+.home-values .tabs.spr-lit .brand-tab.is-lit { color: #fff; }
+html.spr .home-values .brand-panel.is-active { animation: none; }

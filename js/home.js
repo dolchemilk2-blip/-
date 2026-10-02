@@ -276,17 +276,67 @@ Object.assign(TRANSLATIONS.en, {
     sync();
   }
 
-  // --- Вкладки «О Nature's Protection»: ARIA и стрелки (клик обрабатывает main.js) ---
+  // --- Вкладки «О Nature's Protection»: ARIA, стрелки (клик обрабатывает main.js) и движение «Монтажки» ---
+  // Пилюля едет на NPSpring.indicator (x/y/w/h на пружинах, тянется каплей, ловится на лету); цвет подписи
+  // переключается в кадре пилюли (.is-lit), без своей временной анимации. Новая панель приезжает на 12px с той
+  // стороны, куда нажали (montage paneIn) — только transform/opacity. Первое размещение, клавиатура, resize,
+  // шрифты и reduced motion — мгновенно. Наш обработчик срабатывает раньше main.js, в той же задаче — кадра
+  // со старым состоянием не бывает.
   function initTabs() {
     const tabs = Array.from(document.querySelectorAll('.home-values .brand-tab'));
     if (!tabs.length) return;
+    const list = tabs[0].parentElement;
+    const S = window.NPSpring && NPSpring.indicator ? NPSpring : null;
     const sync = () => tabs.forEach(tb => {
       const on = tb.classList.contains('is-active');
       tb.setAttribute('aria-selected', on ? 'true' : 'false');
       tb.tabIndex = on ? 0 : -1;
     });
+    let pill = null, items = [];
+    const box = b => ({ x: b.offsetLeft, y: b.offsetTop, w: b.offsetWidth, h: b.offsetHeight });
+    const light = () => {
+      const P = pill.springs, x = P.x.v, y = P.y.v, w = P.w.v, h = P.h.v;
+      items.forEach(it => {
+        const ox = Math.min(x + w, it.x + it.w) - Math.max(x, it.x), oy = Math.min(y + h, it.y + it.h) - Math.max(y, it.y);
+        const on = ox > it.w * 0.5 && oy > it.h * 0.5;
+        if (it.el._lit !== on) { it.el._lit = on; it.el.classList.toggle('is-lit', on); }
+      });
+    };
+    const place = (tb, instant) => {
+      if (!S || !tb || !tb.offsetWidth) return;
+      if (!pill) {
+        const ind = document.createElement('span');
+        ind.className = 'tabs__indicator';
+        ind.setAttribute('aria-hidden', 'true');
+        list.appendChild(ind);
+        pill = S.indicator(ind, { damping: 0.74, response: 0.42 });
+        const P = pill.springs, own = P.x.owner;
+        P.x.owner = P.y.owner = P.w.owner = P.h.owner = { render() { own.render(); light(); } };
+        instant = true;
+      }
+      items = tabs.map(b => Object.assign(box(b), { el: b }));   // все чтения — до записей пружины
+      pill.move(box(tb), instant);
+      light();
+      list.classList.add('spr-lit');
+    };
+    const active = () => tabs.find(tb => tb.classList.contains('is-active')) || tabs[0];
+    const panelOf = tb => document.getElementById(tb.getAttribute('aria-controls'));
     tabs.forEach((tb, i) => {
-      tb.addEventListener('click', () => setTimeout(sync, 0));
+      tb.addEventListener('click', e => {
+        const was = active();
+        if (was !== tb) {
+          const kbd = e.detail === 0;   // Enter/Space/стрелки — без движения
+          place(tb, kbd);
+          const pane = panelOf(tb);
+          if (pane) {
+            pane.getAnimations().forEach(a => a.cancel());
+            if (!kbd && S && S.enter) S.enter(pane, { opacity: 0, transform: 'translateX(' + (i > tabs.indexOf(was) ? 12 : -12) + 'px)' }, [0.92, 0.36]);
+          }
+          const old = panelOf(was);
+          if (old) old.getAnimations().forEach(a => a.cancel());
+        }
+        setTimeout(sync, 0);
+      });
       tb.addEventListener('keydown', e => {
         let n = -1;
         if (e.key === 'ArrowRight') n = (i + 1) % tabs.length;
@@ -299,6 +349,13 @@ Object.assign(TRANSLATIONS.en, {
       });
     });
     sync();
+    if (!S) return;
+    place(active(), true);
+    let raf = 0;
+    const again = () => { if (!raf) raf = requestAnimationFrame(() => { raf = 0; place(active(), true); }); };
+    window.addEventListener('resize', again);
+    document.addEventListener('np:lang', again);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(again);
   }
 
   // --- Форма: честная отправка через почтовую программу (main.js потом показывает #formOk и сбрасывает) ---
