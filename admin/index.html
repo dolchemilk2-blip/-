@@ -1,0 +1,548 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Админка каталога</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<style>
+/* Админка каталога: добавляет товары на основной сайт через GitHub (файл js/catalog-added.js + фото в
+   assets/products/added/). Отдельная страница, своя вёрстка; токен GitHub хранится только в этом браузере. */
+:root {
+  --paper: #fff; --paper-2: #f5f5f7; --paper-3: #e8e8ed; --ink: #1d1d1f; --ink-2: #6e6e73;
+  --line: rgba(0,0,0,.1); --accent: #007a3d; --accent-hover: #006833; --accent-soft: #e6f2ea;
+  --bad: #c0352b; --bad-soft: #fbeae8; --warn-soft: #fff4d6;
+  --r: 14px; --r-l: 20px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --font: 'Onest', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper-2); color: var(--ink); font: 400 15px/1.5 var(--font); -webkit-text-size-adjust: 100%; }
+a { color: var(--accent); }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 24px 20px 80px; }
+header { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-bottom: 20px; }
+header img { height: 34px; }
+header h1 { margin: 0; font: 700 24px/1.2 var(--font); letter-spacing: -0.02em; }
+header .to-site { margin-left: auto; font-weight: 500; text-decoration: none; padding: 8px 14px; border-radius: 999px; background: var(--paper); border: 1px solid var(--line); }
+.grid { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 20px; align-items: start; }
+.card { background: var(--paper); border-radius: var(--r-l); padding: 20px; box-shadow: 0 1px 2px rgba(0,0,0,.04), 0 4px 14px rgba(0,0,0,.04); }
+.card + .card { margin-top: 20px; }
+.card h2 { margin: 0 0 4px; font: 600 19px/1.3 var(--font); letter-spacing: -0.01em; }
+.card > p.hint { margin: 0 0 16px; color: var(--ink-2); font-size: 14px; }
+.row { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-bottom: 14px; }
+label.f { display: grid; gap: 6px; font-weight: 500; font-size: 14px; }
+label.f small { font-weight: 400; color: var(--ink-2); }
+input[type=text], input[type=password], input[type=url], textarea, select {
+  width: 100%; font: 400 16px/1.4 var(--font); color: var(--ink); background: var(--paper-2);
+  border: 1px solid transparent; border-radius: 12px; padding: 10px 12px; min-height: 44px;
+  transition: border-color 150ms ease, background-color 150ms ease, box-shadow 150ms ease;
+}
+textarea { min-height: 96px; resize: vertical; }
+input:focus-visible, textarea:focus-visible, select:focus-visible { outline: none; background: var(--paper); border-color: var(--accent); box-shadow: 0 0 0 3px rgba(0,122,61,.18); }
+.is-invalid { border-color: var(--bad) !important; background: var(--bad-soft) !important; }
+.check { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-weight: 500; cursor: pointer; }
+.check input { width: 20px; height: 20px; accent-color: var(--accent); }
+.seg { display: inline-grid; grid-auto-flow: column; gap: 2px; padding: 3px; border-radius: 999px; background: var(--paper-2); }
+.seg button { min-height: 38px; padding: 0 16px; border: 0; border-radius: 999px; background: transparent; font: 600 14px var(--font); color: var(--ink-2); cursor: pointer; transition: background-color 200ms var(--ease), color 200ms var(--ease); }
+.seg button[aria-selected="true"], .seg button[aria-pressed="true"] { background: var(--paper); color: var(--ink); box-shadow: 0 1px 2px rgba(0,0,0,.08), 0 3px 10px rgba(0,0,0,.06); }
+.lang-head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: 6px 0 12px; }
+.lang-panel { display: grid; gap: 12px; }
+.lang-panel[hidden] { display: none; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 0 20px; border: 1px solid transparent; border-radius: 999px; font: 600 15px var(--font); cursor: pointer; text-decoration: none; transition: background-color 150ms ease, transform 160ms var(--ease), opacity 150ms ease; }
+.btn:active { transform: scale(.97); transition-duration: 150ms, 80ms, 150ms; }
+.btn:disabled { opacity: .45; cursor: default; }
+.btn--primary { background: var(--accent); color: #fff; }
+.btn--primary:hover:not(:disabled) { background: var(--accent-hover); }
+.btn--ghost { background: var(--paper); border-color: var(--line); color: var(--ink); }
+.btn--ghost:hover:not(:disabled) { background: var(--paper-2); }
+.btn--small { min-height: 34px; padding: 0 12px; font-size: 13.5px; }
+.btn--danger { color: var(--bad); }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.photo { display: grid; grid-template-columns: 120px 1fr; gap: 14px; align-items: center; margin-bottom: 14px; }
+.photo__box { width: 120px; height: 120px; border-radius: var(--r); background: var(--paper-2) center / contain no-repeat; display: grid; place-items: center; font-size: 34px; border: 1.5px dashed rgba(0,0,0,.15); overflow: hidden; }
+.photo__box.has { border-style: solid; border-color: var(--line); background-color: #f2f4f5; }
+.photo__pick { display: grid; gap: 8px; }
+.file-btn { position: relative; overflow: hidden; }
+.file-btn input { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+.status { display: none; margin-top: 14px; padding: 12px 14px; border-radius: var(--r); font-size: 14px; }
+.status.is-on { display: block; animation: in 300ms var(--ease) both; }
+.status.ok { background: var(--accent-soft); color: #0b5a30; }
+.status.bad { background: var(--bad-soft); color: var(--bad); }
+.status.info { background: var(--warn-soft); color: #6b4e00; }
+@keyframes in { from { opacity: 0; transform: translateY(6px); } }
+@keyframes shake { 20% { transform: translateX(-6px); } 40% { transform: translateX(5px); } 60% { transform: translateX(-3px); } 80% { transform: translateX(2px); } }
+.shake { animation: shake 360ms var(--ease); }
+/* превью карточки — как на сайте */
+.preview { position: sticky; top: 20px; }
+.pcard { border-radius: 20px; background: #f2f4f5; overflow: hidden; }
+.pcard__img { aspect-ratio: 1; display: grid; place-items: center; font-size: 64px; }
+.pcard__img img { width: 82%; height: 82%; object-fit: contain; }
+.pcard__body { padding: 16px 18px 18px; background: var(--paper); }
+.pcard__cat { color: var(--ink-2); font-size: 13px; }
+.pcard__name { margin: 4px 0 6px; font: 600 18px/1.25 var(--font); letter-spacing: -0.01em; }
+.pcard__desc { margin: 0; font-size: 14px; color: var(--ink-2); display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+.pcard__tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.pcard__tags span { font-size: 12.5px; padding: 3px 10px; border-radius: 999px; background: var(--accent-soft); color: #0b5a30; }
+.pmeta { margin: 10px 2px 0; color: var(--ink-2); font-size: 13px; }
+/* список добавленных */
+.list { display: grid; gap: 8px; }
+.li { display: grid; grid-template-columns: 56px minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 8px; border-radius: var(--r); background: var(--paper-2); }
+.li__img { width: 56px; height: 56px; border-radius: 12px; background: #fff center / contain no-repeat; display: grid; place-items: center; font-size: 24px; }
+.li__name { font-weight: 600; overflow-wrap: anywhere; }
+.li__meta { color: var(--ink-2); font-size: 13px; }
+.li__btns { display: flex; gap: 6px; }
+.empty { color: var(--ink-2); font-size: 14px; padding: 8px 2px; }
+details.help { margin-top: 12px; font-size: 14px; color: var(--ink-2); }
+details.help summary { cursor: pointer; color: var(--accent); font-weight: 500; min-height: 32px; display: flex; align-items: center; }
+details.help ol { padding-left: 20px; margin: 8px 0 0; }
+.conn { display: inline-flex; align-items: center; gap: 8px; font-size: 13.5px; color: var(--ink-2); }
+.conn::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #c7c7cc; }
+.conn.on::before { background: #34c759; }
+@media (max-width: 860px) {
+  .grid { grid-template-columns: 1fr; }
+  .preview { position: static; }
+}
+@media (max-width: 520px) {
+  .wrap { padding: 16px 16px 64px; }
+  .card { padding: 16px; border-radius: 18px; }
+  .photo { grid-template-columns: 96px 1fr; }
+  .photo__box { width: 96px; height: 96px; }
+  .actions .btn { flex: 1 1 100%; }
+  .li { grid-template-columns: 48px minmax(0, 1fr); }
+  .li__img { width: 48px; height: 48px; }
+  .li__btns { grid-column: 1 / -1; }
+  .li__btns .btn { flex: 1; }
+}
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition-duration: 0ms !important; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <img src="../assets/logo.png" alt="" onerror="this.remove()">
+    <h1>Админка каталога</h1>
+    <span class="conn" id="conn">не подключено</span>
+    <a class="to-site" href="../products.html" target="_blank" rel="noopener">Открыть каталог ↗</a>
+  </header>
+
+  <div class="grid">
+    <div>
+      <section class="card" id="formCard" aria-labelledby="formTitle">
+        <h2 id="formTitle">Новый товар</h2>
+        <p class="hint">Заполните карточку и нажмите «Опубликовать» — товар появится в каталоге в выбранном разделе.</p>
+
+        <div class="row">
+          <label class="f">Бренд
+            <select id="brand">
+              <option value="np">Nature's Protection</option>
+              <option value="araton">Araton</option>
+              <option value="tpl">Tauro Pro Line</option>
+              <option value="misoko">Misoko</option>
+            </select>
+          </label>
+          <label class="f">Раздел <select id="section"></select></label>
+        </div>
+        <div class="row">
+          <div class="f" role="group" aria-labelledby="spLbl">
+            <span id="spLbl" style="font-weight:500;font-size:14px">Для кого</span>
+            <div class="seg" id="species">
+              <button type="button" data-v="cats" aria-pressed="false">Кошки</button>
+              <button type="button" data-v="dogs" aria-pressed="true">Собаки</button>
+              <button type="button" data-v="both" aria-pressed="false">Всем</button>
+            </div>
+          </div>
+          <label class="check"><input type="checkbox" id="baby"> Для малышей (щенки / котята)</label>
+        </div>
+
+        <div class="photo">
+          <div class="photo__box" id="photoBox" aria-hidden="true">🐾</div>
+          <div class="photo__pick">
+            <span class="btn btn--ghost file-btn">Выбрать фото<input type="file" id="photo" accept="image/*"></span>
+            <label class="f"><small>…или ссылка на фото (https://…)</small><input type="url" id="photoUrl" placeholder="https://"></label>
+          </div>
+        </div>
+
+        <div class="lang-head">
+          <div class="seg" role="tablist" aria-label="Язык" id="langTabs">
+            <button type="button" role="tab" data-l="ru" aria-selected="true">Русский</button>
+            <button type="button" role="tab" data-l="az" aria-selected="false">Azərbaycan</button>
+            <button type="button" role="tab" data-l="en" aria-selected="false">English</button>
+          </div>
+          <button type="button" class="btn btn--ghost btn--small" id="copyRu" title="Пустые поля AZ и EN заполнятся текстом из RU">Скопировать RU в пустые</button>
+        </div>
+        <div id="langPanels"></div>
+
+        <div class="actions">
+          <button type="button" class="btn btn--primary" id="publish">Опубликовать</button>
+          <button type="button" class="btn btn--ghost" id="reset">Очистить форму</button>
+        </div>
+        <div class="status" id="status" role="status" aria-live="polite"></div>
+      </section>
+
+      <section class="card" aria-labelledby="listTitle">
+        <h2 id="listTitle">Добавленные товары</h2>
+        <p class="hint">Товары, добавленные через эту страницу. Товары, которые были на сайте изначально, здесь не показываются.</p>
+        <div class="list" id="list"><p class="empty">Подключитесь к GitHub, чтобы увидеть список.</p></div>
+      </section>
+
+      <section class="card" aria-labelledby="ghTitle">
+        <h2 id="ghTitle">Подключение к GitHub</h2>
+        <p class="hint">Сайт лежит на GitHub — админка сохраняет туда товары и фото. Нужен ключ доступа (токен) с правом записи в этот репозиторий.</p>
+        <div class="row">
+          <label class="f">Токен GitHub <input type="password" id="token" autocomplete="off" placeholder="github_pat_…"></label>
+          <label class="f">Репозиторий <input type="text" id="repo" value="dolchemilk2-blip/-"></label>
+          <label class="f">Ветка <input type="text" id="branch" value="claude/natures-protection-multilingual-1vd1ni"></label>
+        </div>
+        <label class="check"><input type="checkbox" id="remember"> Запомнить на этом устройстве</label>
+        <div class="actions">
+          <button type="button" class="btn btn--primary" id="connect">Подключиться</button>
+          <button type="button" class="btn btn--ghost" id="download">Скачать файл товаров</button>
+        </div>
+        <details class="help">
+          <summary>Как получить токен</summary>
+          <ol>
+            <li>GitHub → Settings → Developer settings → Personal access tokens → <b>Fine-grained tokens</b> → Generate new token.</li>
+            <li>Repository access: <b>Only select repositories</b> → этот репозиторий.</li>
+            <li>Permissions → Repository permissions → <b>Contents: Read and write</b>.</li>
+            <li>Скопируйте токен сюда. Никому его не отправляйте; без галочки «Запомнить» он забудется при закрытии вкладки.</li>
+          </ol>
+          <p>Без токена можно заполнить карточку и нажать «Скачать файл товаров», а затем загрузить файл <code>js/catalog-added.js</code> в репозиторий вручную.</p>
+        </details>
+      </section>
+    </div>
+
+    <aside class="preview" aria-label="Как будет выглядеть карточка">
+      <div class="card">
+        <h2>Превью</h2>
+        <p class="hint" style="margin-bottom:12px">Так карточка будет выглядеть в каталоге.</p>
+        <div class="pcard">
+          <div class="pcard__img" id="pvImg">🐾</div>
+          <div class="pcard__body">
+            <div class="pcard__cat" id="pvCat"></div>
+            <h3 class="pcard__name" id="pvName">Название товара</h3>
+            <p class="pcard__desc" id="pvDesc"></p>
+            <div class="pcard__tags" id="pvTags"></div>
+          </div>
+        </div>
+        <p class="pmeta" id="pvMeta"></p>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<script src="../js/catalog.js"></script>
+<script>
+(function () {
+  'use strict';
+  const FILE = 'js/catalog-added.js';
+  const IMG_DIR = 'assets/products/added/';
+  const HEAD = '// ===== Товары, добавленные через админку (admin/index.html) =====\n' +
+    '// Этот файл перезаписывает админка: правьте товары там. main.js раскладывает их по разделам (mergeAdded).\n';
+  const LANGS = [['ru', 'Русский'], ['az', 'Azərbaycan'], ['en', 'English']];
+  const BRAND_NAMES = { np: "Nature's Protection", araton: 'Araton', tpl: 'Tauro Pro Line', misoko: 'Misoko' };
+  const $ = id => document.getElementById(id);
+  const store = {
+    get(k) { try { return localStorage.getItem('np-admin:' + k) || sessionStorage.getItem('np-admin:' + k); } catch (e) { return null; } },
+    set(k, v, persist) {
+      try { (persist ? localStorage : sessionStorage).setItem('np-admin:' + k, v); (persist ? sessionStorage : localStorage).removeItem('np-admin:' + k); } catch (e) { /* private mode */ }
+    }
+  };
+
+  // ---------- form ----------
+  const S = { items: [], sha: null, connected: false, editId: null, photo: null /* {blob, url, ext} */, img: '' };
+  $('langPanels').innerHTML = LANGS.map(([l, n], i) => `
+    <div class="lang-panel" role="tabpanel" id="panel-${l}" data-l="${l}" aria-label="${n}"${i ? ' hidden' : ''}>
+      <label class="f">Название${l === 'ru' ? ' *' : ''} <input type="text" data-k="name" maxlength="120" placeholder="${l === 'en' ? 'e.g. Adult Lamb' : 'например, Adult Lamb'}"></label>
+      <label class="f">Строка над названием <small>возраст · породы, как на других карточках</small><input type="text" data-k="cat" maxlength="80" placeholder="Adult · Все породы"></label>
+      <label class="f">Описание <textarea data-k="desc" maxlength="600"></textarea></label>
+      <label class="f">Метки <small>через запятую, 1–3 штуки</small><input type="text" data-k="tags" maxlength="120" placeholder="Ягнёнок, Adult"></label>
+    </div>`).join('');
+
+  const field = (l, k) => document.querySelector(`#panel-${l} [data-k="${k}"]`);
+  const clean = s => String(s || '').replace(/[<>]/g, '').replace(/\s+/g, ' ').trim();
+  const cleanDesc = s => String(s || '').replace(/[<>]/g, '').trim();
+  function readLang(l) {
+    return {
+      cat: clean(field(l, 'cat').value), name: clean(field(l, 'name').value), desc: cleanDesc(field(l, 'desc').value),
+      tags: field(l, 'tags').value.split(',').map(clean).filter(Boolean).slice(0, 4)
+    };
+  }
+  function fillSections(sel) {
+    const brand = $('brand').value;
+    const defs = (typeof CATALOG_SECTIONS !== 'undefined' && CATALOG_SECTIONS[brand]) || [];
+    $('section').innerHTML = defs.filter(d => !(brand === 'tpl' && d.id === 'systems'))
+      .map(d => `<option value="${d.id}">${d.ru}</option>`).join('');
+    if (sel) $('section').value = sel;
+  }
+  const species = () => (document.querySelector('#species [aria-pressed="true"]') || {}).dataset.v || 'both';
+  function setSpecies(v) { document.querySelectorAll('#species button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.v === v))); }
+
+  function collect() {
+    const p = { id: S.editId || ('add-' + Date.now().toString(36)), brand: $('brand').value, section: $('section').value,
+      species: species(), baby: $('baby').checked, img: S.img || clean($('photoUrl').value), added: new Date().toISOString().slice(0, 10) };
+    LANGS.forEach(([l]) => { p[l] = readLang(l); });
+    ['az', 'en'].forEach(l => {   // пустое — из русского, чтобы карточка не была пустой на другом языке
+      ['cat', 'name', 'desc'].forEach(k => { if (!p[l][k]) p[l][k] = p.ru[k]; });
+      if (!p[l].tags.length) p[l].tags = p.ru.tags.slice();
+    });
+    return p;
+  }
+
+  // ---------- preview ----------
+  let pvLang = 'ru';
+  function preview() {
+    const t = readLang(pvLang), r = readLang('ru');
+    $('pvCat').textContent = t.cat || r.cat;
+    $('pvName').textContent = t.name || r.name || 'Название товара';
+    $('pvDesc').textContent = t.desc || r.desc;
+    $('pvTags').innerHTML = '';
+    (t.tags.length ? t.tags : r.tags).forEach(x => { const s = document.createElement('span'); s.textContent = x; $('pvTags').appendChild(s); });
+    const src = S.photo ? S.photo.url : (S.img ? '../' + S.img : clean($('photoUrl').value));
+    const sp = species();
+    $('pvImg').innerHTML = '';
+    if (src) { const im = new Image(); im.alt = ''; im.src = src; im.onerror = () => { $('pvImg').textContent = '🐾'; }; $('pvImg').appendChild(im); }
+    else $('pvImg').textContent = sp === 'cats' ? '🐱' : sp === 'dogs' ? '🐶' : '🐾';
+    const sec = $('section').selectedOptions[0];
+    $('pvMeta').textContent = BRAND_NAMES[$('brand').value] + ' → ' + (sec ? sec.textContent : '') + ' · ' +
+      ({ cats: 'кошки', dogs: 'собаки', both: 'всем' }[sp]) + ($('baby').checked ? ' · малыши' : '');
+  }
+  document.addEventListener('input', e => { if (e.target.closest('#formCard')) { e.target.classList.remove('is-invalid'); preview(); } });
+  $('brand').addEventListener('change', () => { fillSections(); preview(); });
+  $('section').addEventListener('change', preview);
+  $('baby').addEventListener('change', preview);
+  $('species').addEventListener('click', e => { const b = e.target.closest('button'); if (b) { setSpecies(b.dataset.v); preview(); } });
+  $('langTabs').addEventListener('click', e => {
+    const b = e.target.closest('button'); if (!b) return;
+    pvLang = b.dataset.l;
+    document.querySelectorAll('#langTabs button').forEach(x => x.setAttribute('aria-selected', String(x === b)));
+    document.querySelectorAll('.lang-panel').forEach(p => { p.hidden = p.dataset.l !== pvLang; });
+    preview();
+  });
+  $('copyRu').addEventListener('click', () => {
+    ['az', 'en'].forEach(l => ['name', 'cat', 'desc', 'tags'].forEach(k => { if (!field(l, k).value.trim()) field(l, k).value = field('ru', k).value; }));
+    status('Пустые поля AZ и EN заполнены текстом из RU — переведите их, если можете.', 'info');
+    preview();
+  });
+
+  // фото: уменьшаем до 900px и сохраняем в WebP прямо в браузере
+  $('photo').addEventListener('change', async () => {
+    const f = $('photo').files[0]; if (!f) return;
+    try {
+      S.photo = await shrink(f); S.img = '';
+      $('photoBox').style.backgroundImage = `url("${S.photo.url}")`; $('photoBox').textContent = ''; $('photoBox').classList.add('has');
+      $('photoUrl').value = '';
+      preview();
+    } catch (e) { status('Не получилось прочитать фото: ' + e.message, 'bad'); }
+  });
+  // имя файла фото — латиницей: «Мяч Лосось» → myach-losos
+  function translit(s) {
+    const T = { а:'a',б:'b',в:'v',г:'g',д:'d',е:'e',ё:'e',ж:'zh',з:'z',и:'i',й:'y',к:'k',л:'l',м:'m',н:'n',о:'o',п:'p',р:'r',с:'s',т:'t',у:'u',ф:'f',х:'h',ц:'ts',ч:'ch',ш:'sh',щ:'sch',ъ:'',ы:'y',ь:'',э:'e',ю:'yu',я:'ya',ə:'e',ı:'i',ö:'o',ü:'u',ğ:'g',ş:'sh',ç:'ch' };
+    return String(s).toLowerCase().split('').map(ch => (ch in T ? T[ch] : ch)).join('').normalize('NFKD');
+  }
+  function shrink(file) {
+    return new Promise((res, rej) => {
+      const url = URL.createObjectURL(file), im = new Image();
+      im.onload = () => {
+        const k = Math.min(1, 900 / Math.max(im.naturalWidth, im.naturalHeight));
+        const c = document.createElement('canvas'); c.width = Math.round(im.naturalWidth * k); c.height = Math.round(im.naturalHeight * k);
+        c.getContext('2d').drawImage(im, 0, 0, c.width, c.height);
+        URL.revokeObjectURL(url);
+        c.toBlob(b => {
+          if (!b) return rej(new Error('формат не поддерживается'));
+          const ext = b.type === 'image/webp' ? 'webp' : 'png';
+          res({ blob: b, url: URL.createObjectURL(b), ext });
+        }, 'image/webp', 0.86);
+      };
+      im.onerror = () => rej(new Error('это не картинка'));
+      im.src = url;
+    });
+  }
+
+  function resetForm() {
+    S.editId = null; S.photo = null; S.img = '';
+    document.querySelectorAll('#formCard input[type=text], #formCard input[type=url], #formCard textarea').forEach(x => { x.value = ''; x.classList.remove('is-invalid'); });
+    $('photo').value = ''; $('baby').checked = false;
+    $('photoBox').style.backgroundImage = ''; $('photoBox').textContent = '🐾'; $('photoBox').classList.remove('has');
+    $('formTitle').textContent = 'Новый товар'; $('publish').textContent = 'Опубликовать';
+    preview();
+  }
+  $('reset').addEventListener('click', () => { resetForm(); status('', ''); });
+
+  function status(msg, kind) {
+    const el = $('status');
+    el.className = 'status'; el.textContent = msg;
+    if (msg) { void el.offsetWidth; el.classList.add('is-on', kind || 'info'); }
+  }
+  function shake(el) { el.classList.remove('shake'); void el.offsetWidth; el.classList.add('shake'); }
+
+  // ---------- GitHub ----------
+  const conn = () => ({ token: $('token').value.trim(), repo: $('repo').value.trim().replace(/^https:\/\/github\.com\//, '').replace(/\/$/, ''), branch: $('branch').value.trim() });
+  async function gh(path, opts) {
+    const c = conn();
+    const r = await fetch(`https://api.github.com/repos/${c.repo}/contents/${path}` + (opts && opts.method ? '' : `?ref=${encodeURIComponent(c.branch)}`), Object.assign({
+      headers: { Authorization: 'Bearer ' + c.token, Accept: 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28' }
+    }, opts || {}));
+    if (r.status === 404 && !(opts && opts.method)) return null;
+    if (!r.ok) {
+      let m = ''; try { m = (await r.json()).message || ''; } catch (e) { /* not json */ }
+      throw new Error(r.status === 401 ? 'токен не подходит (401)' : r.status === 403 ? 'нет прав на запись (403): нужен доступ Contents: Read and write' : r.status === 409 ? 'файл только что изменился — попробуйте ещё раз' : `GitHub ответил ${r.status} ${m}`);
+    }
+    return r.json();
+  }
+  const b64 = str => { const bytes = new TextEncoder().encode(str); let s = ''; for (let i = 0; i < bytes.length; i += 0x8000) s += String.fromCharCode.apply(null, bytes.subarray(i, i + 0x8000)); return btoa(s); };
+  const unb64 = s => new TextDecoder().decode(Uint8Array.from(atob(s.replace(/\s/g, '')), ch => ch.charCodeAt(0)));
+  const blob64 = blob => new Promise(res => { const fr = new FileReader(); fr.onload = () => res(String(fr.result).split(',')[1]); fr.readAsDataURL(blob); });
+  function parseFile(text) {
+    const a = text.indexOf('['), z = text.lastIndexOf(']');
+    if (a < 0 || z < a) return [];
+    const list = JSON.parse(text.slice(a, z + 1));
+    return Array.isArray(list) ? list : [];
+  }
+  const fileText = items => HEAD + 'window.NP_ADDED = ' + JSON.stringify(items, null, 2) + ';\n';
+
+  async function load() {
+    const f = await gh(FILE);
+    S.sha = f ? f.sha : null;
+    S.items = f ? parseFile(unb64(f.content)) : [];
+    renderList();
+  }
+  async function save(items, message) {
+    const f = await gh(FILE);   // свежий sha прямо перед записью
+    const c = conn();
+    await gh(FILE, { method: 'PUT', body: JSON.stringify({ message, content: b64(fileText(items)), branch: c.branch, sha: f ? f.sha : undefined }) });
+    S.items = items; renderList();
+  }
+
+  $('connect').addEventListener('click', async () => {
+    const c = conn();
+    if (!c.token) { shake($('token')); $('token').classList.add('is-invalid'); $('token').focus(); return; }
+    $('connect').disabled = true; status('Подключаюсь…', 'info');
+    try {
+      await load();
+      S.connected = true; $('conn').textContent = 'подключено: ' + c.repo; $('conn').classList.add('on');
+      const keep = $('remember').checked;
+      store.set('token', c.token, keep); store.set('repo', c.repo, true); store.set('branch', c.branch, true); store.set('remember', keep ? '1' : '', true);
+      status('Готово: подключено к ' + c.repo + ' (' + c.branch + ').', 'ok');
+    } catch (e) { S.connected = false; $('conn').textContent = 'не подключено'; $('conn').classList.remove('on'); status('Не удалось подключиться: ' + e.message, 'bad'); }
+    $('connect').disabled = false;
+  });
+
+  function validate() {
+    const bad = [];
+    if (!field('ru', 'name').value.trim()) bad.push(field('ru', 'name'));
+    if (!$('section').value) bad.push($('section'));
+    const url = $('photoUrl').value.trim();
+    if (url && !/^https:\/\/[^\s"'<>()]+$/.test(url)) bad.push($('photoUrl'));
+    bad.forEach(x => { x.classList.add('is-invalid'); shake(x); });
+    if (bad.length) {
+      if (bad[0] === field('ru', 'name')) document.querySelector('#langTabs [data-l="ru"]').click();
+      bad[0].focus();
+      status(bad[0] === $('photoUrl') ? 'Ссылка на фото должна начинаться с https://' : 'Заполните название на русском — без него товар не сохранить.', 'bad');
+    }
+    return !bad.length;
+  }
+
+  $('publish').addEventListener('click', async () => {
+    if (!validate()) return;
+    if (!S.connected) { status('Сначала подключитесь к GitHub внизу страницы — или нажмите «Скачать файл товаров».', 'bad'); $('token').scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+    const btn = $('publish'); btn.disabled = true;
+    try {
+      const c = conn();
+      if (S.photo) {
+        status('Загружаю фото…', 'info');
+        const slug = translit(field('en', 'name').value || field('ru', 'name').value).replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 40) || 'product';
+        const path = IMG_DIR + slug + '-' + Date.now().toString(36) + '.' + S.photo.ext;
+        await gh(path, { method: 'PUT', body: JSON.stringify({ message: 'Admin: photo ' + slug, content: await blob64(S.photo.blob), branch: c.branch }) });
+        S.img = path; S.photo = null;
+      }
+      const p = collect();
+      status('Сохраняю товар…', 'info');
+      await load();   // свежий список: вдруг товары добавляли с другого устройства
+      const items = S.items.filter(x => x.id !== p.id);
+      const at = S.items.findIndex(x => x.id === p.id);
+      if (at >= 0) items.splice(at, 0, p); else items.push(p);
+      await save(items, (at >= 0 ? 'Admin: edit ' : 'Admin: add ') + p.ru.name);
+      resetForm();
+      status('Опубликовано: «' + p.ru.name + '». На сайте появится через 1–2 минуты (после обновления GitHub).', 'ok');
+    } catch (e) { status('Не сохранилось: ' + e.message, 'bad'); }
+    btn.disabled = false;
+  });
+
+  // ---------- list ----------
+  function renderList() {
+    const box = $('list');
+    if (!S.items.length) { box.innerHTML = '<p class="empty">Пока ничего не добавлено.</p>'; return; }
+    box.innerHTML = '';
+    S.items.slice().reverse().forEach(p => {
+      const row = document.createElement('div'); row.className = 'li';
+      const img = document.createElement('div'); img.className = 'li__img';
+      if (p.img) img.style.backgroundImage = `url("${/^https:/.test(p.img) ? p.img : '../' + p.img}")`; else img.textContent = '🐾';
+      const txt = document.createElement('div');
+      const n = document.createElement('div'); n.className = 'li__name'; n.textContent = (p.ru && p.ru.name) || '—';
+      const sec = ((typeof CATALOG_SECTIONS !== 'undefined' && CATALOG_SECTIONS[p.brand]) || []).find(d => d.id === p.section);
+      const m = document.createElement('div'); m.className = 'li__meta'; m.textContent = (BRAND_NAMES[p.brand] || p.brand) + ' → ' + (sec ? sec.ru : p.section) + (p.added ? ' · ' + p.added : '');
+      txt.append(n, m);
+      const btns = document.createElement('div'); btns.className = 'li__btns';
+      const ed = document.createElement('button'); ed.type = 'button'; ed.className = 'btn btn--ghost btn--small'; ed.textContent = 'Изменить';
+      ed.addEventListener('click', () => edit(p));
+      const del = document.createElement('button'); del.type = 'button'; del.className = 'btn btn--ghost btn--small btn--danger'; del.textContent = 'Удалить';
+      del.addEventListener('click', () => remove(p, del));
+      btns.append(ed, del);
+      row.append(img, txt, btns); box.appendChild(row);
+    });
+  }
+  function edit(p) {
+    resetForm();
+    S.editId = p.id; S.img = /^assets\//.test(p.img || '') ? p.img : '';
+    $('brand').value = p.brand; fillSections(p.section); setSpecies(p.species || 'both'); $('baby').checked = !!p.baby;
+    if (p.img && !S.img) $('photoUrl').value = p.img;
+    if (p.img) { $('photoBox').style.backgroundImage = `url("${S.img ? '../' + S.img : p.img}")`; $('photoBox').textContent = ''; $('photoBox').classList.add('has'); }
+    LANGS.forEach(([l]) => { const t = p[l] || {}; field(l, 'name').value = t.name || ''; field(l, 'cat').value = t.cat || ''; field(l, 'desc').value = t.desc || ''; field(l, 'tags').value = (t.tags || []).join(', '); });
+    $('formTitle').textContent = 'Изменить товар'; $('publish').textContent = 'Сохранить изменения';
+    preview(); status('', '');
+    $('formCard').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+  async function remove(p, btn) {
+    if (!confirm('Удалить «' + ((p.ru && p.ru.name) || '') + '» с сайта?')) return;
+    btn.disabled = true;
+    try {
+      await load();
+      await save(S.items.filter(x => x.id !== p.id), 'Admin: remove ' + ((p.ru && p.ru.name) || p.id));
+      if (/^assets\/products\/added\//.test(p.img || '')) {   // фото больше не нужно
+        const f = await gh(p.img);
+        if (f) await gh(p.img, { method: 'DELETE', body: JSON.stringify({ message: 'Admin: remove photo', sha: f.sha, branch: conn().branch }) });
+      }
+      status('Удалено.', 'ok');
+    } catch (e) { status('Не удалось удалить: ' + e.message, 'bad'); btn.disabled = false; }
+  }
+
+  // без токена: скачать файл с текущей карточкой (фото — только по ссылке https)
+  $('download').addEventListener('click', () => {
+    const items = S.items.slice();
+    if (field('ru', 'name').value.trim()) {
+      if (S.photo) { status('Фото с устройства нельзя положить в файл — загрузите его в assets/products/added/ вручную или дайте ссылку https://.', 'info'); }
+      const p = collect(); if (S.photo) p.img = '';
+      const i = items.findIndex(x => x.id === p.id); if (i >= 0) items[i] = p; else items.push(p);
+    }
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([fileText(items)], { type: 'text/javascript' }));
+    a.download = 'catalog-added.js'; a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+  });
+
+  // ---------- start ----------
+  fillSections(); preview();
+  const t = store.get('token'); if (t) $('token').value = t;
+  if (store.get('repo')) $('repo').value = store.get('repo');
+  if (store.get('branch')) $('branch').value = store.get('branch');
+  $('remember').checked = store.get('remember') === '1';
+  if (t) $('connect').click();
+})();
+</script>
+</body>
+</html>

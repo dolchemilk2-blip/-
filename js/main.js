@@ -285,7 +285,36 @@ function buildCatalog() {
     tpl: extra.tpl || [],
     misoko: extra.misoko || []
   };
+  mergeAdded(CATALOG_CACHE);
   return CATALOG_CACHE;
+}
+
+// Товары, добавленные через admin/ (js/catalog-added.js → window.NP_ADDED): каждый встаёт в свой раздел —
+// в первую подходящую группу бренда (тот же раздел и вид), иначе в новую группу с названием раздела.
+// Текст приходит из формы, поэтому экранируется; картинка — только путь assets/… или https-ссылка.
+function mergeAdded(cat) {
+  const list = Array.isArray(window.NP_ADDED) ? window.NP_ADDED : [];
+  const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[ch]));
+  const okImg = s => typeof s === 'string' && /^(assets\/[\w\-./]+|https:\/\/[^\s"'<>()]+)$/.test(s) ? s : '';
+  list.forEach(p => {
+    if (!p || !cat[p.brand] || !p.section || (p.brand === 'tpl' && p.section === 'systems')) return;
+    const def = sectionDef(p.brand, p.section); if (!def) return;
+    const species = p.species === 'cats' || p.species === 'dogs' ? p.species : 'both';
+    const item = { img: okImg(p.img), baby: !!p.baby, added: true };
+    ['az', 'ru', 'en'].forEach(l => {
+      const t = p[l] || p.ru || {};
+      item[l] = { cat: esc(t.cat), name: esc(t.name), desc: esc(t.desc), tags: (t.tags || []).map(esc) };
+    });
+    if (!item.img) item.emoji = species === 'cats' ? '🐱' : species === 'dogs' ? '🐶' : '🐾';
+    if (!item.en.name && !item.img) return;
+    let g = cat[p.brand].find(x => !x.coat && x.sectionId === p.section && (x.species || 'both') === species);
+    if (!g) {
+      const name = { az: def.az, ru: def.ru, en: def.en };
+      g = { group: name, sub: name, species, sectionId: p.section, section: name, items: [] };
+      cat[p.brand].push(g);
+    }
+    g.items.push(item);
+  });
 }
 
 // Оставить группы для выбранного вида (кошки/собаки). species "both"/пусто — показываем всегда.
