@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="css/mobile.css" />
   <link rel="stylesheet" href="css/mobile-home.css" />
   <link rel="stylesheet" href="css/motion-home.css" />
+  <link rel="stylesheet" href="css/feed-calc.css" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 </head>
 <body class="page-enter home">
@@ -225,6 +226,17 @@
       </div>
     </section>
 
+    <!-- ===== Калькулятор кормления (js/feed-calc.js) ===== -->
+    <section class="section feedcalc" id="feeding" aria-labelledby="feedTitle">
+      <div class="container">
+        <div class="home-head">
+          <p class="home-head__tag" data-reveal data-i18n="home.feed.tag">Калькулятор</p>
+          <h2 class="home-head__title" id="feedTitle" data-i18n="home.feed.title">Сколько корма нужно?</h2>
+        </div>
+        <div data-feed-calc></div>
+      </div>
+    </section>
+
     <!-- ===== 4. About NP: values / history / ambassadors / FAQ ===== -->
     <section class="section home-values" id="values" aria-labelledby="valuesTitle">
       <div class="container">
@@ -400,6 +412,7 @@
   <script src="js/home.js"></script>
   <script src="js/mobile.js"></script>
   <script src="js/motion-home.js"></script>
+  <script src="js/feed-calc.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

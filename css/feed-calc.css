@@ -1,0 +1,90 @@
+/* ===== Калькулятор кормления (js/feed-calc.js): главная + окно товара сухого корма ===== */
+.fcalc { --fc-acc: var(--accent, #007a3d); display: grid; gap: 16px; }
+.fcalc__top { display: flex; }
+.fcalc__sp { display: inline-grid; grid-auto-flow: column; gap: 2px; padding: 3px; border-radius: var(--r-pill, 999px); background: var(--paper-3, #e8e8ed); }
+.fcalc__sp[hidden] { display: none; }
+.fcalc__sp button {
+  min-height: 40px; padding: 0 18px; border: 0; border-radius: var(--r-pill, 999px); background: transparent;
+  font: 600 14px/1 var(--font); color: var(--ink-2); cursor: pointer;
+  transition: background-color var(--duration-fast, 250ms) var(--ease-smooth-out), color var(--duration-fast, 250ms) var(--ease-smooth-out), box-shadow var(--duration-fast, 250ms) var(--ease-smooth-out);
+}
+.fcalc__sp button[aria-checked="true"] { background: #fff; color: var(--ink); box-shadow: var(--shadow-thumb); }
+
+.fcalc__grid {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 24px 40px; align-items: center;
+  padding: 28px 32px; border-radius: var(--r-card, 20px); background: #fff; box-shadow: var(--shadow);
+}
+.fcalc__lbl { display: block; margin-bottom: 14px; font: 500 17px/1.3 var(--font); color: var(--ink); }
+
+/* ползунок: зелёная заливка до бегунка (--p ставит JS) */
+.fcalc__range {
+  -webkit-appearance: none; appearance: none; width: 100%; height: 32px; margin: 0; background: transparent; cursor: pointer; touch-action: pan-y;
+}
+.fcalc__range::-webkit-slider-runnable-track {
+  height: 4px; border-radius: 2px;
+  background: linear-gradient(to right, var(--fc-acc) 0 var(--p, 0%), var(--paper-3, #e8e8ed) var(--p, 0%) 100%);
+}
+.fcalc__range::-moz-range-track { height: 4px; border-radius: 2px; background: var(--paper-3, #e8e8ed); }
+.fcalc__range::-moz-range-progress { height: 4px; border-radius: 2px; background: var(--fc-acc); }
+.fcalc__range::-webkit-slider-thumb {
+  -webkit-appearance: none; width: 24px; height: 24px; margin-top: -10px; border-radius: 50%;
+  background: var(--fc-acc); border: 4px solid #fff; box-shadow: 0 0 0 1.5px var(--fc-acc), 0 2px 6px rgba(0, 0, 0, .18);
+  transition: transform var(--spring-bouncy-dur, 420ms) var(--spring-bouncy, ease-out);
+}
+.fcalc__range::-moz-range-thumb {
+  width: 16px; height: 16px; border-radius: 50%; background: var(--fc-acc); border: 4px solid #fff;
+  box-shadow: 0 0 0 1.5px var(--fc-acc), 0 2px 6px rgba(0, 0, 0, .18);
+}
+.fcalc__range:active::-webkit-slider-thumb { transform: scale(1.18); transition-duration: var(--duration-quick, 150ms); }
+.fcalc__range:focus-visible { outline: none; }
+.fcalc__range:focus-visible::-webkit-slider-thumb { box-shadow: 0 0 0 1.5px var(--fc-acc), var(--focus-ring); }
+.fcalc__wval { display: block; margin-top: 6px; text-align: right; font: 700 20px/1.2 var(--font); color: var(--ink); font-variant-numeric: tabular-nums; }
+.fcalc__wval [data-u] { font-weight: 600; }
+
+.fcalc__res { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 20px 28px; align-items: center; }
+.fcalc__hint { display: block; font: 500 13px/1.35 var(--font); color: var(--fc-acc); }
+.fcalc__dose { display: grid; justify-items: center; text-align: center; gap: 2px; }
+.fcalc__dose .fcalc__hint { max-width: 150px; margin-bottom: 6px; }
+.fcalc__num { font: 700 26px/1.1 var(--font); color: var(--ink); font-variant-numeric: tabular-nums; order: -1; margin-top: 4px; }
+.fcalc__num [data-gu] { font-size: 18px; }
+.fcalc__bowl { width: 72px; color: var(--ink); }
+.fcalc__bowl svg { display: block; width: 100%; height: auto; }
+.fcalc__cap { font: 600 14px/1.3 var(--font); color: var(--ink); }
+
+.fcalc__packs-wrap { display: grid; gap: 10px; }
+.fcalc__packs { display: flex; flex-wrap: wrap; gap: 8px; }
+.fcalc__packs button {
+  display: grid; justify-items: center; gap: 4px; min-width: 72px; padding: 10px 10px 8px; border: 1.5px solid var(--hairline-strong);
+  border-radius: 14px; background: #fff; color: var(--ink); font: 600 13px/1 var(--font); cursor: pointer;
+  transition: border-color var(--duration-fast, 250ms) var(--ease-smooth-out), color var(--duration-fast, 250ms) var(--ease-smooth-out), background-color var(--duration-fast, 250ms) var(--ease-smooth-out);
+}
+.fcalc__packs button svg { width: 34px; height: 40px; }
+.fcalc__packs button[aria-checked="true"] { border-color: var(--fc-acc); color: var(--fc-acc); background: var(--accent-soft, #e6f2ea); }
+.fcalc__packs button:focus-visible, .fcalc__sp button:focus-visible { outline: var(--focus-width, 2px) solid var(--focus-color, var(--fc-acc)); outline-offset: 2px; }
+@media (hover: hover) and (pointer: fine) { .fcalc__packs button:not([aria-checked="true"]):hover { border-color: var(--ink-3); } }
+.fcalc__days { font: 700 20px/1.2 var(--font); color: var(--ink); }
+
+.fcalc__note { margin: 0; font: var(--t-footnote); color: var(--ink-2); }
+.fcalc__more summary { cursor: pointer; font: 600 15px/1.3 var(--font); color: var(--fc-acc); min-height: 32px; display: inline-flex; align-items: center; }
+.fcalc__table { width: 100%; max-width: 560px; margin-top: 10px; border-collapse: collapse; font: 400 15px/1.5 var(--font); font-variant-numeric: tabular-nums; }
+.fcalc__table th { font-weight: 600; text-align: center; padding: 6px 8px; border-bottom: 1px solid var(--hairline-strong); }
+.fcalc__table td { text-align: center; padding: 4px 8px; border-bottom: 1px solid var(--hairline); }
+
+/* главная: секция */
+.feedcalc .fcalc { max-width: 1040px; }
+
+/* окно товара: компактнее */
+.pmodal__fcalc { margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--hairline); }
+.pmodal__fcalc-title { margin: 0 0 14px; font: var(--t-headline); letter-spacing: var(--track-headline); }
+.pmodal__fcalc .fcalc__grid { grid-template-columns: 1fr; padding: 20px; background: var(--paper-2); box-shadow: none; }
+
+@media (max-width: 720px) {
+  .fcalc__grid { grid-template-columns: 1fr; padding: 20px 18px; gap: 22px; }
+  .fcalc__res { grid-template-columns: 1fr; justify-items: stretch; gap: 22px; }
+  .fcalc__packs { justify-content: flex-start; }
+  .fcalc__packs button { flex: 1 1 0; min-width: 0; min-height: 76px; }
+  .fcalc__wval { text-align: left; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fcalc__range::-webkit-slider-thumb, .fcalc__sp button, .fcalc__packs button { transition: none; }
+}
