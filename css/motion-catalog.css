@@ -74,11 +74,13 @@
   .cat-result__reset, .range, .np-listpanel__foot .np-btn {
     transition: scale var(--dur-release) var(--ease-out), background-color var(--dur-release) var(--ease-color);
   }
-  .coat-insert:active, .pmodal__sectoggle:active, .m-more:active, .m-search-cancel:active, .np-search__opt:active,
-  .np-li__open:active, .cat-result__reset:active, .range:active, .np-listpanel__foot .np-btn:active {
+  /* js/spring.js presses these on a spring (inline scale every frame) — a CSS transition on scale would smear it */
+  html.spr :is(.coat-insert, .pmodal__sectoggle, .m-more, .m-search-cancel, .np-search__opt, .np-li__open,
+  .cat-result__reset, .range, .np-listpanel__foot .np-btn) { transition: background-color var(--dur-release) var(--ease-color); }
+  html:not(.spr) .coat-insert:active, html:not(.spr) .pmodal__sectoggle:active, html:not(.spr) .m-more:active, html:not(.spr) .m-search-cancel:active, html:not(.spr) .np-search__opt:active, html:not(.spr) .np-li__open:active, html:not(.spr) .cat-result__reset:active, html:not(.spr) .range:active, html:not(.spr) .np-listpanel__foot .np-btn:active {
     scale: var(--press-scale); transition-duration: var(--dur-press);
   }
-  .products .product.is-clickable:active { transform: scale(var(--press-scale)); }
+  html:not(.spr) .products .product.is-clickable:active { transform: scale(var(--press-scale)); }
   .tpl-bottle {
     transition: translate 500ms var(--ease-out) var(--rd, 0ms), opacity 400ms var(--ease-out) var(--rd, 0ms),
                 scale var(--dur-release) var(--ease-out), background-color var(--dur-press) var(--ease-out);

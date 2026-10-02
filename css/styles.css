@@ -50,7 +50,7 @@ p { text-wrap: pretty; }
     box-shadow var(--dur-hover) var(--ease-color),
     transform var(--dur-release) var(--ease-out);
 }
-.btn:active { transform: scale(var(--press-scale)); transition-duration: var(--dur-hover), var(--dur-hover), var(--dur-hover), var(--dur-hover), var(--dur-press); }
+html:not(.spr) .btn:active { transform: scale(var(--press-scale)); transition-duration: var(--dur-hover), var(--dur-hover), var(--dur-hover), var(--dur-hover), var(--dur-press); }
 .btn--primary { background-color: var(--accent); color: #fff; }
 .btn--ghost { background-color: transparent; border-color: var(--hairline-strong); color: var(--accent); }
 .btn--light { background-color: #fff; color: var(--accent-hover); }
@@ -105,7 +105,7 @@ body.modal-open .header, body.modal-open .catalog-bar { -webkit-backdrop-filter:
   padding: 7px 14px; font-weight: 500; font-size: 14px; cursor: pointer; color: var(--ink);
   transition: background-color var(--dur-hover) var(--ease-color), transform var(--dur-release) var(--ease-out);
 }
-.lang__current:active { transform: scale(var(--press-scale)); transition-duration: var(--dur-hover), var(--dur-press); }
+html:not(.spr) .lang__current:active { transform: scale(var(--press-scale)); transition-duration: var(--dur-hover), var(--dur-press); }
 .lang__menu {
   position: absolute; right: 0; top: calc(100% + 8px); z-index: 5;
   background-color: var(--material-thick);
@@ -277,7 +277,7 @@ body.modal-open .header, body.modal-open .catalog-bar { -webkit-backdrop-filter:
     color var(--dur-indicator) var(--ease-in-out),
     transform var(--dur-release) var(--ease-out);
 }
-.tab:active, .brand-tab:active { transform: scale(var(--press-scale)); transition-duration: var(--dur-indicator), var(--dur-indicator), var(--dur-indicator), var(--dur-press); }
+html:not(.spr) .tab:active, html:not(.spr) .brand-tab:active { transform: scale(var(--press-scale)); transition-duration: var(--dur-indicator), var(--dur-indicator), var(--dur-indicator), var(--dur-press); }
 .tab.is-active, .brand-tab.is-active { background-color: var(--accent); color: #fff; }
 @media (hover: hover) and (pointer: fine) {
   .tab:not(.is-active):hover, .brand-tab:not(.is-active):hover { background-color: rgba(0,0,0,.05); }
@@ -333,7 +333,7 @@ body.modal-open .header, body.modal-open .catalog-bar { -webkit-backdrop-filter:
     opacity var(--dur-hover) var(--ease-color),
     transform var(--dur-release) var(--ease-out);
 }
-.species__btn:active { transform: scale(var(--press-scale)); transition-duration: var(--dur-indicator), var(--dur-indicator), var(--dur-indicator), var(--dur-hover), var(--dur-press); }
+html:not(.spr) .species__btn:active { transform: scale(var(--press-scale)); transition-duration: var(--dur-indicator), var(--dur-indicator), var(--dur-indicator), var(--dur-hover), var(--dur-press); }
 .species__btn.is-active { background-color: #fff; color: var(--ink); box-shadow: var(--shadow-thumb); }
 .species__ico { font-size: 15px; line-height: 1; }
 .species__btn svg { width: 18px; height: 18px; flex: none; }
@@ -390,7 +390,7 @@ body.modal-open .header, body.modal-open .catalog-bar { -webkit-backdrop-filter:
     color var(--dur-hover) var(--ease-color),
     transform var(--dur-release) var(--ease-out);
 }
-.cat-chip:active { transform: scale(var(--press-scale)); transition-duration: var(--dur-hover), var(--dur-hover), var(--dur-hover), var(--dur-press); }
+html:not(.spr) .cat-chip:active { transform: scale(var(--press-scale)); transition-duration: var(--dur-hover), var(--dur-hover), var(--dur-hover), var(--dur-press); }
 .cat-chip.is-active, .cat-chip[aria-current="true"] { background-color: var(--ink); border-color: var(--ink); color: #fff; }
 @media (hover: hover) and (pointer: fine) {
   .cat-chip:hover { border-color: var(--brand-ink); color: var(--brand-ink); }
@@ -552,7 +552,7 @@ body.modal-open .catalog-bar { transform: translateY(calc(-1 * var(--sticky-offs
 }
 .product__open::after { content: ''; position: absolute; inset: 0; z-index: 1; border-radius: var(--r-card); }
 .product__open:focus-visible { outline: none; }
-.product.is-clickable:active { transform: scale(var(--press-scale-card)); transition-duration: var(--dur-press); }
+html:not(.spr) .product.is-clickable:active { transform: scale(var(--press-scale-card)); transition-duration: var(--dur-press); }
 .product__more {
   margin-top: 14px; display: inline-flex; align-items: center; gap: 4px;
   color: var(--brand-ink); font-weight: 500; font-size: 14px; font-family: var(--head);
@@ -823,7 +823,7 @@ body.modal-open .tpl-bottle__img, body.modal-open .tpl-bottle__img::after { anim
     color var(--dur-hover) var(--ease-color),
     transform var(--dur-release) var(--ease-out);
 }
-.brand-chip:active { transform: scale(var(--press-scale)); transition-duration: var(--dur-hover), var(--dur-hover), var(--dur-hover), var(--dur-press); }
+html:not(.spr) .brand-chip:active { transform: scale(var(--press-scale)); transition-duration: var(--dur-hover), var(--dur-hover), var(--dur-hover), var(--dur-press); }
 @media (hover: hover) and (pointer: fine) {
   .brand-chip:hover { background-color: var(--accent); color: #fff; border-color: var(--accent); }
 }

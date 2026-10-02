@@ -58,7 +58,7 @@ a, button, label, summary, [role="button"], [role="tab"], [role="radio"], [role=
       transform var(--dur-release) var(--ease-out);
   }
   .nav-lang__btn[aria-pressed="true"] { background-color: #fff; color: var(--ink); box-shadow: var(--shadow-thumb); }
-  .nav-lang__btn:active { transform: scale(var(--press-scale)); transition-duration: var(--dur-hover), var(--dur-hover), var(--dur-press); }
+  html:not(.spr) .nav-lang__btn:active { transform: scale(var(--press-scale)); transition-duration: var(--dur-hover), var(--dur-hover), var(--dur-press); }
 
   .nav-scrim {
     position: fixed; inset: var(--header-h) 0 0 0; z-index: 98;

@@ -23,7 +23,7 @@
   transition: fill 150ms var(--ease-out); }
 .np-heart[aria-pressed="true"] { color: var(--like-color); }
 .np-heart[aria-pressed="true"] svg { fill: currentColor; }
-.np-heart:active { transform: scale(var(--press-scale, .97)); transition-duration: var(--dur-press); }
+html:not(.spr) .np-heart:active { transform: scale(var(--press-scale, .97)); transition-duration: var(--dur-press); }
 .np-heart.is-pop-start { transform: scale(.85); transition: none; }
 .np-heart:focus-visible, .np-fab:focus-visible, .np-listpanel button:focus-visible, .np-toast__undo:focus-visible {
   outline: var(--focus-ring, 2px solid currentColor); outline-offset: 2px;
@@ -57,7 +57,7 @@
 }
 .np-toast__undo[hidden] { display: none; }
 .np-toast__undo { transition: background-color var(--dur-hover) var(--ease-out), transform var(--dur-release) var(--ease-out); }
-.np-toast__undo:active { transform: scale(var(--press-scale, .97)); transition-duration: var(--dur-hover), var(--dur-press); }
+html:not(.spr) .np-toast__undo:active { transform: scale(var(--press-scale, .97)); transition-duration: var(--dur-hover), var(--dur-press); }
 @media (hover: hover) and (pointer: fine) { .np-toast__undo:hover { background: rgba(255,255,255,.24); } }
 
 /* --- плавающая кнопка --- */
@@ -83,7 +83,7 @@
   transition: transform var(--dur-like-pop) var(--like-pop-ease), opacity var(--dur-pop-in) var(--ease-out), filter var(--dur-pop-in) var(--ease-out);
 }
 .np-fab__count.is-pop-start { transform: translateY(4px) scale(.8); opacity: .4; filter: blur(2px); transition: none; }
-.np-fab:active { transform: scale(var(--press-scale, .97)); transition-duration: var(--dur-press); }
+html:not(.spr) .np-fab:active { transform: scale(var(--press-scale, .97)); transition-duration: var(--dur-press); }
 @media (max-width: 640px) {
   .np-fab__label { display: none; }
   .np-fab { padding: 0 8px 0 14px; }
@@ -168,7 +168,7 @@ html.np-list-open { overflow: hidden; }
   transition: background-color var(--dur-hover) var(--ease-out), transform var(--dur-release) var(--ease-out);
 }
 .np-btn--primary { background: var(--accent, #1d1d1f); border-color: transparent; color: var(--white, #fff); }
-.np-btn:active { transform: scale(var(--press-scale, .97)); transition-duration: var(--dur-press); }
+html:not(.spr) .np-btn:active { transform: scale(var(--press-scale, .97)); transition-duration: var(--dur-press); }
 
 /* --- системные настройки --- */
 @media (prefers-reduced-motion: reduce) {

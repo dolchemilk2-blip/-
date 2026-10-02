@@ -44,7 +44,7 @@
     border: 0; border-radius: 50%; background-color: var(--tint-soft); color: var(--ink); cursor: pointer;
     transition: transform var(--dur-release) var(--ease-out), background-color var(--dur-tint) var(--ease-color);
   }
-  .m-search-btn:active { transform: scale(var(--press-scale)); transition-duration: var(--dur-press), var(--dur-tint); }
+  html:not(.spr) .m-search-btn:active { transform: scale(var(--press-scale)); transition-duration: var(--dur-press), var(--dur-tint); }
 
   /* ---------- D3 Sticky chip row (right under the header) ---------- */
   .cat-nav:not([hidden]) { padding: 6px 0; gap: 8px; }

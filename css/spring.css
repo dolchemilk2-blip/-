@@ -1,0 +1,72 @@
+/* ===== Springs — shared CSS for js/spring.js (both pages; loaded right after tokens.css) =====
+   Ported from «Монтажка». Durations / curves: transitions.dev tokens + --spring-* (exact springs, set by spring.js). */
+
+/* ---------- Number pop-in (transitions.dev): spring.js splits the text into digit cells ----------
+   .t-still — the digit did not change; .is-tick — the number changes more often than every 140ms, digits only tick;
+   .t-flow — a number inside running text (the group stays inline and wraps like text). */
+:root {
+  --digit-dur: 500ms;
+  --digit-distance: 8px;
+  --digit-stagger: 70ms;
+  --digit-blur: 2px;
+  --digit-ease: cubic-bezier(0.34, 1.45, 0.64, 1);
+  --digit-dir-x: 0;
+  --digit-dir-y: 1;
+}
+@keyframes t-digit-pop-in {
+  0% {
+    transform: translate(calc(var(--digit-distance) * var(--digit-dir-x)), calc(var(--digit-distance) * var(--digit-dir-y)));
+    opacity: 0;
+    filter: blur(var(--digit-blur));
+  }
+  100% { transform: translate(0, 0); opacity: 1; filter: blur(0); }
+}
+@keyframes t-digit-tick { 0% { transform: translateY(calc(var(--digit-distance) * .4 * var(--digit-dir-y))); opacity: .5; } }
+.t-digit-group:not(.t-flow) { display: inline-flex; align-items: baseline; }
+.t-digit { display: inline-block; white-space: pre; }   /* no will-change: the browser promotes a digit only while it moves */
+.t-digit-group.is-animating .t-digit { animation: t-digit-pop-in var(--digit-dur) var(--digit-ease) both; }
+.t-digit-group.is-animating .t-digit[data-stagger="1"] { animation-delay: var(--digit-stagger); }
+.t-digit-group.is-animating .t-digit[data-stagger="2"] { animation-delay: calc(var(--digit-stagger) * 2); }
+.t-digit-group.is-animating .t-digit[data-stagger="3"] { animation-delay: calc(var(--digit-stagger) * 3); }
+.t-digit-group.is-tick .t-digit { animation: t-digit-tick 160ms var(--ease-smooth-out) both; }
+.t-digit-group .t-digit.t-still, .t-digit-group .t-digit.t-txt { animation: none; }
+
+/* ---------- Success check (transitions.dev): the plate pops, the mark is drawn left to right ---------- */
+@keyframes t-check-in {
+  from { clip-path: inset(0 100% 0 0); transform: rotate(-24deg); filter: blur(4px); opacity: 0; }
+  40% { opacity: 1; }
+  to { clip-path: inset(0 0 0 0); transform: none; filter: none; }
+}
+@keyframes t-check-plate { from { transform: scale(.86); } }
+
+/* ---------- Icon swap (transitions.dev): two icons in one cell, the leaving one shrinks and blurs ---------- */
+.t-swap { display: inline-grid; place-items: center; }
+.t-swap > * {
+  grid-area: 1 / 1;
+  transition:
+    opacity var(--duration-fast) ease-in-out,
+    transform var(--spring-bouncy-dur) var(--spring-bouncy),
+    filter var(--duration-fast) ease-in-out;
+}
+.t-swap[data-state="a"] > [data-icon="b"], .t-swap[data-state="b"] > [data-icon="a"] {
+  opacity: 0; transform: scale(.25); filter: blur(var(--blur-small));
+}
+
+/* ---------- Tilt glare: add .spr-glare to an element tilted by NPSpring.tilt (uses ::after) ---------- */
+.spr-glare { position: relative; }
+.spr-glare::after {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+  background: radial-gradient(420px circle at var(--gx, 50%) var(--gy, 50%), rgba(255, 255, 255, .38), transparent 55%);
+  opacity: 0; transition: opacity var(--duration-medium) var(--ease-smooth-out);
+}
+.spr-glare.is-tilting::after { opacity: 1; transition-duration: var(--duration-fast); }
+
+/* ---------- Sliding indicator base (NPSpring.indicator) ---------- */
+.spr-ind { position: absolute; left: 0; top: 0; pointer-events: none; transform-origin: 50% 50%; will-change: transform; }
+
+@media (prefers-reduced-motion: reduce) {
+  .t-digit-group.is-animating .t-digit, .t-digit-group.is-tick .t-digit { animation: none; }
+  .t-swap > * { transition: opacity 150ms ease-out; }
+  .t-swap[data-state="a"] > [data-icon="b"], .t-swap[data-state="b"] > [data-icon="a"] { transform: none; filter: none; }
+  .spr-glare::after { display: none; }
+}
