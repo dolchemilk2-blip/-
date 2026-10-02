@@ -274,6 +274,35 @@ Object.assign(TRANSLATIONS.en, {
     seg.addEventListener('keydown', () => sec.classList.add('is-kbd'));
     seg.addEventListener('change', sync);
     sync();
+    // Пилюля на пружине «Монтажки» (NPSpring.indicator): ловится на лету, тянется каплей; клавиатура, первое
+    // размещение, resize и шрифты — мгновенно. Без ядра пружин — прежнее CSS-положение по :has.
+    const ind = seg.querySelector('.coat-seg__ind');
+    const S = window.NPSpring;
+    if (!ind || !S || !S.indicator) return;
+    const pill = S.indicator(ind, { damping: 0.74, response: 0.42, height: false });
+    const place = instant => {
+      const inp = sec.querySelector('input[name="coat"]:checked');
+      const lab = inp && seg.querySelector('label[for="' + inp.id + '"]');
+      if (!lab || !lab.offsetWidth) return;
+      pill.move({ x: lab.offsetLeft, y: 0, w: lab.offsetWidth }, instant);
+    };
+    seg.classList.add('is-spring');
+    place(true);
+    seg.addEventListener('change', () => place(sec.classList.contains('is-kbd')));
+    let raf = 0;
+    const again = () => { if (!raf) raf = requestAnimationFrame(() => { raf = 0; place(true); }); };
+    window.addEventListener('resize', again);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(again);
+  }
+
+  // --- Плитки брендов и категорий: наклон к курсору на пружине (NPSpring.tilt, только мышь), блик на брендах ---
+  // Наклон пишет inline transform — у плиток нет своего transform (нажатие — свойство scale, подъём — translate).
+  function initTilt() {
+    const S = window.NPSpring;
+    if (!S || !S.tilt || !window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+    document.querySelectorAll('.lineup__grid .tile').forEach(el => el.classList.add('spr-glare'));
+    S.tilt('.lineup__grid', '.tile', 5);
+    S.tilt('.cats__grid', '.cat-tile', 4);
   }
 
   // --- Вкладки «О Nature's Protection»: ARIA, стрелки (клик обрабатывает main.js) и движение «Монтажки» ---
@@ -437,6 +466,7 @@ Object.assign(TRANSLATIONS.en, {
     initReveal();
     initTabs();
     initFaq();
+    initTilt();
     initForm();
     initBurger();
     initHeader();

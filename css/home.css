@@ -413,3 +413,15 @@ html.spr .home-values .brand-panel.is-active { animation: none; }
   .faq.is-spring .faq__a, .faq.is-spring .faq__item summary::after { transition: none; }
   .faq.is-spring .faq__in { filter: none; transition: opacity 150ms var(--ease-out); }
 }
+
+/* ---------- Coat segment pill + tile tilt on springs (home.js initCoat / initTilt) ----------
+   The pill's x/width are written inline every frame by NPSpring.indicator — no CSS transition on transform.
+   Tiles: NPSpring.tilt owns `transform`, the press spring owns `scale`; so no transform transition here, and the
+   card hover lift rides the `translate` property on a spring. */
+.coat-seg.is-spring .coat-seg__ind { left: 0; transition: background-color var(--dur-tint) var(--ease-color); }
+html.spr .tile { transition: none; }
+html.spr .cat-tile { transition: box-shadow var(--duration-fast) var(--ease-smooth-out), translate var(--spring-snappy-dur) var(--spring-snappy); }
+html.spr .tile__img, html.spr .cat-tile__img { transition: transform var(--spring-snappy-dur) var(--spring-snappy), translate var(--spring-snappy-dur) var(--spring-snappy); }
+@media (hover: hover) and (pointer: fine) {
+  html.spr .cat-tile:hover { translate: 0 -2px; }
+}
