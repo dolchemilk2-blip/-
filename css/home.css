@@ -425,3 +425,11 @@ html.spr .tile__img, html.spr .cat-tile__img { transition: transform var(--sprin
 @media (hover: hover) and (pointer: fine) {
   html.spr .cat-tile:hover { translate: 0 -2px; }
 }
+
+/* ---------- Contact form: success note with a drawn check (home.js initForm) ---------- */
+.form__ok.is-done::before {
+  content: ""; display: inline-block; width: 18px; height: 18px; margin: 0 8px -3px 0; border-radius: 50%;
+  background: var(--accent) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%23fff' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 14px no-repeat;
+  animation: t-check-plate var(--duration-very-slow) var(--ease-bounce) both;
+}
+@media (prefers-reduced-motion: reduce) { .form__ok.is-done::before { animation: none; } }

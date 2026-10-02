@@ -147,33 +147,46 @@
   S.lean = { add: function (sel) { LEAN.push(sel); leanSel = LEAN.join(','); } };
   /** bigger things are heavier: they give less */
   function pressScale(el) { var w = el.offsetWidth; return w < 48 ? 0.9 : w < 140 ? 0.95 : w < 320 ? 0.97 : 0.985; }
-  var pressed = null;
+  // Touch: like a scroll view on iOS, the press waits 70ms — a finger that starts scrolling never squeezes the card
+  // it happened to land on (that squeeze + spring-back on every scroll read as stutter). A quick tap still shows the
+  // full press: it starts on release and springs straight back.
+  var pressed = null, pending = null;
+  function press(el, x, y) {
+    var T = tform(el), r = el.getBoundingClientRect();
+    if (Math.abs(T.s.v - 1) < 0.002 && r.width) {   // shrinks toward the finger
+      el.style.transformOrigin = ((x - r.left) / r.width * 100).toFixed(1) + '% ' + ((y - r.top) / r.height * 100).toFixed(1) + '%';
+      T.origin = true;
+    }
+    mvTo(T.s, pressScale(el), { damping: 1, response: 0.16 });
+    pressed = { el: el, r: r };
+  }
   function release() {
     if (!pressed) return;
     mvTo(tform(pressed.el).s, 1, { damping: 0.58, response: 0.42 });
     pressed = null;
   }
+  function drop() { if (pending) { clearTimeout(pending.t); pending = null; } }
   document.addEventListener('pointerdown', function (e) {
     if (e.button !== 0 || reduce || !e.target.closest) return;
     var el = e.target.closest(pressSel);
     if (!el || el.disabled || el.matches(':disabled, [aria-disabled="true"], [data-no-press]')) return;
-    release();
-    var T = tform(el), r = el.getBoundingClientRect();
-    if (Math.abs(T.s.v - 1) < 0.002 && r.width) {   // shrinks toward the finger
-      el.style.transformOrigin = ((e.clientX - r.left) / r.width * 100).toFixed(1) + '% ' + ((e.clientY - r.top) / r.height * 100).toFixed(1) + '%';
-      T.origin = true;
-    }
-    mvTo(T.s, pressScale(el), { damping: 1, response: 0.16 });
-    pressed = { el: el, r: r };
+    release(); drop();
+    if (e.pointerType !== 'touch') { press(el, e.clientX, e.clientY); return; }
+    pending = { el: el, x: e.clientX, y: e.clientY, t: setTimeout(function () { var p = pending; pending = null; if (p) press(p.el, p.x, p.y); }, 70) };
   }, true);
-  document.addEventListener('pointerup', release, true);
-  document.addEventListener('pointercancel', release, true);
-  document.addEventListener('dragstart', release, true);
+  document.addEventListener('pointerup', function () {
+    if (pending) { var p = pending; drop(); press(p.el, p.x, p.y); tform(p.el).s.vel = -(1 - pressScale(p.el)) * 25; }   // tap: dip and spring back
+    release();
+  }, true);
+  document.addEventListener('pointercancel', function () { drop(); release(); }, true);
+  document.addEventListener('dragstart', function () { drop(); release(); }, true);
   document.addEventListener('pointermove', function (e) {   // finger slid off the control — it lets go, like iOS
+    if (pending && Math.abs(e.clientX - pending.x) + Math.abs(e.clientY - pending.y) > 8) drop();
     if (!pressed) return;
     var r = pressed.r, pad = 14;
     if (e.clientX < r.left - pad || e.clientX > r.right + pad || e.clientY < r.top - pad || e.clientY > r.bottom + pad) release();
   }, { passive: true });
+  window.addEventListener('scroll', function () { if (pending) drop(); }, { passive: true, capture: true });
 
   // lean: small controls drift toward the mouse and settle back softly
   (function () {

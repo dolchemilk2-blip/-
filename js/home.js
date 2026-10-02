@@ -435,7 +435,27 @@ Object.assign(TRANSLATIONS.en, {
       const href = 'mailto:info@naturesprotection.az?subject=' + encodeURIComponent(t('home.contact.subject')) +
         '&body=' + encodeURIComponent(body);
       try { window.location.href = href; } catch (e) { /* ignore */ }
+      // «Монтажка»: success — the note rises in with a drawn check, the button label swaps for a moment
+      const S = window.NPSpring, ok = document.getElementById('formOk'), btn = form.querySelector('[type="submit"]');
+      setTimeout(() => {   // main.js shows #formOk in its own submit handler, which runs after this one
+        if (!S || !ok || ok.hidden) return;
+        ok.classList.remove('is-done'); void ok.offsetWidth; ok.classList.add('is-done');
+        S.enter(ok, { opacity: 0, transform: 'translateY(8px) scale(0.98)', filter: 'blur(3px)' }, [0.8, 0.45]);
+        if (btn && !btn._label) {
+          btn._label = btn.textContent;
+          S.swapText(btn, '✓');
+          setTimeout(() => { S.swapText(btn, btn._label); btn._label = null; }, 2200);
+        }
+      }, 0);
     });
+    // invalid submit: the first empty / wrong field shivers (the browser shows its own hint next to it)
+    let shookAt = 0;
+    form.addEventListener('invalid', e => {
+      const now = performance.now();
+      if (now - shookAt < 300 || !window.NPSpring) return;   // one shake per attempt, on the first invalid field
+      shookAt = now;
+      NPSpring.shake(e.target);
+    }, true);
   }
 
   // --- Бургер: закрытие по Escape и при уходе фокуса ---
