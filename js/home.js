@@ -358,6 +358,44 @@ Object.assign(TRANSLATIONS.en, {
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(again);
   }
 
+  // --- FAQ: раскрывашка «Монтажки» (transitions.dev accordion) ---
+  // <details> остаётся (семантика, поиск по странице), но открытие/закрытие ведём сами: высота — grid-template-rows
+  // 0fr → 1fr на --spring-smooth, «+» поворачивается на --spring-bouncy, текст проявляется из лёгкого blur.
+  // Закрытие сначала проигрывается, потом details закрывается. Повторный клик ловит переход на лету (CSS-переход
+  // стартует с текущего значения). Клавиатура (Enter/Space на summary) — мгновенно.
+  function initFaq() {
+    const faq = document.querySelector('.home-values .faq');
+    if (!faq) return;
+    faq.classList.add('is-spring');
+    const items = Array.from(faq.querySelectorAll('.faq__item'));
+    items.forEach(d => {
+      if (d.open) d.setAttribute('data-open', '');
+      const sum = d.querySelector('summary'), a = d.querySelector('.faq__a');
+      if (!sum || !a) return;
+      let shut = 0;
+      const finish = () => { clearTimeout(shut); shut = 0; if (!d.hasAttribute('data-open')) d.open = false; };
+      a.addEventListener('transitionend', e => { if (e.target === a && e.propertyName === 'grid-template-rows') finish(); });
+      sum.addEventListener('click', e => {
+        e.preventDefault();
+        const open = !d.hasAttribute('data-open'), instant = e.detail === 0;
+        d.classList.toggle('is-instant', instant);
+        if (open) {
+          clearTimeout(shut); shut = 0;
+          if (!d.open) { d.open = true; void a.offsetHeight; }   // одно чтение: стартовое 0fr уже посчитано
+          d.setAttribute('data-open', '');
+        } else {
+          d.removeAttribute('data-open');
+          if (instant) finish(); else { clearTimeout(shut); shut = setTimeout(finish, 700); }
+        }
+      });
+      // Открыли не мы (поиск по странице и т.п.) — просто догоняем состояние
+      d.addEventListener('toggle', () => {
+        if (d.open && !d.hasAttribute('data-open')) { d.classList.add('is-instant'); d.setAttribute('data-open', ''); }
+        else if (!d.open) d.removeAttribute('data-open');
+      });
+    });
+  }
+
   // --- Форма: честная отправка через почтовую программу (main.js потом показывает #formOk и сбрасывает) ---
   function initForm() {
     const form = document.getElementById('contactForm');
@@ -398,6 +436,7 @@ Object.assign(TRANSLATIONS.en, {
     predecodeSlides();
     initReveal();
     initTabs();
+    initFaq();
     initForm();
     initBurger();
     initHeader();

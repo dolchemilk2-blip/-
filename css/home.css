@@ -393,3 +393,23 @@ html:not(.spr) .cat-tile:active { transform: scale(var(--press-scale-card)); tra
 .home-values .tabs.spr-lit .brand-tab { color: var(--ink); transition: background-color var(--dur-hover) var(--ease-color); }
 .home-values .tabs.spr-lit .brand-tab.is-lit { color: #fff; }
 html.spr .home-values .brand-panel.is-active { animation: none; }
+
+/* ---------- FAQ accordion (home.js initFaq; Монтажка .acc) ----------
+   Height: grid-template-rows 0fr → 1fr on the smooth spring; the "+" turns on the bouncy one; the answer fades in
+   from a 2px blur. [data-open] drives it — <details open> stays set while the close plays out. */
+.faq.is-spring .faq__a { display: grid; grid-template-rows: 0fr; transition: grid-template-rows var(--spring-smooth-dur, 380ms) var(--spring-smooth, var(--ease-smooth-out)); }
+.faq.is-spring .faq__item[data-open] .faq__a { grid-template-rows: 1fr; }
+.faq.is-spring .faq__in {
+  overflow: hidden; min-height: 0; opacity: 0; filter: blur(var(--blur-small, 2px));
+  transition: opacity var(--duration-fast, 250ms) var(--ease-smooth-out), filter var(--duration-fast, 250ms) var(--ease-smooth-out);
+}
+.faq.is-spring .faq__item[data-open] .faq__in { opacity: 1; filter: none; }
+.faq.is-spring .faq__item summary::after { transition: transform var(--spring-bouncy-dur, 420ms) var(--spring-bouncy, var(--ease-bounce)); }
+.faq.is-spring .faq__item[open]:not([data-open]) summary::after { transform: none; }
+.faq.is-spring .faq__item[data-open] summary::after { transform: rotate(45deg); }
+.faq.is-spring .faq__item.is-instant :is(.faq__a, .faq__in),
+.faq.is-spring .faq__item.is-instant summary::after { transition: none; }
+@media (prefers-reduced-motion: reduce) {
+  .faq.is-spring .faq__a, .faq.is-spring .faq__item summary::after { transition: none; }
+  .faq.is-spring .faq__in { filter: none; transition: opacity 150ms var(--ease-out); }
+}
