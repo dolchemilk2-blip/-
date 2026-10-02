@@ -1,6 +1,6 @@
 // ===== Catalog motion on phones (≤720px) — loaded after js/mobile.js, BEFORE js/main.js =====
-// Styles: css/motion-catalog.css. Exposes window.NPMotion { clamp, sheetDrag }.
-// Rules: transitions (interruptible) over keyframes, keyboard-initiated = instant, reduced motion = no movement.
+// Styles: css/motion-catalog.css. Exposes window.NPMotion { clamp, sheetDrag }. Physics: window.NPSpring (spring.js).
+// Rules: springs / transitions (interruptible) over keyframes, keyboard-initiated = instant, reduced motion = no movement.
 (function () {
   const mq = window.matchMedia('(max-width: 720px)');
   const rmq = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -25,7 +25,7 @@
     if ((e.key === 'Enter' || e.key === ' ') && e.target.closest && e.target.closest('.coat-insert[data-m]')) instantOnce(e.target);
   }, true);
 
-  // ---------- clamp: animate a line-clamped block's height (open 300ms / close 220ms, --ease-out) ----------
+  // ---------- clamp: animate a line-clamped block's height (opens on the smooth spring, closes in 220ms) ----------
   // apply(state) sets the classes of the final state; closing keeps the open classes until the end so the
   // text is not cut before the box has shrunk.
   M.clamp = function (el, open, instant, apply) {
@@ -36,18 +36,19 @@
     const h1 = el.getBoundingClientRect().height;
     if (!open) apply(true);
     if (Math.abs(h1 - h0) < 2) { apply(open); return; }
-    const dur = open ? 300 : 220;
+    const sp = open && window.NPSpring ? NPSpring.ease(1, 0.38) : { duration: 220, easing: 'cubic-bezier(0.22, 1, 0.36, 1)' };
+    const dur = sp.duration;
     const unmask = open && el.classList.contains('pmodal__desc');
     el.classList.add('m-clamp-anim');
     if (unmask) el.classList.add('m-unmask');
     el.style.maxHeight = h0 + 'px';
     void el.offsetHeight;
-    el.style.transition = 'max-height ' + dur + 'ms var(--ease-out)';
+    el.style.transition = 'max-height ' + dur + 'ms ' + sp.easing;
     el.style.maxHeight = h1 + 'px';
     let maskAnim = null;
     if (unmask && el.animate) {
       maskAnim = el.animate([{ maskSize: '100% 100%', webkitMaskSize: '100% 100%' }, { maskSize: '100% 400%', webkitMaskSize: '100% 400%' }],
-        { duration: dur, easing: 'cubic-bezier(0.23, 1, 0.32, 1)', fill: 'forwards' });
+        { duration: dur, easing: sp.easing, fill: 'forwards' });
     }
     const done = () => {
       clearTimeout(t);
@@ -64,30 +65,46 @@
     el._mClamp = done;
   };
 
-  // ---------- sheetDrag: drag-to-dismiss for a bottom sheet ----------
-  // Follows the finger 1:1 downward, rubber-bands upward, dismisses on v > 0.11 px/ms or > 25% of the height,
-  // otherwise springs back (--spring). Never steals the inner scroll: a drag starts only in the top zone
-  // (handle / header) or when the touched scroller is at its top.
-  function rubber(x, dim) { return dim * (1 - 1 / (x * 0.55 / dim + 1)); }
+  // ---------- sheetDrag: drag-to-dismiss for a bottom sheet («Монтажка» sheetDrag, on NPSpring) ----------
+  // The sheet follows the finger 1:1 downward and rubber-bands upward. On release it keeps the finger's speed:
+  // where the throw would land (Apple's momentum projection, project(v, .998)) past half the height, or a flick
+  // faster than 900px/s, sends it off-screen on a spring that starts with that velocity — the close itself
+  // happens when it has left (o.close(true): "swiped", no exit motion needed). Otherwise it springs back
+  // (damping .8, response .32) with the same velocity. The backdrop follows the sheet. A sheet still travelling
+  // (opening, springing back, flying out) can be caught mid-way: the drag starts from where it is.
+  // Never steals the inner scroll: a drag starts only in the top zone (handle / header) or when the touched
+  // scroller is at its top. Same API as before: {el, back, canStart, skip, zone, scroller, close} → {reset}.
+  const S = window.NPSpring;
+  const sheetY = el => { const t = getComputedStyle(el).transform; return t && t !== 'none' ? new DOMMatrixReadOnly(t).m42 : 0; };
   M.sheetDrag = function (o) {
     const el = o.el;
     if (!el || el._mDrag) return;
     el._mDrag = true;
-    let st = null, relT = 0;
+    let st = null, out = false, h = 400;
     const back = () => (o.back ? o.back() : null);
     const clearInline = () => {
-      el.style.transition = ''; el.style.transform = '';
+      el.style.transition = ''; el.style.transform = ''; el.classList.remove('m-dragging');
       const b = back(); if (b) { b.style.transition = ''; b.style.opacity = ''; }
     };
+    const owner = { render() {
+      const y = m.v, moving = S.moving(m);
+      if (out && (y >= h || !moving)) {           // it has left the screen: close for real, then let go of it
+        out = false; S.set(m, 0); o.close(true); clearInline(); return;
+      }
+      if (!st && !moving && Math.abs(y) < 0.5) { clearInline(); return; }   // at rest: back to the CSS state
+      el.style.transform = 'translate3d(0,' + y.toFixed(2) + 'px,0)';
+      const b = back(); if (b) b.style.opacity = y > 0.5 ? Math.max(0, 1 - y / h).toFixed(3) : '';
+    } };
+    const m = S.mv(0, 0.3, owner);
     el.addEventListener('touchstart', e => {
       st = null;
-      if (!phone() || e.touches.length !== 1 || !o.canStart()) return;
+      if (!phone() || e.touches.length !== 1 || out || !o.canStart()) return;
       if (o.skip && e.target.closest(o.skip)) return;
       const y = e.touches[0].clientY;
       const zone = y - el.getBoundingClientRect().top < (o.zone || 56);
       const sc = o.scroller ? o.scroller(e.target) : null;
       if (!zone && sc && sc.scrollTop > 0) return;
-      st = { y0: y, zone, sc, active: false, h: el.offsetHeight, s: [[e.timeStamp, y]], dy: 0 };
+      st = { y0: y, zone, sc, active: false, hist: [{ t: performance.now(), x: 0, y }] };
     }, { passive: true });
     el.addEventListener('touchmove', e => {
       if (!st) return;
@@ -97,49 +114,38 @@
         if (Math.abs(dy) < 6) return;
         if (dy < 0 && !st.zone) { st = null; return; }            // an upward swipe in the content scrolls it
         if (dy > 0 && !st.zone && st.sc && st.sc.scrollTop > 0) { st = null; return; }
-        st.active = true;
-        clearTimeout(relT);
-        el.classList.add('m-dragging');
-        el.style.transition = 'none';
+        // caught: start from where the sheet is now (mid-opening transition or mid-spring) and stay under the
+        // finger from its touch-down point (the browser holds back the first few px of a touch as slop)
+        st.active = true; h = el.offsetHeight || 400;
+        const cur = S.moving(m) ? m.v : sheetY(el);
+        el.getAnimations().forEach(a => a.cancel());
+        el.style.transition = 'none'; el.classList.add('m-dragging');
         const b = back(); if (b) b.style.transition = 'none';
+        st.base = cur;
       }
       if (e.cancelable) e.preventDefault();
-      st.dy = dy;
-      st.s.push([e.timeStamp, y]);
-      while (st.s.length > 2 && e.timeStamp - st.s[0][0] > 100) st.s.shift();
-      const ty = dy >= 0 ? dy : -rubber(-dy, 64);
-      el.style.transform = 'translate3d(0,' + ty.toFixed(1) + 'px,0)';
-      const b = back(); if (b) b.style.opacity = String(1 - Math.min(1, Math.max(0, dy) / st.h) * 0.85);
+      st.hist.push({ t: performance.now(), x: 0, y }); if (st.hist.length > 8) st.hist.shift();
+      const ty = st.base + dy;
+      S.set(m, ty >= 0 ? ty : -S.rubber(-ty, 90));
     }, { passive: false });
     const end = () => {
       const s = st; st = null;
       if (!s || !s.active) return;
-      el.classList.remove('m-dragging');
-      const a = s.s[0], z = s.s[s.s.length - 1];
-      const v = (z[1] - a[1]) / Math.max(1, z[0] - a[0]);   // px/ms over the last ~100ms
-      const b = back();
-      if (s.dy > 0 && (v > 0.11 || s.dy > s.h * 0.25)) {
-        // continue with the finger's speed: the remaining distance at ≥ the release velocity, 120–250ms
-        const dur = reduce() ? 0 : Math.round(Math.max(120, Math.min(250, (s.h - s.dy) / Math.max(v, 0.9))));
-        el.style.transition = 'transform ' + dur + 'ms var(--ease-out)';
-        if (b) b.style.transition = 'opacity ' + dur + 'ms var(--ease-out)';
-        o.close();
-        el.style.transform = '';   // → transitions from the dragged position to the closed one
-        if (b) b.style.opacity = '';
-        relT = setTimeout(clearInline, dur + 400);
-        return;
+      const v = S.velocityOf(s.hist).y, y = m.v;
+      if (y > 0 && (y + S.project(v, 0.998) > h * 0.5 || v > 900)) {
+        out = true;
+        S.to(m, h + 24, { damping: 1, response: 0.28, velocity: Math.max(v, 400) });
+      } else {
+        S.to(m, 0, { damping: 0.8, response: 0.32, velocity: v });
       }
-      if (reduce()) { clearInline(); return; }
-      el.style.transition = 'transform var(--dur-spring-smooth) var(--spring)';
-      el.style.transform = '';
-      if (b) { b.style.transition = 'opacity 300ms var(--ease-out)'; b.style.opacity = ''; }
-      relT = setTimeout(clearInline, 600);
+      if (!S.moving(m)) owner.render();   // reduced motion: springs land at once
     };
     el.addEventListener('touchend', end);
     el.addEventListener('touchcancel', end);
-    return { reset: () => { clearTimeout(relT); clearInline(); } };
+    return { reset: () => { st = null; out = false; S.set(m, 0); clearInline(); } };
   };
-  const clickClose = btn => { if (btn) btn.dispatchEvent(new MouseEvent('click', { bubbles: true, detail: 1 })); };
+  // swiped: the sheet has already left the screen on its spring → close without an exit motion (detail 0 = instant)
+  const clickClose = (btn, swiped) => { if (btn) btn.dispatchEvent(new MouseEvent('click', { bubbles: true, detail: swiped ? 0 : 1 })); };
 
   // product modal (phones: bottom sheet)
   let pmDrag = null;
@@ -154,7 +160,7 @@
       canStart: () => modal.classList.contains('is-open') && !modal.classList.contains('is-closing'),
       skip: '.pmodal__actions, .pmodal__close, input',
       scroller: () => document.getElementById('pmodalBody'),
-      close: () => clickClose(modal.querySelector('.pmodal__close'))
+      close: swiped => (window.NP && NP.closeModal ? NP.closeModal(swiped) : clickClose(modal.querySelector('.pmodal__close'), swiped))
     });
   });
   document.addEventListener('np:modal-close', () => {
@@ -175,7 +181,7 @@
       canStart: () => panel.classList.contains('is-sheet') && panel.classList.contains('is-open'),
       skip: '.np-listpanel__close, .np-listpanel__foot',
       scroller: () => panel.querySelector('.np-listpanel__list'),
-      close: () => clickClose(panel.querySelector('.np-listpanel__close'))
+      close: swiped => clickClose(panel.querySelector('.np-listpanel__close'), swiped)
     });
   }
   new MutationObserver(bindList).observe(document.body || root, { childList: true });
@@ -225,42 +231,8 @@
     });
   }
 
-  // ---------- brand / species / section switch: first 8 cards rise 8px, 40ms apart; the count swaps ----------
-  function staggerCards() {
-    if (!phone() || reduce() || !root.dataset.vt) return;   // only inside an animated NP.swap (never keyboard)
-    const grid = document.getElementById('productsGrid');
-    if (!grid) return;
-    const top = grid.getBoundingClientRect().top;
-    let i = 0;
-    grid.querySelectorAll('.products > .product').forEach(c => {
-      if (i >= 8) return;
-      const r = c.getBoundingClientRect();
-      if (r.bottom < top || r.top > window.innerHeight) return;
-      c.style.setProperty('--i', i++);
-      c.classList.remove('m-card-in'); void c.offsetWidth; c.classList.add('m-card-in');
-      c.addEventListener('animationend', function f(ev) { if (ev.target === c) { c.classList.remove('m-card-in'); c.removeEventListener('animationend', f); } });
-    });
-  }
-  let lastCount = null;
-  function swapCount() {
-    const c = document.querySelector('#catResult .cat-result__count');
-    if (!c) return;
-    const txt = c.textContent;
-    const was = lastCount; lastCount = txt;
-    if (was === null || was === txt || !c.animate) return;
-    const kf = reduce() || !phone()
-      ? [{ opacity: 0 }, { opacity: 1 }]
-      : [{ opacity: 0, transform: 'translateY(4px)', filter: 'blur(2px)' }, { opacity: 1, transform: 'none', filter: 'blur(0)' }];
-    c.style.display = 'inline-block';
-    c.animate(kf, { duration: 150, easing: 'cubic-bezier(0.23, 1, 0.32, 1)' }).finished.then(() => { c.style.display = ''; }, () => {});
-  }
-
-  function onRender() { setupTauro(); staggerCards(); swapCount(); }
-  document.addEventListener('np:render', onRender);
-  document.addEventListener('np:ready', () => { bindSearch(); setupTauro(); const c = document.querySelector('#catResult .cat-result__count'); lastCount = c ? c.textContent : null; });
-  const cr = () => document.getElementById('catResult');
-  document.addEventListener('DOMContentLoaded', () => {
-    const el = cr();
-    if (el) new MutationObserver(() => swapCount()).observe(el, { childList: true });
-  });
+  // Brand / species / section switches (stagger, FLIP, ghosts) and «Показано N» (NPSpring.num) live in main.js —
+  // one implementation for every width.
+  document.addEventListener('np:render', setupTauro);
+  document.addEventListener('np:ready', () => { bindSearch(); setupTauro(); });
 })();

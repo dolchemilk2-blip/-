@@ -52,8 +52,17 @@ Object.assign(TRANSLATIONS.en, {
   let results = [];      // плоский список видимых опций (entries; {more: brand} — строка «+ ещё N»)
   const expanded = new Set();   // бренды, раскрытые кнопкой «+ ещё N»
   let active = -1;
-  let debounceT, clearT, liveT;
+  let debounceT, clearT, liveT, closingT;
 
+  // Motion (js/spring.js): rows rise in a 35ms staircase when the dropdown opens; when the query is refined the rows
+  // that stay glide to their new places (FLIP) and new ones fade up. Only the first rows (what the list shows) move,
+  // and only at a typing pause: results that change faster than every 220ms just change (like NPSpring.num's tick).
+  const S = window.NPSpring || null;
+  const moves = () => !!(S && S.ok() && S.ready);
+  const ROWS = '.np-search__ghead, [role="option"]';
+  const rowKey = el => el.getAttribute('data-k');
+  const firstRows = () => Array.prototype.slice.call(list.querySelectorAll(ROWS), 0, 12);   // about what the list shows
+  let lastRender = 0;
   const t = (k, vars) => {
     let s = (window.NP && NP.t(k)) || k;
     if (vars) Object.keys(vars).forEach(v => { s = s.replace('{' + v + '}', vars[v]); });
@@ -160,34 +169,54 @@ Object.assign(TRANSLATIONS.en, {
   function render(announceIt, instant) {
     const q = input.value;
     const groups = search(q);
+    const wasOpen = wrap.classList.contains('is-open'), wasEmpty = list.hidden;
+    const now = performance.now(), calm = now - lastRender > 220;
+    lastRender = now;
     results = []; active = -1;
     input.removeAttribute('aria-activedescendant');
     if (!groups) { clearTimeout(liveT); list.innerHTML = ''; setOpen(false, instant); return; }
+    // where the rows are now (FLIP) and their loaded thumbnails (re-used below: no blank frame while typing)
+    const before = wasOpen && !wasEmpty && calm && !instant && moves() ? S.flipRecord(firstRows(), rowKey) : null;
+    const thumbs = new Map();
+    list.querySelectorAll('[role="option"][data-k] .np-search__thumb').forEach(th => thumbs.set(rowKey(th.parentNode), th));
     let total = 0, html = '';
     groups.forEach((g, gi) => {
       total += g.hits.length;
       const shown = g.hits.slice(0, expanded.has(g.brand) ? Infinity : PER_BRAND);
       const gid = 'npsG' + gi;
-      html += `<li role="presentation" class="np-search__group"><div class="np-search__ghead" id="${gid}"><span>${esc(BRAND_NAMES[g.brand])}</span><span class="np-search__gcount">${g.hits.length}</span></div>`
+      html += `<li role="presentation" class="np-search__group"><div class="np-search__ghead" id="${gid}" data-k="g:${g.brand}"><span>${esc(BRAND_NAMES[g.brand])}</span><span class="np-search__gcount">${g.hits.length}</span></div>`
         + `<ul role="group" aria-labelledby="${gid}">`;
       shown.forEach(e => {
         const i = results.length; results.push(e);
-        html += `<li role="option" id="npsO${i}" class="np-search__opt" aria-selected="false" data-i="${i}">`
+        html += `<li role="option" id="npsO${i}" class="np-search__opt" aria-selected="false" data-i="${i}" data-k="${esc(e.id)}">`
           + `<span class="np-search__thumb">${thumb(e)}</span>`
           + `<span class="np-search__txt"><span class="np-search__name">${highlight(e.name, q)}</span>`
           + `<span class="np-search__meta">${esc(e.cat)}<span class="np-search__dot" aria-hidden="true"> · </span>${esc(BRAND_NAMES[e.brand])}</span></span></li>`;
       });
       if (shown.length < g.hits.length) {
         const i = results.length; results.push({ more: g.brand });
-        html += `<li role="option" id="npsO${i}" class="np-search__opt np-search__more" aria-selected="false" data-i="${i}">${esc(t('search.more', { n: g.hits.length - shown.length }))}</li>`;
+        html += `<li role="option" id="npsO${i}" class="np-search__opt np-search__more" aria-selected="false" data-i="${i}" data-k="more:${g.brand}">${esc(t('search.more', { n: g.hits.length - shown.length }))}</li>`;
       }
       html += '</ul></li>';
     });
     list.innerHTML = html;
+    if (thumbs.size) list.querySelectorAll('[role="option"][data-k] .np-search__thumb').forEach(th => {
+      const old = thumbs.get(rowKey(th.parentNode));
+      if (old) th.replaceWith(old);
+    });
     list.hidden = !total;
     empty.hidden = !!total;
     countEl.textContent = t('search.count', { n: total });
     setOpen(true, instant);
+    if (!instant && moves()) {
+      const rows = firstRows();
+      if (!wasOpen || wasEmpty) S.stagger(rows, 35, { opacity: 0, transform: 'translateY(6px)' }, [0.9, 0.4]);   // opened / results came back (rows past the 10th share its step)
+      else if (before) {
+        S.flipPlay(before, rows, rowKey, { damping: 0.86, response: 0.32 });
+        rows.filter(r => !before.has(rowKey(r))).slice(0, 8)
+          .forEach((r, i) => S.enter(r, { opacity: 0, transform: 'translateY(4px)' }, [1, 0.3], { delay: i * 20 }));
+      }
+    }
     if (announceIt !== false) {
       clearTimeout(liveT);
       liveT = setTimeout(() => announce(total ? t('search.count', { n: total }) : t('search.empty')), 450);
@@ -201,9 +230,14 @@ Object.assign(TRANSLATIONS.en, {
     setTimeout(() => { live.textContent = text; }, 30);
   }
 
-  // instant: открытие/закрытие с клавиатуры (набор текста, Esc, стрелки) — без анимации
+  // instant: открытие/закрытие с клавиатуры (Esc, стрелки, Enter) — без анимации; набор текста — с анимацией
   function setOpen(open, instant) {
-    if (open !== wrap.classList.contains('is-open')) wrap.classList.toggle('is-instant', !!instant);
+    const was = wrap.classList.contains('is-open');
+    if (open !== was) wrap.classList.toggle('is-instant', !!instant);
+    // closing (pointer): the dropdown settles to .99 while it fades (css .is-closing), faster than it opened
+    clearTimeout(closingT);
+    wrap.classList.toggle('is-closing', was && !open && !instant && !!S && !S.reduce());
+    if (wrap.classList.contains('is-closing')) closingT = setTimeout(() => wrap.classList.remove('is-closing'), 160);
     wrap.classList.toggle('is-open', open);
     input.setAttribute('aria-expanded', open ? 'true' : 'false');
     if (!open) { active = -1; input.removeAttribute('aria-activedescendant'); }
@@ -330,7 +364,9 @@ Object.assign(TRANSLATIONS.en, {
       syncValue();
       expanded.clear();
       clearTimeout(debounceT);
-      debounceT = setTimeout(() => { render(undefined, true); writeHashQ(); }, 80);
+      // typing is not a toggle: the dropdown grows out of the field and the rows follow the query (Esc / arrows /
+      // Enter stay instant)
+      debounceT = setTimeout(() => { render(undefined, false); writeHashQ(); }, 80);
     });
     input.addEventListener('focus', () => { if (input.value && !wrap.classList.contains('is-open')) render(false); });
     input.addEventListener('keydown', e => {

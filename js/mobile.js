@@ -34,19 +34,42 @@ if (typeof TRANSLATIONS !== 'undefined') {
   };
 
   // ---------- C1 Burger language segment (both pages) ----------
+  // The white thumb is one sliding indicator (NPSpring.indicator, «Монтажка»'s tab pill): it springs to the tapped
+  // language and stretches like a drop on the way. Keyboard / a change from the header menu: it is just there.
+  let pickAnim = false;
   document.addEventListener('click', e => {
     const b = e.target.closest('[data-lang-pick]');
     if (!b) return;
     const item = document.querySelector('#langMenu button[data-lang="' + b.getAttribute('data-lang-pick') + '"]');
     // reuse main.js setLang; detail:1 = pointer, so focus does not jump to the header button
+    pickAnim = e.detail !== 0;
     if (item) item.dispatchEvent(new MouseEvent('click', { bubbles: true, detail: 1 }));
     syncLang();
+    pickAnim = false;
   });
   function syncLang() {
     const cur = L();
     document.querySelectorAll('.nav-lang__btn').forEach(b => b.setAttribute('aria-pressed', b.getAttribute('data-lang-pick') === cur ? 'true' : 'false'));
     document.querySelectorAll('.nav-lang').forEach(g => g.setAttribute('aria-label', T('a11y.lang')));
+    if (pickAnim || root.classList.contains('nav-open')) langInd(pickAnim);   // closed sheet: measured when it opens
   }
+  function langInd(animate) {
+    if (!window.NPSpring || !mq.matches) return;   // the segment only shows on phones
+    document.querySelectorAll('.nav-lang').forEach(g => {
+      const on = g.querySelector('.nav-lang__btn[aria-pressed="true"]');
+      if (!on || !on.offsetWidth) return;   // desktop: the segment is not shown
+      if (!g._ind) {
+        const el = document.createElement('span');
+        el.className = 'nav-lang__ind spr-ind';
+        el.setAttribute('aria-hidden', 'true');
+        g.prepend(el);
+        g._ind = NPSpring.indicator(el);
+        g.classList.add('has-ind');
+      }
+      g._ind.move({ x: on.offsetLeft, y: on.offsetTop, w: on.offsetWidth, h: on.offsetHeight }, !animate);
+    });
+  }
+  window.NPMobile.langInd = langInd;
   onReady(syncLang);
   document.addEventListener('np:lang', syncLang);
 
@@ -314,8 +337,9 @@ if (typeof TRANSLATIONS !== 'undefined') {
   // d) swipe down to close: js/motion-catalog.js (shared bottom-sheet drag, also for My list / search)
 })();
 
-// ===== Burger menu: dimmed backdrop, tap-outside and Esc close, page scroll locked =====
+// ===== Burger menu: dimmed backdrop, tap-outside and Esc close, page scroll locked, drag the sheet to close =====
 (function () {
+  const S = window.NPSpring || null;
   function init() {
     const nav = document.getElementById('nav'), burger = document.getElementById('burger');
     if (!nav || !burger) return;
@@ -326,11 +350,80 @@ if (typeof TRANSLATIONS !== 'undefined') {
     const close = () => { if (nav.classList.contains('is-open')) burger.click(); };
     scrim.addEventListener('click', close);
     document.addEventListener('keydown', e => { if (e.key === 'Escape' && nav.classList.contains('is-open')) { close(); burger.focus(); } });
+    const drag = S ? navDrag(nav, burger, scrim, close) : null;
     new MutationObserver(() => {
       const open = nav.classList.contains('is-open');
       scrim.classList.toggle('is-open', open);
       document.documentElement.classList.toggle('nav-open', open);
+      if (open) {
+        if (drag) drag.reopen();
+        if (window.NPMobile && NPMobile.langInd) NPMobile.langInd(false);   // the segment's thumb, measured in place
+      }
     }).observe(nav, { attributes: true, attributeFilter: ['class'] });
+  }
+
+  // Drag the sheet sideways to close it («Монтажка» sheetDrag): 1:1 under the finger, rubber band past the open edge,
+  // the scrim follows. Thrown or pulled past half — it flies off at the finger's speed and the menu is closed at once
+  // (the inline styles only keep it visible until it is out); otherwise it springs back with a little overshoot.
+  // A vertical swipe is left to the sheet's own scroll (touch-action: pan-y, css/mobile.css).
+  function navDrag(nav, burger, scrim, close) {
+    let d = null, out = false, w = 320, dragged = false;
+    const owner = { render() {
+      const x = m.v;
+      if (!S.moving(m) && !d && (out || Math.abs(x) < 0.3)) { out = false; clear(); return; }
+      nav.style.transform = 'translate3d(' + x.toFixed(2) + 'px, 0, 0)';
+      scrim.style.opacity = x > 0 ? String(Math.max(0, 1 - x / w)) : '';
+    } };
+    const m = S.mv(0, 0.3, owner);
+    function clear() {
+      nav.style.transform = ''; nav.style.transition = ''; nav.style.visibility = '';
+      scrim.style.opacity = ''; scrim.style.transition = ''; scrim.style.visibility = '';
+      if (m.v !== 0) S.set(m, 0);
+    }
+    nav.addEventListener('pointerdown', e => {
+      if (e.button !== 0 || !nav.classList.contains('is-open') || S.reduce() || !burger.offsetParent) return;   // a drawer only while the burger shows
+      if (e.pointerType === 'mouse' && e.target.closest('a, button, input')) return;
+      const tr = getComputedStyle(nav).transform;   // caught mid-flight: from where it is now
+      d = { id: e.pointerId, x0: e.clientX, y0: e.clientY, cur: tr && tr !== 'none' ? new DOMMatrixReadOnly(tr).m41 : 0, active: false, hist: [] };
+    });
+    nav.addEventListener('pointermove', e => {
+      if (!d || d.id !== e.pointerId) return;
+      if (!d.active) {
+        const dx = e.clientX - d.x0, dy = e.clientY - d.y0;
+        if (Math.abs(dx) < 8 && Math.abs(dy) < 8) return;
+        if (Math.abs(dy) > Math.abs(dx)) { d = null; return; }   // vertical: the sheet scrolls
+        d.active = true; d.x0 = e.clientX; out = false; w = nav.offsetWidth || w;
+        nav.style.transition = 'none'; scrim.style.transition = 'none';
+        try { nav.setPointerCapture(e.pointerId); } catch (err) { /* ignore */ }
+      }
+      d.hist.push({ t: performance.now(), x: e.clientX, y: e.clientY });
+      if (d.hist.length > 8) d.hist.shift();
+      const x = d.cur + e.clientX - d.x0;
+      S.set(m, x < 0 ? S.rubber(x, 60) : x);
+    });
+    const end = e => {
+      const s = d;
+      if (!s || s.id !== e.pointerId) return;
+      d = null;
+      if (!s.active) return;
+      dragged = true; setTimeout(() => { dragged = false; }, 0);
+      const v = S.velocityOf(s.hist).x, x = m.v;
+      if (x > 0 && (x + S.project(v, 0.998) > w * 0.5 || v > 900)) {
+        out = true;
+        nav.style.visibility = 'visible'; scrim.style.visibility = 'visible';
+        S.to(m, w + 16, { damping: 1, response: 0.3, velocity: Math.max(v, 400) });
+        const hadFocus = nav.contains(document.activeElement);
+        close();
+        if (hadFocus) burger.focus({ preventScroll: true });
+      } else S.to(m, 0, { damping: 0.8, response: 0.32, velocity: v });
+    };
+    nav.addEventListener('pointerup', end);
+    nav.addEventListener('pointercancel', end);
+    nav.addEventListener('click', e => { if (dragged) { e.preventDefault(); e.stopPropagation(); } }, true);   // a mouse drag is not a tap
+    return {
+      // opened again while it was flying off: it comes back from where it is
+      reopen() { if (out || S.moving(m)) { out = false; S.to(m, 0, { damping: 0.86, response: 0.4 }); } }
+    };
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();

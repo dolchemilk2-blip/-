@@ -416,7 +416,7 @@ function productCard(item, lang, id, uid) {
   const did = uid ? ` data-id="${uid}"` : '';
   const more = `<span class="product__more">${dict['products.more'] || 'Подробнее'}<svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>`;
   return `
-    <article class="product${coat ? ' product--coat product--coat-' + coat : ''} is-clickable"${pid}${did}>
+    <article class="product${coat ? ' product--coat product--coat-' + coat : ''} is-clickable spr-glare"${pid}${did}>
       <div class="product__img">${ribbon}${media}<div class="product__actions"></div></div>
       <div class="product__body">
         <span class="product__cat">${t.cat}</span>
@@ -502,23 +502,34 @@ function setModalLock(on) {
   document.body.classList.toggle('modal-open', on);   // на body висит «скольжение» шапки и тулбара
 }
 
+const sheetMq = window.matchMedia('(max-width: 720px)');   // phones: the product is a bottom sheet
 function showModal(modal, body, opts, item) {
   const dlg = modal.querySelector('.pmodal__dialog');
   const instant = !!opts.keyboard || reduceMotion();
   modalGen++;
   modalId = opts.id || null;
+  document.querySelectorAll('[data-ghost="pmodal"]').forEach(g => g.remove());   // a closing copy gives way at once
   if (modalState === 'closed') {
     const active = document.activeElement;
     modalOrigin = opts.card || (active && active !== document.body ? active : null);
   } else if (opts.card) {
     modalOrigin = opts.card;
   }
-  // Точка «вылета»: 15% пути к карточке, не дальше ±60px
+  // Open from the point of invocation (Монтажка): the dialog starts over the clicked card — its centre, at roughly
+  // the card's size — and springs to the middle of the screen (css: closed transform → open, on --pm-spring).
+  // No card (deep link, search) — a small zoom from the centre. Phones: a bottom sheet, it rises from the edge.
   if (dlg) {
-    const r = (!instant && opts.card) ? opts.card.getBoundingClientRect() : null;
-    const c = v => Math.max(-60, Math.min(60, v * 0.15)).toFixed(1) + 'px';
-    dlg.style.setProperty('--from-x', r ? c(r.left + r.width / 2 - window.innerWidth / 2) : '0px');
-    dlg.style.setProperty('--from-y', r ? c(r.top + r.height / 2 - window.innerHeight / 2) : '0px');
+    const r = (!instant && opts.card && !sheetMq.matches) ? opts.card.getBoundingClientRect() : null;
+    let x = 0, y = 0, sc = 0.96;
+    if (r && r.width) {
+      const w = dlg.offsetWidth || 1, h = dlg.offsetHeight || 1;
+      x = r.left + r.width / 2 - window.innerWidth / 2;
+      y = r.top + r.height / 2 - window.innerHeight / 2;
+      sc = Math.max(0.3, Math.min(0.9, Math.sqrt((r.width * r.height) / (w * h))));
+    }
+    dlg.style.setProperty('--from-x', x.toFixed(1) + 'px');
+    dlg.style.setProperty('--from-y', y.toFixed(1) + 'px');
+    dlg.style.setProperty('--from-s', sc.toFixed(3));
     if (!dlg.hasAttribute('tabindex')) dlg.setAttribute('tabindex', '-1');
     void dlg.offsetWidth;   // зафиксировать стартовое состояние до .is-open
   }
@@ -532,8 +543,47 @@ function showModal(modal, body, opts, item) {
   modalState = 'open';
   if (dlg) { dlg.scrollTop = 0; dlg.focus({ preventScroll: true }); }
   emit('np:modal-open', { id: modalId, item, brand: opts.brand || currentBrand, dialog: dlg });
+  // the content follows the panel in a short spring staircase (after np:modal-open: phones have rebuilt the sections)
+  if (!instant && sprOK()) {
+    const info = body.querySelector('.pmodal__info');
+    const parts = [body.querySelector('.pmodal__media')].concat(info ? Array.from(info.children) : []).filter(Boolean);
+    NPSpring.stagger(parts.slice(0, 8), 35, { opacity: 0, transform: 'translateY(8px)' }, [0.9, 0.42]);
+  }
 }
 
+// Close without waiting (Монтажка's ghost-out): a copy of the modal leaves — desktop: fades and settles back a
+// little (180ms); phone sheet: slides down from wherever it is now (200ms, drawer curve) — while the real one is
+// closed at once (focus, scroll lock and inert come back immediately; a new open is not blocked by the exit).
+function modalGhostOut(modal) {
+  if (!sprOK()) return false;
+  const dlg = modal.querySelector('.pmodal__dialog'), bd = modal.querySelector('.pmodal__backdrop');
+  const body = document.getElementById('pmodalBody');
+  if (!dlg || !bd) return false;
+  const phone = sheetMq.matches;
+  // read first: where it is now (mid-zoom / mid-drag), how far it is scrolled
+  const dcs = getComputedStyle(dlg), tr = dcs.transform, op = dcs.opacity, bop = getComputedStyle(bd).opacity;
+  const st = dlg.scrollTop, bst = body ? body.scrollTop : 0, h = dlg.offsetHeight;
+  const g = modal.cloneNode(true);
+  [g].concat(Array.from(g.querySelectorAll('[id]'))).forEach(x => x.removeAttribute('id'));
+  g.classList.remove('is-closing'); g.classList.add('is-instant');
+  g.inert = true; g.setAttribute('aria-hidden', 'true'); g.setAttribute('data-ghost', 'pmodal');
+  g.style.pointerEvents = 'none';
+  document.body.appendChild(g);
+  const gd = g.querySelector('.pmodal__dialog'), gb = g.querySelector('.pmodal__backdrop'), gbody = g.querySelector('.pmodal__body');
+  if (st) gd.scrollTop = st;
+  if (gbody && bst) gbody.scrollTop = bst;
+  const t0 = tr === 'none' ? 'none' : tr;
+  const ms = phone ? 200 : 180;
+  const frames = phone
+    ? [{ transform: t0 }, { transform: 'translate3d(0, ' + (h + 24) + 'px, 0)' }]
+    : [{ transform: t0, opacity: op }, { transform: (t0 === 'none' ? '' : t0 + ' ') + 'translateY(8px) scale(0.97)', opacity: 0 }];
+  const a = gd.animate(frames, { duration: ms, easing: phone ? 'cubic-bezier(0.32, 0.72, 0, 1)' : NPSpring.EASE, fill: 'forwards' });
+  gb.animate([{ opacity: bop }, { opacity: 0 }], { duration: ms, easing: 'ease-out', fill: 'forwards' });
+  a.onfinish = a.oncancel = () => g.remove();
+  return true;
+}
+
+// instant — keyboard (Esc / Enter on ×) or swiped away (the sheet has already left the screen): no exit motion
 function closeProductModal(instant) {
   const modal = document.getElementById('productModal');
   if (!modal || modalState !== 'open') return;
@@ -542,11 +592,14 @@ function closeProductModal(instant) {
   const id = modalId;
   modalState = 'closing';
   let cleanup = () => {};
+  let keepInstant = false;
   const finalize = () => {
     if (g !== modalGen || modalState !== 'closing') return;   // модалку успели открыть заново
     cleanup();
     modalState = 'closed';
-    modal.classList.remove('is-open', 'is-closing', 'is-instant');
+    // an instant close stays .is-instant until the next open: the backdrop must not fade out under the ghost
+    modal.classList.remove('is-open', 'is-closing');
+    if (!keepInstant) modal.classList.remove('is-instant');
     modal.setAttribute('aria-hidden', 'true');
     modal.inert = true;
     setModalLock(false);
@@ -562,7 +615,7 @@ function closeProductModal(instant) {
     modalOrigin = null;
     emit('np:modal-close', { id });
   };
-  if (instant || reduceMotion()) { modal.classList.add('is-instant'); finalize(); return; }
+  if (instant || reduceMotion() || modalGhostOut(modal)) { keepInstant = true; modal.classList.add('is-instant'); finalize(); return; }
   modal.classList.remove('is-instant');
   modal.classList.add('is-closing');
   // Шапка, тулбар и чипы возвращаются одновременно с растворением диалога (одним движением);
@@ -594,29 +647,128 @@ function trapModalFocus(e) {
   else if (!e.shiftKey && (a === last || !dlg.contains(a))) { e.preventDefault(); first.focus(); }
 }
 
-// Каскад появления: только первые 8 видимых карточек, 300ms, шаг --stagger (40ms)
-let staggerGen = 0;
-function staggerCards(wrap) {
-  const g = ++staggerGen;
-  if (!wrap || typeof wrap.animate !== 'function') return;
-  const reduce = reduceMotion();
-  const vh = window.innerHeight || 800;
-  const step = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--stagger'));
-  const stagger = reduce ? 0 : (isNaN(step) ? 40 : step);
-  const cards = [];
-  for (const c of wrap.querySelectorAll('.product, .tpl-bottle')) {
-    const r = c.getBoundingClientRect();
-    if (r.top >= vh) break;               // карточки идут сверху вниз — дальше только невидимые
-    if (r.bottom > 0) cards.push(c);
-    if (cards.length === 8) break;
-  }
-  const frames = reduce
-    ? [{ opacity: 0 }, { opacity: 1 }]
-    : [{ opacity: 0, transform: 'translateY(8px)' }, { opacity: 1, transform: 'translateY(0)' }];
-  cards.forEach((c, i) => {
-    if (g !== staggerGen) return;
-    c.animate(frames, { duration: reduce ? 150 : 300, delay: i * stagger, easing: EASE_OUT, fill: 'backwards' });
+// ===== Switching the catalog without jump-cuts (Монтажка: survivors glide, newcomers rise, leavers ghost out) =====
+// Only what is on screen takes part. Blocks are read top-down and the walk stops at the first one below the
+// viewport, and a group is entered only when it is on screen — off-screen groups (content-visibility: auto) are
+// never laid out for this. All reads happen before the update and right after it; the motion itself is springs
+// (NPSpring: FLIP on `translate`, WAAPI enters) — nothing is measured per frame.
+const sprOK = () => !!(window.NPSpring && NPSpring.ok() && NPSpring.ready);
+const UNIT_IN_GROUP = '.product-group__title, .product-subgroup__title, .coat-insert, .coat-subline, .products > .product';
+function screenUnits(grid) {
+  const vh = window.innerHeight, out = [];
+  const walk = (els, deep) => {
+    for (const el of els) {
+      const r = el.getBoundingClientRect();
+      if (!r.height || r.bottom < 0) continue;
+      if (r.top > vh) return false;
+      if (deep && el.classList.contains('cat-section')) { if (walk(el.children, true) === false) return false; }
+      else if (deep && el.classList.contains('product-group')) { if (walk(el.querySelectorAll(UNIT_IN_GROUP), false) === false) return false; }
+      else out.push(el);
+    }
+    return true;
+  };
+  if (grid) walk(grid.children, true);
+  return out;
+}
+// Stable identity of a block across renders: its section + product id (cards) or class + text (titles, inserts…)
+function unitKey(el) {
+  if (el._uk) return el._uk;
+  const sec = el.closest('[data-sec]'), id = el.getAttribute('data-id');
+  return (el._uk = (sec ? sec.getAttribute('data-sec') : '') + '|' + (id || el.className.split(' ')[0] + ':' + el.textContent.trim().slice(0, 60)));
+}
+// Newcomers: a 40ms staircase on a spring (≤10 steps), rising 10px from .99 — no blur (cards are big, and many).
+function enterUnits(els) {
+  if (els.length && sprOK()) NPSpring.stagger(els, 40, { opacity: 0, transform: 'translateY(10px) scale(0.99)' }, [0.88, 0.42]);
+}
+// Survivors glide home on springs. While they fly, their own CSS transitions (hover lift on `translate`) are off,
+// otherwise every spring frame would restart a 160ms transition and smear the glide.
+let flipT = 0;
+function flipUnits(before, els) {
+  if (!els.length || !NPSpring.flipPlay(before, els, unitKey, { damping: 0.82, response: 0.38 })) return;
+  els.forEach(el => el.classList.add('is-flip'));
+  clearTimeout(flipT);
+  flipT = setTimeout(() => document.querySelectorAll('.is-flip').forEach(el => el.classList.remove('is-flip')), NPSpring.ease(0.82, 0.38).duration);
+}
+// Leavers: they fade out where they were (≤6, 150ms) while the new content is already in place. The old nodes are
+// reused as they are (the update has just detached them — no cloning, images already decoded), each wrapped in the
+// containers the catalog CSS expects (.cat-section > .product-group > .products) so it looks exactly the same,
+// and all of them sit in ONE overlay: a single layer fades, not one per block. The overlay is only as big as the
+// ghosts and starts below the sticky toolbar / chip row — nothing fades under their backdrop blur, which would
+// otherwise be re-rendered every frame of the fade. top — the bottom of the sticky stack (read with the other reads).
+function ghostUnits(list, top) {
+  const vh = window.innerHeight;
+  list = list.slice(0, 6).filter(u => u.r.bottom > top && u.r.top < vh);
+  if (!list.length) return;
+  const box0 = { l: Math.min(...list.map(u => u.r.left)), t: Math.max(top, Math.min(...list.map(u => u.r.top))),
+    r: Math.max(...list.map(u => u.r.right)), b: Math.min(vh, Math.max(...list.map(u => u.r.bottom))) };
+  const layer = document.createElement('div');
+  layer.className = 'cat-ghosts';
+  layer.inert = true; layer.setAttribute('aria-hidden', 'true');
+  layer.style.cssText = 'position:fixed;z-index:30;pointer-events:none;overflow:hidden;left:' + box0.l + 'px;top:' + box0.t + 'px;width:' + (box0.r - box0.l) + 'px;height:' + (box0.b - box0.t) + 'px;';
+  // read where each one lived before any of them is moved (moving one changes its old siblings' :only-child)
+  const metas = list.map(({ el, r }) => ({ el, r, grp: el.closest('.product-group'), inSec: !!el.closest('.cat-section'),
+    isCard: el.matches('.products > .product'), lone: el.matches('.products > .product:only-child') }));
+  metas.forEach(({ el, r, grp, inSec, isCard, lone }) => {
+    if (el._sprT) { NPSpring.set(el._sprT.x, 0); NPSpring.set(el._sprT.y, 0); }   // a glide in flight: the rect has it already
+    [el].concat(Array.from(el.querySelectorAll('[id], [data-id], [data-pid]'))).forEach(x => { x.removeAttribute('id'); x.removeAttribute('data-id'); x.removeAttribute('data-pid'); });
+    el.style.margin = '0';
+    let box = el;
+    const wrap = cls => { const w = document.createElement('div'); w.className = cls; w.style.cssText = 'display:block;margin:0;padding:0;content-visibility:visible;contain:none;'; w.appendChild(box); box = w; };
+    if (isCard) {
+      wrap('products');
+      if (!lone) box.appendChild(Object.assign(document.createElement('i'), { hidden: true }));   // keep :only-child rules off
+    }
+    if (grp && grp !== el) wrap(grp.className);
+    if (inSec) wrap('cat-section');
+    Object.assign(box.style, { position: 'absolute', left: (r.left - box0.l) + 'px', top: (r.top - box0.t) + 'px', width: r.width + 'px' });
+    layer.appendChild(box);
   });
+  document.body.appendChild(layer);
+  const a = layer.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 150, easing: NPSpring.EASE, fill: 'forwards' });
+  a.onfinish = a.oncancel = () => layer.remove();
+}
+// the bottom edge of what sticks at the top (header + toolbar + chip row) — ghosts stay below it
+function stickyBottom() {
+  const nav = document.getElementById('catNav'), bar = document.getElementById('catalogBar'), hdr = document.getElementById('header');
+  const el = nav && !nav.hidden ? nav : bar || hdr;
+  return el ? Math.max(0, el.getBoundingClientRect().bottom) : 0;
+}
+// What follows the grid (brand ranges + footer) glides to its new place instead of snapping when the page height
+// changes (Монтажка's motionTabSwitch). Only when the page did not scroll and it is on screen before or after.
+function tailEls() { return [document.querySelector('#products .ranges-block'), document.querySelector('.footer')].filter(Boolean); }
+function tailRecord() {
+  const t = tailEls();
+  return t.length && sprOK() ? { top: t[0].getBoundingClientRect().top, sy: window.pageYOffset } : null;
+}
+// read the new place (call with the other reads after the update), then play — no read after a write
+function tailMeasure(rec) {
+  if (!rec || Math.abs(window.pageYOffset - rec.sy) > 1) return null;
+  const vh = window.innerHeight, top1 = tailEls()[0].getBoundingClientRect().top;
+  if ((rec.top > vh && top1 > vh) || Math.abs(rec.top - top1) < 2) return null;
+  return Math.min(rec.top, vh + 24) - top1;   // from below the screen at most — it slides in, not flies in
+}
+function tailPlay(dy) {
+  if (!dy) return;
+  tailEls().forEach(el => { const T = NPSpring.tform(el); T.y.v += dy; NPSpring.to(T.y, 0, { damping: 0.92, response: 0.4 }); });
+}
+// Species / section switch: record what is on screen, update, then morph.
+function morphGrid(update, animate) {
+  const grid = document.getElementById('productsGrid');
+  if (!animate || !grid || !sprOK()) { update(); return; }
+  const units0 = screenUnits(grid);
+  const rects0 = units0.map(el => ({ el, r: el.getBoundingClientRect() }));
+  const before = NPSpring.flipRecord(units0, unitKey);
+  const tail = tailRecord();
+  update();
+  // reads (one layout): what is on screen now, where the tail went, where the survivors are (inside flipPlay) …
+  const units1 = screenUnits(grid);
+  const keys1 = new Set(units1.map(unitKey));
+  const dy = tailMeasure(tail), top = stickyBottom();
+  flipUnits(before, units1.filter(el => before.has(unitKey(el))));
+  // … then writes only
+  ghostUnits(rects0.filter(u => !keys1.has(unitKey(u.el))), top);
+  enterUnits(units1.filter(el => !before.has(unitKey(el))));
+  tailPlay(dy);
 }
 
 // Tauro: вставка «зачем нужны степы» + витрины «левитирующих» флаконов (Step-системы)
@@ -854,19 +1006,17 @@ function sectionHtml(s, brand, lang, dict, mk) {
     </section>`;
 }
 
-// opts: {stagger: true} — каскад первых 8 карточек (только смена бренда мышью без View Transitions;
-// первый рендер уже покрыт появлением страницы — второй слой движения не добавляем)
+// Motion of a re-render (survivors / newcomers / leavers) is the caller's: morphGrid / activateBrand.
+// The first render is covered by the page's own entrance — no second layer of motion.
 let firstRenderDone = false;
 let resultNote = '';   // пояснение к выдаче (раздел сброшен фильтром / Tauro: все товары для обоих видов)
-function renderProducts(brand, lang, opts) {
+function renderProducts(brand, lang) {
   const wrap = document.getElementById('productsGrid');
   if (!wrap) return;
   const dict = TRANSLATIONS[lang] || TRANSLATIONS.ru;
-  const doStagger = !!(opts && opts.stagger);
   const finish = () => {
     updateSpeciesAvailability();
     updateResultLine();
-    if (doStagger) staggerCards(wrap);
     requestAnimationFrame(() => spySections());
     emit('np:render', { brand, lang, species: currentSpecies, section: currentSection });
   };
@@ -1009,8 +1159,13 @@ function initPageTransition() {
   });
 }
 
-// ===== Индикаторы вкладок (.tabs__indicator / .species__indicator) =====
-// Позиция передаётся CSS-переменными --ind-x/--ind-w (и --ind-y/--ind-h для переноса строк)
+// ===== Индикаторы вкладок (.tabs__indicator / .species__indicator / .cat-nav__indicator) =====
+// The pill rides NPSpring.indicator (Монтажка's tab pill): x/y/w/h on springs, it stretches like a drop while it
+// travels and can be caught mid-flight (a new click starts from where it is, with its speed). First placement,
+// keyboard, resize, fonts and reduced motion — instant.
+// Label colour hand-off: a label is "lit" (.is-lit → active colour) exactly while the pill covers most of it,
+// decided in the pill's own frame — no timed colour transition running ahead of or behind the spring.
+// Boxes come from offsetLeft/Top/Width/Height: layout values, untouched by the press spring's scale.
 function placeIndicator(list, cls, instant) {
   if (!list) return;
   let ind = list.querySelector(':scope > .' + cls);
@@ -1023,21 +1178,39 @@ function placeIndicator(list, cls, instant) {
     instant = true;   // первое размещение — без анимации
   }
   const act = list.querySelector('.is-active');
-  if (!act) return;
-  const lr = list.getBoundingClientRect(), ar = act.getBoundingClientRect();
-  if (!ar.width) return;
-  const vals = {
-    '--ind-x': (ar.left - lr.left - list.clientLeft + list.scrollLeft).toFixed(1) + 'px',
-    '--ind-y': (ar.top - lr.top - list.clientTop + list.scrollTop).toFixed(1) + 'px',
-    '--ind-w': ar.width.toFixed(1) + 'px',
-    '--ind-h': ar.height.toFixed(1) + 'px'
-  };
-  if (instant) { ind.classList.add('is-instant'); ind.style.transition = 'none'; }
-  Object.keys(vals).forEach(k => { list.style.setProperty(k, vals[k]); ind.style.setProperty(k, vals[k]); });
-  if (instant) {
-    void ind.offsetWidth;
-    requestAnimationFrame(() => { ind.style.transition = ''; ind.classList.remove('is-instant'); });
+  if (!act || !act.offsetWidth) return;
+  const box = b => ({ x: b.offsetLeft, y: b.offsetTop, w: b.offsetWidth, h: b.offsetHeight });
+  const to = box(act);
+  if (!window.NPSpring || !NPSpring.indicator) {   // no spring core: plain placement through the CSS vars
+    ind.style.setProperty('--ind-x', to.x + 'px'); ind.style.setProperty('--ind-y', to.y + 'px');
+    ind.style.setProperty('--ind-w', to.w + 'px'); ind.style.setProperty('--ind-h', to.h + 'px');
+    return;
   }
+  const I = ind._pill || (ind._pill = pillFor(list, ind));
+  I.items = Array.from(list.children).filter(b => b !== ind && b.tagName === 'BUTTON').map(b => Object.assign(box(b), { el: b }));
+  I.move(to, instant);
+}
+// One NPSpring.indicator per pill + the label pass. The pass hooks the pill's springs (their owner renders once per
+// frame), so it costs a few comparisons per frame and touches a class only when a label actually changes.
+function pillFor(list, ind) {
+  const pill = NPSpring.indicator(ind, { damping: 0.74, response: 0.42 });
+  const P = pill.springs, own = P.x.owner;
+  const I = { items: [] };
+  const light = () => {
+    const x = P.x.v, y = P.y.v, w = P.w.v, h = P.h.v;
+    I.items.forEach(it => {
+      const ox = Math.min(x + w, it.x + it.w) - Math.max(x, it.x), oy = Math.min(y + h, it.y + it.h) - Math.max(y, it.y);
+      const on = ox > it.w * 0.5 && oy > it.h * 0.5;
+      if (it.el._lit !== on) { it.el._lit = on; it.el.classList.toggle('is-lit', on); }
+    });
+  };
+  P.x.owner = P.y.owner = P.w.owner = P.h.owner = { render() { own.render(); light(); } };
+  I.move = (r, instant) => {
+    pill.move(r, instant);
+    light();
+    list.classList.add('spr-lit');
+  };
+  return I;
 }
 function placeIndicators(instant) {
   placeIndicator(document.getElementById('tabs'), 'tabs__indicator', instant);
@@ -1152,7 +1325,10 @@ function updateResultLine() {
   const grid = document.getElementById('productsGrid');
   if (!el || !grid) return;
   const n = grid.querySelectorAll('[data-id]').length;
-  let html = `<span class="cat-result__count">${shownText(n)}</span>`;
+  // the count's digits pop in (NPSpring.num, keyed across re-renders by data-num): only the changed ones move —
+  // up from below when the number grows, from above when it shrinks
+  const count = shownText(n);
+  let html = `<span class="cat-result__count" data-num="cat-count">${window.NPSpring ? '' : count}</span>`;
   if (currentSection !== 'all') {
     const def = sectionDef(currentBrand, currentSection);
     const name = def ? (def[getLang()] || def.ru) : '';
@@ -1161,6 +1337,7 @@ function updateResultLine() {
   }
   if (resultNote) html += `<span class="cat-result__note">${resultNote}</span>`;
   el.innerHTML = html;
+  if (window.NPSpring) NPSpring.num(el.querySelector('.cat-result__count'), count);
 }
 
 // Прокрутить так, чтобы начало выдачи оказалось сразу под липкой лентой (только если ушли ниже)
@@ -1317,6 +1494,8 @@ window.NP = {
   productId,
   findById,
   openProduct,
+  // instant: no exit motion — e.g. the bottom sheet was swiped away and has already left the screen
+  closeModal: (instant) => closeProductModal(!!instant),
   t: (key) => tr(key)
 };
 
@@ -1403,10 +1582,6 @@ function initCatalog(initial) {
     });
   }
   const cancelLeave = () => { leaveAnims.forEach(a => a.cancel()); leaveAnims = []; };
-  // Запасной путь без View Transitions: лёгкий «провал» прозрачности без движения
-  const dip = () => {
-    if (typeof grid.animate === 'function' && !reduceMotion()) grid.animate([{ opacity: 0.4 }, { opacity: 1 }], { duration: 150, easing: EASE_OUT });
-  };
 
   // opts: {animate, updateHash, section, keyboard}
   function activateBrand(brand, opts) {
@@ -1437,22 +1612,34 @@ function initCatalog(initial) {
     const done = () => {
       if (g !== brandGen || finished) return;
       finished = true;
-      renderProducts(currentBrand, getLang(), { stagger: !!opts.animate && !useVT });
-      cancelLeave();
+      const tail = opts.animate ? tailRecord() : null;
+      renderProducts(currentBrand, getLang());
       if (!useVT) placeIndicator(speciesWrap, 'species__indicator', !opts.animate);
       if (opts.updateHash) setHashState();
       if (!opts.keepScroll) scrollToResults(false);
+      // a new brand shares no blocks with the old one: the old content has faded out, the new one rises in a
+      // spring staircase, the chip row fades back in, ranges + footer glide to the new page height
+      if (opts.animate && !useVT && sprOK()) {
+        const units = screenUnits(grid), dy = tailMeasure(tail);
+        enterUnits(units);
+        if (nav && leaveAnims.length) NPSpring.enter(nav, { opacity: 0 }, [1, 0.3]);
+        tailPlay(dy);
+      }
+      cancelLeave();
       announceCount();
     };
     if (useVT) {
       cancelLeave();
       swap(done, 'brand', { after: () => { if (g === brandGen) paintTabs(); } });
     } else if (opts.animate && typeof grid.animate === 'function' && !reduceMotion()) {
-      // уход 150ms (только прозрачность), затем рендер и каскад; повторный клик перенацеливает
-      cancelLeave();
-      const els = [grid].concat(nav ? [nav] : []);
-      els.forEach(el => leaveAnims.push(el.animate({ opacity: 0 }, { duration: 150, easing: EASE_OUT, fill: 'forwards' })));
+      // уход 150ms (только прозрачность), затем рендер и каскад; повторный клик перенацеливает — the fade that
+      // is already running keeps going from where it is (no flash back to full opacity)
+      if (!leaveAnims.length) {
+        const els = [grid].concat(nav ? [nav] : []);
+        els.forEach(el => leaveAnims.push(el.animate({ opacity: 0 }, { duration: 150, easing: EASE_OUT, fill: 'forwards' })));
+      }
       leaveAnims[0].onfinish = done;
+      if (leaveAnims[0].playState === 'finished') done();
       setTimeout(done, 400);   // запасной путь (фоновые вкладки не играют анимации)
     } else {
       cancelLeave();
@@ -1470,7 +1657,7 @@ function initCatalog(initial) {
     if (!useVT) paintSpecies();
     const update = () => { renderProducts(currentBrand, getLang()); setHashState(); announceCount(); };
     if (useVT) swap(update, 'species', { after: () => { if (currentSpecies === sp) paintSpecies(); } });
-    else { update(); if (opts.animate) dip(); }
+    else morphGrid(update, !!opts.animate);
   }
 
   // Раздел-фильтр: чип фильтрует выдачу (не якорь) и возвращает к началу сетки
@@ -1485,11 +1672,13 @@ function initCatalog(initial) {
       currentSection = id;
       renderProducts(currentBrand, getLang());
       if (opts.updateHash !== false) setHashState();
-      if (!opts.animate || useVT) scrollToResults(false);   // внутри перехода скачок скрыт кроссфейдом
+      // back to the start of the results at once: morphGrid compares screen positions before / after, so the
+      // blocks on screen glide, rise or fade in place and the jump itself is never seen
+      scrollToResults(false);
       announceCount();
     };
     if (useVT) swap(update, 'section');
-    else { update(); if (opts.animate) { dip(); scrollToResults(true); } }
+    else morphGrid(update, !!opts.animate);
   }
   NPCtl.activateBrand = activateBrand;
   NPCtl.setSpecies = setSpecies;
@@ -1635,6 +1824,14 @@ function initCatalog(initial) {
     openFromCard(card, true);
   });
 
+  // Desktop: cards lean toward the cursor (≤4° at the edge) with a soft glare (.spr-glare); Tauro bottles lean their image —
+  // not .tpl-bottle__img, which floats (4.6s) on its own transform. NPSpring.tilt listens to fine pointers only and
+  // goes flat while the page scrolls. Bottles also get the spring press (rows on phones, columns on desktop).
+  if (window.NPSpring) {
+    NPSpring.press.add('.tpl-bottle');
+    NPSpring.tilt(grid, '.product.is-clickable, .tpl-bottle__img img', 8);   // ±4° at the edges
+  }
+
   // Прямые ссылки после первого рендера
   window.addEventListener('hashchange', () => {
     const h = parseHash();
@@ -1649,6 +1846,12 @@ function initModal() {
   const modal = document.getElementById('productModal');
   if (!modal) return;
   modal.inert = true;
+  // the zoom from the card: a slightly underdamped spring (a big surface — no visible bounce, but alive)
+  if (window.NPSpring && NPSpring.ok()) {
+    const sp = NPSpring.ease(0.86, 0.44);
+    modal.style.setProperty('--pm-spring', sp.easing);
+    modal.style.setProperty('--pm-spring-dur', sp.duration + 'ms');
+  }
   modal.addEventListener('click', e => { if (e.target.closest('[data-close]')) closeProductModal(e.detail === 0); });
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape' && modalState === 'open') { e.preventDefault(); closeProductModal(true); return; }

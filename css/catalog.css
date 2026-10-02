@@ -70,15 +70,18 @@ body.modal-open .cat-nav::before { -webkit-backdrop-filter: none; backdrop-filte
 .cat-nav .cat-chip.is-active { color: #fff; border-color: transparent; background-color: var(--ink); }
 .cat-nav__scroller.has-indicator .cat-chip.is-active { background-color: transparent; }
 .cat-nav .cat-chip.is-active .cat-chip__n { opacity: .8; }
-/* Label colour split around the pill's glide (old label darkens as it leaves, new one whitens as it lands) */
-.cat-nav__scroller.has-indicator .cat-chip {
-  transition:
-    color calc(var(--dur-indicator) / 2) var(--ease-out),
-    border-color var(--dur-hover) var(--ease-color),
-    transform var(--dur-release) var(--ease-out);
+/* Label colour hand-off (main.js placeIndicator): a chip is .is-lit exactly while the pill covers most of it —
+   white text and no outline flip in the pill's own frame, without a timed transition of their own */
+.cat-nav .cat-nav__scroller.spr-lit .cat-chip { transition: none; }
+.cat-nav .cat-nav__scroller.spr-lit .cat-chip.is-active:not(.is-lit) { color: var(--ink-2-tint); border-color: var(--hairline-strong, rgba(0,0,0,.14)); }
+.cat-nav .cat-nav__scroller.spr-lit .cat-chip.is-lit { color: #fff; border-color: transparent; }
+.cat-nav .cat-nav__scroller.spr-lit .cat-chip.is-lit .cat-chip__n { opacity: .8; }
+@media (hover: hover) and (pointer: fine) {
+  /* hover may ease — only the hovered state carries a transition, so the pill's flip stays instant */
+  .cat-nav .cat-nav__scroller.spr-lit .cat-chip:not(.is-lit):hover {
+    transition: color var(--dur-hover) var(--ease-color), border-color var(--dur-hover) var(--ease-color);
+  }
 }
-.cat-nav__scroller.has-indicator .cat-chip.is-active { transition-delay: calc(var(--dur-indicator) / 2), 0s, 0s; }
-.cat-nav__scroller.has-indicator .cat-chip:active { transition-duration: calc(var(--dur-indicator) / 2), var(--dur-hover), var(--dur-press); }
 /* Scroll-spy (режим «Все»): раздел, который сейчас под лентой */
 .cat-nav .cat-chip.is-spy:not(.is-active) { color: var(--brand-ink); border-color: var(--brand-ink); }
 .cat-nav .cat-chip[aria-disabled="true"] { opacity: .4; cursor: not-allowed; }
@@ -88,18 +91,16 @@ body.modal-open .cat-nav::before { -webkit-backdrop-filter: none; backdrop-filte
   .cat-nav .cat-chip[aria-disabled="true"]:hover { color: var(--ink-2-tint); border-color: var(--hairline-strong, rgba(0,0,0,.14)); }
 }
 
-/* Sliding indicator (main.js sets --ind-x/--ind-w/--ind-y/--ind-h, same contract as the tabs) */
+/* Sliding pill: NPSpring.indicator via main.js placeIndicator (springs + drop stretch, written inline each frame —
+   no CSS transition on transform / width / height); without the spring core the --ind-* vars place it */
 .cat-nav__indicator {
-  position: absolute; left: 0; top: var(--ind-y, 2px); z-index: 0;
+  position: absolute; left: 0; top: 0; z-index: 0;
   width: var(--ind-w, 0px); height: var(--ind-h, 32px);
   border-radius: var(--r-pill); pointer-events: none;
   background-color: var(--ink);
-  transform: translateX(var(--ind-x, 0px));
-  transition:
-    transform var(--dur-indicator) var(--ease-in-out),
-    width var(--dur-indicator) var(--ease-in-out);
+  transform: translate(var(--ind-x, 0px), var(--ind-y, 2px)); transform-origin: 50% 50%;
+  will-change: transform;
 }
-.cat-nav__indicator.is-instant { transition: none; }
 
 /* ===== «Показано N товаров» ===== */
 .cat-result {
@@ -222,9 +223,12 @@ html[data-vt="section"]::view-transition { clip-path: inset(var(--sticky-offset)
    re-blurring it every frame is most of the slow frames and shows nothing (tint is already 84%) */
 html[data-vt] .catalog-bar, html[data-vt] .cat-nav::before { -webkit-backdrop-filter: none; backdrop-filter: none; }
 
+/* ===== Blocks gliding to a new place after a filter (main.js morphGrid → NPSpring.flipPlay writes inline
+   `translate` every frame): their own transitions (the card's hover lift is on `translate`) are off meanwhile ===== */
+.is-flip { transition: none !important; }
+
 /* ===== Reduced motion: no gliding ===== */
 @media (prefers-reduced-motion: reduce) {
-  .cat-nav__indicator { transition: none; }
   body.modal-open .cat-nav { transform: none; }
   .cat-nav { transition: opacity 150ms var(--ease-out); }
 }
@@ -232,7 +236,7 @@ html[data-vt] .catalog-bar, html[data-vt] .cat-nav::before { -webkit-backdrop-fi
 /* ===== Forced colours ===== */
 @media (forced-colors: active) {
   .cat-nav__indicator { background-color: Highlight; forced-color-adjust: none; }
-  .cat-nav__scroller.has-indicator .cat-chip.is-active { color: HighlightText; forced-color-adjust: none; }
+  .cat-nav__scroller.has-indicator .cat-chip.is-active, .cat-nav__scroller.spr-lit .cat-chip.is-lit { color: HighlightText; forced-color-adjust: none; }
   .cat-nav::before { backdrop-filter: none; -webkit-backdrop-filter: none; background: Canvas; }
 }
 

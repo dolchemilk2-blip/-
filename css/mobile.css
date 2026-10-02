@@ -122,3 +122,45 @@ a, button, label, summary, [role="button"], [role="tab"], [role="radio"], [role=
   .lang__menu, .pmodal__header.is-stuck { background-color: var(--paper); }
   .hero__arrow { background-color: rgba(20, 24, 22, .55); }
 }
+
+/* ===== Chrome motion — header language menu, burger icon, burger sheet (both pages; the language menu and the burger
+   icon at every width). «Монтажка» rules: open on a spring from where it was invoked, close faster, keyboard = instant
+   (main.js puts .is-instant on #lang). js/mobile.js: drag the burger sheet to close, the segment's sliding thumb. ===== */
+@media (prefers-reduced-motion: no-preference) {
+  /* language menu grows out of the button's corner: scale .97, 4px and a 2px blur on --spring-snappy; leaves in 150ms */
+  .lang__menu {
+    transform: translateY(calc(var(--distance-micro) * -1)) scale(var(--scale-open)); filter: blur(var(--blur-small));
+    transition: opacity var(--duration-quick) var(--ease-smooth-out), transform var(--duration-quick) var(--ease-smooth-out),
+                filter var(--duration-quick) var(--ease-smooth-out), visibility 0s linear var(--duration-quick);
+  }
+  .lang.is-open .lang__menu {
+    transform: none; filter: none;
+    transition: opacity var(--dur-pop-in) var(--ease-out), transform var(--spring-snappy-dur) var(--spring-snappy),
+                filter var(--dur-pop-in) var(--ease-out), visibility 0s;
+  }
+  .lang__current svg { transition: transform var(--spring-bouncy-dur) var(--spring-bouncy); }
+  .lang.is-open .lang__current svg { transform: rotate(180deg); }
+  .lang.is-instant .lang__menu, .lang.is-instant .lang__current svg { transition: none; }
+
+  /* burger ↔ close: the outer bars meet and turn on a bouncy spring (back on a snappy one), the middle one folds away */
+  .burger span { transition: transform var(--spring-snappy-dur) var(--spring-snappy), opacity var(--duration-quick) var(--ease-smooth-out); }
+  .burger.is-open span { transition: transform var(--spring-bouncy-dur) var(--spring-bouncy), opacity var(--duration-quick) var(--ease-smooth-out); }
+  .burger.is-open span:nth-child(2) { transform: scaleX(.2); }
+}
+/* burger sheet: slides in on a spring (it leaves on the 250ms drawer curve); sideways drags belong to js/mobile.js */
+@media (max-width: 720px) {
+  .nav { touch-action: pan-y; }
+  .nav-lang { position: relative; }
+  .nav-lang__btn { position: relative; z-index: 1; }
+  .nav-lang__ind { background-color: #fff; border-radius: var(--r-pill); box-shadow: var(--shadow-thumb); }
+  .nav-lang.has-ind .nav-lang__btn[aria-pressed="true"] { background-color: transparent; box-shadow: none; }
+}
+@media (max-width: 720px) and (prefers-reduced-motion: no-preference) {
+  .nav.is-open, .home .nav.is-open { transition: transform var(--spring-pane-dur) var(--spring-pane), visibility 0s; }
+}
+@media (min-width: 721px) and (max-width: 1100px) {
+  .home .nav { touch-action: pan-y; }
+}
+@media (min-width: 721px) and (max-width: 1100px) and (prefers-reduced-motion: no-preference) {
+  .home .nav.is-open { transition: transform var(--spring-pane-dur) var(--spring-pane), visibility 0s; }
+}

@@ -1,14 +1,14 @@
-/* ===== «Мой список» (js/list.js) ===== */
+/* ===== «Мой список» (js/list.js) — motion: js/list.js on js/spring.js springs, tokens in css/tokens.css ===== */
 :root {
   --like-color: #e0245e;
-  --like-pop-ease: cubic-bezier(0.34, 1.56, 0.64, 1);
-  --dur-like-pop: 300ms;
-  --toast-open: 350ms;
-  --toast-close: 200ms;
 }
 
-/* --- сердечко --- */
+/* --- сердечко ---
+   Outline ↔ filled icons in one cell (css/spring.css .t-swap: the leaving one shrinks to .25 and blurs 2px, the
+   entering one pops on --spring-bouncy; a transition, so rapid taps reverse it mid-way). A like also throws a ring
+   and six sparks (.np-burst, built and removed by js/list.js). Press: js/spring.js (inline `scale`). */
 .np-heart {
+  position: relative;
   width: 40px; height: 40px; display: inline-grid; place-items: center;
   border: 0; border-radius: 50%; padding: 0; cursor: pointer;
   /* No backdrop blur: 100+ hearts each re-blurring during scroll / hover lift / grid swaps cost frames,
@@ -16,23 +16,34 @@
   background-color: rgba(255,255,255,.9);
   color: var(--ink-2, #555);
   box-shadow: 0 1px 2px rgba(0,0,0,.08), 0 0 0 1px var(--hairline, rgba(0,0,0,.06));
-  transition: transform var(--dur-like-pop) var(--like-pop-ease), color var(--dur-hover) var(--ease-out);
+  transition: transform var(--dur-release) var(--ease-out), color var(--dur-hover) var(--ease-out);
   -webkit-tap-highlight-color: transparent;
 }
-.np-heart svg { fill: transparent; stroke: currentColor; stroke-width: 1.8; stroke-linejoin: round;
-  transition: fill 150ms var(--ease-out); }
+.np-heart__ic > span { display: grid; place-items: center; }
+.np-heart svg { display: block; stroke-width: 1.8; stroke-linejoin: round; }
+.np-heart__ic [data-icon="a"] svg { fill: none; stroke: currentColor; }
+.np-heart__ic [data-icon="b"] svg { fill: var(--like-color); stroke: var(--like-color); }
 .np-heart[aria-pressed="true"] { color: var(--like-color); }
-.np-heart[aria-pressed="true"] svg { fill: currentColor; }
 html:not(.spr) .np-heart:active { transform: scale(var(--press-scale, .97)); transition-duration: var(--dur-press); }
-.np-heart.is-pop-start { transform: scale(.85); transition: none; }
 .np-heart:focus-visible, .np-fab:focus-visible, .np-listpanel button:focus-visible, .np-toast__undo:focus-visible {
   outline: var(--focus-ring, 2px solid currentColor); outline-offset: 2px;
 }
 @media (hover: hover) and (pointer: fine) {
   .np-heart:hover { color: var(--like-color); }
 }
+.np-burst { position: absolute; inset: 0; display: grid; place-items: center; pointer-events: none; color: var(--like-color); }
+.np-burst > i { grid-area: 1 / 1; border-radius: 50%; opacity: 0; }
+.np-burst__ring { width: 30px; height: 30px; box-shadow: inset 0 0 0 1.5px currentColor; }
+/* six sparks on a 16px circle, drawn as shadows of one 3px dot (the dot itself stays transparent) */
+.np-burst__dots {
+  width: 3px; height: 3px;
+  box-shadow: 0 -16px 0 currentColor, 13.9px -8px 0 currentColor, 13.9px 8px 0 currentColor,
+              0 16px 0 currentColor, -13.9px 8px 0 currentColor, -13.9px -8px 0 currentColor;
+}
 
-/* --- toast --- */
+/* --- toast ---
+   Shown / hidden by js/list.js: it rises from 22px below on a spring (scale .9, blur 6px), leaves as a ghost copy
+   (back down, 220ms) and can be swiped down. No CSS transitions here except under reduced motion. */
 .np-toast-region {
   position: fixed; left: 50%; bottom: max(24px, env(safe-area-inset-bottom)); translate: -50% 0;
   z-index: 1200; pointer-events: none; width: max-content; max-width: calc(100vw - 32px);
@@ -43,24 +54,23 @@ html:not(.spr) .np-heart:active { transform: scale(var(--press-scale, .97)); tra
   background: var(--night, #1d1d1f); color: var(--night-ink, #fff);
   font: 500 var(--t-callout, 15px)/1.3 var(--font, system-ui);
   box-shadow: var(--shadow-lg, 0 10px 30px rgba(0,0,0,.2));
-  opacity: 0; transform: translateY(16px) scale(.97); visibility: hidden;
-  transition: opacity var(--toast-close) var(--ease-out), transform var(--toast-close) var(--ease-out), visibility 0s linear var(--toast-close);
+  opacity: 0; visibility: hidden;
+  touch-action: none; user-select: none; -webkit-user-select: none;   /* swipe to dismiss */
 }
-.np-toast.is-open {
-  opacity: 1; transform: none; visibility: visible;
-  transition: opacity var(--toast-open) var(--ease-out), transform var(--toast-open) var(--ease-out), visibility 0s;
-}
+.np-toast.is-open { opacity: 1; visibility: visible; }
+.np-toast__text { display: inline-block; }
 .np-toast__undo {
   border: 0; border-radius: var(--r-pill, 999px); padding: 7px 14px; cursor: pointer;
   background: rgba(255,255,255,.14); color: inherit; font: inherit; font-weight: 600;
-  transition: background-color var(--dur-hover) var(--ease-out);
+  transition: background-color var(--dur-hover) var(--ease-out), transform var(--dur-release) var(--ease-out);
 }
 .np-toast__undo[hidden] { display: none; }
-.np-toast__undo { transition: background-color var(--dur-hover) var(--ease-out), transform var(--dur-release) var(--ease-out); }
 html:not(.spr) .np-toast__undo:active { transform: scale(var(--press-scale, .97)); transition-duration: var(--dur-hover), var(--dur-press); }
 @media (hover: hover) and (pointer: fine) { .np-toast__undo:hover { background: rgba(255,255,255,.24); } }
 
-/* --- плавающая кнопка --- */
+/* --- плавающая кнопка ---
+   Appears like an island (js/list.js: clip-path grows out of a pill, the content sharpens in), leaves as a ghost
+   copy that shrinks back into the pill. The count is a NPSpring.num digit group; adding bumps the button. */
 .np-fab {
   position: fixed; right: max(16px, env(safe-area-inset-right)); bottom: max(20px, env(safe-area-inset-bottom));
   z-index: 1100; display: inline-flex; align-items: center; gap: 8px;
@@ -68,33 +78,39 @@ html:not(.spr) .np-toast__undo:active { transform: scale(var(--press-scale, .97)
   background: var(--night, #1d1d1f); color: var(--night-ink, #fff);
   font: 600 var(--t-footnote, 14px)/1 var(--font, system-ui);
   box-shadow: var(--shadow-lg, 0 10px 30px rgba(0,0,0,.2));
-  opacity: 0; visibility: hidden; transform: translateY(12px) scale(.96);
-  transition: opacity var(--dur-pop-out) var(--ease-out), transform var(--dur-pop-out) var(--ease-out), visibility 0s linear var(--dur-pop-out);
+  opacity: 0; visibility: hidden;
+  transition: opacity var(--dur-pop-out) var(--ease-out), visibility 0s linear var(--dur-pop-out);
 }
 .np-fab.is-visible {
-  opacity: 1; visibility: visible; transform: none;
-  transition: opacity var(--dur-pop-in) var(--ease-out), transform var(--dur-spring-snappy) var(--spring, var(--ease-out)), visibility 0s;
+  opacity: 1; visibility: visible;
+  transition: opacity var(--dur-pop-in) var(--ease-out), visibility 0s;
+}
+@media (prefers-reduced-motion: no-preference) {
+  html.spr .np-fab:not(.is-visible) { transition: none; }   /* its ghost copy does the leaving */
 }
 .np-fab svg { fill: var(--like-color); stroke: none; width: 18px; height: 18px; }
 .np-fab__count {
   min-width: 28px; height: 28px; padding: 0 8px; display: inline-grid; place-items: center;
   border-radius: var(--r-pill, 999px); background: rgba(255,255,255,.16);
   font-variant-numeric: tabular-nums;
-  transition: transform var(--dur-like-pop) var(--like-pop-ease), opacity var(--dur-pop-in) var(--ease-out), filter var(--dur-pop-in) var(--ease-out);
 }
-.np-fab__count.is-pop-start { transform: translateY(4px) scale(.8); opacity: .4; filter: blur(2px); transition: none; }
 html:not(.spr) .np-fab:active { transform: scale(var(--press-scale, .97)); transition-duration: var(--dur-press); }
 @media (max-width: 640px) {
   .np-fab__label { display: none; }
   .np-fab { padding: 0 8px 0 14px; }
   .np-toast-region { bottom: calc(max(20px, env(safe-area-inset-bottom)) + 60px); }
 }
-body.modal-open .np-fab { opacity: 0; visibility: hidden; }
+body.modal-open .np-fab { opacity: 0; visibility: hidden; transition: opacity var(--dur-pop-out) var(--ease-out), visibility 0s linear var(--dur-pop-out); }
 
-/* --- панель --- */
+/* --- панель ---
+   Phones (≤640px): a bottom sheet — slides up in css (css/motion-catalog.css), dragged by NPMotion.sheetDrag.
+   Wider: a drawer that js/list.js grows out of the button that opened it (spring) and sends back faster (200ms).
+   Rows: a removed row leaves as a ghost copy while the others glide up on springs (FLIP); new rows rise in; the
+   bottom sheet's height glides with them. Closing is logically instant: the panel stops catching clicks at once, the exit only plays out. */
 html.np-list-open { overflow: hidden; }
 .np-listpanel { position: fixed; inset: 0; z-index: 1150; }
 .np-listpanel[hidden] { display: none; }
+.np-listpanel:not(.is-open) { pointer-events: none; }
 .np-listpanel__scrim {
   position: absolute; inset: 0; background: var(--backdrop, rgba(0,0,0,.35));
   opacity: 0; transition: opacity var(--dur-drawer-out, 250ms) var(--ease-out);
@@ -110,6 +126,9 @@ html.np-list-open { overflow: hidden; }
   outline: none;
 }
 .np-listpanel.is-open .np-listpanel__sheet { transform: none; transition-duration: var(--dur-drawer-in, 500ms); }
+@media (prefers-reduced-motion: no-preference) {
+  html.spr .np-listpanel:not(.is-sheet) .np-listpanel__sheet { transform: none; transition: none; }   /* js/list.js springs it */
+}
 .np-listpanel__grip { display: none; }
 .np-listpanel.is-sheet .np-listpanel__sheet {
   top: auto; left: 0; width: 100%; max-height: 86vh; max-height: 86dvh;
@@ -163,18 +182,28 @@ html.np-list-open { overflow: hidden; }
 .np-listpanel__foot[hidden] { display: none; }
 .np-btn {
   flex: 1 1 0; height: 44px; border-radius: var(--r-pill, 999px); cursor: pointer;
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 0 12px;
   border: 1px solid var(--hairline-strong, rgba(0,0,0,.15)); background: transparent; color: var(--ink, #1d1d1f);
   font: 600 var(--t-footnote, 14px)/1 var(--font, system-ui);
   transition: background-color var(--dur-hover) var(--ease-out), transform var(--dur-release) var(--ease-out);
 }
 .np-btn--primary { background: var(--accent, #1d1d1f); border-color: transparent; color: var(--white, #fff); }
 html:not(.spr) .np-btn:active { transform: scale(var(--press-scale, .97)); transition-duration: var(--dur-press); }
+.np-btn__lbl { display: inline-block; }
+/* «Скопировано»: transitions.dev success check — the plate pops (--ease-bounce), the mark draws in left to right */
+.np-check {
+  flex: 0 0 auto; width: 20px; height: 20px; display: inline-grid; place-items: center;
+  border-radius: 50%; background-color: rgba(255,255,255,.22);
+  animation: t-check-plate var(--duration-very-slow) var(--ease-bounce) both;
+}
+.np-check svg { display: block; animation: t-check-in var(--duration-very-slow) var(--ease-smooth-out) both; }
 
 /* --- системные настройки --- */
 @media (prefers-reduced-motion: reduce) {
-  .np-heart, .np-heart svg, .np-fab, .np-fab.is-visible, .np-fab__count { transition: opacity 150ms linear, color 150ms linear, fill 150ms linear, visibility 0s; transform: none !important; }
-  .np-toast, .np-toast.is-open { transform: none; transition: opacity 150ms linear, visibility 0s linear 150ms; }
-  .np-toast.is-open { transition: opacity 150ms linear, visibility 0s; }
+  .np-heart { transition: color 150ms linear; transform: none !important; }
+  .np-fab, .np-toast { transition: opacity 150ms linear, visibility 0s linear 150ms; }
+  .np-fab.is-visible, .np-toast.is-open { transition: opacity 150ms linear, visibility 0s; }
+  .np-check, .np-check svg { animation: none; }
   .np-listpanel__sheet, .np-listpanel.is-sheet .np-listpanel__sheet { transform: none; opacity: 0; transition: opacity 150ms linear; }
   .np-listpanel.is-open .np-listpanel__sheet { opacity: 1; }
   .np-listpanel__scrim { transition: opacity 150ms linear; }

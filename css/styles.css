@@ -282,34 +282,28 @@ html:not(.spr) .tab:active, html:not(.spr) .brand-tab:active { transform: scale(
 @media (hover: hover) and (pointer: fine) {
   .tab:not(.is-active):hover, .brand-tab:not(.is-active):hover { background-color: rgba(0,0,0,.05); }
 }
-/* Индикатор: CORE вставляет .tabs__indicator и задаёт --ind-x / --ind-w (+ опц. --ind-y / --ind-h) */
+/* Индикатор (main.js placeIndicator): the pill rides NPSpring.indicator — x/y/w/h on springs, a drop-like stretch
+   while it travels — written inline every frame (transform / width / height), so none of them has a CSS transition.
+   Without the spring core main.js places it through --ind-x/-y/-w/-h (no glide). */
 .tabs__indicator, .species__indicator {
-  position: absolute; left: 0; top: var(--ind-y, 3px); z-index: 0;
+  position: absolute; left: 0; top: 0; z-index: 0;
   width: var(--ind-w, 0px); height: var(--ind-h, calc(100% - 6px));
   border-radius: var(--r-pill); pointer-events: none;
-  transform: translateX(var(--ind-x, 0px));
-  transition:
-    transform var(--dur-indicator) var(--ease-in-out),
-    width var(--dur-indicator) var(--ease-in-out),
-    height var(--dur-indicator) var(--ease-in-out),
-    background-color var(--dur-tint) var(--ease-color);
+  transform: translate(var(--ind-x, 0px), var(--ind-y, 3px)); transform-origin: 50% 50%;
+  will-change: transform;
+  transition: background-color var(--dur-tint) var(--ease-color);
 }
 .tabs__indicator { background-color: var(--accent); }
 .tabs:has(.tabs__indicator) .tab.is-active,
 .tabs:has(.tabs__indicator) .brand-tab.is-active { background-color: transparent; }
-/* Label colour split around the pill's glide: the old label darkens as the pill leaves (first half),
-   the new one turns white as the pill lands (second half) — never white text on the light track */
-.tabs:has(.tabs__indicator) .tab {
-  transition:
-    color calc(var(--dur-indicator) / 2) var(--ease-out),
-    background-color var(--dur-hover) var(--ease-color),
-    border-color var(--dur-hover) var(--ease-color),
-    transform var(--dur-release) var(--ease-out);
+/* Label colour hand-off: main.js lights a label (.is-lit) exactly while the pill covers most of it — the colour
+   flips with the pill, in its frame, with no transition of its own (Монтажка's segOff: no second, timed fade
+   that could run ahead of the spring or flash). Hover tint still eases. */
+.tabs.spr-lit .tab {
+  transition: background-color var(--dur-hover) var(--ease-color), border-color var(--dur-hover) var(--ease-color);
 }
-.tabs:has(.tabs__indicator) .tab.is-active { transition-delay: calc(var(--dur-indicator) / 2), 0s, 0s, 0s; }
-.tabs:has(.tabs__indicator) .tab:active { transition-duration: calc(var(--dur-indicator) / 2), var(--dur-hover), var(--dur-hover), var(--dur-press); }
-/* Keyboard-initiated or first placement: CORE may add .is-instant to skip the glide */
-.tabs__indicator.is-instant, .species__indicator.is-instant { transition: none; }
+.tabs.spr-lit .tab:not(.is-lit) { color: var(--ink); }
+.tabs.spr-lit .tab.is-lit { color: #fff; }
 
 /* ===== Species filter (segmented, iOS-style white thumb) ===== */
 .species {
@@ -343,14 +337,15 @@ html:not(.spr) .species__btn:active { transform: scale(var(--press-scale)); tran
 }
 .species__indicator { background-color: #fff; box-shadow: var(--shadow-thumb); }
 .species:has(.species__indicator) .species__btn.is-active { background-color: transparent; box-shadow: none; }
-.species:has(.species__indicator) .species__btn {
-  transition:
-    color calc(var(--dur-indicator) / 2) var(--ease-out),
-    opacity var(--dur-hover) var(--ease-color),
-    transform var(--dur-release) var(--ease-out);
+/* same hand-off as the brand tabs: the label under the white thumb is the dark one */
+.species.spr-lit .species__btn { transition: opacity var(--dur-hover) var(--ease-color); }
+.species.spr-lit .species__btn:not(.is-lit):not([aria-disabled="true"]) { color: var(--ink-2-tint); }
+.species.spr-lit .species__btn.is-lit { color: var(--ink); }
+.species.spr-lit .species__btn--baby.is-lit { color: var(--brand-ink); }
+@media (hover: hover) and (pointer: fine) {
+  /* hover may ease (only the hovered state carries the transition — the pill's flip stays instant) */
+  .species.spr-lit .species__btn:not(.is-lit):not([aria-disabled="true"]):hover { color: var(--ink); transition: color var(--dur-hover) var(--ease-color), opacity var(--dur-hover) var(--ease-color); }
 }
-.species:has(.species__indicator) .species__btn.is-active { transition-delay: calc(var(--dur-indicator) / 2), 0s, 0s; }
-.species:has(.species__indicator) .species__btn:active { transition-duration: calc(var(--dur-indicator) / 2), var(--dur-hover), var(--dur-press); }
 /* Нулевые варианты: не скрываем, а приглушаем (фокус сохраняется, причина — в title) */
 .species__btn[aria-disabled="true"] { opacity: .42; cursor: not-allowed; }
 .species__btn[aria-disabled="true"]:active { transform: none; }
@@ -425,11 +420,7 @@ body.modal-open .catalog-bar { transform: translateY(calc(-1 * var(--sticky-offs
 .catalog-bar .tabs__indicator {
   background-color: var(--brand-ink);
   /* the pill is the control: its colour lands with its motion (the page tint keeps its 700ms) */
-  transition:
-    transform var(--dur-indicator) var(--ease-in-out),
-    width var(--dur-indicator) var(--ease-in-out),
-    height var(--dur-indicator) var(--ease-in-out),
-    background-color var(--dur-indicator) var(--ease-in-out);
+  transition: background-color var(--duration-medium) var(--ease-smooth-out);
 }
 .catalog-bar .tabs:has(.tabs__indicator) .tab.is-active { background-color: transparent; }
 .catalog-bar__search { flex: 0 1 320px; min-width: 0; }
@@ -437,13 +428,6 @@ body.modal-open .catalog-bar { transform: translateY(calc(-1 * var(--sticky-offs
 
 /* Линейки бренда — внизу страницы */
 .ranges-block { margin-top: 80px; padding-top: 48px; border-top: 1px solid var(--hairline); }
-
-/* Первое появление карточек (только первые 8 — решает main.js) */
-.product.reveal {
-  opacity: 0; transform: translateY(12px);
-  transition: opacity var(--dur-swap-in) var(--ease-out), transform var(--dur-swap-in) var(--ease-out);
-}
-.product.reveal.in { opacity: 1; transform: none; }
 
 /* Декоративный фон шапки каталога: цвет интерполируется, поэтому пятна плавно перекрашиваются */
 .page-hero { position: relative; overflow: hidden; }
@@ -464,8 +448,11 @@ body.modal-open .catalog-bar { transform: translateY(calc(-1 * var(--sticky-offs
   display: flex; flex-direction: column;
   contain: layout;
   /* No background-color transition: 100+ cards re-tinting for 700ms was the costliest part of a brand
-     switch. The grid itself cross-fades (view transition / .brand-leaving), which hides the colour swap. */
-  transition: transform var(--dur-release) var(--ease-out);
+     switch. The grid itself cross-fades on a brand switch, which hides the colour swap.
+     Each transform channel has one owner (they compose): hover lift → `translate` (this transition),
+     press → inline `scale` (js/spring.js), desktop tilt → inline `transform` (NPSpring.tilt), FLIP → inline
+     `translate` while .is-flip (css/catalog.css turns this transition off for the glide). */
+  transition: translate var(--duration-fast) var(--ease-smooth-out);
 }
 .product__img {
   position: relative; overflow: hidden; border-radius: var(--r-card) var(--r-card) 0 0;
@@ -552,7 +539,8 @@ body.modal-open .catalog-bar { transform: translateY(calc(-1 * var(--sticky-offs
 }
 .product__open::after { content: ''; position: absolute; inset: 0; z-index: 1; border-radius: var(--r-card); }
 .product__open:focus-visible { outline: none; }
-html:not(.spr) .product.is-clickable:active { transform: scale(var(--press-scale-card)); transition-duration: var(--dur-press); }
+html:not(.spr) .product.is-clickable { transition: translate var(--duration-fast) var(--ease-smooth-out), transform var(--dur-release) var(--ease-out); }
+html:not(.spr) .product.is-clickable:active { transform: scale(var(--press-scale-card)); transition-duration: var(--duration-fast), var(--dur-press); }
 .product__more {
   margin-top: 14px; display: inline-flex; align-items: center; gap: 4px;
   color: var(--brand-ink); font-weight: 500; font-size: 14px; font-family: var(--head);
@@ -560,19 +548,26 @@ html:not(.spr) .product.is-clickable:active { transform: scale(var(--press-scale
 .product__more svg { transition: transform var(--dur-hover) var(--ease-out); }
 
 @media (hover: hover) and (pointer: fine) {
-  .feature:hover, .value-card:hover, .product:hover { transform: translateY(var(--lift)); }
-  .product:hover { transition-duration: var(--dur-hover); }
+  .feature:hover, .value-card:hover { transform: translateY(var(--lift)); }
+  /* the lift lands on a snappy spring (a hair of overshoot), and leaves on the smooth curve */
+  .product:hover { translate: 0 var(--lift); transition: translate var(--spring-snappy-dur) var(--spring-snappy); }
   .range:hover, .step:hover { transform: translateY(-3px); background-color: #fff; }
   .feature:hover::after, .value-card:hover::after, .range:hover::after, .step:hover::after, .product:hover::after { opacity: 1; }
   .product:hover .product__img img { transform: scale(1.04); }
   .product.is-clickable:hover .product__more svg { transform: translateX(3px); }
-  .product.is-clickable:hover:active { transform: scale(var(--press-scale-card)); }
+  html:not(.spr) .product.is-clickable:hover:active { transform: scale(var(--press-scale-card)); }
+  /* the tilt glare (css/spring.css .spr-glare) shares the card's hover layer: shadow outside, soft light inside */
+  .product.spr-glare::after {
+    background: radial-gradient(380px circle at var(--gx, 50%) var(--gy, 30%), rgba(255, 255, 255, .3), transparent 60%);
+  }
 }
 
 /* ===== Модальное окно товара =====
    Переходы (не keyframes) — можно прервать в любой момент.
-   Открытие: пружина по transform + fade 200ms. Закрытие: 200ms ease-out, быстрее открытия.
-   .is-closing (если main.js его ставит) трактуется как закрытое состояние. */
+   Открытие (Монтажка: from the point of invocation): main.js sets --from-x/-y/-s to the clicked card's centre and
+   rough size; the dialog zooms from there to the middle on a spring (--pm-spring, set by main.js from
+   NPSpring.ease) and fades in within 150ms. Закрытие: main.js plays a ghost copy out (180ms) and closes the real
+   one at once; the .is-closing transition below is only the fallback without the spring core. */
 .pmodal {
   position: fixed; inset: 0; z-index: 200;
   visibility: hidden; pointer-events: none;
@@ -591,7 +586,7 @@ html:not(.spr) .product.is-clickable:active { transform: scale(var(--press-scale
   background: var(--paper); border-radius: var(--r-panel); box-shadow: var(--shadow-modal);
   transform-origin: var(--pm-origin, 50% 50%);
   opacity: 0;
-  transform: translate(calc(-50% + var(--from-x, 0px)), calc(-50% + var(--from-y, 0px))) scale(var(--modal-scale));
+  transform: translate(calc(-50% + var(--from-x, 0px)), calc(-50% + var(--from-y, 0px))) scale(var(--from-s, var(--modal-scale)));
   transition:
     opacity var(--dur-modal-out) var(--ease-out),
     transform var(--dur-modal-out) var(--ease-out);
@@ -599,8 +594,8 @@ html:not(.spr) .product.is-clickable:active { transform: scale(var(--press-scale
 .pmodal.is-open:not(.is-closing) .pmodal__dialog {
   opacity: 1; transform: translate(-50%,-50%) scale(1);
   transition:
-    opacity var(--dur-modal-fade) var(--ease-out),
-    transform var(--dur-spring-snappy) var(--spring);
+    opacity var(--duration-quick) var(--ease-smooth-out),
+    transform var(--pm-spring-dur, var(--dur-spring-snappy)) var(--pm-spring, var(--spring));
 }
 /* At rest (fully closed) the dialog must not transition: main.js writes --from-x/--from-y (the "fly-out"
    point toward the clicked card) right before .is-open — animating that write would cancel the offset. */
@@ -617,7 +612,7 @@ html:not(.spr) .product.is-clickable:active { transform: scale(var(--press-scale
   cursor: pointer; box-shadow: 0 0 0 1px var(--hairline);
   transition: background-color var(--dur-hover) var(--ease-color), transform var(--dur-release) var(--ease-out);
 }
-.pmodal__close:active { transform: scale(.92); transition-duration: var(--dur-hover), var(--dur-press); }
+html:not(.spr) .pmodal__close:active { transform: scale(.92); transition-duration: var(--dur-hover), var(--dur-press); }
 .pmodal__close::before { content: ''; position: absolute; inset: -4px; border-radius: 50%; } /* 44px hit area */
 .pmodal__actions { position: absolute; top: 14px; right: 58px; z-index: 4; display: flex; gap: 8px; }
 .pmodal__actions:empty { display: none; }
@@ -767,13 +762,19 @@ body.page-leaving { opacity: 0; transition: opacity var(--dur-page-out) var(--ea
 .tpl-bottle__img img {
   max-height: 300px; max-width: 100%; object-fit: contain;
   filter: drop-shadow(0 16px 14px rgba(31,42,36,.14)); /* static: rasterised once inside the floating layer */
-  transition: transform var(--dur-swap-in) var(--ease-out);
+  /* channels: hover lift → translate + scale (here), desktop tilt → inline transform (NPSpring.tilt in main.js).
+     The floating parent keeps its own transform (tplFloat, 4.6s). */
+  transition: translate var(--duration-fast) var(--ease-smooth-out), scale var(--duration-fast) var(--ease-smooth-out);
 }
-.tpl-bottle:active .tpl-bottle__img img { transform: translateY(-6px) scale(var(--press-scale-card)); transition-duration: 120ms; }
+html:not(.spr) .tpl-bottle:active .tpl-bottle__img img { translate: 0 -6px; scale: var(--press-scale-card); transition-duration: 120ms; }
 @media (hover: hover) and (pointer: fine) {
   .tpl-bottle:hover .tpl-bottle__img, .tpl-bottle:hover .tpl-bottle__img::after { animation-play-state: paused; }
-  .tpl-bottle:hover .tpl-bottle__img img { transform: translateY(-10px) scale(1.04); }
-  .tpl-bottle:hover:active .tpl-bottle__img img { transform: translateY(-6px) scale(var(--press-scale-card)); }
+  /* the bottle rises toward you on a snappy spring (the whole column presses on its own spring, js/spring.js) */
+  .tpl-bottle:hover .tpl-bottle__img img {
+    translate: 0 -10px; scale: 1.04;
+    transition: translate var(--spring-snappy-dur) var(--spring-snappy), scale var(--spring-snappy-dur) var(--spring-snappy);
+  }
+  html:not(.spr) .tpl-bottle:hover:active .tpl-bottle__img img { translate: 0 -6px; scale: var(--press-scale-card); }
 }
 /* Пауза вне экрана (класс ставит JS) и пока открыт товар */
 .tpl-system.is-offscreen .tpl-bottle__img, .tpl-system.is-offscreen .tpl-bottle__img::after,
@@ -861,11 +862,8 @@ body[data-brand="tpl"]    { --tint: #f7f8fb; --tint-soft: #eceef3; --brand-accen
 body[data-brand="misoko"] { --tint: #fdf5f9; --tint-soft: #fae6f0; --brand-accent: #cf7397; --brand-accent-rgb: 207,115,151;
   --brand-ink: #a8456f; --card-bg: #fbeff5; }
 
-/* Плавная смена сетки при переключении бренда (уход быстрее входа, одно направление) */
-#productsGrid { transition: opacity var(--dur-swap-out) var(--ease-out), transform var(--dur-swap-out) var(--ease-out); }
-#productsGrid.brand-leaving { opacity: 0; transform: translateY(-6px); }
-#productsGrid.brand-entering, .cat-nav.brand-entering { animation: brandIn 320ms var(--ease-out); }
-@keyframes brandIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+/* Смена бренда / вида / раздела — main.js (activateBrand, morphGrid): the old grid fades out (WAAPI), blocks on
+   screen glide (FLIP), rise in a spring staircase or ghost out; ranges + footer glide to the new height. */
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
 /* ===== View Transitions for NP.swap(updateFn, type) — brand / species / section =====
@@ -1065,15 +1063,13 @@ html[data-vt] #productsGrid { view-transition-name: np-grid; } /* also named by 
   .btn, .tab, .brand-tab, .species__btn, .cat-chip, .brand-chip, .lang__current, .pmodal__close,
   .feature, .value-card, .range, .step, .product, .product__img img, .tpl-bottle__img img,
   .page-hero__back, .hero__arrow { transform: none !important; }
+  .product, .tpl-bottle__img img { translate: none !important; scale: none !important; }
   .hero__arrow { transform: translateY(-50%) !important; }
   .pmodal__dialog, .pmodal.is-open:not(.is-closing) .pmodal__dialog {
     transform: translate(-50%,-50%) !important;
     transition: opacity 150ms var(--ease-out);
   }
-  .product.reveal { transform: none; transition: opacity 150ms var(--ease-out); }
-  #productsGrid { transition: opacity var(--dur-swap-out) var(--ease-out); }
-  #productsGrid.brand-leaving { transform: none; }
-  #productsGrid.brand-entering, .cat-nav.brand-entering, .brand-panel.is-active { animation: fadeIn 150ms var(--ease-out); }
+  .brand-panel.is-active { animation: fadeIn 150ms var(--ease-out); }
   body.page-enter { animation: fadeIn 150ms var(--ease-out) backwards; }
   .page-enter .page-hero, .page-enter .section--top { animation: none; }
   body.page-leaving { transition: opacity 150ms var(--ease-out); }
@@ -1086,7 +1082,9 @@ html[data-vt] #productsGrid { view-transition-name: np-grid; } /* also named by 
 /* ===== Forced colours (Windows High Contrast) ===== */
 @media (forced-colors: active) {
   .tabs__indicator, .species__indicator { background-color: Highlight; forced-color-adjust: none; }
-  .tabs:has(.tabs__indicator) .tab.is-active, .species:has(.species__indicator) .species__btn.is-active { color: HighlightText; forced-color-adjust: none; }
+  .tabs:has(.tabs__indicator) .tab.is-active, .species:has(.species__indicator) .species__btn.is-active,
+  .tabs.spr-lit .tab.is-lit, .species.spr-lit .species__btn.is-lit { color: HighlightText; forced-color-adjust: none; }
+  .tabs.spr-lit .tab:not(.is-lit), .species.spr-lit .species__btn:not(.is-lit) { color: ButtonText; }
   .tab.is-active, .brand-tab.is-active, .species__btn.is-active, .cat-chip.is-active { border: 2px solid Highlight; }
   .species__btn[aria-disabled="true"] { color: GrayText; opacity: 1; }
   .product, .feature, .value-card, .range, .step, .pmodal__dialog, .faq__item { border: 1px solid CanvasText; }

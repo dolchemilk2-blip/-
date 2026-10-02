@@ -77,7 +77,8 @@
     max-width: none; margin: 3px 0 0; font-size: 13px; line-height: 1.4;
     display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
   }
-  .tpl-bottle:active .tpl-bottle__img img { transform: translateY(-3px) scale(var(--press-scale-card)); }
+  /* the row itself presses on a spring (js/spring.js); the bottle lifts a little inside it */
+  .tpl-bottle:active .tpl-bottle__img img { translate: 0 -3px; }
 
   /* badges: one line that scrolls sideways and fades at the right edge */
   .tpl-system__badges {

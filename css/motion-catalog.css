@@ -1,6 +1,7 @@
 /* ===== Catalog motion on phones (≤720px) — loaded after mobile-tauro.css; behaviour: js/motion-catalog.js =====
-   Curves/durations come from css/tokens.css. Enter = --ease-out / --ease-drawer, exit is faster than enter,
-   every reversible UI uses transitions (interruptible), keyboard-initiated changes are instant
+   Curves come from css/tokens.css: the exact springs --spring-smooth / -bouncy / -pane (linear() curves written by
+   js/spring.js — the same physics as «Монтажка») and the transitions.dev scale. Every reversible UI uses
+   transitions (interruptible: a re-tap reverses from where it is), keyboard-initiated changes are instant
    ([data-m-instant] set by js/motion-catalog.js), reduced motion = opacity only, ≤150ms (bottom of file).
    Desktop is untouched: every rule here sits inside a ≤720px query. */
 
@@ -11,31 +12,34 @@
 
 @media (max-width: 720px) and (prefers-reduced-motion: no-preference) {
 
-  /* ---------- M1 Accordions: 0fr → 1fr rows, 300ms open / 200ms close, content rises 4px, chevron 180° ---------- */
+  /* ---------- M1 Accordions («Монтажка» .acc): the row grows 0fr → 1fr on --spring-smooth (no overshoot on a
+     height), the chevron flips on --spring-bouncy, the text clears from a 2px blur as it fades in; closing fades
+     the text first (quick) while the row folds on the same spring. Interruptible both ways. ---------- */
   .coat-insert__text {
-    transition: grid-template-rows 200ms var(--ease-out), row-gap 200ms var(--ease-out);
+    transition: grid-template-rows var(--spring-smooth-dur) var(--spring-smooth), row-gap var(--spring-smooth-dur) var(--spring-smooth);
   }
   .coat-insert__text p {
-    opacity: 0; translate: 0 4px;
-    transition: opacity 150ms var(--ease-out), translate 200ms var(--ease-out), visibility 0s linear 200ms;
+    opacity: 0; filter: blur(var(--blur-small));
+    transition: opacity var(--duration-quick) var(--ease-smooth-out), filter var(--duration-quick) var(--ease-smooth-out),
+                visibility 0s linear var(--duration-fast);
   }
-  .coat-insert.is-open .coat-insert__text { transition-duration: 300ms; }
   .coat-insert.is-open .coat-insert__text p {
-    opacity: 1; translate: 0 0;
-    transition: opacity 240ms var(--ease-out) 60ms, translate 300ms var(--ease-out), visibility 0s;
+    opacity: 1; filter: none;
+    transition: opacity var(--duration-fast) var(--ease-smooth-out) 40ms, filter var(--duration-fast) var(--ease-smooth-out) 40ms, visibility 0s;
   }
-  .coat-insert::after { transition: transform 200ms var(--ease-out); }
-  .coat-insert.is-open::after { transition-duration: 300ms; }
+  .coat-insert::after { transition: transform var(--spring-bouncy-dur) var(--spring-bouncy); }
 
-  .pmodal__secbody { transition: grid-template-rows 200ms var(--ease-out), visibility 0s linear 200ms; }
-  .pmodal__section.is-open > .pmodal__secbody { transition: grid-template-rows 300ms var(--ease-out), visibility 0s; }
-  .pmodal__secinner { opacity: 0; translate: 0 4px; transition: opacity 150ms var(--ease-out), translate 200ms var(--ease-out); }
-  .pmodal__section.is-open .pmodal__secinner {
-    opacity: 1; translate: 0 0;
-    transition: opacity 240ms var(--ease-out) 60ms, translate 300ms var(--ease-out);
+  .pmodal__secbody { transition: grid-template-rows var(--spring-smooth-dur) var(--spring-smooth), visibility 0s linear var(--duration-fast); }
+  .pmodal__section.is-open > .pmodal__secbody { transition: grid-template-rows var(--spring-smooth-dur) var(--spring-smooth), visibility 0s; }
+  .pmodal__secinner {
+    opacity: 0; filter: blur(var(--blur-small));
+    transition: opacity var(--duration-quick) var(--ease-smooth-out), filter var(--duration-quick) var(--ease-smooth-out);
   }
-  .pmodal__sectoggle::after { transition: transform 200ms var(--ease-out); }
-  .pmodal__section.is-open .pmodal__sectoggle::after { transition-duration: 300ms; }
+  .pmodal__section.is-open .pmodal__secinner {
+    opacity: 1; filter: none;
+    transition: opacity var(--duration-fast) var(--ease-smooth-out) 40ms, filter var(--duration-fast) var(--ease-smooth-out) 40ms;
+  }
+  .pmodal__sectoggle::after { transition: transform var(--spring-bouncy-dur) var(--spring-bouncy); }
 
   /* line-clamped text (Tauro intro/note «Ещё», modal «Читать полностью»): js animates max-height; the
      fade-out mask of the modal description stretches away while it grows (.m-unmask) */
@@ -45,8 +49,9 @@
     -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
   }
 
-  /* ---------- M2 Bottom sheets: drawer curve 450ms in / 250ms out, backdrop fades, drag follows the finger ---------- */
-  /* product sheet: the open rule (450ms --ease-drawer) lives in mobile-catalog.css D7 */
+  /* ---------- M2 Bottom sheets: open on a spring (--spring-pane), close faster (250ms drawer curve), the backdrop
+     fades; a drag follows the finger 1:1 and lets go on springs (js/motion-catalog.js sheetDrag) ---------- */
+  /* product sheet: the open rule lives in mobile-catalog.css D7; its close is a ghost copy (main.js) */
   .pmodal { transition: visibility 0s linear 250ms; }
   .pmodal__backdrop { transition: opacity 250ms var(--ease-out); }
   .pmodal.is-open:not(.is-closing) .pmodal__backdrop { transition-duration: 300ms; }
@@ -57,13 +62,13 @@
 
   /* My list (list.js makes it a sheet ≤640px) */
   .np-listpanel.is-sheet .np-listpanel__sheet { transition: transform 250ms var(--ease-drawer); }
-  .np-listpanel.is-sheet.is-open .np-listpanel__sheet { transition-duration: 450ms; }
+  .np-listpanel.is-sheet.is-open .np-listpanel__sheet { transition: transform var(--spring-pane-dur) var(--spring-pane); }
   .np-listpanel.is-sheet .np-listpanel__scrim { transition: opacity 250ms var(--ease-out); }
   .np-listpanel.is-sheet.is-open .np-listpanel__scrim { transition-duration: 300ms; }
 
   /* Search: a full-height sheet that slides up (@starting-style = interruptible transition, no keyframes) */
   html.m-search .catalog-bar__search {
-    transform: none; transition: transform 450ms var(--ease-drawer);
+    transform: none; transition: transform var(--spring-pane-dur) var(--spring-pane);
     box-shadow: 0 -10px 40px rgba(0, 0, 0, .12);
   }
   @starting-style { html.m-search .catalog-bar__search { transform: translate3d(0, 100%, 0); } }
@@ -81,16 +86,25 @@
     scale: var(--press-scale); transition-duration: var(--dur-press);
   }
   html:not(.spr) .products .product.is-clickable:active { transform: scale(var(--press-scale)); }
+  /* step rows: the rise below; the press is js/spring.js (main.js adds .tpl-bottle) — no transition on scale */
   .tpl-bottle {
-    transition: translate 500ms var(--ease-out) var(--rd, 0ms), opacity 400ms var(--ease-out) var(--rd, 0ms),
-                scale var(--dur-release) var(--ease-out), background-color var(--dur-press) var(--ease-out);
+    transition: translate var(--spring-pane-dur) var(--spring-pane) var(--rd, 0ms),
+                opacity var(--duration-slow) var(--ease-smooth-out) var(--rd, 0ms),
+                background-color var(--dur-press) var(--ease-out);
   }
-  .tpl-bottle:active { scale: var(--press-scale); transition-duration: 500ms, 400ms, var(--dur-press), var(--dur-press); }
+  html:not(.spr) .tpl-bottle {
+    transition: translate var(--spring-pane-dur) var(--spring-pane) var(--rd, 0ms), opacity var(--duration-slow) var(--ease-smooth-out) var(--rd, 0ms),
+                background-color var(--dur-press) var(--ease-out), scale var(--dur-release) var(--ease-out);
+  }
+  html:not(.spr) .tpl-bottle:active { scale: var(--press-scale); }
 
-  /* ---------- M4 Tauro timelines: the rail draws down as it scrolls in; steps rise with a 40ms stagger ---------- */
+  /* ---------- M4 Tauro timelines: the rail draws down as it scrolls in; steps rise 12px on a spring
+     (--spring-pane), 40ms apart, once, when the list scrolls in (IntersectionObserver in js/motion-catalog.js) ---------- */
   html.m-motion .m-rise { opacity: 0; translate: 0 12px; }
   html.m-motion .m-rise.m-rise-in { opacity: 1; translate: 0 0; }
-  .tpl-why__stop.m-rise { transition: translate 500ms var(--ease-out) var(--rd, 0ms), opacity 400ms var(--ease-out) var(--rd, 0ms); }
+  .tpl-why__stop.m-rise {
+    transition: translate var(--spring-pane-dur) var(--spring-pane) var(--rd, 0ms), opacity var(--duration-slow) var(--ease-smooth-out) var(--rd, 0ms);
+  }
 
   .tpl-system__stage::before, .tpl-why__stop::before { transform-origin: 50% 0; }
   @supports (animation-timeline: view()) {
@@ -105,20 +119,16 @@
   }
   @supports not (animation-timeline: view()) {
     html.m-motion .tpl-system__stage::before, html.m-motion .tpl-why__stop::before {
-      transform: scaleY(0); transition: transform 900ms var(--ease-out) var(--rd, 0ms);
+      transform: scaleY(0); transition: transform var(--spring-pane-dur) var(--spring-pane) 120ms;
     }
     html.m-motion .tpl-system__stage.m-drawn::before, html.m-motion .tpl-why__stop.m-drawn::before { transform: none; }
   }
 
-  /* ---------- M5 Brand / section switch: cards rise 8px, first 8 staggered 40ms; the count swaps ---------- */
-  /* the grid snapshot only cross-fades on phones — the cards inside it do the rising */
-  ::view-transition-new(np-grid) { animation-name: mVtFade; }
-  .products > .m-card-in { animation: mCardIn 300ms var(--ease-out) calc(var(--vt-delay) + var(--i, 0) * 40ms) both; }
+  /* Brand / species / section switches (all widths): main.js — FLIP survivors, a spring staircase for newcomers,
+     ghosts for leavers, NPSpring.num for «Показано N» (no CSS keyframes here any more). */
 }
 
 @keyframes mDraw { from { transform: scaleY(0); } to { transform: scaleY(1); } }
-@keyframes mVtFade { from { opacity: 0; } }
-@keyframes mCardIn { from { opacity: 0; translate: 0 8px; } }
 
 /* Reduced motion: opacity only, ≤150ms; heights snap, sheets fade (mobile-catalog.css / list.css) */
 @media (max-width: 720px) and (prefers-reduced-motion: reduce) {

@@ -26,8 +26,8 @@
     min-height: 44px; padding: 0 10px; border-radius: 12px;
     font: 600 14px/1.2 var(--font); letter-spacing: -0.005em; white-space: nowrap;
   }
-  /* main.js writes --ind-x/--ind-y/--ind-w/--ind-h: the thumb glides across both rows */
-  .catalog-bar .tabs__indicator { top: 0; transform: translate3d(var(--ind-x, 0px), var(--ind-y, 0px), 0); border-radius: 12px; }
+  /* the pill springs across both rows (NPSpring.indicator via main.js: x and y, stretching along its travel) */
+  .catalog-bar .tabs__indicator { top: 0; transform: translate(var(--ind-x, 0px), var(--ind-y, 0px)); border-radius: 12px; }
   .catalog-bar__search { display: none; }
   .catalog-bar .species {
     grid-column: 1;
@@ -174,10 +174,11 @@
     border-radius: 20px 20px 0 0; padding-bottom: env(safe-area-inset-bottom);
     opacity: 1; transform: translate3d(0, 100%, 0);
   }
-  /* Closing keeps the base 200ms ease-out transform (styles.css); main.js finalises with its 320ms timer */
+  /* Opens on a spring (--spring-pane: damping .9, response .5 — Монтажка's sheet); closing is a ghost copy sliding
+     down from where the sheet is (main.js), or the swipe itself (js/motion-catalog.js sheetDrag) */
   .pmodal.is-open:not(.is-closing) .pmodal__dialog {
     opacity: 1; transform: none;
-    transition: transform 450ms var(--ease-drawer), opacity var(--dur-modal-fade) var(--ease-out);
+    transition: transform var(--spring-pane-dur) var(--spring-pane), opacity var(--dur-modal-fade) var(--ease-out);
   }
   .pmodal__dialog::before {
     content: ''; position: absolute; top: 6px; left: 50%; z-index: 5;
@@ -269,10 +270,14 @@
     position: fixed; left: 50%; bottom: calc(max(20px, env(safe-area-inset-bottom)) + 64px); z-index: 1130;
     max-width: calc(100vw - 32px); padding: 10px 16px; border-radius: var(--r-pill);
     background-color: #1d1d1f; color: #fff; font: 500 14px/1.35 var(--font); text-align: center;
-    pointer-events: none; opacity: 0; transform: translate(-50%, 8px);
-    transition: opacity 150ms var(--ease-out), transform 150ms var(--ease-out);
+    pointer-events: none; opacity: 0; transform: translate(-50%, 8px) scale(.96);
+    transition: opacity var(--duration-quick) var(--ease-smooth-out), transform var(--duration-quick) var(--ease-smooth-out);
   }
-  .m-hint.is-on { opacity: 1; transform: translate(-50%, 0); transition-duration: 160ms; }
+  /* pops up on a snappy spring (a hair of overshoot), leaves faster on the smooth-out curve */
+  .m-hint.is-on {
+    opacity: 1; transform: translate(-50%, 0) scale(1);
+    transition: opacity var(--duration-quick) var(--ease-smooth-out), transform var(--spring-snappy-dur) var(--spring-snappy);
+  }
 
   /* ---------- D11 My list sheet ---------- */
   .np-listpanel__close, .np-li__remove { width: 44px; height: 44px; }
