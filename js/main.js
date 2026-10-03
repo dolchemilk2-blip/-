@@ -832,16 +832,18 @@ function tplIntroHtml(brand, lang, dict) {
       2: { body: '<rect x="8" y="78" width="64" height="74" rx="16"/>', top: '<rect x="6" y="60" width="68" height="18" rx="6"/>', label: 108 },
       3: { body: '<rect x="18" y="48" width="44" height="104" rx="14"/>', top: '<path d="M33 48V30h14v18M40 30V18h-12a4 4 0 0 0-4 4v4"/><rect x="34" y="12" width="12" height="6" rx="2"/>', label: 100 }
     };
+    // цвета шагов: оранжевый → жёлтый → зелёный (прямо в SVG — флаконы цветные даже до загрузки стилей)
+    const tones = { 1: ['#d9731f', '#f6b26b'], 2: ['#d9a514', '#f6dc6a'], 3: ['#3f9a5b', '#8fd6a2'] };
     const bottle = n => {
-      const b = bottles[n];
+      const b = bottles[n], t = tones[n];
       return `<svg class="tpl-why__bottle" viewBox="0 0 80 160" aria-hidden="true">
         <defs><clipPath id="tplWhyClip${n}">${b.body}</clipPath>
-          <linearGradient id="tplWhyLiq${n}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--c2)"/><stop offset="1" style="stop-color:var(--c)"/></linearGradient></defs>
+          <linearGradient id="tplWhyLiq${n}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${t[1]}"/><stop offset="1" stop-color="${t[0]}"/></linearGradient></defs>
         <g clip-path="url(#tplWhyClip${n})"><rect class="tpl-why__liquid" x="0" y="0" width="80" height="160" fill="url(#tplWhyLiq${n})"/>
-          <path class="tpl-why__shine" d="M24 ${b.label - 30}v36"/></g>
-        <g class="tpl-why__glass">${b.body}${b.top}</g>
-        <rect class="tpl-why__label" x="26" y="${b.label}" width="28" height="22" rx="5"/>
-        <text class="tpl-why__lnum" x="40" y="${b.label + 16}" text-anchor="middle">${n}</text>
+          <path class="tpl-why__shine" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="3" stroke-linecap="round" d="M24 ${b.label - 30}v36"/></g>
+        <g class="tpl-why__glass" fill="#ffffff" fill-opacity=".06" stroke="#f4efe6" stroke-width="2" stroke-linejoin="round">${b.body}${b.top}</g>
+        <rect class="tpl-why__label" fill="#f4efe6" x="26" y="${b.label}" width="28" height="22" rx="5"/>
+        <text class="tpl-why__lnum" fill="#15181b" font-size="15" font-weight="700" x="40" y="${b.label + 16}" text-anchor="middle">${n}</text>
       </svg>`;
     };
     tplWhy = `

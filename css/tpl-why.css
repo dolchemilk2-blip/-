@@ -1,6 +1,6 @@
 /* ===== Tauro: «Зачем нужны степы» — салонный ритуал (разметка: main.js tplIntroHtml) =====
    Тёмная «студийная» панель посреди светлого каталога: крупный светлый заголовок, три флакона — шампунь, маска,
-   кондиционер — каждый со своим цветом и номером шага на этикетке. Когда блок появляется на экране, флаконы
+   кондиционер — оранжевый, жёлтый, зелёный и номером шага на этикетке. Когда блок появляется на экране, флаконы
    поднимаются по очереди и наполняются (.is-armed → .is-in, js/motion-catalog.js); при наведении флакон
    наклоняется, будто наливают. На телефоне — вертикальный список: флакон слева, текст справа. */
 .tpl-why {
@@ -9,9 +9,9 @@
   margin: 0 0 64px; padding: clamp(40px, 5.5vw, 76px) clamp(24px, 5.5vw, 80px) clamp(44px, 5vw, 72px);
   border-radius: 32px; color: var(--ink-why);
   background:
-    radial-gradient(40% 60% at 16% 92%, rgba(95, 184, 120, .22), transparent 70%),
-    radial-gradient(40% 60% at 50% 100%, rgba(228, 138, 60, .20), transparent 70%),
-    radial-gradient(40% 60% at 84% 92%, rgba(216, 173, 62, .20), transparent 70%),
+    radial-gradient(40% 60% at 16% 92%, rgba(232, 134, 47, .22), transparent 70%),
+    radial-gradient(40% 60% at 50% 100%, rgba(226, 179, 34, .20), transparent 70%),
+    radial-gradient(40% 60% at 84% 92%, rgba(95, 184, 120, .22), transparent 70%),
     radial-gradient(70% 80% at 100% 0%, rgba(255, 255, 255, .06), transparent 60%),
     #15181b;
   box-shadow: 0 30px 60px -30px rgba(10, 12, 14, .55);
@@ -34,9 +34,9 @@
   border-top: 2px dashed rgba(244, 239, 230, .22); transform-origin: 0 50%;
 }
 .tpl-why__step { position: relative; z-index: 1; display: grid; gap: 26px; align-content: start; }
-.tpl-why__step--1 { --c: #3f9a5b; --c2: #8fd6a2; }
-.tpl-why__step--2 { --c: #c96a22; --c2: #f2b06e; }
-.tpl-why__step--3 { --c: #b88a1e; --c2: #ecd06f; }
+.tpl-why__step--1 { --c: #d9731f; --c2: #f6b26b; }
+.tpl-why__step--2 { --c: #d9a514; --c2: #f6dc6a; }
+.tpl-why__step--3 { --c: #3f9a5b; --c2: #8fd6a2; }
 
 .tpl-why__stage {
   justify-self: center; display: grid; place-items: end center; width: 180px; height: 192px;
