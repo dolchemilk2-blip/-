@@ -1007,7 +1007,7 @@ function treatsGroupInner(g, dict, mk) {
     `<div class="products">${byStage(b[k]).map(it => mk(it, g.species)).join('')}</div>`).join('');
 }
 
-function sectionHtml(s, brand, lang, dict, mk) {
+function sectionParts(s, brand, lang, dict, mk) {
   const title = (s.def && (s.def[lang] || s.def.ru)) || '';
   const groupBody = g => g.coat ? coatGroupInner(g, dict, mk)
     : (brand === 'np' && s.id === 'treats') ? treatsGroupInner(g, dict, mk)
@@ -1017,12 +1017,12 @@ function sectionHtml(s, brand, lang, dict, mk) {
         ${head ? `<h3 class="product-group__title">${head}</h3>` : ''}
         ${inner}
       </div>`;
-  let body = '';
-  if (brand === 'np' && s.id === 'superior-care') body += `<p class="coat-note">${dict['products.coatNote'] || ''}</p>`;
+  const blocks = [];   // top-level pieces of the section: notes and product groups (the unit of chunked rendering)
+  if (brand === 'np' && s.id === 'superior-care') blocks.push(`<p class="coat-note">${dict['products.coatNote'] || ''}</p>`);
   // «Сухой корм» NP: сухие корма Superior Care (по цвету шерсти) живут в своём разделе — даём прямой переход
   if (brand === 'np' && s.id === 'dry' && currentSection === 'dry') {
     const sc = sectionsFor('np', currentSpecies).find(x => x.id === 'superior-care');
-    if (sc && sc.count) body += `<button class="cat-xlink" type="button" data-sec="superior-care">+ ${sc.count} ${tr('sections.scDry')} <span aria-hidden="true">→</span></button>`;
+    if (sc && sc.count) blocks.push(`<button class="cat-xlink" type="button" data-sec="superior-care">+ ${sc.count} ${tr('sections.scDry')} <span aria-hidden="true">→</span></button>`);
   }
   if (brand === 'np' || brand === 'araton') {
     const bySpecies = currentSpecies === 'all' || currentSpecies === 'baby';
@@ -1035,24 +1035,29 @@ function sectionHtml(s, brand, lang, dict, mk) {
         const h = SPECIES_HEAD[sp];
         const head = `<span class="product-group__ico" aria-hidden="true">${h[0]}</span>${dict[h[1]] || tr(h[1])}`;
         const inner = gs.map(g => (multi ? `<h4 class="product-subgroup__title">${shortGroupLabel(g, lang)}</h4>` : '') + groupBody(g)).join('');
-        body += wrapGroup(inner, head, coat);
+        blocks.push(wrapGroup(inner, head, coat));
       } else {
-        gs.forEach(g => { body += wrapGroup(groupBody(g), multi ? shortGroupLabel(g, lang) : '', g.coat); });
+        gs.forEach(g => { blocks.push(wrapGroup(groupBody(g), multi ? shortGroupLabel(g, lang) : '', g.coat)); });
       }
     });
   } else {
     const multi = s.groups.length > 1;
     s.groups.forEach(g => {
       const name = (g.group && (g.group[lang] || g.group.ru)) || '';
-      body += wrapGroup(groupBody(g), multi ? name : '', g.coat);
+      blocks.push(wrapGroup(groupBody(g), multi ? name : '', g.coat));
     });
   }
-  return `
+  return {
+    id: s.id,
+    open: `
     <section class="cat-section" id="sec-${s.id}" data-sec="${s.id}" aria-labelledby="sec-${s.id}-t">
-      <h2 class="cat-section__title" id="sec-${s.id}-t"><span class="cat-section__name">${title}</span><span class="cat-section__count">${s.count}</span></h2>
-      ${body}
-    </section>`;
+      <h2 class="cat-section__title" id="sec-${s.id}-t"><span class="cat-section__name">${title}</span><span class="cat-section__count">${s.count}</span></h2>`,
+    blocks,
+    close: `
+    </section>`
+  };
 }
+function sectionHtml(s, brand, lang, dict, mk) { const p = sectionParts(s, brand, lang, dict, mk); return p.open + p.blocks.join('') + p.close; }
 
 // Motion of a re-render (survivors / newcomers / leavers) is the caller's: morphGrid / activateBrand.
 // The first render is covered by the page's own entrance — no second layer of motion.
@@ -1061,6 +1066,7 @@ let resultNote = '';   // пояснение к выдаче (раздел сб�
 function renderProducts(brand, lang, chunk) {
   const wrap = document.getElementById('productsGrid');
   if (!wrap) return;
+  wrap.setAttribute('data-brand', brand);   // the grid's own brand tint — see styles.css «Тинт страницы по бренду»
   const dict = TRANSLATIONS[lang] || TRANSLATIONS.ru;
   const finish = () => {
     updateSpeciesAvailability();
@@ -1112,37 +1118,61 @@ function renderProducts(brand, lang, chunk) {
     intro = `<section class="cat-section cat-section--systems" id="sec-systems" data-sec="systems" aria-label="${label}">${t.tplWhy}${t.showcase}</section>`;
   }
   const shown = secs.filter(s => s.id !== 'systems' && s.count && (currentSection === 'all' || s.id === currentSection));
-  const parts = shown.map(s => sectionHtml(s, brand, lang, dict, mk));
+  const secParts = shown.map(s => sectionParts(s, brand, lang, dict, mk));
   const head = banner + intro;
   const ids = str => str.split(' data-id="').length - 1;
-  RENDER_COUNT = ids(head) + parts.reduce((n, x) => n + ids(x), 0);
-  // An animated switch (chunk) renders in pieces: the first screen at once, the remaining sections one per idle
-  // slot. One big innerHTML of 100+ cards froze phones for a whole frame mid-way through the pill / fade springs.
-  let k = parts.length;
-  if (chunk && renderedOnce) { k = 0; for (let n = ids(head); k < parts.length && (k === 0 || n < 12); k++) n += ids(parts[k]); }
-  wrap.innerHTML = head + parts.slice(0, k).join('');
+  RENDER_COUNT = ids(head) + secParts.reduce((n, p) => n + p.blocks.reduce((m, b) => m + ids(b), 0), 0);
+  // An animated switch (chunk) renders in pieces: the first screen at once — product groups until about a screenful
+  // of cards — and the rest one group per idle slot. One big innerHTML of 100+ cards froze phones mid-way through the
+  // pill / fade springs.
+  const units = [];   // {p: section parts, b: block html, first: opens its section}
+  secParts.forEach(p => { if (!p.blocks.length) units.push({ p, b: '', first: true }); p.blocks.forEach((b, i) => units.push({ p, b, first: i === 0 })); });
+  let k = units.length;
+  if (chunk && renderedOnce) {
+    const want = window.innerWidth <= 720 ? 6 : 12;
+    k = 0; for (let n = ids(head); k < units.length && (k === 0 || n < want); k++) n += ids(units[k].b);
+    while (k < units.length && !units[k].first && !units[k].b.includes(' data-id="')) k++;   // a section's notes stay with it
+  }
+  let html = head, openSec = null;
+  units.slice(0, k).forEach(u => {
+    if (u.first) { if (openSec) html += openSec.close; html += u.p.open; openSec = u.p; }
+    html += u.b;
+  });
+  if (openSec) html += openSec.close;
+  wrap.innerHTML = html;
   renderedOnce = true;
-  renderRest(wrap, parts.slice(k), { brand, lang, species: currentSpecies, section: currentSection });
+  renderRest(wrap, units.slice(k), { brand, lang, species: currentSpecies, section: currentSection });
   finish();
 }
 
-// The rest of a render, one section per idle slot. flushRender() appends it all at once (deep links, search).
+// The rest of a render, one product group per idle slot (into its section, or a new section). flushRender() appends
+// it all at once (deep links, search).
 let RENDER_COUNT = 0, renderedOnce = false, renderGen = 0, pendingRest = null;
 function renderRest(wrap, rest, detail) {
   const gen = ++renderGen;
   pendingRest = null;
   if (!rest.length) return;
   const idle = window.requestIdleCallback ? f => requestIdleCallback(f, { timeout: 250 }) : f => setTimeout(f, 32);
+  const put = u => {
+    const sec = !u.first && document.getElementById('sec-' + u.p.id);
+    if (sec && sec.parentNode === wrap) sec.insertAdjacentHTML('beforeend', u.b);
+    else wrap.insertAdjacentHTML('beforeend', u.p.open + u.b + u.p.close);
+  };
   const step = all => {
     if (gen !== renderGen) return;
-    do wrap.insertAdjacentHTML('beforeend', rest.shift()); while (all && rest.length);
+    do put(rest.shift()); while (all && rest.length);
     if (rest.length) { idle(() => step(false)); return; }
     pendingRest = null;
     spySections();
     emit('np:render-more', detail);
   };
   pendingRest = () => step(true);
-  idle(() => step(false));
+  // The rest is off screen: it waits until the entrance springs have played (≈650ms), so parsing it never drops their
+  // frames — unless the user starts scrolling first, then it comes at once.
+  let started = false;
+  const go = () => { if (started || gen !== renderGen) return; started = true; window.removeEventListener('scroll', go); idle(() => step(false)); };
+  requestAnimationFrame(() => requestAnimationFrame(() => { if (!started) window.addEventListener('scroll', go, { passive: true }); }));
+  setTimeout(go, 650);
 }
 function flushRender() { if (pendingRest) pendingRest(); }
 
@@ -1238,11 +1268,9 @@ function initPageTransition() {
 }
 
 // ===== Индикаторы вкладок (.tabs__indicator / .species__indicator / .cat-nav__indicator) =====
-// The pill rides NPSpring.indicator (Монтажка's tab pill): x/y/w/h on springs, it stretches like a drop while it
-// travels and can be caught mid-flight (a new click starts from where it is, with its speed). First placement,
-// keyboard, resize, fonts and reduced motion — instant.
-// Label colour hand-off: a label is "lit" (.is-lit → active colour) exactly while the pill covers most of it,
-// decided in the pill's own frame — no timed colour transition running ahead of or behind the spring.
+// The pill glides on a spring curve (pillFor below) and can be caught mid-flight. First placement, keyboard, resize,
+// fonts and reduced motion — instant. Label colour hand-off: a label is "lit" (.is-lit → active colour) once the
+// pill covers most of it.
 // Boxes come from offsetLeft/Top/Width/Height: layout values, untouched by the press spring's scale.
 function placeIndicator(list, cls, instant) {
   if (!list) return;
@@ -1268,25 +1296,46 @@ function placeIndicator(list, cls, instant) {
   I.items = Array.from(list.children).filter(b => b !== ind && b.tagName === 'BUTTON').map(b => Object.assign(box(b), { el: b }));
   I.move(to, instant);
 }
-// One NPSpring.indicator per pill + the label pass. The pass hooks the pill's springs (their owner renders once per
-// frame), so it costs a few comparisons per frame and touches a class only when a label actually changes.
+// The pill moves on the COMPOSITOR: one WAAPI transform animation on the spring's own curve (NPSpring.ease → CSS
+// linear(), slight overshoot), so it keeps gliding even while the main thread is busy building the new brand's cards —
+// a JS-driven spring froze for exactly those frames. The final geometry is set at once (left/width/height) and the
+// animation runs from the old box to it as translate + scale (FLIP). A new click mid-flight starts from where the pill
+// is on screen. Labels flip to the active colour when the pill is halfway there (Монтажка's segOff hand-off).
+const PILL_SPRING = [0.78, 0.42];
 function pillFor(list, ind) {
-  const pill = NPSpring.indicator(ind, { damping: 0.74, response: 0.42 });
-  const P = pill.springs, own = P.x.owner;
-  const I = { items: [] };
-  const light = () => {
-    const x = P.x.v, y = P.y.v, w = P.w.v, h = P.h.v;
+  const I = { items: [], box: null, anim: null, timer: 0 };
+  const sp = NPSpring.ease(PILL_SPRING[0], PILL_SPRING[1]);
+  const pts = (sp.easing.match(/-?[\d.]+/g) || []).map(Number);
+  const half = Math.max(0, pts.findIndex(v => v >= 0.5)) / Math.max(1, pts.length - 1) * sp.duration;
+  ind.style.transformOrigin = '0 0';
+  const light = b => {
     I.items.forEach(it => {
-      const ox = Math.min(x + w, it.x + it.w) - Math.max(x, it.x), oy = Math.min(y + h, it.y + it.h) - Math.max(y, it.y);
+      const ox = Math.min(b.x + b.w, it.x + it.w) - Math.max(b.x, it.x), oy = Math.min(b.y + b.h, it.y + it.h) - Math.max(b.y, it.y);
       const on = ox > it.w * 0.5 && oy > it.h * 0.5;
       if (it.el._lit !== on) { it.el._lit = on; it.el.classList.toggle('is-lit', on); }
     });
   };
-  P.x.owner = P.y.owner = P.w.owner = P.h.owner = { render() { own.render(); light(); } };
-  I.move = (r, instant) => {
-    pill.move(r, instant);
-    light();
+  const place = b => {
+    ind.style.width = b.w + 'px'; ind.style.height = b.h + 'px';
+    ind.style.transform = 'translate(' + b.x + 'px, ' + b.y + 'px)';
+  };
+  I.move = (to, instant) => {
     list.classList.add('spr-lit');
+    let from = I.box;
+    if (from && I.anim && I.anim.playState === 'running') {   // caught mid-flight: start from what is on screen
+      const m = new DOMMatrixReadOnly(getComputedStyle(ind).transform);
+      from = { x: m.e, y: m.f, w: from.w * m.a, h: from.h * m.d };
+    }
+    if (I.anim) { I.anim.cancel(); I.anim = null; }
+    clearTimeout(I.timer);
+    place(to); I.box = to;
+    const same = from && Math.abs(from.x - to.x) < 0.5 && Math.abs(from.y - to.y) < 0.5 && Math.abs(from.w - to.w) < 0.5 && Math.abs(from.h - to.h) < 0.5;
+    if (instant || !from || same || !NPSpring.ok() || !NPSpring.ready) { light(to); return; }
+    I.anim = ind.animate([
+      { transform: 'translate(' + from.x + 'px, ' + from.y + 'px) scale(' + (from.w / to.w) + ', ' + (from.h / to.h) + ')' },
+      { transform: 'translate(' + to.x + 'px, ' + to.y + 'px) scale(1, 1)' }
+    ], { duration: sp.duration, easing: sp.easing });
+    I.timer = setTimeout(() => light(to), half);
   };
   return I;
 }
@@ -1680,8 +1729,10 @@ function initCatalog(initial) {
     const useVT = !!opts.animate && vtAvailable();
     // Состояние вкладок + скольжение индикаторов. С View Transition — в конце обновления (swap → after),
     // иначе скольжение стартует во время «заморозки» кадров и выглядит прыжком.
+    // The page tint glides from the tap (body[data-brand]); the grid keeps its own brand values until its new content
+    // arrives (renderProducts sets #productsGrid[data-brand]), so this restyles the page around it, not the old grid.
     const paintTabs = () => {
-      document.body.setAttribute('data-brand', currentBrand); // плавная смена тинта страницы (новый снимок — уже в новом тинте)
+      document.body.setAttribute('data-brand', currentBrand);
       syncTabs(); syncSpecies();
       placeIndicator(tabsWrap, 'tabs__indicator', !opts.animate);
       placeIndicator(speciesWrap, 'species__indicator', !opts.animate);

@@ -97,15 +97,15 @@
   .tpl-system .m-more { display: flex; width: fit-content; margin: -8px 0 -8px; }
 
   /* ---------- T3 Misoko toy cards: compact ---------- */
-  body[data-brand="misoko"] .products .product__img { height: auto; aspect-ratio: 1 / .92; padding: 14px 12px 10px; }
+  #productsGrid[data-brand="misoko"] .products .product__img { height: auto; aspect-ratio: 1 / .92; padding: 14px 12px 10px; }
   /* the group head already names the category, and the description repeats it */
-  body[data-brand="misoko"] .products .product__cat,
-  body[data-brand="misoko"] .products .product__desc { display: none; }
-  body[data-brand="misoko"] .products .product__name { min-height: 0; margin-bottom: 6px; }
-  body[data-brand="misoko"] .products .product__tags {
+  #productsGrid[data-brand="misoko"] .products .product__cat,
+  #productsGrid[data-brand="misoko"] .products .product__desc { display: none; }
+  #productsGrid[data-brand="misoko"] .products .product__name { min-height: 0; margin-bottom: 6px; }
+  #productsGrid[data-brand="misoko"] .products .product__tags {
     display: flex; flex-wrap: wrap; gap: 4px; max-height: 26px; overflow: hidden; margin-top: auto;
   }
-  body[data-brand="misoko"] .products .product__tags span {
+  #productsGrid[data-brand="misoko"] .products .product__tags span {
     max-width: 100%; padding: 4px 8px; font-size: 12px; background-color: rgba(255,255,255,.8);
     white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
   }

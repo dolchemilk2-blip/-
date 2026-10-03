@@ -863,14 +863,17 @@ html:not(.spr) .brand-chip:active { transform: scale(var(--press-scale)); transi
 
 /* ===== Тинт страницы по бренду =====
    Никаких @property на наследуемых переменных: каждая поверхность сама плавно
-   меняет background-color (body, .page-hero, .section--top, .catalog-bar, карточки). */
-body[data-brand="np"]     { --tint: #fcfdfb; --tint-soft: #f1f7ec; --brand-accent: #3a7d44; --brand-accent-rgb: 58,125,68;
+   меняет background-color (body, .page-hero, .section--top, .catalog-bar, карточки).
+   Сетка товаров держит СВОИ значения (#productsGrid[data-brand], ставит renderProducts вместе с новым содержимым):
+   смена бренда на body тогда пересчитывает стили только страницы вокруг, а не 2500 узлов старой выдачи —
+   наследуемые переменные иначе заставляли браузер пересчитать весь документ прямо в кадре нажатия. */
+body[data-brand="np"], #productsGrid[data-brand="np"] { --tint: #fcfdfb; --tint-soft: #f1f7ec; --brand-accent: #3a7d44; --brand-accent-rgb: 58,125,68;
   --brand-ink: #007a3d; --card-bg: #f2f4f5; }
-body[data-brand="araton"] { --tint: #fdf9f0; --tint-soft: #f6ecd5; --brand-accent: #b3792b; --brand-accent-rgb: 179,121,43;
+body[data-brand="araton"], #productsGrid[data-brand="araton"] { --tint: #fdf9f0; --tint-soft: #f6ecd5; --brand-accent: #b3792b; --brand-accent-rgb: 179,121,43;
   --brand-ink: #8a5a1c; --card-bg: #f7f1e4; }
-body[data-brand="tpl"]    { --tint: #f7f8fb; --tint-soft: #eceef3; --brand-accent: #6c7480; --brand-accent-rgb: 108,116,128;
+body[data-brand="tpl"], #productsGrid[data-brand="tpl"] { --tint: #f7f8fb; --tint-soft: #eceef3; --brand-accent: #6c7480; --brand-accent-rgb: 108,116,128;
   --brand-ink: #5b626d; --card-bg: #f1f3f6; }
-body[data-brand="misoko"] { --tint: #fdf5f9; --tint-soft: #fae6f0; --brand-accent: #cf7397; --brand-accent-rgb: 207,115,151;
+body[data-brand="misoko"], #productsGrid[data-brand="misoko"] { --tint: #fdf5f9; --tint-soft: #fae6f0; --brand-accent: #cf7397; --brand-accent-rgb: 207,115,151;
   --brand-ink: #a8456f; --card-bg: #fbeff5; }
 
 /* Смена бренда / вида / раздела — main.js (activateBrand, morphGrid): the old grid fades out (WAAPI), blocks on
