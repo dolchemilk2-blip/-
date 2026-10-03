@@ -335,6 +335,7 @@ html:not(.spr) .cat-tile:active { transform: scale(var(--press-scale-card)); tra
 .buy__list li { display: flex; align-items: center; gap: 14px; font-weight: 500; }
 .buy__list svg { width: 22px; height: 22px; flex: none; fill: none; stroke: var(--leaf); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
 .buy__list a { color: var(--accent); }
+.buy__list svg .dot, .footer svg .dot { fill: var(--leaf); stroke: none; }
 /* фирменный магазин: название над списком, адрес в две строки (улица + ориентир) */
 .buy__shop { margin-top: 28px; display: grid; gap: 2px; }
 .buy__shopName { font: var(--t-headline); letter-spacing: var(--track-headline); color: var(--ink); }
