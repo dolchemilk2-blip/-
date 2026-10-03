@@ -136,9 +136,9 @@
   // ------------------------------------------------------------------ press: shrink toward the finger, spring back
   var PRESS = ['.btn', '.brand-tab', '.species__btn', '.cat-chip', '.brand-chip', '.lang__current', '.lang__menu button',
     '.np-heart', '.np-fab', '.np-btn', '.np-toast__undo', '.product.is-clickable', '.tile', '.cat-tile', '.intent',
-    '.hero-ctl', '.hero-bg__toggle', '.cat-xlink', '.cat-nav__up', '.nav-lang__btn', '.m-search-btn', '.burger', '.pmodal__close', '.tab',
+    '.hero-ctl', '.hero-bg__toggle', '.cat-xlink', '.cat-nav__up', '.nav-lang__btn', '.m-search-btn', '.burger', '.pmodal__close', '.tab', '.hdr-ico',
     '.coat-insert', '.pmodal__sectoggle', '.m-more', '.m-search-cancel', '.np-search__opt', '.np-li__open', '.cat-result__reset', '.range'];
-  var LEAN = ['.np-heart', '.np-fab', '.lang__current', '.hero-ctl', '.cat-nav__up', '.pmodal__close'];
+  var LEAN = ['.hdr-ico', '.np-heart', '.np-fab', '.lang__current', '.hero-ctl', '.cat-nav__up', '.pmodal__close'];
   var pressSel = PRESS.join(','), leanSel = LEAN.join(',');
   S.press = {
     add: function (sel) { PRESS.push(sel); pressSel = PRESS.join(','); },

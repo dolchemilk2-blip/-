@@ -96,6 +96,17 @@ body.modal-open .header, body.modal-open .catalog-bar { -webkit-backdrop-filter:
 }
 
 .header__actions { display: flex; align-items: center; gap: 12px; }
+/* Instagram и телефон в шапке: маленькие круглые значки (подписи — в aria-label / title) */
+.hdr-ico {
+  display: inline-grid; place-items: center; width: 36px; height: 36px; flex: none; border-radius: 50%;
+  color: var(--ink); background-color: var(--paper-2); border: 1px solid var(--hairline);
+  transition: background-color var(--dur-hover) var(--ease-color), color var(--dur-hover) var(--ease-color);
+}
+.hdr-ico svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.hdr-ico svg .dot { fill: currentColor; stroke: none; }
+.hdr-ico:focus-visible { outline: var(--focus-width) solid var(--focus-color); outline-offset: 2px; }
+@media (hover: hover) and (pointer: fine) { .hdr-ico:hover { color: var(--accent); background-color: var(--accent-soft); } }
+.hdr-ico + .lang { margin-left: 4px; }
 
 /* ===== Language switch ===== */
 .lang { position: relative; }
