@@ -85,6 +85,49 @@
   .fcalc__packs button { flex: 1 1 0; min-width: 0; min-height: 76px; }
   .fcalc__wval { text-align: left; }
 }
+/* ---------- подсказка «подбор корма по весу» (каталог) ---------- */
+.fc-tip {
+  position: fixed; z-index: 120; left: 24px; bottom: max(24px, env(safe-area-inset-bottom)); width: min(380px, calc(100vw - 32px));
+  display: grid; grid-template-columns: 52px minmax(0, 1fr) auto; gap: 14px; align-items: start;
+  padding: 16px 12px 16px 16px; border-radius: 20px; background-color: #fff; color: var(--ink);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, .16), 0 2px 8px rgba(0, 0, 0, .06); border: 1px solid var(--hairline);
+}
+.fc-tip__ico { width: 52px; height: 52px; border-radius: 16px; display: grid; place-items: center; background-color: var(--accent-soft); color: var(--accent); }
+.fc-tip__ico svg { width: 34px; height: auto; }
+.fc-tip__t { margin: 2px 0 4px; font: 600 16px/1.3 var(--font); letter-spacing: -0.01em; }
+.fc-tip__p { margin: 0 0 12px; font: 400 14px/1.45 var(--font); color: var(--ink-2); }
+.fc-tip__go { min-height: 40px; padding: 0 18px; font-size: 14px; }
+.fc-tip__x, .fc-dlg__x {
+  position: relative; width: 32px; height: 32px; border: 0; border-radius: 50%; background-color: var(--paper-2); color: var(--ink-2);
+  display: grid; place-items: center; cursor: pointer; transition: background-color var(--dur-hover) var(--ease-color);
+}
+.fc-tip__x::before, .fc-dlg__x::before { content: ''; position: absolute; inset: -6px; }
+.fc-tip__x svg, .fc-dlg__x svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; }
+@media (hover: hover) and (pointer: fine) { .fc-tip__x:hover, .fc-dlg__x:hover { background-color: var(--paper-3); color: var(--ink); } }
+.fc-tip__x:focus-visible, .fc-dlg__x:focus-visible { outline: var(--focus-width) solid var(--focus-color); outline-offset: 2px; }
+
+/* ---------- окно калькулятора ---------- */
+html.fc-lock { overflow: hidden; }
+.fc-dlg { position: fixed; inset: 0; z-index: 400; display: grid; place-items: center; padding: 24px; }
+.fc-dlg__bd { position: absolute; inset: 0; background-color: var(--backdrop, rgba(0, 0, 0, .36)); }
+.fc-dlg__panel {
+  position: relative; width: min(760px, 100%); max-height: calc(100dvh - 48px); overflow: auto; overscroll-behavior: contain;
+  padding: 24px; border-radius: var(--r-panel, 28px); background-color: var(--paper-2); box-shadow: var(--shadow-modal);
+}
+.fc-dlg__panel:focus { outline: none; }
+.fc-dlg__head { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
+.fc-dlg__t { margin: 0; font: var(--t-title); letter-spacing: var(--track-title); }
+
+@media (max-width: 720px) {
+  .fc-tip { left: 12px; right: 12px; width: auto; bottom: calc(12px + env(safe-area-inset-bottom)); grid-template-columns: 44px minmax(0, 1fr) auto; gap: 12px; }
+  body:has(.np-fab.is-visible) .fc-tip { bottom: calc(84px + env(safe-area-inset-bottom)); }
+  .fc-tip__ico { width: 44px; height: 44px; border-radius: 14px; }
+  .fc-tip__ico svg { width: 28px; }
+  .fc-tip__go { min-height: 44px; }
+  .fc-dlg { place-items: end stretch; padding: 0; }
+  .fc-dlg__panel { width: 100%; max-height: calc(100dvh - 40px); border-radius: 24px 24px 0 0; padding: 18px 16px calc(20px + env(safe-area-inset-bottom)); }
+  .fc-dlg__t { font: 600 22px/1.2 var(--font); }
+}
 @media (prefers-reduced-motion: reduce) {
   .fcalc__range::-webkit-slider-thumb, .fcalc__sp button, .fcalc__packs button { transition: none; }
 }

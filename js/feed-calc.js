@@ -12,15 +12,15 @@
   const RANGE = { dogs: { min: 2, max: 80, step: 0.5, def: 15 }, cats: { min: 2, max: 8, step: 0.1, def: 4 } };
   const PACKS = { dogs: [4, 12, 18], cats: [0.4, 2, 7] };
   const I18N = {
-    ru: { title: 'Сколько корма нужно?', weight: 'Вес питомца', kg: 'кг', g: 'г', dose: 'суточная доза', doseHint: 'Расчётная рекомендуемая доза',
+    ru: { title: 'Сколько корма нужно?', tipTitle: 'Подбор корма по весу', tipText: 'Узнайте суточную норму для вашего питомца и на сколько дней хватит упаковки.', tipBtn: 'Рассчитать', close: 'Закрыть', weight: 'Вес питомца', kg: 'кг', g: 'г', dose: 'суточная доза', doseHint: 'Расчётная рекомендуемая доза',
       format: 'Выберите формат', dogs: 'Собака', cats: 'Кошка', days: n => n + ' ' + plural(n, 'день', 'дня', 'дней'),
       note: 'Ориентировочно для взрослого питомца со средней активностью. Точная норма — в таблице на упаковке.',
       tableW: 'Вес (кг)', tableG: 'Дневная норма (г / день)', table: 'Таблица кормления', pack: 'Упаковка' },
-    az: { title: 'Nə qədər yem lazımdır?', weight: 'Heyvanın çəkisi', kg: 'kq', g: 'q', dose: 'gündəlik doza', doseHint: 'Hesablanmış tövsiyə olunan doza',
+    az: { title: 'Nə qədər yem lazımdır?', tipTitle: 'Çəkiyə görə yem seçimi', tipText: 'Heyvanınız üçün gündəlik normanı və qablaşdırmanın neçə günə çatacağını öyrənin.', tipBtn: 'Hesabla', close: 'Bağla', weight: 'Heyvanın çəkisi', kg: 'kq', g: 'q', dose: 'gündəlik doza', doseHint: 'Hesablanmış tövsiyə olunan doza',
       format: 'Qablaşdırmanı seçin', dogs: 'İt', cats: 'Pişik', days: n => n + ' gün',
       note: 'Orta aktivlikli yetkin heyvan üçün təxminidir. Dəqiq norma qablaşdırmadakı cədvəldədir.',
       tableW: 'Çəki (kq)', tableG: 'Gündəlik norma (q / gün)', table: 'Yemləmə cədvəli', pack: 'Qablaşdırma' },
-    en: { title: 'How much food is needed?', weight: 'Pet weight', kg: 'kg', g: 'g', dose: 'daily portion', doseHint: 'Estimated recommended portion',
+    en: { title: 'How much food is needed?', tipTitle: 'Food by pet weight', tipText: 'Find the daily portion for your pet and how many days a bag will last.', tipBtn: 'Calculate', close: 'Close', weight: 'Pet weight', kg: 'kg', g: 'g', dose: 'daily portion', doseHint: 'Estimated recommended portion',
       format: 'Choose a bag size', dogs: 'Dog', cats: 'Cat', days: n => n + ' ' + (n === 1 ? 'day' : 'days'),
       note: 'Approximate, for an adult pet with average activity. The exact amount is in the table on the bag.',
       tableW: 'Weight (kg)', tableG: 'Daily amount (g / day)', table: 'Feeding table', pack: 'Bag' }
@@ -160,4 +160,89 @@
     info.insertBefore(box, tags || null);
     mount(w, { species: sp, packs: packs.length ? packs : null });
   });
+  // ---------- каталог: всплывающая подсказка «подбор корма по весу» + калькулятор в окне ----------
+  // Раз за сессию, через ~1.5с после входа в каталог (не поверх открытого товара). «Рассчитать» открывает калькулятор
+  // в своём окне; после этого подсказка больше не показывается. Уходит сама через 10с (наведение / фокус держат).
+  const S = () => window.NPSpring;
+  const store = (k, v, local) => { try { const st = local ? localStorage : sessionStorage; if (v === undefined) return st.getItem(k); st.setItem(k, v); } catch (e) { return null; } };
+  let tip = null, tipTimer = 0, dlg = null, dlgBack = null;
+  function hideTip(remember) {
+    if (!tip) return;
+    clearTimeout(tipTimer);
+    if (remember) store('np:fctip', '1', true);
+    if (S() && S().ghostOut) S().ghostOut(tip, { transform: 'translateY(16px) scale(0.96)', filter: 'blur(4px)' }, 200);
+    tip.remove(); tip = null;
+  }
+  function showTip() {
+    if (tip || document.body.classList.contains('modal-open') || document.querySelector('.fc-dlg')) return;
+    const t = T();
+    tip = document.createElement('div');
+    tip.className = 'fc-tip';
+    tip.setAttribute('role', 'dialog'); tip.setAttribute('aria-modal', 'false'); tip.setAttribute('aria-labelledby', 'fcTipT');
+    tip.innerHTML = `<div class="fc-tip__ico" aria-hidden="true">${BOWL}</div>
+      <div class="fc-tip__txt"><p class="fc-tip__t" id="fcTipT">${t.tipTitle}</p><p class="fc-tip__p">${t.tipText}</p>
+      <button type="button" class="btn btn--primary fc-tip__go">${t.tipBtn}</button></div>
+      <button type="button" class="fc-tip__x" aria-label="${t.close}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>`;
+    document.body.appendChild(tip);
+    store('np:fctip-s', '1');
+    if (S() && S().enter) S().enter(tip, { opacity: 0, transform: 'translateY(18px) scale(0.94)', filter: 'blur(6px)' }, [0.72, 0.5]);
+    tip.querySelector('.fc-tip__x').addEventListener('click', () => hideTip(false));
+    tip.querySelector('.fc-tip__go').addEventListener('click', e => { hideTip(true); openCalc(e.currentTarget); });
+    const arm = () => { clearTimeout(tipTimer); tipTimer = setTimeout(() => hideTip(false), 10000); };
+    tip.addEventListener('pointerenter', () => clearTimeout(tipTimer));
+    tip.addEventListener('pointerleave', arm);
+    tip.addEventListener('focusin', () => clearTimeout(tipTimer));
+    arm();
+  }
+  function openCalc(origin) {
+    if (dlg) return;
+    const t = T();
+    dlgBack = document.activeElement && document.activeElement !== document.body ? document.activeElement : origin;
+    dlg = document.createElement('div');
+    dlg.className = 'fc-dlg';
+    dlg.innerHTML = `<div class="fc-dlg__bd"></div><div class="fc-dlg__panel" role="dialog" aria-modal="true" aria-labelledby="fcDlgT" tabindex="-1">
+      <div class="fc-dlg__head"><h2 class="fc-dlg__t" id="fcDlgT">${t.title}</h2>
+      <button type="button" class="fc-dlg__x" aria-label="${t.close}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+      <div class="fc-dlg__body"></div></div>`;
+    document.body.appendChild(dlg);
+    document.documentElement.classList.add('fc-lock');
+    mount(dlg.querySelector('.fc-dlg__body'));
+    const panel = dlg.querySelector('.fc-dlg__panel');
+    if (S() && S().enter) {
+      const phone = window.matchMedia('(max-width: 720px)').matches;
+      S().enter(dlg.querySelector('.fc-dlg__bd'), { opacity: 0 }, [1, 0.3]);
+      S().enter(panel, phone ? { transform: 'translateY(100%)' } : { opacity: 0, transform: 'translateY(24px) scale(0.96)' }, phone ? [0.9, 0.42] : [0.82, 0.48]);
+    }
+    panel.focus({ preventScroll: true });
+    dlg.addEventListener('click', e => { if (e.target.closest('.fc-dlg__x') || e.target.classList.contains('fc-dlg__bd')) closeCalc(); });
+    dlg.addEventListener('keydown', e => {
+      if (e.key === 'Escape') { e.preventDefault(); closeCalc(true); return; }
+      if (e.key !== 'Tab') return;   // фокус не уходит из окна
+      const f = Array.from(panel.querySelectorAll('button, input, summary, [href]')).filter(x => !x.disabled && x.getClientRects().length);
+      if (!f.length) return;
+      const a = document.activeElement;
+      if (e.shiftKey && (a === f[0] || a === panel)) { e.preventDefault(); f[f.length - 1].focus(); }
+      else if (!e.shiftKey && a === f[f.length - 1]) { e.preventDefault(); f[0].focus(); }
+    });
+  }
+  function closeCalc(keyboard) {
+    if (!dlg) return;
+    const phone = window.matchMedia('(max-width: 720px)').matches, panel = dlg.querySelector('.fc-dlg__panel');
+    if (!keyboard && S() && S().ghostOut) {
+      S().ghostOut(dlg.querySelector('.fc-dlg__bd'), {}, 220);
+      S().ghostOut(panel, phone ? { transform: 'translateY(60%)' } : { transform: 'translateY(16px) scale(0.97)' }, phone ? 260 : 200);
+    }
+    dlg.remove(); dlg = null;
+    document.documentElement.classList.remove('fc-lock');
+    if (dlgBack && dlgBack.isConnected) dlgBack.focus({ preventScroll: true });
+  }
+  window.NPFeedCalc = { open: openCalc, tip: showTip };
+  if (document.getElementById('productsGrid') && !store('np:fctip', undefined, true) && !store('np:fctip-s')) {
+    const later = () => setTimeout(() => {
+      if (document.body.classList.contains('modal-open')) { document.addEventListener('np:modal-close', later, { once: true }); return; }
+      showTip();
+    }, 1500);
+    if (document.readyState === 'complete') later(); else window.addEventListener('load', later, { once: true });
+  }
+  document.addEventListener('np:lang', () => { if (tip) { const t = T(); tip.querySelector('.fc-tip__t').textContent = t.tipTitle; tip.querySelector('.fc-tip__p').textContent = t.tipText; tip.querySelector('.fc-tip__go').textContent = t.tipBtn; } });
 })();
