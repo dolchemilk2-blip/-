@@ -4,33 +4,7 @@
 
 @media (max-width: 720px) {
 
-  /* ---------- T1 «Зачем нужны степы»: left-aligned vertical timeline ---------- */
-  .tpl-why { padding: 28px 0 12px; margin-top: 0; margin-bottom: 32px; }
-  .tpl-why__head { max-width: none; margin: 0 0 16px; padding: 0 var(--gutter); text-align: left; }
-  .tpl-why__title { margin: 0 0 8px; padding-right: 72px; font: 600 24px/1.2 var(--font); letter-spacing: -0.02em; }
-  .tpl-why__text { font: 400 15px/1.5 var(--font); }
-  .tpl-why__journey { height: auto; padding: 0 var(--gutter); }
-  .tpl-why__stop {
-    position: relative; display: grid; grid-template-columns: 40px minmax(0, 1fr); column-gap: 14px; align-items: start;
-    width: auto; height: auto; max-width: none; margin: 0; padding: 0 0 16px; transform: none;
-    left: auto !important; top: auto !important;   /* beat the desktop map's inline left:x%/top:ypx */
-  }
-  /* rail from this stop's dot down to the next one */
-  .tpl-why__stop:not(.tpl-why__stop--3)::before {
-    content: ''; position: absolute; left: 19px; top: 46px; bottom: 6px; width: 2px; border-radius: 1px;
-    background: linear-gradient(var(--wc), color-mix(in srgb, var(--wc) 20%, transparent));
-  }
-  .tpl-why__stop--3 { padding-bottom: 0; }
-  .tpl-why__num { width: 40px; height: 40px; font-size: 17px; border-width: 2px; box-shadow: 0 6px 14px rgba(31,42,36,.16); }
-  .tpl-why__bubble { position: static; transform: none; width: auto; max-width: none; margin: 0; padding-top: 9px; text-align: left; }
-  .tpl-why__bubble h4 { margin: 0 0 4px; font-size: 16px; }
-  .tpl-why__bubble p { font-size: 14px; line-height: 1.45; }
-  .tpl-why__deco--lavender, .tpl-why__deco--citrus, .tpl-why__deco--leaf, .tpl-why__deco--drop,
-  .tpl-why__deco--amber, .tpl-why__paw, .tpl-why__path { display: none; }
-  /* two small sprigs in the title's reserved right corner (padding-right 72px) — they end above
-     the first line of the text, so they never sit over text and never clip at an edge */
-  .tpl-why__deco--rosemary { width: 30px; top: 4px; left: auto; right: 52px; opacity: .5; }
-  .tpl-why__deco--chamomile { width: 38px; top: 10px; right: 10px; opacity: .55; }
+  /* T1 «Зачем нужны степы» — css/tpl-why.css */
 
   /* ---------- T2 Step showcases: compact numbered step list ---------- */
   .tpl-system { margin: 0 0 40px; }

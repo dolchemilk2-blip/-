@@ -824,90 +824,34 @@ function tplIntroHtml(brand, lang, dict) {
   // Вставка «зачем нужны степы» — в самом верху вкладки Tauro
   let tplWhy = '';
   if (brand === 'tpl') {
-    // Ботанический декор — то, что входит в составы шампуней (травы, экстракты, капли)
-    const deco = `
-      <svg class="tpl-why__deco tpl-why__deco--rosemary" viewBox="0 0 70 120" aria-hidden="true">
-        <path d="M35 8 C32 45 38 80 35 112" fill="none" stroke="#4e9a60" stroke-width="3" stroke-linecap="round"/>
-        ${[20,32,44,56,68,80,92].map(y => `
-          <path d="M35 ${y} L${12 + (y % 3)} ${y - 12}" stroke="#5fae72" stroke-width="2.6" stroke-linecap="round"/>
-          <path d="M35 ${y + 5} L${58 - (y % 3)} ${y - 7}" stroke="#5fae72" stroke-width="2.6" stroke-linecap="round"/>`).join('')}
-      </svg>
-      <svg class="tpl-why__deco tpl-why__deco--chamomile" viewBox="0 0 100 100" aria-hidden="true">
-        ${[0,45,90,135,180,225,270,315].map(a => `<ellipse cx="50" cy="26" rx="9" ry="20" fill="#fff" stroke="#eadfc4" stroke-width="1.5" transform="rotate(${a} 50 50)"/>`).join('')}
-        <circle cx="50" cy="50" r="13" fill="#f2b93b"/>
-        <circle cx="50" cy="50" r="13" fill="none" stroke="#e0a52a" stroke-width="2"/>
-      </svg>
-      <svg class="tpl-why__deco tpl-why__deco--lavender" viewBox="0 0 60 130" aria-hidden="true">
-        <path d="M30 128 C28 95 32 70 30 40" fill="none" stroke="#7fa16a" stroke-width="3" stroke-linecap="round"/>
-        ${[[30,16],[21,28],[39,28],[24,42],[36,42],[27,55],[33,55]].map(([x,y]) => `<ellipse cx="${x}" cy="${y}" rx="7.5" ry="10" fill="#9b7fd4" opacity=".9"/>`).join('')}
-      </svg>
-      <svg class="tpl-why__deco tpl-why__deco--citrus" viewBox="0 0 110 110" aria-hidden="true">
-        <circle cx="55" cy="55" r="50" fill="#f6c04a"/>
-        <circle cx="55" cy="55" r="43" fill="#fbe4a9"/>
-        ${[0,60,120,180,240,300].map(a => `<path d="M55 55 L55 17 A38 38 0 0 1 87 36 Z" fill="#f3b32d" transform="rotate(${a} 55 55)"/>`).join('')}
-        <circle cx="55" cy="55" r="5" fill="#fbe4a9"/>
-      </svg>
-      <svg class="tpl-why__deco tpl-why__deco--leaf" viewBox="0 0 90 70" aria-hidden="true">
-        <path d="M6 60 C10 20 50 4 84 10 C80 44 46 66 6 60 Z" fill="#7cc08d"/>
-        <path d="M10 58 C34 44 58 28 80 13" fill="none" stroke="#57a06a" stroke-width="2.5" stroke-linecap="round"/>
-      </svg>
-      <svg class="tpl-why__deco tpl-why__deco--drop" viewBox="0 0 50 70" aria-hidden="true">
-        <path d="M25 4 C34 24 45 36 45 48 A20 20 0 1 1 5 48 C5 36 16 24 25 4 Z" fill="#79c6d8" opacity=".95"/>
-        <circle cx="18" cy="48" r="6" fill="#a7dde8"/>
-      </svg>
-      <svg class="tpl-why__deco tpl-why__deco--amber" viewBox="0 0 50 70" aria-hidden="true">
-        <path d="M25 4 C34 24 45 36 45 48 A20 20 0 1 1 5 48 C5 36 16 24 25 4 Z" fill="#e8a34c"/>
-        <circle cx="18" cy="48" r="6" fill="#f5c98a"/>
-      </svg>`;
-    // Извилистая линия-маршрут через весь экран; степы — остановки на ней.
-    // y в px (высота journey фиксирована 430px), x — растягивается на всю ширину (viewBox 1000).
-    const path = `
-      <svg class="tpl-why__path" viewBox="0 0 1000 430" preserveAspectRatio="none" aria-hidden="true">
-        <defs>
-          <linearGradient id="tplWaveG" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0" stop-color="#4e9a60"/><stop offset=".5" stop-color="#d9812f"/><stop offset="1" stop-color="#c99a2a"/>
-          </linearGradient>
-        </defs>
-        <path d="M -30 60 C 60 70, 110 120, 200 120 C 290 120, 270 200, 350 235 C 420 262, 450 250, 520 250 C 600 250, 630 165, 710 148 C 755 139, 790 150, 830 150 C 890 150, 940 200, 1030 245"
-          fill="none" stroke="url(#tplWaveG)" stroke-width="5" stroke-linecap="round" opacity=".8"/>
-        <path d="M -30 74 C 60 84, 112 134, 202 134 C 288 134, 272 212, 352 247 C 420 274, 450 262, 520 262 C 598 262, 632 177, 712 160 C 756 151, 790 162, 830 162 C 888 162, 938 212, 1028 257"
-          fill="none" stroke="url(#tplWaveG)" stroke-width="2" stroke-linecap="round" opacity=".28"/>
-        <circle cx="350" cy="235" r="5.5" fill="#d9812f" opacity=".9"/>
-        <circle cx="710" cy="148" r="5.5" fill="#c99a2a" opacity=".9"/>
-        <circle cx="110" cy="97" r="4" fill="#4e9a60" opacity=".75"/>
-      </svg>`;
-    // Лапка в конце маршрута — результат :)
-    const paw = `
-      <svg class="tpl-why__paw" viewBox="0 0 60 60" aria-hidden="true">
-        <ellipse cx="30" cy="38" rx="13" ry="11" fill="#c9822f"/>
-        <ellipse cx="12" cy="24" rx="6" ry="8" fill="#c9822f"/>
-        <ellipse cx="25" cy="16" rx="6" ry="8" fill="#c9822f"/>
-        <ellipse cx="39" cy="17" rx="6" ry="8" fill="#c9822f"/>
-        <ellipse cx="50" cy="27" rx="6" ry="8" fill="#c9822f"/>
-      </svg>`;
-    const stops = [
-      { n: 1, x: 20, y: 120, side: 'above' },
-      { n: 2, x: 52, y: 250, side: 'below' },
-      { n: 3, x: 83, y: 150, side: 'above' },
-    ];
+    // Три шага ухода — как салонный ритуал: шаги на одной линии (на телефоне — вертикальной), у каждого свой
+    // рисованный знак и свой цвет. Линия прорисовывается, шаги появляются по очереди (.is-in, js/motion-catalog.js).
+    const icons = {
+      1: '<path d="M12 3.5c2.6 3.6 5 6.3 5 9.2a5 5 0 0 1-10 0c0-2.9 2.4-5.6 5-9.2z"/><path d="M9.6 13.4a2.5 2.5 0 0 0 2.2 2.3"/><circle cx="19" cy="5.5" r="1.6"/><circle cx="5.2" cy="7.2" r="1.1"/>',
+      2: '<path d="M12 3v3.2M12 17.8V21M3 12h3.2M17.8 12H21"/><path d="M12 7.6l1.3 3.1 3.1 1.3-3.1 1.3L12 16.4l-1.3-3.1L7.6 12l3.1-1.3z"/>',
+      3: '<path d="M12 3.2l6.8 2.6v5.3c0 4.4-2.9 7.7-6.8 9-3.9-1.3-6.8-4.6-6.8-9V5.8z"/><path d="M8.8 12.2l2.2 2.2 4.3-4.6"/>'
+    };
     tplWhy = `
-      <section class="tpl-why">
-        ${deco}
+      <section class="tpl-why" aria-labelledby="tplWhyTitle">
         <div class="tpl-why__head">
-          <h2 class="tpl-why__title">${dict['tplWhy.title'] || ''}</h2>
+          <h2 class="tpl-why__title" id="tplWhyTitle">${dict['tplWhy.title'] || ''}</h2>
           <p class="tpl-why__text">${dict['tplWhy.text'] || ''}</p>
         </div>
-        <div class="tpl-why__journey">
-          ${path}
-          ${stops.map(s => `
-            <div class="tpl-why__stop tpl-why__stop--${s.n} tpl-why__stop--${s.side}" style="left:${s.x}%;top:${s.y}px">
-              <span class="tpl-why__num">${s.n}</span>
-              <div class="tpl-why__bubble">
-                <h4>${dict['tplWhy.s' + s.n + '.title'] || ''}</h4>
-                <p>${dict['tplWhy.s' + s.n + '.text'] || ''}</p>
+        <div class="tpl-why__track">
+        <span class="tpl-why__line" aria-hidden="true"></span>
+        <ol class="tpl-why__steps">
+          ${[1, 2, 3].map(n => `
+            <li class="tpl-why__step tpl-why__step--${n}" style="--i:${n - 1}">
+              <span class="tpl-why__node" aria-hidden="true">
+                <svg viewBox="0 0 24 24">${icons[n]}</svg>
+                <span class="tpl-why__n">${n}</span>
+              </span>
+              <div class="tpl-why__body">
+                <h3 class="tpl-why__h">${dict['tplWhy.s' + n + '.title'] || ''}</h3>
+                <p class="tpl-why__p">${dict['tplWhy.s' + n + '.text'] || ''}</p>
               </div>
-            </div>`).join('')}
-          ${paw}
+            </li>`).join('')}
+        </ol>
         </div>
       </section>`;
   }

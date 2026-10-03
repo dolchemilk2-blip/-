@@ -102,26 +102,19 @@
      (--spring-pane), 40ms apart, once, when the list scrolls in (IntersectionObserver in js/motion-catalog.js) ---------- */
   html.m-motion .m-rise { opacity: 0; translate: 0 12px; }
   html.m-motion .m-rise.m-rise-in { opacity: 1; translate: 0 0; }
-  .tpl-why__stop.m-rise {
-    transition: translate var(--spring-pane-dur) var(--spring-pane) var(--rd, 0ms), opacity var(--duration-slow) var(--ease-smooth-out) var(--rd, 0ms);
-  }
 
-  .tpl-system__stage::before, .tpl-why__stop::before { transform-origin: 50% 0; }
+  .tpl-system__stage::before { transform-origin: 50% 0; }
   @supports (animation-timeline: view()) {
     .tpl-system__stage { view-timeline: --m-stage block; }
     .tpl-system__stage::before {
       animation: mDraw linear both; animation-timeline: --m-stage; animation-range: entry 15% cover 55%;
     }
-    .tpl-why__stop { view-timeline: --m-stop block; }
-    .tpl-why__stop:not(.tpl-why__stop--3)::before {
-      animation: mDraw linear both; animation-timeline: --m-stop; animation-range: entry 70% cover 55%;
-    }
   }
   @supports not (animation-timeline: view()) {
-    html.m-motion .tpl-system__stage::before, html.m-motion .tpl-why__stop::before {
+    html.m-motion .tpl-system__stage::before {
       transform: scaleY(0); transition: transform var(--spring-pane-dur) var(--spring-pane) 120ms;
     }
-    html.m-motion .tpl-system__stage.m-drawn::before, html.m-motion .tpl-why__stop.m-drawn::before { transform: none; }
+    html.m-motion .tpl-system__stage.m-drawn::before { transform: none; }
   }
 
   /* Brand / species / section switches (all widths): main.js — FLIP survivors, a spring staircase for newcomers,
