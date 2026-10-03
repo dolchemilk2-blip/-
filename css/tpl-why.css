@@ -44,11 +44,8 @@
 }
 .tpl-why__bottle { width: 96px; height: 192px; overflow: visible; transform-origin: 50% 92%;
   filter: drop-shadow(0 18px 18px rgba(0, 0, 0, .35)); }
-.tpl-why__glass { fill: rgba(255, 255, 255, .06); stroke: rgba(244, 239, 230, .85); stroke-width: 2; stroke-linejoin: round; }
+.tpl-why__bottle text { font-family: var(--font); }
 .tpl-why__liquid { transform-box: fill-box; transform-origin: 50% 100%; transform: translateY(26%); }
-.tpl-why__shine { fill: none; stroke: rgba(255, 255, 255, .55); stroke-width: 3; stroke-linecap: round; }
-.tpl-why__label { fill: var(--ink-why); }
-.tpl-why__lnum { fill: #15181b; font: 700 15px/1 var(--font); }
 
 .tpl-why__body { text-align: center; justify-self: center; max-width: 32ch; }
 .tpl-why__h {
