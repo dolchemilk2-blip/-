@@ -824,12 +824,25 @@ function tplIntroHtml(brand, lang, dict) {
   // Вставка «зачем нужны степы» — в самом верху вкладки Tauro
   let tplWhy = '';
   if (brand === 'tpl') {
-    // Три шага ухода — как салонный ритуал: шаги на одной линии (на телефоне — вертикальной), у каждого свой
-    // рисованный знак и свой цвет. Линия прорисовывается, шаги появляются по очереди (.is-in, js/motion-catalog.js).
-    const icons = {
-      1: '<path d="M12 3.5c2.6 3.6 5 6.3 5 9.2a5 5 0 0 1-10 0c0-2.9 2.4-5.6 5-9.2z"/><path d="M9.6 13.4a2.5 2.5 0 0 0 2.2 2.3"/><circle cx="19" cy="5.5" r="1.6"/><circle cx="5.2" cy="7.2" r="1.1"/>',
-      2: '<path d="M12 3v3.2M12 17.8V21M3 12h3.2M17.8 12H21"/><path d="M12 7.6l1.3 3.1 3.1 1.3-3.1 1.3L12 16.4l-1.3-3.1L7.6 12l3.1-1.3z"/>',
-      3: '<path d="M12 3.2l6.8 2.6v5.3c0 4.4-2.9 7.7-6.8 9-3.9-1.3-6.8-4.6-6.8-9V5.8z"/><path d="M8.8 12.2l2.2 2.2 4.3-4.6"/>'
+    // Три шага ухода — салонный ритуал на тёмной «студийной» панели: у каждого шага свой флакон (шампунь, маска,
+    // кондиционер), который наполняется своим цветом, когда блок появляется на экране (.is-in, js/motion-catalog.js).
+    // На этикетке флакона — номер шага. Флаконы связаны пунктиром.
+    const bottles = {
+      1: { body: '<rect x="16" y="40" width="48" height="112" rx="16"/>', top: '<rect x="31" y="8" width="18" height="16" rx="4"/><rect x="34" y="24" width="12" height="16" rx="2"/>', label: 96 },
+      2: { body: '<rect x="8" y="78" width="64" height="74" rx="16"/>', top: '<rect x="6" y="60" width="68" height="18" rx="6"/>', label: 108 },
+      3: { body: '<rect x="18" y="48" width="44" height="104" rx="14"/>', top: '<path d="M33 48V30h14v18M40 30V18h-12a4 4 0 0 0-4 4v4"/><rect x="34" y="12" width="12" height="6" rx="2"/>', label: 100 }
+    };
+    const bottle = n => {
+      const b = bottles[n];
+      return `<svg class="tpl-why__bottle" viewBox="0 0 80 160" aria-hidden="true">
+        <defs><clipPath id="tplWhyClip${n}">${b.body}</clipPath>
+          <linearGradient id="tplWhyLiq${n}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--c2)"/><stop offset="1" style="stop-color:var(--c)"/></linearGradient></defs>
+        <g clip-path="url(#tplWhyClip${n})"><rect class="tpl-why__liquid" x="0" y="0" width="80" height="160" fill="url(#tplWhyLiq${n})"/>
+          <path class="tpl-why__shine" d="M24 ${b.label - 30}v36"/></g>
+        <g class="tpl-why__glass">${b.body}${b.top}</g>
+        <rect class="tpl-why__label" x="26" y="${b.label}" width="28" height="22" rx="5"/>
+        <text class="tpl-why__lnum" x="40" y="${b.label + 16}" text-anchor="middle">${n}</text>
+      </svg>`;
     };
     tplWhy = `
       <section class="tpl-why" aria-labelledby="tplWhyTitle">
@@ -837,22 +850,16 @@ function tplIntroHtml(brand, lang, dict) {
           <h2 class="tpl-why__title" id="tplWhyTitle">${dict['tplWhy.title'] || ''}</h2>
           <p class="tpl-why__text">${dict['tplWhy.text'] || ''}</p>
         </div>
-        <div class="tpl-why__track">
-        <span class="tpl-why__line" aria-hidden="true"></span>
         <ol class="tpl-why__steps">
           ${[1, 2, 3].map(n => `
             <li class="tpl-why__step tpl-why__step--${n}" style="--i:${n - 1}">
-              <span class="tpl-why__node" aria-hidden="true">
-                <svg viewBox="0 0 24 24">${icons[n]}</svg>
-                <span class="tpl-why__n">${n}</span>
-              </span>
+              <div class="tpl-why__stage">${bottle(n)}</div>
               <div class="tpl-why__body">
                 <h3 class="tpl-why__h">${dict['tplWhy.s' + n + '.title'] || ''}</h3>
                 <p class="tpl-why__p">${dict['tplWhy.s' + n + '.text'] || ''}</p>
               </div>
             </li>`).join('')}
         </ol>
-        </div>
       </section>`;
   }
   // Витрины «стоящих» флаконов Tauro Pro Line (Step-системы) — только на вкладке Tauro

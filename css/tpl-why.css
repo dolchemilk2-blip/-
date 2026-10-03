@@ -1,120 +1,106 @@
-/* ===== Tauro: «Зачем нужны степы» — три шага ухода как салонный ритуал (разметка: main.js tplIntroHtml) =====
-   Тёплая светлая панель, крупный заголовок слева и пояснение справа; три шага на одной линии — у каждого свой
-   рисованный знак и цвет (зелёный → медный → золотой, как у витрин Step ниже). На телефоне — вертикальная линия.
-   Появление: .is-armed (скрыто, ставит js/motion-catalog.js) → .is-in: линия прорисовывается, шаги по очереди. */
+/* ===== Tauro: «Зачем нужны степы» — салонный ритуал (разметка: main.js tplIntroHtml) =====
+   Тёмная «студийная» панель посреди светлого каталога: крупный светлый заголовок, три флакона — шампунь, маска,
+   кондиционер — каждый со своим цветом и номером шага на этикетке. Когда блок появляется на экране, флаконы
+   поднимаются по очереди и наполняются (.is-armed → .is-in, js/motion-catalog.js); при наведении флакон
+   наклоняется, будто наливают. На телефоне — вертикальный список: флакон слева, текст справа. */
 .tpl-why {
-  --why-1: #4e9a60; --why-1-ink: #2f6a3c;
-  --why-2: #d9812f; --why-2-ink: #96501a;
-  --why-3: #c99a2a; --why-3-ink: #82621a;
+  --ink-why: #f4efe6; --ink-why-2: rgba(244, 239, 230, .72);
   position: relative; overflow: hidden; isolation: isolate;
-  margin: 0 0 64px; padding: clamp(36px, 5vw, 64px) clamp(24px, 5vw, 72px) clamp(40px, 5vw, 64px);
-  border-radius: 32px;
+  margin: 0 0 64px; padding: clamp(40px, 5.5vw, 76px) clamp(24px, 5.5vw, 80px) clamp(44px, 5vw, 72px);
+  border-radius: 32px; color: var(--ink-why);
   background:
-    radial-gradient(60% 90% at 0% 100%, rgba(78, 154, 96, .10), transparent 70%),
-    radial-gradient(50% 80% at 100% 0%, rgba(201, 154, 42, .12), transparent 70%),
-    linear-gradient(180deg, #fbfaf6 0%, #f5f2ea 100%);
-  box-shadow: 0 1px 2px rgba(60, 48, 20, .04), 0 18px 48px -24px rgba(60, 48, 20, .18);
+    radial-gradient(40% 60% at 16% 92%, rgba(95, 184, 120, .22), transparent 70%),
+    radial-gradient(40% 60% at 50% 100%, rgba(228, 138, 60, .20), transparent 70%),
+    radial-gradient(40% 60% at 84% 92%, rgba(216, 173, 62, .20), transparent 70%),
+    radial-gradient(70% 80% at 100% 0%, rgba(255, 255, 255, .06), transparent 60%),
+    #15181b;
+  box-shadow: 0 30px 60px -30px rgba(10, 12, 14, .55);
 }
-.tpl-why::selection, .tpl-why ::selection { background: rgba(217, 129, 47, .22); }
+.tpl-why ::selection { background: rgba(228, 138, 60, .45); color: #fff; }
 
-.tpl-why__head {
-  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 16px 56px; align-items: end;
-}
+.tpl-why__head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 18px 64px; align-items: end; }
 .tpl-why__title {
-  margin: 0; font: 700 clamp(32px, 4vw, 52px)/1.04 var(--font); letter-spacing: -0.035em; color: var(--ink);
-  text-wrap: balance;
+  margin: 0; font: 700 clamp(36px, 4.6vw, 60px)/1.02 var(--font); letter-spacing: -0.04em; color: var(--ink-why); text-wrap: balance;
 }
-.tpl-why__text { margin: 0; max-width: 52ch; font: 400 17px/1.6 var(--font); color: #5b5547; text-wrap: pretty; }
+.tpl-why__text { margin: 0; max-width: 48ch; font: 400 17px/1.6 var(--font); color: var(--ink-why-2); text-wrap: pretty; }
 
-/* шаги */
-.tpl-why__track { position: relative; margin-top: clamp(40px, 5vw, 64px); }
-.tpl-why__steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px; }
-.tpl-why__step { position: relative; display: grid; gap: 22px; align-content: start; }
-.tpl-why__step--1 { --c: var(--why-1); --ci: var(--why-1-ink); }
-.tpl-why__step--2 { --c: var(--why-2); --ci: var(--why-2-ink); }
-.tpl-why__step--3 { --c: var(--why-3); --ci: var(--why-3-ink); }
+.tpl-why__steps {
+  position: relative; list-style: none; margin: clamp(44px, 5.5vw, 72px) 0 0; padding: 0;
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 48px;
+}
+/* пунктир между флаконами — на высоте их середины */
+.tpl-why__steps::before {
+  content: ""; position: absolute; z-index: 0; top: 96px; left: calc(100% / 6 + 40px); right: calc(100% / 6 + 40px); height: 0;
+  border-top: 2px dashed rgba(244, 239, 230, .22); transform-origin: 0 50%;
+}
+.tpl-why__step { position: relative; z-index: 1; display: grid; gap: 26px; align-content: start; }
+.tpl-why__step--1 { --c: #3f9a5b; --c2: #8fd6a2; }
+.tpl-why__step--2 { --c: #c96a22; --c2: #f2b06e; }
+.tpl-why__step--3 { --c: #b88a1e; --c2: #ecd06f; }
 
-/* линия через центры знаков: от первого до последнего (колонки равные → 1/6 и 5/6 ширины) */
-.tpl-why__line {
-  position: absolute; z-index: 0; top: 35px; left: calc((100% - 80px) / 6); right: calc((100% - 80px) / 6);
-  height: 2px; border-radius: 1px; transform-origin: 0 50%;
-  background: linear-gradient(90deg, var(--why-1), var(--why-2) 50%, var(--why-3));
-  opacity: .55;
+.tpl-why__stage {
+  justify-self: center; display: grid; place-items: end center; width: 180px; height: 192px;
+  background: radial-gradient(50% 42% at 50% 72%, color-mix(in srgb, var(--c2) 34%, transparent), transparent 75%);
 }
+.tpl-why__bottle { width: 96px; height: 192px; overflow: visible; transform-origin: 50% 92%;
+  filter: drop-shadow(0 18px 18px rgba(0, 0, 0, .35)); }
+.tpl-why__glass { fill: rgba(255, 255, 255, .06); stroke: rgba(244, 239, 230, .85); stroke-width: 2; stroke-linejoin: round; }
+.tpl-why__liquid { transform-box: fill-box; transform-origin: 50% 100%; transform: translateY(26%); }
+.tpl-why__shine { fill: none; stroke: rgba(255, 255, 255, .55); stroke-width: 3; stroke-linecap: round; }
+.tpl-why__label { fill: var(--ink-why); }
+.tpl-why__lnum { fill: #15181b; font: 700 15px/1 var(--font); }
 
-.tpl-why__node {
-  position: relative; z-index: 1; justify-self: center;
-  width: 72px; height: 72px; border-radius: 50%; display: grid; place-items: center;
-  background: #fff; color: var(--c);
-  box-shadow: 0 0 0 7px color-mix(in srgb, var(--c) 13%, transparent), 0 10px 24px -8px color-mix(in srgb, var(--c) 55%, rgba(0, 0, 0, .25));
+.tpl-why__body { text-align: center; justify-self: center; max-width: 32ch; }
+.tpl-why__h {
+  margin: 0 0 10px; font: 600 21px/1.25 var(--font); letter-spacing: -0.02em; color: var(--ink-why); text-wrap: balance;
 }
-.tpl-why__node svg { width: 34px; height: 34px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
-.tpl-why__n {
-  position: absolute; top: -6px; right: -6px; min-width: 26px; height: 26px; padding: 0 6px; border-radius: 13px;
-  display: grid; place-items: center; background: var(--c); color: #fff; border: 2px solid #fff;
-  font: 700 13px/1 var(--font); font-variant-numeric: tabular-nums;
-}
-.tpl-why__body { text-align: center; max-width: 34ch; justify-self: center; }
-.tpl-why__h { margin: 0 0 8px; font: 600 21px/1.25 var(--font); letter-spacing: -0.015em; color: var(--ci); }
-.tpl-why__p { margin: 0; font: 400 15.5px/1.55 var(--font); color: #5b5547; text-wrap: pretty; }
+.tpl-why__p { margin: 0; font: 400 15.5px/1.6 var(--font); color: var(--ink-why-2); text-wrap: pretty; }
 
 @media (hover: hover) and (pointer: fine) {
-  .tpl-why__node { transition: translate var(--spring-bouncy-dur) var(--spring-bouncy), box-shadow var(--duration-medium) var(--ease-smooth-out); }
-  .tpl-why__step:hover .tpl-why__node {
-    translate: 0 -4px;
-    box-shadow: 0 0 0 10px color-mix(in srgb, var(--c) 16%, transparent), 0 16px 30px -10px color-mix(in srgb, var(--c) 60%, rgba(0, 0, 0, .25));
-  }
+  .tpl-why__bottle { transition: rotate var(--spring-bouncy-dur) var(--spring-bouncy), translate var(--spring-bouncy-dur) var(--spring-bouncy); }
+  .tpl-why__step:hover .tpl-why__bottle { rotate: -7deg; translate: 0 -6px; }
 }
 
-/* появление (js/motion-catalog.js): линия рисуется 0.9с, знаки «выпрыгивают» на пружине по очереди, текст поднимается */
-.tpl-why.is-armed:not(.is-in) .tpl-why__line { transform: scaleX(0); }
-.tpl-why.is-armed:not(.is-in) .tpl-why__node { scale: .6; opacity: 0; }
-.tpl-why.is-armed:not(.is-in) .tpl-why__body { translate: 0 14px; opacity: 0; }
-.tpl-why.is-in .tpl-why__line { transform: none; transition: transform 900ms var(--ease-smooth-out) 120ms; }
-.tpl-why.is-in .tpl-why__node {
-  scale: 1; opacity: 1;
-  transition: scale var(--spring-bouncy-dur) var(--spring-bouncy) calc(120ms + var(--i) * 260ms),
-              opacity var(--duration-fast) var(--ease-smooth-out) calc(120ms + var(--i) * 260ms),
-              translate var(--spring-bouncy-dur) var(--spring-bouncy), box-shadow var(--duration-medium) var(--ease-smooth-out);
+/* появление: пунктир прорисовывается, флаконы поднимаются по очереди и наполняются, текст — за ними */
+.tpl-why.is-armed:not(.is-in) .tpl-why__steps::before { transform: scaleX(0); }
+.tpl-why.is-armed:not(.is-in) .tpl-why__bottle { opacity: 0; translate: 0 28px; }
+.tpl-why.is-armed:not(.is-in) .tpl-why__liquid { transform: translateY(100%); }
+.tpl-why.is-armed:not(.is-in) .tpl-why__body { opacity: 0; translate: 0 14px; }
+.tpl-why.is-in .tpl-why__steps::before { transition: transform 1100ms var(--ease-smooth-out) 200ms; }
+.tpl-why.is-in .tpl-why__bottle {
+  transition: opacity var(--duration-slow) var(--ease-smooth-out) calc(var(--i) * 220ms),
+              translate var(--spring-bouncy-dur) var(--spring-bouncy) calc(var(--i) * 220ms),
+              rotate var(--spring-bouncy-dur) var(--spring-bouncy);
 }
+.tpl-why.is-in .tpl-why__liquid { transition: transform 1200ms var(--ease-smooth-out) calc(260ms + var(--i) * 220ms); }
 .tpl-why.is-in .tpl-why__body {
-  translate: 0 0; opacity: 1;
-  transition: translate var(--spring-pane-dur) var(--spring-pane) calc(200ms + var(--i) * 260ms),
-              opacity var(--duration-slow) var(--ease-smooth-out) calc(200ms + var(--i) * 260ms);
+  transition: opacity var(--duration-slow) var(--ease-smooth-out) calc(180ms + var(--i) * 220ms),
+              translate var(--spring-pane-dur) var(--spring-pane) calc(180ms + var(--i) * 220ms);
 }
 
 @media (max-width: 960px) {
   .tpl-why__head { grid-template-columns: 1fr; }
   .tpl-why__steps { gap: 24px; }
-  .tpl-why__line { left: calc((100% - 48px) / 6); right: calc((100% - 48px) / 6); }
+  .tpl-why__stage { width: 150px; }
 }
-
-/* телефон: вертикальный маршрут — знак слева, текст справа, линия соединяет знаки */
 @media (max-width: 720px) {
-  .tpl-why { margin: 0 0 40px; padding: 28px 20px 30px; border-radius: 24px; }
-  .tpl-why__title { font-size: 30px; }
+  .tpl-why { margin: 0 0 40px; padding: 30px 20px 32px; border-radius: 24px; }
+  .tpl-why__title { font-size: 32px; }
   .tpl-why__text { font-size: 15.5px; line-height: 1.55; }
-  .tpl-why__track { margin-top: 28px; }
-  .tpl-why__steps { grid-template-columns: 1fr; gap: 26px; }
-  .tpl-why__step { grid-template-columns: 56px minmax(0, 1fr); gap: 16px; align-items: start; }
-  .tpl-why__line {
-    top: 28px; bottom: 28px; left: 27px; right: auto; width: 2px; height: auto; transform-origin: 50% 0;
-    background: linear-gradient(180deg, var(--why-1), var(--why-2) 50%, var(--why-3));
-  }
-  .tpl-why.is-armed:not(.is-in) .tpl-why__line { transform: scaleY(0); }
-  .tpl-why__node { width: 56px; height: 56px; justify-self: start; box-shadow: 0 0 0 5px color-mix(in srgb, var(--c) 13%, transparent), 0 8px 18px -8px color-mix(in srgb, var(--c) 55%, rgba(0, 0, 0, .25)); }
-  .tpl-why__node svg { width: 27px; height: 27px; }
-  .tpl-why__n { min-width: 22px; height: 22px; font-size: 12px; top: -5px; right: -5px; }
-  .tpl-why__body { text-align: left; max-width: none; justify-self: stretch; padding-top: 4px; }
-  .tpl-why__h { font-size: 18px; margin-bottom: 4px; }
+  .tpl-why__steps { grid-template-columns: 1fr; gap: 22px; margin-top: 30px; }
+  .tpl-why__steps::before { top: 40px; bottom: 40px; left: 39px; right: auto; height: auto; border-top: 0; border-left: 2px dashed rgba(244, 239, 230, .2); transform-origin: 50% 0; }
+  .tpl-why.is-armed:not(.is-in) .tpl-why__steps::before { transform: scaleY(0); }
+  .tpl-why__step { grid-template-columns: 80px minmax(0, 1fr); gap: 16px; align-items: center; }
+  .tpl-why__stage { width: 80px; height: 104px; justify-self: start; }
+  .tpl-why__bottle { width: 52px; height: 104px; }
+  .tpl-why__body { text-align: left; justify-self: stretch; max-width: none; }
+  .tpl-why__h { font-size: 18px; margin-bottom: 6px; }
   .tpl-why__p { font-size: 14.5px; line-height: 1.5; }
-  .tpl-why.is-armed:not(.is-in) .tpl-why__body { translate: 12px 0; }
 }
-
 @media (prefers-reduced-motion: reduce) {
-  .tpl-why__line, .tpl-why__node, .tpl-why__body { transition: none !important; }
+  .tpl-why *, .tpl-why__steps::before { transition: none !important; }
 }
 @media (forced-colors: active) {
-  .tpl-why__line { background: CanvasText; }
-  .tpl-why__node { border: 2px solid CanvasText; }
+  .tpl-why { background: Canvas; color: CanvasText; }
+  .tpl-why__glass { stroke: CanvasText; }
 }
