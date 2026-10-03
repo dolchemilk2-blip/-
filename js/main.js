@@ -824,45 +824,15 @@ function tplIntroHtml(brand, lang, dict) {
   // Вставка «зачем нужны степы» — в самом верху вкладки Tauro
   let tplWhy = '';
   if (brand === 'tpl') {
-    // Три шага ухода — салонный ритуал на тёмной «студийной» панели: у каждого шага свой флакон (шампунь, маска,
-    // кондиционер), который наполняется своим цветом, когда блок появляется на экране (.is-in, js/motion-catalog.js).
-    // На этикетке флакона — номер шага. Флаконы связаны пунктиром.
-    // Флаконы нарисованы как настоящая упаковка: шампунь с откидной крышкой, баночка-маска с рифлёной крышкой,
-    // кондиционер с дозатором. Стекло с бликами, жидкость с волной сверху, этикетка TAURO с номером шага.
-    const bottles = {
-      1: { body: 'M30 34h20c6 2 10 7 10 14v90c0 8-6 14-14 14H34c-8 0-14-6-14-14V48c0-7 4-12 10-14z',
-           top: '<rect x="33" y="26" width="14" height="9" rx="2"/><path d="M28 11c0-3 2-5 5-5h14c3 0 5 2 5 5v15H28z"/><path d="M28 18h24" stroke-opacity=".5"/>',
-           label: [24, 80, 32, 46], shine: 'M25.5 58v66', shade: 'M55 60v62', extra: '<circle cx="34" cy="132" r="2.2"/><circle cx="44" cy="120" r="1.6"/><circle cx="38" cy="142" r="1.3"/><circle cx="47" cy="138" r="2"/>' },
-      2: { body: 'M15 78h50c4 0 7 3 7 7v53c0 8-6 14-14 14H22c-8 0-14-6-14-14V85c0-4 3-7 7-7z',
-           top: '<rect x="10" y="58" width="60" height="20" rx="5"/>' + [17, 24, 31, 38, 45, 52, 59, 65].map(x => `<path d="M${x} 62v12" stroke-opacity=".35"/>`).join(''),
-           label: [21, 94, 38, 40], shine: 'M13.5 90v44', shade: 'M66.5 92v42', extra: '' },
-      3: { body: 'M29 52h22c6 2 10 6 10 12v76c0 7-5 12-12 12H31c-7 0-12-5-12-12V64c0-6 4-10 10-12z',
-           top: '<rect x="30" y="43" width="20" height="9" rx="2.5"/><rect x="37" y="27" width="6" height="16" rx="1.5"/><path d="M30 15c0-2 2-4 4-4h14c2 0 4 2 4 4v8c0 2-1 4-3 4H30z"/><path d="M30 17H19c-2 0-3.5 1.5-3.5 3.5V23"/>',
-           label: [25, 84, 30, 46], shine: 'M24.5 70v58', shade: 'M56 72v56', extra: '' }
+    // Три шага ухода на светлой панели: у каждого шага значок его упаковки в своём цвете и номер; значки связаны
+    // пунктиром и появляются по очереди, когда блок попадает на экран (.is-in, js/motion-catalog.js).
+    // Значки упаковки каждого шага: шампунь, маска, кондиционер с дозатором — оранжевый, жёлтый, зелёный.
+    const icons = {
+      1: '<path d="M9.5 2.5h5v3h-5z"/><path d="M10.5 5.5h3v2h-3z"/><path d="M9 7.5h6a3 3 0 0 1 3 3v9a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-9a3 3 0 0 1 3-3z"/><path d="M9.5 13.5h5M9.5 16.5h3"/>',
+      2: '<rect x="4.5" y="6" width="15" height="4" rx="1.5"/><path d="M6 10h12v8.5a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 6 18.5z"/><path d="M9.5 14.5h5M9.5 17.5h3"/>',
+      3: '<path d="M9.5 3h5.5v2.5H9.5zM9.5 4.2H6.5"/><path d="M12.2 5.5v3"/><path d="M10.2 8.5h4v1.5h-4z"/><path d="M8.7 10h7a2 2 0 0 1 2 2v7.5a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2V12a2 2 0 0 1 2-2z"/><path d="M9.7 14.5h5M9.7 17.5h3"/>'
     };
-    // цвета шагов: оранжевый → жёлтый → зелёный (прямо в SVG — флаконы цветные даже до загрузки стилей)
-    const tones = { 1: ['#d9731f', '#f6b26b'], 2: ['#d9a514', '#f6dc6a'], 3: ['#3f9a5b', '#8fd6a2'] };
-    const bottle = n => {
-      const b = bottles[n], t = tones[n], [lx, ly, lw, lh] = b.label;
-      return `<svg class="tpl-why__bottle" viewBox="0 0 80 160" aria-hidden="true">
-        <defs><clipPath id="tplWhyClip${n}"><path d="${b.body}"/></clipPath>
-          <linearGradient id="tplWhyLiq${n}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${t[1]}"/><stop offset="1" stop-color="${t[0]}"/></linearGradient>
-          <linearGradient id="tplWhyGlass${n}" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity=".16"/><stop offset=".45" stop-color="#fff" stop-opacity=".03"/><stop offset="1" stop-color="#000" stop-opacity=".18"/></linearGradient></defs>
-        <ellipse cx="40" cy="155" rx="26" ry="3.5" fill="#000" fill-opacity=".35"/>
-        <g clip-path="url(#tplWhyClip${n})">
-          <g class="tpl-why__liquid"><path d="M0 6 Q10 1 20 6 T40 6 T60 6 T80 6 V170 H0 Z" fill="url(#tplWhyLiq${n})"/>
-            <g fill="#fff" fill-opacity=".45">${b.extra}</g></g>
-          <path d="${b.body}" fill="url(#tplWhyGlass${n})"/>
-        </g>
-        <g class="tpl-why__glass" fill="#ffffff" fill-opacity=".05" stroke="#f4efe6" stroke-width="1.8" stroke-linejoin="round"><path d="${b.body}"/>${b.top}</g>
-        <path d="${b.shine}" fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="2.6" stroke-linecap="round"/>
-        <path d="${b.shade}" fill="none" stroke="#000" stroke-opacity=".14" stroke-width="2.4" stroke-linecap="round"/>
-        <rect x="${lx}" y="${ly}" width="${lw}" height="${lh}" rx="6" fill="#f7f2e8"/>
-        <rect x="${lx}" y="${ly + 7}" width="${lw}" height="2" fill="${t[0]}"/>
-        <text x="40" y="${ly + 17}" text-anchor="middle" fill="#15181b" fill-opacity=".62" font-size="5.6" font-weight="700" letter-spacing=".9">TAURO</text>
-        <text x="40" y="${ly + lh - 9}" text-anchor="middle" fill="#15181b" font-size="17" font-weight="700">${n}</text>
-      </svg>`;
-    };
+    const bottle = n => `<span class="tpl-why__icon" aria-hidden="true"><svg viewBox="0 0 24 24">${icons[n]}</svg><span class="tpl-why__n">${n}</span></span>`;
     tplWhy = `
       <section class="tpl-why" aria-labelledby="tplWhyTitle">
         <div class="tpl-why__head">
