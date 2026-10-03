@@ -31,8 +31,8 @@
   const fmtKg = (v, l) => (l === 'en' ? v.toFixed(1) : v.toFixed(1).replace('.', ','));
   const packLabel = (p, t) => p < 1 ? Math.round(p * 1000) + ' ' + t.g : String(p).replace('.', lang() === 'en' ? '.' : ',') + ' ' + t.kg;
 
-  function dose(sp, w) {
-    const rows = TABLE[sp];
+  function dose(sp, w, table) {
+    const rows = table || TABLE[sp];
     const r = rows.find(x => w <= x[1]) || rows[rows.length - 1];
     const k = Math.max(0, Math.min(1, (w - r[0]) / (r[1] - r[0])));
     return Math.round(r[2] + (r[3] - r[2]) * k);
@@ -46,7 +46,13 @@
   function mount(host, o) {
     o = o || {};
     const id = 'fc' + (++uid);
-    const st = { sp: o.species || 'dogs', fixed: !!o.species, packs: o.packs, w: 0, pack: 0, showTable: false };
+    // o.table — официальная таблица товара [[кг от, кг до, г от, г до], …] (js/np-official.js): с ней шкала веса и нормы — как на упаковке
+    const st = { sp: o.species || 'dogs', fixed: !!o.species, packs: o.packs, table: o.table || null, w: 0, pack: 0, showTable: false };
+    const rangeOf = sp => {
+      if (!st.table) return RANGE[sp];
+      const lo = st.table[0][0], hi = st.table[st.table.length - 1][1], step = hi <= 12 ? 0.1 : 0.5;
+      return { min: lo, max: hi, step, def: Math.min(hi, Math.max(lo, RANGE[sp].def)) };
+    };
     host.classList.add('fcalc');
     host.innerHTML = `
       <div class="fcalc__top">
@@ -79,7 +85,7 @@
 
     function setSpecies(sp, keepW) {
       st.sp = sp;
-      const R = RANGE[sp];
+      const R = rangeOf(sp);
       range.min = R.min; range.max = R.max; range.step = R.step;
       if (!keepW) st.w = R.def;
       st.w = Math.max(R.min, Math.min(R.max, st.w));
@@ -99,15 +105,15 @@
       sp.innerHTML = ['dogs', 'cats'].map(s => `<button type="button" role="radio" aria-checked="${s === st.sp}" data-sp="${s}">${t[s]}</button>`).join('');
       const packs = st.packs && st.packs.length ? st.packs : PACKS[st.sp];
       $('.fcalc__packs').innerHTML = packs.map(p => `<button type="button" role="radio" aria-checked="${p === st.pack}" data-pack="${p}" aria-label="${t.pack} ${packLabel(p, t)}">${BAG}<span>${packLabel(p, t)}</span></button>`).join('');
-      $('.fcalc__table tbody').innerHTML = TABLE[st.sp].map(r => `<tr><td>${r[0]}–${r[1]}</td><td>${r[2]}–${r[3]}</td></tr>`).join('');
+      $('.fcalc__table tbody').innerHTML = (st.table || TABLE[st.sp]).map(r => `<tr><td>${r[0]}–${r[1]}</td><td>${r[2]}–${r[3]}</td></tr>`).join('');
       range.setAttribute('aria-valuetext', fmtKg(st.w, l) + ' ' + t.kg);
     }
     function setNum(el, text, quiet) {
       if (!quiet && window.NPSpring && NPSpring.num) NPSpring.num(el, text); else { el.textContent = text; el._numText = text; }
     }
     function update(quiet) {
-      const t = T(), l = lang(), R = RANGE[st.sp];
-      const d = dose(st.sp, st.w);
+      const t = T(), l = lang(), R = rangeOf(st.sp);
+      const d = dose(st.sp, st.w, st.table);
       setNum($('[data-v]'), fmtKg(st.w, l), true);
       setNum($('[data-dose]'), String(d), quiet);
       setNum($('[data-days]'), t.days(Math.max(1, Math.floor(st.pack * 1000 / d))), quiet);
@@ -139,16 +145,27 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot); else boot();
 
   // ---------- каталог: окно товара сухого корма ----------
+  // Есть официальная таблица кормления товара (js/np-official.js) — калькулятор считает по ней и с официальными
+  // фасовками (и для влажных кормов тоже); нет — по общей ориентировочной таблице, только для сухих кормов.
   const DRY = { np: ['dry', 'superior-care'], araton: ['dry'] };
+  const official = (brand, sp, item) => {
+    if (brand !== 'np' || typeof NP_OFFICIAL === 'undefined' || !item.en) return null;
+    return NP_OFFICIAL[sp + '||' + (item.en.cat || '') + '||' + (item.en.name || '')] || null;
+  };
+  const kgOf = s => { const m = /([\d.,]+)\s*(kg|g)\b/i.exec(s || ''); if (!m) return 0; const v = parseFloat(m[1].replace(',', '.')); return m[2].toLowerCase() === 'g' ? v / 1000 : v; };
   document.addEventListener('np:modal-open', e => {
     const d = e.detail || {}, item = d.item, brand = d.brand;
-    if (!item || item.baby || !DRY[brand] || !window.NP || !NP.catalog) return;   // нормы — для взрослых: у щенков и котят своя таблица на упаковке
+    if (!item || item.baby || !window.NP || !NP.catalog) return;   // нормы — для взрослых: у щенков и котят своя таблица на упаковке
     const g = (NP.catalog()[brand] || []).find(x => (x.items || []).indexOf(item) >= 0);
-    if (!g || DRY[brand].indexOf(g.sectionId) < 0) return;
+    if (!g) return;
+    const off = official(brand, g.species || 'both', item);
+    const table = off && off.feed && off.feed.length > 1 ? off.feed : null;
+    if (!table && (!DRY[brand] || DRY[brand].indexOf(g.sectionId) < 0)) return;
     const sp = g.species === 'cats' || g.species === 'dogs' ? g.species : null;
     const txt = ['ru', 'en'].map(l => item[l] ? [item[l].cat, item[l].name, item[l].desc].join(' ') : '').join(' ');
-    const packs = Array.from(new Set((txt.match(/\d+(?:[.,]\d+)?\s*(?:kg|кг)\b/gi) || []).map(s => parseFloat(s.replace(',', '.')))))
+    let packs = Array.from(new Set((txt.match(/\d+(?:[.,]\d+)?\s*(?:kg|кг)\b/gi) || []).map(s => parseFloat(s.replace(',', '.')))))
       .filter(v => v >= 0.3 && v <= 25).sort((a, b) => a - b);
+    if (off && off.packs && off.packs.length) { const op = off.packs.map(kgOf).filter(v => v > 0).sort((a, b) => a - b); if (op.length) packs = op; }
     const info = d.dialog && d.dialog.querySelector('.pmodal__info');
     if (!info) return;
     const box = document.createElement('section');
@@ -158,7 +175,7 @@
     box.append(h, w);
     const tags = info.querySelector('.product__tags');
     info.insertBefore(box, tags || null);
-    mount(w, { species: sp, packs: packs.length ? packs : null });
+    mount(w, { species: sp, packs: packs.length ? packs : null, table });
   });
   // ---------- каталог: всплывающая подсказка «подбор корма по весу» + калькулятор в окне ----------
   // Раз за сессию, через ~1.5с после входа в каталог (не поверх открытого товара). «Рассчитать» открывает калькулятор

@@ -476,9 +476,12 @@ function openProductModal(item, lang, key, opts) {
   const tags = (t.tags || []).map(x => `<span>${x}</span>`).join('');
   // Полное описание: из item, затем из FULL_DESC (js/descriptions.js), затем обычное desc
   const ext = (key && typeof FULL_DESC !== 'undefined' && FULL_DESC[key] && FULL_DESC[key][lang]) || null;
-  const comp = t.comp || (ext && ext.comp);
-  const feeding = t.feeding || (ext && ext.feeding);
-  const full = t.full || (ext && ext.full) || t.desc || '';
+  // Официальные данные с naturesprotection.com (js/np-official.js): описание, состав, добавки, анализ, кормление
+  const offAll = (key && typeof NP_OFFICIAL !== 'undefined' && NP_OFFICIAL[key]) || null;
+  const off = offAll && (offAll[lang] || offAll.ru);
+  const comp = (off && off.composition) || t.comp || (ext && ext.comp);
+  const feeding = (off && off.feeding) || t.feeding || (ext && ext.feeding);
+  const full = t.full || (off && off.full && off.full.length && off.full) || (ext && ext.full) || t.desc || '';
   const paras = (Array.isArray(full) ? full : String(full).split('\n')).filter(Boolean);
   const descHtml = paras.map(p => `<p>${p}</p>`).join('');
   const block = (labelKey, val) => {
@@ -500,11 +503,27 @@ function openProductModal(item, lang, key, opts) {
       <h3 class="pmodal__name" id="pmodalName">${t.name}</h3>
       <div class="pmodal__desc">${descHtml}</div>
       ${sectionsHtml}
-      ${block('products.composition', comp)}
+      ${off ? officialHtml(off, offAll, dict) : block('products.composition', comp)}
       ${block('products.feeding', feeding)}
+      ${offAll && offAll.url ? `<a class="pmodal__src" href="https://www.naturesprotection.com${offAll.url}" target="_blank" rel="noopener">${dict['products.official'] || 'naturesprotection.com'} <span aria-hidden="true">↗</span></a>` : ''}
       ${tags ? `<div class="product__tags">${tags}</div>` : ''}
     </div>`;
   showModal(modal, body, opts || {}, item);
+}
+
+// Состав по официальной странице: ингредиенты, добавки на 1 кг (свёрнуты — длинный список) и анализ таблицей
+function officialHtml(o, all, dict) {
+  const esc = v => String(v == null ? '' : v).replace(/[&<>"]/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[ch]));
+  let html = '';
+  if (o.composition) {
+    html += `<div class="pmodal__section pmodal__section--comp"><h4>${dict['products.composition'] || ''}</h4><p>${esc(o.composition)}</p>` +
+      (o.additives ? `<details class="pmodal__add"><summary>${dict['products.additives'] || ''}</summary><p>${esc(o.additives)}</p></details>` : '') + `</div>`;
+  }
+  if (o.analysis && o.analysis.length) {
+    html += `<div class="pmodal__section pmodal__section--an"><h4>${dict['products.analysis'] || ''}</h4><table class="pmodal__an"><tbody>` +
+      o.analysis.map(r => `<tr><th scope="row">${esc(r.name)}</th><td>${esc(r.value)}</td></tr>`).join('') + `</tbody></table></div>`;
+  }
+  return html;
 }
 
 // ===== Модальное окно: состояние, фокус, inert, анимация с поколениями =====
