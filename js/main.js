@@ -824,17 +824,37 @@ function tplIntroHtml(brand, lang, dict) {
   // Вставка «зачем нужны степы» — в самом верху вкладки Tauro
   let tplWhy = '';
   if (brand === 'tpl') {
-    // Три шага ухода на светлой панели: у каждого шага значок его упаковки в своём цвете и номер; значки связаны
+    // Три шага ухода на светлой панели: у каждого шага свой значок в своём цвете и номер; значки связаны
     // пунктиром и появляются по очереди, когда блок попадает на экран (.is-in, js/motion-catalog.js).
-    // Значки упаковки каждого шага: шампунь, маска, кондиционер с дозатором — оранжевый, жёлтый, зелёный.
+    // Понятные значки шагов: капля с пузырьками (очищение), искры (действие), щит с галочкой (закрепление) —
+    // оранжевый, жёлтый, зелёный. Вокруг — цветы и травы из составов (ромашка, лаванда, листья, пузырьки).
     const icons = {
-      1: '<path d="M9.5 2.5h5v3h-5z"/><path d="M10.5 5.5h3v2h-3z"/><path d="M9 7.5h6a3 3 0 0 1 3 3v9a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-9a3 3 0 0 1 3-3z"/><path d="M9.5 13.5h5M9.5 16.5h3"/>',
-      2: '<rect x="4.5" y="6" width="15" height="4" rx="1.5"/><path d="M6 10h12v8.5a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 6 18.5z"/><path d="M9.5 14.5h5M9.5 17.5h3"/>',
-      3: '<path d="M9.5 3h5.5v2.5H9.5zM9.5 4.2H6.5"/><path d="M12.2 5.5v3"/><path d="M10.2 8.5h4v1.5h-4z"/><path d="M8.7 10h7a2 2 0 0 1 2 2v7.5a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2V12a2 2 0 0 1 2-2z"/><path d="M9.7 14.5h5M9.7 17.5h3"/>'
+      1: '<path d="M12 3.2c2.9 3.9 5.4 6.8 5.4 9.9a5.4 5.4 0 0 1-10.8 0c0-3.1 2.5-6 5.4-9.9z"/><path d="M9.6 13.6a2.6 2.6 0 0 0 2.3 2.5"/><circle cx="19.2" cy="5.2" r="1.7"/><circle cx="4.8" cy="7.4" r="1.2"/><circle cx="20" cy="10.2" r=".9"/>',
+      2: '<path d="M11 3.5l1.6 4.4 4.4 1.6-4.4 1.6L11 15.5l-1.6-4.4L5 9.5l4.4-1.6z"/><path d="M18 13.5l.8 2.1 2.2.9-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.9z"/><path d="M6 16.5l.6 1.4 1.4.6-1.4.6L6 20.5l-.6-1.4-1.4-.6 1.4-.6z"/>',
+      3: '<path d="M12 3l7 2.7v5.4c0 4.5-3 7.9-7 9.2-4-1.3-7-4.7-7-9.2V5.7z"/><path d="M8.7 12l2.3 2.3 4.4-4.7"/>'
     };
     const bottle = n => `<span class="tpl-why__icon" aria-hidden="true"><svg viewBox="0 0 24 24">${icons[n]}</svg><span class="tpl-why__n">${n}</span></span>`;
+    const daisy = (cls, petal, core) => `<svg class="tpl-why__fl ${cls}" viewBox="0 0 100 100" aria-hidden="true">
+        ${[0, 40, 80, 120, 160, 200, 240, 280, 320].map(r => `<ellipse cx="50" cy="24" rx="9" ry="19" fill="${petal}" transform="rotate(${r} 50 50)"/>`).join('')}
+        <circle cx="50" cy="50" r="13" fill="${core}"/></svg>`;
+    const flora = `
+      ${daisy('tpl-why__fl--daisy', '#ffffff', '#f2b93b')}
+      ${daisy('tpl-why__fl--daisy2', '#fde3c8', '#e58a2f')}
+      <svg class="tpl-why__fl tpl-why__fl--lavender" viewBox="0 0 60 140" aria-hidden="true">
+        <path d="M30 138C28 104 32 76 30 42" fill="none" stroke="#8fae78" stroke-width="3" stroke-linecap="round"/>
+        <path d="M30 100c-10-6-16-16-17-26M30 90c9-5 14-13 15-22" fill="none" stroke="#8fae78" stroke-width="2.4" stroke-linecap="round"/>
+        ${[[30, 14], [22, 25], [38, 25], [24, 38], [36, 38], [27, 51], [33, 51], [30, 62]].map(([x, y]) => `<ellipse cx="${x}" cy="${y}" rx="7" ry="9.5" fill="#a58ad8" opacity=".9"/>`).join('')}
+      </svg>
+      <svg class="tpl-why__fl tpl-why__fl--leaf" viewBox="0 0 90 70" aria-hidden="true">
+        <path d="M6 60C10 20 50 4 84 10 80 44 46 66 6 60Z" fill="#9ed3a8"/><path d="M10 58C34 44 58 28 80 13" fill="none" stroke="#6cb17d" stroke-width="2.5" stroke-linecap="round"/></svg>
+      <svg class="tpl-why__fl tpl-why__fl--leaf2" viewBox="0 0 90 70" aria-hidden="true">
+        <path d="M6 60C10 20 50 4 84 10 80 44 46 66 6 60Z" fill="#c9e5b4"/><path d="M10 58C34 44 58 28 80 13" fill="none" stroke="#93c27c" stroke-width="2.5" stroke-linecap="round"/></svg>
+      <svg class="tpl-why__fl tpl-why__fl--bubbles" viewBox="0 0 80 80" aria-hidden="true" fill="none" stroke="#e9a35c" stroke-width="2">
+        <circle cx="22" cy="54" r="14" fill="#fff" fill-opacity=".6"/><circle cx="52" cy="30" r="9" fill="#fff" fill-opacity=".6"/><circle cx="62" cy="58" r="6" fill="#fff" fill-opacity=".6"/>
+        <path d="M15 48a8 8 0 0 1 6-5" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></svg>`;
     tplWhy = `
       <section class="tpl-why" aria-labelledby="tplWhyTitle">
+        ${flora}
         <div class="tpl-why__head">
           <h2 class="tpl-why__title" id="tplWhyTitle">${dict['tplWhy.title'] || ''}</h2>
           <p class="tpl-why__text">${dict['tplWhy.text'] || ''}</p>

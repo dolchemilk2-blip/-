@@ -1,6 +1,7 @@
 /* ===== Tauro: «Зачем нужны степы» (разметка: main.js tplIntroHtml) =====
-   Светлая тёплая панель: крупный заголовок, пояснение рядом; три шага — значок упаковки (шампунь, маска,
-   кондиционер) в своём цвете: оранжевый, жёлтый, зелёный. Значки связаны пунктиром.
+   Светлая тёплая панель: крупный заголовок, пояснение рядом; три шага — понятный значок (капля с пузырьками,
+   искры, щит с галочкой) в своём цвете: оранжевый, жёлтый, зелёный. Значки связаны пунктиром. По краям — цветы
+   и травы из составов шампуней (ромашки, лаванда, листья, пузырьки); на телефоне их меньше и они мельче.
    Появление: .is-armed (ставит js/motion-catalog.js) → .is-in: пунктир прорисовывается, значки «выпрыгивают» по
    очереди, текст поднимается следом. На телефоне — вертикальный список: значок слева, текст справа. */
 .tpl-why {
@@ -16,6 +17,19 @@
 }
 .tpl-why ::selection { background: rgba(232, 134, 47, .25); }
 
+.tpl-why > :not(.tpl-why__fl) { position: relative; z-index: 1; }
+.tpl-why__fl { position: absolute; z-index: 0; pointer-events: none; }
+.tpl-why__fl--daisy    { width: 92px; top: -18px; right: 7%; rotate: 14deg; }
+.tpl-why__fl--daisy2   { width: 54px; top: 62px; right: 2.5%; rotate: -12deg; opacity: .9; }
+.tpl-why__fl--lavender { width: 50px; bottom: -14px; left: 2.2%; rotate: -10deg; opacity: .9; }
+.tpl-why__fl--leaf     { width: 70px; bottom: 8px; right: 3%; rotate: -24deg; opacity: .85; }
+.tpl-why__fl--leaf2    { width: 52px; top: 30px; left: 44%; rotate: 150deg; opacity: .6; }
+.tpl-why__fl--bubbles  { width: 64px; bottom: 26px; left: 30%; opacity: .75; }
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .tpl-why__fl--daisy, .tpl-why__fl--daisy2 { animation: tplWhySway 7s var(--ease-in-out, ease-in-out) infinite alternate; }
+  .tpl-why__fl--daisy2 { animation-duration: 9s; }
+}
+@keyframes tplWhySway { to { rotate: 24deg; translate: 0 4px; } }
 .tpl-why__head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 18px 64px; align-items: end; }
 .tpl-why__title { margin: 0; font: 700 clamp(36px, 4.6vw, 60px)/1.02 var(--font); letter-spacing: -0.04em; color: var(--ink); text-wrap: balance; }
 .tpl-why__text { margin: 0; max-width: 48ch; font: 400 17px/1.6 var(--font); color: #5b5547; text-wrap: pretty; }
@@ -75,6 +89,11 @@
 }
 @media (max-width: 720px) {
   .tpl-why { margin: 0 0 40px; padding: 30px 20px 32px; border-radius: 24px; }
+  .tpl-why__title { padding-right: 56px; }
+  .tpl-why__fl--daisy { width: 56px; top: -10px; right: 6px; }
+  .tpl-why__fl--daisy2 { width: 30px; top: 40px; right: 46px; }
+  .tpl-why__fl--leaf { width: 46px; bottom: 6px; right: 6px; }
+  .tpl-why__fl--lavender, .tpl-why__fl--leaf2, .tpl-why__fl--bubbles { display: none; }
   .tpl-why__title { font-size: 32px; }
   .tpl-why__text { font-size: 15.5px; line-height: 1.55; }
   .tpl-why__steps { grid-template-columns: 1fr; gap: 24px; margin-top: 30px; }
