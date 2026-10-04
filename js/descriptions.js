@@ -1,7 +1,7 @@
 // Полные описания товаров Nature's Protection (3 языка), стиль и факты — с naturesprotection.com.
 // Ключ: "<species>||<en.cat>||<en.name>". Подхватывается модальным окном товара (js/main.js).
 const FULL_DESC = {
- "cats||Superior Care · White Cats||White Cats — Salmon & Krill": {
+ "cats||Superior Care · White Cats||White Cats — Herring": {
   "az": {
    "full": [
     "Ağ və açıq rəngli tükə malik yetkin pişiklər üçün hazırlanmış bu reseptdə qızılbalıq və kril dənizin ən qiymətli zülal mənbələrini bir araya gətirir. Açıq rəngli tükün gözəlliyini qorumaq üçün xüsusi düşünülmüş formula, göz ətrafında yaranan qəhvəyi göz yaşı izlərini azaltmağa kömək edir və tükün təmiz, parlaq görünüşünü dəstəkləyir.",
@@ -27,7 +27,7 @@ const FULL_DESC = {
    "comp": "Built around quality marine proteins such as salmon and krill, with no artificial additives."
   }
  },
- "cats||Superior Care · Red Cats||Red Cats — Salmon (RCE)": {
+ "cats||Superior Care · Red Cats||Red Cats — Herring (RCE)": {
   "az": {
    "full": [
     "Qəhvəyi və qırmızımtıl tükə malik yetkin pişiklər üçün nəzərdə tutulmuş bu resept ləzzətli qızılbalıqla zəngindir. Tərkibindəki RCE kompleksi tükün təbii qırmızı və qəhvəyi çalarlarını gücləndirərək rəngin canlı və dərin görünməsinə kömək edir, beləliklə pişiyinizin tükü bütün zənginliyi ilə parlayır.",
@@ -53,7 +53,7 @@ const FULL_DESC = {
    "comp": "Made with quality salmon protein and the colour-enhancing RCE complex."
   }
  },
- "cats||Superior Care · Dark Cats||Dark Cats — Salmon (DCE)": {
+ "cats||Superior Care · Dark Cats||Dark Cats — Herring (DCE)": {
   "az": {
    "full": [
     "Qara və tünd rəngli tükə malik yetkin pişiklər üçün yaradılmış bu resept dadlı qızılbalıqla zəngindir. Tərkibindəki DCE kompleksi tükün dərin tünd və qara rəngini qorumağa kömək edərək, pişiyinizin xəz örtüyünün zəngin, doymuş və parlaq görünməsini təmin edir.",
@@ -2575,7 +2575,7 @@ const FULL_DESC = {
    "comp": "Made in the EU from high-quality animal protein and carefully selected natural ingredients."
   }
  },
- "dogs||Superior Care · White Dogs · Junior||White Dogs Junior — Salmon": {
+ "dogs||Superior Care · White Dogs · Junior||White Dogs Junior — White Fish & Krill": {
   "az": {
    "full": [
     "White Dogs Junior — Qızılbalıq, ağ və açıq xəzli kiçik və mini cins balalar üçün dənsiz qida olub, böyümə dövrünün artan enerji və qidalanma tələblərini ödəmək üçün düşünülmüşdür. Zəngin qızılbalıq zülalı əzələlərin və sümüklərin sağlam inkişafına dəstək olur.",
