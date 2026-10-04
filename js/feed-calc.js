@@ -9,7 +9,9 @@
       [30, 40, 317, 393], [40, 50, 393, 464], [50, 60, 464, 532], [60, 70, 532, 598], [70, 80, 598, 660]],
     cats: [[2, 3, 30, 45], [3, 4, 45, 55], [4, 5, 55, 65], [5, 6, 65, 75], [6, 7, 75, 85], [7, 8, 85, 95]]
   };
-  const RANGE = { dogs: { min: 2, max: 80, step: 0.5, def: 15 }, cats: { min: 2, max: 8, step: 0.1, def: 4 } };
+  // шкала веса везде до 10 кг (и с официальной таблицей тоже); выше конца таблицы доза — по обменной массе (w^0.75)
+  const MAX_KG = 10;
+  const RANGE = { dogs: { min: 2, def: 5 }, cats: { min: 2, def: 4 } };
   const PACKS = { dogs: [4, 12, 18], cats: [0.4, 2, 7] };
   const I18N = {
     ru: { title: 'Сколько корма нужно?', tipTitle: 'Подбор корма по весу', tipText: 'Узнайте суточную норму для вашего питомца и на сколько дней хватит упаковки.', tipBtn: 'Рассчитать', close: 'Закрыть', weight: 'Вес питомца', kg: 'кг', g: 'г', dose: 'суточная доза', doseHint: 'Расчётная рекомендуемая доза',
@@ -32,7 +34,8 @@
   const packLabel = (p, t) => p < 1 ? Math.round(p * 1000) + ' ' + t.g : String(p).replace('.', lang() === 'en' ? '.' : ',') + ' ' + t.kg;
 
   function dose(sp, w, table) {
-    const rows = table || TABLE[sp];
+    const rows = table || TABLE[sp], last = rows[rows.length - 1];
+    if (w > last[1]) return Math.round(last[3] * Math.pow(w / last[1], 0.75));
     const r = rows.find(x => w <= x[1]) || rows[rows.length - 1];
     const k = Math.max(0, Math.min(1, (w - r[0]) / (r[1] - r[0])));
     return Math.round(r[2] + (r[3] - r[2]) * k);
@@ -49,9 +52,8 @@
     // o.table — официальная таблица товара [[кг от, кг до, г от, г до], …] (js/np-official.js): с ней шкала веса и нормы — как на упаковке
     const st = { sp: o.species || 'dogs', fixed: !!o.species, packs: o.packs, table: o.table || null, w: 0, pack: 0, showTable: false };
     const rangeOf = sp => {
-      if (!st.table) return RANGE[sp];
-      const lo = st.table[0][0], hi = st.table[st.table.length - 1][1], step = hi <= 12 ? 0.1 : 0.5;
-      return { min: lo, max: hi, step, def: Math.min(hi, Math.max(lo, RANGE[sp].def)) };
+      const lo = Math.min(st.table ? st.table[0][0] : RANGE[sp].min, MAX_KG - 1);
+      return { min: lo, max: MAX_KG, step: 0.1, def: Math.min(MAX_KG, Math.max(lo, RANGE[sp].def)) };
     };
     host.classList.add('fcalc');
     host.innerHTML = `
