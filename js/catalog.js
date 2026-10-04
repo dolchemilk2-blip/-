@@ -19,17 +19,17 @@ const BRANDS_EXTRA = {
           ru: { cat: "Adult · Все породы", name: "Active", desc: "Высокоэнергетический корм для активных и рабочих взрослых собак; с травами (тимьян, шалфей, петрушка, орегано), высокое содержание животного белка.", tags: ["Active", "Высокая энергия"] },
           en: { cat: "Adult · All breeds", name: "Active", desc: "High-energy food for active and athletic adult dogs; powered by herbs (thyme, sage, parsley, oregano), high animal protein.", tags: ["Active", "High energy"] } },
         { img: "assets/products/art-dog-junior.webp", baby: true,
-          az: { cat: "Junior · <1 il", name: "Junior", desc: "Bütün cins böyüyən bala itlər üçün qida; sağlam böyümə üçün, 68% heyvani protein.", tags: ["Junior", "<1 il"] },
-          ru: { cat: "Junior · <1 года", name: "Junior", desc: "Корм для растущих щенков всех пород; для здорового роста, 68% животного белка.", tags: ["Junior", "<1 года"] },
-          en: { cat: "Junior · <1 year", name: "Junior", desc: "Food for growing puppies of all breeds; for healthy growth, 68% animal protein.", tags: ["Junior", "<1 year"] } },
+          az: { cat: "Junior · <1 il", name: "Junior", desc: "Bütün cins böyüyən bala itlər üçün qida; sağlam böyümə üçün, 58% heyvani protein.", tags: ["Junior", "<1 il"] },
+          ru: { cat: "Junior · <1 года", name: "Junior", desc: "Корм для растущих щенков всех пород; для здорового роста, 58% животного белка.", tags: ["Junior", "<1 года"] },
+          en: { cat: "Junior · <1 year", name: "Junior", desc: "Food for growing puppies of all breeds; for healthy growth, 58% animal protein.", tags: ["Junior", "<1 year"] } },
         { img: "assets/products/art-dog-junior-lamb.webp", baby: true,
           az: { cat: "Junior · <1 il", name: "Junior Lamb", desc: "Bütün cins böyüyən bala itlər üçün quzu əti ilə qida; optimal böyümə və həssas həzm üçün.", tags: ["Junior", "Quzu"] },
           ru: { cat: "Junior · <1 года", name: "Junior Lamb", desc: "Корм с ягнёнком для растущих щенков всех пород; для оптимального роста и чувствительного пищеварения.", tags: ["Junior", "Ягнёнок"] },
           en: { cat: "Junior · <1 year", name: "Junior Lamb", desc: "Lamb food for growing puppies of all breeds; for optimal growth and sensitive digestion.", tags: ["Junior", "Lamb"] } },
         { img: "assets/products/art-dog-maxi.webp",
-          az: { cat: "Adult · İri cinslər", name: "Maxi", desc: "İri cins (25–90 kq) yetkin itlər üçün tam rasion.", tags: ["Maxi", "25–90 kq"] },
-          ru: { cat: "Adult · Крупные породы", name: "Maxi", desc: "Полнорационный корм для взрослых собак крупных пород (25–90 кг).", tags: ["Maxi", "25–90 кг"] },
-          en: { cat: "Adult · Large breeds", name: "Maxi", desc: "Complete food for adult large-breed dogs (25–90 kg).", tags: ["Maxi", "25–90 kg"] } }
+          az: { cat: "Adult · İri cinslər", name: "Maxi", desc: "İri cins (25–80 kq) yetkin itlər üçün tam rasion.", tags: ["Maxi", "25–80 kq"] },
+          ru: { cat: "Adult · Крупные породы", name: "Maxi", desc: "Полнорационный корм для взрослых собак крупных пород (25–80 кг).", tags: ["Maxi", "25–80 кг"] },
+          en: { cat: "Adult · Large breeds", name: "Maxi", desc: "Complete food for adult large-breed dogs (25–80 kg).", tags: ["Maxi", "25–80 kg"] } }
       ]
     },
     {

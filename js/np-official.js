@@ -12273,5 +12273,7516 @@ const NP_OFFICIAL = {
    "analysis": [],
    "feeding": "Gənc və yetkin itlər: hər 10 kq bədən çəkisinə 1/2 çay qaşığı (2 qram), lakin gündə maksimum 2 çay qaşığı. Pişik balaları: gündə 1/4 çay qaşığı (1 qram). Yetkin pişiklər: hər 3–8 kq bədən çəkisinə 1/2 çay qaşığı (2 qram). Otaq temperaturunda, maksimum +25 °C-də, quru yerdə saxlayın; açıldıqdan sonra 6 ay ərzində istifadə edin. Uşaqların əli çatmayan yerdə saxlayın. Yalnız heyvanlar üçün."
   }
+ },
+ "dogs||Superior Care · White Dogs · Starter||White Dogs Starter — Salmon": {
+  "url": "/product/dry-grain-free-food-for-puppies-of-all-breeds-with-white-coat-with-salmon/",
+  "sku": null,
+  "packs": [
+   "1.5 kg",
+   "10 kg"
+  ],
+  "feed": [],
+  "ru": {
+   "full": [
+    "«Nature’s Protection Superior Care White Dogs Grain Free Salmon Starter All Breeds» — полнорационный беззерновой сухой корм для щенков всех пород с белым или светлым окрасом шерсти в возрасте до 4 месяцев. Продукт оптимально подходит для первого прикорма и отлучения щенков от грудного вскармливания, а также для беременных и кормящих самок. У собак с белой и светлой шерстью нередко появляются слёзные пятна ржаво-коричневого цвета под глазами, а также потемнения шерсти на бороде, лапах и в других местах. Именно для предотвращения этой проблемы в сотрудничестве с профессиональными заводчиками и экспертами в области питания домашних животных, с применением новейших научно-технических разработок, была создана специализированная линейка сухих кормов White Dogs.",
+    "Корм содержит формулу Tear Stains Off — тщательно подобранный комплекс аминокислот и полностью сбалансированные ингредиенты, которые помогают бороться с коричневыми пятнами от слёз вокруг глаз, пасти, на лапах и других частях тела. Основной источник белка — сертифицированный норвежский лосось самого высокого качества: он отлично усваивается и богат жирными кислотами Омега-3, особенно DHA, которые важны для развития мышц, здоровья кожи и шерсти и когнитивных функций, а его омега-кислоты помогают укреплять иммунную систему и поддерживают здоровое развитие. Тщательно подобранная комбинация белков очищает состав слёзной жидкости, что помогает избавиться от коричневых пятен возле глаз и потемнений на мордочке и лапах. Высокое содержание животных белков в сочетании с углеводами поддерживает уровень энергии, необходимый для здорового роста и развития молодого питомца, и обеспечивает нужный щенкам здоровый набор веса. Корм разработан ветеринарными врачами-диетологами, чтобы поддержать правильный рост и развитие щенков в чувствительный период первого прикорма и отлучения от грудного вскармливания.",
+    "Корм также содержит антарктический криль — уникальный и на 100% экологически устойчивый источник Омега-3 и холина. Криль — собирательное название мелких морских ракообразных, внешне напоминающих креветок; полиненасыщенные жирные кислоты Омега-3 усваиваются из криля в 2,5 раза лучше, чем из обычного рыбьего жира, а содержащийся в нём натуральный холин, необходимый для нормальной работы мозга, в 12 раз активнее синтетического, которым нередко обогащают корма для домашних животных. Таким образом криль способствует здоровому росту, правильному развитию мозга и общему благополучию. Корм не содержит глютеносодержащих ингредиентов, которые могут вызывать расстройства пищеварения и аллергические реакции, поэтому оптимально подходит собакам с чувствительной пищеварительной системой и склонностью к пищевой аллергии и улучшает работу желудочно-кишечного тракта.",
+    "Полнорационный сбалансированный состав обогащён MicroZeoGen — натуральным минералом, динамически микронизированным клиноптилолитом вулканического происхождения. Он стимулирует микрофлору кишечника и таким образом улучшает усвояемость питательных веществ, а благодаря особой микроструктуре помогает выводить из организма токсины, чтобы питательные вещества, витамины и минералы легко усваивались, и укрепляет иммунную систему. Состав также обогащён жирными кислотами Омега-3 и Омега-6, необходимыми для здоровья кожи и шерсти; моно- и полиненасыщенные жирные кислоты поддерживают иммунную систему, а насыщенные жирные кислоты дают энергию, необходимую для здорового развития щенков. Полнорационный корм с улучшенными вкусовыми качествами приготовлен из тщательно отобранных продуктов самого высокого качества и превосходно усваивается.",
+    "Nature’s Protection Superior Care — линейка сухих кормов супер-премиум класса, известная инновационными ингредиентами и новейшими технологиями в области здорового питания домашних животных; она основана на идее правильного и сбалансированного питания, а в основе кормов — высокоценные белки и другие ингредиенты самого высокого качества. Произведено в ЕС."
+   ],
+   "composition": "лосось 45% (сушёный и измельчённый), сушёный картофель, батат, птичий жир, горох, мука из криля (мин. 4%), жом сахарной свёклы, масло лосося, динамически микронизированный клиноптилолит (1%), семена льна, фруктоолигосахариды (ФОС), экстракт юкки, сушёная календула (источник лютеина).",
+   "additives": "Пищевые добавки на 1 кг: витамин A (3a672a) — 18000 МЕ, витамин D3 (3a671)* — 1500 МЕ, витамин E (3a700) — 530 мг, фолиевая кислота (3a316) — 1 мг, биотин (3a880) — 1 мг, моногидрат сульфата железа (II) (3b103) — 50 мг, безводный йодат кальция (3b202) — 1,5 мг, пентагидрат сульфата меди (II) (3b405) — 5 мг, моногидрат сульфата марганца (II) (3b503) — 20 мг, моногидрат сульфата цинка (3b605) — 115 мг, селенит натрия (3b801) — 0,1 мг. Технологические добавки: экстракт розмарина, богатые токоферолом экстракты растительных масел (1b306(i)). *Одновременное применение с витамином D2 не допускается.",
+   "analysis": [
+    {
+     "name": "Сырой протеин",
+     "value": "27 %"
+    },
+    {
+     "name": "Сырая клетчатка",
+     "value": "3 %"
+    },
+    {
+     "name": "Сырой жир",
+     "value": "16 %"
+    },
+    {
+     "name": "Сырая зола",
+     "value": "8,5 %"
+    },
+    {
+     "name": "Кальций",
+     "value": "1,4 %"
+    },
+    {
+     "name": "Фосфор",
+     "value": "1,0 %"
+    },
+    {
+     "name": "Калий",
+     "value": "0,6 %"
+    },
+    {
+     "name": "Натрий",
+     "value": "0,4 %"
+    },
+    {
+     "name": "Омега-3 жирные кислоты",
+     "value": "0,49 %"
+    },
+    {
+     "name": "Омега-6 жирные кислоты",
+     "value": "2,61 %"
+    }
+   ],
+   "feeding": "Корм давать сухим. У питомца всегда должен быть доступ к чистой и свежей воде. Суточная норма: см. таблицу. Количество, указанное в таблице, носит рекомендательный характер; рацион регулируется в соответствии с индивидуальными потребностями питомца."
+  },
+  "en": {
+   "full": [
+    "Nature’s Protection Superior Care White Dogs Grain Free Salmon Starter All Breeds is a complete grain-free dry food for puppies of all breeds with a white or light-coloured coat, up to 4 months of age. It is ideal for the first complementary feeding and for weaning puppies from their mother’s milk, and it is also optimally suited to pregnant and lactating females. Dogs with white and light coats often develop rust-brown tear stains under the eyes and darkened fur on the beard, paws and other areas. To prevent exactly this problem, the specialised White Dogs line of dry foods was created in cooperation with professional breeders and pet nutrition experts, using the latest scientific and technical developments.",
+    "The food contains the Tear Stains Off formula – a carefully selected amino acid complex and fully balanced ingredients that help fight brown tear stains around the eyes, mouth, paws or other parts of the body. The main protein source is certified Norwegian salmon of the highest quality: it is highly digestible and rich in Omega-3 fatty acids, especially DHA, which are crucial for muscle development, skin and coat health and cognitive function, and its omega acids help strengthen the immune system and support healthy development. The carefully selected combination of proteins purifies the composition of the tear fluid, helping to get rid of brown stains near the eyes and darkening on the muzzle and paws. The high content of animal protein, combined with carbohydrates, maintains the energy level a young pet needs for healthy growth and development and ensures the healthy weight gain puppies need. The food was developed by veterinary nutritionists to support proper growth and development during the sensitive period of first feeding and weaning.",
+    "The food also contains Antarctic krill – a unique and 100% sustainable source of Omega-3 and choline. Krill is the collective name for small marine crustaceans resembling shrimp; the Omega-3 polyunsaturated fatty acids in krill are absorbed 2.5 times better than those in ordinary fish oil, and the natural choline it contains, essential for normal brain function, is 12 times more active than the synthetic choline often added to pet foods. Krill thus promotes healthy growth, proper brain development and overall well-being. The food contains no gluten-containing ingredients that can cause digestive disorders and allergic reactions, so it is optimally suited to dogs with a sensitive digestive system and a tendency to food allergies and improves the work of the gastrointestinal tract.",
+    "The complete and balanced composition is enriched with MicroZeoGen – a natural mineral, dynamically micronized clinoptilolite of volcanic origin. It stimulates the intestinal microflora and thus improves the absorption of nutrients; thanks to its special microstructure it helps remove toxins from the body, so that nutrients, vitamins and minerals are absorbed easily, and it strengthens the immune system. The composition is also enriched with Omega-3 and Omega-6 fatty acids essential for healthy skin and coat; mono- and polyunsaturated fatty acids support the immune system, while saturated fatty acids provide the energy needed for the healthy development of puppies. The complete food with enhanced palatability is made from carefully selected products of the highest quality and is perfectly digestible.",
+    "Nature’s Protection Superior Care is a super premium line of dry foods known for innovative ingredients and the newest technologies in healthy pet nutrition; it is based on the idea of correct and balanced pet nutrition, and its foods are built on high-value proteins and other ingredients of the highest quality. Made in the EU."
+   ],
+   "composition": "salmon 45% (dried and finely ground), dried potato pulp, sweet potato, poultry fat, peas, krill meal (min. 4%), sugar beet pulp, salmon oil, dynamic micronized clinoptilolite (1%), linseed, fructooligosaccharides (FOS), yucca extract, dried marigold (source of lutein).",
+   "additives": "Nutritional additives per 1 kg: vitamin A (3a672a) — 18000 IU, vitamin D3 (3a671)* — 1500 IU, vitamin E (3a700) — 530 mg, folic acid (3a316) — 1 mg, biotin (3a880) — 1 mg, iron (II) sulphate monohydrate (3b103) — 50 mg, calcium iodate anhydrous (3b202) — 1.5 mg, copper (II) sulphate pentahydrate (3b405) — 5 mg, manganous sulphate monohydrate (3b503) — 20 mg, zinc sulphate monohydrate (3b605) — 115 mg, sodium selenite (3b801) — 0.1 mg. Technological additives: rosemary extract, tocopherol extracts from vegetable oils (1b306(i)). *Simultaneous use with vitamin D2 is not allowed.",
+   "analysis": [
+    {
+     "name": "Crude protein",
+     "value": "27 %"
+    },
+    {
+     "name": "Crude fibre",
+     "value": "3 %"
+    },
+    {
+     "name": "Crude fat",
+     "value": "16 %"
+    },
+    {
+     "name": "Crude ash",
+     "value": "8.5 %"
+    },
+    {
+     "name": "Calcium",
+     "value": "1.4 %"
+    },
+    {
+     "name": "Phosphorus",
+     "value": "1.0 %"
+    },
+    {
+     "name": "Potassium",
+     "value": "0.6 %"
+    },
+    {
+     "name": "Sodium",
+     "value": "0.4 %"
+    },
+    {
+     "name": "Omega-3 fatty acids",
+     "value": "0.49 %"
+    },
+    {
+     "name": "Omega-6 fatty acids",
+     "value": "2.61 %"
+    }
+   ],
+   "feeding": "Serve the food dry. Clean, fresh water should be available at all times. Daily amount: see the table. The amounts in the table are recommendations; adjust the ration to your pet’s individual needs."
+  },
+  "az": {
+   "full": [
+    "«Nature’s Protection Superior Care White Dogs Grain Free Salmon Starter All Breeds» — 4 aylığa qədər olan, ağ və ya açıq rəngli tüklü bütün cinslərdən olan küçüklər üçün tam rasionlu taxılsız quru yemdir. Məhsul ilk əlavə qidalanma və küçüklərin ana südündən ayrılması üçün, həmçinin boğaz və əmizdirən dişi itlər üçün optimal seçimdir. Ağ və açıq rəngli tüklü itlərdə gözlərin altında tez-tez paslı-qəhvəyi rəngli göz yaşı ləkələri, həmçinin saqqalda, pəncələrdə və digər yerlərdə tüklərin tündləşməsi müşahidə olunur. Məhz bu problemin qarşısını almaq üçün peşəkar yetişdiricilər və ev heyvanlarının qidalanması üzrə ekspertlərlə əməkdaşlıqda, ən yeni elmi-texniki işləmələr tətbiq olunmaqla ixtisaslaşmış White Dogs quru yem xətti yaradılıb.",
+    "Yemin tərkibində Tear Stains Off formulu var — diqqətlə seçilmiş amin turşuları kompleksi və tam balanslaşdırılmış inqrediyentlər gözlər, ağız, pəncələr və bədənin digər hissələri ətrafında göz yaşından yaranan qəhvəyi ləkələrlə mübarizəyə kömək edir. Əsas zülal mənbəyi ən yüksək keyfiyyətli sertifikatlı Norveç qızılbalığıdır: o, əla həzm olunur və əzələlərin inkişafı, dəri və tük sağlamlığı, idrak funksiyaları üçün vacib olan Omeqa-3 yağ turşuları, xüsusilə DHA ilə zəngindir, onun omeqa turşuları isə immun sistemini gücləndirməyə və sağlam inkişafı dəstəkləməyə kömək edir. Diqqətlə seçilmiş zülal kombinasiyası göz yaşı mayesinin tərkibini təmizləyir, bu da gözlərin yaxınlığındakı qəhvəyi ləkələrdən, üz və pəncələrdəki tündləşmələrdən xilas olmağa kömək edir. Karbohidratlarla birlikdə yüksək miqdarda heyvan zülalı gənc ev heyvanının sağlam böyüməsi və inkişafı üçün lazım olan enerji səviyyəsini qoruyur və küçüklərə lazım olan sağlam çəki artımını təmin edir. Yem ilk əlavə qidalanma və ana südündən ayrılma kimi həssas dövrdə küçüklərin düzgün böyüməsini və inkişafını dəstəkləmək üçün baytar-diyetoloqlar tərəfindən hazırlanıb.",
+    "Yemin tərkibində həmçinin Antarktika krili var — Omeqa-3 və xolinin unikal və 100% ekoloji cəhətdən davamlı mənbəyi. Krill görünüşcə krevetə bənzəyən xırda dəniz xərçəngkimilərinin ümumi adıdır; Omeqa-3 çoxdoymamış yağ turşuları krildən adi balıq yağından 2,5 dəfə daha yaxşı mənimsənilir, onda olan və beynin normal fəaliyyəti üçün zəruri olan təbii xolin isə ev heyvanları üçün yemlərin tez-tez zənginləşdirildiyi sintetik xolindən 12 dəfə daha aktivdir. Beləliklə, krill sağlam böyüməyə, beynin düzgün inkişafına və ümumi rifaha kömək edir. Yemin tərkibində həzm pozğunluqlarına və allergik reaksiyalara səbəb ola bilən qlütenli inqrediyentlər yoxdur, buna görə də o, həssas həzm sisteminə və qida allergiyasına meylli itlər üçün optimal seçimdir və mədə-bağırsaq traktının işini yaxşılaşdırır.",
+    "Tam rasionlu balanslaşdırılmış tərkib MicroZeoGen ilə zənginləşdirilib — vulkanik mənşəli təbii mineral, dinamik mikronlaşdırılmış klinoptilolit. O, bağırsaq mikroflorasını stimullaşdırır və bununla da qida maddələrinin mənimsənilməsini yaxşılaşdırır, xüsusi mikrostrukturu sayəsində isə toksinlərin orqanizmdən xaric edilməsinə kömək edir ki, qida maddələri, vitaminlər və minerallar asanlıqla mənimsənilsin, həmçinin immun sistemini gücləndirir. Tərkib dəri və tük sağlamlığı üçün zəruri olan Omeqa-3 və Omeqa-6 yağ turşuları ilə də zənginləşdirilib; mono- və çoxdoymamış yağ turşuları immun sistemini dəstəkləyir, doymuş yağ turşuları isə küçüklərin sağlam inkişafı üçün lazım olan enerjini verir. Yüksək dad keyfiyyətlərinə malik tam rasionlu yem ən yüksək keyfiyyətli, diqqətlə seçilmiş məhsullardan hazırlanıb və əla mənimsənilir.",
+    "Nature’s Protection Superior Care — innovativ inqrediyentləri və ev heyvanlarının sağlam qidalanması sahəsində ən yeni texnologiyaları ilə tanınan super-premium sinif quru yem xəttidir; o, düzgün və balanslaşdırılmış qidalanma ideyasına əsaslanır, yemlərin əsasını isə yüksək dəyərli zülallar və digər ən yüksək keyfiyyətli inqrediyentlər təşkil edir. Avropa İttifaqında istehsal olunub."
+   ],
+   "composition": "qızılbalıq 45% (qurudulmuş və xırdalanmış), qurudulmuş kartof, batat, quş yağı, noxud, krill unu (min. 4%), şəkər çuğunduru cecəsi, qızılbalıq yağı, dinamik mikronlaşdırılmış klinoptilolit (1%), kətan toxumu, fruktooliqosaxaridlər (FOS), yukka ekstraktı, qurudulmuş kalendula (lutein mənbəyi).",
+   "additives": "1 kq üçün qida əlavələri: A vitamini (3a672a) — 18000 BV, D3 vitamini (3a671)* — 1500 BV, E vitamini (3a700) — 530 mq, fol turşusu (3a316) — 1 mq, biotin (3a880) — 1 mq, dəmir (II) sulfat monohidrat (3b103) — 50 mq, susuz kalsium yodat (3b202) — 1,5 mq, mis (II) sulfat pentahidrat (3b405) — 5 mq, manqan (II) sulfat monohidrat (3b503) — 20 mq, sink sulfat monohidrat (3b605) — 115 mq, natrium selenit (3b801) — 0,1 mq. Texnoloji əlavələr: rozmarin ekstraktı, bitki yağlarından tokoferolla zəngin ekstraktlar (1b306(i)). *D2 vitamini ilə eyni vaxtda istifadəsinə icazə verilmir.",
+   "analysis": [
+    {
+     "name": "Xam protein",
+     "value": "27 %"
+    },
+    {
+     "name": "Xam lif",
+     "value": "3 %"
+    },
+    {
+     "name": "Xam yağ",
+     "value": "16 %"
+    },
+    {
+     "name": "Xam kül",
+     "value": "8,5 %"
+    },
+    {
+     "name": "Kalsium",
+     "value": "1,4 %"
+    },
+    {
+     "name": "Fosfor",
+     "value": "1,0 %"
+    },
+    {
+     "name": "Kalium",
+     "value": "0,6 %"
+    },
+    {
+     "name": "Natrium",
+     "value": "0,4 %"
+    },
+    {
+     "name": "Omeqa-3 yağ turşuları",
+     "value": "0,49 %"
+    },
+    {
+     "name": "Omeqa-6 yağ turşuları",
+     "value": "2,61 %"
+    }
+   ],
+   "feeding": "Yemi quru halda verin. Ev heyvanının təmiz və təzə suya daim çıxışı olmalıdır. Gündəlik norma: cədvələ baxın. Cədvəldə göstərilən miqdar tövsiyə xarakteri daşıyır; rasion ev heyvanının fərdi ehtiyaclarına uyğun olaraq tənzimlənir."
+  }
+ },
+ "dogs||Superior Care · White Dogs · Junior||White Dogs Junior — Salmon": {
+  "url": "/product/dry-grain-free-food-for-junior-dogs-of-all-breeds-with-white-coat-with-salmon/",
+  "sku": null,
+  "packs": [
+   "1.5 kg",
+   "10 kg"
+  ],
+  "feed": [],
+  "ru": {
+   "full": [
+    "«Nature’s Protection Superior Care White Dogs Grain Free Junior All Breeds Salmon» — полнорационный беззерновой сухой корм с лососем для щенков и молодых собак всех пород и размеров с белым или светлым окрасом шерсти в возрасте от 3 до 12 месяцев. У собак с белой и светлой шерстью нередко наблюдаются слёзные дорожки (пятна ржаво-коричневого цвета) под глазами, а также потемнения шерсти на бороде, лапах и в других местах. Именно для предотвращения этих проблем в сотрудничестве с профессиональными заводчиками и экспертами в области питания домашних животных, с применением новейших научно-технических разработок, была создана специализированная линейка сухих кормов White Dogs.",
+    "Корм содержит формулу Tear Stains Off — тщательно подобранный комплекс аминокислот и полностью сбалансированные ингредиенты, которые помогают бороться с коричневыми пятнами от слёз вокруг глаз, пасти, на лапах и других частях тела. Основной источник белка — сертифицированный норвежский лосось самого высокого качества: он гипоаллергенен и отлично усваивается, богат жирными кислотами Омега-3, особенно DHA, которые важны для развития мышц и организма, здоровья кожи и шерсти и когнитивных функций, и является прекрасным источником витаминов A и D. Тщательно подобранная комбинация белков помогает урегулировать состав слёзной жидкости и тем самым предотвращает образование коричневых пятен вокруг глаз и потемнений на мордочке и лапах. Высококачественные животные белки в сочетании с углеводами дают энергию, необходимую растущему питомцу для здорового роста и развития.",
+    "Корм также содержит антарктический криль — уникальный и на 100% экологически устойчивый источник Омега-3 и холина для здорового развития, правильного развития мозга и здорового роста. Криль — собирательное название мелких морских ракообразных, внешне напоминающих креветок; полиненасыщенные жирные кислоты Омега-3 усваиваются из криля в 2,5 раза лучше, чем из обычного рыбьего жира, а содержащийся в нём натуральный холин, необходимый для нормальной работы мозга, в 12 раз активнее синтетического, которым нередко обогащают корма для домашних животных. Корм не содержит глютеносодержащих ингредиентов, которые могут вызывать расстройства пищеварения или аллергические реакции, поэтому оптимально подходит собакам с чувствительной пищеварительной системой или склонностью к пищевой аллергии и улучшает работу желудочно-кишечного тракта.",
+    "Полнорационный сбалансированный состав обогащён MicroZeoGen — натуральным минералом, динамически микронизированным клиноптилолитом вулканического происхождения. Он стимулирует микрофлору кишечника и таким образом улучшает усвояемость питательных веществ, а благодаря особой микроструктуре помогает выводить из организма токсины, чтобы питательные вещества, витамины и минералы легко усваивались, и укрепляет иммунную систему. Витамины A и D особенно полезны молодым собакам и их развитию, а превосходные источники жирных кислот Омега-3 и Омега-6 помогают сохранить интенсивный окрас шерсти и отличное состояние кожи. Полнорационный корм с повышенной вкусовой привлекательностью приготовлен из тщательно отобранных продуктов самого высокого качества и превосходно усваивается.",
+    "Nature’s Protection Superior Care — линейка сухих кормов супер-премиум класса, известная инновационными ингредиентами и новейшими технологиями в области здорового питания домашних животных; этот полнорационный корм содержит только ингредиенты и источники белка самого высокого качества. Произведено в ЕС."
+   ],
+   "composition": "лосось 44% (сушёный и измельчённый), сушёный картофель, батат, птичий жир, горох, мука из криля (мин. 4%), жом сахарной свёклы, масло лосося, семена льна, динамически микронизированный клиноптилолит (1%), фруктоолигосахариды (ФОС), экстракт юкки, сушёная календула (источник лютеина).",
+   "additives": "Пищевые добавки на 1 кг: витамин A (3a672a) — 18000 МЕ, витамин D3 (3a671)* — 1500 МЕ, витамин E (3a700) — 530 мг, фолиевая кислота (3a316) — 1 мг, биотин (3a880) — 1 мг, моногидрат сульфата железа (II) (3b103) — 50 мг, безводный йодат кальция (3b202) — 1,5 мг, пентагидрат сульфата меди (II) (3b405) — 5 мг, моногидрат сульфата марганца (II) (3b503) — 20 мг, моногидрат сульфата цинка (3b605) — 115 мг, селенит натрия (3b801) — 0,1 мг. Технологические добавки: экстракт розмарина, богатые токоферолом экстракты растительных масел (1b306(i)). *Одновременное применение с витамином D2 не допускается.",
+   "analysis": [
+    {
+     "name": "Сырой протеин",
+     "value": "26 %"
+    },
+    {
+     "name": "Сырая клетчатка",
+     "value": "3 %"
+    },
+    {
+     "name": "Сырой жир",
+     "value": "15 %"
+    },
+    {
+     "name": "Сырая зола",
+     "value": "8,5 %"
+    },
+    {
+     "name": "Кальций",
+     "value": "1,4 %"
+    },
+    {
+     "name": "Фосфор",
+     "value": "1,0 %"
+    },
+    {
+     "name": "Калий",
+     "value": "0,6 %"
+    },
+    {
+     "name": "Натрий",
+     "value": "0,4 %"
+    },
+    {
+     "name": "Омега-3 жирные кислоты",
+     "value": "0,46 %"
+    },
+    {
+     "name": "Омега-6 жирные кислоты",
+     "value": "2,57 %"
+    }
+   ],
+   "feeding": "Корм давать сухим. У питомца всегда должен быть доступ к чистой и свежей воде."
+  },
+  "en": {
+   "full": [
+    "Nature’s Protection Superior Care White Dogs Grain Free Junior All Breeds Salmon is a complete grain-free dry food with salmon for puppies and young dogs of all breeds and sizes with a white or light-coloured coat, from 3 to 12 months of age. Dogs with white and light coats often develop tear stains (rust-brown spots) under the eyes and darkened fur on the beard, paws and other areas. To prevent these problems, the specialised White Dogs line of dry foods was created in cooperation with professional breeders and pet nutrition experts, using the latest scientific and technical developments.",
+    "The food contains the Tear Stains Off formula – a carefully selected amino acid complex and fully balanced ingredients that help fight brown tear stains around the eyes, mouth, paws or other parts of the body. The main protein source is certified Norwegian salmon of the highest quality: it is hypoallergenic and highly digestible, rich in Omega-3 fatty acids, especially DHA, crucial for muscle and body development, skin and coat health and cognitive function, and a great source of vitamins A and D. The carefully selected combination of proteins helps regulate the composition of the tear fluid and so prevents brown stains around the eyes and darkening on the muzzle and paws. High-quality animal proteins combined with carbohydrates provide the energy a growing pet needs for healthy growth and development.",
+    "The food also contains Antarctic krill – a unique and 100% sustainable source of Omega-3 and choline for healthy development, proper brain development and healthy growth. Krill is the collective name for small marine crustaceans resembling shrimp; the Omega-3 polyunsaturated fatty acids in krill are absorbed 2.5 times better than those in ordinary fish oil, and the natural choline it contains, essential for normal brain function, is 12 times more active than the synthetic choline often added to pet foods. The food contains no gluten-containing ingredients that can cause digestive disorders or allergic reactions, so it is optimally suited to dogs with a sensitive digestive system or a tendency to food allergies and improves the work of the gastrointestinal tract.",
+    "The complete and balanced composition is enriched with MicroZeoGen – a natural mineral, dynamically micronized clinoptilolite of volcanic origin. It stimulates the intestinal microflora and thus improves the absorption of nutrients; thanks to its special microstructure it helps remove toxins from the body, so that nutrients, vitamins and minerals are absorbed easily, and it strengthens the immune system. Vitamins A and D are especially beneficial for junior dogs and their development, and superior sources of Omega-3 and Omega-6 fatty acids help maintain the intense colour of the coat and the perfect condition of the skin. The complete food with enhanced palatability is made from carefully selected products of the highest quality and is perfectly digestible.",
+    "Nature’s Protection Superior Care is a super premium line of dry foods known for innovative ingredients and the newest technologies in healthy pet nutrition; this complete food contains only the highest quality ingredients and protein sources. Made in the EU."
+   ],
+   "composition": "salmon 44% (dried and finely ground), dried potato pulp, sweet potato, poultry fat, peas, krill meal (min. 4%), sugar beet pulp, salmon oil, linseed, dynamic micronized clinoptilolite (1%), fructooligosaccharides (FOS), yucca extract, dried marigold (source of lutein).",
+   "additives": "Nutritional additives per 1 kg: vitamin A (3a672a) — 18000 IU, vitamin D3 (3a671)* — 1500 IU, vitamin E (3a700) — 530 mg, folic acid (3a316) — 1 mg, biotin (3a880) — 1 mg, iron (II) sulphate monohydrate (3b103) — 50 mg, calcium iodate anhydrous (3b202) — 1.5 mg, copper (II) sulphate pentahydrate (3b405) — 5 mg, manganous sulphate monohydrate (3b503) — 20 mg, zinc sulphate monohydrate (3b605) — 115 mg, sodium selenite (3b801) — 0.1 mg. Technological additives: rosemary extract, tocopherol extracts from vegetable oils (1b306(i)). *Simultaneous use with vitamin D2 is not allowed.",
+   "analysis": [
+    {
+     "name": "Crude protein",
+     "value": "26 %"
+    },
+    {
+     "name": "Crude fibre",
+     "value": "3 %"
+    },
+    {
+     "name": "Crude fat",
+     "value": "15 %"
+    },
+    {
+     "name": "Crude ash",
+     "value": "8.5 %"
+    },
+    {
+     "name": "Calcium",
+     "value": "1.4 %"
+    },
+    {
+     "name": "Phosphorus",
+     "value": "1.0 %"
+    },
+    {
+     "name": "Potassium",
+     "value": "0.6 %"
+    },
+    {
+     "name": "Sodium",
+     "value": "0.4 %"
+    },
+    {
+     "name": "Omega-3 fatty acids",
+     "value": "0.46 %"
+    },
+    {
+     "name": "Omega-6 fatty acids",
+     "value": "2.57 %"
+    }
+   ],
+   "feeding": "Serve the food dry. Clean, fresh water should be available at all times."
+  },
+  "az": {
+   "full": [
+    "«Nature’s Protection Superior Care White Dogs Grain Free Junior All Breeds Salmon» — 3 aylıqdan 12 aylığa qədər olan, ağ və ya açıq rəngli tüklü bütün cins və ölçülərdən olan küçüklər və gənc itlər üçün qızılbalıqlı tam rasionlu taxılsız quru yemdir. Ağ və açıq rəngli tüklü itlərdə gözlərin altında tez-tez göz yaşı izləri (paslı-qəhvəyi rəngli ləkələr), həmçinin saqqalda, pəncələrdə və digər yerlərdə tüklərin tündləşməsi müşahidə olunur. Məhz bu problemlərin qarşısını almaq üçün peşəkar yetişdiricilər və ev heyvanlarının qidalanması üzrə ekspertlərlə əməkdaşlıqda, ən yeni elmi-texniki işləmələr tətbiq olunmaqla ixtisaslaşmış White Dogs quru yem xətti yaradılıb.",
+    "Yemin tərkibində Tear Stains Off formulu var — diqqətlə seçilmiş amin turşuları kompleksi və tam balanslaşdırılmış inqrediyentlər gözlər, ağız, pəncələr və bədənin digər hissələri ətrafında göz yaşından yaranan qəhvəyi ləkələrlə mübarizəyə kömək edir. Əsas zülal mənbəyi ən yüksək keyfiyyətli sertifikatlı Norveç qızılbalığıdır: o, hipoallergendir və əla həzm olunur, əzələlərin və orqanizmin inkişafı, dəri və tük sağlamlığı, idrak funksiyaları üçün vacib olan Omeqa-3 yağ turşuları, xüsusilə DHA ilə zəngindir və A və D vitaminlərinin əla mənbəyidir. Diqqətlə seçilmiş zülal kombinasiyası göz yaşı mayesinin tərkibini tənzimləməyə kömək edir və bununla da gözlərin ətrafında qəhvəyi ləkələrin, üz və pəncələrdə tündləşmələrin yaranmasının qarşısını alır. Karbohidratlarla birlikdə yüksək keyfiyyətli heyvan zülalları böyüməkdə olan ev heyvanına sağlam böyümə və inkişaf üçün lazım olan enerjini verir.",
+    "Yemin tərkibində həmçinin Antarktika krili var — sağlam inkişaf, beynin düzgün inkişafı və sağlam böyümə üçün Omeqa-3 və xolinin unikal və 100% ekoloji cəhətdən davamlı mənbəyi. Krill görünüşcə krevetə bənzəyən xırda dəniz xərçəngkimilərinin ümumi adıdır; Omeqa-3 çoxdoymamış yağ turşuları krildən adi balıq yağından 2,5 dəfə daha yaxşı mənimsənilir, onda olan və beynin normal fəaliyyəti üçün zəruri olan təbii xolin isə ev heyvanları üçün yemlərin tez-tez zənginləşdirildiyi sintetik xolindən 12 dəfə daha aktivdir. Yemin tərkibində həzm pozğunluqlarına və ya allergik reaksiyalara səbəb ola bilən qlütenli inqrediyentlər yoxdur, buna görə də o, həssas həzm sisteminə və ya qida allergiyasına meylli itlər üçün optimal seçimdir və mədə-bağırsaq traktının işini yaxşılaşdırır.",
+    "Tam rasionlu balanslaşdırılmış tərkib MicroZeoGen ilə zənginləşdirilib — vulkanik mənşəli təbii mineral, dinamik mikronlaşdırılmış klinoptilolit. O, bağırsaq mikroflorasını stimullaşdırır və bununla da qida maddələrinin mənimsənilməsini yaxşılaşdırır, xüsusi mikrostrukturu sayəsində isə toksinlərin orqanizmdən xaric edilməsinə kömək edir ki, qida maddələri, vitaminlər və minerallar asanlıqla mənimsənilsin, həmçinin immun sistemini gücləndirir. A və D vitaminləri gənc itlər və onların inkişafı üçün xüsusilə faydalıdır, Omeqa-3 və Omeqa-6 yağ turşularının üstün mənbələri isə tükün intensiv rəngini və dərinin əla vəziyyətini qorumağa kömək edir. Yüksək dad cəlbediciliyinə malik tam rasionlu yem ən yüksək keyfiyyətli, diqqətlə seçilmiş məhsullardan hazırlanıb və əla mənimsənilir.",
+    "Nature’s Protection Superior Care — innovativ inqrediyentləri və ev heyvanlarının sağlam qidalanması sahəsində ən yeni texnologiyaları ilə tanınan super-premium sinif quru yem xəttidir; bu tam rasionlu yemin tərkibində yalnız ən yüksək keyfiyyətli inqrediyentlər və zülal mənbələri var. Avropa İttifaqında istehsal olunub."
+   ],
+   "composition": "qızılbalıq 44% (qurudulmuş və xırdalanmış), qurudulmuş kartof, batat, quş yağı, noxud, krill unu (min. 4%), şəkər çuğunduru cecəsi, qızılbalıq yağı, kətan toxumu, dinamik mikronlaşdırılmış klinoptilolit (1%), fruktooliqosaxaridlər (FOS), yukka ekstraktı, qurudulmuş kalendula (lutein mənbəyi).",
+   "additives": "1 kq üçün qida əlavələri: A vitamini (3a672a) — 18000 BV, D3 vitamini (3a671)* — 1500 BV, E vitamini (3a700) — 530 mq, fol turşusu (3a316) — 1 mq, biotin (3a880) — 1 mq, dəmir (II) sulfat monohidrat (3b103) — 50 mq, susuz kalsium yodat (3b202) — 1,5 mq, mis (II) sulfat pentahidrat (3b405) — 5 mq, manqan (II) sulfat monohidrat (3b503) — 20 mq, sink sulfat monohidrat (3b605) — 115 mq, natrium selenit (3b801) — 0,1 mq. Texnoloji əlavələr: rozmarin ekstraktı, bitki yağlarından tokoferolla zəngin ekstraktlar (1b306(i)). *D2 vitamini ilə eyni vaxtda istifadəsinə icazə verilmir.",
+   "analysis": [
+    {
+     "name": "Xam protein",
+     "value": "26 %"
+    },
+    {
+     "name": "Xam lif",
+     "value": "3 %"
+    },
+    {
+     "name": "Xam yağ",
+     "value": "15 %"
+    },
+    {
+     "name": "Xam kül",
+     "value": "8,5 %"
+    },
+    {
+     "name": "Kalsium",
+     "value": "1,4 %"
+    },
+    {
+     "name": "Fosfor",
+     "value": "1,0 %"
+    },
+    {
+     "name": "Kalium",
+     "value": "0,6 %"
+    },
+    {
+     "name": "Natrium",
+     "value": "0,4 %"
+    },
+    {
+     "name": "Omeqa-3 yağ turşuları",
+     "value": "0,46 %"
+    },
+    {
+     "name": "Omeqa-6 yağ turşuları",
+     "value": "2,57 %"
+    }
+   ],
+   "feeding": "Yemi quru halda verin. Ev heyvanının təmiz və təzə suya daim çıxışı olmalıdır."
+  }
+ },
+ "dogs||Superior Care · White Dogs · Adult||White Dogs Adult — Salmon": {
+  "url": "https://natures-protection.com.ua/sukhoy-bezzernovoy-korm-dlya-vzroslykh-sobak-malykh-porod-s-beloy-sherstu-s-lososem-superior-care-white-dogs-grain-free-salmon-adult-small-and-mini-breeds-1.5kg_1679992525",
+  "sku": null,
+  "packs": [
+   "1.5 kg",
+   "10 kg",
+   "17 kg"
+  ],
+  "feed": [
+   [
+    1,
+    2,
+    32,
+    54
+   ],
+   [
+    2,
+    3,
+    54,
+    74
+   ],
+   [
+    3,
+    4,
+    74,
+    92
+   ],
+   [
+    4,
+    5,
+    92,
+    108
+   ],
+   [
+    5,
+    6,
+    108,
+    124
+   ],
+   [
+    6,
+    7,
+    124,
+    139
+   ],
+   [
+    7,
+    8,
+    139,
+    154
+   ],
+   [
+    8,
+    9,
+    154,
+    168
+   ],
+   [
+    9,
+    10,
+    168,
+    182
+   ]
+  ],
+  "ru": {
+   "full": [
+    "«Nature’s Protection Superior Care White Dogs Grain Free Salmon Adult Small and Mini Breeds» — полнорационный и сбалансированный беззерновой сухой корм супер-премиум класса с лососем для взрослых собак малых и миниатюрных пород с белым окрасом шерсти. Источник белка и сырьё самого высокого качества помогают бороться с коричневыми пятнами от слёз и поддерживать здоровье кожи и шерсти. Корм содержит формулу Tear Stains Off — тщательно подобранный комплекс аминокислот и хорошо сбалансированные ингредиенты, которые поддерживают чистоту состава слюны и слёз и тем самым помогают устранять коричневые пятна вокруг глаз, на мордочке и лапах. Размер гранул: 6–8 мм.",
+    "Основной источник белка — лосось: он гипоаллергенен, легко усваивается, богат необходимыми витаминами и минералами, улучшает состояние кожи и шерсти, отлично нравится собакам на вкус и является источником жирных кислот Омега-3. Состав обогащён жирными кислотами Омега-3 и Омега-6, которые необходимы для здоровья кожи и шерсти и особенно ценны для укрепления иммунитета, поддержки нормальной работы мозга и сердечно-сосудистой системы и уменьшения воспалительных процессов; моно- и полиненасыщенные жирные кислоты поддерживают иммунную систему, а насыщенные жирные кислоты обеспечивают питомца энергией. Полнорационный состав не только обеспечивает питомца всеми необходимыми питательными веществами, но и отличается превосходными вкусовыми качествами и усвояемостью.",
+    "Корм обогащён MicroZeoGen — натуральным минералом, динамически микронизированным клиноптилолитом вулканического происхождения. Он способствует выведению из организма токсинов, тяжёлых металлов, аммиака и патогенных бактерий, после чего ценные питательные вещества, витамины и минералы легко усваиваются; благодаря содержанию кремния способствует формированию крепких костей и зубов, положительно влияет на структуру шерсти, делая её густой и блестящей, и помогает укреплять иммунную систему. Корм не содержит ингредиентов на основе зерна, которые могут вызывать аллергические реакции, и подходит питомцам с чувствительной пищеварительной системой, так как не нагружает пищеварительный тракт.",
+    "Рецептура создана только из ингредиентов премиум-класса и тщательно разработана так, чтобы избежать распространённых аллергенов — пшеницы, свинины и говядины; корм не содержит искусственных красителей, ароматизаторов и консервантов, которые могут спровоцировать аллергические реакции у собак. Корма Nature’s Protection Superior Care White Dogs подходят всем собакам независимо от окраса и не влияют на цвет шерсти: линейка разработана специально для устранения коричневых пятен от слёз, которые наиболее заметны на белой и светлой шерсти, но включение корма в рацион собак с тёмной шерстью не приводит к её осветлению или изменению цвета.",
+    "Преимущества: гипоаллергенный, здоровый рост, формула Tear Stains Off, богат белками и жирами, ингредиенты самого высокого качества, сбалансированное питание, натуральные антиоксиданты, без зерновых. Nature’s Protection Superior Care — линейка сухих кормов для собак супер-премиум класса, известная инновационными ингредиентами и созданная с применением передовых технологий здорового питания домашних животных; этот полнорационный корм содержит только источники белка и ингредиенты самого высокого качества. Произведено в ЕС."
+   ],
+   "composition": "лосось 40% (сушёный и мелко измельчённый), сушёный картофель, батат, птичий жир, горох, жом сахарной свёклы, масло лосося, дикальцийфосфат, динамически микронизированный клиноптилолит (1%), семена льна, тапиока, фруктоолигосахариды (ФОС), экстракт юкки, зелёный чай, сушёная клюква, сушёная календула (источник лютеина).",
+   "additives": "Пищевые добавки на 1 кг: витамин A (3a672a) — 18000 МЕ, витамин D3 (3a671) — 1500 МЕ, витамин E (3a700) — 530 мг, фолиевая кислота (3a316) — 1 мг, биотин (3a880) — 1 мг, ниацин (3a314) — 35 мг, витамин B6 (3a831) — 3 мг, витамин B1 — 3 мг, витамин B12 — 0,05 мг, моногидрат сульфата железа (II) (3b103) — 50 мг, безводный йодат кальция — 1,5 мг, пентагидрат сульфата меди (II) (E4) — 5 мг, моногидрат сульфата марганца (II) (3b503) — 20 мг, моногидрат сульфата цинка (3b605) — 115 мг, селенит натрия (E8) — 0,1 мг. Технологические добавки: экстракт розмарина, богатые токоферолом экстракты растительных масел (1b306(i)).",
+   "analysis": [
+    {
+     "name": "Сырой протеин",
+     "value": "25 %"
+    },
+    {
+     "name": "Сырая клетчатка",
+     "value": "3,5 %"
+    },
+    {
+     "name": "Сырой жир",
+     "value": "15 %"
+    },
+    {
+     "name": "Сырая зола",
+     "value": "9,5 %"
+    },
+    {
+     "name": "Кальций",
+     "value": "1,5 %"
+    },
+    {
+     "name": "Фосфор",
+     "value": "0,9 %"
+    },
+    {
+     "name": "Калий",
+     "value": "0,6 %"
+    },
+    {
+     "name": "Натрий",
+     "value": "0,4 %"
+    },
+    {
+     "name": "Омега-3 жирные кислоты",
+     "value": "0,46 %"
+    },
+    {
+     "name": "Омега-6 жирные кислоты",
+     "value": "2,53 %"
+    }
+   ],
+   "feeding": "Корм давать в сухом виде. Свежая вода всегда должна быть доступна."
+  },
+  "en": {
+   "full": [
+    "Nature’s Protection Superior Care White Dogs Grain Free Salmon Adult Small and Mini Breeds is a complete and balanced super premium dry grain-free food with salmon for adult dogs of small and miniature breeds with a white coat. Its high-quality protein source and raw materials help fight brown tear stains and keep the skin and coat healthy. The food contains the Tear Stains Off formula – a carefully selected amino acid complex and well-balanced ingredients that keep the composition of saliva and tears clean and so help eliminate brown stains around the eyes, muzzle and paws. Kibble size: 6–8 mm.",
+    "The main protein source is salmon: it is hypoallergenic, easily digestible, enriched with essential vitamins and minerals, improves the condition of the skin and coat, tastes great and is a source of Omega-3 fatty acids. The composition is enriched with Omega-3 and Omega-6 fatty acids, which are essential for healthy skin and coat and especially valuable for strengthening immunity, supporting proper brain and cardiovascular function and reducing inflammation; mono- and polyunsaturated fatty acids support the immune system, while saturated fatty acids provide energy. The complete composition not only provides your pet with all the necessary nutrients but also offers excellent palatability and digestibility.",
+    "The food is enriched with MicroZeoGen – a natural mineral, dynamically micronized clinoptilolite of volcanic origin. It helps remove toxins, heavy metals, ammonia and pathogenic bacteria from the body, after which valuable nutrients, vitamins and minerals are easily absorbed; thanks to its silicon content it promotes strong bones and teeth, it has a positive effect on the coat structure so that the coat looks thick and shiny, and it helps strengthen the immune system. The food contains no grain-based ingredients that can cause allergic reactions and is suitable for pets with a sensitive digestive system, as it does not burden the digestive tract.",
+    "The recipe is made only with premium ingredients and is carefully designed to avoid common allergens such as wheat, pork and beef; it contains no artificial colours, flavourings or preservatives that can trigger allergic reactions in dogs. Nature’s Protection Superior Care White Dogs foods suit all dogs regardless of coat colour and do not affect its colour: the line was developed specifically to eliminate brown tear stains, which are most visible on white and light coats, but feeding it to dogs with a dark coat does not lighten or change the coat colour.",
+    "Benefits: hypoallergenic, healthy growth, Tear Stains Off formula, rich in proteins and fats, highest-quality ingredients, balanced nutrition, natural antioxidants, grain free. Nature’s Protection Superior Care is a super premium line of dry dog foods known for innovative ingredients and developed with leading technologies for healthy pet nutrition; this complete food contains only the highest-quality protein sources and ingredients. Made in the EU."
+   ],
+   "composition": "salmon 40% (dried and finely ground), dried potato, sweet potato, poultry fat, peas, sugar beet pulp, salmon oil, dicalcium phosphate, dynamic micronized clinoptilolite (1%), linseed, tapioca, fructooligosaccharides (FOS), yucca extract, green tea, dried cranberry, dried marigold (source of lutein).",
+   "additives": "Nutritional additives per 1 kg: vitamin A (3a672a) — 18000 IU, vitamin D3 (3a671) — 1500 IU, vitamin E (3a700) — 530 mg, folic acid (3a316) — 1 mg, biotin (3a880) — 1 mg, niacin (3a314) — 35 mg, vitamin B6 (3a831) — 3 mg, vitamin B1 — 3 mg, vitamin B12 — 0.05 mg, iron (II) sulphate monohydrate (3b103) — 50 mg, calcium iodate anhydrous — 1.5 mg, copper (II) sulphate pentahydrate (E4) — 5 mg, manganous sulphate monohydrate (3b503) — 20 mg, zinc sulphate monohydrate (3b605) — 115 mg, sodium selenite (E8) — 0.1 mg. Technological additives: rosemary extract, tocopherol extracts from vegetable oils (1b306(i)).",
+   "analysis": [
+    {
+     "name": "Crude protein",
+     "value": "25 %"
+    },
+    {
+     "name": "Crude fibre",
+     "value": "3.5 %"
+    },
+    {
+     "name": "Crude fat",
+     "value": "15 %"
+    },
+    {
+     "name": "Crude ash",
+     "value": "9.5 %"
+    },
+    {
+     "name": "Calcium",
+     "value": "1.5 %"
+    },
+    {
+     "name": "Phosphorus",
+     "value": "0.9 %"
+    },
+    {
+     "name": "Potassium",
+     "value": "0.6 %"
+    },
+    {
+     "name": "Sodium",
+     "value": "0.4 %"
+    },
+    {
+     "name": "Omega-3 fatty acids",
+     "value": "0.46 %"
+    },
+    {
+     "name": "Omega-6 fatty acids",
+     "value": "2.53 %"
+    }
+   ],
+   "feeding": "Serve the food dry. Fresh water should always be available."
+  },
+  "az": {
+   "full": [
+    "«Nature’s Protection Superior Care White Dogs Grain Free Salmon Adult Small and Mini Breeds» — ağ tüklü kiçik və miniatür cinslərdən olan yetkin itlər üçün qızılbalıqlı, tam rasionlu və balanslaşdırılmış super-premium sinif taxılsız quru yemdir. Ən yüksək keyfiyyətli zülal mənbəyi və xammal göz yaşından yaranan qəhvəyi ləkələrlə mübarizəyə və dəri və tükün sağlamlığını qorumağa kömək edir. Yemin tərkibində Tear Stains Off formulu var — diqqətlə seçilmiş amin turşuları kompleksi və yaxşı balanslaşdırılmış inqrediyentlər tüpürcək və göz yaşının tərkibini təmiz saxlayır və bununla da gözlərin ətrafında, üzdə və pəncələrdə qəhvəyi ləkələrin aradan qaldırılmasına kömək edir. Qranulların ölçüsü: 6–8 mm.",
+    "Əsas zülal mənbəyi qızılbalıqdır: o, hipoallergendir, asan həzm olunur, zəruri vitamin və minerallarla zəngindir, dəri və tükün vəziyyətini yaxşılaşdırır, itlərin çox xoşuna gəlir və Omeqa-3 yağ turşularının mənbəyidir. Tərkib dəri və tük sağlamlığı üçün zəruri olan, immunitetin gücləndirilməsi, beynin və ürək-damar sisteminin normal işinin dəstəklənməsi və iltihabi proseslərin azaldılması üçün xüsusilə dəyərli olan Omeqa-3 və Omeqa-6 yağ turşuları ilə zənginləşdirilib; mono- və çoxdoymamış yağ turşuları immun sistemini dəstəkləyir, doymuş yağ turşuları isə ev heyvanını enerji ilə təmin edir. Tam rasionlu tərkib ev heyvanını bütün zəruri qida maddələri ilə təmin etməklə yanaşı, əla dad keyfiyyətləri və mənimsənilmə ilə də seçilir.",
+    "Yem MicroZeoGen ilə zənginləşdirilib — vulkanik mənşəli təbii mineral, dinamik mikronlaşdırılmış klinoptilolit. O, toksinlərin, ağır metalların, ammonyakın və patogen bakteriyaların orqanizmdən xaric edilməsinə kömək edir, bundan sonra dəyərli qida maddələri, vitaminlər və minerallar asanlıqla mənimsənilir; tərkibindəki silisium sayəsində möhkəm sümük və dişlərin formalaşmasına kömək edir, tükün strukturuna müsbət təsir göstərərək onu sıx və parlaq edir və immun sistemini gücləndirməyə kömək edir. Yemin tərkibində allergik reaksiyalara səbəb ola bilən taxıl əsaslı inqrediyentlər yoxdur və həzm traktına yük salmadığı üçün həssas həzm sisteminə malik ev heyvanlarına uyğundur.",
+    "Resept yalnız premium sinif inqrediyentlərdən hazırlanıb və buğda, donuz əti və mal əti kimi geniş yayılmış allergenlərdən qaçmaq üçün diqqətlə işlənib; yemin tərkibində itlərdə allergik reaksiyalara səbəb ola bilən süni boyaqlar, ətirləndiricilər və konservantlar yoxdur. Nature’s Protection Superior Care White Dogs yemləri tük rəngindən asılı olmayaraq bütün itlərə uyğundur və tükün rənginə təsir etmir: xətt xüsusilə ağ və açıq rəngli tüklərdə daha çox nəzərə çarpan, göz yaşından yaranan qəhvəyi ləkələri aradan qaldırmaq üçün hazırlanıb, lakin tünd tüklü itlərin rasionuna daxil edilməsi tükün açılmasına və ya rənginin dəyişməsinə səbəb olmur.",
+    "Üstünlüklər: hipoallergen, sağlam böyümə, Tear Stains Off formulu, zülal və yağlarla zəngin, ən yüksək keyfiyyətli inqrediyentlər, balanslaşdırılmış qidalanma, təbii antioksidantlar, taxılsız. Nature’s Protection Superior Care — innovativ inqrediyentləri ilə tanınan və ev heyvanlarının sağlam qidalanması üzrə qabaqcıl texnologiyalar tətbiq olunmaqla hazırlanmış super-premium sinif quru it yemləri xəttidir; bu tam rasionlu yemin tərkibində yalnız ən yüksək keyfiyyətli zülal mənbələri və inqrediyentlər var. Avropa İttifaqında istehsal olunub."
+   ],
+   "composition": "qızılbalıq 40% (qurudulmuş və narın xırdalanmış), qurudulmuş kartof, batat, quş yağı, noxud, şəkər çuğunduru cecəsi, qızılbalıq yağı, dikalsium fosfat, dinamik mikronlaşdırılmış klinoptilolit (1%), kətan toxumu, tapioka, fruktooliqosaxaridlər (FOS), yukka ekstraktı, yaşıl çay, qurudulmuş mərcangilə, qurudulmuş kalendula (lutein mənbəyi).",
+   "additives": "1 kq üçün qida əlavələri: A vitamini (3a672a) — 18000 BV, D3 vitamini (3a671) — 1500 BV, E vitamini (3a700) — 530 mq, fol turşusu (3a316) — 1 mq, biotin (3a880) — 1 mq, niasin (3a314) — 35 mq, B6 vitamini (3a831) — 3 mq, B1 vitamini — 3 mq, B12 vitamini — 0,05 mq, dəmir (II) sulfat monohidrat (3b103) — 50 mq, susuz kalsium yodat — 1,5 mq, mis (II) sulfat pentahidrat (E4) — 5 mq, manqan (II) sulfat monohidrat (3b503) — 20 mq, sink sulfat monohidrat (3b605) — 115 mq, natrium selenit (E8) — 0,1 mq. Texnoloji əlavələr: rozmarin ekstraktı, bitki yağlarından tokoferolla zəngin ekstraktlar (1b306(i)).",
+   "analysis": [
+    {
+     "name": "Xam protein",
+     "value": "25 %"
+    },
+    {
+     "name": "Xam lif",
+     "value": "3,5 %"
+    },
+    {
+     "name": "Xam yağ",
+     "value": "15 %"
+    },
+    {
+     "name": "Xam kül",
+     "value": "9,5 %"
+    },
+    {
+     "name": "Kalsium",
+     "value": "1,5 %"
+    },
+    {
+     "name": "Fosfor",
+     "value": "0,9 %"
+    },
+    {
+     "name": "Kalium",
+     "value": "0,6 %"
+    },
+    {
+     "name": "Natrium",
+     "value": "0,4 %"
+    },
+    {
+     "name": "Omeqa-3 yağ turşuları",
+     "value": "0,46 %"
+    },
+    {
+     "name": "Omeqa-6 yağ turşuları",
+     "value": "2,53 %"
+    }
+   ],
+   "feeding": "Yemi quru halda verin. Təzə su həmişə əlçatan olmalıdır."
+  }
+ },
+ "dogs||Superior Care · White Dogs · All Life Stage||White Dogs All Life Stage — White Fish": {
+  "url": "/product/dry-grain-free-pet-food-with-white-fish-protein-for-dogs-of-all-sizes-and-lifestages-with-white-coat/",
+  "sku": null,
+  "packs": [
+   "4 kg",
+   "10 kg"
+  ],
+  "feed": [
+   [
+    2,
+    5,
+    54,
+    108
+   ],
+   [
+    5,
+    10,
+    108,
+    182
+   ],
+   [
+    10,
+    15,
+    182,
+    247
+   ],
+   [
+    15,
+    20,
+    247,
+    306
+   ],
+   [
+    20,
+    25,
+    306,
+    362
+   ],
+   [
+    25,
+    30,
+    362,
+    415
+   ],
+   [
+    30,
+    40,
+    415,
+    515
+   ],
+   [
+    40,
+    50,
+    515,
+    609
+   ],
+   [
+    50,
+    60,
+    609,
+    698
+   ]
+  ],
+  "ru": {
+   "full": [
+    "«Nature’s Protection Superior Care» с белой рыбой — высококачественный полнорационный и сбалансированный беззерновой сухой корм супер-премиум класса для собак всех размеров и возрастов с белым и светлым окрасом шерсти, с источником белка и сырьём самого высокого качества. Хозяева белошёрстных и светлошёрстных собак нередко сталкиваются с потемнением шерсти в области глаз и на других частях тела питомца — на бородке, лапах и т. д. Именно для решения этой проблемы в сотрудничестве с профессиональными заводчиками и экспертами в области питания домашних животных, с учётом передовых исследований и с применением новейших технологий, была разработана специализированная линейка сухих кормов White Dogs.",
+    "Корм содержит формулу Tear Stains Off — тщательно подобранный комплекс аминокислот и полностью сбалансированные ингредиенты — и обогащён ингредиентами, обеспечивающими отличное самочувствие питомца. Основной источник белка — белая рыба: гипоаллергенный, легкоусвояемый и питательный белок, который обеспечивает незаменимые аминокислоты и является хорошим источником цинка. Корм содержит тихоокеанскую треску, мерланг и атлантическую треску, известные своими гипоаллергенными свойствами; кроме того, в белой рыбе больше витаминов A и D, чем в любой другой рыбе, а они особенно необходимы для поддержания общего здоровья и иммунной системы собаки. Тщательно отобранные источники белка способствуют очищению слёзного и слюнного секрета, что, в свою очередь, помогает предотвратить появление коричневых потемнений в области глаз, мордочки и лап.",
+    "Гранулы имеют универсальный размер — 13–15 мм, поэтому корм подходит собакам всех размеров и возрастов: он не слишком крупный для питомцев малых пород, но и не настолько мелкий, чтобы собака могла подавиться. Корм прекрасно подойдёт собакам крупных пород, которые предпочитают гранулы помельче: он отличается высокой питательностью, позволяет съесть больше за один раз, насытиться за один приём пищи и улучшает пищеварение. Молодым собакам, которые любят гранулы покрупнее, он помогает научиться правильно жевать и глотать корм. Разжёвывание гранул также может помочь поддерживать здоровье зубов.",
+    "Корм не содержит зерновых, пшеницы и глютена, что значительно снижает риск аллергических реакций и нарушений работы желудочно-кишечного тракта, поэтому подходит питомцам с чувствительным пищеварением: такой корм не нагружает пищеварительный тракт. Полнорационный сбалансированный состав обогащён MicroZeoGen — клиноптилолитом вулканического происхождения, который помогает выводить токсины и улучшает усвоение питательных веществ. Превосходные источники жирных кислот Омега-3 и Омега-6, в том числе масло лосося, помогают поддерживать интенсивный окрас шерсти и отличное состояние кожи. Полнорационный состав обеспечивает питомца всеми необходимыми питательными веществами, отличной усвояемостью и вкусом.",
+    "Доступные фасовки: 4 кг и 10 кг. Nature’s Protection Superior Care — линейка сухих кормов для собак супер-премиум класса, известная инновационными ингредиентами и новейшими технологиями в области здорового питания домашних животных. Произведено в ЕС."
+   ],
+   "composition": "белая рыба 41% (сушёная и измельчённая), сушёный картофель, батат, горох, птичий жир, мука из криля (мин. 4%), жом сахарной свёклы, масло лосося, динамически микронизированный клиноптилолит (1%), семена льна, фруктоолигосахариды (ФОС), юкка Мохаве, зелёный чай, сушёная календула (источник лютеина).",
+   "additives": "Пищевые добавки на 1 кг: витамин A (3a672a) — 18000 МЕ, витамин D3 (3a671)* — 1500 МЕ, витамин E (3a700) — 530 мг, фолиевая кислота (3a316) — 1 мг, биотин (3a880) — 0,1 мг, моногидрат сульфата железа (II) (3b103) — 50 мг, безводный йодат кальция (3b202) — 1,5 мг, пентагидрат сульфата меди (II) (3b405) — 5 мг, моногидрат сульфата марганца (II) (3b503) — 20 мг, моногидрат сульфата цинка (3b605) — 115 мг, селенит натрия (3b801) — 0,1 мг. Технологические добавки: экстракт розмарина, богатые токоферолом экстракты растительных масел (1b306(i)). *Одновременное применение с витамином D2 не допускается.",
+   "analysis": [
+    {
+     "name": "Сырой протеин",
+     "value": "24 %"
+    },
+    {
+     "name": "Сырая клетчатка",
+     "value": "4 %"
+    },
+    {
+     "name": "Сырой жир",
+     "value": "13 %"
+    },
+    {
+     "name": "Сырая зола",
+     "value": "9,5 %"
+    },
+    {
+     "name": "Кальций",
+     "value": "1,2 %"
+    },
+    {
+     "name": "Фосфор",
+     "value": "0,9 %"
+    },
+    {
+     "name": "Калий",
+     "value": "0,6 %"
+    },
+    {
+     "name": "Натрий",
+     "value": "0,4 %"
+    },
+    {
+     "name": "Омега-3 жирные кислоты",
+     "value": "0,64 %"
+    },
+    {
+     "name": "Омега-6 жирные кислоты",
+     "value": "2,78 %"
+    }
+   ],
+   "feeding": "Корм подавать в сухом виде. Чистая свежая вода всегда должна быть доступна вашему питомцу. Нормы кормления: см. таблицу."
+  },
+  "en": {
+   "full": [
+    "Nature’s Protection Superior Care Grain Free with White Fish for Dogs of All Sizes and Life Stages with a White and Light-coloured Coat is a super premium, complete and balanced grain-free dry food with the highest-quality protein source and raw materials. Owners of white and light-coated dogs often face darkening of the coat around the eyes and on other parts of the body such as the beard and paws. To solve exactly this problem, the specialised White Dogs line of dry foods was developed in cooperation with professional breeders and pet nutrition experts, taking into account advanced research and using the newest technologies.",
+    "The food contains the Tear Stains Off formula – a carefully selected amino acid complex and fully balanced ingredients – and is enriched with ingredients that provide perfect performance for the pet’s well-being. The main protein source is white fish – hypoallergenic, easily digestible, nutrient-dense protein that provides essential amino acids and is also a good source of zinc. The food contains Pacific cod, whiting and Atlantic cod, known for their hypoallergenic properties; moreover, white fish contains more vitamins A and D than any other fish, which are especially needed to maintain the dog’s overall health and immune system. Carefully selected protein sources help cleanse the tear and saliva secretions, which in turn helps prevent brown discoloration around the eyes, muzzle and paws.",
+    "The kibble has a versatile size of 13–15 mm, so the food suits dogs of all sizes and ages: it is not too large for small breeds, yet not so small that a dog could choke. It is perfect for large breeds that prefer smaller kibble – it is highly nutritious, lets them eat more at once, satisfies them in one meal and improves digestion – and for young dogs that love bigger kibble it helps them learn to chew and swallow food properly. Chewing the kibble may also help the dog maintain good dental health.",
+    "The food contains no grains, wheat or gluten, which significantly reduces the risk of allergic reactions and digestive disorders, so it is suitable for pets with sensitive digestion, as this type of food does not burden the digestive tract. The complete and balanced composition is enriched with MicroZeoGen – clinoptilolite of volcanic origin – which helps remove toxins and improve nutrient absorption. Superior sources of Omega-3 and Omega-6 fatty acids, including salmon oil, help maintain the intense colour of the coat and the perfect condition of the skin. The complete composition provides your pet with all the necessary nutrients and ensures perfect digestibility and palatability.",
+    "Available packs: 4 kg and 10 kg. Nature’s Protection Superior Care is a super premium line of dry dog foods known for innovative ingredients and the newest technologies in healthy pet nutrition. Made in the EU."
+   ],
+   "composition": "white fish 41% (dried and finely ground), dried potato pulp, sweet potato, peas, poultry fat, krill meal (min. 4%), sugar beet pulp, salmon oil, dynamic micronized clinoptilolite (1%), linseed, fructooligosaccharides (FOS), Mojave yucca, green tea, dried marigold (source of lutein).",
+   "additives": "Nutritional additives per 1 kg: vitamin A (3a672a) — 18000 IU, vitamin D3 (3a671)* — 1500 IU, vitamin E (3a700) — 530 mg, folic acid (3a316) — 1 mg, biotin (3a880) — 0.1 mg, iron (II) sulphate monohydrate (3b103) — 50 mg, calcium iodate anhydrous (3b202) — 1.5 mg, copper (II) sulphate pentahydrate (3b405) — 5 mg, manganous sulphate monohydrate (3b503) — 20 mg, zinc sulphate monohydrate (3b605) — 115 mg, sodium selenite (3b801) — 0.1 mg. Technological additives: rosemary extract, tocopherol extracts from vegetable oils (1b306(i)). *Simultaneous use with vitamin D2 is not allowed.",
+   "analysis": [
+    {
+     "name": "Crude protein",
+     "value": "24 %"
+    },
+    {
+     "name": "Crude fibre",
+     "value": "4 %"
+    },
+    {
+     "name": "Crude fat",
+     "value": "13 %"
+    },
+    {
+     "name": "Crude ash",
+     "value": "9.5 %"
+    },
+    {
+     "name": "Calcium",
+     "value": "1.2 %"
+    },
+    {
+     "name": "Phosphorus",
+     "value": "0.9 %"
+    },
+    {
+     "name": "Potassium",
+     "value": "0.6 %"
+    },
+    {
+     "name": "Sodium",
+     "value": "0.4 %"
+    },
+    {
+     "name": "Omega-3 fatty acids",
+     "value": "0.64 %"
+    },
+    {
+     "name": "Omega-6 fatty acids",
+     "value": "2.78 %"
+    }
+   ],
+   "feeding": "Serve the food dry. Clean, fresh water should be available to your pet at all times. Feeding amounts: see the table."
+  },
+  "az": {
+   "full": [
+    "Ağ balıqlı «Nature’s Protection Superior Care» — ağ və açıq rəngli tüklü bütün ölçü və yaşlardan olan itlər üçün ən yüksək keyfiyyətli zülal mənbəyi və xammaldan hazırlanmış, super-premium sinif, tam rasionlu və balanslaşdırılmış taxılsız quru yemdir. Ağ və açıq rəngli tüklü itlərin sahibləri tez-tez gözlərin ətrafında və bədənin digər hissələrində — saqqalda, pəncələrdə və s. tüklərin tündləşməsi ilə qarşılaşırlar. Məhz bu problemin həlli üçün peşəkar yetişdiricilər və ev heyvanlarının qidalanması üzrə ekspertlərlə əməkdaşlıqda, qabaqcıl tədqiqatlar nəzərə alınmaqla və ən yeni texnologiyalar tətbiq olunmaqla ixtisaslaşmış White Dogs quru yem xətti hazırlanıb.",
+    "Yemin tərkibində Tear Stains Off formulu — diqqətlə seçilmiş amin turşuları kompleksi və tam balanslaşdırılmış inqrediyentlər — var və o, ev heyvanının əla rifahını təmin edən inqrediyentlərlə zənginləşdirilib. Əsas zülal mənbəyi ağ balıqdır: əvəzolunmaz amin turşularını təmin edən və həm də yaxşı sink mənbəyi olan hipoallergen, asan həzm olunan, qidalı zülal. Yemin tərkibində hipoallergen xüsusiyyətləri ilə tanınan Sakit okean treskası, merlanq və Atlantik treskası var; bundan əlavə, ağ balıqda istənilən digər balıqdan daha çox A və D vitaminləri var ki, bunlar da itin ümumi sağlamlığını və immun sistemini qorumaq üçün xüsusilə zəruridir. Diqqətlə seçilmiş zülal mənbələri göz yaşı və tüpürcək ifrazatının təmizlənməsinə kömək edir, bu da öz növbəsində gözlərin, üzün və pəncələrin ətrafında qəhvəyi tündləşmələrin qarşısını almağa yardım edir.",
+    "Qranulların universal ölçüsü var — 13–15 mm, buna görə də yem bütün ölçü və yaşlardan olan itlərə uyğundur: kiçik cinslər üçün çox iri deyil, eyni zamanda itin boğula biləcəyi qədər də xırda deyil. Yem daha xırda qranulları üstün tutan iri cins itlər üçün əla seçimdir: o, yüksək qidalılığı ilə seçilir, bir dəfəyə daha çox yeməyə, bir yeməklə doymağa imkan verir və həzmi yaxşılaşdırır. Daha iri qranulları sevən gənc itlərə isə yemi düzgün çeynəməyi və udmağı öyrənməyə kömək edir. Qranulların çeynənməsi həmçinin dişlərin sağlamlığını qorumağa kömək edə bilər.",
+    "Yemin tərkibində taxıl, buğda və qlüten yoxdur, bu da allergik reaksiyaların və mədə-bağırsaq traktının pozğunluqlarının riskini əhəmiyyətli dərəcədə azaldır, buna görə də o, həssas həzmə malik ev heyvanlarına uyğundur: belə yem həzm traktına yük salmır. Tam rasionlu balanslaşdırılmış tərkib MicroZeoGen ilə — toksinlərin xaric edilməsinə və qida maddələrinin mənimsənilməsinin yaxşılaşmasına kömək edən vulkanik mənşəli klinoptilolitlə zənginləşdirilib. Qızılbalıq yağı da daxil olmaqla Omeqa-3 və Omeqa-6 yağ turşularının üstün mənbələri tükün intensiv rəngini və dərinin əla vəziyyətini qorumağa kömək edir. Tam rasionlu tərkib ev heyvanını bütün zəruri qida maddələri ilə təmin edir, əla mənimsənilmə və dad keyfiyyətlərinə malikdir.",
+    "Mövcud qablaşdırmalar: 4 kq və 10 kq. Nature’s Protection Superior Care — innovativ inqrediyentləri və ev heyvanlarının sağlam qidalanması sahəsində ən yeni texnologiyaları ilə tanınan super-premium sinif quru it yemləri xəttidir. Avropa İttifaqında istehsal olunub."
+   ],
+   "composition": "ağ balıq 41% (qurudulmuş və xırdalanmış), qurudulmuş kartof, batat, noxud, quş yağı, krill unu (min. 4%), şəkər çuğunduru cecəsi, qızılbalıq yağı, dinamik mikronlaşdırılmış klinoptilolit (1%), kətan toxumu, fruktooliqosaxaridlər (FOS), Mojave yukkası, yaşıl çay, qurudulmuş kalendula (lutein mənbəyi).",
+   "additives": "1 kq üçün qida əlavələri: A vitamini (3a672a) — 18000 BV, D3 vitamini (3a671)* — 1500 BV, E vitamini (3a700) — 530 mq, fol turşusu (3a316) — 1 mq, biotin (3a880) — 0,1 mq, dəmir (II) sulfat monohidrat (3b103) — 50 mq, susuz kalsium yodat (3b202) — 1,5 mq, mis (II) sulfat pentahidrat (3b405) — 5 mq, manqan (II) sulfat monohidrat (3b503) — 20 mq, sink sulfat monohidrat (3b605) — 115 mq, natrium selenit (3b801) — 0,1 mq. Texnoloji əlavələr: rozmarin ekstraktı, bitki yağlarından tokoferolla zəngin ekstraktlar (1b306(i)). *D2 vitamini ilə eyni vaxtda istifadəsinə icazə verilmir.",
+   "analysis": [
+    {
+     "name": "Xam protein",
+     "value": "24 %"
+    },
+    {
+     "name": "Xam lif",
+     "value": "4 %"
+    },
+    {
+     "name": "Xam yağ",
+     "value": "13 %"
+    },
+    {
+     "name": "Xam kül",
+     "value": "9,5 %"
+    },
+    {
+     "name": "Kalsium",
+     "value": "1,2 %"
+    },
+    {
+     "name": "Fosfor",
+     "value": "0,9 %"
+    },
+    {
+     "name": "Kalium",
+     "value": "0,6 %"
+    },
+    {
+     "name": "Natrium",
+     "value": "0,4 %"
+    },
+    {
+     "name": "Omeqa-3 yağ turşuları",
+     "value": "0,64 %"
+    },
+    {
+     "name": "Omeqa-6 yağ turşuları",
+     "value": "2,78 %"
+    }
+   ],
+   "feeding": "Yemi quru halda verin. Təmiz, təzə su həmişə ev heyvanınız üçün əlçatan olmalıdır. Yemləmə normaları: cədvələ baxın."
+  }
+ },
+ "dogs||Superior Care · Red Coat||Red Coat Adult — Salmon": {
+  "url": "/product/red-coat-grain-free-salmon-adult-small-breed-dry-food-for-dogs/",
+  "sku": null,
+  "packs": [
+   "1.5 kg",
+   "10 kg"
+  ],
+  "feed": [
+   [
+    1,
+    2,
+    23,
+    45
+   ],
+   [
+    2,
+    3,
+    39,
+    61
+   ],
+   [
+    3,
+    4,
+    53,
+    76
+   ],
+   [
+    4,
+    5,
+    66,
+    90
+   ],
+   [
+    5,
+    6,
+    78,
+    103
+   ],
+   [
+    6,
+    8,
+    89,
+    128
+   ],
+   [
+    8,
+    10,
+    110,
+    151
+   ]
+  ],
+  "ru": {
+   "full": [
+    "«Nature’s Protection Superior Care Red Coat Grain Free Salmon Adult Small Breed» — полнорационный высококачественный беззерновой сухой корм с лососем для взрослых собак малых пород с коричневым или рыжим окрасом шерсти. В основе корма — высокоэффективная инновационная формула, комплекс RCE (Red Coat Enhancer — сбалансированный комплекс аминокислот), который помогает защищать, усиливать и поддерживать естественный красный пигмент коричневой и рыжей шерсти, питает кожу и шерсть изнутри, поддерживает чистоту состава слёз и слюны и уменьшает коричневые пятна от слёз вокруг глаз, пасти и на лапах.",
+    "Основной источник животного белка — сертифицированный лосось самого высокого качества: высококачественный белок, богатый необходимыми питательными веществами, которые способствуют крепкому здоровью. Он богат жирными кислотами Омега-3, особенно DHA, которые помогают поддерживать развитие мышц, когнитивные функции и здоровье кожи и шерсти. В составе корма есть уникальный высокоценный ингредиент — антарктический криль: мелкие ракообразные, напоминающие креветок, на 100% экологически устойчивый источник Омега-3 и холина (витамин B4), который улучшает состояние кожи и шерсти и поддерживает работу мозга. Незаменимые полиненасыщенные жирные кислоты Омега-3 усваиваются из криля в 2,5 раза лучше, чем из обычного рыбьего жира, а природный холин криля в 12 раз эффективнее того, которым сухие корма обогащают искусственно. Все ингредиенты тщательно отобраны с учётом рекомендаций ветеринаров и экспертов в области питания домашних животных, и их уникальное сочетание полностью удовлетворяет потребности организма питомца в питательных веществах.",
+    "Корм не содержит ингредиентов зернового происхождения, способных вызывать аллергические реакции; он легко переваривается и усваивается и не отягощает желудок, поэтому оптимально подходит питомцам с чувствительной системой пищеварения или склонностью к пищевой аллергии. Природные антиоксиданты — витамин E и экстракт розмарина — защищают клетки организма от негативного воздействия свободных радикалов. Корм обогащён MicroZeoGen — природным минералом, динамически микронизированным клиноптилолитом вулканического происхождения, который восстанавливает микрофлору кишечника и тем самым повышает усвояемость питательных веществ; благодаря уникальной микроструктуре он выводит из организма токсины, чтобы питательные вещества, витамины и минералы легко усваивались, и укрепляет иммунную систему.",
+    "Состав обогащён жирными кислотами Омега-3 и Омега-6, необходимыми для здоровья кожи и шерсти; моно- и полиненасыщенные жирные кислоты поддерживают иммунную систему, а насыщенные жирные кислоты дают энергию. Ингредиенты высокого качества обеспечивают превосходную усвояемость и вкус, поэтому корм идеально подходит собакам с рыжей и коричневой шерстью и при этом поддерживает общее здоровье, включая иммунитет, суставы и пищеварение.",
+    "Nature’s Protection Superior Care — линейка сухих кормов супер-премиум класса, известная инновационными ингредиентами и новейшими технологиями в области здорового питания домашних животных; этот полнорационный корм содержит только ингредиенты и источники белка самого высокого качества. Произведено в ЕС."
+   ],
+   "composition": "лосось 44% (сушёный и измельчённый), сушёный картофель, горох, батат, птичий жир, мука из криля (4%), жом сахарной свёклы, масло лосося, монокальцийфосфат, динамически микронизированный клиноптилолит (1%), семена льна, фруктоолигосахариды (ФОС), экстракт юкки, сушёная клюква, сушёная календула (источник лютеина).",
+   "additives": "Пищевые добавки на 1 кг: витамин A (3a672a) — 18000 МЕ, витамин D3 (3a671)* — 1500 МЕ, витамин E (3a700) — 530 мг, фолиевая кислота (3a316) — 1 мг, биотин (3a880) — 1 мг, моногидрат сульфата железа (II) (3b103) — 50 мг, безводный йодат кальция (3b202) — 1,5 мг, пентагидрат сульфата меди (II) (3b405) — 5 мг, моногидрат сульфата марганца (II) (3b503) — 20 мг, моногидрат сульфата цинка (3b605) — 115 мг, селенит натрия (3b801) — 0,1 мг, L-тирозин (3c401) — 500 мг, L-цистин (3c391) — 1 г, L-триптофан (3c440) — 500 мг. Технологические добавки: экстракт розмарина, богатые токоферолом экстракты растительных масел (1b306(i)). *Одновременное применение с витамином D2 не допускается.",
+   "analysis": [
+    {
+     "name": "Сырой протеин",
+     "value": "27 %"
+    },
+    {
+     "name": "Сырая клетчатка",
+     "value": "3 %"
+    },
+    {
+     "name": "Сырой жир",
+     "value": "17 %"
+    },
+    {
+     "name": "Сырая зола",
+     "value": "8,5 %"
+    },
+    {
+     "name": "Кальций",
+     "value": "1,5 %"
+    },
+    {
+     "name": "Фосфор",
+     "value": "1,2 %"
+    },
+    {
+     "name": "Калий",
+     "value": "0,6 %"
+    },
+    {
+     "name": "Натрий",
+     "value": "0,5 %"
+    },
+    {
+     "name": "Омега-3 жирные кислоты",
+     "value": "0,82 %"
+    },
+    {
+     "name": "Омега-6 жирные кислоты",
+     "value": "2,48 %"
+    }
+   ],
+   "feeding": "Корм давать сухим. У питомца всегда должен быть доступ к чистой и свежей воде."
+  },
+  "en": {
+   "full": [
+    "Nature’s Protection Superior Care Red Coat Grain Free Salmon Adult Small Breed is a complete, high-quality grain-free dry food with salmon for adult dogs of small breeds with a brown or red coat. It is based on a highly effective innovative formula, the RCE Complex (Red Coat Enhancer Balanced Amino Acid Complex), which helps protect, enhance and maintain the natural red pigmentation of brown and red coats, nourishes the skin and coat from within, keeps the tear and saliva composition clear and reduces brown tear stains around the eyes, mouth and paws.",
+    "The main source of animal protein is certified salmon of the highest quality – a high-quality protein packed with essential nutrients that promote good health. It is rich in Omega-3 fatty acids, especially DHA, which can help support muscle development, cognitive function and skin and coat health. The food also contains a unique, high-value ingredient – Antarctic krill, small crustaceans resembling shrimp and a 100% sustainable source of Omega-3 and choline (vitamin B4) that improves skin and coat condition and supports brain activity. Essential Omega-3 polyunsaturated fatty acids are absorbed from krill 2.5 times better than from ordinary fish oil, and its natural choline is 12 times more effective than the choline added to dry foods artificially. All ingredients were carefully selected following the recommendations of veterinarians and pet nutrition experts, and their unique combination fully meets the pet’s nutritional needs.",
+    "The food contains no grain-derived ingredients that can cause allergic reactions; it is easily digested and absorbed and does not burden the stomach, so it is optimally suited to pets with a sensitive digestive system or a tendency to food allergies. Natural antioxidants – vitamin E and rosemary extract – protect the body’s cells from the harmful effects of free radicals. The food is enriched with MicroZeoGen – a natural mineral, dynamically micronized clinoptilolite of volcanic origin – which restores the intestinal microflora and thus increases nutrient absorption; thanks to its unique microstructure it removes toxins from the body, so that nutrients, vitamins and minerals are absorbed easily, and strengthens the immune system.",
+    "The composition is enriched with Omega-3 and Omega-6 fatty acids essential for healthy skin and coat; mono- and polyunsaturated fatty acids support the immune system, while saturated fatty acids provide energy. The high-quality ingredients ensure excellent digestibility and palatability, making the food perfect for red- and brown-coated dogs while supporting overall health, including immunity, joints and digestion.",
+    "Nature’s Protection Superior Care is a super premium line of dry foods known for innovative ingredients and the newest technologies in healthy pet nutrition; this complete food contains only the highest-quality ingredients and protein sources. Made in the EU."
+   ],
+   "composition": "salmon 44% (dried and finely ground), dried potato pulp, peas, sweet potato, poultry fat, krill meal (4%), sugar beet pulp, salmon oil, monocalcium phosphate, dynamic micronized clinoptilolite (1%), linseed, fructooligosaccharides (FOS), yucca extract, dried cranberry, dried marigold (source of lutein).",
+   "additives": "Nutritional additives per 1 kg: vitamin A (3a672a) — 18000 IU, vitamin D3 (3a671)* — 1500 IU, vitamin E (3a700) — 530 mg, folic acid (3a316) — 1 mg, biotin (3a880) — 1 mg, iron (II) sulphate monohydrate (3b103) — 50 mg, calcium iodate anhydrous (3b202) — 1.5 mg, copper (II) sulphate pentahydrate (3b405) — 5 mg, manganous sulphate monohydrate (3b503) — 20 mg, zinc sulphate monohydrate (3b605) — 115 mg, sodium selenite (3b801) — 0.1 mg, L-tyrosine (3c401) — 500 mg, L-cystine (3c391) — 1 g, L-tryptophan (3c440) — 500 mg. Technological additives: rosemary extract, tocopherol extracts from vegetable oils (1b306(i)). *Simultaneous use with vitamin D2 is not allowed.",
+   "analysis": [
+    {
+     "name": "Crude protein",
+     "value": "27 %"
+    },
+    {
+     "name": "Crude fibre",
+     "value": "3 %"
+    },
+    {
+     "name": "Crude fat",
+     "value": "17 %"
+    },
+    {
+     "name": "Crude ash",
+     "value": "8.5 %"
+    },
+    {
+     "name": "Calcium",
+     "value": "1.5 %"
+    },
+    {
+     "name": "Phosphorus",
+     "value": "1.2 %"
+    },
+    {
+     "name": "Potassium",
+     "value": "0.6 %"
+    },
+    {
+     "name": "Sodium",
+     "value": "0.5 %"
+    },
+    {
+     "name": "Omega-3 fatty acids",
+     "value": "0.82 %"
+    },
+    {
+     "name": "Omega-6 fatty acids",
+     "value": "2.48 %"
+    }
+   ],
+   "feeding": "Serve the food dry. Clean, fresh water should be available at all times."
+  },
+  "az": {
+   "full": [
+    "«Nature’s Protection Superior Care Red Coat Grain Free Salmon Adult Small Breed» — qəhvəyi və ya kürən tüklü kiçik cinslərdən olan yetkin itlər üçün qızılbalıqlı, tam rasionlu, yüksək keyfiyyətli taxılsız quru yemdir. Yemin əsasını yüksək effektiv innovativ formul — RCE kompleksi (Red Coat Enhancer — balanslaşdırılmış amin turşuları kompleksi) təşkil edir: o, qəhvəyi və kürən tükün təbii qırmızı piqmentini qorumağa, gücləndirməyə və saxlamağa kömək edir, dərini və tükü daxildən qidalandırır, göz yaşı və tüpürcəyin tərkibini təmiz saxlayır və gözlər, ağız ətrafında və pəncələrdə göz yaşından yaranan qəhvəyi ləkələri azaldır.",
+    "Əsas heyvan zülalı mənbəyi ən yüksək keyfiyyətli sertifikatlı qızılbalıqdır: möhkəm sağlamlığa kömək edən zəruri qida maddələri ilə zəngin yüksək keyfiyyətli zülal. O, əzələlərin inkişafını, idrak funksiyalarını, dəri və tük sağlamlığını dəstəkləməyə kömək edən Omeqa-3 yağ turşuları, xüsusilə DHA ilə zəngindir. Yemin tərkibində unikal yüksək dəyərli inqrediyent — Antarktika krili var: krevetə bənzəyən xırda xərçəngkimilər, dəri və tükün vəziyyətini yaxşılaşdıran və beynin fəaliyyətini dəstəkləyən Omeqa-3 və xolinin (B4 vitamini) 100% ekoloji cəhətdən davamlı mənbəyi. Əvəzolunmaz Omeqa-3 çoxdoymamış yağ turşuları krildən adi balıq yağından 2,5 dəfə daha yaxşı mənimsənilir, krilin təbii xolini isə quru yemlərin süni şəkildə zənginləşdirildiyi xolindən 12 dəfə daha effektivdir. Bütün inqrediyentlər baytarların və ev heyvanlarının qidalanması üzrə ekspertlərin tövsiyələri nəzərə alınmaqla diqqətlə seçilib və onların unikal birləşməsi ev heyvanı orqanizminin qida maddələrinə olan tələbatını tam ödəyir.",
+    "Yemin tərkibində allergik reaksiyalara səbəb ola bilən taxıl mənşəli inqrediyentlər yoxdur; o, asan həzm olunur və mənimsənilir, mədəyə ağırlıq vermir, buna görə də həssas həzm sisteminə və ya qida allergiyasına meylli ev heyvanları üçün optimal seçimdir. Təbii antioksidantlar — E vitamini və rozmarin ekstraktı — orqanizmin hüceyrələrini sərbəst radikalların mənfi təsirindən qoruyur. Yem MicroZeoGen ilə — bağırsaq mikroflorasını bərpa edən və bununla da qida maddələrinin mənimsənilməsini artıran vulkanik mənşəli təbii mineral, dinamik mikronlaşdırılmış klinoptilolitlə zənginləşdirilib; unikal mikrostrukturu sayəsində o, toksinləri orqanizmdən xaric edir ki, qida maddələri, vitaminlər və minerallar asanlıqla mənimsənilsin, və immun sistemini gücləndirir.",
+    "Tərkib dəri və tük sağlamlığı üçün zəruri olan Omeqa-3 və Omeqa-6 yağ turşuları ilə zənginləşdirilib; mono- və çoxdoymamış yağ turşuları immun sistemini dəstəkləyir, doymuş yağ turşuları isə enerji verir. Yüksək keyfiyyətli inqrediyentlər əla mənimsənilmə və dad təmin edir, buna görə də yem kürən və qəhvəyi tüklü itlər üçün ideal seçimdir və eyni zamanda immunitet, oynaqlar və həzm daxil olmaqla ümumi sağlamlığı dəstəkləyir.",
+    "Nature’s Protection Superior Care — innovativ inqrediyentləri və ev heyvanlarının sağlam qidalanması sahəsində ən yeni texnologiyaları ilə tanınan super-premium sinif quru yem xəttidir; bu tam rasionlu yemin tərkibində yalnız ən yüksək keyfiyyətli inqrediyentlər və zülal mənbələri var. Avropa İttifaqında istehsal olunub."
+   ],
+   "composition": "qızılbalıq 44% (qurudulmuş və xırdalanmış), qurudulmuş kartof, noxud, batat, quş yağı, krill unu (4%), şəkər çuğunduru cecəsi, qızılbalıq yağı, monokalsium fosfat, dinamik mikronlaşdırılmış klinoptilolit (1%), kətan toxumu, fruktooliqosaxaridlər (FOS), yukka ekstraktı, qurudulmuş mərcangilə, qurudulmuş kalendula (lutein mənbəyi).",
+   "additives": "1 kq üçün qida əlavələri: A vitamini (3a672a) — 18000 BV, D3 vitamini (3a671)* — 1500 BV, E vitamini (3a700) — 530 mq, fol turşusu (3a316) — 1 mq, biotin (3a880) — 1 mq, dəmir (II) sulfat monohidrat (3b103) — 50 mq, susuz kalsium yodat (3b202) — 1,5 mq, mis (II) sulfat pentahidrat (3b405) — 5 mq, manqan (II) sulfat monohidrat (3b503) — 20 mq, sink sulfat monohidrat (3b605) — 115 mq, natrium selenit (3b801) — 0,1 mq, L-tirozin (3c401) — 500 mq, L-sistin (3c391) — 1 q, L-triptofan (3c440) — 500 mq. Texnoloji əlavələr: rozmarin ekstraktı, bitki yağlarından tokoferolla zəngin ekstraktlar (1b306(i)). *D2 vitamini ilə eyni vaxtda istifadəsinə icazə verilmir.",
+   "analysis": [
+    {
+     "name": "Xam protein",
+     "value": "27 %"
+    },
+    {
+     "name": "Xam lif",
+     "value": "3 %"
+    },
+    {
+     "name": "Xam yağ",
+     "value": "17 %"
+    },
+    {
+     "name": "Xam kül",
+     "value": "8,5 %"
+    },
+    {
+     "name": "Kalsium",
+     "value": "1,5 %"
+    },
+    {
+     "name": "Fosfor",
+     "value": "1,2 %"
+    },
+    {
+     "name": "Kalium",
+     "value": "0,6 %"
+    },
+    {
+     "name": "Natrium",
+     "value": "0,5 %"
+    },
+    {
+     "name": "Omeqa-3 yağ turşuları",
+     "value": "0,82 %"
+    },
+    {
+     "name": "Omeqa-6 yağ turşuları",
+     "value": "2,48 %"
+    }
+   ],
+   "feeding": "Yemi quru halda verin. Ev heyvanının təmiz və təzə suya daim çıxışı olmalıdır."
+  }
+ },
+ "dogs||Superior Care · Dark Coat||Dark Coat — All breeds": {
+  "url": "/product/dry-food-for-adult-dogs-of-all-breeds-with-black-coat-with-poultry/",
+  "sku": null,
+  "packs": [
+   "1.5 kg"
+  ],
+  "feed": [
+   [
+    2,
+    5,
+    54,
+    107
+   ],
+   [
+    5,
+    10,
+    107,
+    204
+   ],
+   [
+    10,
+    15,
+    204,
+    243
+   ],
+   [
+    15,
+    20,
+    243,
+    302
+   ],
+   [
+    20,
+    25,
+    302,
+    356
+   ],
+   [
+    25,
+    30,
+    356,
+    409
+   ],
+   [
+    30,
+    40,
+    409,
+    507
+   ],
+   [
+    40,
+    50,
+    507,
+    600
+   ],
+   [
+    50,
+    60,
+    600,
+    687
+   ]
+  ],
+  "ru": {
+   "full": [
+    "«Nature’s Protection Superior Care Dark Coat Adult All Breeds» — полнорационный и сбалансированный сухой корм супер-премиум класса с мясом домашней птицы для взрослых собак (от 1 года) всех пород с чёрным или тёмным окрасом шерсти — например, ньюфаундлендов, французских бульдогов, тёмношёрстных шпицев, спаниелей, ризеншнауцеров, тёмношёрстных ретриверов и др. Специализированная формула помогает поддерживать насыщенность тёмного окраса шерсти. Корм содержит ингредиенты, улучшающие состояние кожи и шерсти и работу пищеварительной системы; ингредиенты высочайшего качества не только обеспечивают питомца всеми необходимыми питательными веществами, но и гарантируют отличную усвояемость, вкус и безупречное состояние тёмной шерсти.",
+    "Сбалансированный комплекс аминокислот помогает защищать и усиливать естественную пигментацию тёмной шерсти: аминокислоты фенилаланин и тирозин помогают предотвратить выцветание и порыжение чёрной шерсти, а их уникальная комбинация наполняет шерсть тёмным пигментом — меланином, что придаёт природному тёмному окрасу яркость и интенсивность и положительно сказывается на общем состоянии шерсти. Основной источник белка — мясо домашней птицы: постный, низкокалорийный и легкоусвояемый белок, богатый аминокислотами, который помогает улучшить здоровье кожи и шерсти; вместе с лососем он делает корм богатым источником высококачественного животного белка.",
+    "Сладкий картофель (батат) — ценный источник витаминов и минералов; он не содержит глютена и богат клетчаткой, которая помогает поддерживать работу желудочно-кишечного тракта и регулировать стул. Льняное семя богато Омега-3 и Омега-6, положительно влияет на кожу, шерсть и работу мозга, улучшает пищеварение и предотвращает запоры. Формула обогащена витаминами группы B (биотином) и цинком, которые придают шерсти блеск и густоту, а также жирными кислотами Омега-3 и Омега-6, необходимыми для здоровья кожи и шерсти; моно- и полиненасыщенные жирные кислоты поддерживают иммунную систему, а насыщенные жирные кислоты дают энергию.",
+    "Полнорационный сбалансированный состав обогащён MicroZeoGen — натуральным минералом, динамически микронизированным клиноптилолитом вулканического происхождения. Он стимулирует микрофлору кишечника и таким образом улучшает усвояемость питательных веществ, а благодаря особой микроструктуре помогает выводить из организма токсины, чтобы питательные вещества, витамины и минералы легко усваивались, и укрепляет иммунную систему. Преимущества: постный белок, усилитель тёмного окраса шерсти, формула Tear Stains Off, ингредиенты самого высокого качества, сбалансированное питание, натуральные антиоксиданты. Без искусственных красителей, ароматизаторов и консервантов.",
+    "Nature’s Protection Superior Care — линейка сухих кормов для собак супер-премиум класса, известная инновационными ингредиентами и новейшими технологиями в области здорового питания домашних животных; этот полнорационный корм содержит только ингредиенты и источники белка самого высокого качества. Произведено в ЕС."
+   ],
+   "composition": "мясо птицы 36% (сушёное и измельчённое), рис, батат, лосось (сушёный и измельчённый), ячмень, птичий жир, жом сахарной свёклы, пивные дрожжи, горох, семена льна, гидролизат куриной печени, динамически микронизированный клиноптилолит (1%), экстракт цикория, фруктоолигосахариды (ФОС), юкка Мохаве.",
+   "additives": "Пищевые добавки на 1 кг: витамин A (3a672a) — 18000 МЕ, витамин D3 (3a671)* — 1500 МЕ, витамин E (3a700) — 530 мг, фолиевая кислота (3a316) — 4 мг, биотин (3a880) — 2 мг, ниацин (3a314) — 75 мг, витамин B6 (3a831) — 13,4 мг, витамин B1 (3a821) — 16,3 мг, витамин B12 — 0,07 мг, моногидрат сульфата железа (II) (3b103) — 50 мг, безводный йодат кальция (3b202) — 1,5 мг, пентагидрат сульфата меди (II) (3b405) — 7 мг, моногидрат сульфата марганца (II) (3b503) — 40 мг, моногидрат сульфата цинка (3b605) — 150 мг, селенит натрия (3b801) — 0,1 мг. Технологические добавки: экстракт розмарина, богатые токоферолом экстракты растительных масел (1b306(i)). *Одновременное применение с витамином D2 не допускается.",
+   "analysis": [
+    {
+     "name": "Сырой протеин",
+     "value": "26 %"
+    },
+    {
+     "name": "Сырая клетчатка",
+     "value": "3,5 %"
+    },
+    {
+     "name": "Сырой жир",
+     "value": "13 %"
+    },
+    {
+     "name": "Сырая зола",
+     "value": "9 %"
+    },
+    {
+     "name": "Кальций",
+     "value": "1,2 %"
+    },
+    {
+     "name": "Фосфор",
+     "value": "0,9 %"
+    },
+    {
+     "name": "Омега-3 жирные кислоты",
+     "value": "0,50 %"
+    },
+    {
+     "name": "Омега-6 жирные кислоты",
+     "value": "2,22 %"
+    }
+   ],
+   "feeding": "Корм давать сухим. У питомца всегда должен быть доступ к чистой и свежей воде."
+  },
+  "en": {
+   "full": [
+    "Nature’s Protection Superior Care Dark Coat Adult All Breeds is a super premium, complete and balanced dry food with poultry for adult dogs (1 year and older) of all breeds with a black or dark coat – for example Newfoundlands, French Bulldogs, dark-coated Spitz, Spaniels, Giant Schnauzers, dark-coated Retrievers and others. Its specialised formula helps maintain the richness of the dark coat colour. The food contains ingredients that improve the condition of the skin and coat and the work of the digestive system; the highest-quality ingredients not only provide the pet with all the necessary nutrients but also ensure perfect digestibility, palatability and an impeccable dark coat.",
+    "The balanced amino acid complex helps protect and enhance the natural pigmentation of the dark coat: the amino acids phenylalanine and tyrosine help prevent black coat from fading and turning reddish, and their unique combination fills the coat with the dark pigment melanin, giving the natural dark colour brightness and intensity and benefiting the overall condition of the coat. The main source of protein is poultry – a lean, low-calorie and easily digestible protein rich in amino acids that helps improve skin and coat health; together with salmon it makes the food a rich source of high-quality animal protein.",
+    "Sweet potato is a valuable source of vitamins and minerals; it contains no gluten and is rich in fibre, which helps support the gastrointestinal tract and regulate stool. Linseed is rich in Omega-3 and Omega-6, has a positive effect on the skin, coat and brain, improves digestion and prevents constipation. The formula is enriched with B vitamins (biotin) and zinc, which give the coat shine and density, and with Omega-3 and Omega-6 fatty acids essential for healthy skin and coat; mono- and polyunsaturated fatty acids support the immune system, while saturated fatty acids provide energy.",
+    "The complete and balanced composition is enriched with MicroZeoGen – a natural mineral, dynamically micronized clinoptilolite of volcanic origin. It stimulates the intestinal microflora and thus improves the absorption of nutrients; thanks to its special microstructure it helps remove toxins from the body, so that nutrients, vitamins and minerals are absorbed easily, and strengthens the immune system. Benefits: lean protein, dark coat colour enhancer, Tear Stains Off formula, highest-quality ingredients, balanced nutrition, natural antioxidants. Formulated without artificial colours, flavourings or preservatives.",
+    "Nature’s Protection Superior Care is a super premium line of dry dog foods known for innovative ingredients and the newest technologies in healthy pet nutrition; this complete food contains only the highest-quality ingredients and protein sources. Made in the EU."
+   ],
+   "composition": "poultry meat 36% (dried and finely ground), rice, sweet potato, salmon (dried and finely ground), barley, poultry fat, sugar beet pulp, brewer’s yeast, peas, linseed, chicken liver hydrolysate, dynamic micronized clinoptilolite (1%), chicory extract, fructooligosaccharides (FOS), Mojave yucca.",
+   "additives": "Nutritional additives per 1 kg: vitamin A (3a672a) — 18000 IU, vitamin D3 (3a671)* — 1500 IU, vitamin E (3a700) — 530 mg, folic acid (3a316) — 4 mg, biotin (3a880) — 2 mg, niacin (3a314) — 75 mg, vitamin B6 (3a831) — 13.4 mg, vitamin B1 (3a821) — 16.3 mg, vitamin B12 — 0.07 mg, iron (II) sulphate monohydrate (3b103) — 50 mg, calcium iodate anhydrous (3b202) — 1.5 mg, copper (II) sulphate pentahydrate (3b405) — 7 mg, manganous sulphate monohydrate (3b503) — 40 mg, zinc sulphate monohydrate (3b605) — 150 mg, sodium selenite (3b801) — 0.1 mg. Technological additives: rosemary extract, tocopherol extracts from vegetable oils (1b306(i)). *Simultaneous use with vitamin D2 is not allowed.",
+   "analysis": [
+    {
+     "name": "Crude protein",
+     "value": "26 %"
+    },
+    {
+     "name": "Crude fibre",
+     "value": "3.5 %"
+    },
+    {
+     "name": "Crude fat",
+     "value": "13 %"
+    },
+    {
+     "name": "Crude ash",
+     "value": "9 %"
+    },
+    {
+     "name": "Calcium",
+     "value": "1.2 %"
+    },
+    {
+     "name": "Phosphorus",
+     "value": "0.9 %"
+    },
+    {
+     "name": "Omega-3 fatty acids",
+     "value": "0.50 %"
+    },
+    {
+     "name": "Omega-6 fatty acids",
+     "value": "2.22 %"
+    }
+   ],
+   "feeding": "Serve the food dry. Clean, fresh water should be available at all times."
+  },
+  "az": {
+   "full": [
+    "«Nature’s Protection Superior Care Dark Coat Adult All Breeds» — qara və ya tünd rəngli tüklü bütün cinslərdən olan yetkin itlər (1 yaşdan) üçün — məsələn, nyufaundlendlər, fransız buldoqları, tünd tüklü şpitslər, spanyellər, rizenşnautserlər, tünd tüklü retriverlər və s. — ev quşu ətli, super-premium sinif, tam rasionlu və balanslaşdırılmış quru yemdir. İxtisaslaşmış formul tünd tük rənginin dolğunluğunu qorumağa kömək edir. Yemin tərkibində dəri və tükün vəziyyətini və həzm sisteminin işini yaxşılaşdıran inqrediyentlər var; ən yüksək keyfiyyətli inqrediyentlər ev heyvanını bütün zəruri qida maddələri ilə təmin etməklə yanaşı, əla mənimsənilməyə, dada və tünd tükün qüsursuz vəziyyətinə zəmanət verir.",
+    "Balanslaşdırılmış amin turşuları kompleksi tünd tükün təbii piqmentasiyasını qorumağa və gücləndirməyə kömək edir: fenilalanin və tirozin amin turşuları qara tükün solmasının və kürənləşməsinin qarşısını almağa kömək edir, onların unikal birləşməsi isə tükü tünd piqment — melaninlə doldurur, bu da təbii tünd rəngə parlaqlıq və intensivlik verir və tükün ümumi vəziyyətinə müsbət təsir göstərir. Əsas zülal mənbəyi ev quşu ətidir: dəri və tük sağlamlığını yaxşılaşdırmağa kömək edən, amin turşuları ilə zəngin, yağsız, aşağı kalorili və asan həzm olunan zülal; qızılbalıqla birlikdə o, yemi yüksək keyfiyyətli heyvan zülalının zəngin mənbəyinə çevirir.",
+    "Şirin kartof (batat) vitamin və mineralların dəyərli mənbəyidir; tərkibində qlüten yoxdur və mədə-bağırsaq traktının işini dəstəkləməyə və nəcisi tənzimləməyə kömək edən liflə zəngindir. Kətan toxumu Omeqa-3 və Omeqa-6 ilə zəngindir, dəriyə, tükə və beynin fəaliyyətinə müsbət təsir göstərir, həzmi yaxşılaşdırır və qəbizliyin qarşısını alır. Formul tükə parlaqlıq və sıxlıq verən B qrupu vitaminləri (biotin) və sink, həmçinin dəri və tük sağlamlığı üçün zəruri olan Omeqa-3 və Omeqa-6 yağ turşuları ilə zənginləşdirilib; mono- və çoxdoymamış yağ turşuları immun sistemini dəstəkləyir, doymuş yağ turşuları isə enerji verir.",
+    "Tam rasionlu balanslaşdırılmış tərkib MicroZeoGen ilə zənginləşdirilib — vulkanik mənşəli təbii mineral, dinamik mikronlaşdırılmış klinoptilolit. O, bağırsaq mikroflorasını stimullaşdırır və bununla da qida maddələrinin mənimsənilməsini yaxşılaşdırır, xüsusi mikrostrukturu sayəsində isə toksinlərin orqanizmdən xaric edilməsinə kömək edir ki, qida maddələri, vitaminlər və minerallar asanlıqla mənimsənilsin, həmçinin immun sistemini gücləndirir. Üstünlüklər: yağsız zülal, tünd tük rəngini gücləndirici, Tear Stains Off formulu, ən yüksək keyfiyyətli inqrediyentlər, balanslaşdırılmış qidalanma, təbii antioksidantlar. Süni boyaqlar, ətirləndiricilər və konservantlar olmadan hazırlanıb.",
+    "Nature’s Protection Superior Care — innovativ inqrediyentləri və ev heyvanlarının sağlam qidalanması sahəsində ən yeni texnologiyaları ilə tanınan super-premium sinif quru it yemləri xəttidir; bu tam rasionlu yemin tərkibində yalnız ən yüksək keyfiyyətli inqrediyentlər və zülal mənbələri var. Avropa İttifaqında istehsal olunub."
+   ],
+   "composition": "quş əti 36% (qurudulmuş və xırdalanmış), düyü, batat, qızılbalıq (qurudulmuş və xırdalanmış), arpa, quş yağı, şəkər çuğunduru cecəsi, pivə mayası, noxud, kətan toxumu, toyuq qaraciyəri hidrolizatı, dinamik mikronlaşdırılmış klinoptilolit (1%), kasnı ekstraktı, fruktooliqosaxaridlər (FOS), Mojave yukkası.",
+   "additives": "1 kq üçün qida əlavələri: A vitamini (3a672a) — 18000 BV, D3 vitamini (3a671)* — 1500 BV, E vitamini (3a700) — 530 mq, fol turşusu (3a316) — 4 mq, biotin (3a880) — 2 mq, niasin (3a314) — 75 mq, B6 vitamini (3a831) — 13,4 mq, B1 vitamini (3a821) — 16,3 mq, B12 vitamini — 0,07 mq, dəmir (II) sulfat monohidrat (3b103) — 50 mq, susuz kalsium yodat (3b202) — 1,5 mq, mis (II) sulfat pentahidrat (3b405) — 7 mq, manqan (II) sulfat monohidrat (3b503) — 40 mq, sink sulfat monohidrat (3b605) — 150 mq, natrium selenit (3b801) — 0,1 mq. Texnoloji əlavələr: rozmarin ekstraktı, bitki yağlarından tokoferolla zəngin ekstraktlar (1b306(i)). *D2 vitamini ilə eyni vaxtda istifadəsinə icazə verilmir.",
+   "analysis": [
+    {
+     "name": "Xam protein",
+     "value": "26 %"
+    },
+    {
+     "name": "Xam lif",
+     "value": "3,5 %"
+    },
+    {
+     "name": "Xam yağ",
+     "value": "13 %"
+    },
+    {
+     "name": "Xam kül",
+     "value": "9 %"
+    },
+    {
+     "name": "Kalsium",
+     "value": "1,2 %"
+    },
+    {
+     "name": "Fosfor",
+     "value": "0,9 %"
+    },
+    {
+     "name": "Omeqa-3 yağ turşuları",
+     "value": "0,50 %"
+    },
+    {
+     "name": "Omeqa-6 yağ turşuları",
+     "value": "2,22 %"
+    }
+   ],
+   "feeding": "Yemi quru halda verin. Ev heyvanının təmiz və təzə suya daim çıxışı olmalıdır."
+  }
+ },
+ "cats||Sensitive Digestion||Sensitive Digestion — Poultry": {
+  "url": "/product/dry-pet-food-with-poultry-for-adult-cats-with-sensitive-digestion/",
+  "sku": null,
+  "packs": [
+   "400 g",
+   "2 kg",
+   "7 kg"
+  ],
+  "feed": [
+   [
+    1,
+    2,
+    20,
+    41
+   ],
+   [
+    2,
+    3,
+    41,
+    54
+   ],
+   [
+    3,
+    4,
+    54,
+    66
+   ],
+   [
+    4,
+    5,
+    66,
+    77
+   ],
+   [
+    5,
+    6,
+    77,
+    86
+   ],
+   [
+    6,
+    7,
+    86,
+    96
+   ],
+   [
+    7,
+    8,
+    96,
+    105
+   ]
+  ],
+  "ru": {
+   "full": [
+    "Nature’s Protection Sensitive Digestion с птицей для кошек от 1 года — полнорационный сбалансированный сухой корм класса супер-премиум, созданный из источника белка и сырья высочайшего качества. Его состав обогащён ингредиентами, которые обеспечивают необходимое количество калорий, витаминов и минералов для кошек с чувствительным пищеварением.",
+    "Основной источник белка в этом сухом корме для кошек — птица. Это высококачественный белок и отличный источник питания для кошек: он богат незаменимыми питательными веществами, которые помогают поддерживать хорошее здоровье.",
+    "Полнорационный сбалансированный состав обогащён натуральными добавками, такими как MicroZeoGen, которые помогают выводить токсины из организма и поддерживают здоровую иммунную систему. Корм обогащён жирными кислотами Омега-3 и Омега-6, необходимыми для здоровья кожи и шерсти; моно- и полиненасыщенные жирные кислоты поддерживают иммунную систему, а насыщенные жирные кислоты дают необходимую энергию. Все ингредиенты тщательно подобраны ветеринарами и специалистами по питанию с учётом реальных потребностей вашего питомца.",
+    "Nature’s Protection — линия сухих кормов для кошек класса супер-премиум, известная инновационными ингредиентами и новейшими технологиями в здоровом питании домашних животных. Этот полнорационный корм содержит только ингредиенты и источники белка высочайшего качества."
+   ],
+   "composition": "мясо птицы 43% (высушенное и мелко измельчённое), сушёная картофельная мезга, рис, птичий жир, кукуруза, свекольный жом, гидролизованная куриная печень, динамический микронизированный клиноптилолит (1%), пивные дрожжи, масло лосося, экстракт цикория, маннан-олигосахариды (MOS), хлорид калия, экстракт юкки.",
+   "additives": "Пищевые добавки на 1 кг: витамин A (3a672a) – 20000 МЕ, витамин D3 (3a671)* – 1500 МЕ, витамин E (3a700) – 550 мг, моногидрат сульфата железа (II) (3b103) – 50 мг, безводный йодат кальция (3b202) – 1,5 мг, пентагидрат сульфата меди (II) (3b405) – 5 мг, моногидрат сульфата марганца (II) (3b503) – 20 мг, моногидрат сульфата цинка (3b605) – 115 мг, селенит натрия (3b801) – 0,1 мг, таурин (3a370) – 1000 мг, L-карнитин (3a910) – 50 мг. Технологические добавки: экстракт розмарина, богатые токоферолами экстракты растительных масел (1b306(i)). *Одновременное применение с витамином D2 не допускается.",
+   "analysis": [
+    {
+     "name": "Сырой протеин",
+     "value": "29 %"
+    },
+    {
+     "name": "Сырая клетчатка",
+     "value": "4 %"
+    },
+    {
+     "name": "Сырой жир",
+     "value": "12 %"
+    },
+    {
+     "name": "Сырая зола",
+     "value": "6,5 %"
+    },
+    {
+     "name": "Кальций",
+     "value": "1 %"
+    },
+    {
+     "name": "Фосфор",
+     "value": "0,85 %"
+    },
+    {
+     "name": "Калий",
+     "value": "0,7 %"
+    },
+    {
+     "name": "Натрий",
+     "value": "0,5 %"
+    },
+    {
+     "name": "Магний",
+     "value": "0,04 %"
+    },
+    {
+     "name": "Омега-3 жирные кислоты",
+     "value": "0,13 %"
+    },
+    {
+     "name": "Омега-6 жирные кислоты",
+     "value": "1,92 %"
+    }
+   ],
+   "feeding": "Корм дают в сухом виде. У питомца всегда должен быть доступ к свежей воде."
+  },
+  "en": {
+   "full": [
+    "Nature’s Protection Sensitive Digestion with Poultry for cats aged 1 year and older is a Super Premium complete and balanced dry food made with the highest quality protein source and raw materials. Its composition is enriched with ingredients that provide the necessary amount of calories, vitamins and minerals for cats with sensitive digestion.",
+    "The main protein source of this dry cat food is poultry. It is a high-quality protein and an excellent source of nutrition for cats, as it is packed with essential nutrients that help promote good health.",
+    "The complete and balanced composition is enriched with natural supplements such as MicroZeoGen, which help remove toxins from the body and support a healthy immune system. The food is enriched with Omega-3 and Omega-6 fatty acids, essential for healthy skin and coat; mono- and polyunsaturated fatty acids support the immune system, while saturated fatty acids provide the required energy. All ingredients are carefully selected by veterinary and nutrition experts based on the true needs of your pet.",
+    "Nature’s Protection is a Super Premium dry cat food line known for innovative ingredients and the newest technologies in healthy pet nutrition. This complete food contains only the highest quality ingredients and protein sources."
+   ],
+   "composition": "poultry meat 43% (dried and finely ground), dried potato pulp, rice, poultry fat, maize, sugar beet pulp, hydrolysed chicken liver, dynamic micronized clinoptilolite (1%), brewer’s yeast, salmon oil, chicory extract, mannan-oligosaccharides (MOS), potassium chloride, yucca extract.",
+   "additives": "Nutritional additives per 1 kg: vitamin A (3a672a) – 20000 IU, vitamin D3 (3a671)* – 1500 IU, vitamin E (3a700) – 550 mg, iron (II) sulphate monohydrate (3b103) – 50 mg, calcium iodate anhydrous (3b202) – 1.5 mg, copper (II) sulphate pentahydrate (3b405) – 5 mg, manganous sulphate monohydrate (3b503) – 20 mg, zinc sulphate monohydrate (3b605) – 115 mg, sodium selenite (3b801) – 0.1 mg, taurine (3a370) – 1000 mg, L-carnitine (3a910) – 50 mg. Technological additives: rosemary extract, tocopherol extracts from vegetable oils (1b306(i)). *Simultaneous use with vitamin D2 is not allowed.",
+   "analysis": [
+    {
+     "name": "Crude protein",
+     "value": "29 %"
+    },
+    {
+     "name": "Crude fibre",
+     "value": "4 %"
+    },
+    {
+     "name": "Crude fat",
+     "value": "12 %"
+    },
+    {
+     "name": "Crude ash",
+     "value": "6.5 %"
+    },
+    {
+     "name": "Calcium",
+     "value": "1 %"
+    },
+    {
+     "name": "Phosphorus",
+     "value": "0.85 %"
+    },
+    {
+     "name": "Potassium",
+     "value": "0.7 %"
+    },
+    {
+     "name": "Sodium",
+     "value": "0.5 %"
+    },
+    {
+     "name": "Magnesium",
+     "value": "0.04 %"
+    },
+    {
+     "name": "Omega-3 fatty acids",
+     "value": "0.13 %"
+    },
+    {
+     "name": "Omega-6 fatty acids",
+     "value": "1.92 %"
+    }
+   ],
+   "feeding": "Serve the food dry. Fresh water should be available at all times."
+  },
+  "az": {
+   "full": [
+    "Nature’s Protection Sensitive Digestion quş əti ilə — 1 yaş və daha böyük pişiklər üçün ən yüksək keyfiyyətli protein mənbəyindən və xammaldan hazırlanmış super premium sinifli tam rasionlu və balanslaşdırılmış quru yemdir. Onun tərkibi həssas həzmi olan pişiklər üçün lazımi miqdarda kalori, vitamin və mineralları təmin edən inqrediyentlərlə zənginləşdirilib.",
+    "Bu quru pişik yeminin əsas protein mənbəyi quş ətidir. Bu, yüksək keyfiyyətli proteindir və pişiklər üçün əla qida mənbəyidir, çünki sağlamlığı qorumağa kömək edən vacib qida maddələri ilə zəngindir.",
+    "Tam rasionlu və balanslaşdırılmış tərkib orqanizmdən toksinlərin çıxarılmasına kömək edən və sağlam immun sistemini dəstəkləyən MicroZeoGen kimi təbii əlavələrlə zənginləşdirilib. Yem sağlam dəri və tük üçün vacib olan Omeqa-3 və Omeqa-6 yağ turşuları ilə zənginləşdirilib; mono- və poliyadoymamış yağ turşuları immun sistemini dəstəkləyir, doymuş yağ turşuları isə lazımi enerjini verir. Bütün inqrediyentlər baytarlar və qidalanma mütəxəssisləri tərəfindən ev heyvanınızın real ehtiyaclarına əsasən diqqətlə seçilir.",
+    "Nature’s Protection — innovativ inqrediyentləri və ev heyvanlarının sağlam qidalanmasında ən yeni texnologiyaları ilə tanınan super premium sinifli quru pişik yemi xəttidir. Bu tam rasionlu yem yalnız ən yüksək keyfiyyətli inqrediyentlərdən və protein mənbələrindən ibarətdir."
+   ],
+   "composition": "quş əti 43% (qurudulmuş və xırda üyüdülmüş), qurudulmuş kartof pulpası, düyü, quş yağı, qarğıdalı, şəkər çuğunduru pulpası, hidrolizə edilmiş toyuq qaraciyəri, dinamik mikronlaşdırılmış klinoptilolit (1%), pivə mayası, qızılbalıq yağı, kasnı ekstraktı, mannan-oliqosaxaridlər (MOS), kalium xlorid, yukka ekstraktı.",
+   "additives": "1 kq üçün qida əlavələri: A vitamini (3a672a) – 20000 BV, D3 vitamini (3a671)* – 1500 BV, E vitamini (3a700) – 550 mq, dəmir (II) sulfat monohidrat (3b103) – 50 mq, susuz kalsium yodat (3b202) – 1,5 mq, mis (II) sulfat pentahidrat (3b405) – 5 mq, manqan (II) sulfat monohidrat (3b503) – 20 mq, sink sulfat monohidrat (3b605) – 115 mq, natrium selenit (3b801) – 0,1 mq, taurin (3a370) – 1000 mq, L-karnitin (3a910) – 50 mq. Texnoloji əlavələr: rozmarin ekstraktı, bitki yağlarından tokoferol ekstraktları (1b306(i)). *D2 vitamini ilə eyni vaxtda istifadəsinə icazə verilmir.",
+   "analysis": [
+    {
+     "name": "Xam protein",
+     "value": "29 %"
+    },
+    {
+     "name": "Xam lif",
+     "value": "4 %"
+    },
+    {
+     "name": "Xam yağ",
+     "value": "12 %"
+    },
+    {
+     "name": "Xam kül",
+     "value": "6,5 %"
+    },
+    {
+     "name": "Kalsium",
+     "value": "1 %"
+    },
+    {
+     "name": "Fosfor",
+     "value": "0,85 %"
+    },
+    {
+     "name": "Kalium",
+     "value": "0,7 %"
+    },
+    {
+     "name": "Natrium",
+     "value": "0,5 %"
+    },
+    {
+     "name": "Maqnezium",
+     "value": "0,04 %"
+    },
+    {
+     "name": "Omeqa-3 yağ turşuları",
+     "value": "0,13 %"
+    },
+    {
+     "name": "Omeqa-6 yağ turşuları",
+     "value": "1,92 %"
+    }
+   ],
+   "feeding": "Yemi quru halda verin. Təzə su həmişə əlçatan olmalıdır."
+  }
+ },
+ "dogs||Junior||Junior Lamb — Lamb": {
+  "url": "/product/dry-food-for-junior-all-breed-dogs-with-lamb/",
+  "sku": null,
+  "packs": [
+   "500 g",
+   "2 kg",
+   "7.5 kg"
+  ],
+  "feed": [],
+  "ru": {
+   "full": [
+    "Nature’s Protection для щенков всех пород с ягнёнком — полнорационный сбалансированный сухой корм класса супер-премиум, созданный из источника белка и сырья высочайшего качества. Его состав обогащён ингредиентами, которые обеспечивают необходимое количество калорий, витаминов и минералов для развития и энергии щенка. Полнорационный сухой корм не только даёт питомцу все необходимые питательные вещества, но и поддерживает правильное развитие и уровень энергии. Корм можно давать с 2 до 12 месяцев.",
+    "Основной источник белка в этом сухом корме — ягнёнок. Это высококачественный, легкоусвояемый белок и отличный источник питания для молодых собак: он богат незаменимыми питательными веществами, которые дают энергию, необходимую для здорового развития и выносливости растущих собак.",
+    "Полнорационный сбалансированный состав обогащён натуральными добавками, такими как MicroZeoGen, которые помогают выводить токсины из организма и поддерживают здоровую иммунную систему. Корм содержит жирные кислоты Омега-3 и Омега-6, необходимые для здоровья кожи и шерсти и для правильной работы мозга и сердечно-сосудистой системы; моно- и полиненасыщенные жирные кислоты поддерживают иммунную систему, а насыщенные жирные кислоты дают собаке энергию. Натуральные антиоксиданты — витамин E и экстракт розмарина — совершенно естественным образом помогают защищать клетки от негативного воздействия свободных радикалов. Все ингредиенты тщательно подобраны ветеринарами и специалистами по питанию с учётом реальных потребностей вашего питомца.",
+    "Nature’s Protection — линия сухих кормов для собак класса супер-премиум, известная инновационными ингредиентами и новейшими технологиями в здоровом питании домашних животных. Этот полнорационный корм содержит только ингредиенты и источники белка высочайшего качества."
+   ],
+   "composition": "мясо ягнёнка 38% (высушенное и мелко измельчённое), рис, кукуруза, кукурузный глютен, птичий жир, лигноцеллюлоза, рыбная мука, льняное семя, динамический микронизированный клиноптилолит (1%), пивные дрожжи, экстракт цикория, экстракт юкки, глюкозамин (250 мг/кг), хондроитинсульфат (100 мг/кг).",
+   "additives": "Пищевые добавки на 1 кг: витамин A (3a672a) – 22500 МЕ, витамин D3 (3a671)* – 1875 МЕ, витамин E (3a700) – 662 мг, моногидрат сульфата железа (II) (3b103) – 63 мг, безводный йодат кальция (3b202) – 1,9 мг, пентагидрат сульфата меди (II) (3b405) – 6 мг, моногидрат сульфата марганца (II) (3b503) – 25 мг, моногидрат сульфата цинка (3b605) – 144 мг, селенит натрия (3b801) – 0,12 мг, таурин (3a370) – 125 мг, L-карнитин (3a910) – 50 мг. Технологические добавки: экстракт розмарина, богатые токоферолами экстракты растительных масел (1b306(i)). *Одновременное применение с витамином D2 не допускается.",
+   "analysis": [
+    {
+     "name": "Сырой протеин",
+     "value": "32 %"
+    },
+    {
+     "name": "Сырая клетчатка",
+     "value": "1,6 %"
+    },
+    {
+     "name": "Сырой жир",
+     "value": "25 %"
+    },
+    {
+     "name": "Сырая зола",
+     "value": "7 %"
+    },
+    {
+     "name": "Кальций",
+     "value": "1,2 %"
+    },
+    {
+     "name": "Фосфор",
+     "value": "0,9 %"
+    },
+    {
+     "name": "Калий",
+     "value": "0,6 %"
+    },
+    {
+     "name": "Натрий",
+     "value": "0,3 %"
+    },
+    {
+     "name": "Омега-3 жирные кислоты",
+     "value": "0,47 %"
+    },
+    {
+     "name": "Омега-6 жирные кислоты",
+     "value": "3,52 %"
+    }
+   ],
+   "feeding": "Корм дают в сухом виде. У питомца всегда должен быть доступ к свежей воде. Официальная таблица кормления указывает суточную норму в зависимости от возраста щенка (от 2 до 12 месяцев) и ожидаемого веса взрослой собаки (от 5 до 50 кг): от 81 г в день для щенка 2 месяцев породы весом 5–10 кг во взрослом возрасте до 563 г в день для собаки 12 месяцев породы весом 45–50 кг."
+  },
+  "en": {
+   "full": [
+    "Nature’s Protection for Junior All Breed Dogs with Lamb is a Super Premium complete and balanced dry dog food made with the highest quality protein source and raw materials. Its composition is enriched with ingredients that provide the necessary amount of calories, vitamins and minerals for puppy development and energy. This complete dry food not only provides your pet with all the essential nutrients but also maintains proper development and energy level. The food can be fed from the age of 2 to 12 months.",
+    "The main protein source of this dry dog food is lamb. It is a high-quality, easily digestible protein and an excellent source of nutrition for junior dogs, packed with essential nutrients that provide the energy required for the healthy development and stamina of growing dogs.",
+    "The complete and balanced composition is enriched with natural supplements such as MicroZeoGen, which help remove toxins from the body and support a healthy immune system. It contains Omega-3 and Omega-6 fatty acids, essential for healthy skin and coat and for maintaining proper brain and cardiovascular functions; mono- and polyunsaturated fatty acids support the immune system, while saturated fatty acids provide energy for the dog. Natural antioxidants – vitamin E and rosemary extract – help protect cells against the negative impact of free radicals in a completely natural way. All ingredients are carefully selected by veterinary and nutrition experts based on the true needs of your pet.",
+    "Nature’s Protection is a Super Premium dry dog food line known for innovative ingredients and the newest technologies in healthy pet nutrition. This complete dog food contains only the highest quality ingredients and protein sources."
+   ],
+   "composition": "lamb meat 38% (dried and finely ground), rice, maize, maize gluten, poultry fat, lignocellulose, fish meal, linseed, dynamic micronized clinoptilolite (1%), brewer’s yeast, chicory extract, yucca extract, glucosamine (250 mg/kg), chondroitin sulphate (100 mg/kg).",
+   "additives": "Nutritional additives per 1 kg: vitamin A (3a672a) – 22500 IU, vitamin D3 (3a671)* – 1875 IU, vitamin E (3a700) – 662 mg, iron (II) sulphate monohydrate (3b103) – 63 mg, calcium iodate anhydrous (3b202) – 1.9 mg, copper (II) sulphate pentahydrate (3b405) – 6 mg, manganous sulphate monohydrate (3b503) – 25 mg, zinc sulphate monohydrate (3b605) – 144 mg, sodium selenite (3b801) – 0.12 mg, taurine (3a370) – 125 mg, L-carnitine (3a910) – 50 mg. Technological additives: rosemary extract, tocopherol extracts from vegetable oils (1b306(i)). *Simultaneous use with vitamin D2 is not allowed.",
+   "analysis": [
+    {
+     "name": "Crude protein",
+     "value": "32 %"
+    },
+    {
+     "name": "Crude fibre",
+     "value": "1.6 %"
+    },
+    {
+     "name": "Crude fat",
+     "value": "25 %"
+    },
+    {
+     "name": "Crude ash",
+     "value": "7 %"
+    },
+    {
+     "name": "Calcium",
+     "value": "1.2 %"
+    },
+    {
+     "name": "Phosphorus",
+     "value": "0.9 %"
+    },
+    {
+     "name": "Potassium",
+     "value": "0.6 %"
+    },
+    {
+     "name": "Sodium",
+     "value": "0.3 %"
+    },
+    {
+     "name": "Omega-3 fatty acids",
+     "value": "0.47 %"
+    },
+    {
+     "name": "Omega-6 fatty acids",
+     "value": "3.52 %"
+    }
+   ],
+   "feeding": "Serve the food dry. Fresh water should be available at all times. The official feeding table gives the daily amount by the puppy’s age (2 to 12 months) and expected adult weight (5 to 50 kg): from 81 g per day for a 2-month-old puppy of a breed weighing 5–10 kg as an adult, up to 563 g per day for a 12-month-old dog of a breed weighing 45–50 kg."
+  },
+  "az": {
+   "full": [
+    "Nature’s Protection quzu əti ilə bütün cinslərdən olan balalar üçün — ən yüksək keyfiyyətli protein mənbəyindən və xammaldan hazırlanmış super premium sinifli tam rasionlu və balanslaşdırılmış quru it yemidir. Onun tərkibi balanın inkişafı və enerjisi üçün lazımi miqdarda kalori, vitamin və mineralları təmin edən inqrediyentlərlə zənginləşdirilib. Tam rasionlu quru yem ev heyvanınızı bütün vacib qida maddələri ilə təmin etməklə yanaşı, düzgün inkişafı və enerji səviyyəsini də qoruyur. Yemi 2 aylıqdan 12 aylığa qədər vermək olar.",
+    "Bu quru it yeminin əsas protein mənbəyi quzu ətidir. Bu, yüksək keyfiyyətli, asan həzm olunan proteindir və gənc itlər üçün əla qida mənbəyidir: böyüyən itlərin sağlam inkişafı və dözümlülüyü üçün lazım olan enerjini verən vacib qida maddələri ilə zəngindir.",
+    "Tam rasionlu və balanslaşdırılmış tərkib orqanizmdən toksinlərin çıxarılmasına kömək edən və sağlam immun sistemini dəstəkləyən MicroZeoGen kimi təbii əlavələrlə zənginləşdirilib. Tərkibində sağlam dəri və tük, həmçinin beynin və ürək-damar sisteminin düzgün işləməsi üçün vacib olan Omeqa-3 və Omeqa-6 yağ turşuları var; mono- və poliyadoymamış yağ turşuları immun sistemini dəstəkləyir, doymuş yağ turşuları isə itə enerji verir. Təbii antioksidantlar — E vitamini və rozmarin ekstraktı — hüceyrələri sərbəst radikalların mənfi təsirindən tamamilə təbii yolla qorumağa kömək edir. Bütün inqrediyentlər baytarlar və qidalanma mütəxəssisləri tərəfindən ev heyvanınızın real ehtiyaclarına əsasən diqqətlə seçilir.",
+    "Nature’s Protection — innovativ inqrediyentləri və ev heyvanlarının sağlam qidalanmasında ən yeni texnologiyaları ilə tanınan super premium sinifli quru it yemi xəttidir. Bu tam rasionlu it yemi yalnız ən yüksək keyfiyyətli inqrediyentlərdən və protein mənbələrindən ibarətdir."
+   ],
+   "composition": "quzu əti 38% (qurudulmuş və xırda üyüdülmüş), düyü, qarğıdalı, qarğıdalı qlüteni, quş yağı, liqnoselüloza, balıq unu, kətan toxumu, dinamik mikronlaşdırılmış klinoptilolit (1%), pivə mayası, kasnı ekstraktı, yukka ekstraktı, qlükozamin (250 mq/kq), xondroitin sulfat (100 mq/kq).",
+   "additives": "1 kq üçün qida əlavələri: A vitamini (3a672a) – 22500 BV, D3 vitamini (3a671)* – 1875 BV, E vitamini (3a700) – 662 mq, dəmir (II) sulfat monohidrat (3b103) – 63 mq, susuz kalsium yodat (3b202) – 1,9 mq, mis (II) sulfat pentahidrat (3b405) – 6 mq, manqan (II) sulfat monohidrat (3b503) – 25 mq, sink sulfat monohidrat (3b605) – 144 mq, natrium selenit (3b801) – 0,12 mq, taurin (3a370) – 125 mq, L-karnitin (3a910) – 50 mq. Texnoloji əlavələr: rozmarin ekstraktı, bitki yağlarından tokoferol ekstraktları (1b306(i)). *D2 vitamini ilə eyni vaxtda istifadəsinə icazə verilmir.",
+   "analysis": [
+    {
+     "name": "Xam protein",
+     "value": "32 %"
+    },
+    {
+     "name": "Xam lif",
+     "value": "1,6 %"
+    },
+    {
+     "name": "Xam yağ",
+     "value": "25 %"
+    },
+    {
+     "name": "Xam kül",
+     "value": "7 %"
+    },
+    {
+     "name": "Kalsium",
+     "value": "1,2 %"
+    },
+    {
+     "name": "Fosfor",
+     "value": "0,9 %"
+    },
+    {
+     "name": "Kalium",
+     "value": "0,6 %"
+    },
+    {
+     "name": "Natrium",
+     "value": "0,3 %"
+    },
+    {
+     "name": "Omeqa-3 yağ turşuları",
+     "value": "0,47 %"
+    },
+    {
+     "name": "Omeqa-6 yağ turşuları",
+     "value": "3,52 %"
+    }
+   ],
+   "feeding": "Yemi quru halda verin. Təzə su həmişə əlçatan olmalıdır. Rəsmi qidalanma cədvəli gündəlik normanı balanın yaşına (2 aylıqdan 12 aylığa qədər) və yetkin yaşda gözlənilən çəkisinə (5 kq-dan 50 kq-a qədər) görə verir: yetkin çəkisi 5–10 kq olan cinsdən 2 aylıq bala üçün gündə 81 q-dan, yetkin çəkisi 45–50 kq olan cinsdən 12 aylıq it üçün gündə 563 q-a qədər."
+  }
+ },
+ "dogs||Weight Control||Weight Control Sterilised — Poultry": {
+  "url": "/product/dry-food-for-adult-dogs-of-all-breeds-for-weight-control-after-sterilization-with-poultry-and-krill-2/",
+  "sku": null,
+  "packs": [
+   "4 kg",
+   "12 kg"
+  ],
+  "feed": [
+   [
+    1,
+    5,
+    26,
+    77
+   ],
+   [
+    5,
+    10,
+    77,
+    123
+   ],
+   [
+    10,
+    15,
+    123,
+    162
+   ],
+   [
+    15,
+    20,
+    162,
+    196
+   ],
+   [
+    20,
+    25,
+    196,
+    227
+   ],
+   [
+    25,
+    30,
+    227,
+    257
+   ],
+   [
+    30,
+    35,
+    257,
+    285
+   ],
+   [
+    35,
+    40,
+    285,
+    312
+   ],
+   [
+    40,
+    45,
+    312,
+    337
+   ],
+   [
+    45,
+    50,
+    337,
+    362
+   ],
+   [
+    50,
+    55,
+    362,
+    386
+   ],
+   [
+    55,
+    60,
+    386,
+    409
+   ],
+   [
+    60,
+    65,
+    409,
+    432
+   ],
+   [
+    65,
+    70,
+    432,
+    454
+   ]
+  ],
+  "ru": {
+   "full": [
+    "Nature’s Protection Weight Control с птицей для стерилизованных взрослых собак всех пород — полнорационный сбалансированный сухой корм класса супер-премиум, созданный из источника белка и сырья высочайшего качества. Его состав обогащён ингредиентами, которые обеспечивают необходимое количество витаминов и минералов. Полнорационный сухой корм не только даёт питомцу все необходимые питательные вещества, но и обеспечивает отличную усвояемость, привлекательный вкус и поддержание здорового веса.",
+    "Корм отличается хорошо сбалансированным составом и сырьём, которые способствуют слаженной работе пищеварительной системы, поддержанию здорового веса и формированию небольшого плотного стула. Основной источник белка — птица: высококачественный белок и отличный источник питания для собак, богатый незаменимыми питательными веществами, которые помогают поддерживать общее здоровье. Также в составе есть антарктический криль — уникальный и на 100% устойчивый источник Омега-3 и холина, который улучшает состояние кожи и шерсти, уменьшает воспаление и поддерживает работу мозга.",
+    "Полнорационный сбалансированный состав обогащён натуральными добавками, такими как MicroZeoGen, которые помогают выводить токсины из организма и поддерживают здоровую иммунную систему. Корм содержит жирные кислоты Омега-3 и Омега-6, необходимые для здоровья кожи и шерсти; моно- и полиненасыщенные жирные кислоты поддерживают иммунную систему, а насыщенные жирные кислоты дают собаке энергию. Также в состав входят цветки бархатцев — суперфуд, известный своими противовоспалительными свойствами, — и натуральные антиоксиданты: витамин E и экстракт розмарина, которые совершенно естественным образом помогают защищать клетки от негативного воздействия свободных радикалов. Все ингредиенты тщательно подобраны ветеринарами и специалистами по питанию с учётом реальных потребностей вашего питомца.",
+    "Nature’s Protection — линия сухих кормов для собак класса супер-премиум, известная инновационными ингредиентами и новейшими технологиями в здоровом питании домашних животных. Этот полнорационный корм содержит только ингредиенты и источники белка высочайшего качества."
+   ],
+   "composition": "мясо птицы 35% (высушенное и мелко измельчённое), рис, сорго, ячмень, кукуруза, птичий жир, мука из криля (мин. 4%), свекольный жом, горох, льняное семя, динамический микронизированный клиноптилолит (1%), пивные дрожжи, экстракт цикория, маннан-олигосахариды (MOS), мука из бархатцев, экстракт юкки.",
+   "additives": "Пищевые добавки на 1 кг: витамин A – 18000 МЕ, витамин D3 – 1500 МЕ, витамин E – 530 мг, моногидрат сульфата железа (II) – 50 мг, безводный йодат кальция – 1,5 мг, пентагидрат сульфата меди (II) – 5 мг, моногидрат сульфата марганца (II) – 20 мг, моногидрат сульфата цинка – 115 мг, селенит натрия – 0,1 мг, L-карнитин – 100 мг. Технологические добавки: экстракт розмарина, богатые токоферолами экстракты растительных масел.",
+   "analysis": [
+    {
+     "name": "Сырой протеин",
+     "value": "21 %"
+    },
+    {
+     "name": "Сырой жир",
+     "value": "10 %"
+    },
+    {
+     "name": "Сырая зола",
+     "value": "6,3 %"
+    },
+    {
+     "name": "Сырая клетчатка",
+     "value": "2,5 %"
+    },
+    {
+     "name": "Кальций",
+     "value": "0,8 %"
+    },
+    {
+     "name": "Фосфор",
+     "value": "0,7 %"
+    },
+    {
+     "name": "Калий",
+     "value": "0,6 %"
+    },
+    {
+     "name": "Натрий",
+     "value": "0,3 %"
+    },
+    {
+     "name": "Омега-3 жирные кислоты",
+     "value": "0,32 %"
+    },
+    {
+     "name": "Омега-6 жирные кислоты",
+     "value": "1,72 %"
+    }
+   ],
+   "feeding": "Корм дают в сухом виде. У питомца всегда должен быть доступ к свежей воде."
+  },
+  "en": {
+   "full": [
+    "Nature’s Protection Weight Control for Sterilised Adult All Breed Dogs with Poultry is a Super Premium complete and balanced dry dog food made with the highest quality protein source and raw materials. Its composition is enriched with ingredients that provide the necessary amount of vitamins and minerals. This complete dry food not only provides your pet with all the essential nutrients but also ensures excellent digestibility, palatability and a healthy body weight.",
+    "The food is known for its well-balanced composition and raw materials, which help improve smooth digestion, maintain a healthy weight and result in small, firm stools. The main protein source is poultry – a high-quality protein and an excellent source of nutrition for dogs, packed with essential nutrients that help promote overall health. It also contains Antarctic krill, a unique and 100% sustainable source of Omega-3 and choline, which improves skin and coat condition, reduces inflammation and supports brain activity.",
+    "The complete and balanced composition is enriched with natural supplements such as MicroZeoGen, which help remove toxins from the body and support a healthy immune system. It contains Omega-3 and Omega-6 fatty acids, essential for healthy skin and coat; mono- and polyunsaturated fatty acids support the immune system, while saturated fatty acids provide energy for the dog. The food also contains the superfood marigold blossoms, known for their anti-inflammatory properties, and natural antioxidants – vitamin E and rosemary extract – which help protect cells against the negative impact of free radicals in a completely natural way. All ingredients are carefully selected by veterinary and nutrition experts based on the true needs of your pet.",
+    "Nature’s Protection is a Super Premium dry dog food line known for innovative ingredients and the newest technologies in healthy pet nutrition. This complete dog food contains only the highest quality ingredients and protein sources."
+   ],
+   "composition": "poultry meat 35% (dried and finely ground), rice, sorghum, barley, maize, poultry fat, krill meal (min. 4%), sugar beet pulp, peas, linseed, dynamic micronized clinoptilolite (1%), brewer’s yeast, chicory extract, mannan-oligosaccharides (MOS), marigold meal, yucca extract.",
+   "additives": "Nutritional additives per 1 kg: vitamin A – 18000 IU, vitamin D3 – 1500 IU, vitamin E – 530 mg, iron (II) sulphate monohydrate – 50 mg, calcium iodate anhydrous – 1.5 mg, copper (II) sulphate pentahydrate – 5 mg, manganous sulphate monohydrate – 20 mg, zinc sulphate monohydrate – 115 mg, sodium selenite – 0.1 mg, L-carnitine – 100 mg. Technological additives: rosemary extract, tocopherol-rich extracts of vegetable oils.",
+   "analysis": [
+    {
+     "name": "Crude protein",
+     "value": "21 %"
+    },
+    {
+     "name": "Crude fat",
+     "value": "10 %"
+    },
+    {
+     "name": "Crude ash",
+     "value": "6.3 %"
+    },
+    {
+     "name": "Crude fibre",
+     "value": "2.5 %"
+    },
+    {
+     "name": "Calcium",
+     "value": "0.8 %"
+    },
+    {
+     "name": "Phosphorus",
+     "value": "0.7 %"
+    },
+    {
+     "name": "Potassium",
+     "value": "0.6 %"
+    },
+    {
+     "name": "Sodium",
+     "value": "0.3 %"
+    },
+    {
+     "name": "Omega-3 fatty acids",
+     "value": "0.32 %"
+    },
+    {
+     "name": "Omega-6 fatty acids",
+     "value": "1.72 %"
+    }
+   ],
+   "feeding": "Serve the food dry. Fresh water should be available at all times."
+  },
+  "az": {
+   "full": [
+    "Nature’s Protection Weight Control quş əti ilə bütün cinslərdən olan sterilizasiya edilmiş yetkin itlər üçün — ən yüksək keyfiyyətli protein mənbəyindən və xammaldan hazırlanmış super premium sinifli tam rasionlu və balanslaşdırılmış quru it yemidir. Onun tərkibi lazımi miqdarda vitamin və mineralları təmin edən inqrediyentlərlə zənginləşdirilib. Tam rasionlu quru yem ev heyvanınızı bütün vacib qida maddələri ilə təmin etməklə yanaşı, əla həzm olunma, xoş dad və sağlam bədən çəkisini də təmin edir.",
+    "Yem həzm sisteminin rahat işləməsinə, sağlam çəkinin qorunmasına və kiçik, bərk nəcisin formalaşmasına kömək edən yaxşı balanslaşdırılmış tərkibi və xammalı ilə tanınır. Əsas protein mənbəyi quş ətidir — yüksək keyfiyyətli protein və itlər üçün əla qida mənbəyi, ümumi sağlamlığı dəstəkləməyə kömək edən vacib qida maddələri ilə zəngindir. Tərkibdə həmçinin Antarktika krili var — Omeqa-3 və xolinin unikal və 100% davamlı mənbəyi; o, dəri və tükün vəziyyətini yaxşılaşdırır, iltihabı azaldır və beyin fəaliyyətini dəstəkləyir.",
+    "Tam rasionlu və balanslaşdırılmış tərkib orqanizmdən toksinlərin çıxarılmasına kömək edən və sağlam immun sistemini dəstəkləyən MicroZeoGen kimi təbii əlavələrlə zənginləşdirilib. Tərkibində sağlam dəri və tük üçün vacib olan Omeqa-3 və Omeqa-6 yağ turşuları var; mono- və poliyadoymamış yağ turşuları immun sistemini dəstəkləyir, doymuş yağ turşuları isə itə enerji verir. Yemin tərkibində həmçinin iltihab əleyhinə xüsusiyyətləri ilə tanınan superqida — məxmərək çiçəkləri və hüceyrələri sərbəst radikalların mənfi təsirindən tamamilə təbii yolla qorumağa kömək edən təbii antioksidantlar — E vitamini və rozmarin ekstraktı var. Bütün inqrediyentlər baytarlar və qidalanma mütəxəssisləri tərəfindən ev heyvanınızın real ehtiyaclarına əsasən diqqətlə seçilir.",
+    "Nature’s Protection — innovativ inqrediyentləri və ev heyvanlarının sağlam qidalanmasında ən yeni texnologiyaları ilə tanınan super premium sinifli quru it yemi xəttidir. Bu tam rasionlu it yemi yalnız ən yüksək keyfiyyətli inqrediyentlərdən və protein mənbələrindən ibarətdir."
+   ],
+   "composition": "quş əti 35% (qurudulmuş və xırda üyüdülmüş), düyü, sorqo, arpa, qarğıdalı, quş yağı, krill unu (min. 4%), şəkər çuğunduru pulpası, noxud, kətan toxumu, dinamik mikronlaşdırılmış klinoptilolit (1%), pivə mayası, kasnı ekstraktı, mannan-oliqosaxaridlər (MOS), məxmərək unu, yukka ekstraktı.",
+   "additives": "1 kq üçün qida əlavələri: A vitamini – 18000 BV, D3 vitamini – 1500 BV, E vitamini – 530 mq, dəmir (II) sulfat monohidrat – 50 mq, susuz kalsium yodat – 1,5 mq, mis (II) sulfat pentahidrat – 5 mq, manqan (II) sulfat monohidrat – 20 mq, sink sulfat monohidrat – 115 mq, natrium selenit – 0,1 mq, L-karnitin – 100 mq. Texnoloji əlavələr: rozmarin ekstraktı, bitki yağlarından tokoferolla zəngin ekstraktlar.",
+   "analysis": [
+    {
+     "name": "Xam protein",
+     "value": "21 %"
+    },
+    {
+     "name": "Xam yağ",
+     "value": "10 %"
+    },
+    {
+     "name": "Xam kül",
+     "value": "6,3 %"
+    },
+    {
+     "name": "Xam lif",
+     "value": "2,5 %"
+    },
+    {
+     "name": "Kalsium",
+     "value": "0,8 %"
+    },
+    {
+     "name": "Fosfor",
+     "value": "0,7 %"
+    },
+    {
+     "name": "Kalium",
+     "value": "0,6 %"
+    },
+    {
+     "name": "Natrium",
+     "value": "0,3 %"
+    },
+    {
+     "name": "Omeqa-3 yağ turşuları",
+     "value": "0,32 %"
+    },
+    {
+     "name": "Omeqa-6 yağ turşuları",
+     "value": "1,72 %"
+    }
+   ],
+   "feeding": "Yemi quru halda verin. Təzə su həmişə əlçatan olmalıdır."
+  }
+ },
+ "dogs||Mini Adult||Mini Adult — Lamb": {
+  "url": "/product/dry-food-for-adult-small-breed-dogs-with-lamb/",
+  "sku": null,
+  "packs": [
+   "500 g",
+   "2 kg",
+   "7.5 kg"
+  ],
+  "feed": [
+   [
+    1,
+    2,
+    31,
+    52
+   ],
+   [
+    2,
+    3,
+    52,
+    71
+   ],
+   [
+    3,
+    4,
+    71,
+    88
+   ],
+   [
+    4,
+    5,
+    88,
+    104
+   ],
+   [
+    5,
+    6,
+    104,
+    119
+   ],
+   [
+    6,
+    7,
+    119,
+    134
+   ],
+   [
+    7,
+    8,
+    134,
+    148
+   ],
+   [
+    8,
+    9,
+    148,
+    162
+   ],
+   [
+    9,
+    10,
+    162,
+    175
+   ]
+  ],
+  "ru": {
+   "full": [
+    "Nature’s Protection для взрослых собак малых пород с ягнёнком — полнорационный сбалансированный сухой корм класса супер-премиум, созданный из источника белка и сырья высочайшего качества. Его состав обогащён ингредиентами, которые обеспечивают необходимое количество калорий, витаминов и минералов. Полнорационный сухой корм не только даёт питомцу все необходимые питательные вещества, но и обеспечивает отличную усвояемость, привлекательный вкус и блестящую шерсть.",
+    "Корм отличается хорошо сбалансированным составом и сырьём, которые способствуют слаженной работе пищеварительной системы. Основной источник белка — ягнёнок: высококачественный белок и отличный источник питания для собак, богатый незаменимыми питательными веществами, которые помогают сохранять здоровье и укреплять мышцы.",
+    "Полнорационный сбалансированный состав обогащён натуральными добавками, такими как MicroZeoGen, которые помогают выводить токсины из организма и поддерживают здоровую иммунную систему. Корм содержит жирные кислоты Омега-3 и Омега-6, необходимые для здоровья кожи и шерсти; моно- и полиненасыщенные жирные кислоты поддерживают иммунную систему, а насыщенные жирные кислоты дают собаке энергию. Также в состав входят цветки бархатцев — суперфуд, известный своими противовоспалительными свойствами, — и натуральные антиоксиданты: витамин E и экстракт розмарина, которые совершенно естественным образом помогают защищать клетки от негативного воздействия свободных радикалов. Все ингредиенты тщательно подобраны ветеринарами и специалистами по питанию с учётом реальных потребностей вашего питомца.",
+    "Nature’s Protection — линия сухих кормов для собак класса супер-премиум, известная инновационными ингредиентами и новейшими технологиями в здоровом питании домашних животных. Этот полнорационный корм содержит только ингредиенты и источники белка высочайшего качества."
+   ],
+   "composition": "мясо ягнёнка 38% (высушенное и мелко измельчённое), рис, кукуруза, кукурузный глютен, птичий жир, ячмень, свекольный жом, льняное семя, рыбная мука, динамический микронизированный клиноптилолит (1%), экстракт цикория, маннан-олигосахариды (MOS), экстракт юкки, мука из бархатцев.",
+   "additives": "Пищевые добавки на 1 кг: витамин A (3a672a) – 18000 МЕ, витамин D3 (3a671)* – 1500 МЕ, витамин E (3a700) – 530 мг, моногидрат сульфата железа (II) (3b103) – 50 мг, безводный йодат кальция (3b202) – 1,5 мг, пентагидрат сульфата меди (II) (3b405) – 5 мг, моногидрат сульфата марганца (II) (3b503) – 20 мг, моногидрат сульфата цинка (3b605) – 115 мг, селенит натрия (3b801) – 0,1 мг. Технологические добавки: экстракт розмарина, богатые токоферолами экстракты растительных масел (1b306(i)). *Одновременное применение с витамином D2 не допускается.",
+   "analysis": [
+    {
+     "name": "Сырой протеин",
+     "value": "28 %"
+    },
+    {
+     "name": "Сырая клетчатка",
+     "value": "1,5 %"
+    },
+    {
+     "name": "Сырой жир",
+     "value": "16 %"
+    },
+    {
+     "name": "Сырая зола",
+     "value": "5,3 %"
+    },
+    {
+     "name": "Кальций",
+     "value": "0,95 %"
+    },
+    {
+     "name": "Фосфор",
+     "value": "0,77 %"
+    },
+    {
+     "name": "Калий",
+     "value": "0,5 %"
+    },
+    {
+     "name": "Натрий",
+     "value": "0,4 %"
+    },
+    {
+     "name": "Омега-3 жирные кислоты",
+     "value": "0,77 %"
+    },
+    {
+     "name": "Омега-6 жирные кислоты",
+     "value": "2,42 %"
+    }
+   ],
+   "feeding": "Корм дают в сухом виде. У питомца всегда должен быть доступ к свежей воде."
+  },
+  "en": {
+   "full": [
+    "Nature’s Protection for Adult Small Breed Dogs with Lamb is a Super Premium complete and balanced dry dog food made with the highest quality protein source and raw materials. Its composition is enriched with ingredients that provide the necessary amount of calories, vitamins and minerals. This complete dry food not only provides your pet with all the essential nutrients but also ensures excellent digestibility, palatability and a shiny coat.",
+    "The food is known for its well-balanced composition and raw materials, which help improve smooth digestion. The main protein source is lamb – a high-quality protein and an excellent source of nutrition for dogs, packed with essential nutrients that help maintain good health and build strong muscles.",
+    "The complete and balanced composition is enriched with natural supplements such as MicroZeoGen, which help remove toxins from the body and support a healthy immune system. It contains Omega-3 and Omega-6 fatty acids, essential for healthy skin and coat; mono- and polyunsaturated fatty acids support the immune system, while saturated fatty acids provide energy for the dog. The food also contains the superfood marigold blossoms, known for their anti-inflammatory properties, and natural antioxidants – vitamin E and rosemary extract – which help protect cells against the negative impact of free radicals in a completely natural way. All ingredients are carefully selected by veterinary and nutrition experts based on the true needs of your pet.",
+    "Nature’s Protection is a Super Premium dry dog food line known for innovative ingredients and the newest technologies in healthy pet nutrition. This complete dog food contains only the highest quality ingredients and protein sources."
+   ],
+   "composition": "lamb meat 38% (dried and finely ground), rice, maize, maize gluten, poultry fat, barley, sugar beet pulp, linseed, fish meal, dynamic micronized clinoptilolite (1%), chicory extract, mannan-oligosaccharides (MOS), yucca extract, marigold meal.",
+   "additives": "Nutritional additives per 1 kg: vitamin A (3a672a) – 18000 IU, vitamin D3 (3a671)* – 1500 IU, vitamin E (3a700) – 530 mg, iron (II) sulphate monohydrate (3b103) – 50 mg, calcium iodate anhydrous (3b202) – 1.5 mg, copper (II) sulphate pentahydrate (3b405) – 5 mg, manganous sulphate monohydrate (3b503) – 20 mg, zinc sulphate monohydrate (3b605) – 115 mg, sodium selenite (3b801) – 0.1 mg. Technological additives: rosemary extract, tocopherol extracts from vegetable oils (1b306(i)). *Simultaneous use with vitamin D2 is not allowed.",
+   "analysis": [
+    {
+     "name": "Crude protein",
+     "value": "28 %"
+    },
+    {
+     "name": "Crude fibre",
+     "value": "1.5 %"
+    },
+    {
+     "name": "Crude fat",
+     "value": "16 %"
+    },
+    {
+     "name": "Crude ash",
+     "value": "5.3 %"
+    },
+    {
+     "name": "Calcium",
+     "value": "0.95 %"
+    },
+    {
+     "name": "Phosphorus",
+     "value": "0.77 %"
+    },
+    {
+     "name": "Potassium",
+     "value": "0.5 %"
+    },
+    {
+     "name": "Sodium",
+     "value": "0.4 %"
+    },
+    {
+     "name": "Omega-3 fatty acids",
+     "value": "0.77 %"
+    },
+    {
+     "name": "Omega-6 fatty acids",
+     "value": "2.42 %"
+    }
+   ],
+   "feeding": "Serve the food dry. Fresh water should be available at all times."
+  },
+  "az": {
+   "full": [
+    "Nature’s Protection quzu əti ilə kiçik cinslərdən olan yetkin itlər üçün — ən yüksək keyfiyyətli protein mənbəyindən və xammaldan hazırlanmış super premium sinifli tam rasionlu və balanslaşdırılmış quru it yemidir. Onun tərkibi lazımi miqdarda kalori, vitamin və mineralları təmin edən inqrediyentlərlə zənginləşdirilib. Tam rasionlu quru yem ev heyvanınızı bütün vacib qida maddələri ilə təmin etməklə yanaşı, əla həzm olunma, xoş dad və parlaq tük də təmin edir.",
+    "Yem həzm sisteminin rahat işləməsinə kömək edən yaxşı balanslaşdırılmış tərkibi və xammalı ilə tanınır. Əsas protein mənbəyi quzu ətidir — yüksək keyfiyyətli protein və itlər üçün əla qida mənbəyi, sağlamlığı qorumağa və güclü əzələlər formalaşdırmağa kömək edən vacib qida maddələri ilə zəngindir.",
+    "Tam rasionlu və balanslaşdırılmış tərkib orqanizmdən toksinlərin çıxarılmasına kömək edən və sağlam immun sistemini dəstəkləyən MicroZeoGen kimi təbii əlavələrlə zənginləşdirilib. Tərkibində sağlam dəri və tük üçün vacib olan Omeqa-3 və Omeqa-6 yağ turşuları var; mono- və poliyadoymamış yağ turşuları immun sistemini dəstəkləyir, doymuş yağ turşuları isə itə enerji verir. Yemin tərkibində həmçinin iltihab əleyhinə xüsusiyyətləri ilə tanınan superqida — məxmərək çiçəkləri və hüceyrələri sərbəst radikalların mənfi təsirindən tamamilə təbii yolla qorumağa kömək edən təbii antioksidantlar — E vitamini və rozmarin ekstraktı var. Bütün inqrediyentlər baytarlar və qidalanma mütəxəssisləri tərəfindən ev heyvanınızın real ehtiyaclarına əsasən diqqətlə seçilir.",
+    "Nature’s Protection — innovativ inqrediyentləri və ev heyvanlarının sağlam qidalanmasında ən yeni texnologiyaları ilə tanınan super premium sinifli quru it yemi xəttidir. Bu tam rasionlu it yemi yalnız ən yüksək keyfiyyətli inqrediyentlərdən və protein mənbələrindən ibarətdir."
+   ],
+   "composition": "quzu əti 38% (qurudulmuş və xırda üyüdülmüş), düyü, qarğıdalı, qarğıdalı qlüteni, quş yağı, arpa, şəkər çuğunduru pulpası, kətan toxumu, balıq unu, dinamik mikronlaşdırılmış klinoptilolit (1%), kasnı ekstraktı, mannan-oliqosaxaridlər (MOS), yukka ekstraktı, məxmərək unu.",
+   "additives": "1 kq üçün qida əlavələri: A vitamini (3a672a) – 18000 BV, D3 vitamini (3a671)* – 1500 BV, E vitamini (3a700) – 530 mq, dəmir (II) sulfat monohidrat (3b103) – 50 mq, susuz kalsium yodat (3b202) – 1,5 mq, mis (II) sulfat pentahidrat (3b405) – 5 mq, manqan (II) sulfat monohidrat (3b503) – 20 mq, sink sulfat monohidrat (3b605) – 115 mq, natrium selenit (3b801) – 0,1 mq. Texnoloji əlavələr: rozmarin ekstraktı, bitki yağlarından tokoferol ekstraktları (1b306(i)). *D2 vitamini ilə eyni vaxtda istifadəsinə icazə verilmir.",
+   "analysis": [
+    {
+     "name": "Xam protein",
+     "value": "28 %"
+    },
+    {
+     "name": "Xam lif",
+     "value": "1,5 %"
+    },
+    {
+     "name": "Xam yağ",
+     "value": "16 %"
+    },
+    {
+     "name": "Xam kül",
+     "value": "5,3 %"
+    },
+    {
+     "name": "Kalsium",
+     "value": "0,95 %"
+    },
+    {
+     "name": "Fosfor",
+     "value": "0,77 %"
+    },
+    {
+     "name": "Kalium",
+     "value": "0,5 %"
+    },
+    {
+     "name": "Natrium",
+     "value": "0,4 %"
+    },
+    {
+     "name": "Omeqa-3 yağ turşuları",
+     "value": "0,77 %"
+    },
+    {
+     "name": "Omeqa-6 yağ turşuları",
+     "value": "2,42 %"
+    }
+   ],
+   "feeding": "Yemi quru halda verin. Təzə su həmişə əlçatan olmalıdır."
+  }
+ },
+ "dogs||Adult||Adult Lamb — Lamb": {
+  "url": "/product/dry-food-for-adult-dogs-of-all-breeds-with-lamb/",
+  "sku": null,
+  "packs": [
+   "500 g",
+   "4 kg",
+   "12 kg"
+  ],
+  "feed": [
+   [
+    1,
+    5,
+    37,
+    109
+   ],
+   [
+    5,
+    10,
+    109,
+    174
+   ],
+   [
+    10,
+    15,
+    174,
+    228
+   ],
+   [
+    15,
+    20,
+    228,
+    276
+   ],
+   [
+    20,
+    25,
+    276,
+    321
+   ],
+   [
+    25,
+    30,
+    321,
+    363
+   ],
+   [
+    30,
+    35,
+    363,
+    402
+   ],
+   [
+    35,
+    40,
+    402,
+    440
+   ],
+   [
+    40,
+    45,
+    440,
+    476
+   ],
+   [
+    45,
+    50,
+    476,
+    511
+   ],
+   [
+    50,
+    55,
+    511,
+    545
+   ],
+   [
+    55,
+    60,
+    545,
+    577
+   ],
+   [
+    60,
+    65,
+    577,
+    609
+   ],
+   [
+    65,
+    70,
+    609,
+    640
+   ]
+  ],
+  "ru": {
+   "full": [
+    "Nature’s Protection для взрослых собак всех пород с ягнёнком — полнорационный сбалансированный сухой корм класса супер-премиум, созданный из источника белка и сырья высочайшего качества. Его состав обогащён ингредиентами, которые обеспечивают необходимое количество калорий, витаминов и минералов. Полнорационный сухой корм не только даёт питомцу все необходимые питательные вещества, но и обеспечивает отличную усвояемость, привлекательный вкус и блестящую шерсть.",
+    "Корм отличается хорошо сбалансированным составом и сырьём, которые способствуют слаженной работе пищеварительной системы. Основной источник белка — ягнёнок: высококачественный белок и отличный источник питания для собак, богатый незаменимыми питательными веществами, которые помогают сохранять здоровье и укреплять мышцы.",
+    "Полнорационный сбалансированный состав обогащён натуральными добавками, такими как MicroZeoGen, которые помогают выводить токсины из организма и поддерживают здоровую иммунную систему. Корм содержит жирные кислоты Омега-3 и Омега-6, необходимые для здоровья кожи и шерсти; моно- и полиненасыщенные жирные кислоты поддерживают иммунную систему, а насыщенные жирные кислоты дают собаке энергию. Также в состав входят цветки бархатцев — суперфуд, известный своими противовоспалительными свойствами, — и натуральные антиоксиданты: витамин E и экстракт розмарина, которые совершенно естественным образом помогают защищать клетки от негативного воздействия свободных радикалов. Все ингредиенты тщательно подобраны ветеринарами и специалистами по питанию с учётом реальных потребностей вашего питомца.",
+    "Nature’s Protection — линия сухих кормов для собак класса супер-премиум, известная инновационными ингредиентами и новейшими технологиями в здоровом питании домашних животных. Этот полнорационный корм содержит только ингредиенты и источники белка высочайшего качества."
+   ],
+   "composition": "мясо ягнёнка 38% (высушенное и мелко измельчённое), рис, кукуруза, птичий жир, кукурузный глютен, ячмень, свекольный жом, динамический микронизированный клиноптилолит (1%), льняное семя, рыбная мука, экстракт цикория, маннан-олигосахариды, экстракт юкки, мука из бархатцев.",
+   "additives": "Пищевые добавки на 1 кг: витамин A (3a672a) – 22500 МЕ, витамин D3 (3a671)* – 1875 МЕ, витамин E (3a700) – 663 мг, моногидрат сульфата железа (II) (3b103) – 63 мг, безводный йодат кальция (3b202) – 1,9 мг, пентагидрат сульфата меди (II) (3b405) – 6,3 мг, моногидрат сульфата марганца (II) (3b503) – 25 мг, моногидрат сульфата цинка (3b605) – 144 мг, селенит натрия (3b801) – 0,13 мг, DL-метионин технически чистый (3c301) – 1 г, L-триптофан (3c440) – 500 мг, таурин (3a370) – 125 мг. Технологические добавки: экстракт розмарина, богатые токоферолами экстракты растительных масел (1b306(i)). *Одновременное применение с витамином D2 не допускается.",
+   "analysis": [
+    {
+     "name": "Сырой протеин",
+     "value": "28 %"
+    },
+    {
+     "name": "Сырая клетчатка",
+     "value": "1,7 %"
+    },
+    {
+     "name": "Сырой жир",
+     "value": "17 %"
+    },
+    {
+     "name": "Сырая зола",
+     "value": "6,9 %"
+    },
+    {
+     "name": "Кальций",
+     "value": "1,2 %"
+    },
+    {
+     "name": "Фосфор",
+     "value": "0,9 %"
+    },
+    {
+     "name": "Калий",
+     "value": "0,6 %"
+    },
+    {
+     "name": "Натрий",
+     "value": "0,4 %"
+    },
+    {
+     "name": "Омега-3 жирные кислоты",
+     "value": "0,73 %"
+    },
+    {
+     "name": "Омега-6 жирные кислоты",
+     "value": "2,96 %"
+    }
+   ],
+   "feeding": "Корм дают в сухом виде. У питомца всегда должен быть доступ к свежей воде."
+  },
+  "en": {
+   "full": [
+    "Nature’s Protection for Adult All Breed Dogs with Lamb is a Super Premium complete and balanced dry dog food made with the highest quality protein source and raw materials. Its composition is enriched with ingredients that provide the necessary amount of calories, vitamins and minerals. This complete dry food not only provides your pet with all the essential nutrients but also ensures excellent digestibility, palatability and a shiny coat.",
+    "The food is known for its well-balanced composition and raw materials, which help improve smooth digestion. The main protein source is lamb – a high-quality protein and an excellent source of nutrition for dogs, packed with essential nutrients that help maintain good health and build strong muscles.",
+    "The complete and balanced composition is enriched with natural supplements such as MicroZeoGen, which help remove toxins from the body and support a healthy immune system. It contains Omega-3 and Omega-6 fatty acids, essential for healthy skin and coat; mono- and polyunsaturated fatty acids support the immune system, while saturated fatty acids provide energy for the dog. The food also contains the superfood marigold blossoms, known for their anti-inflammatory properties, and natural antioxidants – vitamin E and rosemary extract – which help protect cells against the negative impact of free radicals in a completely natural way. All ingredients are carefully selected by veterinary and nutrition experts based on the true needs of your pet.",
+    "Nature’s Protection is a Super Premium dry dog food line known for innovative ingredients and the newest technologies in healthy pet nutrition. This complete dog food contains only the highest quality ingredients and protein sources."
+   ],
+   "composition": "lamb meat 38% (dried and finely ground), rice, maize, poultry fat, maize gluten, barley, sugar beet pulp, dynamic micronized clinoptilolite (1%), linseed, fish meal, chicory extract, mannan-oligosaccharides, yucca extract, marigold meal.",
+   "additives": "Nutritional additives per 1 kg: vitamin A (3a672a) – 22500 IU, vitamin D3 (3a671)* – 1875 IU, vitamin E (3a700) – 663 mg, iron (II) sulphate monohydrate (3b103) – 63 mg, calcium iodate anhydrous (3b202) – 1.9 mg, copper (II) sulphate pentahydrate (3b405) – 6.3 mg, manganous sulphate monohydrate (3b503) – 25 mg, zinc sulphate monohydrate (3b605) – 144 mg, sodium selenite (3b801) – 0.13 mg, DL-methionine, technically pure (3c301) – 1 g, L-tryptophan (3c440) – 500 mg, taurine (3a370) – 125 mg. Technological additives: rosemary extract, tocopherol extracts from vegetable oils (1b306(i)). *Simultaneous use with vitamin D2 is not allowed.",
+   "analysis": [
+    {
+     "name": "Crude protein",
+     "value": "28 %"
+    },
+    {
+     "name": "Crude fibre",
+     "value": "1.7 %"
+    },
+    {
+     "name": "Crude fat",
+     "value": "17 %"
+    },
+    {
+     "name": "Crude ash",
+     "value": "6.9 %"
+    },
+    {
+     "name": "Calcium",
+     "value": "1.2 %"
+    },
+    {
+     "name": "Phosphorus",
+     "value": "0.9 %"
+    },
+    {
+     "name": "Potassium",
+     "value": "0.6 %"
+    },
+    {
+     "name": "Sodium",
+     "value": "0.4 %"
+    },
+    {
+     "name": "Omega-3 fatty acids",
+     "value": "0.73 %"
+    },
+    {
+     "name": "Omega-6 fatty acids",
+     "value": "2.96 %"
+    }
+   ],
+   "feeding": "Serve the food dry. Fresh water should be available at all times."
+  },
+  "az": {
+   "full": [
+    "Nature’s Protection quzu əti ilə bütün cinslərdən olan yetkin itlər üçün — ən yüksək keyfiyyətli protein mənbəyindən və xammaldan hazırlanmış super premium sinifli tam rasionlu və balanslaşdırılmış quru it yemidir. Onun tərkibi lazımi miqdarda kalori, vitamin və mineralları təmin edən inqrediyentlərlə zənginləşdirilib. Tam rasionlu quru yem ev heyvanınızı bütün vacib qida maddələri ilə təmin etməklə yanaşı, əla həzm olunma, xoş dad və parlaq tük də təmin edir.",
+    "Yem həzm sisteminin rahat işləməsinə kömək edən yaxşı balanslaşdırılmış tərkibi və xammalı ilə tanınır. Əsas protein mənbəyi quzu ətidir — yüksək keyfiyyətli protein və itlər üçün əla qida mənbəyi, sağlamlığı qorumağa və güclü əzələlər formalaşdırmağa kömək edən vacib qida maddələri ilə zəngindir.",
+    "Tam rasionlu və balanslaşdırılmış tərkib orqanizmdən toksinlərin çıxarılmasına kömək edən və sağlam immun sistemini dəstəkləyən MicroZeoGen kimi təbii əlavələrlə zənginləşdirilib. Tərkibində sağlam dəri və tük üçün vacib olan Omeqa-3 və Omeqa-6 yağ turşuları var; mono- və poliyadoymamış yağ turşuları immun sistemini dəstəkləyir, doymuş yağ turşuları isə itə enerji verir. Yemin tərkibində həmçinin iltihab əleyhinə xüsusiyyətləri ilə tanınan superqida — məxmərək çiçəkləri və hüceyrələri sərbəst radikalların mənfi təsirindən tamamilə təbii yolla qorumağa kömək edən təbii antioksidantlar — E vitamini və rozmarin ekstraktı var. Bütün inqrediyentlər baytarlar və qidalanma mütəxəssisləri tərəfindən ev heyvanınızın real ehtiyaclarına əsasən diqqətlə seçilir.",
+    "Nature’s Protection — innovativ inqrediyentləri və ev heyvanlarının sağlam qidalanmasında ən yeni texnologiyaları ilə tanınan super premium sinifli quru it yemi xəttidir. Bu tam rasionlu it yemi yalnız ən yüksək keyfiyyətli inqrediyentlərdən və protein mənbələrindən ibarətdir."
+   ],
+   "composition": "quzu əti 38% (qurudulmuş və xırda üyüdülmüş), düyü, qarğıdalı, quş yağı, qarğıdalı qlüteni, arpa, şəkər çuğunduru pulpası, dinamik mikronlaşdırılmış klinoptilolit (1%), kətan toxumu, balıq unu, kasnı ekstraktı, mannan-oliqosaxaridlər, yukka ekstraktı, məxmərək unu.",
+   "additives": "1 kq üçün qida əlavələri: A vitamini (3a672a) – 22500 BV, D3 vitamini (3a671)* – 1875 BV, E vitamini (3a700) – 663 mq, dəmir (II) sulfat monohidrat (3b103) – 63 mq, susuz kalsium yodat (3b202) – 1,9 mq, mis (II) sulfat pentahidrat (3b405) – 6,3 mq, manqan (II) sulfat monohidrat (3b503) – 25 mq, sink sulfat monohidrat (3b605) – 144 mq, natrium selenit (3b801) – 0,13 mq, texniki təmiz DL-metionin (3c301) – 1 q, L-triptofan (3c440) – 500 mq, taurin (3a370) – 125 mq. Texnoloji əlavələr: rozmarin ekstraktı, bitki yağlarından tokoferol ekstraktları (1b306(i)). *D2 vitamini ilə eyni vaxtda istifadəsinə icazə verilmir.",
+   "analysis": [
+    {
+     "name": "Xam protein",
+     "value": "28 %"
+    },
+    {
+     "name": "Xam lif",
+     "value": "1,7 %"
+    },
+    {
+     "name": "Xam yağ",
+     "value": "17 %"
+    },
+    {
+     "name": "Xam kül",
+     "value": "6,9 %"
+    },
+    {
+     "name": "Kalsium",
+     "value": "1,2 %"
+    },
+    {
+     "name": "Fosfor",
+     "value": "0,9 %"
+    },
+    {
+     "name": "Kalium",
+     "value": "0,6 %"
+    },
+    {
+     "name": "Natrium",
+     "value": "0,4 %"
+    },
+    {
+     "name": "Omeqa-3 yağ turşuları",
+     "value": "0,73 %"
+    },
+    {
+     "name": "Omeqa-6 yağ turşuları",
+     "value": "2,96 %"
+    }
+   ],
+   "feeding": "Yemi quru halda verin. Təzə su həmişə əlçatan olmalıdır."
+  }
+ },
+ "dogs||Veterinary Diet||Dermatosis — Salmon": {
+  "url": "/product/dietetic-pet-food-with-salmon-for-adult-dogs-of-all-breeds-with-skin-problems-2/",
+  "sku": null,
+  "packs": [
+   "1.5 kg",
+   "10 kg"
+  ],
+  "feed": [
+   [
+    2,
+    5,
+    52,
+    104
+   ],
+   [
+    5,
+    10,
+    104,
+    174
+   ],
+   [
+    10,
+    15,
+    174,
+    236
+   ],
+   [
+    15,
+    20,
+    236,
+    293
+   ],
+   [
+    20,
+    25,
+    293,
+    346
+   ],
+   [
+    25,
+    30,
+    346,
+    397
+   ],
+   [
+    30,
+    40,
+    397,
+    493
+   ],
+   [
+    40,
+    50,
+    493,
+    583
+   ],
+   [
+    50,
+    60,
+    583,
+    668
+   ]
+  ],
+  "ru": {
+   "full": [
+    "Nature’s Protection Superior Care Veterinary Diet Dermatosis с лососем для взрослых собак всех пород — полнорационный, хорошо сбалансированный сухой корм класса супер-премиум, специально разработанный с учётом особых потребностей собак с определёнными заболеваниями. Такой корм обеспечивает эффективный баланс питательных веществ и поддерживает здоровье и самочувствие питомца. Состав разработан для улучшения здоровья кожи и шерсти у животных с симптомами уже имеющихся состояний, таких как нежелательные реакции на компоненты корма или даже атопический дерматит.",
+    "Ингредиенты исключительно тщательно сбалансированы для улучшения здоровья кожи и шерсти. Корм содержит единственный источник животного белка, что помогает исключить из рациона другие животные белки-аллергены, способные вызывать симптомы. Специально подобранный рецепт не содержит зерновых и глютена, что снижает риск аллергии на белки злаков и непереносимости глютена.",
+    "Основной источник белка — лосось: легкоусвояемый, богатый питательными веществами ингредиент, который не относится к распространённым аллергенам у животных, поэтому он является безопасным выбором для собак с пищевой аллергией или чувствительностью. Сбалансированный аминокислотный профиль и высококачественный белок лосося способствуют общему здоровью и хорошему самочувствию. Кроме того, лосось богат жирными кислотами Омега-3, которые поддерживают здоровье кожи, блеск шерсти и здоровье суставов, а также иммунную систему.",
+    "Одно из главных преимуществ этой диеты — высокое содержание линолевой кислоты (LA), незаменимой полиненасыщенной жирной кислоты n-6, которая обязательно должна поступать с рационом собаки. Линолевая кислота встраивается в церамиды кожи, повышая её плотность и укрепляя её функцию защитного барьера. Это помогает защищать организм от внешних факторов, уменьшать избыточную потерю влаги и облегчать симптомы непереносимости ингредиентов и питательных веществ.",
+    "Nature’s Protection — линия сухих кормов для собак класса супер-премиум, известная инновационными ингредиентами и новейшими технологиями в здоровом питании домашних животных."
+   ],
+   "composition": "лосось 40% (высушенный и мелко измельчённый), сушёная картофельная мезга, батат, птичий жир, горох, сушёные водоросли Schizochytrium sp. (2%), свекольный жом, масло лосося, дикальцийфосфат, динамический микронизированный клиноптилолит (1%), льняное семя, тапиока, фруктоолигосахариды (FOS), юкка Мохаве, зелёный чай, сушёные бархатцы. Источник белка: лосось. Источники углеводов: сушёная картофельная мезга, батат, горох.",
+   "additives": "Пищевые добавки на 1 кг: витамин A (3a672a) – 18000 МЕ, витамин D3 (3a671)* – 1500 МЕ, витамин E (3a700) – 530 мг, фолиевая кислота (3a316) – 1 мг, биотин (3a880) – 0,1 мг, ниацин (3a314) – 35 мг, витамин B6 (3a831) – 3 мг, витамин B1 (3a821) – 3 мг, витамин B12 – 0,05 мг, моногидрат сульфата железа (II) (3b103) – 50 мг, безводный йодат кальция (3b202) – 1,5 мг, пентагидрат сульфата меди (II) (3b405) – 5 мг, моногидрат сульфата марганца (II) (3b503) – 20 мг, моногидрат сульфата цинка (3b605) – 115 мг, оксид цинка (3b603) – 135 мг, селенит натрия (3b801) – 0,1 мг, таурин (3a370) – 1000 мг. Технологические добавки: экстракт розмарина, богатые токоферолами экстракты растительных масел (1b306(i)). *Одновременное применение с витамином D2 не допускается.",
+   "analysis": [
+    {
+     "name": "Сырой протеин",
+     "value": "22 %"
+    },
+    {
+     "name": "Сырая клетчатка",
+     "value": "3 %"
+    },
+    {
+     "name": "Сырой жир",
+     "value": "15 %"
+    },
+    {
+     "name": "Сырая зола",
+     "value": "9 %"
+    },
+    {
+     "name": "Кальций",
+     "value": "1,2 %"
+    },
+    {
+     "name": "Фосфор",
+     "value": "0,9 %"
+    },
+    {
+     "name": "Калий",
+     "value": "0,6 %"
+    },
+    {
+     "name": "Натрий",
+     "value": "0,4 %"
+    },
+    {
+     "name": "Омега-3 жирные кислоты",
+     "value": "2 %"
+    },
+    {
+     "name": "Омега-6 жирные кислоты",
+     "value": "2,97 %"
+    },
+    {
+     "name": "ЭПК + ДГК (EPA + DHA)",
+     "value": "0,5 %"
+    },
+    {
+     "name": "Линолевая кислота (LA)",
+     "value": "2,53 %"
+    },
+    {
+     "name": "Энергетическая ценность",
+     "value": "3550 ккал/кг (14,85 МДж/кг)"
+    }
+   ],
+   "feeding": "Корм дают в сухом виде. У питомца всегда должен быть доступ к свежей воде."
+  },
+  "en": {
+   "full": [
+    "Nature’s Protection Superior Care Veterinary Diet Dermatosis for Adult All Breed Dogs with Salmon is a Super Premium complete and well-balanced dry dog food specially formulated to meet the specific health needs of dogs with certain medical conditions. This type of food provides an efficient balance of nutrients and supports the pet’s health and well-being. The composition is formulated to improve skin and coat health in pets with symptoms of ongoing conditions such as adverse reactions to food ingredients or even atopic dermatitis.",
+    "The ingredients are exceptionally balanced to improve skin and coat health. The food contains a single source of animal protein, which helps avoid other animal protein allergens in the diet that might cause symptoms. The specially selected recipe contains no grains or gluten, reducing the risk of allergy to cereal proteins and of gluten intolerance.",
+    "The main protein source is salmon – a highly digestible, nutrient-rich ingredient that is not a common pet allergen, making it a safe choice for dogs with food allergies or sensitivities. Salmon’s balanced amino acid profile and high-quality protein contribute to better overall health and well-being. Salmon is also rich in Omega-3 fatty acids, which promote healthy skin, a shiny coat and joint health while supporting the immune system.",
+    "One of the biggest benefits of this diet is its high content of linoleic acid (LA), an essential n-6 polyunsaturated fatty acid that must be provided in a dog’s diet. Linoleic acid is incorporated into the skin’s ceramides, improving its tightness and strengthening its function as a protective barrier. This helps protect the body against external factors, reduce excessive water loss and alleviate symptoms of ingredient and nutrient intolerances.",
+    "Nature’s Protection is a Super Premium dry dog food line known for innovative ingredients and the newest technologies in healthy pet nutrition."
+   ],
+   "composition": "salmon 40% (dried and finely ground), dried potato pulp, sweet potato, poultry fat, peas, dried algae Schizochytrium sp. (2%), sugar beet pulp, salmon oil, dicalcium phosphate, dynamic micronized clinoptilolite (1%), linseed, tapioca, fructooligosaccharides (FOS), Mojave yucca, green tea, dried marigold. Protein source: salmon. Carbohydrate sources: dried potato pulp, sweet potato, peas.",
+   "additives": "Nutritional additives per 1 kg: vitamin A (3a672a) – 18000 IU, vitamin D3 (3a671)* – 1500 IU, vitamin E (3a700) – 530 mg, folic acid (3a316) – 1 mg, biotin (3a880) – 0.1 mg, niacin (3a314) – 35 mg, vitamin B6 (3a831) – 3 mg, vitamin B1 (3a821) – 3 mg, vitamin B12 – 0.05 mg, iron (II) sulphate monohydrate (3b103) – 50 mg, calcium iodate anhydrous (3b202) – 1.5 mg, copper (II) sulphate pentahydrate (3b405) – 5 mg, manganous sulphate monohydrate (3b503) – 20 mg, zinc sulphate monohydrate (3b605) – 115 mg, zinc oxide (3b603) – 135 mg, sodium selenite (3b801) – 0.1 mg, taurine (3a370) – 1000 mg. Technological additives: rosemary extract, tocopherol extracts from vegetable oils (1b306(i)). *Simultaneous use with vitamin D2 is not allowed.",
+   "analysis": [
+    {
+     "name": "Crude protein",
+     "value": "22 %"
+    },
+    {
+     "name": "Crude fibre",
+     "value": "3 %"
+    },
+    {
+     "name": "Crude fat",
+     "value": "15 %"
+    },
+    {
+     "name": "Crude ash",
+     "value": "9 %"
+    },
+    {
+     "name": "Calcium",
+     "value": "1.2 %"
+    },
+    {
+     "name": "Phosphorus",
+     "value": "0.9 %"
+    },
+    {
+     "name": "Potassium",
+     "value": "0.6 %"
+    },
+    {
+     "name": "Sodium",
+     "value": "0.4 %"
+    },
+    {
+     "name": "Omega-3 fatty acids",
+     "value": "2 %"
+    },
+    {
+     "name": "Omega-6 fatty acids",
+     "value": "2.97 %"
+    },
+    {
+     "name": "EPA + DHA",
+     "value": "0.5 %"
+    },
+    {
+     "name": "Linoleic acid (LA)",
+     "value": "2.53 %"
+    },
+    {
+     "name": "Energy value",
+     "value": "3550 kcal/kg (14.85 MJ/kg)"
+    }
+   ],
+   "feeding": "Serve the food dry. Fresh water should be available at all times."
+  },
+  "az": {
+   "full": [
+    "Nature’s Protection Superior Care Veterinary Diet Dermatosis qızılbalıq ilə bütün cinslərdən olan yetkin itlər üçün — müəyyən xəstəlikləri olan itlərin xüsusi sağlamlıq ehtiyaclarını ödəmək üçün xüsusi hazırlanmış super premium sinifli tam rasionlu və yaxşı balanslaşdırılmış quru it yemidir. Bu cür yem qida maddələrinin effektiv balansını təmin edir və ev heyvanının sağlamlığını və rifahını dəstəkləyir. Tərkib yem inqrediyentlərinə qarşı arzuolunmaz reaksiyalar və ya hətta atopik dermatit kimi artıq mövcud olan vəziyyətlərin əlamətləri olan heyvanlarda dəri və tükün sağlamlığını yaxşılaşdırmaq üçün hazırlanıb.",
+    "İnqrediyentlər dəri və tükün sağlamlığını yaxşılaşdırmaq üçün xüsusi diqqətlə balanslaşdırılıb. Yemdə heyvan proteininin yalnız bir mənbəyi var; bu, rasionda əlamətlərə səbəb ola biləcək digər heyvan proteini allergenlərindən qaçmağa kömək edir. Xüsusi seçilmiş resept taxıl və qlüten ehtiva etmir, bu da taxıl proteinlərinə allergiya və qlütenə dözümsüzlük riskini azaldır.",
+    "Əsas protein mənbəyi qızılbalıqdır — asan həzm olunan, qida maddələri ilə zəngin və ev heyvanlarında geniş yayılmış allergenlərdən olmayan inqrediyent; buna görə də qida allergiyası və ya həssaslığı olan itlər üçün təhlükəsiz seçimdir. Qızılbalığın balanslaşdırılmış amin turşusu profili və yüksək keyfiyyətli proteini ümumi sağlamlığa və rifaha töhfə verir. Bundan əlavə, qızılbalıq sağlam dəri, parlaq tük və oynaqların sağlamlığını təşviq edən, həmçinin immun sistemini dəstəkləyən Omeqa-3 yağ turşuları ilə zəngindir.",
+    "Bu diyetin ən böyük üstünlüklərindən biri itin rasionunda mütləq olmalı olan əvəzolunmaz n-6 poliyadoymamış yağ turşusu — linol turşusunun (LA) yüksək miqdarıdır. Linol turşusu dərinin seramidlərinin tərkibinə daxil olur, onun sıxlığını artırır və qoruyucu baryer funksiyasını gücləndirir. Bu, orqanizmi xarici amillərdən qorumağa, həddindən artıq su itkisini azaltmağa və inqrediyent və qida maddələrinə dözümsüzlük əlamətlərini yüngülləşdirməyə kömək edir.",
+    "Nature’s Protection — innovativ inqrediyentləri və ev heyvanlarının sağlam qidalanmasında ən yeni texnologiyaları ilə tanınan super premium sinifli quru it yemi xəttidir."
+   ],
+   "composition": "qızılbalıq 40% (qurudulmuş və xırda üyüdülmüş), qurudulmuş kartof pulpası, batat, quş yağı, noxud, qurudulmuş Schizochytrium sp. yosunları (2%), şəkər çuğunduru pulpası, qızılbalıq yağı, dikalsium fosfat, dinamik mikronlaşdırılmış klinoptilolit (1%), kətan toxumu, tapioka, fruktooliqosaxaridlər (FOS), Mojave yukkası, yaşıl çay, qurudulmuş məxmərək. Protein mənbəyi: qızılbalıq. Karbohidrat mənbələri: qurudulmuş kartof pulpası, batat, noxud.",
+   "additives": "1 kq üçün qida əlavələri: A vitamini (3a672a) – 18000 BV, D3 vitamini (3a671)* – 1500 BV, E vitamini (3a700) – 530 mq, fol turşusu (3a316) – 1 mq, biotin (3a880) – 0,1 mq, niasin (3a314) – 35 mq, B6 vitamini (3a831) – 3 mq, B1 vitamini (3a821) – 3 mq, B12 vitamini – 0,05 mq, dəmir (II) sulfat monohidrat (3b103) – 50 mq, susuz kalsium yodat (3b202) – 1,5 mq, mis (II) sulfat pentahidrat (3b405) – 5 mq, manqan (II) sulfat monohidrat (3b503) – 20 mq, sink sulfat monohidrat (3b605) – 115 mq, sink oksid (3b603) – 135 mq, natrium selenit (3b801) – 0,1 mq, taurin (3a370) – 1000 mq. Texnoloji əlavələr: rozmarin ekstraktı, bitki yağlarından tokoferol ekstraktları (1b306(i)). *D2 vitamini ilə eyni vaxtda istifadəsinə icazə verilmir.",
+   "analysis": [
+    {
+     "name": "Xam protein",
+     "value": "22 %"
+    },
+    {
+     "name": "Xam lif",
+     "value": "3 %"
+    },
+    {
+     "name": "Xam yağ",
+     "value": "15 %"
+    },
+    {
+     "name": "Xam kül",
+     "value": "9 %"
+    },
+    {
+     "name": "Kalsium",
+     "value": "1,2 %"
+    },
+    {
+     "name": "Fosfor",
+     "value": "0,9 %"
+    },
+    {
+     "name": "Kalium",
+     "value": "0,6 %"
+    },
+    {
+     "name": "Natrium",
+     "value": "0,4 %"
+    },
+    {
+     "name": "Omeqa-3 yağ turşuları",
+     "value": "2 %"
+    },
+    {
+     "name": "Omeqa-6 yağ turşuları",
+     "value": "2,97 %"
+    },
+    {
+     "name": "EPA + DHA",
+     "value": "0,5 %"
+    },
+    {
+     "name": "Linol turşusu (LA)",
+     "value": "2,53 %"
+    },
+    {
+     "name": "Enerji dəyəri",
+     "value": "3550 kkal/kq (14,85 MC/kq)"
+    }
+   ],
+   "feeding": "Yemi quru halda verin. Təzə su həmişə əlçatan olmalıdır."
+  }
+ },
+ "dogs||Oils||Salmon Oil": {
+  "url": "https://natures-protection.com.ua/np-salmon-oil-for-skin-and-coat-of-adult-dogs-and-cats-complementary-feed-salmon-oil-for-adult-dogs-and-cats-to-support-healthy-skin-and-coat300-ml-ref_1679993949",
+  "sku": null,
+  "packs": [
+   "300 ml"
+  ],
+  "feed": [],
+  "ru": {
+   "full": [
+    "Nature’s Protection Salmon Oil — специально разработанная кормовая добавка для взрослых собак и кошек из 100% чистого высококачественного лососёвого масла, обогащённая жирными кислотами Омега — EPA и DHA. Она помогает обеспечить здоровый обмен веществ и имеет ряд преимуществ: улучшает состояние кожи и шерсти, помогает предотвратить кожную аллергию и способствует общему хорошему самочувствию, обеспечивая питомца питательными веществами, необходимыми для поддержания здоровья и жизненной энергии. Добавка не содержит искусственных консервантов, красителей и ароматизаторов, а регулярное применение может дать и другие преимущества для здоровья, в том числе здоровое сердце и оптимальную подвижность.",
+    "Продукт богат жирными кислотами Омега-3 и Омега-6, которые помогают поддерживать здоровье суставов и уменьшают воспаление; полезные жиры также поддерживают развитие мозга и когнитивные функции. Высокое содержание Омега-кислот питает кожу изнутри, помогает поддерживать здоровый увлажнённый кожный барьер, уменьшает сухость и облегчает зуд, делая шерсть блестящей и мягкой, — поэтому масло особенно полезно животным с сухой и зудящей кожей. Лососёвое масло полезно и питомцам с болью в суставах или проблемами подвижности: оно может уменьшить воспаление и улучшить общую подвижность, облегчая передвижение и ежедневную активность.",
+    "Здоровое сердце: жирные кислоты Омега-3 и Омега-6, в том числе EPA и DHA, помогают поддерживать здоровье сердца. Оптимальное психическое здоровье: незаменимые жирные кислоты поддерживают иммунную систему и защитные силы организма, способствуют развитию мозга и когнитивных функций. DHA (докозагексаеновая кислота) — важнейшая жирная кислота Омега-3 для здоровья и развития мозга, основной структурный компонент мозга, сетчатки и нервной системы, важный для когнитивных функций и памяти. EPA (эйкозапентаеновая кислота) обладает мощными противовоспалительными свойствами и помогает уменьшить воспаление в организме, которое связано со многими хроническими заболеваниями, в том числе сердечно-сосудистыми, артритом и некоторыми аутоиммунными нарушениями.",
+    "Основные ингредиенты: 100% лососёвое масло — богатый источник необходимых питательных веществ; жирные кислоты Омега-3 и Омега-6 — для улучшения состояния кожи и шерсти и поддержки иммунной системы; нерафинированное масло — для поддержания здорового веса тела. Подходит и собакам, и кошкам, легко смешивается с их обычным кормом. Разработано без искусственных красителей, ароматизаторов и консервантов. Произведено в ЕС."
+   ],
+   "composition": "100% лососёвое масло.",
+   "additives": "Пищевые добавки (на 100 г): жирные кислоты Омега-3 – 14000 мг, в том числе EPA – 2000 мг, DHA – 3000 мг, DPA – 1000 мг; жирные кислоты Омега-6 – 11000 мг; жирные кислоты Омега-9 – 30000 мг.",
+   "analysis": [
+    {
+     "name": "Сырой жир",
+     "value": "99 %"
+    },
+    {
+     "name": "Влажность",
+     "value": "1 %"
+    }
+   ],
+   "feeding": "Рекомендуемая суточная норма для собак в зависимости от массы тела: до 2 кг – 0,5 мл; 2–5 кг – 1,5 мл; 5–10 кг – 2,5 мл; 10–20 кг – 5 мл; более 20 кг – 7,5 мл; более 50 кг – 10 мл. Для кошек: до 2 кг – 0,3 мл; 2–5 кг – 1 мл; 5–7 кг – 2 мл; 7–10 кг – 2,5 мл. Масло рекомендуется смешивать с кормом. Хранить в тёмном месте при температуре не выше комнатной. После вскрытия упаковки хранить в холодильнике и использовать в течение 12 недель."
+  },
+  "en": {
+   "full": [
+    "Nature’s Protection Salmon Oil is a specially developed complementary feed for adult dogs and cats made from 100% pure, high-quality salmon oil and enriched with the Omega fatty acids EPA and DHA. It is designed to help ensure a healthy metabolism and offers a number of benefits: it improves the health of the skin and coat, helps prevent skin allergies and promotes overall well-being, providing the pet with the nutrients needed to maintain general health and vitality. The supplement contains no artificial preservatives, colourings or flavourings, and regular use can bring further health benefits, including a healthy heart and optimal mobility.",
+    "The product is rich in Omega-3 and Omega-6 fatty acids, which help support joint health and reduce inflammation, and these beneficial fats also support brain development and cognitive function. The high Omega content nourishes the skin from the inside, helps maintain a healthy, moisturised skin barrier, reduces dryness and relieves itching, making the coat shiny and soft – so the oil is especially useful for animals with dry, itchy skin. Salmon oil is also beneficial for pets with joint pain or mobility problems, as it can reduce inflammation and improve overall mobility, making it easier for the pet to move and stay active every day.",
+    "Healthy heart: the Omega-3 and Omega-6 fatty acids, including EPA and DHA, help support heart health. Optimal mental health: essential fatty acids support the immune system and the body’s defences and promote brain development and cognitive function. DHA (docosahexaenoic acid) is the most important Omega-3 fatty acid for brain health and development – a major structural component of the brain, retina and nervous system, important for cognitive function and memory. EPA (eicosapentaenoic acid) has powerful anti-inflammatory properties and helps reduce inflammation in the body, which is linked to many chronic conditions, including cardiovascular disease, arthritis and some autoimmune disorders.",
+    "Key ingredients: 100% salmon oil – a rich source of essential nutrients; Omega-3 and Omega-6 fatty acids – for better skin and coat and overall immune function; unrefined oil – to help maintain a healthy body weight. Suitable for both dogs and cats and easy to mix with their usual food. Formulated without artificial colourings, flavourings or preservatives. Made in the EU."
+   ],
+   "composition": "100% salmon oil.",
+   "additives": "Nutritional additives (per 100 g): Omega-3 fatty acids – 14000 mg, of which EPA – 2000 mg, DHA – 3000 mg, DPA – 1000 mg; Omega-6 fatty acids – 11000 mg; Omega-9 fatty acids – 30000 mg.",
+   "analysis": [
+    {
+     "name": "Crude fat",
+     "value": "99 %"
+    },
+    {
+     "name": "Moisture",
+     "value": "1 %"
+    }
+   ],
+   "feeding": "Recommended daily amount for dogs, depending on body weight: under 2 kg – 0.5 ml; 2–5 kg – 1.5 ml; 5–10 kg – 2.5 ml; 10–20 kg – 5 ml; over 20 kg – 7.5 ml; over 50 kg – 10 ml. For cats: under 2 kg – 0.3 ml; 2–5 kg – 1 ml; 5–7 kg – 2 ml; 7–10 kg – 2.5 ml. It is recommended to mix the oil with food. Store in a dark place at a temperature not above room temperature. After opening, keep refrigerated and use within 12 weeks."
+  },
+  "az": {
+   "full": [
+    "Nature’s Protection Salmon Oil – yetkin itlər və pişiklər üçün 100% təmiz, yüksək keyfiyyətli qızılbalıq yağından hazırlanmış və Omeqa yağ turşuları EPA və DHA ilə zənginləşdirilmiş xüsusi yem əlavəsidir. O, sağlam maddələr mübadiləsini təmin etməyə kömək edir və bir sıra üstünlüklərə malikdir: dərinin və tükün sağlamlığını yaxşılaşdırır, dəri allergiyalarının qarşısını almağa kömək edir və ümumi rifahı dəstəkləyir, ev heyvanını sağlamlığı və həyat enerjisini qorumaq üçün lazım olan qida maddələri ilə təmin edir. Əlavənin tərkibində süni konservantlar, boyalar və ətirləndiricilər yoxdur, müntəzəm istifadəsi isə sağlam ürək və optimal hərəkətlilik də daxil olmaqla, sağlamlıq üçün digər faydalar da verə bilər.",
+    "Məhsul oynaqların sağlamlığını dəstəkləməyə və iltihabı azaltmağa kömək edən Omeqa-3 və Omeqa-6 yağ turşuları ilə zəngindir; bu faydalı yağlar həmçinin beynin inkişafını və koqnitiv funksiyaları dəstəkləyir. Omeqa turşularının yüksək miqdarı dərini daxildən qidalandırır, sağlam və nəmlənmiş dəri baryerini qorumağa kömək edir, quruluğu azaldır və qaşınmanı yüngülləşdirir, tükü parlaq və yumşaq edir – buna görə də yağ quru və qaşınan dərisi olan heyvanlar üçün xüsusilə faydalıdır. Qızılbalıq yağı oynaq ağrıları və ya hərəkət problemləri olan ev heyvanlarına da faydalıdır: iltihabı azalda və ümumi hərəkətliliyi yaxşılaşdıra, gündəlik hərəkəti və aktivliyi asanlaşdıra bilər.",
+    "Sağlam ürək: EPA və DHA da daxil olmaqla Omeqa-3 və Omeqa-6 yağ turşuları ürəyin sağlamlığını dəstəkləməyə kömək edir. Optimal psixi sağlamlıq: əvəzolunmaz yağ turşuları immun sistemini və orqanizmin müdafiə qüvvələrini dəstəkləyir, beynin inkişafına və koqnitiv funksiyalara kömək edir. DHA (dokozaheksaen turşusu) beynin sağlamlığı və inkişafı üçün ən vacib Omeqa-3 yağ turşusudur – beynin, tor qişanın və sinir sisteminin əsas struktur komponentidir, koqnitiv funksiyalar və yaddaş üçün vacibdir. EPA (eykozapentaen turşusu) güclü iltihab əleyhinə xüsusiyyətlərə malikdir və orqanizmdəki iltihabı azaltmağa kömək edir; iltihab isə ürək-damar xəstəlikləri, artrit və bəzi autoimmun pozuntular da daxil olmaqla bir çox xroniki xəstəliklə əlaqəlidir.",
+    "Əsas inqrediyentlər: 100% qızılbalıq yağı – vacib qida maddələrinin zəngin mənbəyi; Omeqa-3 və Omeqa-6 yağ turşuları – dərinin və tükün vəziyyətini yaxşılaşdırmaq və immun sistemini dəstəkləmək üçün; təmizlənməmiş yağ – sağlam bədən çəkisini qorumaq üçün. Həm itlərə, həm də pişiklərə uyğundur, onların adi yemi ilə asanlıqla qarışdırılır. Süni boyalar, ətirləndiricilər və konservantlar olmadan hazırlanıb. Aİ-də istehsal olunub."
+   ],
+   "composition": "100% qızılbalıq yağı.",
+   "additives": "Qida əlavələri (100 q üçün): Omeqa-3 yağ turşuları – 14000 mq, o cümlədən EPA – 2000 mq, DHA – 3000 mq, DPA – 1000 mq; Omeqa-6 yağ turşuları – 11000 mq; Omeqa-9 yağ turşuları – 30000 mq.",
+   "analysis": [
+    {
+     "name": "Xam yağ",
+     "value": "99 %"
+    },
+    {
+     "name": "Nəmlik",
+     "value": "1 %"
+    }
+   ],
+   "feeding": "İtlər üçün bədən çəkisindən asılı olaraq tövsiyə olunan gündəlik norma: 2 kq-dan az – 0,5 ml; 2–5 kq – 1,5 ml; 5–10 kq – 2,5 ml; 10–20 kq – 5 ml; 20 kq-dan çox – 7,5 ml; 50 kq-dan çox – 10 ml. Pişiklər üçün: 2 kq-dan az – 0,3 ml; 2–5 kq – 1 ml; 5–7 kq – 2 ml; 7–10 kq – 2,5 ml. Yağın yemlə qarışdırılması tövsiyə olunur. Qaranlıq yerdə, otaq temperaturundan yüksək olmayan temperaturda saxlayın. Qablaşdırma açıldıqdan sonra soyuducuda saxlayın və 12 həftə ərzində istifadə edin."
+  }
+ },
+ "dogs||Life Long MZG||Healthy Ageing": {
+  "url": "https://natures-protection.com.ua/np-healthy-ageing-formula-complementary-feed-for-senior-dogs-and-cats-for-teeth-joints-bones-250-g_1679993948",
+  "sku": null,
+  "packs": [
+   "250 g"
+  ],
+  "feed": [],
+  "ru": {
+   "full": [
+    "Nature’s Protection Healthy Ageing — специально разработанная кормовая добавка для пожилых собак и кошек из необходимых натуральных компонентов, содержащая клиноптилолит вулканического происхождения — MicroZeoGen. Она предназначена для поддержки процесса старения у питомцев в возрасте от 5 лет и старше: способствует укреплению иммунной системы, замедлению обменных процессов и поддержанию правильной работы сердечно-сосудистой системы. Помимо очищения организма от накопленных токсинов и укрепления стенок кишечника, добавка помогает сохранить оптимальное здоровье и самочувствие питомца в пожилом возрасте.",
+    "Добавка обеспечивает стареющих питомцев необходимыми питательными веществами и изготовлена из высококачественных ингредиентов, которые поддерживают иммунную систему, крепкие кости и зубы и здоровую работу сердечно-сосудистой системы. Она содержит карбонат магния, поддерживающий работу мышц и нервной системы, и карбонат кальция, важный для здоровья костей и прочности зубов. Инновационная формула даёт ряд преимуществ, в том числе укрепление иммунитета, улучшение состояния кожи и шерсти и повышение жизненной активности, а поскольку добавка подходит и собакам, и кошкам, это удобный и эффективный способ поддержать здоровье и общее благополучие питомца с возрастом.",
+    "Содержит MicroZeoGen: уникальная структура минерала позволяет ему притягивать и удерживать положительно заряженные ионы, такие как тяжёлые металлы и токсины, пропуская при этом другие полезные ионы. Он действует как антиоксидант и выводит из организма токсины, тяжёлые металлы и вирусы; после детоксикации организм очищается и готов к усвоению антиоксидантов, витаминов и минералов. Естественная детоксикация: благодаря MicroZeoGen добавка способствует выведению токсинов и вредных веществ. Здоровая иммунная система: выводя токсины и усиливая естественную защиту организма, добавка помогает укрепить иммунную систему и обеспечить более здоровую и устойчивую реакцию на возможные проблемы со здоровьем. Здоровая сердечно-сосудистая система: тщательно подобранные ингредиенты, в том числе MicroZeoGen, действуют синергично, поддерживая здоровье сердечно-сосудистой системы, нормальное кровообращение и общее состояние сердца и сосудов. Крепкие кости и зубы: необходимые питательные вещества поддерживают плотность костей, работу мышц и здоровье зубов, сохраняя скелет крепким и выносливым.",
+    "Основные ингредиенты: MicroZeoGen — природный клиноптилолит вулканического происхождения для детоксикации организма, усвоения питательных веществ и поддержки иммунной системы; карбонат кальция и магния — для крепких костей и мышц; сырая зола — её высокий уровень указывает на качество и содержание минералов, таких как кальций и фосфор, важных для здоровья костей. Добавка также восполняет недостаток необходимых питательных веществ в организме, имеет натуральный состав и подходит и собакам, и кошкам. Разработано без искусственных красителей, ароматизаторов и консервантов. Произведено в ЕС."
+   ],
+   "composition": "карбонат кальция, карбонат кальция и магния.",
+   "additives": "Технологические добавки (на 1 кг): доломит-магнезит (1g598) – 100 г, клиноптилолит осадочного происхождения (1g568) – 800 г.",
+   "analysis": [
+    {
+     "name": "Сырой протеин",
+     "value": "0,5 %"
+    },
+    {
+     "name": "Сырая клетчатка",
+     "value": "0,3 %"
+    },
+    {
+     "name": "Сырой жир",
+     "value": "1 %"
+    },
+    {
+     "name": "Сырая зола",
+     "value": "94 %"
+    },
+    {
+     "name": "Влажность",
+     "value": "1,9 %"
+    },
+    {
+     "name": "Натрий",
+     "value": "0,29 %"
+    },
+    {
+     "name": "Кальций",
+     "value": "7,33 %"
+    },
+    {
+     "name": "Фосфор",
+     "value": "0,01 %"
+    }
+   ],
+   "feeding": "Способ применения: взрослым собакам — ½ чайной ложки (2 г) на 10 кг массы тела, не более 3 чайных ложек в день. Взрослым кошкам — ½ чайной ложки (2 г) на 3–8 кг массы тела."
+  },
+  "en": {
+   "full": [
+    "Nature’s Protection Healthy Ageing is a specially developed complementary feed for senior dogs and cats, made from essential, natural materials and containing clinoptilolite of volcanic origin – MicroZeoGen. It is intended to support the ageing process in pets aged 5 years and older: it helps strengthen the immune system, slow down metabolic processes and maintain proper function of the cardiovascular system. Besides cleansing the body of accumulated toxins and strengthening the intestinal walls, the supplement helps keep an older pet in optimal health and well-being.",
+    "The supplement provides ageing pets with the nutrients they need and is made from high-quality ingredients that support the immune system, strong bones and teeth and a healthy cardiovascular system. It contains magnesium carbonate, which supports muscle and nervous system function, and calcium carbonate, which is important for bone health and strong teeth. Its innovative formula offers a range of benefits, including stronger immunity, better skin and coat condition and improved vitality, and as it suits both dogs and cats, it is a convenient and effective way to support a pet’s health and overall well-being with age.",
+    "Contains MicroZeoGen: the unique structure of this mineral allows it to attract and hold positively charged ions such as heavy metals and toxins while letting other beneficial ions pass. It acts as an antioxidant and removes toxins, heavy metals and viruses from the body; once detoxified, the body is cleansed and ready to absorb antioxidants, vitamins and minerals. Natural detoxification: thanks to MicroZeoGen the supplement supports the removal of toxins and harmful substances. Healthy immune system: by removing toxins and boosting the body’s natural defences, it helps strengthen the immune system for a healthier, more resilient response to potential health problems. Healthy cardiovascular system: carefully selected ingredients, including MicroZeoGen, work synergistically to support cardiovascular health, proper blood circulation and the overall condition of the cardiovascular system. Strong bones and teeth: essential nutrients support bone density, muscle function and dental health, keeping the skeletal system strong and resilient.",
+    "Key ingredients: MicroZeoGen – natural clinoptilolite of volcanic origin for detoxification, nutrient absorption and the immune system; calcium and magnesium carbonate – for strong bones and muscles; crude ash – its high level reflects the quality and content of minerals such as calcium and phosphorus, which are important for bone health. The supplement also makes up for a lack of essential nutrients in the body, has a natural composition and is suitable for both dogs and cats. Formulated without artificial colourings, flavourings or preservatives. Made in the EU."
+   ],
+   "composition": "calcium carbonate, calcium and magnesium carbonate.",
+   "additives": "Technological additives (per 1 kg): dolomite-magnesite (1g598) – 100 g, clinoptilolite of sedimentary origin (1g568) – 800 g.",
+   "analysis": [
+    {
+     "name": "Crude protein",
+     "value": "0.5 %"
+    },
+    {
+     "name": "Crude fibre",
+     "value": "0.3 %"
+    },
+    {
+     "name": "Crude fat",
+     "value": "1 %"
+    },
+    {
+     "name": "Crude ash",
+     "value": "94 %"
+    },
+    {
+     "name": "Moisture",
+     "value": "1.9 %"
+    },
+    {
+     "name": "Sodium",
+     "value": "0.29 %"
+    },
+    {
+     "name": "Calcium",
+     "value": "7.33 %"
+    },
+    {
+     "name": "Phosphorus",
+     "value": "0.01 %"
+    }
+   ],
+   "feeding": "Directions for use: for adult dogs – ½ teaspoon (2 g) per 10 kg of body weight, no more than 3 teaspoons a day. For adult cats – ½ teaspoon (2 g) per 3–8 kg of body weight."
+  },
+  "az": {
+   "full": [
+    "Nature’s Protection Healthy Ageing – yaşlı itlər və pişiklər üçün vacib təbii komponentlərdən hazırlanmış və vulkanik mənşəli klinoptilolit – MicroZeoGen ehtiva edən xüsusi yem əlavəsidir. O, 5 yaş və daha yuxarı ev heyvanlarında yaşlanma prosesini dəstəkləmək üçün nəzərdə tutulub: immun sisteminin möhkəmlənməsinə, maddələr mübadiləsi proseslərinin yavaşlamasına və ürək-damar sisteminin düzgün işləməsinə kömək edir. Orqanizmi yığılmış toksinlərdən təmizləmək və bağırsaq divarlarını möhkəmləndirməklə yanaşı, əlavə ev heyvanının yaşlı dövründə optimal sağlamlığını və rifahını qorumağa kömək edir.",
+    "Əlavə yaşlanan ev heyvanlarını lazımi qida maddələri ilə təmin edir və immun sistemini, möhkəm sümük və dişləri, sağlam ürək-damar sistemini dəstəkləyən yüksək keyfiyyətli inqrediyentlərdən hazırlanıb. Tərkibində əzələlərin və sinir sisteminin işini dəstəkləyən maqnezium karbonat və sümüklərin sağlamlığı və dişlərin möhkəmliyi üçün vacib olan kalsium karbonat var. İnnovativ formula bir sıra üstünlüklər verir, o cümlədən immunitetin güclənməsi, dərinin və tükün vəziyyətinin yaxşılaşması və həyat aktivliyinin artması; əlavə həm itlərə, həm də pişiklərə uyğun olduğundan, bu, yaşla birlikdə ev heyvanının sağlamlığını və ümumi rifahını dəstəkləməyin rahat və effektiv yoludur.",
+    "MicroZeoGen ehtiva edir: bu mineralın unikal quruluşu ona ağır metallar və toksinlər kimi müsbət yüklü ionları cəzb edib saxlamağa, digər faydalı ionları isə keçirməyə imkan verir. O, antioksidant kimi təsir göstərir və toksinləri, ağır metalları və virusları orqanizmdən çıxarır; detoksikasiyadan sonra orqanizm təmizlənir və antioksidantları, vitaminləri və mineralları mənimsəməyə hazır olur. Təbii detoksikasiya: MicroZeoGen sayəsində əlavə toksinlərin və zərərli maddələrin xaric edilməsinə kömək edir. Sağlam immun sistemi: toksinləri çıxarmaqla və orqanizmin təbii müdafiəsini gücləndirməklə əlavə immun sistemini möhkəmləndirməyə və mümkün sağlamlıq problemlərinə daha sağlam və davamlı reaksiya verməyə kömək edir. Sağlam ürək-damar sistemi: MicroZeoGen də daxil olmaqla diqqətlə seçilmiş inqrediyentlər sinergik təsir göstərərək ürək-damar sisteminin sağlamlığını, normal qan dövranını və ürək-damar sisteminin ümumi vəziyyətini dəstəkləyir. Möhkəm sümüklər və dişlər: vacib qida maddələri sümük sıxlığını, əzələlərin işini və dişlərin sağlamlığını dəstəkləyərək skelet sistemini möhkəm və dözümlü saxlayır.",
+    "Əsas inqrediyentlər: MicroZeoGen – orqanizmin detoksikasiyası, qida maddələrinin mənimsənilməsi və immun sistemi üçün vulkanik mənşəli təbii klinoptilolit; kalsium və maqnezium karbonat – möhkəm sümüklər və əzələlər üçün; xam kül – onun yüksək səviyyəsi sümüklərin sağlamlığı üçün vacib olan kalsium və fosfor kimi mineralların keyfiyyətini və miqdarını göstərir. Əlavə həmçinin orqanizmdə vacib qida maddələrinin çatışmazlığını kompensasiya edir, təbii tərkibə malikdir və həm itlərə, həm də pişiklərə uyğundur. Süni boyalar, ətirləndiricilər və konservantlar olmadan hazırlanıb. Aİ-də istehsal olunub."
+   ],
+   "composition": "kalsium karbonat, kalsium və maqnezium karbonat.",
+   "additives": "Texnoloji əlavələr (1 kq üçün): dolomit-maqnezit (1g598) – 100 q, çökmə mənşəli klinoptilolit (1g568) – 800 q.",
+   "analysis": [
+    {
+     "name": "Xam protein",
+     "value": "0,5 %"
+    },
+    {
+     "name": "Xam lif",
+     "value": "0,3 %"
+    },
+    {
+     "name": "Xam yağ",
+     "value": "1 %"
+    },
+    {
+     "name": "Xam kül",
+     "value": "94 %"
+    },
+    {
+     "name": "Nəmlik",
+     "value": "1,9 %"
+    },
+    {
+     "name": "Natrium",
+     "value": "0,29 %"
+    },
+    {
+     "name": "Kalsium",
+     "value": "7,33 %"
+    },
+    {
+     "name": "Fosfor",
+     "value": "0,01 %"
+    }
+   ],
+   "feeding": "İstifadə qaydası: yetkin itlər üçün – hər 10 kq bədən çəkisinə ½ çay qaşığı (2 q), gündə 3 çay qaşığından çox olmamaqla. Yetkin pişiklər üçün – hər 3–8 kq bədən çəkisinə ½ çay qaşığı (2 q)."
+  }
+ },
+ "dogs||Superior Care · Snacks||White Dogs Junior — Healthy Growth": {
+  "url": "/product/complementary-grain-free-feed-snacks-to-support-healthy-growth-and-development-with-insects-for-junior-all-breed-dogs-with-white-coat/",
+  "sku": null,
+  "packs": [
+   "150 g"
+  ],
+  "feed": [],
+  "ru": {
+   "full": [
+    "«Nature’s Protection Superior Care White Dogs Grain Free Healthy Growth & Development» — пищевые добавки-лакомства супер-премиум класса с протеинами насекомых, разработанные для поддержания здорового роста и развития молодых белошерстных собак всех пород (в возрасте 4–12 месяцев) и их общего благополучия. Содержащиеся в них специализированные ингредиенты не только насыщают организм питомца полезными веществами, но и способствуют здоровому росту и развитию молодой собаки.",
+    "Основной источник белка — насекомые. Протеин насекомых — очень экологичный источник белка, ведь насекомым требуется меньше земли, воды и корма, чем традиционному скоту; это высококачественный белок, который также даёт незаменимые аминокислоты, витамины и минералы, а протеины насекомых содержат лауриновую кислоту, обладающую антимикробными свойствами. Переработанный белок насекомых считается гипоаллергенным, поэтому хорошо подходит собакам с пищевой чувствительностью или аллергией. 81% белков в лакомствах — животного происхождения. Эти функциональные лакомства имеют более влажную и мягкую текстуру, чем обычные; во влажных продуктах сильнее раскрывается натуральный аромат, поэтому они нравятся даже самым привередливым питомцам.",
+    "Лакомства обогащены MicroZeoGen — натуральным минералом, динамически микронизированным клиноптилолитом вулканического происхождения, который помогает выводить токсины из организма и улучшает усвоение питательных веществ, а также способствует укреплению иммунной системы питомца и естественных защитных функций организма. Морские водоросли — ценный источник витаминов A, C, K и B6, а также кальция, калия, меди, йода и марганца; они способствуют предотвращению образования зубного налёта и зубного камня. Лакомства не содержат ингредиентов зернового происхождения, кукурузы и сои, способных вызывать аллергические реакции; они не перегружают пищеварительную систему, поэтому оптимально подходят питомцам с чувствительным желудочно-кишечным трактом или склонностью к аллергии. Сбалансированное сочетание пребиотиков и пробиотиков помогает поддерживать баланс кишечной микрофлоры и тем самым улучшает пищеварение.",
+    "Nature’s Protection Superior Care — линейка лакомств класса супер-премиум с инновационными ингредиентами, созданная с применением передовых технологий и с учётом новейших тенденций в области здорового питания домашних животных; в составе лакомств — высококачественные источники белка и другие инновационные ингредиенты. Удобная, легко открывающаяся упаковка содержит 150 г полезных и ароматных лакомств, которые придутся по вкусу даже самому избалованному питомцу. Произведено в ЕС."
+   ],
+   "composition": "переработанный белок насекомых мин. 26 % (высушенный и мелко измельчённый)*, предварительно желатинизированный картофельный крахмал, картофельные хлопья, морские водоросли Ascophyllum nodosum (4 %), сорбит, глицерин, глюкозный сироп, гороховая клетчатка (4 %), динамически микронизированный клиноптилолит (1 %), хитозамин (из водных животных) (1 %), фруктоолигосахариды (ФОС), сушёные водоросли Schizochytrium sp. (0,16 %), экстракт зелёного чая (0,05 %), сушёная календула (0,02 %). *Содержит переработанный животный белок нежвачных животных — не предназначен для кормления сельскохозяйственных животных, за исключением животных аквакультуры и пушных зверей.",
+   "additives": "Пищевые добавки (на 1 кг): витамин D3 (3a671)* – 577 МЕ, витамин E (3a700) – 204 мг, биотин (3a880) – 0,08 мг, таурин (3a370) – 1000 мг. Технологические добавки: антиоксиданты, консерванты. Зоотехнические добавки: стабилизаторы кишечной флоры: Bacillus velezensis DSM 15544 (4b1820) – 1×10¹⁰ КОЕ. *Одновременное применение с витамином D2 не допускается.",
+   "analysis": [
+    {
+     "name": "Сырой протеин",
+     "value": "20 %"
+    },
+    {
+     "name": "Сырая клетчатка",
+     "value": "4 %"
+    },
+    {
+     "name": "Сырой жир",
+     "value": "3 %"
+    },
+    {
+     "name": "Сырая зола",
+     "value": "4 %"
+    },
+    {
+     "name": "Крахмал",
+     "value": "34 %"
+    },
+    {
+     "name": "Влажность",
+     "value": "20 %"
+    },
+    {
+     "name": "Фосфор",
+     "value": "1,35 %"
+    },
+    {
+     "name": "Натрий",
+     "value": "0,7 %"
+    },
+    {
+     "name": "Калий",
+     "value": "0,7 %"
+    },
+    {
+     "name": "Глицерол",
+     "value": "3,7 %"
+    },
+    {
+     "name": "Общий сахар",
+     "value": "4,5 %"
+    }
+   ],
+   "feeding": "Суточная доза может варьироваться в зависимости от температуры воздуха, образа жизни, темперамента и активности питомца. У питомца всегда должен быть доступ к чистой свежей воде. Рекомендуемое количество лакомств в день в зависимости от массы тела собаки: 1–5 кг – 4–6 шт.; 5–10 кг – 8–10 шт.; 10–15 кг – 12–14 шт.; более 15 кг – 16–20 шт. Хранить в прохладном сухом месте при температуре не выше +25 °C. Номер партии и срок годности указаны на упаковке."
+  },
+  "en": {
+   "full": [
+    "Nature’s Protection Superior Care White Dogs Grain Free Healthy Growth & Development are premium supplemental snacks with insect protein, specially formulated to support the healthy growth and development of young white-coated dogs of all breeds (aged 4–12 months) and their overall well-being. Their specialised ingredients not only provide the pet with beneficial nutrients but also contribute to the healthy growth and development of the young dog.",
+    "The main source of protein is insects. Insect protein is a highly sustainable source of protein, as insects require less land, water and feed than traditional livestock; it is a high-quality protein that also provides essential amino acids, vitamins and minerals, and insect proteins contain lauric acid, which has antimicrobial properties. Processed insect protein is considered hypoallergenic, which makes it a good choice for dogs with food sensitivities or allergies. 81% of the proteins in the snacks are of animal origin. These functional snacks have a wetter and softer texture than ordinary treats; moister products reveal a more natural aroma, which makes them a favourite even of the pickiest pets.",
+    "The snacks are enriched with MicroZeoGen – a natural mineral, dynamically micronized clinoptilolite of volcanic origin, which helps remove toxins from the body and improve nutrient absorption, and also helps strengthen the pet’s immune system and the body’s natural defences. Seaweed is a valuable source of vitamins A, C, K and B6, as well as calcium, potassium, copper, iodine and manganese, and helps prevent the formation of dental plaque and tartar. The snacks contain no ingredients of grain origin, corn or soy products that can cause allergic reactions; they do not overload the digestive system and are therefore well suited to pets with a sensitive digestive tract or a tendency to allergies. A balanced combination of prebiotics and probiotics helps maintain the balance of the gut microflora and so improves digestion.",
+    "Nature’s Protection Superior Care is a Super Premium line of supplemental snacks known for innovative ingredients and the newest technologies and trends in healthy pet nutrition; the snacks contain high-quality protein sources and other innovative ingredients. The convenient, easy-to-open pack holds 150 g of healthy, aromatic snacks that will appeal even to the most pampered pet. Made in the EU."
+   ],
+   "composition": "processed insect protein min. 26 % (dried and finely ground)*, pregelatinised potato starch, potato flakes, seaweed Ascophyllum nodosum (4 %), sorbitol, glycerine, glucose syrup, pea fibre (4 %), dynamic micronized clinoptilolite (1 %), chitosamine (from aquatic animals) (1 %), fructooligosaccharides (FOS), dried algae Schizochytrium sp. (0.16 %), green tea extract (0.05 %), marigold dried (0.02 %). *Contains non-ruminant processed animal protein – shall not be fed to farmed animals except aquaculture and fur animals.",
+   "additives": "Nutritional additives (per 1 kg): vitamin D3 (3a671)* – 577 IU, vitamin E (3a700) – 204 mg, biotin (3a880) – 0.08 mg, taurine (3a370) – 1000 mg. Technological additives: antioxidants, preservatives. Zootechnical additives: gut flora stabilisers: Bacillus velezensis DSM 15544 (4b1820) – 1×10¹⁰ CFU. *Simultaneous use with vitamin D2 is not allowed.",
+   "analysis": [
+    {
+     "name": "Crude protein",
+     "value": "20 %"
+    },
+    {
+     "name": "Crude fibre",
+     "value": "4 %"
+    },
+    {
+     "name": "Crude fat",
+     "value": "3 %"
+    },
+    {
+     "name": "Crude ash",
+     "value": "4 %"
+    },
+    {
+     "name": "Starch",
+     "value": "34 %"
+    },
+    {
+     "name": "Moisture",
+     "value": "20 %"
+    },
+    {
+     "name": "Phosphorus",
+     "value": "1.35 %"
+    },
+    {
+     "name": "Sodium",
+     "value": "0.7 %"
+    },
+    {
+     "name": "Potassium",
+     "value": "0.7 %"
+    },
+    {
+     "name": "Glycerol",
+     "value": "3.7 %"
+    },
+    {
+     "name": "Total sugars",
+     "value": "4.5 %"
+    }
+   ],
+   "feeding": "The daily dose may vary according to the outdoor temperature and the pet’s lifestyle, temperament and activity. Clean, fresh water should be available at all times. Recommended number of snacks per day by the dog’s body weight: 1–5 kg – 4–6 pieces; 5–10 kg – 8–10 pieces; 10–15 kg – 12–14 pieces; over 15 kg – 16–20 pieces. Store in a cool, dry place at a temperature not above +25 °C. Batch number and best-before date: see the package."
+  },
+  "az": {
+   "full": [
+    "Nature’s Protection Superior Care White Dogs Grain Free Healthy Growth & Development – bütün cinslərdən olan ağ tüklü gənc itlərin (4–12 aylıq) sağlam böyüməsini, inkişafını və ümumi rifahını dəstəkləmək üçün hazırlanmış, həşərat proteini ilə super premium qəlyanaltı-əlavələrdir. Tərkibindəki xüsusi inqrediyentlər yalnız ev heyvanının orqanizmini faydalı maddələrlə təmin etmir, həm də gənc itin sağlam böyüməsinə və inkişafına kömək edir.",
+    "Əsas protein mənbəyi həşəratlardır. Həşərat proteini çox ekoloji protein mənbəyidir, çünki həşəratlar ənənəvi mal-qaradan daha az torpaq, su və yem tələb edir; bu, həm də əvəzolunmaz amin turşuları, vitaminlər və minerallar verən yüksək keyfiyyətli proteindir, həşərat proteinlərinin tərkibində isə antimikrob xüsusiyyətlərə malik laurin turşusu var. Emal olunmuş həşərat proteini hipoallergen hesab olunur, buna görə də qida həssaslığı və ya allergiyası olan itlər üçün yaxşı seçimdir. Qəlyanaltılardakı proteinlərin 81%-i heyvan mənşəlidir. Bu funksional qəlyanaltılar adi ləzzətlərdən daha nəm və yumşaq teksturaya malikdir; nəm məhsullarda təbii aroma daha yaxşı açılır, buna görə də onları hətta ən seçici ev heyvanları da sevir.",
+    "Qəlyanaltılar MicroZeoGen ilə zənginləşdirilib – bu, təbii mineral, vulkanik mənşəli dinamik mikronlaşdırılmış klinoptilolitdir; o, toksinlərin orqanizmdən çıxarılmasına və qida maddələrinin mənimsənilməsinin yaxşılaşmasına kömək edir, həmçinin ev heyvanının immun sistemini və orqanizmin təbii müdafiə funksiyalarını gücləndirir. Dəniz yosunu A, C, K və B6 vitaminlərinin, həmçinin kalsium, kalium, mis, yod və manqanın dəyərli mənbəyidir və diş ərpinin və diş daşının əmələ gəlməsinin qarşısını almağa kömək edir. Qəlyanaltıların tərkibində allergik reaksiyalara səbəb ola bilən taxıl mənşəli inqrediyentlər, qarğıdalı və soya məhsulları yoxdur; onlar həzm sistemini yükləmir, buna görə də həssas mədə-bağırsaq traktı və ya allergiyaya meyli olan ev heyvanları üçün optimal uyğundur. Prebiotik və probiotiklərin balanslaşdırılmış birləşməsi bağırsaq mikroflorasının balansını qorumağa və beləliklə həzmi yaxşılaşdırmağa kömək edir.",
+    "Nature’s Protection Superior Care – innovativ inqrediyentləri, ev heyvanlarının sağlam qidalanması sahəsində ən yeni texnologiya və tendensiyaları ilə tanınan super premium sinifli qəlyanaltı-əlavələr xəttidir; qəlyanaltıların tərkibində yüksək keyfiyyətli protein mənbələri və digər innovativ inqrediyentlər var. Rahat, asan açılan qablaşdırmada hətta ən ərköyün ev heyvanının da xoşuna gələcək 150 q faydalı və ətirli qəlyanaltı var. Aİ-də istehsal olunub."
+   ],
+   "composition": "emal olunmuş həşərat proteini min. 26 % (qurudulmuş və narın üyüdülmüş)*, əvvəlcədən jelatinləşdirilmiş kartof nişastası, kartof lopaları, dəniz yosunu Ascophyllum nodosum (4 %), sorbit, qliserin, qlükoza şərbəti, noxud lifi (4 %), dinamik mikronlaşdırılmış klinoptilolit (1 %), xitozamin (su heyvanlarından) (1 %), fruktooliqosaxaridlər (FOS), qurudulmuş yosun Schizochytrium sp. (0,16 %), yaşıl çay ekstraktı (0,05 %), qurudulmuş gülümbahar (0,02 %). *Gövşəməyən heyvanlardan alınmış emal olunmuş heyvan proteini ehtiva edir – akvakultura və xəz heyvanları istisna olmaqla, ferma heyvanlarına verilməməlidir.",
+   "additives": "Qida əlavələri (1 kq üçün): D3 vitamini (3a671)* – 577 BV, E vitamini (3a700) – 204 mq, biotin (3a880) – 0,08 mq, taurin (3a370) – 1000 mq. Texnoloji əlavələr: antioksidantlar, konservantlar. Zootexniki əlavələr: bağırsaq florasının stabilizatorları: Bacillus velezensis DSM 15544 (4b1820) – 1×10¹⁰ KƏV. *D2 vitamini ilə eyni vaxtda istifadəsinə icazə verilmir.",
+   "analysis": [
+    {
+     "name": "Xam protein",
+     "value": "20 %"
+    },
+    {
+     "name": "Xam lif",
+     "value": "4 %"
+    },
+    {
+     "name": "Xam yağ",
+     "value": "3 %"
+    },
+    {
+     "name": "Xam kül",
+     "value": "4 %"
+    },
+    {
+     "name": "Nişasta",
+     "value": "34 %"
+    },
+    {
+     "name": "Nəmlik",
+     "value": "20 %"
+    },
+    {
+     "name": "Fosfor",
+     "value": "1,35 %"
+    },
+    {
+     "name": "Natrium",
+     "value": "0,7 %"
+    },
+    {
+     "name": "Kalium",
+     "value": "0,7 %"
+    },
+    {
+     "name": "Qliserol",
+     "value": "3,7 %"
+    },
+    {
+     "name": "Ümumi şəkər",
+     "value": "4,5 %"
+    }
+   ],
+   "feeding": "Gündəlik doza havanın temperaturundan, ev heyvanının həyat tərzindən, temperamentindən və aktivliyindən asılı olaraq dəyişə bilər. Təmiz, təzə su həmişə əlçatan olmalıdır. İtin bədən çəkisinə görə gündə tövsiyə olunan qəlyanaltı sayı: 1–5 kq – 4–6 əd.; 5–10 kq – 8–10 əd.; 10–15 kq – 12–14 əd.; 15 kq-dan çox – 16–20 əd. Sərin və quru yerdə, +25 °C-dən yüksək olmayan temperaturda saxlayın. Partiya nömrəsi və yararlılıq müddəti: qablaşdırmaya baxın."
+  }
+ },
+ "dogs||Superior Care · Snacks||Red Coat Junior — Gums & Oral Care": {
+  "url": "/product/complementary-grain-free-feed-snacks-for-free-gums-and-oral-care-with-insects-for-junior-all-breed-dogs-with-red-coat/",
+  "sku": null,
+  "packs": [
+   "150 g"
+  ],
+  "feed": [],
+  "ru": {
+   "full": [
+    "«Nature’s Protection Superior Care Red Coat Grain Free Gums & Oral Care» — пищевые добавки-лакомства супер-премиум класса с протеинами насекомых, разработанные для поддержания гигиены полости рта и здоровья дёсен у молодых собак всех пород с рыжим окрасом шерсти, а также их общего благополучия. В основе лакомств — специализированная формула RCE (Red Coat Enhancer), способствующая усилению и поддержанию интенсивности рыжего окраса шерсти.",
+    "Основной источник белка — насекомые. Протеин насекомых — очень экологичный источник белка, ведь насекомым требуется меньше земли, воды и корма, чем традиционному скоту; это высококачественный белок, который также даёт незаменимые аминокислоты, витамины и минералы, а протеины насекомых содержат лауриновую кислоту, обладающую антимикробными свойствами. Переработанный белок насекомых считается гипоаллергенным, поэтому хорошо подходит собакам с пищевой чувствительностью или аллергией. 67% белков в лакомствах — животного происхождения. Эти функциональные лакомства имеют более влажную и мягкую текстуру, чем обычные; во влажных продуктах сильнее раскрывается натуральный аромат, поэтому они нравятся даже самым привередливым питомцам.",
+    "Уникальная технология производства и содержащийся в лакомствах минерал полифосфат натрия обладают антибактериальными свойствами, которые помогают уменьшить количество бактерий и тем самым неприятный запах из пасти собаки. Морские водоросли — ценный источник витаминов A, C, K и B6, а также кальция, калия, меди, йода и марганца; они способствуют предотвращению образования зубного налёта и зубного камня. Зелёный чай стимулирует обменные процессы, обладает антибактериальными свойствами, способствует устранению неприятного запаха из пасти, оказывает антиоксидантное действие и помогает уменьшить негативное воздействие стресса.",
+    "Лакомства обогащены MicroZeoGen — натуральным минералом, динамически микронизированным клиноптилолитом вулканического происхождения, который помогает выводить токсины из организма и улучшает усвоение питательных веществ, а также способствует укреплению иммунной системы питомца и естественных защитных функций организма. Лакомства не содержат ингредиентов зернового происхождения, кукурузы и сои, способных вызывать аллергические реакции; они не перегружают пищеварительную систему, поэтому оптимально подходят питомцам с чувствительным желудочно-кишечным трактом или склонностью к аллергии. Сбалансированное сочетание пребиотиков и пробиотиков помогает поддерживать баланс кишечной микрофлоры и тем самым улучшает пищеварение.",
+    "Nature’s Protection Superior Care — линейка лакомств класса супер-премиум с инновационными ингредиентами, созданная с применением передовых технологий и с учётом новейших тенденций в области здорового питания домашних животных; в составе лакомств — высококачественные источники белка и другие инновационные ингредиенты. Удобная, легко открывающаяся упаковка содержит 150 г полезных и ароматных лакомств, которые придутся по вкусу даже самому избалованному питомцу. Произведено в ЕС."
+   ],
+   "composition": "переработанный белок насекомых мин. 24 % (высушенный и мелко измельчённый)*, предварительно желатинизированный картофельный крахмал, картофельные хлопья, рыбная мука, гороховый белок, морские водоросли Ascophyllum nodosum (5 %), сорбит, глицерин, глюкозный сироп, гороховая клетчатка (5 %), полифосфат натрия (2 %), динамически микронизированный клиноптилолит (1 %), хитозамин (из водных животных) (1 %), фруктоолигосахариды (ФОС), экстракт зелёного чая (0,5 %), сушёная календула (0,02 %). *Содержит переработанный животный белок нежвачных животных — не предназначен для кормления сельскохозяйственных животных, за исключением животных аквакультуры и пушных зверей.",
+   "additives": "Пищевые добавки (на 1 кг): витамин D3 (3a671)* – 577 МЕ, витамин E (3a700) – 204 мг, биотин (3a880) – 0,08 мг, L-тирозин (3c401) – 500 мг, L-цистин (3c391) – 1 г, L-триптофан (3c440) – 500 мг, таурин (3a370) – 1000 мг. Технологические добавки: антиоксиданты, консерванты. Зоотехнические добавки: стабилизаторы кишечной флоры: Bacillus velezensis DSM 15544 (4b1820) – 1×10¹⁰ КОЕ. *Одновременное применение с витамином D2 не допускается.",
+   "analysis": [
+    {
+     "name": "Сырой протеин",
+     "value": "24 %"
+    },
+    {
+     "name": "Сырая клетчатка",
+     "value": "5,5 %"
+    },
+    {
+     "name": "Сырой жир",
+     "value": "3 %"
+    },
+    {
+     "name": "Сырая зола",
+     "value": "7,1 %"
+    },
+    {
+     "name": "Крахмал",
+     "value": "24 %"
+    },
+    {
+     "name": "Влажность",
+     "value": "18 %"
+    },
+    {
+     "name": "Фосфор",
+     "value": "1,35 %"
+    },
+    {
+     "name": "Натрий",
+     "value": "0,7 %"
+    },
+    {
+     "name": "Калий",
+     "value": "0,7 %"
+    },
+    {
+     "name": "Глицерол",
+     "value": "3,7 %"
+    },
+    {
+     "name": "Общий сахар",
+     "value": "4,4 %"
+    }
+   ],
+   "feeding": "Суточная доза может варьироваться в зависимости от температуры воздуха, образа жизни, темперамента и активности питомца. У питомца всегда должен быть доступ к чистой свежей воде. Рекомендуемое количество лакомств в день в зависимости от массы тела собаки: 1–10 кг – 0,5 шт.; 11–25 кг – 1 шт.; более 25 кг – 2 шт. Хранить в прохладном сухом месте при температуре не выше +25 °C. Номер партии и срок годности указаны на упаковке."
+  },
+  "en": {
+   "full": [
+    "Nature’s Protection Superior Care Red Coat Grain Free Gums & Oral Care are premium supplemental snacks with insect protein, specially crafted to support oral hygiene and gum health in young dogs of all breeds with a red coat, as well as their overall well-being. The snacks are based on the specialised RCE (Red Coat Enhancer) formula, which helps enhance and maintain the intensity of a red coat colour.",
+    "The main source of protein is insects. Insect protein is a highly sustainable source of protein, as insects require less land, water and feed than traditional livestock; it is a high-quality protein that also provides essential amino acids, vitamins and minerals, and insect proteins contain lauric acid, which has antimicrobial properties. Processed insect protein is considered hypoallergenic, which makes it a good choice for dogs with food sensitivities or allergies. 67% of the proteins in the snacks are of animal origin. These functional snacks have a wetter and softer texture than ordinary treats; moister products reveal a more natural aroma, which makes them a favourite even of the pickiest pets.",
+    "The unique production technology and the mineral sodium polyphosphate contained in the snacks have antibacterial properties that can help reduce the number of bacteria and thus the unpleasant smell in the dog’s mouth. Seaweed is a valuable source of vitamins A, C, K and B6, as well as calcium, potassium, copper, iodine and manganese, and helps prevent the formation of dental plaque and tartar. Green tea stimulates metabolic processes, has antibacterial properties, helps eliminate bad breath, has an antioxidant effect and helps reduce the negative effects of stress.",
+    "The snacks are enriched with MicroZeoGen – a natural mineral, dynamically micronized clinoptilolite of volcanic origin, which helps remove toxins from the body and improve nutrient absorption, and also helps strengthen the pet’s immune system and the body’s natural defences. The snacks contain no ingredients of grain origin, corn or soy products that can cause allergic reactions; they do not overload the digestive system and are therefore well suited to pets with a sensitive digestive tract or a tendency to allergies. A balanced combination of prebiotics and probiotics helps maintain the balance of the gut microflora and so improves digestion.",
+    "Nature’s Protection Superior Care is a Super Premium line of supplemental snacks known for innovative ingredients and the newest technologies and trends in healthy pet nutrition; the snacks contain high-quality protein sources and other innovative ingredients. The convenient, easy-to-open pack holds 150 g of healthy, aromatic snacks that will appeal even to the most pampered pet. Made in the EU."
+   ],
+   "composition": "processed insect protein min. 24 % (dried and finely ground)*, pregelatinised potato starch, potato flakes, fish meal, pea protein, seaweed Ascophyllum nodosum (5 %), sorbitol, glycerine, glucose syrup, pea fibre (5 %), sodium polyphosphate (2 %), dynamic micronized clinoptilolite (1 %), chitosamine (from aquatic animals) (1 %), fructooligosaccharides (FOS), green tea extract (0.5 %), marigold dried (0.02 %). *Contains non-ruminant processed animal protein – shall not be fed to farmed animals except aquaculture and fur animals.",
+   "additives": "Nutritional additives (per 1 kg): vitamin D3 (3a671)* – 577 IU, vitamin E (3a700) – 204 mg, biotin (3a880) – 0.08 mg, L-tyrosine (3c401) – 500 mg, L-cystine (3c391) – 1 g, L-tryptophan (3c440) – 500 mg, taurine (3a370) – 1000 mg. Technological additives: antioxidants, preservatives. Zootechnical additives: gut flora stabilisers: Bacillus velezensis DSM 15544 (4b1820) – 1×10¹⁰ CFU. *Simultaneous use with vitamin D2 is not allowed.",
+   "analysis": [
+    {
+     "name": "Crude protein",
+     "value": "24 %"
+    },
+    {
+     "name": "Crude fibre",
+     "value": "5.5 %"
+    },
+    {
+     "name": "Crude fat",
+     "value": "3 %"
+    },
+    {
+     "name": "Crude ash",
+     "value": "7.1 %"
+    },
+    {
+     "name": "Starch",
+     "value": "24 %"
+    },
+    {
+     "name": "Moisture",
+     "value": "18 %"
+    },
+    {
+     "name": "Phosphorus",
+     "value": "1.35 %"
+    },
+    {
+     "name": "Sodium",
+     "value": "0.7 %"
+    },
+    {
+     "name": "Potassium",
+     "value": "0.7 %"
+    },
+    {
+     "name": "Glycerol",
+     "value": "3.7 %"
+    },
+    {
+     "name": "Total sugars",
+     "value": "4.4 %"
+    }
+   ],
+   "feeding": "The daily dose may vary according to the outdoor temperature and the pet’s lifestyle, temperament and activity. Clean, fresh water should be available at all times. Recommended number of snacks per day by the dog’s body weight: 1–10 kg – 0.5 piece; 11–25 kg – 1 piece; over 25 kg – 2 pieces. Store in a cool, dry place at a temperature not above +25 °C. Batch number and best-before date: see the package."
+  },
+  "az": {
+   "full": [
+    "Nature’s Protection Superior Care Red Coat Grain Free Gums & Oral Care – bütün cinslərdən olan kürən tüklü gənc itlərdə ağız boşluğunun gigiyenasını, diş ətinin sağlamlığını və ümumi rifahı dəstəkləmək üçün hazırlanmış, həşərat proteini ilə super premium qəlyanaltı-əlavələrdir. Qəlyanaltıların əsasında kürən tük rənginin intensivliyini artırmağa və qorumağa kömək edən xüsusi RCE (Red Coat Enhancer) formulu dayanır.",
+    "Əsas protein mənbəyi həşəratlardır. Həşərat proteini çox ekoloji protein mənbəyidir, çünki həşəratlar ənənəvi mal-qaradan daha az torpaq, su və yem tələb edir; bu, həm də əvəzolunmaz amin turşuları, vitaminlər və minerallar verən yüksək keyfiyyətli proteindir, həşərat proteinlərinin tərkibində isə antimikrob xüsusiyyətlərə malik laurin turşusu var. Emal olunmuş həşərat proteini hipoallergen hesab olunur, buna görə də qida həssaslığı və ya allergiyası olan itlər üçün yaxşı seçimdir. Qəlyanaltılardakı proteinlərin 67%-i heyvan mənşəlidir. Bu funksional qəlyanaltılar adi ləzzətlərdən daha nəm və yumşaq teksturaya malikdir; nəm məhsullarda təbii aroma daha yaxşı açılır, buna görə də onları hətta ən seçici ev heyvanları da sevir.",
+    "Unikal istehsal texnologiyası və qəlyanaltıların tərkibindəki mineral natrium polifosfat antibakterial xüsusiyyətlərə malikdir; onlar bakteriyaların sayını və beləliklə itin ağzından gələn xoşagəlməz qoxunu azaltmağa kömək edə bilər. Dəniz yosunu A, C, K və B6 vitaminlərinin, həmçinin kalsium, kalium, mis, yod və manqanın dəyərli mənbəyidir və diş ərpinin və diş daşının əmələ gəlməsinin qarşısını almağa kömək edir. Yaşıl çay maddələr mübadiləsini stimullaşdırır, antibakterial xüsusiyyətlərə malikdir, ağızdan gələn xoşagəlməz qoxunun aradan qaldırılmasına kömək edir, antioksidant təsir göstərir və stresin mənfi təsirini azaltmağa kömək edir.",
+    "Qəlyanaltılar MicroZeoGen ilə zənginləşdirilib – bu, təbii mineral, vulkanik mənşəli dinamik mikronlaşdırılmış klinoptilolitdir; o, toksinlərin orqanizmdən çıxarılmasına və qida maddələrinin mənimsənilməsinin yaxşılaşmasına kömək edir, həmçinin ev heyvanının immun sistemini və orqanizmin təbii müdafiə funksiyalarını gücləndirir. Qəlyanaltıların tərkibində allergik reaksiyalara səbəb ola bilən taxıl mənşəli inqrediyentlər, qarğıdalı və soya məhsulları yoxdur; onlar həzm sistemini yükləmir, buna görə də həssas mədə-bağırsaq traktı və ya allergiyaya meyli olan ev heyvanları üçün optimal uyğundur. Prebiotik və probiotiklərin balanslaşdırılmış birləşməsi bağırsaq mikroflorasının balansını qorumağa və beləliklə həzmi yaxşılaşdırmağa kömək edir.",
+    "Nature’s Protection Superior Care – innovativ inqrediyentləri, ev heyvanlarının sağlam qidalanması sahəsində ən yeni texnologiya və tendensiyaları ilə tanınan super premium sinifli qəlyanaltı-əlavələr xəttidir; qəlyanaltıların tərkibində yüksək keyfiyyətli protein mənbələri və digər innovativ inqrediyentlər var. Rahat, asan açılan qablaşdırmada hətta ən ərköyün ev heyvanının da xoşuna gələcək 150 q faydalı və ətirli qəlyanaltı var. Aİ-də istehsal olunub."
+   ],
+   "composition": "emal olunmuş həşərat proteini min. 24 % (qurudulmuş və narın üyüdülmüş)*, əvvəlcədən jelatinləşdirilmiş kartof nişastası, kartof lopaları, balıq unu, noxud proteini, dəniz yosunu Ascophyllum nodosum (5 %), sorbit, qliserin, qlükoza şərbəti, noxud lifi (5 %), natrium polifosfat (2 %), dinamik mikronlaşdırılmış klinoptilolit (1 %), xitozamin (su heyvanlarından) (1 %), fruktooliqosaxaridlər (FOS), yaşıl çay ekstraktı (0,5 %), qurudulmuş gülümbahar (0,02 %). *Gövşəməyən heyvanlardan alınmış emal olunmuş heyvan proteini ehtiva edir – akvakultura və xəz heyvanları istisna olmaqla, ferma heyvanlarına verilməməlidir.",
+   "additives": "Qida əlavələri (1 kq üçün): D3 vitamini (3a671)* – 577 BV, E vitamini (3a700) – 204 mq, biotin (3a880) – 0,08 mq, L-tirozin (3c401) – 500 mq, L-sistin (3c391) – 1 q, L-triptofan (3c440) – 500 mq, taurin (3a370) – 1000 mq. Texnoloji əlavələr: antioksidantlar, konservantlar. Zootexniki əlavələr: bağırsaq florasının stabilizatorları: Bacillus velezensis DSM 15544 (4b1820) – 1×10¹⁰ KƏV. *D2 vitamini ilə eyni vaxtda istifadəsinə icazə verilmir.",
+   "analysis": [
+    {
+     "name": "Xam protein",
+     "value": "24 %"
+    },
+    {
+     "name": "Xam lif",
+     "value": "5,5 %"
+    },
+    {
+     "name": "Xam yağ",
+     "value": "3 %"
+    },
+    {
+     "name": "Xam kül",
+     "value": "7,1 %"
+    },
+    {
+     "name": "Nişasta",
+     "value": "24 %"
+    },
+    {
+     "name": "Nəmlik",
+     "value": "18 %"
+    },
+    {
+     "name": "Fosfor",
+     "value": "1,35 %"
+    },
+    {
+     "name": "Natrium",
+     "value": "0,7 %"
+    },
+    {
+     "name": "Kalium",
+     "value": "0,7 %"
+    },
+    {
+     "name": "Qliserol",
+     "value": "3,7 %"
+    },
+    {
+     "name": "Ümumi şəkər",
+     "value": "4,4 %"
+    }
+   ],
+   "feeding": "Gündəlik doza havanın temperaturundan, ev heyvanının həyat tərzindən, temperamentindən və aktivliyindən asılı olaraq dəyişə bilər. Təmiz, təzə su həmişə əlçatan olmalıdır. İtin bədən çəkisinə görə gündə tövsiyə olunan qəlyanaltı sayı: 1–10 kq – 0,5 əd.; 11–25 kq – 1 əd.; 25 kq-dan çox – 2 əd. Sərin və quru yerdə, +25 °C-dən yüksək olmayan temperaturda saxlayın. Partiya nömrəsi və yararlılıq müddəti: qablaşdırmaya baxın."
+  }
+ },
+ "dogs||Superior Care · Flowpack||White Dogs Junior — Brain Development": {
+  "url": "/product/complementary-grain-free-feed-snacks-for-junior-dogs-with-salmon-2/",
+  "sku": null,
+  "packs": [
+   "110 g"
+  ],
+  "feed": [],
+  "ru": {
+   "full": [
+    "«Nature’s Protection Superior Care White Dogs Grain Free Brain Development» — пищевые добавки-лакомства высочайшего качества с лососем, разработанные для молодых собак всех пород с белым и светлым окрасом шерсти, для поддержки развития мозга, правильного развития и общего благополучия. Это прекрасный способ проявить любовь к собаке и одновременно обеспечить её суточной дозой необходимых витаминов, минералов, пребиотиков и пробиотиков.",
+    "Лакомства содержат формулу Tear Stains Off — тщательно подобранный комплекс аминокислот и полностью сбалансированные ингредиенты, которые могут помочь в борьбе с коричневыми пятнами от слёз вокруг глаз, пасти, на лапах или других частях тела. Основной источник белка и первый ингредиент состава — лосось: источник высококачественного легкоусвояемого белка, богатый жирными кислотами Омега-3, витаминами и минералами, считающийся гипоаллергенным и отличающийся высокой вкусовой привлекательностью. Эти функциональные лакомства имеют более влажную и мягкую текстуру, чем обычные; во влажных продуктах сильнее раскрывается натуральный аромат, поэтому они нравятся даже самым привередливым питомцам.",
+    "Лакомства обогащены MicroZeoGen — природным клиноптилолитом вулканического происхождения. Он помогает выводить токсины из организма питомца, а после детоксикации ценные питательные вещества, витамины и минералы легко усваиваются; кроме того, он помогает укрепить иммунную систему. В составе есть морские водоросли — природный источник витаминов A, C, K и B6, кальция, калия, меди, йода и марганца, — которые поддерживают гигиену полости рта и могут усиливать эффект удаления зубного налёта и камня.",
+    "Лакомства не содержат ингредиентов зернового происхождения, кукурузы и сои, способных вызывать аллергические реакции; они не перегружают пищеварительную систему, поэтому оптимально подходят питомцам с чувствительным желудочно-кишечным трактом или склонностью к аллергии. Сбалансированное сочетание пребиотиков и пробиотиков помогает поддерживать баланс кишечной микрофлоры и тем самым улучшает пищеварение. Nature’s Protection Superior Care — линейка лакомств класса супер-премиум, известная инновационными ингредиентами и новейшими технологиями в здоровом питании домашних животных; в составе этих лакомств — только ингредиенты и источники белка высочайшего качества. Удобная, легко открывающаяся упаковка содержит 110 г ароматных и полезных лакомств. Произведено в ЕС."
+   ],
+   "composition": "лосось мин. 24 % (высушенный и мелко измельчённый), предварительно желатинизированный картофельный крахмал, гидролизованная перьевая мука, сушёная картофельная мезга, морские водоросли Ascophyllum nodosum (6 %), сорбит, глицерин, глюкозный сироп, гороховая клетчатка, динамически микронизированный клиноптилолит (1 %), хитозамин (из водных животных) (1 %), фруктоолигосахариды (ФОС), экстракт зелёного чая (0,5 %), глюкозамин (500 мг/кг), хондроитинсульфат (250 мг/кг), сушёные водоросли Schizochytrium sp. (0,16 %).",
+   "additives": "Пищевые добавки (на 1 кг): витамин D3 (3a671)* – 577 МЕ, витамин E (3a700) – 204 мг, биотин (3a880) – 0,08 мг. Технологические добавки: антиоксиданты, консерванты. Зоотехнические добавки: стабилизаторы кишечной флоры: Bacillus subtilis DSM 15544 (4b1820) – 1×10¹⁰ КОЕ. *Одновременное применение с витамином D2 не допускается.",
+   "analysis": [
+    {
+     "name": "Сырой протеин",
+     "value": "22 %"
+    },
+    {
+     "name": "Сырая клетчатка",
+     "value": "4,5 %"
+    },
+    {
+     "name": "Сырой жир",
+     "value": "3,7 %"
+    },
+    {
+     "name": "Сырая зола",
+     "value": "5,7 %"
+    },
+    {
+     "name": "Влажность",
+     "value": "20 %"
+    },
+    {
+     "name": "Крахмал",
+     "value": "13,5 %"
+    },
+    {
+     "name": "Натрий",
+     "value": "0,11 %"
+    },
+    {
+     "name": "Калий",
+     "value": "0,38 %"
+    },
+    {
+     "name": "Глицерол",
+     "value": "3,74 %"
+    },
+    {
+     "name": "Общий сахар",
+     "value": "4,52 %"
+    }
+   ],
+   "feeding": "Суточная доза может варьироваться в зависимости от температуры воздуха, образа жизни, темперамента и активности питомца. У питомца всегда должен быть доступ к чистой свежей воде. Рекомендуемое количество лакомств в день в зависимости от массы тела собаки: 1–5 кг – 1 шт.; 5–10 кг – 1–2 шт.; 10–15 кг – 2–3 шт.; 15–20 кг – 3–4 шт.; 20–30 кг – 4–6 шт.; 30–40 кг – 6–7 шт. Хранить в прохладном сухом месте при температуре не выше +25 °C. Номер партии и срок годности указаны на упаковке."
+  },
+  "en": {
+   "full": [
+    "Nature’s Protection Superior Care White Dogs Grain Free Brain Development are supplemental snacks of the highest quality with salmon, designed for junior dogs of all breeds with a white or light coat to support brain development, proper growth and overall well-being. They are a perfect way to show love for your dog while providing a daily dose of essential vitamins, minerals, prebiotics and probiotics.",
+    "The snacks contain the Tear Stains Off formula – a carefully selected amino acid complex and fully balanced ingredients that may help fight brown tear stains around the eyes, mouth, paws or other parts of the body. The main source of protein, and the first ingredient, is salmon: a good source of high-quality, easily digestible protein, rich in Omega-3 fatty acids, vitamins and minerals, considered hypoallergenic and known to be highly palatable. These functional snacks have a wetter and softer texture than ordinary treats; moister products reveal a more natural aroma, which makes them a favourite even of the pickiest pets.",
+    "The snacks are enriched with MicroZeoGen – natural clinoptilolite of volcanic origin. It helps remove toxins from the pet’s body, and once the body is detoxified, valuable nutrients, vitamins and minerals are easily absorbed; it also helps strengthen the immune system. The composition contains seaweed – a natural source of vitamins A, C, K and B6, calcium, potassium, copper, iodine and manganese – which supports oral hygiene and may enhance the removal of dental plaque and tartar.",
+    "The snacks contain no ingredients of grain origin, corn or soy products that can cause allergic reactions; they do not overload the digestive system and are therefore well suited to pets with a sensitive digestive tract or a tendency to allergies. A balanced combination of prebiotics and probiotics helps maintain the balance of the gut microflora and so improves digestion. Nature’s Protection Superior Care is a Super Premium line of supplemental snacks known for innovative ingredients and the newest technologies in healthy pet nutrition; these snacks contain only the highest quality ingredients and protein sources. The convenient, easy-to-open pack holds 110 g of aromatic, healthy snacks. Made in the EU."
+   ],
+   "composition": "salmon min. 24 % (dried and finely ground), pregelatinised potato starch, hydrolysed feather meal, dried potato pulp, seaweed Ascophyllum nodosum (6 %), sorbitol, glycerine, glucose syrup, pea fibre, dynamic micronized clinoptilolite (1 %), chitosamine (from aquatic animals) (1 %), fructooligosaccharides (FOS), green tea extract (0.5 %), glucosamine (500 mg/kg), chondroitin sulphate (250 mg/kg), dried algae Schizochytrium sp. (0.16 %).",
+   "additives": "Nutritional additives (per 1 kg): vitamin D3 (3a671)* – 577 IU, vitamin E (3a700) – 204 mg, biotin (3a880) – 0.08 mg. Technological additives: antioxidants, preservatives. Zootechnical additives: gut flora stabilisers: Bacillus subtilis DSM 15544 (4b1820) – 1×10¹⁰ CFU. *Simultaneous use with vitamin D2 is not allowed.",
+   "analysis": [
+    {
+     "name": "Crude protein",
+     "value": "22 %"
+    },
+    {
+     "name": "Crude fibre",
+     "value": "4.5 %"
+    },
+    {
+     "name": "Crude fat",
+     "value": "3.7 %"
+    },
+    {
+     "name": "Crude ash",
+     "value": "5.7 %"
+    },
+    {
+     "name": "Moisture",
+     "value": "20 %"
+    },
+    {
+     "name": "Starch",
+     "value": "13.5 %"
+    },
+    {
+     "name": "Sodium",
+     "value": "0.11 %"
+    },
+    {
+     "name": "Potassium",
+     "value": "0.38 %"
+    },
+    {
+     "name": "Glycerol",
+     "value": "3.74 %"
+    },
+    {
+     "name": "Total sugars",
+     "value": "4.52 %"
+    }
+   ],
+   "feeding": "The daily dose may vary according to the outdoor temperature and the pet’s lifestyle, temperament and activity. Clean, fresh water should be available at all times. Recommended number of snacks per day by the dog’s body weight: 1–5 kg – 1 piece; 5–10 kg – 1–2 pieces; 10–15 kg – 2–3 pieces; 15–20 kg – 3–4 pieces; 20–30 kg – 4–6 pieces; 30–40 kg – 6–7 pieces. Store in a cool, dry place at a temperature not above +25 °C. Batch number and best-before date: see the package."
+  },
+  "az": {
+   "full": [
+    "Nature’s Protection Superior Care White Dogs Grain Free Brain Development – ağ və açıq rəngli tükü olan bütün cinslərdən gənc itlər üçün beynin inkişafını, düzgün böyüməni və ümumi rifahı dəstəkləmək məqsədilə hazırlanmış, qızılbalıqlı ən yüksək keyfiyyətli qəlyanaltı-əlavələrdir. Bu, itinizə sevginizi göstərmək və eyni zamanda onu vacib vitamin, mineral, prebiotik və probiotiklərin gündəlik dozası ilə təmin etmək üçün əla üsuldur.",
+    "Qəlyanaltıların tərkibində Tear Stains Off formulu var – diqqətlə seçilmiş amin turşuları kompleksi və tam balanslaşdırılmış inqrediyentlər gözlərin, ağzın, pəncələrin və ya bədənin digər hissələrinin ətrafındakı qəhvəyi göz yaşı ləkələri ilə mübarizəyə kömək edə bilər. Əsas protein mənbəyi və tərkibin birinci inqrediyenti qızılbalıqdır: yüksək keyfiyyətli, asan həzm olunan protein mənbəyi, Omeqa-3 yağ turşuları, vitaminlər və minerallarla zəngin, hipoallergen hesab edilən və yüksək dad cəlbediciliyi ilə tanınan məhsuldur. Bu funksional qəlyanaltılar adi ləzzətlərdən daha nəm və yumşaq teksturaya malikdir; nəm məhsullarda təbii aroma daha yaxşı açılır, buna görə də onları hətta ən seçici ev heyvanları da sevir.",
+    "Qəlyanaltılar MicroZeoGen – vulkanik mənşəli təbii klinoptilolit ilə zənginləşdirilib. O, toksinlərin ev heyvanının orqanizmindən çıxarılmasına kömək edir, detoksikasiyadan sonra isə dəyərli qida maddələri, vitaminlər və minerallar asanlıqla mənimsənilir; bundan əlavə, immun sistemini möhkəmləndirməyə kömək edir. Tərkibdə A, C, K və B6 vitaminlərinin, kalsium, kalium, mis, yod və manqanın təbii mənbəyi olan dəniz yosunu var; o, ağız boşluğunun gigiyenasını dəstəkləyir və diş ərpinin və daşının təmizlənməsi effektini gücləndirə bilər.",
+    "Qəlyanaltıların tərkibində allergik reaksiyalara səbəb ola bilən taxıl mənşəli inqrediyentlər, qarğıdalı və soya məhsulları yoxdur; onlar həzm sistemini yükləmir, buna görə də həssas mədə-bağırsaq traktı və ya allergiyaya meyli olan ev heyvanları üçün optimal uyğundur. Prebiotik və probiotiklərin balanslaşdırılmış birləşməsi bağırsaq mikroflorasının balansını qorumağa və beləliklə həzmi yaxşılaşdırmağa kömək edir. Nature’s Protection Superior Care – innovativ inqrediyentləri və ev heyvanlarının sağlam qidalanmasında ən yeni texnologiyaları ilə tanınan super premium sinifli qəlyanaltı-əlavələr xəttidir; bu qəlyanaltıların tərkibində yalnız ən yüksək keyfiyyətli inqrediyentlər və protein mənbələri var. Rahat, asan açılan qablaşdırmada 110 q ətirli və faydalı qəlyanaltı var. Aİ-də istehsal olunub."
+   ],
+   "composition": "qızılbalıq min. 24 % (qurudulmuş və narın üyüdülmüş), əvvəlcədən jelatinləşdirilmiş kartof nişastası, hidrolizə olunmuş lələk unu, qurudulmuş kartof pulpası, dəniz yosunu Ascophyllum nodosum (6 %), sorbit, qliserin, qlükoza şərbəti, noxud lifi, dinamik mikronlaşdırılmış klinoptilolit (1 %), xitozamin (su heyvanlarından) (1 %), fruktooliqosaxaridlər (FOS), yaşıl çay ekstraktı (0,5 %), qlükozamin (500 mq/kq), xondroitin sulfat (250 mq/kq), qurudulmuş yosun Schizochytrium sp. (0,16 %).",
+   "additives": "Qida əlavələri (1 kq üçün): D3 vitamini (3a671)* – 577 BV, E vitamini (3a700) – 204 mq, biotin (3a880) – 0,08 mq. Texnoloji əlavələr: antioksidantlar, konservantlar. Zootexniki əlavələr: bağırsaq florasının stabilizatorları: Bacillus subtilis DSM 15544 (4b1820) – 1×10¹⁰ KƏV. *D2 vitamini ilə eyni vaxtda istifadəsinə icazə verilmir.",
+   "analysis": [
+    {
+     "name": "Xam protein",
+     "value": "22 %"
+    },
+    {
+     "name": "Xam lif",
+     "value": "4,5 %"
+    },
+    {
+     "name": "Xam yağ",
+     "value": "3,7 %"
+    },
+    {
+     "name": "Xam kül",
+     "value": "5,7 %"
+    },
+    {
+     "name": "Nəmlik",
+     "value": "20 %"
+    },
+    {
+     "name": "Nişasta",
+     "value": "13,5 %"
+    },
+    {
+     "name": "Natrium",
+     "value": "0,11 %"
+    },
+    {
+     "name": "Kalium",
+     "value": "0,38 %"
+    },
+    {
+     "name": "Qliserol",
+     "value": "3,74 %"
+    },
+    {
+     "name": "Ümumi şəkər",
+     "value": "4,52 %"
+    }
+   ],
+   "feeding": "Gündəlik doza havanın temperaturundan, ev heyvanının həyat tərzindən, temperamentindən və aktivliyindən asılı olaraq dəyişə bilər. Təmiz, təzə su həmişə əlçatan olmalıdır. İtin bədən çəkisinə görə gündə tövsiyə olunan qəlyanaltı sayı: 1–5 kq – 1 əd.; 5–10 kq – 1–2 əd.; 10–15 kq – 2–3 əd.; 15–20 kq – 3–4 əd.; 20–30 kq – 4–6 əd.; 30–40 kq – 6–7 əd. Sərin və quru yerdə, +25 °C-dən yüksək olmayan temperaturda saxlayın. Partiya nömrəsi və yararlılıq müddəti: qablaşdırmaya baxın."
+  }
+ },
+ "dogs||Superior Care · Flowpack||White Dogs Junior — Cognitive & Vision Support": {
+  "url": "/product/complementary-grain-free-feed-snacks-for-sensitive-care-with-salmon-for-junior-all-breed-dogs-with-white-coat/",
+  "sku": null,
+  "packs": [
+   "150 g"
+  ],
+  "feed": [],
+  "ru": {
+   "full": [
+    "«Nature’s Protection Superior Care White Dogs Grain Free Junior — Cognitive and Vision Support (Sensitive Care)» — пищевые добавки-лакомства супер-премиум класса с лососем, разработанные для молодых белошерстных собак всех пород, в том числе с чувствительной системой пищеварения, для поддержания их общего благополучия. Содержащиеся в них специализированные ингредиенты не только насыщают организм питомца полезными веществами, но и способствуют улучшению работы желудочно-кишечного тракта.",
+    "Основной источник белка — сертифицированный лосось высочайшего качества: легкоусвояемый гипоаллергенный белок, богатый жирными кислотами Омега-3, витаминами и минералами и отличающийся высокой вкусовой привлекательностью; он способствует поддержанию здоровья кожи и шерсти и улучшает работу пищеварительной системы. Эти функциональные лакомства имеют более влажную и мягкую текстуру, чем обычные; во влажных продуктах сильнее раскрывается натуральный аромат, поэтому они нравятся даже самым привередливым питомцам.",
+    "В составе есть микроводоросли Schizochytrium sp. — источник витаминов A, C, E и K и минералов, таких как железо, цинк и селен, — которые помогают поддерживать здоровое зрение, а жирные кислоты Омега-3 поддерживают работу мозга. Морские водоросли — источник витаминов A, C, K и B6, кальция, калия, меди, йода и марганца и ценный источник железа; они способствуют предотвращению образования зубного налёта и камня, а также улучшению работы головного мозга и поддержанию остроты зрения. Лакомства обогащены MicroZeoGen — натуральным минералом, динамически микронизированным клиноптилолитом вулканического происхождения, который помогает выводить токсины из организма и улучшает усвоение питательных веществ, а также способствует укреплению иммунной системы питомца и естественных защитных функций организма.",
+    "Лакомства не содержат ингредиентов зернового происхождения, кукурузы и сои, способных вызывать аллергические реакции; они не перегружают пищеварительную систему, поэтому оптимально подходят питомцам с чувствительным желудочно-кишечным трактом или склонностью к аллергии. Сбалансированное сочетание пребиотиков и пробиотиков помогает поддерживать баланс кишечной микрофлоры и тем самым улучшает пищеварение. Nature’s Protection Superior Care — линейка лакомств класса супер-премиум с инновационными ингредиентами, созданная с применением передовых технологий и с учётом новейших тенденций в области здорового питания домашних животных; в составе лакомств — высококачественные источники белка и другие инновационные ингредиенты. Удобная, легко открывающаяся упаковка содержит 150 г полезных и ароматных лакомств, которые придутся по вкусу даже самому избалованному питомцу."
+   ],
+   "composition": "лосось мин. 24 % (высушенный и мелко измельчённый), картофельные хлопья, предварительно желатинизированный картофельный крахмал, сорбит, глицерин, глюкозный сироп, пивные дрожжи, гороховая клетчатка, морские водоросли Ascophyllum nodosum (2 %), динамически микронизированный клиноптилолит (1 %), хитозамин (из водных животных) (1 %), семена подорожника (1 %), фруктоолигосахариды (ФОС) (0,9 %), экстракт зелёного чая (0,5 %), сушёная календула (0,02 %).",
+   "additives": "Пищевые добавки (на 1 кг): витамин D3 (3a671)* – 577 МЕ, витамин E (3a700) – 204 мг, биотин (3a880) – 0,08 мг, L-тирозин (3c401) – 500 мг, L-цистин (3c391) – 1 г, L-триптофан (3c440) – 500 мг. Технологические добавки: антиоксиданты, консерванты. Зоотехнические добавки: стабилизаторы кишечной флоры: Bacillus velezensis DSM 15544 (4b1820) – 1×10¹⁰ КОЕ. *Одновременное применение с витамином D2 не допускается.",
+   "analysis": [
+    {
+     "name": "Сырой протеин",
+     "value": "21 %"
+    },
+    {
+     "name": "Сырая клетчатка",
+     "value": "2,5 %"
+    },
+    {
+     "name": "Сырой жир",
+     "value": "3,5 %"
+    },
+    {
+     "name": "Сырая зола",
+     "value": "5 %"
+    },
+    {
+     "name": "Крахмал",
+     "value": "16,2 %"
+    },
+    {
+     "name": "Влажность",
+     "value": "20 %"
+    },
+    {
+     "name": "Натрий",
+     "value": "0,1 %"
+    },
+    {
+     "name": "Калий",
+     "value": "0,58 %"
+    },
+    {
+     "name": "Глицерол",
+     "value": "3,7 %"
+    },
+    {
+     "name": "Общий сахар",
+     "value": "4,5 %"
+    }
+   ],
+   "feeding": "Суточная доза может варьироваться в зависимости от температуры воздуха, образа жизни, темперамента и активности питомца. У питомца всегда должен быть доступ к чистой свежей воде. Рекомендуемое количество лакомств в день в зависимости от массы тела собаки: 1–5 кг – 4–6 шт.; 5–10 кг – 8–10 шт.; 10–15 кг – 12–14 шт.; 15–60 кг – 16–20 шт. Хранить в прохладном сухом месте при температуре не выше +25 °C. Номер партии и срок годности указаны на упаковке."
+  },
+  "en": {
+   "full": [
+    "Nature’s Protection Superior Care White Dogs Grain Free Junior – Cognitive and Vision Support (Sensitive Care) are premium supplemental snacks with salmon, meticulously formulated for young white-coated dogs of all breeds, including those with a sensitive digestive system, to support their overall well-being. Their specialised ingredients not only provide the pet with beneficial nutrients but also help improve the work of the gastrointestinal tract.",
+    "The main source of protein is certified salmon of the highest quality – a highly digestible, hypoallergenic protein rich in Omega-3 fatty acids, vitamins and minerals, known to be highly palatable; it helps maintain healthy skin and coat and improves the work of the digestive system. These functional snacks have a wetter and softer texture than ordinary treats; moister products reveal a more natural aroma, which makes them a favourite even of the pickiest pets.",
+    "The composition contains the microalgae Schizochytrium sp. – a source of vitamins A, C, E and K and of minerals such as iron, zinc and selenium – which help support healthy vision, while Omega-3 fatty acids support brain function. Seaweed is a source of vitamins A, C, K and B6, calcium, potassium, copper, iodine and manganese and a valuable source of iron; it helps prevent dental plaque and tartar and also supports brain function and keen eyesight. The snacks are enriched with MicroZeoGen – a natural mineral, dynamically micronized clinoptilolite of volcanic origin, which helps remove toxins from the body and improve nutrient absorption, and also helps strengthen the pet’s immune system and the body’s natural defences.",
+    "The snacks contain no ingredients of grain origin, corn or soy products that can cause allergic reactions; they do not overload the digestive system and are therefore well suited to pets with a sensitive digestive tract or a tendency to allergies. A balanced combination of prebiotics and probiotics helps maintain the balance of the gut microflora and so improves digestion. Nature’s Protection Superior Care is a Super Premium line of supplemental snacks known for innovative ingredients and the newest technologies and trends in healthy pet nutrition; the snacks contain high-quality protein sources and other innovative ingredients. The convenient, easy-to-open pack holds 150 g of healthy, aromatic snacks that will appeal even to the most pampered pet."
+   ],
+   "composition": "salmon min. 24 % (dried and finely ground), potato flakes, pregelatinised potato starch, sorbitol, glycerine, glucose syrup, brewer’s yeast, pea fibre, seaweed Ascophyllum nodosum (2 %), dynamic micronized clinoptilolite (1 %), chitosamine (from aquatic animals) (1 %), plantago seed (1 %), fructooligosaccharides (FOS) (0.9 %), green tea extract (0.5 %), marigold dried (0.02 %).",
+   "additives": "Nutritional additives (per 1 kg): vitamin D3 (3a671)* – 577 IU, vitamin E (3a700) – 204 mg, biotin (3a880) – 0.08 mg, L-tyrosine (3c401) – 500 mg, L-cystine (3c391) – 1 g, L-tryptophan (3c440) – 500 mg. Technological additives: antioxidants, preservatives. Zootechnical additives: gut flora stabilisers: Bacillus velezensis DSM 15544 (4b1820) – 1×10¹⁰ CFU. *Simultaneous use with vitamin D2 is not allowed.",
+   "analysis": [
+    {
+     "name": "Crude protein",
+     "value": "21 %"
+    },
+    {
+     "name": "Crude fibre",
+     "value": "2.5 %"
+    },
+    {
+     "name": "Crude fat",
+     "value": "3.5 %"
+    },
+    {
+     "name": "Crude ash",
+     "value": "5 %"
+    },
+    {
+     "name": "Starch",
+     "value": "16.2 %"
+    },
+    {
+     "name": "Moisture",
+     "value": "20 %"
+    },
+    {
+     "name": "Sodium",
+     "value": "0.1 %"
+    },
+    {
+     "name": "Potassium",
+     "value": "0.58 %"
+    },
+    {
+     "name": "Glycerol",
+     "value": "3.7 %"
+    },
+    {
+     "name": "Total sugars",
+     "value": "4.5 %"
+    }
+   ],
+   "feeding": "The daily dose may vary according to the outdoor temperature and the pet’s lifestyle, temperament and activity. Clean, fresh water should be available at all times. Recommended number of snacks per day by the dog’s body weight: 1–5 kg – 4–6 pieces; 5–10 kg – 8–10 pieces; 10–15 kg – 12–14 pieces; 15–60 kg – 16–20 pieces. Store in a cool, dry place at a temperature not above +25 °C. Batch number and best-before date: see the package."
+  },
+  "az": {
+   "full": [
+    "Nature’s Protection Superior Care White Dogs Grain Free Junior – Cognitive and Vision Support (Sensitive Care) – bütün cinslərdən olan ağ tüklü gənc itlər, o cümlədən həssas həzm sistemi olanlar üçün ümumi rifahı dəstəkləmək məqsədilə diqqətlə hazırlanmış, qızılbalıqlı super premium qəlyanaltı-əlavələrdir. Tərkibindəki xüsusi inqrediyentlər yalnız ev heyvanının orqanizmini faydalı maddələrlə təmin etmir, həm də mədə-bağırsaq traktının işini yaxşılaşdırmağa kömək edir.",
+    "Əsas protein mənbəyi ən yüksək keyfiyyətli sertifikatlı qızılbalıqdır: asan həzm olunan, hipoallergen, Omeqa-3 yağ turşuları, vitaminlər və minerallarla zəngin, yüksək dad cəlbediciliyi ilə tanınan protein; o, dərinin və tükün sağlamlığını qorumağa kömək edir və həzm sisteminin işini yaxşılaşdırır. Bu funksional qəlyanaltılar adi ləzzətlərdən daha nəm və yumşaq teksturaya malikdir; nəm məhsullarda təbii aroma daha yaxşı açılır, buna görə də onları hətta ən seçici ev heyvanları da sevir.",
+    "Tərkibdə A, C, E və K vitaminlərinin, həmçinin dəmir, sink və selen kimi mineralların mənbəyi olan Schizochytrium sp. mikroyosunu var; bu maddələr sağlam görmənin qorunmasına kömək edir, Omeqa-3 yağ turşuları isə beynin işini dəstəkləyir. Dəniz yosunu A, C, K və B6 vitaminlərinin, kalsium, kalium, mis, yod və manqanın mənbəyi, həmçinin dəmirin dəyərli mənbəyidir; diş ərpinin və daşının əmələ gəlməsinin qarşısını almağa, eləcə də beynin işinin yaxşılaşmasına və görmə itiliyinin qorunmasına kömək edir. Qəlyanaltılar MicroZeoGen ilə zənginləşdirilib – bu, təbii mineral, vulkanik mənşəli dinamik mikronlaşdırılmış klinoptilolitdir; o, toksinlərin orqanizmdən çıxarılmasına və qida maddələrinin mənimsənilməsinin yaxşılaşmasına kömək edir, həmçinin ev heyvanının immun sistemini və orqanizmin təbii müdafiə funksiyalarını gücləndirir.",
+    "Qəlyanaltıların tərkibində allergik reaksiyalara səbəb ola bilən taxıl mənşəli inqrediyentlər, qarğıdalı və soya məhsulları yoxdur; onlar həzm sistemini yükləmir, buna görə də həssas mədə-bağırsaq traktı və ya allergiyaya meyli olan ev heyvanları üçün optimal uyğundur. Prebiotik və probiotiklərin balanslaşdırılmış birləşməsi bağırsaq mikroflorasının balansını qorumağa və beləliklə həzmi yaxşılaşdırmağa kömək edir. Nature’s Protection Superior Care – innovativ inqrediyentləri, ev heyvanlarının sağlam qidalanması sahəsində ən yeni texnologiya və tendensiyaları ilə tanınan super premium sinifli qəlyanaltı-əlavələr xəttidir; qəlyanaltıların tərkibində yüksək keyfiyyətli protein mənbələri və digər innovativ inqrediyentlər var. Rahat, asan açılan qablaşdırmada hətta ən ərköyün ev heyvanının da xoşuna gələcək 150 q faydalı və ətirli qəlyanaltı var."
+   ],
+   "composition": "qızılbalıq min. 24 % (qurudulmuş və narın üyüdülmüş), kartof lopaları, əvvəlcədən jelatinləşdirilmiş kartof nişastası, sorbit, qliserin, qlükoza şərbəti, pivə mayası, noxud lifi, dəniz yosunu Ascophyllum nodosum (2 %), dinamik mikronlaşdırılmış klinoptilolit (1 %), xitozamin (su heyvanlarından) (1 %), bağayarpağı toxumu (1 %), fruktooliqosaxaridlər (FOS) (0,9 %), yaşıl çay ekstraktı (0,5 %), qurudulmuş gülümbahar (0,02 %).",
+   "additives": "Qida əlavələri (1 kq üçün): D3 vitamini (3a671)* – 577 BV, E vitamini (3a700) – 204 mq, biotin (3a880) – 0,08 mq, L-tirozin (3c401) – 500 mq, L-sistin (3c391) – 1 q, L-triptofan (3c440) – 500 mq. Texnoloji əlavələr: antioksidantlar, konservantlar. Zootexniki əlavələr: bağırsaq florasının stabilizatorları: Bacillus velezensis DSM 15544 (4b1820) – 1×10¹⁰ KƏV. *D2 vitamini ilə eyni vaxtda istifadəsinə icazə verilmir.",
+   "analysis": [
+    {
+     "name": "Xam protein",
+     "value": "21 %"
+    },
+    {
+     "name": "Xam lif",
+     "value": "2,5 %"
+    },
+    {
+     "name": "Xam yağ",
+     "value": "3,5 %"
+    },
+    {
+     "name": "Xam kül",
+     "value": "5 %"
+    },
+    {
+     "name": "Nişasta",
+     "value": "16,2 %"
+    },
+    {
+     "name": "Nəmlik",
+     "value": "20 %"
+    },
+    {
+     "name": "Natrium",
+     "value": "0,1 %"
+    },
+    {
+     "name": "Kalium",
+     "value": "0,58 %"
+    },
+    {
+     "name": "Qliserol",
+     "value": "3,7 %"
+    },
+    {
+     "name": "Ümumi şəkər",
+     "value": "4,5 %"
+    }
+   ],
+   "feeding": "Gündəlik doza havanın temperaturundan, ev heyvanının həyat tərzindən, temperamentindən və aktivliyindən asılı olaraq dəyişə bilər. Təmiz, təzə su həmişə əlçatan olmalıdır. İtin bədən çəkisinə görə gündə tövsiyə olunan qəlyanaltı sayı: 1–5 kq – 4–6 əd.; 5–10 kq – 8–10 əd.; 10–15 kq – 12–14 əd.; 15–60 kq – 16–20 əd. Sərin və quru yerdə, +25 °C-dən yüksək olmayan temperaturda saxlayın. Partiya nömrəsi və yararlılıq müddəti: qablaşdırmaya baxın."
+  }
+ },
+ "dogs||Superior Care · Snacks||White Dogs — Daily Oral Care": {
+  "url": "/product/complementary-grain-free-feed-snacks-for-oral-care-with-insects-for-adult-all-breed-dogs-with-white-coat/",
+  "sku": null,
+  "packs": [
+   "150 g"
+  ],
+  "feed": [],
+  "ru": {
+   "full": [
+    "«Nature’s Protection Superior Care White Dogs Grain Free Daily Oral Care» — пищевые добавки-лакомства супер-премиум класса с протеинами насекомых, разработанные для поддержания гигиены полости рта и здоровья зубов взрослых белошерстных собак всех пород, а также их общего благополучия. Содержащиеся в них специализированные ингредиенты не только насыщают организм питомца полезными веществами, но и способствуют поддержанию гигиены полости рта.",
+    "Основной источник белка — насекомые. Протеин насекомых — очень экологичный источник белка, ведь насекомым требуется меньше земли, воды и корма, чем традиционному скоту; это высококачественный белок, который также даёт незаменимые аминокислоты, витамины и минералы, а протеины насекомых содержат лауриновую кислоту, обладающую антимикробными свойствами. Переработанный белок насекомых считается гипоаллергенным, поэтому хорошо подходит собакам с пищевой чувствительностью или аллергией. 67% белков в лакомствах — животного происхождения. Эти функциональные лакомства имеют более влажную и мягкую текстуру, чем обычные; во влажных продуктах сильнее раскрывается натуральный аромат, поэтому они нравятся даже самым привередливым питомцам.",
+    "Лакомства имеют специализированную форму и достаточно твёрдую текстуру, благодаря которым помогают очищать зубы питомца от налёта и устранять неприятный запах из пасти. Морские водоросли — ценный источник витаминов A, C, K и B6, а также кальция, калия, меди, йода и марганца; они способствуют предотвращению образования зубного налёта и зубного камня. Лакомства обогащены MicroZeoGen — натуральным минералом, динамически микронизированным клиноптилолитом вулканического происхождения, который помогает выводить токсины из организма и улучшает усвоение питательных веществ, а также способствует укреплению иммунной системы питомца и естественных защитных функций организма.",
+    "Лакомства не содержат ингредиентов зернового происхождения, кукурузы и сои, способных вызывать аллергические реакции; они не перегружают пищеварительную систему, поэтому оптимально подходят питомцам с чувствительным желудочно-кишечным трактом или склонностью к аллергии. Сбалансированное сочетание пребиотиков и пробиотиков помогает поддерживать баланс кишечной микрофлоры и тем самым улучшает пищеварение. Nature’s Protection Superior Care — линейка лакомств класса супер-премиум с инновационными ингредиентами, созданная с применением передовых технологий и с учётом новейших тенденций в области здорового питания домашних животных; в составе лакомств — высококачественные источники белка и другие инновационные ингредиенты. Удобная, легко открывающаяся упаковка содержит 150 г полезных и ароматных лакомств, которые придутся по вкусу даже самому избалованному питомцу. Произведено в ЕС."
+   ],
+   "composition": "переработанный белок насекомых мин. 24 % (высушенный и мелко измельчённый)*, предварительно желатинизированный картофельный крахмал, картофельные хлопья, гороховый белок, рыбная мука, морские водоросли Ascophyllum nodosum (6 %), сорбит, глицерин, глюкозный сироп, гороховая клетчатка (4 %), полифосфат натрия (2 %), динамически микронизированный клиноптилолит (1 %), хитозамин (из водных животных) (1 %), фруктоолигосахариды (ФОС), экстракт зелёного чая (0,5 %), сушёная календула (0,02 %). *Содержит переработанный животный белок нежвачных животных — не предназначен для кормления сельскохозяйственных животных, за исключением животных аквакультуры и пушных зверей.",
+   "additives": "Пищевые добавки (на 1 кг): витамин D3 (3a671)* – 577 МЕ, витамин E (3a700) – 204 мг, биотин (3a880) – 0,08 мг, L-тирозин (3c401) – 500 мг, таурин (3a370) – 1000 мг. Технологические добавки: антиоксиданты, консерванты. Зоотехнические добавки: стабилизаторы кишечной флоры: Bacillus velezensis DSM 15544 (4b1820) – 1×10¹⁰ КОЕ. *Одновременное применение с витамином D2 не допускается.",
+   "analysis": [
+    {
+     "name": "Сырой протеин",
+     "value": "24 %"
+    },
+    {
+     "name": "Сырая клетчатка",
+     "value": "5 %"
+    },
+    {
+     "name": "Сырой жир",
+     "value": "3 %"
+    },
+    {
+     "name": "Сырая зола",
+     "value": "7 %"
+    },
+    {
+     "name": "Крахмал",
+     "value": "25 %"
+    },
+    {
+     "name": "Влажность",
+     "value": "18 %"
+    },
+    {
+     "name": "Фосфор",
+     "value": "1,35 %"
+    },
+    {
+     "name": "Натрий",
+     "value": "0,7 %"
+    },
+    {
+     "name": "Калий",
+     "value": "0,7 %"
+    },
+    {
+     "name": "Глицерол",
+     "value": "3,7 %"
+    },
+    {
+     "name": "Общий сахар",
+     "value": "4,5 %"
+    }
+   ],
+   "feeding": "Суточная доза может варьироваться в зависимости от температуры воздуха, образа жизни, темперамента и активности питомца. У питомца всегда должен быть доступ к чистой свежей воде. Рекомендуемое количество лакомств в день в зависимости от массы тела собаки: 1–10 кг – 0,5 шт.; 11–25 кг – 1 шт.; более 25 кг – 2 шт. Хранить в прохладном сухом месте при температуре не выше +25 °C. Номер партии и срок годности указаны на упаковке."
+  },
+  "en": {
+   "full": [
+    "Nature’s Protection Superior Care White Dogs Grain Free Daily Oral Care are premium supplemental snacks with insect protein, specially designed to promote oral and dental health in adult white-coated dogs of all breeds and to support their overall well-being. Their specialised ingredients not only provide the pet with beneficial nutrients but also help maintain oral hygiene.",
+    "The main source of protein is insects. Insect protein is a highly sustainable source of protein, as insects require less land, water and feed than traditional livestock; it is a high-quality protein that also provides essential amino acids, vitamins and minerals, and insect proteins contain lauric acid, which has antimicrobial properties. Processed insect protein is considered hypoallergenic, which makes it a good choice for dogs with food sensitivities or allergies. 67% of the proteins in the snacks are of animal origin. These functional snacks have a wetter and softer texture than ordinary treats; moister products reveal a more natural aroma, which makes them a favourite even of the pickiest pets.",
+    "The snacks have a specialised shape and a sufficiently firm texture that help clean plaque from the pet’s teeth and eliminate bad breath. Seaweed is a valuable source of vitamins A, C, K and B6, as well as calcium, potassium, copper, iodine and manganese, and helps prevent the formation of dental plaque and tartar. The snacks are enriched with MicroZeoGen – a natural mineral, dynamically micronized clinoptilolite of volcanic origin, which helps remove toxins from the body and improve nutrient absorption, and also helps strengthen the pet’s immune system and the body’s natural defences.",
+    "The snacks contain no ingredients of grain origin, corn or soy products that can cause allergic reactions; they do not overload the digestive system and are therefore well suited to pets with a sensitive digestive tract or a tendency to allergies. A balanced combination of prebiotics and probiotics helps maintain the balance of the gut microflora and so improves digestion. Nature’s Protection Superior Care is a Super Premium line of supplemental snacks known for innovative ingredients and the newest technologies and trends in healthy pet nutrition; the snacks contain high-quality protein sources and other innovative ingredients. The convenient, easy-to-open pack holds 150 g of healthy, aromatic snacks that will appeal even to the most pampered pet. Made in the EU."
+   ],
+   "composition": "processed insect protein min. 24 % (dried and finely ground)*, pregelatinised potato starch, potato flakes, pea protein, fish meal, seaweed Ascophyllum nodosum (6 %), sorbitol, glycerine, glucose syrup, pea fibre (4 %), sodium polyphosphate (2 %), dynamic micronized clinoptilolite (1 %), chitosamine (from aquatic animals) (1 %), fructooligosaccharides (FOS), green tea extract (0.5 %), marigold dried (0.02 %). *Contains non-ruminant processed animal protein – shall not be fed to farmed animals except aquaculture and fur animals.",
+   "additives": "Nutritional additives (per 1 kg): vitamin D3 (3a671)* – 577 IU, vitamin E (3a700) – 204 mg, biotin (3a880) – 0.08 mg, L-tyrosine (3c401) – 500 mg, taurine (3a370) – 1000 mg. Technological additives: antioxidants, preservatives. Zootechnical additives: gut flora stabilisers: Bacillus velezensis DSM 15544 (4b1820) – 1×10¹⁰ CFU. *Simultaneous use with vitamin D2 is not allowed.",
+   "analysis": [
+    {
+     "name": "Crude protein",
+     "value": "24 %"
+    },
+    {
+     "name": "Crude fibre",
+     "value": "5 %"
+    },
+    {
+     "name": "Crude fat",
+     "value": "3 %"
+    },
+    {
+     "name": "Crude ash",
+     "value": "7 %"
+    },
+    {
+     "name": "Starch",
+     "value": "25 %"
+    },
+    {
+     "name": "Moisture",
+     "value": "18 %"
+    },
+    {
+     "name": "Phosphorus",
+     "value": "1.35 %"
+    },
+    {
+     "name": "Sodium",
+     "value": "0.7 %"
+    },
+    {
+     "name": "Potassium",
+     "value": "0.7 %"
+    },
+    {
+     "name": "Glycerol",
+     "value": "3.7 %"
+    },
+    {
+     "name": "Total sugars",
+     "value": "4.5 %"
+    }
+   ],
+   "feeding": "The daily dose may vary according to the outdoor temperature and the pet’s lifestyle, temperament and activity. Clean, fresh water should be available at all times. Recommended number of snacks per day by the dog’s body weight: 1–10 kg – 0.5 piece; 11–25 kg – 1 piece; over 25 kg – 2 pieces. Store in a cool, dry place at a temperature not above +25 °C. Batch number and best-before date: see the package."
+  },
+  "az": {
+   "full": [
+    "Nature’s Protection Superior Care White Dogs Grain Free Daily Oral Care – bütün cinslərdən olan ağ tüklü yetkin itlərdə ağız boşluğunun və dişlərin sağlamlığını, həmçinin ümumi rifahı dəstəkləmək üçün hazırlanmış, həşərat proteini ilə super premium qəlyanaltı-əlavələrdir. Tərkibindəki xüsusi inqrediyentlər yalnız ev heyvanının orqanizmini faydalı maddələrlə təmin etmir, həm də ağız boşluğunun gigiyenasını qorumağa kömək edir.",
+    "Əsas protein mənbəyi həşəratlardır. Həşərat proteini çox ekoloji protein mənbəyidir, çünki həşəratlar ənənəvi mal-qaradan daha az torpaq, su və yem tələb edir; bu, həm də əvəzolunmaz amin turşuları, vitaminlər və minerallar verən yüksək keyfiyyətli proteindir, həşərat proteinlərinin tərkibində isə antimikrob xüsusiyyətlərə malik laurin turşusu var. Emal olunmuş həşərat proteini hipoallergen hesab olunur, buna görə də qida həssaslığı və ya allergiyası olan itlər üçün yaxşı seçimdir. Qəlyanaltılardakı proteinlərin 67%-i heyvan mənşəlidir. Bu funksional qəlyanaltılar adi ləzzətlərdən daha nəm və yumşaq teksturaya malikdir; nəm məhsullarda təbii aroma daha yaxşı açılır, buna görə də onları hətta ən seçici ev heyvanları da sevir.",
+    "Qəlyanaltılar xüsusi formaya və kifayət qədər bərk teksturaya malikdir; bunun sayəsində ev heyvanının dişlərini ərpdən təmizləməyə və ağızdan gələn xoşagəlməz qoxunu aradan qaldırmağa kömək edir. Dəniz yosunu A, C, K və B6 vitaminlərinin, həmçinin kalsium, kalium, mis, yod və manqanın dəyərli mənbəyidir və diş ərpinin və diş daşının əmələ gəlməsinin qarşısını almağa kömək edir. Qəlyanaltılar MicroZeoGen ilə zənginləşdirilib – bu, təbii mineral, vulkanik mənşəli dinamik mikronlaşdırılmış klinoptilolitdir; o, toksinlərin orqanizmdən çıxarılmasına və qida maddələrinin mənimsənilməsinin yaxşılaşmasına kömək edir, həmçinin ev heyvanının immun sistemini və orqanizmin təbii müdafiə funksiyalarını gücləndirir.",
+    "Qəlyanaltıların tərkibində allergik reaksiyalara səbəb ola bilən taxıl mənşəli inqrediyentlər, qarğıdalı və soya məhsulları yoxdur; onlar həzm sistemini yükləmir, buna görə də həssas mədə-bağırsaq traktı və ya allergiyaya meyli olan ev heyvanları üçün optimal uyğundur. Prebiotik və probiotiklərin balanslaşdırılmış birləşməsi bağırsaq mikroflorasının balansını qorumağa və beləliklə həzmi yaxşılaşdırmağa kömək edir. Nature’s Protection Superior Care – innovativ inqrediyentləri, ev heyvanlarının sağlam qidalanması sahəsində ən yeni texnologiya və tendensiyaları ilə tanınan super premium sinifli qəlyanaltı-əlavələr xəttidir; qəlyanaltıların tərkibində yüksək keyfiyyətli protein mənbələri və digər innovativ inqrediyentlər var. Rahat, asan açılan qablaşdırmada hətta ən ərköyün ev heyvanının da xoşuna gələcək 150 q faydalı və ətirli qəlyanaltı var. Aİ-də istehsal olunub."
+   ],
+   "composition": "emal olunmuş həşərat proteini min. 24 % (qurudulmuş və narın üyüdülmüş)*, əvvəlcədən jelatinləşdirilmiş kartof nişastası, kartof lopaları, noxud proteini, balıq unu, dəniz yosunu Ascophyllum nodosum (6 %), sorbit, qliserin, qlükoza şərbəti, noxud lifi (4 %), natrium polifosfat (2 %), dinamik mikronlaşdırılmış klinoptilolit (1 %), xitozamin (su heyvanlarından) (1 %), fruktooliqosaxaridlər (FOS), yaşıl çay ekstraktı (0,5 %), qurudulmuş gülümbahar (0,02 %). *Gövşəməyən heyvanlardan alınmış emal olunmuş heyvan proteini ehtiva edir – akvakultura və xəz heyvanları istisna olmaqla, ferma heyvanlarına verilməməlidir.",
+   "additives": "Qida əlavələri (1 kq üçün): D3 vitamini (3a671)* – 577 BV, E vitamini (3a700) – 204 mq, biotin (3a880) – 0,08 mq, L-tirozin (3c401) – 500 mq, taurin (3a370) – 1000 mq. Texnoloji əlavələr: antioksidantlar, konservantlar. Zootexniki əlavələr: bağırsaq florasının stabilizatorları: Bacillus velezensis DSM 15544 (4b1820) – 1×10¹⁰ KƏV. *D2 vitamini ilə eyni vaxtda istifadəsinə icazə verilmir.",
+   "analysis": [
+    {
+     "name": "Xam protein",
+     "value": "24 %"
+    },
+    {
+     "name": "Xam lif",
+     "value": "5 %"
+    },
+    {
+     "name": "Xam yağ",
+     "value": "3 %"
+    },
+    {
+     "name": "Xam kül",
+     "value": "7 %"
+    },
+    {
+     "name": "Nişasta",
+     "value": "25 %"
+    },
+    {
+     "name": "Nəmlik",
+     "value": "18 %"
+    },
+    {
+     "name": "Fosfor",
+     "value": "1,35 %"
+    },
+    {
+     "name": "Natrium",
+     "value": "0,7 %"
+    },
+    {
+     "name": "Kalium",
+     "value": "0,7 %"
+    },
+    {
+     "name": "Qliserol",
+     "value": "3,7 %"
+    },
+    {
+     "name": "Ümumi şəkər",
+     "value": "4,5 %"
+    }
+   ],
+   "feeding": "Gündəlik doza havanın temperaturundan, ev heyvanının həyat tərzindən, temperamentindən və aktivliyindən asılı olaraq dəyişə bilər. Təmiz, təzə su həmişə əlçatan olmalıdır. İtin bədən çəkisinə görə gündə tövsiyə olunan qəlyanaltı sayı: 1–10 kq – 0,5 əd.; 11–25 kq – 1 əd.; 25 kq-dan çox – 2 əd. Sərin və quru yerdə, +25 °C-dən yüksək olmayan temperaturda saxlayın. Partiya nömrəsi və yararlılıq müddəti: qablaşdırmaya baxın."
+  }
+ },
+ "dogs||Superior Care · Snacks||White Dogs — Immune Health": {
+  "url": "/product/complementary-grain-free-feed-snacks-to-support-immune-health-with-herring-for-adult-all-breed-dogs-with-white-coat/",
+  "sku": null,
+  "packs": [
+   "150 g"
+  ],
+  "feed": [],
+  "ru": {
+   "full": [
+    "«Nature’s Protection Superior Care White Dogs Grain Free Immune Health» — пищевые добавки-лакомства супер-премиум класса с сельдью, разработанные для укрепления иммунной системы взрослых собак всех пород с белым и светлым окрасом шерсти. Эти гипоаллергенные легкоусвояемые лакомства поддерживают общее благополучие и помогают уменьшить коричневые пятна от слёз; содержащиеся в них специализированные ингредиенты не только насыщают организм питомца полезными веществами, но и способствуют укреплению иммунной системы.",
+    "Первый ингредиент — сельдь: легкоусвояемая нежирная рыба с высоким содержанием ненасыщенных жирных кислот Омега-3 и витамина D, которые поддерживают иммунитет и здоровье суставов; лакомства оптимально подходят питомцам, склонным к набору лишнего веса. Хитозамин обеспечивает комплексный уход за костями и суставами и помогает контролировать вес. Комплекс Vital 3 — сочетание пребиотиков, пробиотиков, витаминов и минералов — поддерживает жизненно важные функции организма. Эти функциональные лакомства имеют более влажную и мягкую текстуру, чем обычные; во влажных продуктах сильнее раскрывается натуральный аромат, поэтому они нравятся даже самым привередливым питомцам.",
+    "Лакомства обогащены MicroZeoGen — натуральным минералом, динамически микронизированным клиноптилолитом вулканического происхождения, который помогает выводить токсины из организма и улучшает усвоение питательных веществ, а также способствует укреплению иммунной системы питомца и естественных защитных функций организма. Зелёный чай стимулирует обменные процессы, обладает антибактериальными свойствами, способствует устранению неприятного запаха из пасти, оказывает антиоксидантное действие и помогает уменьшить негативное воздействие стресса. Лакомства не содержат искусственных красителей, ароматизаторов и консервантов.",
+    "Лакомства не содержат ингредиентов зернового происхождения, кукурузы и сои, способных вызывать аллергические реакции; они не перегружают пищеварительную систему, поэтому оптимально подходят питомцам с чувствительным желудочно-кишечным трактом или склонностью к аллергии. Сбалансированное сочетание пребиотиков и пробиотиков помогает поддерживать баланс кишечной микрофлоры и тем самым улучшает пищеварение. Nature’s Protection Superior Care — линейка лакомств класса супер-премиум с инновационными ингредиентами, созданная с применением передовых технологий и с учётом новейших тенденций в области здорового питания домашних животных; в составе лакомств — высококачественные источники белка и другие инновационные ингредиенты. Удобная, легко открывающаяся упаковка содержит 150 г полезных и ароматных лакомств, которые придутся по вкусу даже самому избалованному питомцу. Произведено в ЕС."
+   ],
+   "composition": "сельдь мин. 26 % (высушенная и мелко измельчённая), предварительно желатинизированный картофельный крахмал, картофельные хлопья, рыбная мука, морские водоросли Ascophyllum nodosum (5 %), сорбит, глицерин, глюкозный сироп, гороховая клетчатка (5 %), динамически микронизированный клиноптилолит (1 %), хитозамин (из водных животных) (1 %), фруктоолигосахариды (ФОС), сушёные водоросли Schizochytrium sp. (0,16 %), экстракт зелёного чая (0,05 %), сушёная календула (0,02 %).",
+   "additives": "Пищевые добавки (на 1 кг): витамин D3 (3a671)* – 577 МЕ, витамин E (3a700) – 204 мг, биотин (3a880) – 0,08 мг, L-карнитин (3a910) – 5 г, L-тирозин (3c401) – 500 мг, таурин (3a370) – 1000 мг. Технологические добавки: антиоксиданты, консерванты. Зоотехнические добавки: стабилизаторы кишечной флоры: Bacillus velezensis DSM 15544 (4b1820) – 1×10¹⁰ КОЕ. *Одновременное применение с витамином D2 не допускается.",
+   "analysis": [
+    {
+     "name": "Сырой протеин",
+     "value": "21 %"
+    },
+    {
+     "name": "Сырая клетчатка",
+     "value": "4 %"
+    },
+    {
+     "name": "Сырой жир",
+     "value": "3 %"
+    },
+    {
+     "name": "Сырая зола",
+     "value": "5,2 %"
+    },
+    {
+     "name": "Крахмал",
+     "value": "33 %"
+    },
+    {
+     "name": "Влажность",
+     "value": "20 %"
+    },
+    {
+     "name": "Фосфор",
+     "value": "1,35 %"
+    },
+    {
+     "name": "Натрий",
+     "value": "0,7 %"
+    },
+    {
+     "name": "Калий",
+     "value": "0,7 %"
+    },
+    {
+     "name": "Глицерол",
+     "value": "3,7 %"
+    },
+    {
+     "name": "Общий сахар",
+     "value": "4,4 %"
+    }
+   ],
+   "feeding": "Суточная доза может варьироваться в зависимости от температуры воздуха, образа жизни, темперамента и активности питомца. У питомца всегда должен быть доступ к чистой свежей воде. Рекомендуемое количество лакомств в день в зависимости от массы тела собаки: 1–5 кг – 4–6 шт.; 5–10 кг – 8–10 шт.; 10–15 кг – 12–14 шт.; более 15 кг – 16–20 шт. Хранить в прохладном сухом месте при температуре не выше +25 °C. Номер партии и срок годности указаны на упаковке."
+  },
+  "en": {
+   "full": [
+    "Nature’s Protection Superior Care White Dogs Grain Free Immune Health are premium supplemental snacks with herring, crafted to support the immune system of adult dogs of all breeds with a white or light-coloured coat. These hypoallergenic, highly digestible snacks support overall well-being and help reduce brown tear stains; their specialised ingredients not only provide the pet with beneficial nutrients but also help strengthen its immune system.",
+    "Herring is the first ingredient – an easily digestible, lean fish protein rich in unsaturated Omega-3 fatty acids and vitamin D, which support immune and joint health; the snacks are well suited to pets prone to gaining excess weight. Chitosamine provides comprehensive bone and joint care and helps with weight management. The Vital 3 complex – a blend of prebiotics, probiotics, vitamins and minerals – supports vital body functions. These functional snacks have a wetter and softer texture than ordinary treats; moister products reveal a more natural aroma, which makes them a favourite even of the pickiest pets.",
+    "The snacks are enriched with MicroZeoGen – a natural mineral, dynamically micronized clinoptilolite of volcanic origin, which helps remove toxins from the body and improve nutrient absorption, and also helps strengthen the pet’s immune system and the body’s natural defences. Green tea stimulates metabolic processes, has antibacterial properties, helps eliminate bad breath, has an antioxidant effect and helps reduce the negative effects of stress. The snacks contain no artificial colourings, flavourings or preservatives.",
+    "The snacks contain no ingredients of grain origin, corn or soy products that can cause allergic reactions; they do not overload the digestive system and are therefore well suited to pets with a sensitive digestive tract or a tendency to allergies. A balanced combination of prebiotics and probiotics helps maintain the balance of the gut microflora and so improves digestion. Nature’s Protection Superior Care is a Super Premium line of supplemental snacks known for innovative ingredients and the newest technologies and trends in healthy pet nutrition; the snacks contain high-quality protein sources and other innovative ingredients. The convenient, easy-to-open pack holds 150 g of healthy, aromatic snacks that will appeal even to the most pampered pet. Made in the EU."
+   ],
+   "composition": "herring min. 26 % (dried and finely ground), pregelatinised potato starch, potato flakes, fish meal, seaweed Ascophyllum nodosum (5 %), sorbitol, glycerine, glucose syrup, pea fibre (5 %), dynamic micronized clinoptilolite (1 %), chitosamine (from aquatic animals) (1 %), fructooligosaccharides (FOS), dried algae Schizochytrium sp. (0.16 %), green tea extract (0.05 %), marigold dried (0.02 %).",
+   "additives": "Nutritional additives (per 1 kg): vitamin D3 (3a671)* – 577 IU, vitamin E (3a700) – 204 mg, biotin (3a880) – 0.08 mg, L-carnitine (3a910) – 5 g, L-tyrosine (3c401) – 500 mg, taurine (3a370) – 1000 mg. Technological additives: antioxidants, preservatives. Zootechnical additives: gut flora stabilisers: Bacillus velezensis DSM 15544 (4b1820) – 1×10¹⁰ CFU. *Simultaneous use with vitamin D2 is not allowed.",
+   "analysis": [
+    {
+     "name": "Crude protein",
+     "value": "21 %"
+    },
+    {
+     "name": "Crude fibre",
+     "value": "4 %"
+    },
+    {
+     "name": "Crude fat",
+     "value": "3 %"
+    },
+    {
+     "name": "Crude ash",
+     "value": "5.2 %"
+    },
+    {
+     "name": "Starch",
+     "value": "33 %"
+    },
+    {
+     "name": "Moisture",
+     "value": "20 %"
+    },
+    {
+     "name": "Phosphorus",
+     "value": "1.35 %"
+    },
+    {
+     "name": "Sodium",
+     "value": "0.7 %"
+    },
+    {
+     "name": "Potassium",
+     "value": "0.7 %"
+    },
+    {
+     "name": "Glycerol",
+     "value": "3.7 %"
+    },
+    {
+     "name": "Total sugars",
+     "value": "4.4 %"
+    }
+   ],
+   "feeding": "The daily dose may vary according to the outdoor temperature and the pet’s lifestyle, temperament and activity. Clean, fresh water should be available at all times. Recommended number of snacks per day by the dog’s body weight: 1–5 kg – 4–6 pieces; 5–10 kg – 8–10 pieces; 10–15 kg – 12–14 pieces; over 15 kg – 16–20 pieces. Store in a cool, dry place at a temperature not above +25 °C. Batch number and best-before date: see the package."
+  },
+  "az": {
+   "full": [
+    "Nature’s Protection Superior Care White Dogs Grain Free Immune Health – bütün cinslərdən olan ağ və açıq rəngli tüklü yetkin itlərin immun sistemini dəstəkləmək üçün hazırlanmış, siyənəkli super premium qəlyanaltı-əlavələrdir. Bu hipoallergen, asan həzm olunan qəlyanaltılar ümumi rifahı dəstəkləyir və qəhvəyi göz yaşı ləkələrini azaltmağa kömək edir; tərkibindəki xüsusi inqrediyentlər yalnız ev heyvanının orqanizmini faydalı maddələrlə təmin etmir, həm də immun sistemini möhkəmləndirməyə kömək edir.",
+    "Birinci inqrediyent siyənəkdir: asan həzm olunan, az yağlı, doymamış Omeqa-3 yağ turşuları və D vitamini ilə zəngin balıq; bu maddələr immuniteti və oynaqların sağlamlığını dəstəkləyir; qəlyanaltılar artıq çəki toplamağa meylli ev heyvanları üçün optimal uyğundur. Xitozamin sümüklərə və oynaqlara kompleks qayğı göstərir və çəkiyə nəzarətə kömək edir. Prebiotik, probiotik, vitamin və minerallardan ibarət Vital 3 kompleksi orqanizmin həyati funksiyalarını dəstəkləyir. Bu funksional qəlyanaltılar adi ləzzətlərdən daha nəm və yumşaq teksturaya malikdir; nəm məhsullarda təbii aroma daha yaxşı açılır, buna görə də onları hətta ən seçici ev heyvanları da sevir.",
+    "Qəlyanaltılar MicroZeoGen ilə zənginləşdirilib – bu, təbii mineral, vulkanik mənşəli dinamik mikronlaşdırılmış klinoptilolitdir; o, toksinlərin orqanizmdən çıxarılmasına və qida maddələrinin mənimsənilməsinin yaxşılaşmasına kömək edir, həmçinin ev heyvanının immun sistemini və orqanizmin təbii müdafiə funksiyalarını gücləndirir. Yaşıl çay maddələr mübadiləsini stimullaşdırır, antibakterial xüsusiyyətlərə malikdir, ağızdan gələn xoşagəlməz qoxunun aradan qaldırılmasına kömək edir, antioksidant təsir göstərir və stresin mənfi təsirini azaltmağa kömək edir. Qəlyanaltıların tərkibində süni boyalar, ətirləndiricilər və konservantlar yoxdur.",
+    "Qəlyanaltıların tərkibində allergik reaksiyalara səbəb ola bilən taxıl mənşəli inqrediyentlər, qarğıdalı və soya məhsulları yoxdur; onlar həzm sistemini yükləmir, buna görə də həssas mədə-bağırsaq traktı və ya allergiyaya meyli olan ev heyvanları üçün optimal uyğundur. Prebiotik və probiotiklərin balanslaşdırılmış birləşməsi bağırsaq mikroflorasının balansını qorumağa və beləliklə həzmi yaxşılaşdırmağa kömək edir. Nature’s Protection Superior Care – innovativ inqrediyentləri, ev heyvanlarının sağlam qidalanması sahəsində ən yeni texnologiya və tendensiyaları ilə tanınan super premium sinifli qəlyanaltı-əlavələr xəttidir; qəlyanaltıların tərkibində yüksək keyfiyyətli protein mənbələri və digər innovativ inqrediyentlər var. Rahat, asan açılan qablaşdırmada hətta ən ərköyün ev heyvanının da xoşuna gələcək 150 q faydalı və ətirli qəlyanaltı var. Aİ-də istehsal olunub."
+   ],
+   "composition": "siyənək min. 26 % (qurudulmuş və narın üyüdülmüş), əvvəlcədən jelatinləşdirilmiş kartof nişastası, kartof lopaları, balıq unu, dəniz yosunu Ascophyllum nodosum (5 %), sorbit, qliserin, qlükoza şərbəti, noxud lifi (5 %), dinamik mikronlaşdırılmış klinoptilolit (1 %), xitozamin (su heyvanlarından) (1 %), fruktooliqosaxaridlər (FOS), qurudulmuş yosun Schizochytrium sp. (0,16 %), yaşıl çay ekstraktı (0,05 %), qurudulmuş gülümbahar (0,02 %).",
+   "additives": "Qida əlavələri (1 kq üçün): D3 vitamini (3a671)* – 577 BV, E vitamini (3a700) – 204 mq, biotin (3a880) – 0,08 mq, L-karnitin (3a910) – 5 q, L-tirozin (3c401) – 500 mq, taurin (3a370) – 1000 mq. Texnoloji əlavələr: antioksidantlar, konservantlar. Zootexniki əlavələr: bağırsaq florasının stabilizatorları: Bacillus velezensis DSM 15544 (4b1820) – 1×10¹⁰ KƏV. *D2 vitamini ilə eyni vaxtda istifadəsinə icazə verilmir.",
+   "analysis": [
+    {
+     "name": "Xam protein",
+     "value": "21 %"
+    },
+    {
+     "name": "Xam lif",
+     "value": "4 %"
+    },
+    {
+     "name": "Xam yağ",
+     "value": "3 %"
+    },
+    {
+     "name": "Xam kül",
+     "value": "5,2 %"
+    },
+    {
+     "name": "Nişasta",
+     "value": "33 %"
+    },
+    {
+     "name": "Nəmlik",
+     "value": "20 %"
+    },
+    {
+     "name": "Fosfor",
+     "value": "1,35 %"
+    },
+    {
+     "name": "Natrium",
+     "value": "0,7 %"
+    },
+    {
+     "name": "Kalium",
+     "value": "0,7 %"
+    },
+    {
+     "name": "Qliserol",
+     "value": "3,7 %"
+    },
+    {
+     "name": "Ümumi şəkər",
+     "value": "4,4 %"
+    }
+   ],
+   "feeding": "Gündəlik doza havanın temperaturundan, ev heyvanının həyat tərzindən, temperamentindən və aktivliyindən asılı olaraq dəyişə bilər. Təmiz, təzə su həmişə əlçatan olmalıdır. İtin bədən çəkisinə görə gündə tövsiyə olunan qəlyanaltı sayı: 1–5 kq – 4–6 əd.; 5–10 kq – 8–10 əd.; 10–15 kq – 12–14 əd.; 15 kq-dan çox – 16–20 əd. Sərin və quru yerdə, +25 °C-dən yüksək olmayan temperaturda saxlayın. Partiya nömrəsi və yararlılıq müddəti: qablaşdırmaya baxın."
+  }
+ },
+ "dogs||Superior Care · Snacks||White Dogs — Endurance": {
+  "url": "/product/complementary-feed-snacks-to-support-endurance-with-insects-and-rice-for-adult-all-breed-dogs-with-white-coat/",
+  "sku": null,
+  "packs": [
+   "150 g"
+  ],
+  "feed": [],
+  "ru": {
+   "full": [
+    "«Nature’s Protection Superior Care White Dogs Endurance» — высококачественные пищевые добавки-лакомства с протеинами насекомых и рисом для взрослых собак всех пород с белым окрасом шерсти, созданные для поддержания общего самочувствия, энергии и выносливости питомца. Это прекрасный способ проявить любовь к собаке и одновременно обеспечить её суточной дозой необходимых витаминов, минералов, пребиотиков и пробиотиков.",
+    "Лакомства содержат формулу Tear Stains Off — тщательно подобранный комплекс аминокислот и полностью сбалансированные ингредиенты, которые помогают поддерживать чистоту состава слюны и слёз и тем самым бороться с коричневыми пятнами от слёз вокруг глаз, пасти, на лапах и других частях тела.",
+    "Основной источник белка и первый ингредиент состава — насекомые. Протеин насекомых — очень экологичный источник белка, ведь насекомым требуется меньше земли, воды и корма, чем традиционному скоту; это высококачественный белок, который также даёт незаменимые аминокислоты, витамины и минералы, а протеины насекомых содержат лауриновую кислоту, обладающую антимикробными свойствами. Переработанный белок насекомых считается гипоаллергенным, поэтому хорошо подходит собакам с пищевой чувствительностью или аллергией. 87% белков в лакомствах — животного происхождения. Рис — ценный источник легкоусвояемых углеводов, придающий лакомствам особую питательность.",
+    "Эти функциональные лакомства имеют более влажную и мягкую текстуру, чем обычные; во влажных продуктах сильнее раскрывается натуральный аромат, поэтому они нравятся даже самым привередливым питомцам. Лакомства обогащены MicroZeoGen — натуральным минералом, динамически микронизированным клиноптилолитом вулканического происхождения. Он помогает выводить из организма токсины, тяжёлые металлы, аммиак и патогенные бактерии, благодаря чему ценные питательные вещества, витамины и минералы легко усваиваются; за счёт содержания кремния он способствует укреплению костей и зубов, положительно влияет на структуру шерсти, делая её густой и блестящей, а также укрепляет иммунную систему и естественные защитные функции организма. Хитозамин обеспечивает полноценный уход за костями и суставами, помогает контролировать вес и поддерживает здоровье печени и нормальный обмен веществ, а пребиотики помогают поддерживать правильную работу пищеварительной системы. Комплекс Vital 3 из пребиотиков, пробиотиков, витаминов и минералов помогает поддерживать жизненно важные функции организма питомца.",
+    "Продукты линейки Nature’s Protection Superior Care White Dogs подходят всем собакам независимо от окраса и не влияют на цвет шерсти: серия разработана для устранения коричневых пятен от слёз, которые заметнее всего на белой и светлой шерсти, однако её включение в рацион собак с тёмной шерстью не приводит к осветлению или изменению окраса. Nature’s Protection Superior Care — линейка лакомств класса супер-премиум, известная инновационными ингредиентами и новейшими технологиями в здоровом питании домашних животных; в составе лакомств — источники белка и другие ингредиенты высочайшего качества. Удобная, легко открывающаяся упаковка содержит 150 г ароматных лакомств. Произведено в ЕС."
+   ],
+   "composition": "переработанный белок насекомых мин. 25 % (высушенный и мелко измельчённый)*, рис мин. 16 %, предварительно желатинизированный картофельный крахмал, ячмень, рыбная мука, сорбит, глицерин, глюкозный сироп, гороховая клетчатка (4 %), динамически микронизированный клиноптилолит (1 %), семена подорожника (1 %), хитозамин (из водных животных) (1 %), фруктоолигосахариды (ФОС). *Содержит переработанный животный белок нежвачных животных — не предназначен для кормления сельскохозяйственных животных, за исключением животных аквакультуры и пушных зверей.",
+   "additives": "Пищевые добавки (на 1 кг): витамин D3 (3a671)* – 577 МЕ, витамин E (3a700) – 204 мг, биотин (3a880) – 0,1 мг, таурин (3a370) – 1000 мг, L-карнитин (3a910) – 5 мг. Технологические добавки: антиоксиданты, консерванты. Зоотехнические добавки: стабилизаторы кишечной флоры: Bacillus velezensis DSM 15544 (4b1820) – 1×10¹⁰ КОЕ. *Одновременное применение с витамином D2 не допускается.",
+   "analysis": [
+    {
+     "name": "Сырой протеин",
+     "value": "18 %"
+    },
+    {
+     "name": "Сырая клетчатка",
+     "value": "2 %"
+    },
+    {
+     "name": "Сырой жир",
+     "value": "3 %"
+    },
+    {
+     "name": "Сырая зола",
+     "value": "5 %"
+    },
+    {
+     "name": "Крахмал",
+     "value": "22 %"
+    },
+    {
+     "name": "Влажность",
+     "value": "20 %"
+    },
+    {
+     "name": "Фосфор",
+     "value": "0,5 %"
+    },
+    {
+     "name": "Натрий",
+     "value": "0,2 %"
+    },
+    {
+     "name": "Калий",
+     "value": "0,5 %"
+    },
+    {
+     "name": "Глицерол",
+     "value": "3,7 %"
+    },
+    {
+     "name": "Общий сахар",
+     "value": "4,5 %"
+    }
+   ],
+   "feeding": "Суточная доза может варьироваться в зависимости от температуры воздуха, образа жизни, темперамента и активности питомца. У питомца всегда должен быть доступ к чистой свежей воде. Хранить в прохладном сухом месте при температуре не выше +25 °C. Номер партии и срок годности указаны на упаковке."
+  },
+  "en": {
+   "full": [
+    "Nature’s Protection Superior Care White Dogs Endurance are high-quality supplemental snacks with insect protein and rice for adult dogs of all breeds with a white coat, created to support the pet’s overall well-being, energy and endurance. They are a great way to show love for your dog while providing a daily dose of essential vitamins, minerals, prebiotics and probiotics.",
+    "The snacks contain the Tear Stains Off formula – a carefully selected amino acid complex and fully balanced ingredients that help keep the composition of saliva and tears clean and so help fight brown tear stains around the eyes, mouth, paws and other parts of the body.",
+    "The main source of protein, and the first ingredient, is insects. Insect protein is a highly sustainable source of protein, as insects require less land, water and feed than traditional livestock; it is a high-quality protein that also provides essential amino acids, vitamins and minerals, and insect proteins contain lauric acid, which has antimicrobial properties. Processed insect protein is considered hypoallergenic, which makes it a good choice for dogs with food sensitivities or allergies. 87% of the proteins in the snacks are of animal origin. Rice is a valuable source of easily digestible carbohydrates that makes the snacks especially nourishing.",
+    "These functional snacks have a wetter and softer texture than ordinary treats; moister products reveal a more natural aroma, which makes them a favourite even of the pickiest pets. The snacks are enriched with MicroZeoGen – a natural mineral, dynamically micronized clinoptilolite of volcanic origin. It helps remove toxins, heavy metals, ammonia and pathogenic bacteria from the body, so that valuable nutrients, vitamins and minerals are absorbed easily; thanks to its silicon content it promotes strong bones and teeth, it has a positive effect on coat structure, making the coat look thick and shiny, and it strengthens the immune system and the body’s natural defences. Chitosamine provides full-fledged bone and joint care, helps with weight control and supports liver health and normal metabolism, while prebiotics help keep the digestive system working properly. The Vital 3 complex of prebiotics, probiotics, vitamins and minerals helps maintain the pet’s vital body functions.",
+    "Products of the Nature’s Protection Superior Care White Dogs line suit all dogs regardless of coat colour and do not affect it: the series was developed to eliminate brown tear stains, which are most visible on white and light coats, but including it in the diet of dogs with a dark coat does not lighten or change the coat colour. Nature’s Protection Superior Care is a Super Premium line of supplemental snacks known for innovative ingredients and the newest technologies in healthy pet nutrition; the snacks contain protein sources and other ingredients of the highest quality. The convenient, easy-to-open pack holds 150 g of tasty snacks. Made in the EU."
+   ],
+   "composition": "processed insect protein min. 25 % (dried and finely ground)*, rice min. 16 %, pregelatinised potato starch, barley, fish meal, sorbitol, glycerine, glucose syrup, pea fibre (4 %), dynamic micronized clinoptilolite (1 %), plantago seed (1 %), chitosamine (from aquatic animals) (1 %), fructooligosaccharides (FOS). *Contains non-ruminant processed animal protein – shall not be fed to farmed animals except aquaculture and fur animals.",
+   "additives": "Nutritional additives (per 1 kg): vitamin D3 (3a671)* – 577 IU, vitamin E (3a700) – 204 mg, biotin (3a880) – 0.1 mg, taurine (3a370) – 1000 mg, L-carnitine (3a910) – 5 mg. Technological additives: antioxidants, preservatives. Zootechnical additives: gut flora stabilisers: Bacillus velezensis DSM 15544 (4b1820) – 1×10¹⁰ CFU. *Simultaneous use with vitamin D2 is not allowed.",
+   "analysis": [
+    {
+     "name": "Crude protein",
+     "value": "18 %"
+    },
+    {
+     "name": "Crude fibre",
+     "value": "2 %"
+    },
+    {
+     "name": "Crude fat",
+     "value": "3 %"
+    },
+    {
+     "name": "Crude ash",
+     "value": "5 %"
+    },
+    {
+     "name": "Starch",
+     "value": "22 %"
+    },
+    {
+     "name": "Moisture",
+     "value": "20 %"
+    },
+    {
+     "name": "Phosphorus",
+     "value": "0.5 %"
+    },
+    {
+     "name": "Sodium",
+     "value": "0.2 %"
+    },
+    {
+     "name": "Potassium",
+     "value": "0.5 %"
+    },
+    {
+     "name": "Glycerol",
+     "value": "3.7 %"
+    },
+    {
+     "name": "Total sugars",
+     "value": "4.5 %"
+    }
+   ],
+   "feeding": "The daily dose may vary according to the outdoor temperature and the pet’s lifestyle, temperament and activity. Clean, fresh water should be available at all times. Store in a cool, dry place at a temperature not above +25 °C. Batch number and best-before date: see the package."
+  },
+  "az": {
+   "full": [
+    "Nature’s Protection Superior Care White Dogs Endurance – ağ tüklü bütün cinslərdən olan yetkin itlər üçün həşərat proteini və düyü ilə hazırlanmış yüksək keyfiyyətli qəlyanaltı-əlavələrdir; ev heyvanının ümumi rifahını, enerjisini və dözümlülüyünü dəstəkləmək üçün yaradılıb. Bu, itinizə sevginizi göstərmək və eyni zamanda onu vacib vitamin, mineral, prebiotik və probiotiklərin gündəlik dozası ilə təmin etmək üçün əla üsuldur.",
+    "Qəlyanaltıların tərkibində Tear Stains Off formulu var – diqqətlə seçilmiş amin turşuları kompleksi və tam balanslaşdırılmış inqrediyentlər tüpürcək və göz yaşının tərkibini təmiz saxlamağa və beləliklə gözlərin, ağzın, pəncələrin və bədənin digər hissələrinin ətrafındakı qəhvəyi göz yaşı ləkələri ilə mübarizə aparmağa kömək edir.",
+    "Əsas protein mənbəyi və tərkibin birinci inqrediyenti həşəratlardır. Həşərat proteini çox ekoloji protein mənbəyidir, çünki həşəratlar ənənəvi mal-qaradan daha az torpaq, su və yem tələb edir; bu, həm də əvəzolunmaz amin turşuları, vitaminlər və minerallar verən yüksək keyfiyyətli proteindir, həşərat proteinlərinin tərkibində isə antimikrob xüsusiyyətlərə malik laurin turşusu var. Emal olunmuş həşərat proteini hipoallergen hesab olunur, buna görə də qida həssaslığı və ya allergiyası olan itlər üçün yaxşı seçimdir. Qəlyanaltılardakı proteinlərin 87%-i heyvan mənşəlidir. Düyü qəlyanaltılara xüsusi qidalılıq verən, asan həzm olunan karbohidratların dəyərli mənbəyidir.",
+    "Bu funksional qəlyanaltılar adi ləzzətlərdən daha nəm və yumşaq teksturaya malikdir; nəm məhsullarda təbii aroma daha yaxşı açılır, buna görə də onları hətta ən seçici ev heyvanları da sevir. Qəlyanaltılar MicroZeoGen ilə zənginləşdirilib – bu, təbii mineral, vulkanik mənşəli dinamik mikronlaşdırılmış klinoptilolitdir. O, toksinlərin, ağır metalların, ammonyakın və patogen bakteriyaların orqanizmdən çıxarılmasına kömək edir, bunun sayəsində dəyərli qida maddələri, vitaminlər və minerallar asanlıqla mənimsənilir; tərkibindəki silisium sayəsində möhkəm sümüklərə və dişlərə dəstək olur, tük örtüyünün quruluşuna müsbət təsir göstərərək onu sıx və parlaq edir, həmçinin immun sistemini və orqanizmin təbii müdafiə funksiyalarını gücləndirir. Xitozamin sümüklərə və oynaqlara tam qayğı göstərir, çəkiyə nəzarətə kömək edir, qaraciyərin sağlamlığını və normal maddələr mübadiləsini dəstəkləyir, prebiotiklər isə həzm sisteminin düzgün işləməsinə kömək edir. Prebiotik, probiotik, vitamin və minerallardan ibarət Vital 3 kompleksi ev heyvanının orqanizminin həyati funksiyalarını dəstəkləməyə kömək edir.",
+    "Nature’s Protection Superior Care White Dogs xəttinin məhsulları tük rəngindən asılı olmayaraq bütün itlərə uyğundur və rəngə təsir etmir: seriya ağ və açıq rəngli tüklərdə daha çox nəzərə çarpan qəhvəyi göz yaşı ləkələrini aradan qaldırmaq üçün hazırlanıb, lakin tünd tüklü itlərin rasionuna daxil edilməsi tükün açılmasına və ya rənginin dəyişməsinə səbəb olmur. Nature’s Protection Superior Care – innovativ inqrediyentləri və ev heyvanlarının sağlam qidalanmasında ən yeni texnologiyaları ilə tanınan super premium sinifli qəlyanaltı-əlavələr xəttidir; qəlyanaltıların tərkibində ən yüksək keyfiyyətli protein mənbələri və digər inqrediyentlər var. Rahat, asan açılan qablaşdırmada 150 q ətirli qəlyanaltı var. Aİ-də istehsal olunub."
+   ],
+   "composition": "emal olunmuş həşərat proteini min. 25 % (qurudulmuş və narın üyüdülmüş)*, düyü min. 16 %, əvvəlcədən jelatinləşdirilmiş kartof nişastası, arpa, balıq unu, sorbit, qliserin, qlükoza şərbəti, noxud lifi (4 %), dinamik mikronlaşdırılmış klinoptilolit (1 %), bağayarpağı toxumu (1 %), xitozamin (su heyvanlarından) (1 %), fruktooliqosaxaridlər (FOS). *Gövşəməyən heyvanlardan alınmış emal olunmuş heyvan proteini ehtiva edir – akvakultura və xəz heyvanları istisna olmaqla, ferma heyvanlarına verilməməlidir.",
+   "additives": "Qida əlavələri (1 kq üçün): D3 vitamini (3a671)* – 577 BV, E vitamini (3a700) – 204 mq, biotin (3a880) – 0,1 mq, taurin (3a370) – 1000 mq, L-karnitin (3a910) – 5 mq. Texnoloji əlavələr: antioksidantlar, konservantlar. Zootexniki əlavələr: bağırsaq florasının stabilizatorları: Bacillus velezensis DSM 15544 (4b1820) – 1×10¹⁰ KƏV. *D2 vitamini ilə eyni vaxtda istifadəsinə icazə verilmir.",
+   "analysis": [
+    {
+     "name": "Xam protein",
+     "value": "18 %"
+    },
+    {
+     "name": "Xam lif",
+     "value": "2 %"
+    },
+    {
+     "name": "Xam yağ",
+     "value": "3 %"
+    },
+    {
+     "name": "Xam kül",
+     "value": "5 %"
+    },
+    {
+     "name": "Nişasta",
+     "value": "22 %"
+    },
+    {
+     "name": "Nəmlik",
+     "value": "20 %"
+    },
+    {
+     "name": "Fosfor",
+     "value": "0,5 %"
+    },
+    {
+     "name": "Natrium",
+     "value": "0,2 %"
+    },
+    {
+     "name": "Kalium",
+     "value": "0,5 %"
+    },
+    {
+     "name": "Qliserol",
+     "value": "3,7 %"
+    },
+    {
+     "name": "Ümumi şəkər",
+     "value": "4,5 %"
+    }
+   ],
+   "feeding": "Gündəlik doza havanın temperaturundan, ev heyvanının həyat tərzindən, temperamentindən və aktivliyindən asılı olaraq dəyişə bilər. Təmiz, təzə su həmişə əlçatan olmalıdır. Sərin və quru yerdə, +25 °C-dən yüksək olmayan temperaturda saxlayın. Partiya nömrəsi və yararlılıq müddəti: qablaşdırmaya baxın."
+  }
+ },
+ "dogs||Superior Care · Snacks||Red Coat — Healthy Body & Endurance": {
+  "url": "/product/complementary-grain-free-feed-snacks-to-support-healthy-and-endurance-with-lamb-for-adult-all-breed-dogs-with-red-coat/",
+  "sku": null,
+  "packs": [
+   "150 g"
+  ],
+  "feed": [],
+  "ru": {
+   "full": [
+    "«Nature’s Protection Superior Care Red Coat Grain Free Healthy Body & Endurance» — пищевые добавки-лакомства премиум-класса с ягнёнком, разработанные для поддержания здорового веса, тонуса тела и выносливости взрослых собак всех пород с рыжим окрасом шерсти. Они обеспечивают питомца суточной дозой необходимых витаминов, минералов, пребиотиков и пробиотиков и поддерживают его общее самочувствие. Все ингредиенты тщательно подобраны с учётом природных потребностей собак и по рекомендациям ветеринаров и экспертов в области питания домашних животных.",
+    "Основной источник белка — ягнёнок: высококачественный, питательный белок, богатый незаменимыми аминокислотами, которые помогают поддерживать крепкие мышцы, здоровье кожи и шерсти. Мясо ягнёнка также является хорошим источником железа и цинка, витаминов группы B, в частности витамина B12 и ниацина, а также фосфора и селена; его часто включают в гипоаллергенные корма, поскольку оно реже вызывает у собак аллергические реакции. 68% белков в лакомствах — животного происхождения. Формула дополнена L-карнитином.",
+    "В основе лакомств — комплекс RCE (Red Coat Enhancer), сбалансированный комплекс аминокислот, который помогает защищать и усиливать естественный пигмент рыжей шерсти и поддерживать интенсивность окраса, а также предотвращать появление коричневых пятен от слёз. Глюкозамин и хондроитин помогают сохранять суставы здоровыми и подвижными, укрепляют сухожилия и связки, поддерживая опорно-двигательный аппарат и выносливость. Хитозамин рекомендуется для поддержания оптимальной работы печени и здорового обмена веществ, а природные антиоксиданты — витамин E и экстракт зелёного чая — помогают защищать клетки от вредного воздействия свободных радикалов.",
+    "Лакомства беззерновые: они не содержат ингредиентов зернового происхождения, кукурузы и сои, способных вызывать аллергические реакции. Они не перегружают пищеварительную систему, поэтому оптимально подходят питомцам с чувствительным желудочно-кишечным трактом или склонностью к аллергии, а сбалансированное сочетание пробиотиков и пребиотиков помогает поддерживать баланс кишечной микрофлоры и улучшает пищеварение. Эти функциональные лакомства имеют более влажную и мягкую текстуру, чем обычные; во влажных продуктах сильнее раскрывается натуральный аромат, поэтому они нравятся даже самым привередливым питомцам. Лакомства обогащены MicroZeoGen — натуральным минералом, динамически микронизированным клиноптилолитом вулканического происхождения. Он помогает выводить из организма токсины, тяжёлые металлы, аммиак и патогенные бактерии, благодаря чему ценные питательные вещества, витамины и минералы легко усваиваются; за счёт содержания кремния он способствует укреплению костей и зубов, положительно влияет на структуру шерсти, делая её густой и блестящей, а также укрепляет иммунную систему и естественные защитные функции организма.",
+    "Nature’s Protection Superior Care — линейка лакомств класса супер-премиум, известная инновационными ингредиентами и новейшими технологиями в здоровом питании домашних животных; в составе лакомств — источники белка и другие ингредиенты высочайшего качества. Удобная, легко открывающаяся упаковка содержит 150 г ароматных лакомств. Произведено в ЕС."
+   ],
+   "composition": "ягнёнок мин. 22 % (высушенный и мелко измельчённый), сушёная картофельная мякоть, предварительно желатинизированный картофельный крахмал, гороховый белок, сорбит, глицерин, глюкозный сироп, гороховая клетчатка (4 %), лососевое масло (3 %), динамически микронизированный клиноптилолит (1 %), хитозамин (из водных животных) (1 %), фруктоолигосахариды (ФОС), экстракт зелёного чая (0,5 %), глюкозамин (500 мг/кг), хондроитинсульфат (250 мг/кг), сушёные водоросли Schizochytrium sp. (0,16 %).",
+   "additives": "Пищевые добавки (на 1 кг): витамин D3 (3a671)* – 577 МЕ, витамин E (3a700) – 204 мг, биотин (3a880) – 0,08 мг, L-карнитин (3a910) – 5 г, L-тирозин (3c401) – 500 мг, L-цистин (3c391) – 1 г, L-триптофан (3c440) – 500 мг, таурин (3a370) – 1000 мг. Технологические добавки: антиоксиданты, консерванты. Сенсорные добавки: ароматизирующие вещества: экстракт листьев Melissa officinalis L. (2b280-ex) – 5 г. Зоотехнические добавки: стабилизаторы кишечной флоры: Bacillus velezensis DSM 15544 (4b1820) – 1×10¹⁰ КОЕ. *Одновременное применение с витамином D2 не допускается.",
+   "analysis": [
+    {
+     "name": "Сырой протеин",
+     "value": "25 %"
+    },
+    {
+     "name": "Сырая клетчатка",
+     "value": "0,6 %"
+    },
+    {
+     "name": "Сырой жир",
+     "value": "6 %"
+    },
+    {
+     "name": "Сырая зола",
+     "value": "6 %"
+    },
+    {
+     "name": "Крахмал",
+     "value": "13 %"
+    },
+    {
+     "name": "Влажность",
+     "value": "20 %"
+    },
+    {
+     "name": "Натрий",
+     "value": "0,11 %"
+    },
+    {
+     "name": "Калий",
+     "value": "0,38 %"
+    },
+    {
+     "name": "Глицерол",
+     "value": "3,74 %"
+    },
+    {
+     "name": "Общий сахар",
+     "value": "4,52 %"
+    }
+   ],
+   "feeding": "Суточная доза может варьироваться в зависимости от температуры воздуха, образа жизни, темперамента и активности питомца. У питомца всегда должен быть доступ к чистой свежей воде. Рекомендуемая суточная норма в зависимости от массы тела: 1–5 кг – 1 шт.; 5–10 кг – 1–2 шт.; 10–15 кг – 2–3 шт.; 15–20 кг – 3–4 шт.; 20–30 кг – 4–6 шт.; 30–40 кг – 6–7 шт. Хранить в прохладном сухом месте при температуре не выше +25 °C. Номер партии и срок годности указаны на упаковке."
+  },
+  "en": {
+   "full": [
+    "Nature’s Protection Superior Care Red Coat Grain Free Healthy Body & Endurance are premium supplemental snacks with lamb, designed to support a healthy body weight, body tone and stamina in adult dogs of all breeds with a red coat. They provide the pet with a daily dose of essential vitamins, minerals, prebiotics and probiotics and support its overall well-being. Every ingredient was carefully selected in line with the natural needs of dogs and the recommendations of veterinarians and pet nutrition experts.",
+    "The main protein source is lamb – a high-quality, nutrient-dense protein rich in essential amino acids that help maintain strong muscles, healthy skin and coat. Lamb is also a good source of iron and zinc, B vitamins, in particular vitamin B12 and niacin, as well as phosphorus and selenium, and it is often included in hypoallergenic pet foods because it is less likely to cause allergic reactions in dogs. 68% of the proteins in the snacks are of animal origin. The formula is complemented with L-carnitine.",
+    "The snacks are based on the RCE complex (Red Coat Enhancer) – a balanced amino acid complex that helps protect and enhance the natural pigment of a red coat and maintain its intensity, and also helps prevent brown tear stains. Glucosamine and chondroitin help keep the joints healthy and flexible and strengthen tendons and ligaments, supporting the musculoskeletal system and endurance. Chitosamine is recommended to support optimal liver function and a healthy metabolism, and the natural antioxidants vitamin E and green tea extract help protect cells from the harmful effects of free radicals.",
+    "The snacks are grain free: they contain no ingredients of grain origin, corn or soy products that can cause allergic reactions. They do not overload the digestive system, so they are optimally suited to pets with a sensitive gastrointestinal tract or a tendency to allergies, and a balanced combination of probiotics and prebiotics helps maintain a healthy balance of the intestinal microflora and improves digestion. These functional snacks have a wetter and softer texture than ordinary treats; moister products reveal a more natural aroma, which makes them a favourite even of the pickiest pets. The snacks are enriched with MicroZeoGen – a natural mineral, dynamically micronized clinoptilolite of volcanic origin. It helps remove toxins, heavy metals, ammonia and pathogenic bacteria from the body, so that valuable nutrients, vitamins and minerals are absorbed easily; thanks to its silicon content it promotes strong bones and teeth, it has a positive effect on coat structure, making the coat look thick and shiny, and it strengthens the immune system and the body’s natural defences.",
+    "Nature’s Protection Superior Care is a Super Premium line of supplemental snacks known for innovative ingredients and the newest technologies in healthy pet nutrition; the snacks contain protein sources and other ingredients of the highest quality. The convenient, easy-to-open pack holds 150 g of tasty snacks. Made in the EU."
+   ],
+   "composition": "lamb min. 22 % (dried and finely ground), dried potato pulp, pregelatinised potato starch, pea protein, sorbitol, glycerine, glucose syrup, pea fibre (4 %), salmon oil (3 %), dynamic micronized clinoptilolite (1 %), chitosamine (from aquatic animals) (1 %), fructooligosaccharides (FOS), green tea extract (0.5 %), glucosamine (500 mg/kg), chondroitin sulphate (250 mg/kg), dried algae Schizochytrium sp. (0.16 %).",
+   "additives": "Nutritional additives (per 1 kg): vitamin D3 (3a671)* – 577 IU, vitamin E (3a700) – 204 mg, biotin (3a880) – 0.08 mg, L-carnitine (3a910) – 5 g, L-tyrosine (3c401) – 500 mg, L-cystine (3c391) – 1 g, L-tryptophan (3c440) – 500 mg, taurine (3a370) – 1000 mg. Technological additives: antioxidants, preservatives. Sensory additives: flavouring compounds: Melissa officinalis L. leaf extract (2b280-ex) – 5 g. Zootechnical additives: gut flora stabilisers: Bacillus velezensis DSM 15544 (4b1820) – 1×10¹⁰ CFU. *Simultaneous use with vitamin D2 is not allowed.",
+   "analysis": [
+    {
+     "name": "Crude protein",
+     "value": "25 %"
+    },
+    {
+     "name": "Crude fibre",
+     "value": "0.6 %"
+    },
+    {
+     "name": "Crude fat",
+     "value": "6 %"
+    },
+    {
+     "name": "Crude ash",
+     "value": "6 %"
+    },
+    {
+     "name": "Starch",
+     "value": "13 %"
+    },
+    {
+     "name": "Moisture",
+     "value": "20 %"
+    },
+    {
+     "name": "Sodium",
+     "value": "0.11 %"
+    },
+    {
+     "name": "Potassium",
+     "value": "0.38 %"
+    },
+    {
+     "name": "Glycerol",
+     "value": "3.74 %"
+    },
+    {
+     "name": "Total sugars",
+     "value": "4.52 %"
+    }
+   ],
+   "feeding": "The daily dose may vary according to the outdoor temperature and the pet’s lifestyle, temperament and activity. Clean, fresh water should be available at all times. Recommended daily amount by body weight: 1–5 kg – 1 piece; 5–10 kg – 1–2 pieces; 10–15 kg – 2–3 pieces; 15–20 kg – 3–4 pieces; 20–30 kg – 4–6 pieces; 30–40 kg – 6–7 pieces. Store in a cool, dry place at a temperature not above +25 °C. Batch number and best-before date: see the package."
+  },
+  "az": {
+   "full": [
+    "Nature’s Protection Superior Care Red Coat Grain Free Healthy Body & Endurance – kürən tüklü bütün cinslərdən olan yetkin itlərdə sağlam bədən çəkisini, bədən tonusunu və dözümlülüyü dəstəkləmək üçün hazırlanmış, quzu əti ilə premium qəlyanaltı-əlavələrdir. Onlar ev heyvanını vacib vitamin, mineral, prebiotik və probiotiklərin gündəlik dozası ilə təmin edir və onun ümumi rifahını dəstəkləyir. Hər bir inqrediyent itlərin təbii ehtiyaclarına uyğun olaraq, baytarların və ev heyvanlarının qidalanması üzrə ekspertlərin tövsiyələrinə əsasən diqqətlə seçilib.",
+    "Əsas protein mənbəyi quzu ətidir – güclü əzələlərin, sağlam dərinin və tük örtüyünün qorunmasına kömək edən əvəzolunmaz amin turşuları ilə zəngin, yüksək keyfiyyətli və qidalı protein. Quzu əti həm də dəmir və sinkin, B qrupu vitaminlərinin, xüsusən B12 vitamini və niasinin, həmçinin fosfor və selenin yaxşı mənbəyidir; itlərdə allergik reaksiyalara daha az səbəb olduğu üçün tez-tez hipoallergen yemlərin tərkibinə daxil edilir. Qəlyanaltılardakı proteinlərin 68%-i heyvan mənşəlidir. Formul L-karnitinlə tamamlanıb.",
+    "Qəlyanaltıların əsasında RCE kompleksi (Red Coat Enhancer) dayanır – bu, kürən tük örtüyünün təbii piqmentini qorumağa və gücləndirməyə, rəngin intensivliyini saxlamağa, həmçinin qəhvəyi göz yaşı ləkələrinin yaranmasının qarşısını almağa kömək edən balanslaşdırılmış amin turşuları kompleksidir. Qlükozamin və xondroitin oynaqları sağlam və çevik saxlamağa, vətərləri və bağları möhkəmləndirməyə kömək edir, dayaq-hərəkət sistemini və dözümlülüyü dəstəkləyir. Xitozamin qaraciyərin optimal işini və sağlam maddələr mübadiləsini dəstəkləmək üçün tövsiyə olunur, təbii antioksidantlar – E vitamini və yaşıl çay ekstraktı isə hüceyrələri sərbəst radikalların zərərli təsirindən qorumağa kömək edir.",
+    "Qəlyanaltılar dənsizdir: tərkibində allergik reaksiyalara səbəb ola bilən dənli mənşəli inqrediyentlər, qarğıdalı və soya məhsulları yoxdur. Onlar həzm sistemini yükləmir, buna görə də həssas mədə-bağırsaq traktı və ya allergiyaya meyli olan ev heyvanları üçün optimal uyğundur, probiotik və prebiotiklərin balanslaşdırılmış birləşməsi isə bağırsaq mikroflorasının balansını qorumağa kömək edir və həzmi yaxşılaşdırır. Bu funksional qəlyanaltılar adi ləzzətlərdən daha nəm və yumşaq teksturaya malikdir; nəm məhsullarda təbii aroma daha yaxşı açılır, buna görə də onları hətta ən seçici ev heyvanları da sevir. Qəlyanaltılar MicroZeoGen ilə zənginləşdirilib – bu, təbii mineral, vulkanik mənşəli dinamik mikronlaşdırılmış klinoptilolitdir. O, toksinlərin, ağır metalların, ammonyakın və patogen bakteriyaların orqanizmdən çıxarılmasına kömək edir, bunun sayəsində dəyərli qida maddələri, vitaminlər və minerallar asanlıqla mənimsənilir; tərkibindəki silisium sayəsində möhkəm sümüklərə və dişlərə dəstək olur, tük örtüyünün quruluşuna müsbət təsir göstərərək onu sıx və parlaq edir, həmçinin immun sistemini və orqanizmin təbii müdafiə funksiyalarını gücləndirir.",
+    "Nature’s Protection Superior Care – innovativ inqrediyentləri və ev heyvanlarının sağlam qidalanmasında ən yeni texnologiyaları ilə tanınan super premium sinifli qəlyanaltı-əlavələr xəttidir; qəlyanaltıların tərkibində ən yüksək keyfiyyətli protein mənbələri və digər inqrediyentlər var. Rahat, asan açılan qablaşdırmada 150 q ətirli qəlyanaltı var. Aİ-də istehsal olunub."
+   ],
+   "composition": "quzu əti min. 22 % (qurudulmuş və narın üyüdülmüş), qurudulmuş kartof pulpası, əvvəlcədən jelatinləşdirilmiş kartof nişastası, noxud proteini, sorbit, qliserin, qlükoza şərbəti, noxud lifi (4 %), qızılbalıq yağı (3 %), dinamik mikronlaşdırılmış klinoptilolit (1 %), xitozamin (su heyvanlarından) (1 %), fruktooliqosaxaridlər (FOS), yaşıl çay ekstraktı (0,5 %), qlükozamin (500 mq/kq), xondroitin sulfat (250 mq/kq), qurudulmuş yosun Schizochytrium sp. (0,16 %).",
+   "additives": "Qida əlavələri (1 kq üçün): D3 vitamini (3a671)* – 577 BV, E vitamini (3a700) – 204 mq, biotin (3a880) – 0,08 mq, L-karnitin (3a910) – 5 q, L-tirozin (3c401) – 500 mq, L-sistin (3c391) – 1 q, L-triptofan (3c440) – 500 mq, taurin (3a370) – 1000 mq. Texnoloji əlavələr: antioksidantlar, konservantlar. Sensor əlavələr: ətirverici maddələr: Melissa officinalis L. yarpaq ekstraktı (2b280-ex) – 5 q. Zootexniki əlavələr: bağırsaq florasının stabilizatorları: Bacillus velezensis DSM 15544 (4b1820) – 1×10¹⁰ KƏV. *D2 vitamini ilə eyni vaxtda istifadəsinə icazə verilmir.",
+   "analysis": [
+    {
+     "name": "Xam protein",
+     "value": "25 %"
+    },
+    {
+     "name": "Xam lif",
+     "value": "0,6 %"
+    },
+    {
+     "name": "Xam yağ",
+     "value": "6 %"
+    },
+    {
+     "name": "Xam kül",
+     "value": "6 %"
+    },
+    {
+     "name": "Nişasta",
+     "value": "13 %"
+    },
+    {
+     "name": "Nəmlik",
+     "value": "20 %"
+    },
+    {
+     "name": "Natrium",
+     "value": "0,11 %"
+    },
+    {
+     "name": "Kalium",
+     "value": "0,38 %"
+    },
+    {
+     "name": "Qliserol",
+     "value": "3,74 %"
+    },
+    {
+     "name": "Ümumi şəkər",
+     "value": "4,52 %"
+    }
+   ],
+   "feeding": "Gündəlik doza havanın temperaturundan, ev heyvanının həyat tərzindən, temperamentindən və aktivliyindən asılı olaraq dəyişə bilər. Təmiz, təzə su həmişə əlçatan olmalıdır. Bədən çəkisinə görə tövsiyə olunan gündəlik norma: 1–5 kq – 1 əd.; 5–10 kq – 1–2 əd.; 10–15 kq – 2–3 əd.; 15–20 kq – 3–4 əd.; 20–30 kq – 4–6 əd.; 30–40 kq – 6–7 əd. Sərin və quru yerdə, +25 °C-dən yüksək olmayan temperaturda saxlayın. Partiya nömrəsi və yararlılıq müddəti: qablaşdırmaya baxın."
+  }
+ },
+ "dogs||Superior Care · Snacks||Red Coat — Weight Control": {
+  "url": "/product/red-coat-grain-free-weight-control-with-herring-adult-all-breeds-complementary-grain-free-feed-sn/",
+  "sku": null,
+  "packs": [
+   "150 g"
+  ],
+  "feed": [],
+  "ru": {
+   "full": [
+    "«Nature’s Protection Superior Care Red Coat Grain Free Weight Control» — пищевые добавки-лакомства премиум-класса с сельдью, специально разработанные для поддержания общего самочувствия взрослых собак всех пород с рыжим окрасом шерсти и помощи в сохранении оптимального веса тела.",
+    "Основной источник белка — сельдь: легкоусвояемый высококачественный белок, богатый незаменимыми жирными кислотами Омега-3, которые поддерживают здоровье кожи, шерсти и суставов. Благодаря ценным питательным веществам — витаминам B12 и D, селену, фосфору и калию — сельдь помогает поддерживать здоровье костей, мышц и органов, а также иммунной и нервной систем. Лакомства оптимально подходят питомцам, склонным к набору лишнего веса. 82% белков в лакомствах — животного происхождения.",
+    "Зелёный чай — суперпродукт: он стимулирует обменные процессы, обладает антибактериальными свойствами, помогает устранить неприятный запах из пасти, а также оказывает антиоксидантное действие и помогает уменьшить негативное воздействие стресса. В основе лакомств — комплекс RCE (Red Coat Enhancer), сбалансированный комплекс аминокислот, который помогает защищать и усиливать естественный пигмент рыжей шерсти и поддерживать интенсивность окраса, а также предотвращать появление коричневых пятен от слёз.",
+    "Лакомства беззерновые: они не содержат ингредиентов зернового происхождения, кукурузы и сои, способных вызывать аллергические реакции. Они не перегружают пищеварительную систему, поэтому оптимально подходят питомцам с чувствительным желудочно-кишечным трактом или склонностью к аллергии, а сбалансированное сочетание пробиотиков и пребиотиков помогает поддерживать баланс кишечной микрофлоры и улучшает пищеварение. Эти функциональные лакомства имеют более влажную и мягкую текстуру, чем обычные; во влажных продуктах сильнее раскрывается натуральный аромат, поэтому они нравятся даже самым привередливым питомцам. Лакомства обогащены MicroZeoGen — натуральным минералом, динамически микронизированным клиноптилолитом вулканического происхождения, который помогает выводить токсины, улучшает усвоение питательных веществ и укрепляет иммунную систему и естественные защитные функции организма.",
+    "Nature’s Protection Superior Care — линейка лакомств класса супер-премиум, известная инновационными ингредиентами и новейшими технологиями в здоровом питании домашних животных; в составе лакомств — источники белка и другие ингредиенты высочайшего качества. Удобная, легко открывающаяся упаковка содержит 150 г ароматных лакомств. Произведено в ЕС."
+   ],
+   "composition": "сельдь мин. 26 % (высушенная и мелко измельчённая), предварительно желатинизированный картофельный крахмал, картофельные хлопья, рыбная мука, морские водоросли Ascophyllum nodosum (4 %), сорбит, глицерин, глюкозный сироп, гороховая клетчатка (4 %), динамически микронизированный клиноптилолит (1 %), фруктоолигосахариды (ФОС), хитозамин (из водных животных) (1 %), сушёные водоросли Schizochytrium sp. (0,16 %), экстракт зелёного чая (0,05 %), сушёная календула (0,02 %).",
+   "additives": "Пищевые добавки (на 1 кг): витамин D3 (3a671)* – 577 МЕ, витамин E (3a700) – 204 мг, биотин (3a880) – 0,08 мг, L-карнитин (3a910) – 5 г, L-тирозин (3c401) – 500 мг, L-цистин (3c391) – 1 г, L-триптофан (3c440) – 500 мг, таурин (3a370) – 1000 мг. Технологические добавки: антиоксиданты, консерванты. Зоотехнические добавки: стабилизаторы кишечной флоры: Bacillus velezensis DSM 15544 (4b1820) – 1×10¹⁰ КОЕ. *Одновременное применение с витамином D2 не допускается.",
+   "analysis": [
+    {
+     "name": "Сырой протеин",
+     "value": "21 %"
+    },
+    {
+     "name": "Сырая клетчатка",
+     "value": "3,5 %"
+    },
+    {
+     "name": "Сырой жир",
+     "value": "3 %"
+    },
+    {
+     "name": "Сырая зола",
+     "value": "5 %"
+    },
+    {
+     "name": "Крахмал",
+     "value": "34 %"
+    },
+    {
+     "name": "Влажность",
+     "value": "20 %"
+    },
+    {
+     "name": "Фосфор",
+     "value": "1,35 %"
+    },
+    {
+     "name": "Натрий",
+     "value": "0,7 %"
+    },
+    {
+     "name": "Калий",
+     "value": "0,7 %"
+    },
+    {
+     "name": "Глицерол",
+     "value": "3,7 %"
+    },
+    {
+     "name": "Общий сахар",
+     "value": "4,5 %"
+    }
+   ],
+   "feeding": "Суточная доза может варьироваться в зависимости от температуры воздуха, образа жизни, темперамента и активности питомца. У питомца всегда должен быть доступ к чистой свежей воде. Хранить в прохладном сухом месте при температуре не выше +25 °C. Номер партии и срок годности указаны на упаковке."
+  },
+  "en": {
+   "full": [
+    "Nature’s Protection Superior Care Red Coat Grain Free Weight Control are premium supplemental snacks with herring, specially formulated to support the overall well-being of adult dogs of all breeds with a red coat and to help them maintain an optimal body weight.",
+    "The main protein source is herring – an easily digestible, high-quality protein that provides essential omega-3 fatty acids to support healthy skin, coat and joints. Packed with vital nutrients such as vitamins B12 and D, selenium, phosphorus and potassium, herring helps maintain healthy bones, muscles and organs and supports the immune and nervous systems. The snacks are optimally suited to pets prone to gaining excess weight. 82% of the proteins in the snacks are of animal origin.",
+    "Green tea, a superfood, stimulates metabolic processes, has antibacterial properties, helps eliminate bad breath and has an antioxidant effect that helps reduce the negative impact of stress. The snacks are based on the RCE complex (Red Coat Enhancer) – a balanced amino acid complex that helps protect and enhance the natural pigment of a red coat and maintain its intensity, and also helps prevent brown tear stains.",
+    "The snacks are grain free: they contain no ingredients of grain origin, corn or soy products that can cause allergic reactions. They do not overload the digestive system, so they are optimally suited to pets with a sensitive gastrointestinal tract or a tendency to allergies, and a balanced combination of probiotics and prebiotics helps maintain a healthy balance of the intestinal microflora and improves digestion. These functional snacks have a wetter and softer texture than ordinary treats; moister products reveal a more natural aroma, which makes them a favourite even of the pickiest pets. The snacks are enriched with MicroZeoGen – a natural mineral, dynamically micronized clinoptilolite of volcanic origin, which helps remove toxins, improves nutrient absorption and strengthens the immune system and the body’s natural defences.",
+    "Nature’s Protection Superior Care is a Super Premium line of supplemental snacks known for innovative ingredients and the newest technologies in healthy pet nutrition; the snacks contain protein sources and other ingredients of the highest quality. The convenient, easy-to-open pack holds 150 g of tasty snacks. Made in the EU."
+   ],
+   "composition": "herring min. 26 % (dried and finely ground), pregelatinised potato starch, potato flakes, fish meal, seaweed Ascophyllum nodosum (4 %), sorbitol, glycerine, glucose syrup, pea fibre (4 %), dynamic micronized clinoptilolite (1 %), fructooligosaccharides (FOS), chitosamine (from aquatic animals) (1 %), dried algae Schizochytrium sp. (0.16 %), green tea extract (0.05 %), dried marigold (0.02 %).",
+   "additives": "Nutritional additives (per 1 kg): vitamin D3 (3a671)* – 577 IU, vitamin E (3a700) – 204 mg, biotin (3a880) – 0.08 mg, L-carnitine (3a910) – 5 g, L-tyrosine (3c401) – 500 mg, L-cystine (3c391) – 1 g, L-tryptophan (3c440) – 500 mg, taurine (3a370) – 1000 mg. Technological additives: antioxidants, preservatives. Zootechnical additives: gut flora stabilisers: Bacillus velezensis DSM 15544 (4b1820) – 1×10¹⁰ CFU. *Simultaneous use with vitamin D2 is not allowed.",
+   "analysis": [
+    {
+     "name": "Crude protein",
+     "value": "21 %"
+    },
+    {
+     "name": "Crude fibre",
+     "value": "3.5 %"
+    },
+    {
+     "name": "Crude fat",
+     "value": "3 %"
+    },
+    {
+     "name": "Crude ash",
+     "value": "5 %"
+    },
+    {
+     "name": "Starch",
+     "value": "34 %"
+    },
+    {
+     "name": "Moisture",
+     "value": "20 %"
+    },
+    {
+     "name": "Phosphorus",
+     "value": "1.35 %"
+    },
+    {
+     "name": "Sodium",
+     "value": "0.7 %"
+    },
+    {
+     "name": "Potassium",
+     "value": "0.7 %"
+    },
+    {
+     "name": "Glycerol",
+     "value": "3.7 %"
+    },
+    {
+     "name": "Total sugars",
+     "value": "4.5 %"
+    }
+   ],
+   "feeding": "The daily dose may vary according to the outdoor temperature and the pet’s lifestyle, temperament and activity. Clean, fresh water should be available at all times. Store in a cool, dry place at a temperature not above +25 °C. Batch number and best-before date: see the package."
+  },
+  "az": {
+   "full": [
+    "Nature’s Protection Superior Care Red Coat Grain Free Weight Control – kürən tüklü bütün cinslərdən olan yetkin itlərin ümumi rifahını dəstəkləmək və optimal bədən çəkisini saxlamağa kömək etmək üçün xüsusi hazırlanmış, siyənək balığı ilə premium qəlyanaltı-əlavələrdir.",
+    "Əsas protein mənbəyi siyənəkdir – dərinin, tük örtüyünün və oynaqların sağlamlığını dəstəkləyən əvəzolunmaz Omeqa-3 yağ turşuları ilə zəngin, asan həzm olunan yüksək keyfiyyətli protein. B12 və D vitaminləri, selen, fosfor və kalium kimi həyati vacib qida maddələri sayəsində siyənək sağlam sümüklərin, əzələlərin və orqanların qorunmasına kömək edir, immun və sinir sistemlərini dəstəkləyir. Qəlyanaltılar artıq çəki yığmağa meyilli ev heyvanları üçün optimal uyğundur. Qəlyanaltılardakı proteinlərin 82%-i heyvan mənşəlidir.",
+    "Super məhsul olan yaşıl çay maddələr mübadiləsini stimullaşdırır, antibakterial xüsusiyyətlərə malikdir, ağızdan gələn xoşagəlməz qoxunu aradan qaldırmağa kömək edir, həmçinin antioksidant təsir göstərir və stresin mənfi təsirini azaltmağa kömək edir. Qəlyanaltıların əsasında RCE kompleksi (Red Coat Enhancer) dayanır – bu, kürən tük örtüyünün təbii piqmentini qorumağa və gücləndirməyə, rəngin intensivliyini saxlamağa, həmçinin qəhvəyi göz yaşı ləkələrinin yaranmasının qarşısını almağa kömək edən balanslaşdırılmış amin turşuları kompleksidir.",
+    "Qəlyanaltılar dənsizdir: tərkibində allergik reaksiyalara səbəb ola bilən dənli mənşəli inqrediyentlər, qarğıdalı və soya məhsulları yoxdur. Onlar həzm sistemini yükləmir, buna görə də həssas mədə-bağırsaq traktı və ya allergiyaya meyli olan ev heyvanları üçün optimal uyğundur, probiotik və prebiotiklərin balanslaşdırılmış birləşməsi isə bağırsaq mikroflorasının balansını qorumağa kömək edir və həzmi yaxşılaşdırır. Bu funksional qəlyanaltılar adi ləzzətlərdən daha nəm və yumşaq teksturaya malikdir; nəm məhsullarda təbii aroma daha yaxşı açılır, buna görə də onları hətta ən seçici ev heyvanları da sevir. Qəlyanaltılar MicroZeoGen ilə zənginləşdirilib – bu, toksinlərin çıxarılmasına kömək edən, qida maddələrinin mənimsənilməsini yaxşılaşdıran, immun sistemini və orqanizmin təbii müdafiə funksiyalarını gücləndirən təbii mineral, vulkanik mənşəli dinamik mikronlaşdırılmış klinoptilolitdir.",
+    "Nature’s Protection Superior Care – innovativ inqrediyentləri və ev heyvanlarının sağlam qidalanmasında ən yeni texnologiyaları ilə tanınan super premium sinifli qəlyanaltı-əlavələr xəttidir; qəlyanaltıların tərkibində ən yüksək keyfiyyətli protein mənbələri və digər inqrediyentlər var. Rahat, asan açılan qablaşdırmada 150 q ətirli qəlyanaltı var. Aİ-də istehsal olunub."
+   ],
+   "composition": "siyənək min. 26 % (qurudulmuş və narın üyüdülmüş), əvvəlcədən jelatinləşdirilmiş kartof nişastası, kartof lopaları, balıq unu, dəniz yosunu Ascophyllum nodosum (4 %), sorbit, qliserin, qlükoza şərbəti, noxud lifi (4 %), dinamik mikronlaşdırılmış klinoptilolit (1 %), fruktooliqosaxaridlər (FOS), xitozamin (su heyvanlarından) (1 %), qurudulmuş yosun Schizochytrium sp. (0,16 %), yaşıl çay ekstraktı (0,05 %), qurudulmuş gülümbahar (0,02 %).",
+   "additives": "Qida əlavələri (1 kq üçün): D3 vitamini (3a671)* – 577 BV, E vitamini (3a700) – 204 mq, biotin (3a880) – 0,08 mq, L-karnitin (3a910) – 5 q, L-tirozin (3c401) – 500 mq, L-sistin (3c391) – 1 q, L-triptofan (3c440) – 500 mq, taurin (3a370) – 1000 mq. Texnoloji əlavələr: antioksidantlar, konservantlar. Zootexniki əlavələr: bağırsaq florasının stabilizatorları: Bacillus velezensis DSM 15544 (4b1820) – 1×10¹⁰ KƏV. *D2 vitamini ilə eyni vaxtda istifadəsinə icazə verilmir.",
+   "analysis": [
+    {
+     "name": "Xam protein",
+     "value": "21 %"
+    },
+    {
+     "name": "Xam lif",
+     "value": "3,5 %"
+    },
+    {
+     "name": "Xam yağ",
+     "value": "3 %"
+    },
+    {
+     "name": "Xam kül",
+     "value": "5 %"
+    },
+    {
+     "name": "Nişasta",
+     "value": "34 %"
+    },
+    {
+     "name": "Nəmlik",
+     "value": "20 %"
+    },
+    {
+     "name": "Fosfor",
+     "value": "1,35 %"
+    },
+    {
+     "name": "Natrium",
+     "value": "0,7 %"
+    },
+    {
+     "name": "Kalium",
+     "value": "0,7 %"
+    },
+    {
+     "name": "Qliserol",
+     "value": "3,7 %"
+    },
+    {
+     "name": "Ümumi şəkər",
+     "value": "4,5 %"
+    }
+   ],
+   "feeding": "Gündəlik doza havanın temperaturundan, ev heyvanının həyat tərzindən, temperamentindən və aktivliyindən asılı olaraq dəyişə bilər. Təmiz, təzə su həmişə əlçatan olmalıdır. Sərin və quru yerdə, +25 °C-dən yüksək olmayan temperaturda saxlayın. Partiya nömrəsi və yararlılıq müddəti: qablaşdırmaya baxın."
+  }
+ },
+ "dogs||Superior Care · Flowpack||White Dogs — Clear Vision": {
+  "url": "/product/snacks-with-salmon-for-adult-dogs-with-white-and-light-coat/",
+  "sku": null,
+  "packs": [
+   "110 g"
+  ],
+  "feed": [],
+  "ru": {
+   "full": [
+    "«Nature’s Protection Superior Care White Dogs Grain Free Clear Vision» — пищевые добавки-лакомства с лососем, кормовая добавка высочайшего качества для взрослых собак всех пород с белой или светлой шерстью, созданная для общего благополучия питомца и поддержания его зрения. Это прекрасный способ проявить любовь к собаке и одновременно обеспечить её суточной дозой необходимых витаминов, минералов, пребиотиков и пробиотиков.",
+    "Лакомства содержат формулу Tear Stains Off — тщательно подобранный комплекс аминокислот и полностью сбалансированные ингредиенты, которые помогают поддерживать чистоту состава слюны и слёз и тем самым бороться с коричневыми пятнами от слёз вокруг глаз, пасти, на лапах и других частях тела. Источник белка — первый ингредиент в составе. Основной источник белка — лосось: хороший источник высококачественного легкоусвояемого белка, богатый жирными кислотами Омега-3, витаминами и минералами и считающийся гипоаллергенным источником белка; кроме того, лосось известен своей высокой вкусовой привлекательностью. Благодаря тщательно продуманному сочетанию белков лакомство отлично подходит питомцам с белой шерстью. 85% белков в лакомствах — животного происхождения.",
+    "Состав содержит морские водоросли — суперпродукт, который может способствовать хорошему развитию мозга и зрения и помогает поддерживать остроту зрения. Морские водоросли — ценный природный источник витаминов A, C, K и B6, а также кальция, калия, меди, йода и марганца, которые помогают предотвращать образование зубного камня, и отличный источник железа. Природные антиоксиданты — витамин E и экстракт зелёного чая — помогают защищать клетки организма питомца от негативного воздействия свободных радикалов.",
+    "Эти функциональные лакомства имеют более влажную и мягкую текстуру, чем обычные; во влажных продуктах сильнее раскрывается натуральный аромат, поэтому они нравятся даже самым привередливым питомцам. Лакомства обогащены MicroZeoGen — натуральным минералом, динамически микронизированным клиноптилолитом вулканического происхождения. Он активно стимулирует микрофлору кишечника и таким образом улучшает усвоение питательных веществ, а благодаря особой микроструктуре помогает выводить из организма питомца токсины, чтобы ценные питательные вещества, витамины и минералы легко усваивались, и укрепляет иммунную систему. Лакомства не содержат ингредиентов зернового происхождения, кукурузы и сои, способных вызывать аллергические реакции, и легко усваиваются, поэтому подходят и питомцам с чувствительной системой пищеварения.",
+    "Nature’s Protection Superior Care — линейка лакомств класса супер-премиум, известная инновационными ингредиентами и новейшими технологиями в здоровом питании домашних животных; в составе лакомств — источники белка и другие ингредиенты высочайшего качества. Удобная, легко открывающаяся упаковка содержит 110 г ароматных лакомств. Произведено в ЕС."
+   ],
+   "composition": "лосось мин. 24 % (высушенный и мелко измельчённый), сушёная картофельная мякоть, предварительно желатинизированный картофельный крахмал, гидролизованная перьевая мука, морские водоросли Ascophyllum nodosum (6 %), сорбит, глицерин, глюкозный сироп, гороховая клетчатка, динамически микронизированный клиноптилолит (1 %), хитозамин (из водных животных) (1 %), фруктоолигосахариды (ФОС), экстракт зелёного чая (0,5 %), глюкозамин (500 мг/кг), хондроитинсульфат (250 мг/кг), сушёные водоросли Schizochytrium sp. (0,16 %).",
+   "additives": "Пищевые добавки (на 1 кг): витамин D3 (3a671)* – 577 МЕ, витамин E (3a700) – 204 мг, биотин (3a880) – 0,08 мг. Технологические добавки: антиоксиданты, консерванты. Зоотехнические добавки: стабилизаторы кишечной флоры: Bacillus subtilis DSM 15544 (4b1820) – 1×10¹⁰ КОЕ. *Одновременное применение с витамином D2 не допускается.",
+   "analysis": [
+    {
+     "name": "Сырой протеин",
+     "value": "22 %"
+    },
+    {
+     "name": "Сырая клетчатка",
+     "value": "4,5 %"
+    },
+    {
+     "name": "Сырой жир",
+     "value": "3,7 %"
+    },
+    {
+     "name": "Сырая зола",
+     "value": "5,7 %"
+    },
+    {
+     "name": "Влажность",
+     "value": "20 %"
+    },
+    {
+     "name": "Крахмал",
+     "value": "13,5 %"
+    },
+    {
+     "name": "Натрий",
+     "value": "0,11 %"
+    },
+    {
+     "name": "Калий",
+     "value": "0,38 %"
+    },
+    {
+     "name": "Глицерол",
+     "value": "3,74 %"
+    },
+    {
+     "name": "Общий сахар",
+     "value": "4,52 %"
+    }
+   ],
+   "feeding": "Суточная доза может варьироваться в зависимости от температуры воздуха, образа жизни, темперамента и активности питомца. У питомца всегда должен быть доступ к чистой свежей воде. Рекомендуемая суточная норма в зависимости от массы тела: 1–5 кг – 1 шт.; 5–10 кг – 1–2 шт.; 10–15 кг – 2–3 шт.; 15–20 кг – 3–4 шт.; 20–30 кг – 4–6 шт.; 30–40 кг – 6–7 шт."
+  },
+  "en": {
+   "full": [
+    "Nature’s Protection Superior Care White Dogs Grain Free Clear Vision are supplemental snacks with salmon – a feed supplement of the highest quality for adult dogs of all breeds with a white or light coat, designed for the pet’s overall well-being and to support its vision. They are a perfect way to show love for your dog and at the same time provide the daily dose of essential vitamins, minerals, prebiotics and probiotics.",
+    "The snacks contain the Tear Stains Off formula – a carefully selected amino acid complex and fully balanced ingredients that help keep the composition of saliva and tears clean and so help fight brown tear stains around the eyes, mouth, paws and other parts of the body. The protein source is the first ingredient in the composition. The main source of protein is salmon – a good source of high-quality, easily digestible protein, rich in omega-3 fatty acids, vitamins and minerals and considered a hypoallergenic protein source; salmon is also known for its high palatability. Thanks to the carefully balanced combination of proteins, the snacks are excellent for pets with a white coat. 85% of the proteins in the snacks are of animal origin.",
+    "The composition contains seaweed, a superfood that may help promote good brain and vision development and helps maintain sharp eyesight. Seaweed is a valuable natural source of vitamins A, C, K and B6, as well as calcium, potassium, copper, iodine and manganese, which help prevent the formation of tartar, and it is an excellent source of iron. The natural antioxidants vitamin E and green tea extract help protect the pet’s cells from the negative effects of free radicals.",
+    "These functional snacks have a wetter and softer texture than ordinary treats; moister products reveal a more natural aroma, which makes them a favourite even of the pickiest pets. The snacks are enriched with MicroZeoGen – a natural mineral, dynamically micronized clinoptilolite of volcanic origin. It actively stimulates the intestinal microflora and so improves nutrient absorption; thanks to its special microstructure it helps remove toxins from the pet’s body, so that valuable nutrients, vitamins and minerals are absorbed easily, and it strengthens the immune system. The supplemental snacks do not contain ingredients of grain origin, corn or soy products that can cause allergic reactions, and they are easily digestible, so they also suit pets with a sensitive digestive system.",
+    "Nature’s Protection Superior Care is a Super Premium line of supplemental snacks known for innovative ingredients and the newest technologies in healthy pet nutrition; the snacks contain protein sources and other ingredients of the highest quality. The convenient, easy-to-open pack holds 110 g of tasty snacks. Made in the EU."
+   ],
+   "composition": "salmon min. 24 % (dried and finely ground), dried potato pulp, pregelatinised potato starch, hydrolysed feather meal, seaweed Ascophyllum nodosum (6 %), sorbitol, glycerine, glucose syrup, pea fibre, dynamic micronized clinoptilolite (1 %), chitosamine (from aquatic animals) (1 %), fructooligosaccharides (FOS), green tea extract (0.5 %), glucosamine (500 mg/kg), chondroitin sulphate (250 mg/kg), dried algae Schizochytrium sp. (0.16 %).",
+   "additives": "Nutritional additives (per 1 kg): vitamin D3 (3a671)* – 577 IU, vitamin E (3a700) – 204 mg, biotin (3a880) – 0.08 mg. Technological additives: antioxidants, preservatives. Zootechnical additives: gut flora stabilisers: Bacillus subtilis DSM 15544 (4b1820) – 1×10¹⁰ CFU. *Simultaneous use with vitamin D2 is not allowed.",
+   "analysis": [
+    {
+     "name": "Crude protein",
+     "value": "22 %"
+    },
+    {
+     "name": "Crude fibre",
+     "value": "4.5 %"
+    },
+    {
+     "name": "Crude fat",
+     "value": "3.7 %"
+    },
+    {
+     "name": "Crude ash",
+     "value": "5.7 %"
+    },
+    {
+     "name": "Moisture",
+     "value": "20 %"
+    },
+    {
+     "name": "Starch",
+     "value": "13.5 %"
+    },
+    {
+     "name": "Sodium",
+     "value": "0.11 %"
+    },
+    {
+     "name": "Potassium",
+     "value": "0.38 %"
+    },
+    {
+     "name": "Glycerol",
+     "value": "3.74 %"
+    },
+    {
+     "name": "Total sugars",
+     "value": "4.52 %"
+    }
+   ],
+   "feeding": "The daily dose may vary according to the outdoor temperature and the pet’s lifestyle, temperament and activity. Clean, fresh water should be available at all times. Recommended daily amount by body weight: 1–5 kg – 1 piece; 5–10 kg – 1–2 pieces; 10–15 kg – 2–3 pieces; 15–20 kg – 3–4 pieces; 20–30 kg – 4–6 pieces; 30–40 kg – 6–7 pieces."
+  },
+  "az": {
+   "full": [
+    "Nature’s Protection Superior Care White Dogs Grain Free Clear Vision – ağ və ya açıq rəngli tükü olan bütün cinslərdən yetkin itlər üçün qızılbalıqla hazırlanmış ən yüksək keyfiyyətli qəlyanaltı-əlavələrdir; ev heyvanının ümumi rifahı və görmə qabiliyyətinin dəstəklənməsi üçün yaradılıb. Bu, itinizə sevginizi göstərmək və eyni zamanda onu vacib vitamin, mineral, prebiotik və probiotiklərin gündəlik dozası ilə təmin etmək üçün mükəmməl üsuldur.",
+    "Qəlyanaltıların tərkibində Tear Stains Off formulu var – diqqətlə seçilmiş amin turşuları kompleksi və tam balanslaşdırılmış inqrediyentlər tüpürcək və göz yaşının tərkibini təmiz saxlamağa və beləliklə gözlərin, ağzın, pəncələrin və bədənin digər hissələrinin ətrafındakı qəhvəyi göz yaşı ləkələri ilə mübarizə aparmağa kömək edir. Protein mənbəyi tərkibdə birinci inqrediyentdir. Əsas protein mənbəyi qızılbalıqdır – yüksək keyfiyyətli, asan həzm olunan proteinin yaxşı mənbəyi olub Omeqa-3 yağ turşuları, vitaminlər və minerallarla zəngindir və hipoallergen protein mənbəyi hesab olunur; bundan əlavə, qızılbalıq yüksək dad cəlbediciliyi ilə tanınır. Diqqətlə düşünülmüş protein birləşməsi sayəsində qəlyanaltı ağ tüklü ev heyvanları üçün əla uyğundur. Qəlyanaltılardakı proteinlərin 85%-i heyvan mənşəlidir.",
+    "Tərkibdə beynin və görmənin yaxşı inkişafına kömək edə bilən və görmə itiliyini qorumağa yardım edən super məhsul – dəniz yosunu var. Dəniz yosunu A, C, K və B6 vitaminlərinin, həmçinin diş daşının əmələ gəlməsinin qarşısını almağa kömək edən kalsium, kalium, mis, yod və manqanın dəyərli təbii mənbəyi, eləcə də dəmirin əla mənbəyidir. Təbii antioksidantlar – E vitamini və yaşıl çay ekstraktı ev heyvanının hüceyrələrini sərbəst radikalların mənfi təsirindən qorumağa kömək edir.",
+    "Bu funksional qəlyanaltılar adi ləzzətlərdən daha nəm və yumşaq teksturaya malikdir; nəm məhsullarda təbii aroma daha yaxşı açılır, buna görə də onları hətta ən seçici ev heyvanları da sevir. Qəlyanaltılar MicroZeoGen ilə zənginləşdirilib – bu, təbii mineral, vulkanik mənşəli dinamik mikronlaşdırılmış klinoptilolitdir. O, bağırsaq mikroflorasını fəal şəkildə stimullaşdıraraq qida maddələrinin mənimsənilməsini yaxşılaşdırır, xüsusi mikroquruluşu sayəsində isə toksinlərin ev heyvanının orqanizmindən çıxarılmasına kömək edir ki, dəyərli qida maddələri, vitaminlər və minerallar asanlıqla mənimsənilsin, həmçinin immun sistemini gücləndirir. Qəlyanaltıların tərkibində allergik reaksiyalara səbəb ola bilən dənli mənşəli inqrediyentlər, qarğıdalı və soya məhsulları yoxdur və onlar asan həzm olunur, buna görə də həssas həzm sistemi olan ev heyvanlarına da uyğundur.",
+    "Nature’s Protection Superior Care – innovativ inqrediyentləri və ev heyvanlarının sağlam qidalanmasında ən yeni texnologiyaları ilə tanınan super premium sinifli qəlyanaltı-əlavələr xəttidir; qəlyanaltıların tərkibində ən yüksək keyfiyyətli protein mənbələri və digər inqrediyentlər var. Rahat, asan açılan qablaşdırmada 110 q ətirli qəlyanaltı var. Aİ-də istehsal olunub."
+   ],
+   "composition": "qızılbalıq min. 24 % (qurudulmuş və narın üyüdülmüş), qurudulmuş kartof pulpası, əvvəlcədən jelatinləşdirilmiş kartof nişastası, hidroliz olunmuş lələk unu, dəniz yosunu Ascophyllum nodosum (6 %), sorbit, qliserin, qlükoza şərbəti, noxud lifi, dinamik mikronlaşdırılmış klinoptilolit (1 %), xitozamin (su heyvanlarından) (1 %), fruktooliqosaxaridlər (FOS), yaşıl çay ekstraktı (0,5 %), qlükozamin (500 mq/kq), xondroitin sulfat (250 mq/kq), qurudulmuş yosun Schizochytrium sp. (0,16 %).",
+   "additives": "Qida əlavələri (1 kq üçün): D3 vitamini (3a671)* – 577 BV, E vitamini (3a700) – 204 mq, biotin (3a880) – 0,08 mq. Texnoloji əlavələr: antioksidantlar, konservantlar. Zootexniki əlavələr: bağırsaq florasının stabilizatorları: Bacillus subtilis DSM 15544 (4b1820) – 1×10¹⁰ KƏV. *D2 vitamini ilə eyni vaxtda istifadəsinə icazə verilmir.",
+   "analysis": [
+    {
+     "name": "Xam protein",
+     "value": "22 %"
+    },
+    {
+     "name": "Xam lif",
+     "value": "4,5 %"
+    },
+    {
+     "name": "Xam yağ",
+     "value": "3,7 %"
+    },
+    {
+     "name": "Xam kül",
+     "value": "5,7 %"
+    },
+    {
+     "name": "Nəmlik",
+     "value": "20 %"
+    },
+    {
+     "name": "Nişasta",
+     "value": "13,5 %"
+    },
+    {
+     "name": "Natrium",
+     "value": "0,11 %"
+    },
+    {
+     "name": "Kalium",
+     "value": "0,38 %"
+    },
+    {
+     "name": "Qliserol",
+     "value": "3,74 %"
+    },
+    {
+     "name": "Ümumi şəkər",
+     "value": "4,52 %"
+    }
+   ],
+   "feeding": "Gündəlik doza havanın temperaturundan, ev heyvanının həyat tərzindən, temperamentindən və aktivliyindən asılı olaraq dəyişə bilər. Təmiz, təzə su həmişə əlçatan olmalıdır. Bədən çəkisinə görə tövsiyə olunan gündəlik norma: 1–5 kq – 1 əd.; 5–10 kq – 1–2 əd.; 10–15 kq – 2–3 əd.; 15–20 kq – 3–4 əd.; 20–30 kq – 4–6 əd.; 30–40 kq – 6–7 əd."
+  }
+ },
+ "dogs||Superior Care · Flowpack||White Dogs — Hypoallergenic Dental": {
+  "url": "/product/complementary-grain-free-feed-snacks-for-adult-dogs-with-white-fish-4/",
+  "sku": null,
+  "packs": [
+   "150 g"
+  ],
+  "feed": [],
+  "ru": {
+   "full": [
+    "«Nature’s Protection Superior Care White Dogs Grain Free Hypoallergenic Dental» — пищевые добавки-лакомства с белой рыбой, кормовая добавка высочайшего качества для взрослых собак всех пород с белой или светлой шерстью, в том числе склонных к пищевой аллергии, созданная для общего благополучия питомца и поддержания здоровья зубов и гигиены полости рта. Это прекрасный способ проявить любовь к собаке и одновременно обеспечить её суточной дозой необходимых витаминов, минералов, пребиотиков и пробиотиков.",
+    "Лакомства содержат формулу Tear Stains Off — тщательно подобранный комплекс аминокислот и полностью сбалансированные ингредиенты, которые помогают поддерживать чистоту состава слюны и слёз и тем самым бороться с коричневыми пятнами от слёз вокруг глаз, пасти, на лапах и других частях тела. Источник белка — первый ингредиент в составе. Основной источник белка — белая рыба: хороший источник легкоусвояемого и высокоценного белка, дающий незаменимые аминокислоты — строительные блоки белка. Она также богата жирными кислотами Омега-3, которые важны для здоровья кожи и шерсти, поддержания здоровья суставов и иммунной системы. Белая рыба — нежирный источник белка, поэтому хорошо подходит питомцам, которым нужен рацион с низким содержанием жира, а благодаря тщательно подобранному сочетанию белков лакомства оптимально подходят питомцам с белой и светлой шерстью. 69% белков в лакомствах — животного происхождения.",
+    "Лакомства специализированной текстуры помогают очищать зубы от налёта, препятствуют образованию зубного камня и освежают дыхание. Состав содержит морские водоросли, которые могут помочь сохранять свежесть дыхания питомца и предотвращать рост бактерий, вызывающих неприятный запах из пасти. Сбалансированное сочетание пробиотиков и пребиотиков помогает улучшить баланс кишечной микрофлоры и положительно влияет на здоровье пищеварительного тракта.",
+    "Эти функциональные лакомства имеют более влажную и мягкую текстуру, чем обычные; во влажных продуктах сильнее раскрывается натуральный аромат, поэтому они нравятся даже самым привередливым питомцам. Лакомства обогащены MicroZeoGen — натуральным минералом, динамически микронизированным клиноптилолитом вулканического происхождения. Он помогает выводить токсины из организма питомца, а после очищения организма ценные питательные вещества, витамины и минералы легко усваиваются. Лакомства не содержат ингредиентов зернового происхождения, кукурузы и сои, способных вызывать аллергические реакции, и легко усваиваются, поэтому подходят и питомцам с чувствительной системой пищеварения.",
+    "Nature’s Protection Superior Care — линейка лакомств класса супер-премиум, известная инновационными ингредиентами и новейшими технологиями в здоровом питании домашних животных; в составе лакомств — источники белка и другие ингредиенты высочайшего качества. Удобная, легко открывающаяся упаковка содержит 150 г ароматных лакомств. Произведено в ЕС."
+   ],
+   "composition": "белая рыба мин. 24 % (высушенная и мелко измельчённая), сушёная картофельная мякоть, предварительно желатинизированный картофельный крахмал, гидролизованная перьевая мука, горох, морские водоросли Ascophyllum nodosum (6 %), сорбит, глицерин, глюкозный сироп, гороховая клетчатка, полифосфат натрия (2 %), динамически микронизированный клиноптилолит (1 %), хитозамин (из водных животных) (1 %), фруктоолигосахариды (ФОС), экстракт зелёного чая (0,5 %).",
+   "additives": "Пищевые добавки (на 1 кг): витамин D3 (3a671)* – 577 МЕ, витамин E (3a700) – 204 мг, биотин (3a880) – 0,08 мг. Технологические добавки: антиоксиданты, консерванты. Зоотехнические добавки: стабилизаторы кишечной флоры: Bacillus velezensis DSM 15544 (4b1820) – 1×10¹⁰ КОЕ. *Одновременное применение с витамином D2 не допускается.",
+   "analysis": [
+    {
+     "name": "Сырой протеин",
+     "value": "24 %"
+    },
+    {
+     "name": "Сырая клетчатка",
+     "value": "4,3 %"
+    },
+    {
+     "name": "Сырой жир",
+     "value": "2,4 %"
+    },
+    {
+     "name": "Сырая зола",
+     "value": "8,4 %"
+    },
+    {
+     "name": "Влажность",
+     "value": "18 %"
+    },
+    {
+     "name": "Крахмал",
+     "value": "7,3 %"
+    },
+    {
+     "name": "Натрий",
+     "value": "0,49 %"
+    },
+    {
+     "name": "Калий",
+     "value": "0,49 %"
+    },
+    {
+     "name": "Фосфор",
+     "value": "1,35 %"
+    },
+    {
+     "name": "Глицерол",
+     "value": "3,74 %"
+    },
+    {
+     "name": "Общий сахар",
+     "value": "4,52 %"
+    }
+   ],
+   "feeding": "Суточная доза может варьироваться в зависимости от температуры воздуха, образа жизни, темперамента и активности питомца. У питомца всегда должен быть доступ к чистой свежей воде. Рекомендуемая суточная норма в зависимости от массы тела: 1–10 кг – 0,5 шт.; 10–25 кг – 1 шт.; 25–60 кг – 2 шт."
+  },
+  "en": {
+   "full": [
+    "Nature’s Protection Superior Care White Dogs Grain Free Hypoallergenic Dental are supplemental snacks with white fish – a feed supplement of the highest quality for adult dogs of all breeds with a white or light coat, including dogs prone to food allergies, designed for the pet’s overall well-being and to support dental health and oral hygiene. They are a perfect way to show love for your dog and at the same time provide the daily dose of essential vitamins, minerals, prebiotics and probiotics.",
+    "The snacks contain the Tear Stains Off formula – a carefully selected amino acid complex and fully balanced ingredients that help keep the composition of saliva and tears clean and so help fight brown tear stains around the eyes, mouth, paws and other parts of the body. The protein source is the first ingredient in the composition. The main source of protein is white fish – a good source of easily digestible, high-value protein that provides essential amino acids, the building blocks of protein. It is also a rich source of omega-3 fatty acids, which are important for maintaining healthy skin and coat, promoting joint health and supporting the immune system. White fish is a low-fat protein source, which makes it a good option for pets that require a low-fat diet, and thanks to the carefully selected combination of proteins the snacks are optimally suited to pets with a white or light coat. 69% of the proteins in the snacks are of animal origin.",
+    "The snacks have a specialised texture that helps clean the teeth of plaque, hinders the formation of tartar and freshens the breath. The composition contains seaweed, which may help keep the pet’s mouth odour fresh and prevent the growth of the bacteria that cause bad breath. A balanced combination of probiotics and prebiotics helps improve the balance of the intestinal microflora and has a positive effect on the health of the digestive tract.",
+    "These functional snacks have a wetter and softer texture than ordinary treats; moister products reveal a more natural aroma, which makes them a favourite even of the pickiest pets. The snacks are enriched with MicroZeoGen – a natural mineral, dynamically micronized clinoptilolite of volcanic origin. It helps remove toxins from the pet’s body, and once the body is detoxified, valuable nutrients, vitamins and minerals are absorbed easily. The supplemental snacks do not contain ingredients of grain origin, corn or soy products that can cause allergic reactions, and they are easily digestible, so they also suit pets with a sensitive digestive system.",
+    "Nature’s Protection Superior Care is a Super Premium line of supplemental snacks known for innovative ingredients and the newest technologies in healthy pet nutrition; the snacks contain protein sources and other ingredients of the highest quality. The convenient, easy-to-open pack holds 150 g of tasty snacks. Made in the EU."
+   ],
+   "composition": "white fish min. 24 % (dried and finely ground), dried potato pulp, pregelatinised potato starch, hydrolysed feather meal, peas, seaweed Ascophyllum nodosum (6 %), sorbitol, glycerine, glucose syrup, pea fibre, sodium polyphosphate (2 %), dynamic micronized clinoptilolite (1 %), chitosamine (from aquatic animals) (1 %), fructooligosaccharides (FOS), green tea extract (0.5 %).",
+   "additives": "Nutritional additives (per 1 kg): vitamin D3 (3a671)* – 577 IU, vitamin E (3a700) – 204 mg, biotin (3a880) – 0.08 mg. Technological additives: antioxidants, preservatives. Zootechnical additives: gut flora stabilisers: Bacillus velezensis DSM 15544 (4b1820) – 1×10¹⁰ CFU. *Simultaneous use with vitamin D2 is not allowed.",
+   "analysis": [
+    {
+     "name": "Crude protein",
+     "value": "24 %"
+    },
+    {
+     "name": "Crude fibre",
+     "value": "4.3 %"
+    },
+    {
+     "name": "Crude fat",
+     "value": "2.4 %"
+    },
+    {
+     "name": "Crude ash",
+     "value": "8.4 %"
+    },
+    {
+     "name": "Moisture",
+     "value": "18 %"
+    },
+    {
+     "name": "Starch",
+     "value": "7.3 %"
+    },
+    {
+     "name": "Sodium",
+     "value": "0.49 %"
+    },
+    {
+     "name": "Potassium",
+     "value": "0.49 %"
+    },
+    {
+     "name": "Phosphorus",
+     "value": "1.35 %"
+    },
+    {
+     "name": "Glycerol",
+     "value": "3.74 %"
+    },
+    {
+     "name": "Total sugars",
+     "value": "4.52 %"
+    }
+   ],
+   "feeding": "The daily dose may vary according to the outdoor temperature and the pet’s lifestyle, temperament and activity. Clean, fresh water should be available at all times. Recommended daily amount by body weight: 1–10 kg – 0.5 piece; 10–25 kg – 1 piece; 25–60 kg – 2 pieces."
+  },
+  "az": {
+   "full": [
+    "Nature’s Protection Superior Care White Dogs Grain Free Hypoallergenic Dental – ağ və ya açıq rəngli tükü olan, o cümlədən qida allergiyasına meyilli bütün cinslərdən yetkin itlər üçün ağ balıqla hazırlanmış ən yüksək keyfiyyətli qəlyanaltı-əlavələrdir; ev heyvanının ümumi rifahı, diş sağlamlığının və ağız boşluğu gigiyenasının dəstəklənməsi üçün yaradılıb. Bu, itinizə sevginizi göstərmək və eyni zamanda onu vacib vitamin, mineral, prebiotik və probiotiklərin gündəlik dozası ilə təmin etmək üçün mükəmməl üsuldur.",
+    "Qəlyanaltıların tərkibində Tear Stains Off formulu var – diqqətlə seçilmiş amin turşuları kompleksi və tam balanslaşdırılmış inqrediyentlər tüpürcək və göz yaşının tərkibini təmiz saxlamağa və beləliklə gözlərin, ağzın, pəncələrin və bədənin digər hissələrinin ətrafındakı qəhvəyi göz yaşı ləkələri ilə mübarizə aparmağa kömək edir. Protein mənbəyi tərkibdə birinci inqrediyentdir. Əsas protein mənbəyi ağ balıqdır – proteinin tikinti blokları olan əvəzolunmaz amin turşularını verən, asan həzm olunan və yüksək dəyərli proteinin yaxşı mənbəyi. O, həmçinin sağlam dəri və tük örtüyü, oynaqların sağlamlığı və immun sisteminin dəstəklənməsi üçün vacib olan Omeqa-3 yağ turşuları ilə zəngindir. Ağ balıq az yağlı protein mənbəyidir, buna görə də az yağlı rasion tələb edən ev heyvanları üçün yaxşı seçimdir, diqqətlə seçilmiş protein birləşməsi sayəsində isə qəlyanaltılar ağ və açıq rəngli tüklü ev heyvanlarına optimal uyğundur. Qəlyanaltılardakı proteinlərin 69%-i heyvan mənşəlidir.",
+    "Xüsusi teksturalı qəlyanaltılar dişlərin ərpdən təmizlənməsinə kömək edir, diş daşının əmələ gəlməsinə mane olur və nəfəsi təravətləndirir. Tərkibdəki dəniz yosunu ev heyvanının ağız qoxusunu təzə saxlamağa və ağızdan xoşagəlməz qoxuya səbəb olan bakteriyaların çoxalmasının qarşısını almağa kömək edə bilər. Probiotik və prebiotiklərin balanslaşdırılmış birləşməsi bağırsaq mikroflorasının balansını yaxşılaşdırmağa kömək edir və həzm traktının sağlamlığına müsbət təsir göstərir.",
+    "Bu funksional qəlyanaltılar adi ləzzətlərdən daha nəm və yumşaq teksturaya malikdir; nəm məhsullarda təbii aroma daha yaxşı açılır, buna görə də onları hətta ən seçici ev heyvanları da sevir. Qəlyanaltılar MicroZeoGen ilə zənginləşdirilib – bu, təbii mineral, vulkanik mənşəli dinamik mikronlaşdırılmış klinoptilolitdir. O, toksinlərin ev heyvanının orqanizmindən çıxarılmasına kömək edir, orqanizm təmizləndikdən sonra isə dəyərli qida maddələri, vitaminlər və minerallar asanlıqla mənimsənilir. Qəlyanaltıların tərkibində allergik reaksiyalara səbəb ola bilən dənli mənşəli inqrediyentlər, qarğıdalı və soya məhsulları yoxdur və onlar asan həzm olunur, buna görə də həssas həzm sistemi olan ev heyvanlarına da uyğundur.",
+    "Nature’s Protection Superior Care – innovativ inqrediyentləri və ev heyvanlarının sağlam qidalanmasında ən yeni texnologiyaları ilə tanınan super premium sinifli qəlyanaltı-əlavələr xəttidir; qəlyanaltıların tərkibində ən yüksək keyfiyyətli protein mənbələri və digər inqrediyentlər var. Rahat, asan açılan qablaşdırmada 150 q ətirli qəlyanaltı var. Aİ-də istehsal olunub."
+   ],
+   "composition": "ağ balıq min. 24 % (qurudulmuş və narın üyüdülmüş), qurudulmuş kartof pulpası, əvvəlcədən jelatinləşdirilmiş kartof nişastası, hidroliz olunmuş lələk unu, noxud, dəniz yosunu Ascophyllum nodosum (6 %), sorbit, qliserin, qlükoza şərbəti, noxud lifi, natrium polifosfat (2 %), dinamik mikronlaşdırılmış klinoptilolit (1 %), xitozamin (su heyvanlarından) (1 %), fruktooliqosaxaridlər (FOS), yaşıl çay ekstraktı (0,5 %).",
+   "additives": "Qida əlavələri (1 kq üçün): D3 vitamini (3a671)* – 577 BV, E vitamini (3a700) – 204 mq, biotin (3a880) – 0,08 mq. Texnoloji əlavələr: antioksidantlar, konservantlar. Zootexniki əlavələr: bağırsaq florasının stabilizatorları: Bacillus velezensis DSM 15544 (4b1820) – 1×10¹⁰ KƏV. *D2 vitamini ilə eyni vaxtda istifadəsinə icazə verilmir.",
+   "analysis": [
+    {
+     "name": "Xam protein",
+     "value": "24 %"
+    },
+    {
+     "name": "Xam lif",
+     "value": "4,3 %"
+    },
+    {
+     "name": "Xam yağ",
+     "value": "2,4 %"
+    },
+    {
+     "name": "Xam kül",
+     "value": "8,4 %"
+    },
+    {
+     "name": "Nəmlik",
+     "value": "18 %"
+    },
+    {
+     "name": "Nişasta",
+     "value": "7,3 %"
+    },
+    {
+     "name": "Natrium",
+     "value": "0,49 %"
+    },
+    {
+     "name": "Kalium",
+     "value": "0,49 %"
+    },
+    {
+     "name": "Fosfor",
+     "value": "1,35 %"
+    },
+    {
+     "name": "Qliserol",
+     "value": "3,74 %"
+    },
+    {
+     "name": "Ümumi şəkər",
+     "value": "4,52 %"
+    }
+   ],
+   "feeding": "Gündəlik doza havanın temperaturundan, ev heyvanının həyat tərzindən, temperamentindən və aktivliyindən asılı olaraq dəyişə bilər. Təmiz, təzə su həmişə əlçatan olmalıdır. Bədən çəkisinə görə tövsiyə olunan gündəlik norma: 1–10 kq – 0,5 əd.; 10–25 kq – 1 əd.; 25–60 kq – 2 əd."
+  }
+ },
+ "dogs||Superior Care · Flowpack||White Dogs — Mobility & Joint Health": {
+  "url": "/product/complementary-grain-free-feed-snacks-to-support-mobility-and-joint-health-with-lamb-for-adult-all-breed-dogs-with-white-coat/",
+  "sku": null,
+  "packs": [
+   "150 g"
+  ],
+  "feed": [],
+  "ru": {
+   "full": [
+    "«Nature’s Protection Superior Care White Dogs Grain Free Mobility & Joint Health» — высококачественные пищевые добавки-лакомства с ягнёнком для взрослых собак всех пород с белым окрасом шерсти, специально разработанные для общего благополучия питомца и поддержания подвижности, здоровья опорно-двигательного аппарата и суставов. Это прекрасный способ проявить любовь к собаке и одновременно обеспечить её суточной дозой необходимых витаминов, минералов, пребиотиков и пробиотиков.",
+    "Лакомства содержат формулу Tear Stains Off — тщательно подобранный комплекс аминокислот и полностью сбалансированные ингредиенты, которые помогают поддерживать чистоту состава слюны и слёз и тем самым бороться с коричневыми пятнами от слёз вокруг глаз, пасти, на лапах и других частях тела. Источник белка — первый ингредиент в составе. Основной источник белка — ягнёнок: питательный белок, богатый незаменимыми аминокислотами, железом и цинком, витаминами группы B, такими как B12 и ниацин, а также фосфором и селеном. Мясо ягнёнка часто включают в гипоаллергенные корма, поскольку оно реже вызывает аллергические реакции, чем другие источники белка, например говядина или курица. 68% белков в лакомствах — животного происхождения.",
+    "Хитозамин обеспечивает полноценный уход за костями и суставами, а также контроль веса, а глюкозамин помогает поддерживать здоровье печени и нормальный обмен веществ; в составе также есть хондроитинсульфат. Природные антиоксиданты — витамин E и экстракт зелёного чая — помогают защищать клетки от вредного воздействия свободных радикалов, а комплекс Vital 3 из пребиотиков, пробиотиков, витаминов и минералов помогает поддерживать жизненно важные функции организма питомца и баланс кишечной микрофлоры.",
+    "Эти функциональные лакомства имеют более влажную и мягкую текстуру, чем обычные; во влажных продуктах сильнее раскрывается натуральный аромат, поэтому они нравятся даже самым привередливым питомцам. Лакомства обогащены MicroZeoGen — натуральным минералом, динамически микронизированным клиноптилолитом вулканического происхождения. Он помогает выводить из организма токсины, тяжёлые металлы, аммиак и патогенные бактерии, благодаря чему ценные питательные вещества, витамины и минералы легко усваиваются; за счёт содержания кремния он способствует укреплению костей и зубов, положительно влияет на структуру шерсти, делая её густой и блестящей, а также укрепляет иммунную систему и естественные защитные функции организма. Лакомства не содержат ингредиентов зернового происхождения, кукурузы и сои, способных вызывать аллергические реакции, и легко усваиваются, поэтому подходят и питомцам с чувствительной системой пищеварения.",
+    "Продукты линейки Nature’s Protection Superior Care White Dogs подходят всем собакам независимо от окраса и не влияют на цвет шерсти: серия разработана для устранения коричневых пятен от слёз, которые заметнее всего на белой и светлой шерсти, однако её включение в рацион собак с тёмной шерстью не приводит к осветлению или изменению окраса. Nature’s Protection Superior Care — линейка лакомств класса супер-премиум, известная инновационными ингредиентами и новейшими технологиями в здоровом питании домашних животных; в составе лакомств — источники белка и другие ингредиенты высочайшего качества. Удобная, легко открывающаяся упаковка содержит 150 г ароматных лакомств. Произведено в ЕС."
+   ],
+   "composition": "ягнёнок мин. 22 % (высушенный и мелко измельчённый), сушёная картофельная мякоть, предварительно желатинизированный картофельный крахмал, гороховый белок, сорбит, глицерин, глюкозный сироп, гороховая клетчатка (4 %), лососевое масло (3 %), хитозамин (из водных животных) (1 %), динамически микронизированный клиноптилолит (1 %), фруктоолигосахариды (ФОС), экстракт зелёного чая (0,5 %), глюкозамин (500 мг/кг), хондроитинсульфат (250 мг/кг), сушёные водоросли Schizochytrium sp. (0,16 %).",
+   "additives": "Пищевые добавки (на 1 кг): витамин D3 (3a671)* – 577 МЕ, витамин E (3a700) – 204 мг, биотин (3a880) – 0,08 мг, L-карнитин (3a910) – 5 г, таурин (3a370) – 1000 мг. Технологические добавки: антиоксиданты, консерванты. Сенсорные добавки: ароматизирующие вещества: экстракт листьев Melissa officinalis L. (2b280-ex) – 5 г. Зоотехнические добавки: стабилизаторы кишечной флоры: Bacillus velezensis DSM 15544 (4b1820) – 1×10¹⁰ КОЕ. *Одновременное применение с витамином D2 не допускается.",
+   "analysis": [
+    {
+     "name": "Сырой протеин",
+     "value": "25 %"
+    },
+    {
+     "name": "Сырая клетчатка",
+     "value": "0,7 %"
+    },
+    {
+     "name": "Сырой жир",
+     "value": "6,5 %"
+    },
+    {
+     "name": "Сырая зола",
+     "value": "6 %"
+    },
+    {
+     "name": "Крахмал",
+     "value": "13,5 %"
+    },
+    {
+     "name": "Влажность",
+     "value": "20 %"
+    },
+    {
+     "name": "Натрий",
+     "value": "0,11 %"
+    },
+    {
+     "name": "Калий",
+     "value": "0,38 %"
+    },
+    {
+     "name": "Глицерол",
+     "value": "3,74 %"
+    },
+    {
+     "name": "Общий сахар",
+     "value": "4,52 %"
+    }
+   ],
+   "feeding": "Суточная доза может варьироваться в зависимости от температуры воздуха, образа жизни, темперамента и активности питомца. У питомца всегда должен быть доступ к чистой свежей воде. Рекомендуемая суточная норма в зависимости от массы тела: 1–5 кг – 1 шт.; 5–10 кг – 1–2 шт.; 10–15 кг – 2–3 шт.; 15–20 кг – 3–4 шт.; 20–30 кг – 4–6 шт.; 30–40 кг – 6–7 шт. Хранить в прохладном сухом месте при температуре не выше +25 °C. Номер партии и срок годности указаны на упаковке."
+  },
+  "en": {
+   "full": [
+    "Nature’s Protection Superior Care White Dogs Grain Free Mobility & Joint Health are high-quality supplemental snacks with lamb for adult dogs of all breeds with a white coat, specially designed for the pet’s overall well-being and to support mobility and the health of the musculoskeletal system and joints. They are a perfect way to show love for your dog and at the same time provide the daily dose of essential vitamins, minerals, prebiotics and probiotics.",
+    "The snacks contain the Tear Stains Off formula – a carefully selected amino acid complex and fully balanced ingredients that help keep the composition of saliva and tears clean and so help fight brown tear stains around the eyes, mouth, paws and other parts of the body. The protein source is the first ingredient in the composition. The main protein source is lamb – a nutrient-dense protein rich in essential amino acids, iron and zinc, B vitamins such as B12 and niacin, as well as phosphorus and selenium. Lamb is often included in hypoallergenic pet foods, as it is less likely to cause allergic reactions than other protein sources such as beef or chicken. 68% of the proteins in the snacks are of animal origin.",
+    "Chitosamine provides full-fledged bone and joint care as well as weight control, and glucosamine helps maintain liver health and normal metabolic processes; the composition also contains chondroitin sulphate. The natural antioxidants vitamin E and green tea extract help protect cells from the harmful effects of free radicals, and the Vital 3 complex of prebiotics, probiotics, vitamins and minerals helps maintain the pet’s vital body functions and a healthy balance of the intestinal microflora.",
+    "These functional snacks have a wetter and softer texture than ordinary treats; moister products reveal a more natural aroma, which makes them a favourite even of the pickiest pets. The snacks are enriched with MicroZeoGen – a natural mineral, dynamically micronized clinoptilolite of volcanic origin. It helps remove toxins, heavy metals, ammonia and pathogenic bacteria from the body, so that valuable nutrients, vitamins and minerals are absorbed easily; thanks to its silicon content it promotes strong bones and teeth, it has a positive effect on coat structure, making the coat look thick and shiny, and it strengthens the immune system and the body’s natural defences. The supplemental snacks do not contain ingredients of grain origin, corn or soy products that can cause allergic reactions, and they are easily digestible, so they also suit pets with a sensitive digestive system.",
+    "Products of the Nature’s Protection Superior Care White Dogs line suit all dogs regardless of coat colour and do not affect it: the series was developed to eliminate brown tear stains, which are most visible on white and light coats, but including it in the diet of dogs with a dark coat does not lighten or change the coat colour. Nature’s Protection Superior Care is a Super Premium line of supplemental snacks known for innovative ingredients and the newest technologies in healthy pet nutrition; the snacks contain protein sources and other ingredients of the highest quality. The convenient, easy-to-open pack holds 150 g of tasty snacks. Made in the EU."
+   ],
+   "composition": "lamb min. 22 % (dried and finely ground), dried potato pulp, pregelatinised potato starch, pea protein, sorbitol, glycerine, glucose syrup, pea fibre (4 %), salmon oil (3 %), chitosamine (from aquatic animals) (1 %), dynamic micronized clinoptilolite (1 %), fructooligosaccharides (FOS), green tea extract (0.5 %), glucosamine (500 mg/kg), chondroitin sulphate (250 mg/kg), dried algae Schizochytrium sp. (0.16 %).",
+   "additives": "Nutritional additives (per 1 kg): vitamin D3 (3a671)* – 577 IU, vitamin E (3a700) – 204 mg, biotin (3a880) – 0.08 mg, L-carnitine (3a910) – 5 g, taurine (3a370) – 1000 mg. Technological additives: antioxidants, preservatives. Sensory additives: flavouring compounds: Melissa officinalis L. leaf extract (2b280-ex) – 5 g. Zootechnical additives: gut flora stabilisers: Bacillus velezensis DSM 15544 (4b1820) – 1×10¹⁰ CFU. *Simultaneous use with vitamin D2 is not allowed.",
+   "analysis": [
+    {
+     "name": "Crude protein",
+     "value": "25 %"
+    },
+    {
+     "name": "Crude fibre",
+     "value": "0.7 %"
+    },
+    {
+     "name": "Crude fat",
+     "value": "6.5 %"
+    },
+    {
+     "name": "Crude ash",
+     "value": "6 %"
+    },
+    {
+     "name": "Starch",
+     "value": "13.5 %"
+    },
+    {
+     "name": "Moisture",
+     "value": "20 %"
+    },
+    {
+     "name": "Sodium",
+     "value": "0.11 %"
+    },
+    {
+     "name": "Potassium",
+     "value": "0.38 %"
+    },
+    {
+     "name": "Glycerol",
+     "value": "3.74 %"
+    },
+    {
+     "name": "Total sugars",
+     "value": "4.52 %"
+    }
+   ],
+   "feeding": "The daily dose may vary according to the outdoor temperature and the pet’s lifestyle, temperament and activity. Clean, fresh water should be available at all times. Recommended daily amount by body weight: 1–5 kg – 1 piece; 5–10 kg – 1–2 pieces; 10–15 kg – 2–3 pieces; 15–20 kg – 3–4 pieces; 20–30 kg – 4–6 pieces; 30–40 kg – 6–7 pieces. Store in a cool, dry place at a temperature not above +25 °C. Batch number and best-before date: see the package."
+  },
+  "az": {
+   "full": [
+    "Nature’s Protection Superior Care White Dogs Grain Free Mobility & Joint Health – ağ tüklü bütün cinslərdən olan yetkin itlər üçün quzu əti ilə hazırlanmış yüksək keyfiyyətli qəlyanaltı-əlavələrdir; ev heyvanının ümumi rifahı, hərəkətliliyin, dayaq-hərəkət sisteminin və oynaqların sağlamlığının dəstəklənməsi üçün xüsusi hazırlanıb. Bu, itinizə sevginizi göstərmək və eyni zamanda onu vacib vitamin, mineral, prebiotik və probiotiklərin gündəlik dozası ilə təmin etmək üçün mükəmməl üsuldur.",
+    "Qəlyanaltıların tərkibində Tear Stains Off formulu var – diqqətlə seçilmiş amin turşuları kompleksi və tam balanslaşdırılmış inqrediyentlər tüpürcək və göz yaşının tərkibini təmiz saxlamağa və beləliklə gözlərin, ağzın, pəncələrin və bədənin digər hissələrinin ətrafındakı qəhvəyi göz yaşı ləkələri ilə mübarizə aparmağa kömək edir. Protein mənbəyi tərkibdə birinci inqrediyentdir. Əsas protein mənbəyi quzu ətidir – əvəzolunmaz amin turşuları, dəmir və sink, B12 və niasin kimi B qrupu vitaminləri, həmçinin fosfor və selenlə zəngin qidalı protein. Quzu əti mal əti və ya toyuq kimi digər protein mənbələri ilə müqayisədə allergik reaksiyalara daha az səbəb olduğu üçün tez-tez hipoallergen ev heyvanı yemlərinin tərkibinə daxil edilir. Qəlyanaltılardakı proteinlərin 68%-i heyvan mənşəlidir.",
+    "Xitozamin sümüklərə və oynaqlara tam qayğı, həmçinin çəkiyə nəzarət təmin edir, qlükozamin isə qaraciyərin sağlamlığını və normal maddələr mübadiləsini qorumağa kömək edir; tərkibdə həmçinin xondroitin sulfat var. Təbii antioksidantlar – E vitamini və yaşıl çay ekstraktı hüceyrələri sərbəst radikalların zərərli təsirindən qorumağa kömək edir, prebiotik, probiotik, vitamin və minerallardan ibarət Vital 3 kompleksi isə ev heyvanının orqanizminin həyati funksiyalarını və bağırsaq mikroflorasının balansını dəstəkləyir.",
+    "Bu funksional qəlyanaltılar adi ləzzətlərdən daha nəm və yumşaq teksturaya malikdir; nəm məhsullarda təbii aroma daha yaxşı açılır, buna görə də onları hətta ən seçici ev heyvanları da sevir. Qəlyanaltılar MicroZeoGen ilə zənginləşdirilib – bu, təbii mineral, vulkanik mənşəli dinamik mikronlaşdırılmış klinoptilolitdir. O, toksinlərin, ağır metalların, ammonyakın və patogen bakteriyaların orqanizmdən çıxarılmasına kömək edir, bunun sayəsində dəyərli qida maddələri, vitaminlər və minerallar asanlıqla mənimsənilir; tərkibindəki silisium sayəsində möhkəm sümüklərə və dişlərə dəstək olur, tük örtüyünün quruluşuna müsbət təsir göstərərək onu sıx və parlaq edir, həmçinin immun sistemini və orqanizmin təbii müdafiə funksiyalarını gücləndirir. Qəlyanaltıların tərkibində allergik reaksiyalara səbəb ola bilən dənli mənşəli inqrediyentlər, qarğıdalı və soya məhsulları yoxdur və onlar asan həzm olunur, buna görə də həssas həzm sistemi olan ev heyvanlarına da uyğundur.",
+    "Nature’s Protection Superior Care White Dogs xəttinin məhsulları tük rəngindən asılı olmayaraq bütün itlərə uyğundur və rəngə təsir etmir: seriya ağ və açıq rəngli tüklərdə daha çox nəzərə çarpan qəhvəyi göz yaşı ləkələrini aradan qaldırmaq üçün hazırlanıb, lakin tünd tüklü itlərin rasionuna daxil edilməsi tükün açılmasına və ya rənginin dəyişməsinə səbəb olmur. Nature’s Protection Superior Care – innovativ inqrediyentləri və ev heyvanlarının sağlam qidalanmasında ən yeni texnologiyaları ilə tanınan super premium sinifli qəlyanaltı-əlavələr xəttidir; qəlyanaltıların tərkibində ən yüksək keyfiyyətli protein mənbələri və digər inqrediyentlər var. Rahat, asan açılan qablaşdırmada 150 q ətirli qəlyanaltı var. Aİ-də istehsal olunub."
+   ],
+   "composition": "quzu əti min. 22 % (qurudulmuş və narın üyüdülmüş), qurudulmuş kartof pulpası, əvvəlcədən jelatinləşdirilmiş kartof nişastası, noxud proteini, sorbit, qliserin, qlükoza şərbəti, noxud lifi (4 %), qızılbalıq yağı (3 %), xitozamin (su heyvanlarından) (1 %), dinamik mikronlaşdırılmış klinoptilolit (1 %), fruktooliqosaxaridlər (FOS), yaşıl çay ekstraktı (0,5 %), qlükozamin (500 mq/kq), xondroitin sulfat (250 mq/kq), qurudulmuş yosun Schizochytrium sp. (0,16 %).",
+   "additives": "Qida əlavələri (1 kq üçün): D3 vitamini (3a671)* – 577 BV, E vitamini (3a700) – 204 mq, biotin (3a880) – 0,08 mq, L-karnitin (3a910) – 5 q, taurin (3a370) – 1000 mq. Texnoloji əlavələr: antioksidantlar, konservantlar. Sensor əlavələr: ətirverici maddələr: Melissa officinalis L. yarpaq ekstraktı (2b280-ex) – 5 q. Zootexniki əlavələr: bağırsaq florasının stabilizatorları: Bacillus velezensis DSM 15544 (4b1820) – 1×10¹⁰ KƏV. *D2 vitamini ilə eyni vaxtda istifadəsinə icazə verilmir.",
+   "analysis": [
+    {
+     "name": "Xam protein",
+     "value": "25 %"
+    },
+    {
+     "name": "Xam lif",
+     "value": "0,7 %"
+    },
+    {
+     "name": "Xam yağ",
+     "value": "6,5 %"
+    },
+    {
+     "name": "Xam kül",
+     "value": "6 %"
+    },
+    {
+     "name": "Nişasta",
+     "value": "13,5 %"
+    },
+    {
+     "name": "Nəmlik",
+     "value": "20 %"
+    },
+    {
+     "name": "Natrium",
+     "value": "0,11 %"
+    },
+    {
+     "name": "Kalium",
+     "value": "0,38 %"
+    },
+    {
+     "name": "Qliserol",
+     "value": "3,74 %"
+    },
+    {
+     "name": "Ümumi şəkər",
+     "value": "4,52 %"
+    }
+   ],
+   "feeding": "Gündəlik doza havanın temperaturundan, ev heyvanının həyat tərzindən, temperamentindən və aktivliyindən asılı olaraq dəyişə bilər. Təmiz, təzə su həmişə əlçatan olmalıdır. Bədən çəkisinə görə tövsiyə olunan gündəlik norma: 1–5 kq – 1 əd.; 5–10 kq – 1–2 əd.; 10–15 kq – 2–3 əd.; 15–20 kq – 3–4 əd.; 20–30 kq – 4–6 əd.; 30–40 kq – 6–7 əd. Sərin və quru yerdə, +25 °C-dən yüksək olmayan temperaturda saxlayın. Partiya nömrəsi və yararlılıq müddəti: qablaşdırmaya baxın."
+  }
+ },
+ "araton:assets/products/art-dog-junior.webp": {
+  "url": "https://www.kika.lt/products/araton-dry-food-for-junior-all-breed-dogs-with-poultry",
+  "sku": null,
+  "packs": [
+   "3 kg",
+   "15 kg"
+  ],
+  "feed": [],
+  "ru": {
+   "full": [
+    "Полнорационный сухой корм ARATON с птицей – надёжный повседневный выбор для молодых собак всех пород. Он создан с учётом не модных тенденций, а реальных потребностей растущей собаки – энергии, иммунитета, комфортного пищеварения и здорового развития. Это корм, который помогает собаке вырасти сильной, выносливой и здоровой.",
+    "Основной источник белка – птица – легко усваивается и питателен. Сильная сторона этого корма – сбалансированная и понятная формула, адаптированная к растущему организму. Животные белки помогают формировать мышцы, а оптимальное содержание жира даёт энергию для активной жизни. Витамины E и B6, цинк и биотин поддерживают здоровье кожи и шерсти и укрепляют естественную защиту организма. Клетчатка и свекольный жом улучшают работу кишечника, чтобы пищеварение было бесперебойным даже у более чувствительных питомцев.",
+    "Рецептуры ARATON разрабатываются совместно с экспертами по питанию животных. Это сбалансированный корм, подходящий щенкам всех пород – от мелких до крупных. Формула без искусственных красителей, ароматизаторов и лишних добавок. Подходит более чувствительным питомцам, когда нужно простое, понятное и ежедневно работающее решение. Как говорят любители собак: «Главное, чтобы корм работал – не только на упаковке, но и в жизни собаки». ARATON выбирают те, кто ищет не обещаний, а реальных результатов: энергичного роста, блестящей шерсти, хорошего пищеварения и здоровых привычек с первых месяцев. ARATON производится в Европе с соблюдением высоких стандартов качества. Это продукт семейства KIKA, созданный с любовью и ответственностью, чтобы правильное питание росло вместе с вашей собакой. Каждый день.",
+    "Изготовлено БЕЗ: сои – без соевого белка и масла; молочных продуктов – без лактозы и молочных белков; искусственных красителей и ароматизаторов – без синтетических пигментов и ароматов, натуральные запах и цвет; ГМО-ингредиентов – в составе нет генетически модифицированных веществ; химических усилителей вкуса – насыщенность вкуса обеспечивают ингредиенты животного происхождения. Основные свойства: сбалансированная формула для роста – все необходимые питательные вещества для молодой собаки, помогающие правильному развитию мышц, костей, иммунной и пищеварительной систем; птица – легкоусвояемый животный белок для энергии и роста, подходит даже для более чувствительных желудков, хорошо усваивается и вкусна; витамины E и B6, цинк и биотин – для здоровой кожи, шерсти и крепкого иммунитета, заботятся об общем самочувствии и сопротивляемости собаки в период роста; клетчатка и свекольный жом – для бесперебойного пищеварения с раннего возраста, поддерживают работу кишечника и хорошую консистенцию стула; без искусственных красителей и ароматизаторов – понятный, чистый состав на каждый день, подходит для ответственного кормления с первых месяцев.",
+    "Для кого? Для молодых собак от отъёма до полного взросления (в зависимости от породы); когда нужно сбалансированное питание для поддержки роста, энергии и иммунитета; когда у щенка более чувствительное пищеварение – благодаря мягкой, легкоусвояемой формуле; когда вы хотите обеспечить здоровое состояние шерсти и комфортное пищеварение в период роста; для щенков всех пород – от мелких до крупных."
+   ],
+   "composition": "Дегидрированная птица, кукуруза, тритикале, пшеничные отруби, жир птицы, мясная мука, гидролизованная куриная печень, кукурузный глютен, жом сахарной свёклы, пивные дрожжи, продукты переработки трав 0,1 % (тимьян, шалфей, петрушка, орегано).",
+   "additives": "Питательные добавки на 1 кг: витамин A (3a672a) — 18000 МЕ, витамин D3 (3a671) — 1500 МЕ, витамин E (3a700) — 180 мг, моногидрат сульфата железа (II) (3b103) — 50 мг, безводный йодат кальция (3b202) — 1,5 мг, пентагидрат сульфата меди (II) (3b405) — 5 мг, моногидрат сульфата марганца (3b503) — 20 мг, моногидрат сульфата цинка (3b605) — 90 мг, селенит натрия (3b801) — 0,05 мг. Технологические добавки: антиоксиданты, консерванты.",
+   "analysis": [
+    {
+     "name": "Сырой протеин",
+     "value": "25 %"
+    },
+    {
+     "name": "Сырая клетчатка",
+     "value": "2,5 %"
+    },
+    {
+     "name": "Сырой жир",
+     "value": "12 %"
+    },
+    {
+     "name": "Сырая зола",
+     "value": "6,7 %"
+    },
+    {
+     "name": "Кальций",
+     "value": "1,4 %"
+    },
+    {
+     "name": "Фосфор",
+     "value": "1,15 %"
+    },
+    {
+     "name": "Энергетическая ценность",
+     "value": "3498 ккал/кг"
+    }
+   ],
+   "feeding": "Суточная норма: см. таблицу кормления. Указанные в таблице количества носят рекомендательный характер и должны корректироваться с учётом индивидуальных потребностей каждого питомца. Суточная норма может меняться в зависимости от температуры воздуха на улице, образа жизни, темперамента и активности питомца. Миска со свежей чистой водой всегда должна стоять в доступном для питомца месте."
+  },
+  "en": {
+   "full": [
+    "ARATON complete dry food with poultry is a reliable everyday choice for young dogs of all breeds. It was created with the real needs of a growing dog in mind rather than trends – energy, immunity, digestive comfort and healthy development. It is a food that helps a dog grow up strong, resilient and feeling well.",
+    "The main protein source – poultry – is easily digestible and nutritious. The strength of this food is a balanced and clear formula adapted to a growing body. Animal proteins help build muscles, and the optimal fat content provides energy for an active life. Vitamins E and B6, zinc and biotin support healthy skin and coat and strengthen the body’s natural defences. Fibre and beet pulp improve gut function, so that digestion runs smoothly even in more sensitive pets.",
+    "ARATON recipes are developed in cooperation with animal nutrition experts. It is a balanced food suitable for puppies of all breeds – from small to large. The formula contains no artificial colourings, flavourings or unnecessary additives. It suits more sensitive pets when you want a simple, clear solution that works every day. As dog lovers say: “What matters most is that the food works – not just on the pack, but in the dog’s life.” ARATON is chosen by those who look not for promises but for real results: energetic growth, a shiny coat, good digestion and healthy habits from the very first months. ARATON is made in Europe to high quality standards. It is a KIKA family product – created with love and responsibility so that good nutrition grows together with your dog. Every day.",
+    "Made without: soy – no soy protein or oil; dairy products – no lactose or milk proteins; artificial colourings and flavourings – no synthetic pigments or aromas, natural smell and colour; GMO ingredients – contains no genetically modified substances; chemical flavour enhancers – the intensity of the flavour comes from ingredients of animal origin. Key features: a balanced formula for growth – all the essential nutrients for a young dog, helping muscles, bones and the immune and digestive systems develop properly; poultry – an easily digestible animal protein for energy and growth, suitable even for more sensitive stomachs, well absorbed and tasty; vitamins E and B6, zinc and biotin – for healthy skin and coat and strong immunity, caring for the dog’s overall well-being and resilience during growth; fibre and beet pulp – for smooth digestion from an early age, supporting gut function and good stool consistency; no artificial colourings or flavourings – a clear, clean composition for every day, suitable for responsible feeding from the very first months.",
+    "Who is it for? Young dogs from weaning to full adulthood (depending on the breed); when balanced nutrition is needed to support growth, energy and immunity; when the puppy has more sensitive digestion – thanks to the gentle, easily digestible formula; when you want to ensure a healthy coat and digestive comfort during growth; puppies of all breeds – from small to large."
+   ],
+   "composition": "Dehydrated poultry, maize, triticale, wheat bran, poultry fat, meat meal, hydrolysed chicken liver, maize gluten, sugar beet pulp, brewer's yeast, herb processing products 0.1 % (thyme, sage, parsley, oregano).",
+   "additives": "Nutritional additives per 1 kg: vitamin A (3a672a) — 18000 IU, vitamin D3 (3a671) — 1500 IU, vitamin E (3a700) — 180 mg, iron (II) sulphate monohydrate (3b103) — 50 mg, calcium iodate anhydrous (3b202) — 1.5 mg, copper (II) sulphate pentahydrate (3b405) — 5 mg, manganous sulphate monohydrate (3b503) — 20 mg, zinc sulphate monohydrate (3b605) — 90 mg, sodium selenite (3b801) — 0.05 mg. Technological additives: antioxidants, preservatives.",
+   "analysis": [
+    {
+     "name": "Crude protein",
+     "value": "25 %"
+    },
+    {
+     "name": "Crude fibre",
+     "value": "2.5 %"
+    },
+    {
+     "name": "Crude fat",
+     "value": "12 %"
+    },
+    {
+     "name": "Crude ash",
+     "value": "6.7 %"
+    },
+    {
+     "name": "Calcium",
+     "value": "1.4 %"
+    },
+    {
+     "name": "Phosphorus",
+     "value": "1.15 %"
+    },
+    {
+     "name": "Energy value",
+     "value": "3498 kcal/kg"
+    }
+   ],
+   "feeding": "Daily amount: see the feeding table. The amounts in the table are guidelines only and should be adjusted to the individual needs of each pet. The daily ration may vary depending on the outdoor temperature and on the pet’s lifestyle, temperament and activity. A bowl of fresh, clean water should always be within your pet’s reach."
+  },
+  "az": {
+   "full": [
+    "Quş əti ilə ARATON tam rasionlu quru yemi bütün cinslərdən olan gənc itlər üçün etibarlı gündəlik seçimdir. O, dəb meyllərini deyil, böyüyən itin real ehtiyaclarını – enerjini, immuniteti, rahat həzmi və sağlam inkişafı nəzərə alaraq yaradılıb. Bu, itin güclü, dözümlü və gümrah böyüməsinə kömək edən yemdir.",
+    "Əsas zülal mənbəyi – quş əti – asan həzm olunur və qidalıdır. Bu yemin güclü tərəfi böyüyən orqanizmə uyğunlaşdırılmış balanslı və aydın formuladır. Heyvan zülalları əzələlərin formalaşmasına kömək edir, optimal yağ miqdarı isə aktiv həyat üçün enerji verir. E və B6 vitaminləri, sink və biotin dərinin və tükün sağlamlığını dəstəkləyir və orqanizmin təbii müdafiəsini gücləndirir. Lif və çuğundur cecəsi bağırsaqların işini yaxşılaşdırır ki, həzm hətta daha həssas ev heyvanlarında da rahat keçsin.",
+    "ARATON reseptləri heyvanların qidalanması üzrə ekspertlərlə birlikdə hazırlanır. Bu, bütün cinslərdən olan küçüklərə – kiçikdən böyüyə qədər – uyğun balanslı yemdir. Formulada süni boyaqlar, ətirləndiricilər və lazımsız əlavələr yoxdur. Sadə, aydın və hər gün işləyən həll istədiyiniz zaman daha həssas ev heyvanlarına uyğundur. İtsevərlərin dediyi kimi: “Əsas odur ki, yem işləsin – təkcə qablaşdırmanın üzərində deyil, itin həyatında da.” ARATON-u vədlər deyil, real nəticələr axtaranlar seçir: enerjili böyümə, parlaq tük, yaxşı həzm və ilk aylardan sağlam vərdişlər. ARATON yüksək keyfiyyət standartlarına riayət edilməklə Avropada istehsal olunur. Bu, KIKA ailəsinin məhsuludur – düzgün qidalanma itinizlə birlikdə böyüsün deyə sevgi və məsuliyyətlə yaradılıb. Hər gün.",
+    "Tərkibində YOXDUR: soya – soya zülalı və yağı yoxdur; süd məhsulları – laktoza və süd zülalları yoxdur; süni boyaqlar və ətirləndiricilər – sintetik piqmentlər və aromatlar yoxdur, təbii qoxu və rəng; GMO inqrediyentləri – tərkibdə genetik modifikasiya olunmuş maddələr yoxdur; kimyəvi dad gücləndiriciləri – dadın zənginliyi heyvan mənşəli inqrediyentlərdən gəlir. Əsas xüsusiyyətlər: böyümə üçün balanslı formula – gənc it üçün bütün zəruri qida maddələri, əzələlərin, sümüklərin, immun və həzm sistemlərinin düzgün inkişafına kömək edir; quş əti – enerji və böyümə üçün asan həzm olunan heyvan zülalı, hətta daha həssas mədələr üçün də uyğundur, yaxşı mənimsənilir və dadlıdır; E və B6 vitaminləri, sink və biotin – sağlam dəri, tük və güclü immunitet üçün, böyümə dövründə itin ümumi rifahının və müqavimətinin qayğısına qalır; lif və çuğundur cecəsi – kiçik yaşdan rahat həzm üçün, bağırsaqların işini və nəcisin normal konsistensiyasını dəstəkləyir; süni boyaqlar və ətirləndiricilər olmadan – hər gün üçün aydın, təmiz tərkib, ilk aylardan məsuliyyətli qidalandırma üçün uyğundur.",
+    "Kimlər üçündür? Süddən kəsilmədən tam yetkinliyə qədər (cinsdən asılı olaraq) gənc itlər üçün; böyüməni, enerjini və immuniteti dəstəkləmək üçün balanslı qidalanma lazım olduqda; küçüyün həzmi daha həssas olduqda – yumşaq, asan həzm olunan formula sayəsində; böyümə dövründə tükün sağlam vəziyyətini və rahat həzmi təmin etmək istədikdə; bütün cinslərdən olan küçüklər üçün – kiçikdən böyüyə qədər."
+   ],
+   "composition": "Dehidratlaşdırılmış quş əti, qarğıdalı, tritikale, buğda kəpəyi, quş yağı, ət unu, hidrolizə edilmiş toyuq qaraciyəri, qarğıdalı qlüteni, şəkər çuğunduru cecəsi, pivə mayası, otların emalı məhsulları 0,1 % (kəklikotu, adaçayı, cəfəri, oreqano).",
+   "additives": "1 kq üçün qida əlavələri: A vitamini (3a672a) — 18000 BV, D3 vitamini (3a671) — 1500 BV, E vitamini (3a700) — 180 mq, dəmir (II) sulfat monohidrat (3b103) — 50 mq, susuz kalsium yodat (3b202) — 1,5 mq, mis (II) sulfat pentahidrat (3b405) — 5 mq, manqan sulfat monohidrat (3b503) — 20 mq, sink sulfat monohidrat (3b605) — 90 mq, natrium selenit (3b801) — 0,05 mq. Texnoloji əlavələr: antioksidantlar, konservantlar.",
+   "analysis": [
+    {
+     "name": "Xam protein",
+     "value": "25 %"
+    },
+    {
+     "name": "Xam lif",
+     "value": "2,5 %"
+    },
+    {
+     "name": "Xam yağ",
+     "value": "12 %"
+    },
+    {
+     "name": "Xam kül",
+     "value": "6,7 %"
+    },
+    {
+     "name": "Kalsium",
+     "value": "1,4 %"
+    },
+    {
+     "name": "Fosfor",
+     "value": "1,15 %"
+    },
+    {
+     "name": "Enerji dəyəri",
+     "value": "3498 kkal/kq"
+    }
+   ],
+   "feeding": "Gündəlik norma: qidalandırma cədvəlinə baxın. Cədvəldə göstərilən miqdarlar yalnız tövsiyə xarakteri daşıyır və hər bir ev heyvanının fərdi ehtiyaclarına uyğunlaşdırılmalıdır. Gündəlik norma çöldəki havanın temperaturundan, ev heyvanının həyat tərzindən, temperamentindən və aktivliyindən asılı olaraq dəyişə bilər. Təzə, təmiz su olan qab həmişə ev heyvanının əlçatan yerində olmalıdır."
+  }
+ },
+ "araton:assets/products/art-dog-junior-lamb.webp": {
+  "url": "https://www.kika.lt/products/araton-dry-food-for-junior-dogs-of-all-breeds-with-lamb",
+  "sku": null,
+  "packs": [
+   "3 kg",
+   "15 kg"
+  ],
+  "feed": [],
+  "ru": {
+   "full": [
+    "Полнорационный сухой корм ARATON с ягнёнком – повседневное, надёжное решение для роста и хорошего самочувствия щенков всех пород. Он создан с учётом реальных потребностей молодой собаки: здорового развития, пищеварения и крепкого иммунитета. Это корм, который помогает щенку расти активным, сильным и выносливым с первых месяцев жизни.",
+    "Основной источник белка – ягнёнок – мягко воздействует на пищеварение и отлично подходит для более чувствительного желудка. Сильная сторона этого корма – сбалансированный и понятный состав, ориентированный на физиологические потребности растущей собаки. Легкоусвояемые белки ягнёнка помогают формировать мышечную массу, а рис и другие источники энергии обеспечивают активного щенка необходимой энергией. Витамины A, D3 и E, цинк, биотин и селен помогают укреплять иммунную систему, поддерживать здоровье кожи и блеск шерсти. Клетчатка и свекольный жом заботятся о бесперебойном пищеварении, а травы – тимьян, шалфей, петрушка и орегано – способствуют общему благополучию организма.",
+    "Рецептуры ARATON разрабатываются совместно с экспертами по питанию животных. Этот корм подходит щенкам всех пород в возрасте до 12 месяцев – от самых маленьких до самых крупных. Формула сбалансирована так, чтобы подходить как энергичным щенкам, так и щенкам с более чувствительным пищеварением. Как говорят заводчики собак: «Главное, чтобы корм работал – не только на упаковке, но и в жизни собаки». ARATON выбирают владельцы, которым важны не маркетинговые обещания, а реальная польза: хорошее пищеварение, блестящая шерсть, энергичный и здоровый питомец. ARATON производится в Литве с соблюдением высоких стандартов качества. Это продукт семейства KIKA, созданный с любовью и ответственностью, чтобы правильное питание стало новой традицией. Каждый день.",
+    "Изготовлено БЕЗ: сои – без соевого белка и масла, что позволяет избежать возможных аллергических реакций и расстройств пищеварения; искусственных красителей и ароматизаторов – натуральные запах и цвет; ГМО – в составе нет генетически модифицированных ингредиентов; добавленного сахара – не перегружает поджелудочную железу и бережёт зубы. Основные свойства: высококачественный белок ягнёнка для развития мышц – ягнёнок является основным источником белка, помогающим формировать здоровую мышечную массу в период роста; произведено в Европе – надёжное качество на каждый день, корм изготавливается в Европейском союзе с соблюдением высоких стандартов качества; натуральные травы для иммунитета и пищеварения – обогащён тимьяном, шалфеем, петрушкой и орегано, которые поддерживают иммунитет и бесперебойное пищеварение; витамины и минералы для растущего организма – витамины A, D3 и E, биотин, цинк и другие микроэлементы помогают росту, здоровью кожи и шерсти.",
+    "Для кого? Для молодых собак всех пород в возрасте от 2 до 12 месяцев; когда нужен сбалансированный повседневный корм для растущего организма; для щенков с более чувствительным пищеварением или для поддержки бесперебойного пищеварения; когда собака активна и важно обеспечить достаточное количество энергии и развитие мышц; когда нужна мягкая, но полноценная формула с хорошим балансом белков, жиров и минералов."
+   ],
+   "composition": "Дегидрированное мясо ягнёнка, кукуруза, рис, тритикале, пшеничные отруби, жир птицы, дегидрированное мясо птицы, кукурузный глютен, жом сахарной свёклы, пивные дрожжи, продукты переработки трав 0,1 % (тимьян, шалфей, петрушка, орегано).",
+   "additives": "Питательные добавки на 1 кг: витамин A (3a672a) — 18000 МЕ, витамин D3 (3a671)* — 1500 МЕ, витамин E (3a700) — 180 мг, моногидрат сульфата железа (II) (3b103) — 50 мг, безводный йодат кальция (3b202) — 1,5 мг, пентагидрат сульфата меди (II) (3b405) — 5 мг, моногидрат сульфата марганца (3b503) — 20 мг, моногидрат сульфата цинка (3b605) — 90 мг, селенит натрия (3b801) — 0,1 мг. Технологические добавки: антиоксиданты, консерванты. * Одновременное применение витамина D2 не допускается.",
+   "analysis": [
+    {
+     "name": "Сырой протеин",
+     "value": "25 %"
+    },
+    {
+     "name": "Сырая клетчатка",
+     "value": "2,5 %"
+    },
+    {
+     "name": "Сырой жир",
+     "value": "12 %"
+    },
+    {
+     "name": "Сырая зола",
+     "value": "7 %"
+    },
+    {
+     "name": "Кальций",
+     "value": "1,4 %"
+    },
+    {
+     "name": "Фосфор",
+     "value": "1,15 %"
+    },
+    {
+     "name": "Омега-3 жирные кислоты",
+     "value": "0,33 %"
+    },
+    {
+     "name": "Омега-6 жирные кислоты",
+     "value": "2,12 %"
+    },
+    {
+     "name": "Энергетическая ценность",
+     "value": "3488 ккал/кг"
+    }
+   ],
+   "feeding": "Суточная норма: см. таблицу кормления. Указанные в таблице количества носят рекомендательный характер и должны корректироваться с учётом индивидуальных потребностей каждого питомца. Суточная норма может меняться в зависимости от температуры воздуха на улице, образа жизни, темперамента и активности питомца. Миска со свежей чистой водой всегда должна стоять в доступном для питомца месте."
+  },
+  "en": {
+   "full": [
+    "ARATON complete dry food with lamb is an everyday, reliable solution for the growth and well-being of puppies of all breeds. It was created with the real needs of a young dog in mind: healthy development, digestion and strong immunity. It is a food that helps a puppy grow up active, strong and resilient from the very first months.",
+    "The main protein source – lamb – is gentle on digestion and ideal for a more sensitive stomach. The strength of this food is a balanced, clear composition focused on the physiological needs of a growing dog. Easily absorbed lamb proteins help build muscle mass, while rice and other energy sources provide an active puppy with the right amount of energy. Vitamins A, D3 and E, zinc, biotin and selenium help strengthen the immune system and maintain healthy skin and a shiny coat. Fibre and beet pulp take care of smooth digestion, and herbs – thyme, sage, parsley and oregano – contribute to the body’s overall well-being.",
+    "ARATON recipes are developed in cooperation with animal nutrition experts. The food suits puppies of all breeds up to 12 months of age – from the smallest to the largest. The formula is balanced to suit both energetic puppies and those with more sensitive digestion. As dog breeders say: “What matters most is that the food works – not only on the pack, but in the dog’s life.” ARATON is chosen by owners who care not about marketing promises but about real benefits: good digestion, a shiny coat and an energetic, healthy pet. ARATON is made in Lithuania to high quality standards. It is a KIKA family product – created with love and responsibility so that good nutrition becomes a new tradition. Every day.",
+    "Made without: soy – no soy protein or oil, avoiding possible allergic reactions and digestive disorders; artificial colourings and flavourings – natural smell and colour; GMO – contains no genetically modified ingredients; added sugar – does not burden the pancreas and protects the teeth. Key features: high-quality lamb protein for muscle development – lamb is the main protein source, helping build healthy muscle mass during growth; made in Europe – reliable quality for every day, as the food is produced in the European Union to high quality standards; natural herbs for immunity and digestion – enriched with thyme, sage, parsley and oregano, which support immunity and smooth digestion; vitamins and minerals for a growing body – vitamins A, D3 and E, biotin, zinc and other trace elements support growth and the health of skin and coat.",
+    "Who is it for? Young dogs of all breeds from 2 to 12 months of age; when a balanced everyday food for a growing body is needed; puppies with more sensitive digestion or to support smooth digestion; when the dog is active and it is important to ensure enough energy and muscle development; when a gentle yet complete formula with a good balance of protein, fat and minerals is needed."
+   ],
+   "composition": "Dehydrated lamb meat, maize, rice, triticale, wheat bran, poultry fat, dehydrated poultry meat, maize gluten, sugar beet pulp, brewer's yeast, herb processing products 0.1 % (thyme, sage, parsley, oregano).",
+   "additives": "Nutritional additives per 1 kg: vitamin A (3a672a) — 18000 IU, vitamin D3 (3a671)* — 1500 IU, vitamin E (3a700) — 180 mg, iron (II) sulphate monohydrate (3b103) — 50 mg, calcium iodate anhydrous (3b202) — 1.5 mg, copper (II) sulphate pentahydrate (3b405) — 5 mg, manganous sulphate monohydrate (3b503) — 20 mg, zinc sulphate monohydrate (3b605) — 90 mg, sodium selenite (3b801) — 0.1 mg. Technological additives: antioxidants, preservatives. * Simultaneous use of vitamin D2 is not permitted.",
+   "analysis": [
+    {
+     "name": "Crude protein",
+     "value": "25 %"
+    },
+    {
+     "name": "Crude fibre",
+     "value": "2.5 %"
+    },
+    {
+     "name": "Crude fat",
+     "value": "12 %"
+    },
+    {
+     "name": "Crude ash",
+     "value": "7 %"
+    },
+    {
+     "name": "Calcium",
+     "value": "1.4 %"
+    },
+    {
+     "name": "Phosphorus",
+     "value": "1.15 %"
+    },
+    {
+     "name": "Omega-3 fatty acids",
+     "value": "0.33 %"
+    },
+    {
+     "name": "Omega-6 fatty acids",
+     "value": "2.12 %"
+    },
+    {
+     "name": "Energy value",
+     "value": "3488 kcal/kg"
+    }
+   ],
+   "feeding": "Daily amount: see the feeding table. The amounts in the table are guidelines only and should be adjusted to the individual needs of each pet. The daily ration may vary depending on the outdoor temperature and on the pet’s lifestyle, temperament and activity. A bowl of fresh, clean water should always be within your pet’s reach."
+  },
+  "az": {
+   "full": [
+    "Quzu əti ilə ARATON tam rasionlu quru yemi bütün cinslərdən olan küçüklərin böyüməsi və gümrahlığı üçün gündəlik, etibarlı həlldir. O, gənc itin real ehtiyaclarını – sağlam inkişafı, həzmi və güclü immuniteti nəzərə alaraq yaradılıb. Bu, küçüyün ilk aylardan aktiv, güclü və dözümlü böyüməsinə kömək edən yemdir.",
+    "Əsas zülal mənbəyi – quzu əti – həzmə yumşaq təsir edir və daha həssas mədə üçün əla uyğundur. Bu yemin güclü tərəfi böyüyən itin fizioloji ehtiyaclarına yönəlmiş balanslı və aydın tərkibdir. Asan mənimsənilən quzu əti zülalları əzələ kütləsinin formalaşmasına kömək edir, düyü və digər enerji mənbələri isə aktiv küçüyü lazımi enerji ilə təmin edir. A, D3 və E vitaminləri, sink, biotin və selen immun sistemini gücləndirməyə, dərinin sağlamlığını və tükün parlaqlığını qorumağa kömək edir. Lif və çuğundur cecəsi rahat həzmin qayğısına qalır, otlar – kəklikotu, adaçayı, cəfəri və oreqano – isə orqanizmin ümumi rifahına töhfə verir.",
+    "ARATON reseptləri heyvanların qidalanması üzrə ekspertlərlə birlikdə hazırlanır. Bu yem 12 aylığa qədər bütün cinslərdən olan küçüklərə – ən kiçikdən ən böyüyə qədər – uyğundur. Formula elə balanslaşdırılıb ki, həm enerjili küçüklərə, həm də həzmi daha həssas olan küçüklərə uyğun olsun. İt yetişdiricilərinin dediyi kimi: “Əsas odur ki, yem işləsin – təkcə qablaşdırmanın üzərində deyil, itin həyatında da.” ARATON-u marketinq vədləri deyil, real fayda maraqlandıran sahiblər seçir: yaxşı həzm, parlaq tük, enerjili və sağlam ev heyvanı. ARATON yüksək keyfiyyət standartlarına riayət edilməklə Litvada istehsal olunur. Bu, KIKA ailəsinin məhsuludur – düzgün qidalanma yeni ənənəyə çevrilsin deyə sevgi və məsuliyyətlə yaradılıb. Hər gün.",
+    "Tərkibində YOXDUR: soya – soya zülalı və yağı yoxdur, bu da mümkün allergik reaksiyaların və həzm pozğunluqlarının qarşısını alır; süni boyaqlar və ətirləndiricilər – təbii qoxu və rəng; GMO – tərkibdə genetik modifikasiya olunmuş inqrediyentlər yoxdur; əlavə şəkər – mədəaltı vəzi yükləmir və dişləri qoruyur. Əsas xüsusiyyətlər: əzələlərin inkişafı üçün yüksək keyfiyyətli quzu əti zülalı – quzu əti böyümə dövründə sağlam əzələ kütləsinin formalaşmasına kömək edən əsas zülal mənbəyidir; Avropada istehsal olunub – hər gün üçün etibarlı keyfiyyət, yem Avropa İttifaqında yüksək keyfiyyət standartlarına riayət edilməklə hazırlanır; immunitet və həzm üçün təbii otlar – immuniteti və rahat həzmi dəstəkləyən kəklikotu, adaçayı, cəfəri və oreqano ilə zənginləşdirilib; böyüyən orqanizm üçün vitaminlər və minerallar – A, D3 və E vitaminləri, biotin, sink və digər mikroelementlər böyüməyə, dərinin və tükün sağlamlığına kömək edir.",
+    "Kimlər üçündür? 2 aylıqdan 12 aylığa qədər bütün cinslərdən olan gənc itlər üçün; böyüyən orqanizm üçün balanslı gündəlik yem lazım olduqda; həzmi daha həssas olan küçüklər üçün və ya rahat həzmi dəstəkləmək üçün; it aktiv olduqda və kifayət qədər enerji və əzələ inkişafını təmin etmək vacib olduqda; zülal, yağ və mineralların yaxşı balansına malik yumşaq, lakin tam dəyərli formula lazım olduqda."
+   ],
+   "composition": "Dehidratlaşdırılmış quzu əti, qarğıdalı, düyü, tritikale, buğda kəpəyi, quş yağı, dehidratlaşdırılmış quş əti, qarğıdalı qlüteni, şəkər çuğunduru cecəsi, pivə mayası, otların emalı məhsulları 0,1 % (kəklikotu, adaçayı, cəfəri, oreqano).",
+   "additives": "1 kq üçün qida əlavələri: A vitamini (3a672a) — 18000 BV, D3 vitamini (3a671)* — 1500 BV, E vitamini (3a700) — 180 mq, dəmir (II) sulfat monohidrat (3b103) — 50 mq, susuz kalsium yodat (3b202) — 1,5 mq, mis (II) sulfat pentahidrat (3b405) — 5 mq, manqan sulfat monohidrat (3b503) — 20 mq, sink sulfat monohidrat (3b605) — 90 mq, natrium selenit (3b801) — 0,1 mq. Texnoloji əlavələr: antioksidantlar, konservantlar. * D2 vitamininin eyni vaxtda istifadəsinə icazə verilmir.",
+   "analysis": [
+    {
+     "name": "Xam protein",
+     "value": "25 %"
+    },
+    {
+     "name": "Xam lif",
+     "value": "2,5 %"
+    },
+    {
+     "name": "Xam yağ",
+     "value": "12 %"
+    },
+    {
+     "name": "Xam kül",
+     "value": "7 %"
+    },
+    {
+     "name": "Kalsium",
+     "value": "1,4 %"
+    },
+    {
+     "name": "Fosfor",
+     "value": "1,15 %"
+    },
+    {
+     "name": "Omeqa-3 yağ turşuları",
+     "value": "0,33 %"
+    },
+    {
+     "name": "Omeqa-6 yağ turşuları",
+     "value": "2,12 %"
+    },
+    {
+     "name": "Enerji dəyəri",
+     "value": "3488 kkal/kq"
+    }
+   ],
+   "feeding": "Gündəlik norma: qidalandırma cədvəlinə baxın. Cədvəldə göstərilən miqdarlar yalnız tövsiyə xarakteri daşıyır və hər bir ev heyvanının fərdi ehtiyaclarına uyğunlaşdırılmalıdır. Gündəlik norma çöldəki havanın temperaturundan, ev heyvanının həyat tərzindən, temperamentindən və aktivliyindən asılı olaraq dəyişə bilər. Təzə, təmiz su olan qab həmişə ev heyvanının əlçatan yerində olmalıdır."
+  }
+ },
+ "araton:assets/products/art-dog-lamb.webp": {
+  "url": "https://www.kika.lt/products/araton-dry-food-for-adult-dogs-of-all-breeds-with-lamb",
+  "sku": null,
+  "packs": [
+   "3 kg",
+   "15 kg"
+  ],
+  "feed": [],
+  "ru": {
+   "full": [
+    "Полнорационный сухой корм ARATON с ягнёнком – повседневное, надёжное решение для хорошего самочувствия взрослых собак всех пород. Он создан с учётом реальных потребностей собаки – сытости, хорошего самочувствия и простого, чистого состава. Это корм, который может помочь поддерживать бесперебойное пищеварение, энергию и естественную защиту организма.",
+    "Основной источник белка – ягнёнок – отлично усваивается и подходит даже более чувствительным собакам. Сильная сторона этого корма – сбалансированный и понятный состав без избыточных или плохо переносимых добавок. Животные белки ягнёнка могут помочь поддерживать мышечный тонус, а цинк, биотин и витамин B6 заботятся о здоровье кожи и шерсти. Клетчатка и свекольный жом способствуют хорошему пищеварению, а сбалансированное содержание питательных веществ может помочь сохранять повседневную активность собаки.",
+    "Рецептуры ARATON разрабатываются совместно с экспертами по питанию животных. Это корм, подходящий собакам как с умеренной, так и с более высокой активностью, у которых нет особых диетических потребностей, но которые заслуживают понятного, качественного и приспособленного к повседневной жизни питания. Формула без искусственных красителей, ароматизаторов и дополнительных усилителей вкуса – только то, что действительно нужно собаке. Как говорят любители собак: «Главное, чтобы корм работал – не только на упаковке, но и в повседневной жизни собаки». ARATON выбирают владельцы, для которых важны не обещания, а результат: блестящая шерсть, комфортное пищеварение и собака, которая отлично выглядит и прекрасно себя чувствует. ARATON производится в Литве с соблюдением высоких стандартов качества. Это продукт семейства KIKA, созданный с любовью и ответственностью, чтобы правильное питание стало новой традицией. Каждый день.",
+    "Изготовлено БЕЗ: сои – без соевого белка и масла, чтобы избежать дополнительной чувствительности; молочных продуктов – без лактозы и молочных белков; искусственных красителей и ароматизаторов – без синтетических пигментов и ароматов, натуральные запах и цвет; ГМО-ингредиентов – в составе нет генетически модифицированных ингредиентов; сахара и подсластителей – без избыточных и ненужных добавок. Основные свойства: ягнёнок – мягкий белок для чувствительного пищеварения; подходит даже более чувствительным собакам, так как ягнёнок менее аллергенен и хорошо усваивается. Животные белки – для мышц и энергии; сбалансированное содержание белка помогает поддерживать мышечный тонус и физическую активность. Цинк, биотин и витамин B6 – для кожи и шерсти; помогают сохранять здоровье кожи, укрепляют структуру и блеск шерсти. Клетчатка и свекольный жом – для комфортного пищеварения; облегчают усвоение пищи, поддерживают работу кишечника и улучшают консистенцию стула. Без искусственных красителей и ароматизаторов – только то, что нужно; понятный, чистый состав без лишних добавок – для владельцев, которые ценят простоту.",
+    "Для кого? Для взрослых собак от 1 года (всех пород); для собак с чувствительным пищеварением или склонностью к пищевой непереносимости; когда нужна более мягкая, легче усваиваемая альтернатива белку птицы; для собак с проблемами кожи или шерсти либо недостатком блеска шерсти; когда нужен надёжный повседневный корм без сложных диетических решений."
+   ],
+   "composition": "Дегидрированное мясо ягнёнка, кукуруза, рис, дегидрированное мясо птицы, пшеничные отруби, тритикале, жир птицы, кукурузный глютен, жом сахарной свёклы, пивные дрожжи, продукты переработки трав 0,1 % (тимьян, шалфей, петрушка, орегано), минеральные вещества.",
+   "additives": "Питательные добавки на 1 кг: витамин A (3a672a) — 18000 МЕ, витамин D3 (3a671)* — 1500 МЕ, витамин E (3a700) — 180 мг, витамин B6 (3a831) — 3 мг, биотин (3a880) — 0,2 мг, моногидрат сульфата железа (II) (3b103) — 50 мг, безводный йодат кальция (3b202) — 1,5 мг, пентагидрат сульфата меди (II) (3b405) — 5 мг, моногидрат сульфата марганца (3b503) — 20 мг, моногидрат сульфата цинка (3b605) — 90 мг, селенит натрия (3b801) — 0,1 мг. Технологические добавки: антиоксиданты, консерванты. * Одновременное применение витамина D2 не допускается.",
+   "analysis": [
+    {
+     "name": "Сырой протеин",
+     "value": "24 %"
+    },
+    {
+     "name": "Сырая клетчатка",
+     "value": "2,5 %"
+    },
+    {
+     "name": "Сырой жир",
+     "value": "11 %"
+    },
+    {
+     "name": "Сырая зола",
+     "value": "6 %"
+    },
+    {
+     "name": "Кальций",
+     "value": "1 %"
+    },
+    {
+     "name": "Фосфор",
+     "value": "0,9 %"
+    },
+    {
+     "name": "Энергетическая ценность",
+     "value": "3473 ккал/кг"
+    }
+   ],
+   "feeding": "Суточная норма: см. таблицу кормления. Указанные в таблице количества носят рекомендательный характер и должны корректироваться с учётом индивидуальных потребностей каждого питомца. Суточная норма может меняться в зависимости от температуры воздуха на улице, образа жизни, темперамента и активности питомца. Миска со свежей чистой водой всегда должна стоять в доступном для питомца месте."
+  },
+  "en": {
+   "full": [
+    "ARATON complete dry food with lamb is an everyday, reliable solution for the well-being of adult dogs of all breeds. It was created with the dog’s real needs in mind – satiety, well-being and a simple, clean composition. It is a food that can help maintain smooth digestion, energy and natural defences.",
+    "The main protein source – lamb – is highly digestible and suitable even for more sensitive dogs. The strength of this food is a balanced and clear composition without excessive or poorly tolerated additives. Animal proteins from lamb can help maintain muscle tone, while zinc, biotin and vitamin B6 take care of healthy skin and coat. Fibre and beet pulp promote good digestion, and the balanced nutrient content can help sustain the dog’s daily activity.",
+    "ARATON recipes are developed in cooperation with animal nutrition experts. It is a food suitable for dogs with moderate as well as higher activity levels that have no specific dietary needs but deserve clear, high-quality nutrition adapted to everyday life. The formula contains no artificial colourings, flavourings or added flavour enhancers – only what a dog really needs. As dog lovers say: “What matters most is that the food works – not just on the pack, but in the dog’s everyday life.” ARATON is chosen by owners for whom the result matters more than promises: a shiny coat, digestive comfort and a dog that looks and feels great. ARATON is made in Lithuania to high quality standards. It is a KIKA family product – created with love and responsibility so that good nutrition becomes a new tradition. Every day.",
+    "Made without: soy – no soy protein or oil, to avoid additional sensitivity; dairy products – no lactose or milk proteins; artificial colourings and flavourings – no synthetic pigments or aromas, natural smell and colour; GMO ingredients – contains no genetically modified ingredients; sugar or sweeteners – no excessive or unnecessary additives. Key features: lamb – a gentle protein for sensitive digestion; it suits even more sensitive dogs, as lamb is less allergenic and well absorbed. Animal proteins – for muscles and energy; a balanced protein content helps maintain muscle tone and physical activity. Zinc, biotin and vitamin B6 – for skin and coat; they help maintain healthy skin and strengthen the structure and shine of the coat. Fibre and beet pulp – for digestive comfort; they make it easier to absorb food, support gut function and improve stool consistency. No artificial colourings or flavourings – only what is needed; a clear, clean composition without unnecessary additives, suited to owners who value simplicity.",
+    "Who is it for? Adult dogs from 1 year of age (all breeds); dogs with sensitive digestion or a tendency to food intolerance; when a gentler, more easily digestible protein alternative to poultry is needed; dogs with skin or coat problems or a lack of shine; when a reliable everyday food without complicated dietary solutions is needed."
+   ],
+   "composition": "Dehydrated lamb meat, maize, rice, dehydrated poultry meat, wheat bran, triticale, poultry fat, maize gluten, sugar beet pulp, brewer's yeast, herb processing products 0.1 % (thyme, sage, parsley, oregano), minerals.",
+   "additives": "Nutritional additives per 1 kg: vitamin A (3a672a) — 18000 IU, vitamin D3 (3a671)* — 1500 IU, vitamin E (3a700) — 180 mg, vitamin B6 (3a831) — 3 mg, biotin (3a880) — 0.2 mg, iron (II) sulphate monohydrate (3b103) — 50 mg, calcium iodate anhydrous (3b202) — 1.5 mg, copper (II) sulphate pentahydrate (3b405) — 5 mg, manganous sulphate monohydrate (3b503) — 20 mg, zinc sulphate monohydrate (3b605) — 90 mg, sodium selenite (3b801) — 0.1 mg. Technological additives: antioxidants, preservatives. * Simultaneous use of vitamin D2 is not permitted.",
+   "analysis": [
+    {
+     "name": "Crude protein",
+     "value": "24 %"
+    },
+    {
+     "name": "Crude fibre",
+     "value": "2.5 %"
+    },
+    {
+     "name": "Crude fat",
+     "value": "11 %"
+    },
+    {
+     "name": "Crude ash",
+     "value": "6 %"
+    },
+    {
+     "name": "Calcium",
+     "value": "1 %"
+    },
+    {
+     "name": "Phosphorus",
+     "value": "0.9 %"
+    },
+    {
+     "name": "Energy value",
+     "value": "3473 kcal/kg"
+    }
+   ],
+   "feeding": "Daily amount: see the feeding table. The amounts in the table are guidelines only and should be adjusted to the individual needs of each pet. The daily ration may vary depending on the outdoor temperature and on the pet’s lifestyle, temperament and activity. A bowl of fresh, clean water should always be within your pet’s reach."
+  },
+  "az": {
+   "full": [
+    "Quzu əti ilə ARATON tam rasionlu quru yemi bütün cinslərdən olan yetkin itlərin rifahı üçün gündəlik, etibarlı həlldir. O, itin real ehtiyaclarını – toxluğu, gümrahlığı və sadə, təmiz tərkibi nəzərə alaraq yaradılıb. Bu, rahat həzmi, enerjini və təbii müdafiəni qorumağa kömək edə bilən yemdir.",
+    "Əsas zülal mənbəyi – quzu əti – əla həzm olunur və hətta daha həssas itlərə də uyğundur. Bu yemin güclü tərəfi artıq və ya pis qəbul edilən əlavələr olmadan balanslı və aydın tərkibdir. Quzu ətindən alınan heyvan zülalları əzələ tonusunu qorumağa kömək edə bilər, sink, biotin və B6 vitamini isə dərinin və tükün sağlamlığının qayğısına qalır. Lif və çuğundur cecəsi yaxşı həzmə şərait yaradır, qida maddələrinin balanslı miqdarı isə itin gündəlik aktivliyini qorumağa kömək edə bilər.",
+    "ARATON reseptləri heyvanların qidalanması üzrə ekspertlərlə birlikdə hazırlanır. Bu, xüsusi pəhriz ehtiyacları olmayan, lakin aydın, keyfiyyətli və gündəlik həyata uyğunlaşdırılmış qidalanmaya layiq olan həm orta, həm də daha yüksək aktivliyə malik itlər üçün uyğun yemdir. Formulada süni boyaqlar, ətirləndiricilər və əlavə dad gücləndiriciləri yoxdur – yalnız itə həqiqətən lazım olanlar. İtsevərlərin dediyi kimi: “Əsas odur ki, yem işləsin – təkcə qablaşdırmanın üzərində deyil, itin gündəlik həyatında da.” ARATON-u vədlər deyil, nəticə önəmli olan sahiblər seçir: parlaq tük, rahat həzm və əla görünən, özünü yaxşı hiss edən it. ARATON yüksək keyfiyyət standartlarına riayət edilməklə Litvada istehsal olunur. Bu, KIKA ailəsinin məhsuludur – düzgün qidalanma yeni ənənəyə çevrilsin deyə sevgi və məsuliyyətlə yaradılıb. Hər gün.",
+    "Tərkibində YOXDUR: soya – əlavə həssaslığın qarşısını almaq üçün soya zülalı və yağı yoxdur; süd məhsulları – laktoza və süd zülalları yoxdur; süni boyaqlar və ətirləndiricilər – sintetik piqmentlər və aromatlar yoxdur, təbii qoxu və rəng; GMO inqrediyentləri – tərkibdə genetik modifikasiya olunmuş inqrediyentlər yoxdur; şəkər və ya tatlandırıcılar – artıq və ya lazımsız əlavələr yoxdur. Əsas xüsusiyyətlər: quzu əti – həssas həzm üçün yumşaq zülal; hətta daha həssas itlərə də uyğundur, çünki quzu əti daha az allergendir və yaxşı mənimsənilir. Heyvan zülalları – əzələlər və enerji üçün; balanslı zülal miqdarı əzələ tonusunu və fiziki aktivliyi qorumağa kömək edir. Sink, biotin və B6 vitamini – dəri və tük üçün; dərinin sağlamlığını qorumağa kömək edir, tükün quruluşunu və parlaqlığını gücləndirir. Lif və çuğundur cecəsi – rahat həzm üçün; qidanın mənimsənilməsini asanlaşdırır, bağırsaqların işini dəstəkləyir və nəcisin konsistensiyasını yaxşılaşdırır. Süni boyaqlar və ətirləndiricilər olmadan – yalnız lazım olanlar; lazımsız əlavələr olmadan aydın, təmiz tərkib – sadəliyi qiymətləndirən sahiblər üçün.",
+    "Kimlər üçündür? 1 yaşdan yuxarı yetkin itlər üçün (bütün cinslər); həzmi həssas olan və ya qida dözümsüzlüyünə meylli itlər üçün; quş əti zülalına daha yumşaq, daha asan həzm olunan alternativ lazım olduqda; dəri və ya tük problemləri olan, yaxud tükü kifayət qədər parlaq olmayan itlər üçün; mürəkkəb pəhriz həlləri olmadan etibarlı gündəlik yem lazım olduqda."
+   ],
+   "composition": "Dehidratlaşdırılmış quzu əti, qarğıdalı, düyü, dehidratlaşdırılmış quş əti, buğda kəpəyi, tritikale, quş yağı, qarğıdalı qlüteni, şəkər çuğunduru cecəsi, pivə mayası, otların emalı məhsulları 0,1 % (kəklikotu, adaçayı, cəfəri, oreqano), minerallar.",
+   "additives": "1 kq üçün qida əlavələri: A vitamini (3a672a) — 18000 BV, D3 vitamini (3a671)* — 1500 BV, E vitamini (3a700) — 180 mq, B6 vitamini (3a831) — 3 mq, biotin (3a880) — 0,2 mq, dəmir (II) sulfat monohidrat (3b103) — 50 mq, susuz kalsium yodat (3b202) — 1,5 mq, mis (II) sulfat pentahidrat (3b405) — 5 mq, manqan sulfat monohidrat (3b503) — 20 mq, sink sulfat monohidrat (3b605) — 90 mq, natrium selenit (3b801) — 0,1 mq. Texnoloji əlavələr: antioksidantlar, konservantlar. * D2 vitamininin eyni vaxtda istifadəsinə icazə verilmir.",
+   "analysis": [
+    {
+     "name": "Xam protein",
+     "value": "24 %"
+    },
+    {
+     "name": "Xam lif",
+     "value": "2,5 %"
+    },
+    {
+     "name": "Xam yağ",
+     "value": "11 %"
+    },
+    {
+     "name": "Xam kül",
+     "value": "6 %"
+    },
+    {
+     "name": "Kalsium",
+     "value": "1 %"
+    },
+    {
+     "name": "Fosfor",
+     "value": "0,9 %"
+    },
+    {
+     "name": "Enerji dəyəri",
+     "value": "3473 kkal/kq"
+    }
+   ],
+   "feeding": "Gündəlik norma: qidalandırma cədvəlinə baxın. Cədvəldə göstərilən miqdarlar yalnız tövsiyə xarakteri daşıyır və hər bir ev heyvanının fərdi ehtiyaclarına uyğunlaşdırılmalıdır. Gündəlik norma çöldəki havanın temperaturundan, ev heyvanının həyat tərzindən, temperamentindən və aktivliyindən asılı olaraq dəyişə bilər. Təzə, təmiz su olan qab həmişə ev heyvanının əlçatan yerində olmalıdır."
+  }
+ },
+ "araton:assets/products/art-dog-poultry.webp": {
+  "url": "https://www.kika.lt/products/araton-dry-food-for-adult-dogs-of-all-breeds-with-poultry",
+  "sku": null,
+  "packs": [
+   "3 kg",
+   "15 kg"
+  ],
+  "feed": [],
+  "ru": {
+   "full": [
+    "Полнорационный сухой корм ARATON с птицей – надёжное и простое решение для питания взрослых собак всех пород. Он создан с учётом истинных потребностей собаки – энергии, хорошего самочувствия, здорового пищеварения и крепкой естественной защиты. Это формула для ежедневного кормления, основу которой составляют легкоусвояемые белки животного происхождения из мяса птицы.",
+    "Сильная сторона этого корма – чистый и сбалансированный состав без избыточных или плохо переносимых добавок. Белки птицы помогают поддерживать мышечный тонус и физическую выносливость. Витамины E и B6, биотин и цинк поддерживают здоровье кожи, блеск шерсти и крепкую иммунную систему. Клетчатка и свекольный жом помогают пищеварению, а простая рецептура подходит даже более чувствительным собакам.",
+    "Рецептуры ARATON разрабатываются совместно с экспертами по питанию животных. Это сбалансированный сухой корм, подходящий как более активным, так и менее подвижным собакам, – когда нужен понятный, качественный состав без сложных диетических решений. Без искусственных красителей, ароматизаторов и ГМО – только то, что действительно важно. Как говорят любители собак: «Хороший корм должен работать – не на этикетке, а в повседневной жизни». ARATON выбирают владельцы, которые ценят не обещания, а реальный результат: здоровую шерсть, хорошее пищеварение, стабильное самочувствие и энергию каждый день. ARATON производится в Европе с соблюдением высоких стандартов качества. Это продукт семейства KIKA, созданный с любовью и ответственностью, чтобы правильное питание стало новой традицией. Каждый день.",
+    "Изготовлено БЕЗ: сои – без соевого белка и масла; молочных продуктов – без лактозы и молочных белков; искусственных красителей и ароматизаторов – без синтетических пигментов и ароматов, натуральные запах и цвет; ГМО-ингредиентов – в составе нет генетически модифицированных веществ; сахара и подсластителей – без избыточных и ненужных добавок. Основные свойства: белки птицы – легкоусвояемые и подходят для поддержания энергии каждый день; белки животного происхождения помогают сохранять мышечный тонус и хорошую физическую форму. Витамины E и B6, биотин и цинк – для кожи, шерсти и естественной защиты; помогают поддерживать здоровье кожи, блеск шерсти и крепкую иммунную систему. Клетчатка и свекольный жом – для комфортного пищеварения каждый день; обеспечивают бесперебойное пищеварение и помогают сохранять нормальную консистенцию стула. Без искусственных красителей и ароматизаторов – только то, что нужно в рационе собаки; понятный, чистый состав без лишних добавок – для владельцев, которые ценят натуральность. Подходит собакам всех пород – удобный выбор для одного или нескольких питомцев; универсальная формула для ежедневного кормления собак от мелких до крупных.",
+    "Для кого? Для взрослых собак от 1 года (всех пород); когда у собаки нет особых диетических потребностей и нужен качественный повседневный корм; когда нужен легкоусвояемый корм с понятным, сбалансированным составом; для собак, которым важны здоровая кожа, шерсть и крепкая иммунная система; для ежедневного питания как более активных, так и умеренно активных собак."
+   ],
+   "composition": "Дегидрированное мясо птицы, кукуруза, тритикале, мясная мука, пшеничные отруби, жир птицы, жом сахарной свёклы, продукты переработки трав 0,1 % (тимьян, шалфей, петрушка, орегано), минеральные вещества.",
+   "additives": "Питательные добавки на 1 кг: витамин A (3a672a) — 9000 МЕ, витамин D3 (3a671)* — 750 МЕ, витамин E (3a700) — 90 мг, витамин B6 (3a831) — 1,5 мг, витамин B1 (3a821) — 1,5 мг, витамин B12 — 0,025 мкг, биотин (3a880) — 0,1 мг, моногидрат сульфата железа (II) (3b103) — 25 мг, безводный йодат кальция (3b202) — 0,8 мг, пентагидрат сульфата меди (II) (3b405) — 2,5 мг, моногидрат сульфата марганца (3b503) — 10 мг, моногидрат сульфата цинка (3b605) — 45 мг, селенит натрия (3b801) — 0,05 мг. Технологические добавки: антиоксиданты, консерванты. * Одновременное применение витамина D2 не допускается.",
+   "analysis": [
+    {
+     "name": "Сырой протеин",
+     "value": "23 %"
+    },
+    {
+     "name": "Сырая клетчатка",
+     "value": "3,5 %"
+    },
+    {
+     "name": "Сырой жир",
+     "value": "9 %"
+    },
+    {
+     "name": "Сырая зола",
+     "value": "6,3 %"
+    },
+    {
+     "name": "Кальций",
+     "value": "1,15 %"
+    },
+    {
+     "name": "Фосфор",
+     "value": "1 %"
+    },
+    {
+     "name": "Энергетическая ценность",
+     "value": "3473 ккал/кг"
+    }
+   ],
+   "feeding": "Суточная норма: см. таблицу кормления. Указанные в таблице количества носят рекомендательный характер и должны корректироваться с учётом индивидуальных потребностей каждого питомца. Суточная норма может меняться в зависимости от температуры воздуха на улице, образа жизни, темперамента и активности питомца. Миска со свежей чистой водой всегда должна стоять в доступном для питомца месте."
+  },
+  "en": {
+   "full": [
+    "ARATON complete dry food with poultry is a reliable and simple solution for feeding adult dogs of all breeds. It was created with the dog’s true needs in mind – energy, well-being, healthy digestion and strong natural defences. It is a formula suitable for daily feeding, based on easily digestible animal proteins from poultry.",
+    "The strength of this food is a clean and balanced composition without excessive or poorly tolerated additives. Poultry proteins help maintain muscle tone and physical endurance. Vitamins E and B6, biotin and zinc support healthy skin, a shiny coat and a strong immune system. Fibre and beet pulp aid digestion, and the simple recipe suits even more sensitive dogs.",
+    "ARATON recipes are developed in cooperation with animal nutrition experts. It is a balanced dry food suitable for more active as well as less active dogs – when you are looking for a clear, high-quality composition without complicated dietary solutions. No artificial colourings, flavourings or GMO – only what really matters. As dog lovers say: “A good food has to work – not on the label, but in everyday life.” ARATON is chosen by owners who value not promises but real results: a healthy coat, good digestion, stable well-being and energy every day. ARATON is made in Europe to high quality standards. It is a KIKA family product – created with love and responsibility so that good nutrition becomes a new tradition. Every day.",
+    "Made without: soy – no soy protein or oil; dairy products – no lactose or milk proteins; artificial colourings and flavourings – no synthetic pigments or aromas, natural smell and colour; GMO ingredients – contains no genetically modified substances; sugar or sweeteners – no excessive or unnecessary additives. Key features: poultry proteins – easily digestible and suitable for maintaining daily energy; animal proteins help maintain muscle tone and good physical condition. Vitamins E and B6, biotin and zinc – for skin, coat and natural defences; they help maintain healthy skin, a shiny coat and a strong immune system. Fibre and beet pulp – for digestive comfort every day; they ensure smooth digestion and help maintain proper stool consistency. No artificial colourings or flavourings – only what a dog’s diet needs; a clear, clean composition without excessive additives, suited to owners who value naturalness. Suitable for dogs of all breeds – a convenient choice for one or several pets; a universal formula for daily feeding of dogs from small to large.",
+    "Who is it for? Adult dogs from 1 year of age (all breeds); when the dog has no specific dietary needs and a quality everyday food is sought; when easily digestible food with a clear, balanced composition is needed; dogs for which healthy skin, coat and a strong immune system are important; more active as well as moderately active dogs, for daily nutrition."
+   ],
+   "composition": "Dehydrated poultry meat, maize, triticale, meat meal, wheat bran, poultry fat, sugar beet pulp, herb processing products 0.1 % (thyme, sage, parsley, oregano), minerals.",
+   "additives": "Nutritional additives per 1 kg: vitamin A (3a672a) — 9000 IU, vitamin D3 (3a671)* — 750 IU, vitamin E (3a700) — 90 mg, vitamin B6 (3a831) — 1.5 mg, vitamin B1 (3a821) — 1.5 mg, vitamin B12 — 0.025 µg, biotin (3a880) — 0.1 mg, iron (II) sulphate monohydrate (3b103) — 25 mg, calcium iodate anhydrous (3b202) — 0.8 mg, copper (II) sulphate pentahydrate (3b405) — 2.5 mg, manganous sulphate monohydrate (3b503) — 10 mg, zinc sulphate monohydrate (3b605) — 45 mg, sodium selenite (3b801) — 0.05 mg. Technological additives: antioxidants, preservatives. * Simultaneous use of vitamin D2 is not permitted.",
+   "analysis": [
+    {
+     "name": "Crude protein",
+     "value": "23 %"
+    },
+    {
+     "name": "Crude fibre",
+     "value": "3.5 %"
+    },
+    {
+     "name": "Crude fat",
+     "value": "9 %"
+    },
+    {
+     "name": "Crude ash",
+     "value": "6.3 %"
+    },
+    {
+     "name": "Calcium",
+     "value": "1.15 %"
+    },
+    {
+     "name": "Phosphorus",
+     "value": "1 %"
+    },
+    {
+     "name": "Energy value",
+     "value": "3473 kcal/kg"
+    }
+   ],
+   "feeding": "Daily amount: see the feeding table. The amounts in the table are guidelines only and should be adjusted to the individual needs of each pet. The daily ration may vary depending on the outdoor temperature and on the pet’s lifestyle, temperament and activity. A bowl of fresh, clean water should always be within your pet’s reach."
+  },
+  "az": {
+   "full": [
+    "Quş əti ilə ARATON tam rasionlu quru yemi bütün cinslərdən olan yetkin itlərin qidalanması üçün etibarlı və sadə həlldir. O, itin həqiqi ehtiyaclarını – enerjini, gümrahlığı, sağlam həzmi və güclü təbii müdafiəni nəzərə alaraq yaradılıb. Bu, əsasını quş ətindən alınan asan həzm olunan heyvan zülalları təşkil edən, gündəlik qidalandırma üçün uyğun formuladır.",
+    "Bu yemin güclü tərəfi artıq və ya pis qəbul edilən əlavələr olmadan təmiz və balanslı tərkibdir. Quş əti zülalları əzələ tonusunu və fiziki dözümlülüyü qorumağa kömək edir. E və B6 vitaminləri, biotin və sink dərinin sağlamlığını, tükün parlaqlığını və güclü immun sistemini dəstəkləyir. Lif və çuğundur cecəsi həzmə kömək edir, sadə resept isə hətta daha həssas itlərə də uyğundur.",
+    "ARATON reseptləri heyvanların qidalanması üzrə ekspertlərlə birlikdə hazırlanır. Bu, həm daha aktiv, həm də az hərəkətli itlərə uyğun balanslı quru yemdir – mürəkkəb pəhriz həlləri olmadan aydın, keyfiyyətli tərkib axtarıldıqda. Süni boyaqlar, ətirləndiricilər və GMO yoxdur – yalnız həqiqətən vacib olanlar. İtsevərlərin dediyi kimi: “Yaxşı yem işləməlidir – etiketdə deyil, gündəlik həyatda.” ARATON-u vədləri deyil, real nəticəni qiymətləndirən sahiblər seçir: sağlam tük, yaxşı həzm, sabit gümrahlıq və hər gün enerji. ARATON yüksək keyfiyyət standartlarına riayət edilməklə Avropada istehsal olunur. Bu, KIKA ailəsinin məhsuludur – düzgün qidalanma yeni ənənəyə çevrilsin deyə sevgi və məsuliyyətlə yaradılıb. Hər gün.",
+    "Tərkibində YOXDUR: soya – soya zülalı və yağı yoxdur; süd məhsulları – laktoza və süd zülalları yoxdur; süni boyaqlar və ətirləndiricilər – sintetik piqmentlər və aromatlar yoxdur, təbii qoxu və rəng; GMO inqrediyentləri – tərkibdə genetik modifikasiya olunmuş maddələr yoxdur; şəkər və ya tatlandırıcılar – artıq və ya lazımsız əlavələr yoxdur. Əsas xüsusiyyətlər: quş əti zülalları – asan həzm olunur və gündəlik enerjini qorumaq üçün uyğundur; heyvan mənşəli zülallar əzələ tonusunu və yaxşı fiziki formanı qorumağa kömək edir. E və B6 vitaminləri, biotin və sink – dəri, tük və təbii müdafiə üçün; dərinin sağlamlığını, tükün parlaqlığını və güclü immun sistemini qorumağa kömək edir. Lif və çuğundur cecəsi – hər gün rahat həzm üçün; rahat həzmi təmin edir və nəcisin normal konsistensiyasını qorumağa kömək edir. Süni boyaqlar və ətirləndiricilər olmadan – itin qidalanmasına yalnız lazım olanlar; artıq əlavələr olmadan aydın, təmiz tərkib – təbiiliyi qiymətləndirən sahiblər üçün. Bütün cinslərdən olan itlərə uyğundur – bir və ya bir neçə ev heyvanı üçün rahat seçim; kiçikdən böyüyə qədər itlərin gündəlik qidalandırılması üçün universal formula.",
+    "Kimlər üçündür? 1 yaşdan yuxarı yetkin itlər üçün (bütün cinslər); itin xüsusi pəhriz ehtiyacları olmadıqda və keyfiyyətli gündəlik yem axtarıldıqda; aydın, balanslı tərkibə malik asan həzm olunan yem lazım olduqda; sağlam dəri, tük və güclü immun sistemi vacib olan itlər üçün; həm daha aktiv, həm də orta aktivlikli itlərin gündəlik qidalanması üçün."
+   ],
+   "composition": "Dehidratlaşdırılmış quş əti, qarğıdalı, tritikale, ət unu, buğda kəpəyi, quş yağı, şəkər çuğunduru cecəsi, otların emalı məhsulları 0,1 % (kəklikotu, adaçayı, cəfəri, oreqano), minerallar.",
+   "additives": "1 kq üçün qida əlavələri: A vitamini (3a672a) — 9000 BV, D3 vitamini (3a671)* — 750 BV, E vitamini (3a700) — 90 mq, B6 vitamini (3a831) — 1,5 mq, B1 vitamini (3a821) — 1,5 mq, B12 vitamini — 0,025 mkq, biotin (3a880) — 0,1 mq, dəmir (II) sulfat monohidrat (3b103) — 25 mq, susuz kalsium yodat (3b202) — 0,8 mq, mis (II) sulfat pentahidrat (3b405) — 2,5 mq, manqan sulfat monohidrat (3b503) — 10 mq, sink sulfat monohidrat (3b605) — 45 mq, natrium selenit (3b801) — 0,05 mq. Texnoloji əlavələr: antioksidantlar, konservantlar. * D2 vitamininin eyni vaxtda istifadəsinə icazə verilmir.",
+   "analysis": [
+    {
+     "name": "Xam protein",
+     "value": "23 %"
+    },
+    {
+     "name": "Xam lif",
+     "value": "3,5 %"
+    },
+    {
+     "name": "Xam yağ",
+     "value": "9 %"
+    },
+    {
+     "name": "Xam kül",
+     "value": "6,3 %"
+    },
+    {
+     "name": "Kalsium",
+     "value": "1,15 %"
+    },
+    {
+     "name": "Fosfor",
+     "value": "1 %"
+    },
+    {
+     "name": "Enerji dəyəri",
+     "value": "3473 kkal/kq"
+    }
+   ],
+   "feeding": "Gündəlik norma: qidalandırma cədvəlinə baxın. Cədvəldə göstərilən miqdarlar yalnız tövsiyə xarakteri daşıyır və hər bir ev heyvanının fərdi ehtiyaclarına uyğunlaşdırılmalıdır. Gündəlik norma çöldəki havanın temperaturundan, ev heyvanının həyat tərzindən, temperamentindən və aktivliyindən asılı olaraq dəyişə bilər. Təzə, təmiz su olan qab həmişə ev heyvanının əlçatan yerində olmalıdır."
+  }
+ },
+ "araton:assets/products/art-dog-active.webp": {
+  "url": "https://www.kika.lt/products/araton-dry-food-for-adult-active-all-breed-dogs-with-poultry",
+  "sku": null,
+  "packs": [
+   "15 kg"
+  ],
+  "feed": [],
+  "ru": {
+   "full": [
+    "Полнорационный сухой корм ARATON с птицей – надёжный выбор для активных собак, которым нужно больше энергии. Он создан для реальных потребностей – когда собака больше двигается, дольше бывает на улице или ведёт активный образ жизни. Это корм, который каждый день обеспечивает организм необходимой энергией, белками и веществами для поддержания хорошего самочувствия.",
+    "Основной источник белка – птица – легко усваивается и отлично подходит для питания активных собак. Сильная сторона этого корма – сбалансированный, энергетически насыщенный состав без избыточных добавок. Животные белки помогают поддерживать мышечную массу, а оптимальное содержание жира обеспечивает выносливость и ежедневную активность. Витамин E, цинк, биотин и витамин B6 помогают поддерживать здоровье кожи, состояние шерсти и естественную сопротивляемость. Корм дополнен свекольным жомом и клетчаткой – они поддерживают пищеварение даже при повышенной физической нагрузке.",
+    "Рецептуры ARATON разрабатываются совместно с экспертами по питанию животных. Это формула для взрослых собак всех пород, когда важны не только качество, но и понятность: без искусственных красителей, ароматизаторов и избыточных добавок. Подходит как спортивным собакам, так и собакам, которые много гуляют или постоянно в движении. Как говорят любители собак: «Хороший корм должен работать, а не обещать». ARATON выбирают владельцы, которые хотят кормить ответственно – без следования моде, но с результатом: здоровая шерсть, энергия и понятный состав. ARATON производится в Литве с соблюдением высоких стандартов качества. Это продукт семейства KIKA, созданный с любовью и ответственностью, чтобы правильное питание стало новой традицией. Каждый день.",
+    "Изготовлено БЕЗ: искусственных красителей и ароматизаторов – без синтетических пигментов и ароматов, натуральные запах и цвет; ГМО – в составе нет генетически модифицированных ингредиентов; сои – без соевых белков и масла, чтобы не вызывать чувствительности или аллергических реакций; молочных продуктов – без лактозы, подходит собакам, не переносящим молоко; химических усилителей вкуса – вкус обеспечивает качественное сырьё, без искусственного усиления. Основные свойства: белки птицы – для энергии и мышц; высококачественные белки помогают поддерживать мышечную массу и обеспечивают ежедневную выносливость активных собак. Сбалансированное содержание жира – больше энергии без излишков; оптимальное количество жира даёт выносливость, не перегружая организм лишними калориями. Витамин E, биотин, цинк – для кожи, шерсти и иммунитета; помогают поддерживать здоровье кожи, блеск шерсти и укрепляют естественную защиту организма. Клетчатка и свекольный жом – для бесперебойного пищеварения; улучшают пищеварение даже в активный день и поддерживают хорошую консистенцию стула. Без искусственных красителей и ароматизаторов – только то, что нужно; понятный, чистый состав без лишних добавок – для владельцев, которые ценят простоту.",
+    "Для кого? Для активных взрослых собак от 1 года (всех пород); когда собака много двигается, занимается спортом, много гуляет или ведёт активный образ жизни; когда нужно больше энергии без лишних калорий; когда важно сохранять мышечный тонус и выносливость; для собак, которым важен хорошо усваиваемый, простой состав; когда собака здорова, но у неё повышенная физическая активность."
+   ],
+   "composition": "Дегидрированное мясо птицы, кукуруза, тритикале, жир птицы, пшеничные отруби, кукурузный глютен, гидролизованная куриная печень, жом сахарной свёклы, продукты переработки трав 0,1 % (тимьян, шалфей, петрушка, орегано).",
+   "additives": "Питательные добавки на 1 кг: витамин A (3a672a) — 9000 МЕ, витамин D3 (3a671)* — 750 МЕ, витамин E (3a700) — 90 мг, витамин B6 (3a831) — 1,5 мг, витамин B1 (3a821) — 1,5 мг, витамин B12 — 0,025 мкг, биотин (3a880) — 0,1 мг, моногидрат сульфата железа (II) (3b103) — 25 мг, безводный йодат кальция (3b202) — 0,8 мг, пентагидрат сульфата меди (II) (3b405) — 2,5 мг, моногидрат сульфата марганца (3b503) — 10 мг, моногидрат сульфата цинка (3b605) — 45 мг, селенит натрия (3b801) — 0,05 мг. Технологические добавки: антиоксиданты, консерванты. * Одновременное применение витамина D2 не допускается.",
+   "analysis": [
+    {
+     "name": "Сырой протеин",
+     "value": "24 %"
+    },
+    {
+     "name": "Сырая клетчатка",
+     "value": "3,5 %"
+    },
+    {
+     "name": "Сырой жир",
+     "value": "15 %"
+    },
+    {
+     "name": "Сырая зола",
+     "value": "6,8 %"
+    },
+    {
+     "name": "Кальций",
+     "value": "1,4 %"
+    },
+    {
+     "name": "Фосфор",
+     "value": "1,2 %"
+    },
+    {
+     "name": "Энергетическая ценность",
+     "value": "3610 ккал/кг"
+    }
+   ],
+   "feeding": "Суточная норма: см. таблицу кормления. Указанные в таблице количества носят рекомендательный характер и должны корректироваться с учётом индивидуальных потребностей каждого питомца. Суточная норма может меняться в зависимости от температуры воздуха на улице, образа жизни, темперамента и активности питомца. Миска со свежей чистой водой всегда должна стоять в доступном для питомца месте."
+  },
+  "en": {
+   "full": [
+    "ARATON complete dry food with poultry is a reliable choice for active dogs that need more energy. It was created for real needs – when a dog moves more, spends longer outdoors or leads an active lifestyle. It is a food that every day supplies the body with the energy, proteins and nutrients it needs to maintain well-being.",
+    "The main protein source – poultry – is easily digestible and ideal for feeding active dogs. The strength of this food is a balanced, energising composition without excessive additives. Animal proteins help maintain muscle mass, and the optimal fat content ensures endurance and daily activity. Vitamin E, zinc, biotin and vitamin B6 help maintain skin health, coat condition and natural resistance. The food is supplemented with beet pulp and fibre, which support digestion even under heavier physical load.",
+    "ARATON recipes are developed in cooperation with animal nutrition experts. It is a formula suitable for adult dogs of all breeds when not only quality but also clarity matters: no artificial colourings, flavourings or excessive additives. It suits sporty dogs as well as dogs that walk a lot or are constantly on the move. As dog lovers say: “A good food should work, not promise.” ARATON is chosen by owners who want to feed responsibly – without fads, but with results: a healthy coat, energy and a clear composition. ARATON is made in Lithuania to high quality standards. It is a KIKA family product – created with love and responsibility so that good nutrition becomes a new tradition. Every day.",
+    "Made without: artificial colourings and flavourings – no synthetic pigments or aromas, natural smell and colour; GMO – contains no genetically modified ingredients; soy – no soy proteins or oil, so as not to cause sensitivity or allergic reactions; dairy products – lactose-free, suitable for dogs that do not tolerate milk; chemical flavour enhancers – the taste comes from quality raw materials, without artificial enhancement. Key features: poultry proteins – for energy and muscles; high-quality proteins help maintain muscle mass and provide daily endurance for active dogs. A balanced fat content – more energy without excess; the optimal amount of fat provides endurance without burdening the body with excess calories. Vitamin E, biotin, zinc – for skin, coat and immunity; they help maintain healthy skin and a shiny coat and strengthen the body’s natural defences. Fibre and beet pulp – for smooth digestion; they improve digestion even on an active day and support good stool consistency. No artificial colourings or flavourings – only what is needed; a clear, clean composition without unnecessary additives, suited to owners who value simplicity.",
+    "Who is it for? Active adult dogs from 1 year of age (all breeds); when the dog moves a lot, does sports, walks a lot or leads an active lifestyle; when more energy is needed without excess calories; when it is important to maintain muscle tone and endurance; dogs that need a well-digestible, simple composition; when the dog is healthy but has increased physical activity."
+   ],
+   "composition": "Dehydrated poultry meat, maize, triticale, poultry fat, wheat bran, maize gluten, hydrolysed chicken liver, sugar beet pulp, herb processing products 0.1 % (thyme, sage, parsley, oregano).",
+   "additives": "Nutritional additives per 1 kg: vitamin A (3a672a) — 9000 IU, vitamin D3 (3a671)* — 750 IU, vitamin E (3a700) — 90 mg, vitamin B6 (3a831) — 1.5 mg, vitamin B1 (3a821) — 1.5 mg, vitamin B12 — 0.025 µg, biotin (3a880) — 0.1 mg, iron (II) sulphate monohydrate (3b103) — 25 mg, calcium iodate anhydrous (3b202) — 0.8 mg, copper (II) sulphate pentahydrate (3b405) — 2.5 mg, manganous sulphate monohydrate (3b503) — 10 mg, zinc sulphate monohydrate (3b605) — 45 mg, sodium selenite (3b801) — 0.05 mg. Technological additives: antioxidants, preservatives. * Simultaneous use of vitamin D2 is not permitted.",
+   "analysis": [
+    {
+     "name": "Crude protein",
+     "value": "24 %"
+    },
+    {
+     "name": "Crude fibre",
+     "value": "3.5 %"
+    },
+    {
+     "name": "Crude fat",
+     "value": "15 %"
+    },
+    {
+     "name": "Crude ash",
+     "value": "6.8 %"
+    },
+    {
+     "name": "Calcium",
+     "value": "1.4 %"
+    },
+    {
+     "name": "Phosphorus",
+     "value": "1.2 %"
+    },
+    {
+     "name": "Energy value",
+     "value": "3610 kcal/kg"
+    }
+   ],
+   "feeding": "Daily amount: see the feeding table. The amounts in the table are guidelines only and should be adjusted to the individual needs of each pet. The daily ration may vary depending on the outdoor temperature and on the pet’s lifestyle, temperament and activity. A bowl of fresh, clean water should always be within your pet’s reach."
+  },
+  "az": {
+   "full": [
+    "Quş əti ilə ARATON tam rasionlu quru yemi daha çox enerjiyə ehtiyacı olan aktiv itlər üçün etibarlı seçimdir. O, real ehtiyaclar üçün yaradılıb – it daha çox hərəkət etdikdə, çöldə daha uzun müddət qaldıqda və ya aktiv həyat tərzi keçirdikdə. Bu, orqanizmi hər gün gümrahlığı qorumaq üçün lazım olan enerji, zülallar və maddələrlə təmin edən yemdir.",
+    "Əsas zülal mənbəyi – quş əti – asan həzm olunur və aktiv itlərin qidalanması üçün əla uyğundur. Bu yemin güclü tərəfi artıq əlavələr olmadan balanslı, enerji ilə zəngin tərkibdir. Heyvan zülalları əzələ kütləsini qorumağa kömək edir, optimal yağ miqdarı isə dözümlülüyü və gündəlik aktivliyi təmin edir. E vitamini, sink, biotin və B6 vitamini dərinin sağlamlığını, tükün vəziyyətini və təbii müqaviməti qorumağa kömək edir. Yem çuğundur cecəsi və liflə zənginləşdirilib – onlar hətta yüksək fiziki yük zamanı da həzmi dəstəkləyir.",
+    "ARATON reseptləri heyvanların qidalanması üzrə ekspertlərlə birlikdə hazırlanır. Bu, təkcə keyfiyyət deyil, həm də aydınlıq vacib olduqda bütün cinslərdən olan yetkin itlərə uyğun formuladır: süni boyaqlar, ətirləndiricilər və artıq əlavələr yoxdur. Həm idmançı itlərə, həm də çox gəzən və ya daim hərəkətdə olan itlərə uyğundur. İtsevərlərin dediyi kimi: “Yaxşı yem vəd verməməli, işləməlidir.” ARATON-u məsuliyyətlə qidalandırmaq istəyən sahiblər seçir – dəbə uymadan, amma nəticə ilə: sağlam tük, enerji və aydın tərkib. ARATON yüksək keyfiyyət standartlarına riayət edilməklə Litvada istehsal olunur. Bu, KIKA ailəsinin məhsuludur – düzgün qidalanma yeni ənənəyə çevrilsin deyə sevgi və məsuliyyətlə yaradılıb. Hər gün.",
+    "Tərkibində YOXDUR: süni boyaqlar və ətirləndiricilər – sintetik piqmentlər və aromatlar yoxdur, təbii qoxu və rəng; GMO – tərkibdə genetik modifikasiya olunmuş inqrediyentlər yoxdur; soya – həssaslıq və ya allergik reaksiyalar yaratmamaq üçün soya zülalları və yağı yoxdur; süd məhsulları – laktozasızdır, südü qəbul etməyən itlərə uyğundur; kimyəvi dad gücləndiriciləri – dad süni gücləndirmə olmadan keyfiyyətli xammaldan gəlir. Əsas xüsusiyyətlər: quş əti zülalları – enerji və əzələlər üçün; yüksək keyfiyyətli zülallar əzələ kütləsini qorumağa kömək edir və aktiv itlərin gündəlik dözümlülüyünü təmin edir. Balanslı yağ miqdarı – artıqlıq olmadan daha çox enerji; optimal yağ miqdarı orqanizmi artıq kalorilərlə yükləmədən dözümlülük verir. E vitamini, biotin, sink – dəri, tük və immunitet üçün; dərinin sağlamlığını, tükün parlaqlığını qorumağa kömək edir və orqanizmin təbii müdafiəsini gücləndirir. Lif və çuğundur cecəsi – rahat həzm üçün; hətta aktiv gündə də həzmi yaxşılaşdırır və nəcisin normal konsistensiyasını dəstəkləyir. Süni boyaqlar və ətirləndiricilər olmadan – yalnız lazım olanlar; lazımsız əlavələr olmadan aydın, təmiz tərkib – sadəliyi qiymətləndirən sahiblər üçün.",
+    "Kimlər üçündür? 1 yaşdan yuxarı aktiv yetkin itlər üçün (bütün cinslər); it çox hərəkət etdikdə, idmanla məşğul olduqda, çox gəzdikdə və ya aktiv həyat tərzi keçirdikdə; artıq kalorilər olmadan daha çox enerji lazım olduqda; əzələ tonusunu və dözümlülüyü qorumaq vacib olduqda; yaxşı həzm olunan, sadə tərkib vacib olan itlər üçün; it sağlam olduqda, lakin fiziki aktivliyi artdıqda."
+   ],
+   "composition": "Dehidratlaşdırılmış quş əti, qarğıdalı, tritikale, quş yağı, buğda kəpəyi, qarğıdalı qlüteni, hidrolizə edilmiş toyuq qaraciyəri, şəkər çuğunduru cecəsi, otların emalı məhsulları 0,1 % (kəklikotu, adaçayı, cəfəri, oreqano).",
+   "additives": "1 kq üçün qida əlavələri: A vitamini (3a672a) — 9000 BV, D3 vitamini (3a671)* — 750 BV, E vitamini (3a700) — 90 mq, B6 vitamini (3a831) — 1,5 mq, B1 vitamini (3a821) — 1,5 mq, B12 vitamini — 0,025 mkq, biotin (3a880) — 0,1 mq, dəmir (II) sulfat monohidrat (3b103) — 25 mq, susuz kalsium yodat (3b202) — 0,8 mq, mis (II) sulfat pentahidrat (3b405) — 2,5 mq, manqan sulfat monohidrat (3b503) — 10 mq, sink sulfat monohidrat (3b605) — 45 mq, natrium selenit (3b801) — 0,05 mq. Texnoloji əlavələr: antioksidantlar, konservantlar. * D2 vitamininin eyni vaxtda istifadəsinə icazə verilmir.",
+   "analysis": [
+    {
+     "name": "Xam protein",
+     "value": "24 %"
+    },
+    {
+     "name": "Xam lif",
+     "value": "3,5 %"
+    },
+    {
+     "name": "Xam yağ",
+     "value": "15 %"
+    },
+    {
+     "name": "Xam kül",
+     "value": "6,8 %"
+    },
+    {
+     "name": "Kalsium",
+     "value": "1,4 %"
+    },
+    {
+     "name": "Fosfor",
+     "value": "1,2 %"
+    },
+    {
+     "name": "Enerji dəyəri",
+     "value": "3610 kkal/kq"
+    }
+   ],
+   "feeding": "Gündəlik norma: qidalandırma cədvəlinə baxın. Cədvəldə göstərilən miqdarlar yalnız tövsiyə xarakteri daşıyır və hər bir ev heyvanının fərdi ehtiyaclarına uyğunlaşdırılmalıdır. Gündəlik norma çöldəki havanın temperaturundan, ev heyvanının həyat tərzindən, temperamentindən və aktivliyindən asılı olaraq dəyişə bilər. Təzə, təmiz su olan qab həmişə ev heyvanının əlçatan yerində olmalıdır."
+  }
+ },
+ "araton:assets/products/art-dog-maxi.webp": {
+  "url": "https://www.kika.lt/products/araton-dry-food-for-adult-large-breed-dogs-with-poultry",
+  "sku": null,
+  "packs": [
+   "15 kg"
+  ],
+  "feed": [],
+  "ru": {
+   "full": [
+    "Полнорационный сухой корм ARATON с птицей – повседневное, надёжное решение для хорошего самочувствия собак крупных пород. Он создан с учётом реальных потребностей собаки, а не кратковременных тенденций. Это корм, который помогает поддерживать ежедневное хорошее самочувствие, энергию и свободу движений.",
+    "Основной источник белка – птица – отлично усваивается и легко переносится желудком. Сильная сторона этого корма – сбалансированный и понятный состав, адаптированный к потребностям более крупных собак. Белки птицы помогают поддерживать мышечный тонус, а витамины E и B6, биотин и цинк заботятся о здоровье кожи и блеске шерсти. Клетчатка и свекольный жом улучшают пищеварение, а хорошо усваиваемые минералы способствуют поддержке суставов и иммунной системы.",
+    "Рецептуры ARATON разрабатываются совместно с экспертами по питанию животных. Это корм для взрослых собак крупных пород, которым важны сытость, хорошее самочувствие и бесперебойное пищеварение. Формула создана так, чтобы подходить как активным, так и более чувствительным собакам, – без избыточных добавок и ненужных веществ. Как говорят любители собак: «Главное, чтобы корм работал – не только на упаковке, но и в жизни собаки». ARATON выбирают владельцы, для которых важен не маркетинг, а ежедневный результат: здоровая шерсть, хорошая консистенция стула и собака, которая хорошо себя чувствует. ARATON производится в Литве с соблюдением высоких стандартов качества. Это продукт семейства KIKA, созданный с любовью и ответственностью, чтобы правильное питание стало новой традицией. Каждый день.",
+    "Изготовлено БЕЗ: искусственных красителей – цвет от натуральных ингредиентов, без синтетических пигментов; искусственных ароматизаторов – настоящий запах без добавленных ароматов; ГМО – в составе нет генетически модифицированных ингредиентов; сои – без соевого белка и масла; молочных продуктов – без лактозы и молочных белков. Основные свойства: белки птицы – для мышечного тонуса и энергии; легкоусвояемые белки животного происхождения помогают сохранять мышечную массу и обеспечивают энергию каждый день. Сбалансированная формула для собак крупных пород, созданная с учётом особенностей пищеварения, суставов и обмена веществ более крупных собак. Витамины E и B6, биотин и цинк – для здоровой кожи и шерсти; поддерживают кожный барьер и придают шерсти естественный блеск. Клетчатка и свекольный жом – для хорошего пищеварения; поддерживают микрофлору кишечника и помогают сохранять нормальную консистенцию стула. Без искусственных красителей и ароматизаторов – только то, что нужно для хорошего самочувствия собаки, без избыточных и ненужных добавок.",
+    "Для кого? Рекомендуется всем взрослым собакам крупных пород (с 12–18 месяцев, в зависимости от породы). Подходит собакам с чувствительным пищеварением или склонностью к пищевой непереносимости. Отличный выбор, если нужна альтернатива белку курицы. Подходит для ежедневного питания, когда важно поддерживать состояние суставов, кожи и шерсти. Подходит собакам, которым важны оптимальное усвоение питательных веществ и комфорт кишечника."
+   ],
+   "composition": "Дегидрированное мясо птицы, кукуруза, тритикале, жир птицы, пшеничные отруби, кукурузный глютен, жом сахарной свёклы, продукты переработки трав 0,25 % (тимьян, шалфей, петрушка, орегано), минеральные вещества, глюкозамин (250 мг/кг), хондроитинсульфат (100 мг/кг).",
+   "additives": "Питательные добавки на 1 кг: витамин A (3a672a) — 9000 МЕ, витамин D3 (3a671)* — 750 МЕ, витамин E (3a700) — 90 мг, биотин (3a880) — 0,1 мг, моногидрат сульфата железа (II) (3b103) — 25 мг, безводный йодат кальция (3b202) — 0,8 мг, пентагидрат сульфата меди (II) (3b405) — 2,5 мг, моногидрат сульфата марганца (3b503) — 10 мг, моногидрат сульфата цинка (3b605) — 45 мг, селенит натрия (3b801) — 0,05 мг. Технологические добавки: антиоксиданты, консерванты. * Одновременное применение витамина D2 не допускается.",
+   "analysis": [
+    {
+     "name": "Сырой протеин",
+     "value": "23 %"
+    },
+    {
+     "name": "Сырая клетчатка",
+     "value": "2,2 %"
+    },
+    {
+     "name": "Сырой жир",
+     "value": "9 %"
+    },
+    {
+     "name": "Сырая зола",
+     "value": "7 %"
+    },
+    {
+     "name": "Кальций",
+     "value": "1,4 %"
+    },
+    {
+     "name": "Фосфор",
+     "value": "1,1 %"
+    },
+    {
+     "name": "Энергетическая ценность",
+     "value": "3348 ккал/кг"
+    }
+   ],
+   "feeding": "Суточная норма: см. таблицу кормления. Указанные в таблице количества носят рекомендательный характер и должны корректироваться с учётом индивидуальных потребностей каждого питомца. Суточная норма может меняться в зависимости от температуры воздуха на улице, образа жизни, темперамента и активности питомца. Миска со свежей чистой водой всегда должна стоять в доступном для питомца месте."
+  },
+  "en": {
+   "full": [
+    "ARATON complete dry food with poultry is an everyday, reliable solution for the well-being of large-breed dogs. It was created with the dog’s real needs in mind rather than short-lived trends. It is a food that helps maintain daily well-being, energy and freedom of movement.",
+    "The main protein source – poultry – is highly digestible and easy on the stomach. The strength of this food is a balanced and clear composition adapted to the needs of larger dogs. Poultry proteins help maintain muscle tone, while vitamins E and B6, biotin and zinc take care of healthy skin and a shiny coat. Fibre and beet pulp improve digestion, and well-absorbed minerals help support the joints and the immune system.",
+    "ARATON recipes are developed in cooperation with animal nutrition experts. It is a food suitable for adult large-breed dogs that value satiety, well-being and smooth digestion. The formula is designed to suit both active and more sensitive dogs – without excessive additives or unnecessary substances. As dog lovers say: “What matters most is that the food works – not just on the pack, but in the dog’s life.” ARATON is chosen by owners for whom not marketing but the daily result matters: a healthy coat, good stool consistency and a dog that feels good. ARATON is made in Lithuania to high quality standards. It is a KIKA family product – created with love and responsibility so that good nutrition becomes a new tradition. Every day.",
+    "Made without: artificial colourings – colour from natural ingredients, no synthetic pigments; artificial flavourings – a genuine smell without added aroma; GMO – contains no genetically modified ingredients; soy – no soy protein or oil; dairy products – no lactose or milk proteins. Key features: poultry proteins – for muscle tone and energy; easily digestible animal proteins help maintain muscle mass and provide daily energy. A balanced formula for large-breed dogs, designed with the digestive, joint and metabolic characteristics of larger dogs in mind. Vitamins E and B6, biotin and zinc – for healthy skin and coat; they support the skin barrier and give the coat a natural shine. Fibre and beet pulp – for good digestion; they support the gut microflora and help maintain proper stool consistency. No artificial colourings or flavourings – only what the dog’s well-being needs, without excessive or unnecessary additives.",
+    "Who is it for? Recommended for all adult large-breed dogs (from 12–18 months of age, depending on the breed). Suitable for dogs with sensitive digestion or a tendency to food intolerance. A great choice if a protein alternative to chicken is needed. Suitable for daily nutrition when it is important to support the condition of joints, skin and coat. Suitable for dogs for which optimal nutrient absorption and intestinal comfort are important."
+   ],
+   "composition": "Dehydrated poultry meat, maize, triticale, poultry fat, wheat bran, maize gluten, sugar beet pulp, herb processing products 0.25 % (thyme, sage, parsley, oregano), minerals, glucosamine (250 mg/kg), chondroitin sulphate (100 mg/kg).",
+   "additives": "Nutritional additives per 1 kg: vitamin A (3a672a) — 9000 IU, vitamin D3 (3a671)* — 750 IU, vitamin E (3a700) — 90 mg, biotin (3a880) — 0.1 mg, iron (II) sulphate monohydrate (3b103) — 25 mg, calcium iodate anhydrous (3b202) — 0.8 mg, copper (II) sulphate pentahydrate (3b405) — 2.5 mg, manganous sulphate monohydrate (3b503) — 10 mg, zinc sulphate monohydrate (3b605) — 45 mg, sodium selenite (3b801) — 0.05 mg. Technological additives: antioxidants, preservatives. * Simultaneous use of vitamin D2 is not permitted.",
+   "analysis": [
+    {
+     "name": "Crude protein",
+     "value": "23 %"
+    },
+    {
+     "name": "Crude fibre",
+     "value": "2.2 %"
+    },
+    {
+     "name": "Crude fat",
+     "value": "9 %"
+    },
+    {
+     "name": "Crude ash",
+     "value": "7 %"
+    },
+    {
+     "name": "Calcium",
+     "value": "1.4 %"
+    },
+    {
+     "name": "Phosphorus",
+     "value": "1.1 %"
+    },
+    {
+     "name": "Energy value",
+     "value": "3348 kcal/kg"
+    }
+   ],
+   "feeding": "Daily amount: see the feeding table. The amounts in the table are guidelines only and should be adjusted to the individual needs of each pet. The daily ration may vary depending on the outdoor temperature and on the pet’s lifestyle, temperament and activity. A bowl of fresh, clean water should always be within your pet’s reach."
+  },
+  "az": {
+   "full": [
+    "Quş əti ilə ARATON tam rasionlu quru yemi iri cinsli itlərin rifahı üçün gündəlik, etibarlı həlldir. O, qısamüddətli meylləri deyil, itin real ehtiyaclarını nəzərə alaraq yaradılıb. Bu, gündəlik gümrahlığı, enerjini və hərəkət azadlığını qorumağa kömək edən yemdir.",
+    "Əsas zülal mənbəyi – quş əti – əla həzm olunur və mədəni yükləmir. Bu yemin güclü tərəfi daha iri itlərin ehtiyaclarına uyğunlaşdırılmış balanslı və aydın tərkibdir. Quş əti zülalları əzələ tonusunu qorumağa kömək edir, E və B6 vitaminləri, biotin və sink isə dərinin sağlamlığının və tükün parlaqlığının qayğısına qalır. Lif və çuğundur cecəsi həzmi yaxşılaşdırır, yaxşı mənimsənilən minerallar isə oynaqların və immun sisteminin dəstəklənməsinə töhfə verir.",
+    "ARATON reseptləri heyvanların qidalanması üzrə ekspertlərlə birlikdə hazırlanır. Bu, toxluğu, gümrahlığı və rahat həzmi önəmli sayan iri cinsli yetkin itlər üçün uyğun yemdir. Formula həm aktiv, həm də daha həssas itlərə uyğun olacaq şəkildə hazırlanıb – artıq əlavələr və lazımsız maddələr olmadan. İtsevərlərin dediyi kimi: “Əsas odur ki, yem işləsin – təkcə qablaşdırmanın üzərində deyil, itin həyatında da.” ARATON-u marketinq deyil, gündəlik nəticə önəmli olan sahiblər seçir: sağlam tük, nəcisin yaxşı konsistensiyası və özünü yaxşı hiss edən it. ARATON yüksək keyfiyyət standartlarına riayət edilməklə Litvada istehsal olunur. Bu, KIKA ailəsinin məhsuludur – düzgün qidalanma yeni ənənəyə çevrilsin deyə sevgi və məsuliyyətlə yaradılıb. Hər gün.",
+    "Tərkibində YOXDUR: süni boyaqlar – rəng təbii inqrediyentlərdən gəlir, sintetik piqmentlər yoxdur; süni ətirləndiricilər – əlavə aromat olmadan təbii qoxu; GMO – tərkibdə genetik modifikasiya olunmuş inqrediyentlər yoxdur; soya – soya zülalı və yağı yoxdur; süd məhsulları – laktoza və süd zülalları yoxdur. Əsas xüsusiyyətlər: quş əti zülalları – əzələ tonusu və enerji üçün; asan həzm olunan heyvan mənşəli zülallar əzələ kütləsini qorumağa kömək edir və gündəlik enerjini təmin edir. İri cinsli itlər üçün balanslı formula – daha iri itlərin həzm, oynaq və maddələr mübadiləsi xüsusiyyətləri nəzərə alınaraq yaradılıb. E və B6 vitaminləri, biotin və sink – sağlam dəri və tük üçün; dəri baryerini dəstəkləyir və tükə təbii parlaqlıq verir. Lif və çuğundur cecəsi – yaxşı həzm üçün; bağırsaq mikroflorasını dəstəkləyir və nəcisin normal konsistensiyasını qorumağa kömək edir. Süni boyaqlar və ətirləndiricilər olmadan – yalnız itin gümrahlığı üçün lazım olanlar, artıq və ya lazımsız əlavələr olmadan.",
+    "Kimlər üçündür? Bütün iri cinsli yetkin itlər üçün tövsiyə olunur (cinsdən asılı olaraq 12–18 aylıqdan). Həzmi həssas olan və ya qida dözümsüzlüyünə meylli itlərə uyğundur. Toyuq əti zülalına alternativ lazım olduqda əla seçimdir. Oynaqların, dərinin və tükün vəziyyətini dəstəkləmək vacib olduqda gündəlik qidalanma üçün uyğundur. Qida maddələrinin optimal mənimsənilməsi və bağırsaq rahatlığı vacib olan itlərə uyğundur."
+   ],
+   "composition": "Dehidratlaşdırılmış quş əti, qarğıdalı, tritikale, quş yağı, buğda kəpəyi, qarğıdalı qlüteni, şəkər çuğunduru cecəsi, otların emalı məhsulları 0,25 % (kəklikotu, adaçayı, cəfəri, oreqano), minerallar, qlükozamin (250 mq/kq), xondroitin sulfat (100 mq/kq).",
+   "additives": "1 kq üçün qida əlavələri: A vitamini (3a672a) — 9000 BV, D3 vitamini (3a671)* — 750 BV, E vitamini (3a700) — 90 mq, biotin (3a880) — 0,1 mq, dəmir (II) sulfat monohidrat (3b103) — 25 mq, susuz kalsium yodat (3b202) — 0,8 mq, mis (II) sulfat pentahidrat (3b405) — 2,5 mq, manqan sulfat monohidrat (3b503) — 10 mq, sink sulfat monohidrat (3b605) — 45 mq, natrium selenit (3b801) — 0,05 mq. Texnoloji əlavələr: antioksidantlar, konservantlar. * D2 vitamininin eyni vaxtda istifadəsinə icazə verilmir.",
+   "analysis": [
+    {
+     "name": "Xam protein",
+     "value": "23 %"
+    },
+    {
+     "name": "Xam lif",
+     "value": "2,2 %"
+    },
+    {
+     "name": "Xam yağ",
+     "value": "9 %"
+    },
+    {
+     "name": "Xam kül",
+     "value": "7 %"
+    },
+    {
+     "name": "Kalsium",
+     "value": "1,4 %"
+    },
+    {
+     "name": "Fosfor",
+     "value": "1,1 %"
+    },
+    {
+     "name": "Enerji dəyəri",
+     "value": "3348 kkal/kq"
+    }
+   ],
+   "feeding": "Gündəlik norma: qidalandırma cədvəlinə baxın. Cədvəldə göstərilən miqdarlar yalnız tövsiyə xarakteri daşıyır və hər bir ev heyvanının fərdi ehtiyaclarına uyğunlaşdırılmalıdır. Gündəlik norma çöldəki havanın temperaturundan, ev heyvanının həyat tərzindən, temperamentindən və aktivliyindən asılı olaraq dəyişə bilər. Təzə, təmiz su olan qab həmişə ev heyvanının əlçatan yerində olmalıdır."
+  }
+ },
+ "araton:assets/products/art-cat-kitten.webp": {
+  "url": "https://www.kika.lt/products/araton-dry-food-for-kittens-with-poultry",
+  "sku": null,
+  "packs": [
+   "1.5 kg",
+   "15 kg"
+  ],
+  "feed": [],
+  "ru": {
+   "full": [
+    "Araton Kitten – полнорационный сухой корм для котят всех пород в возрасте до 1 года. Он предназначен для поддержки здорового роста и развития. Этот сухой корм уникального состава создан для лёгкого пищеварения молодых котят и поддержания необходимого количества энергии.",
+    "Для лёгкого пищеварения: мука из мяса птицы – отличный источник белка животного происхождения для лёгкого пищеварения и поддержания необходимого количества энергии. Для оптимального роста: 63 % от общего количества белка составляют белки животного происхождения, которые дают энергию, необходимую котёнку, чтобы расти здоровым. Для поддержания нужного уровня энергии: жир птицы получают из высококачественного мяса птицы; он считается одним из самых ценных ингредиентов в составе сухих кормов и используется для поддержания необходимого количества энергии в организме и отличной поедаемости.",
+    "Для здоровой кожи и блестящей шерсти: сбалансированное сочетание жирных кислот омега-3 и омега-6, биотина, цинка и витамина B6 может помочь сохранить здоровую кожу и блестящую шерсть. Для крепкого иммунитета: оптимальное количество природного антиоксиданта витамина E может помочь укрепить иммунную систему и устойчивость животного к болезням.",
+    "С кукурузой: отличный источник углеводов, не содержащий белка пшеницы, вызывающего аллергические реакции. Со свекольным жомом: источник клетчатки, который помогает поддерживать нормальную перистальтику пищеварительного тракта и улучшает качество стула.",
+    "ARATON – торговая марка, созданная из любви к животным, чтобы обеспечивать их повседневные потребности. Полнорационные сухие корма премиум-класса изготовлены из высококачественных, хорошо знакомых и особенно любимых питомцами ингредиентов. На первом месте в составе – мясо, богатое белком животного происхождения. Именно поэтому девиз ARATON гласит: правильное питание – это новая традиция. Этот сбалансированный корм – то, что нужно вашему питомцу каждый день! Произведено в Европейском союзе."
+   ],
+   "composition": "Дегидрированное мясо птицы 29 %, кукуруза, тритикале, жир птицы, кукурузный глютен, пшеничные отруби, гидролизованная куриная печень, жом сахарной свёклы, продукты переработки трав 0,1 % (тимьян, шалфей, петрушка, орегано).",
+   "additives": "Питательные добавки на 1 кг: витамин A (3a672a) — 20000 МЕ, витамин D3 (3a671)* — 2000 МЕ, витамин E (3a700) — 480 мг, биотин (3a880) — 0,15 мг, моногидрат сульфата железа (II) (3b103) — 50 мг, безводный йодат кальция (3b202) — 1,5 мг, пентагидрат сульфата меди (II) (3b405) — 5 мг, моногидрат сульфата марганца (3b503) — 20 мг, моногидрат сульфата цинка (3b605) — 90 мг, селенит натрия (3b801) — 0,1 мг, таурин (3a370) — 1000 мг. Технологические добавки: антиоксиданты, консерванты. * Одновременное применение витамина D2 не допускается.",
+   "analysis": [
+    {
+     "name": "Сырой протеин",
+     "value": "30 %"
+    },
+    {
+     "name": "Сырая клетчатка",
+     "value": "3 %"
+    },
+    {
+     "name": "Сырой жир",
+     "value": "11 %"
+    },
+    {
+     "name": "Сырая зола",
+     "value": "7 %"
+    },
+    {
+     "name": "Кальций",
+     "value": "1,25 %"
+    },
+    {
+     "name": "Фосфор",
+     "value": "1 %"
+    }
+   ],
+   "feeding": "Рекомендации по кормлению: давайте корм в сухом виде. Чистая свежая вода всегда должна быть в доступе."
+  },
+  "en": {
+   "full": [
+    "Araton Kitten is a complete dry food for kittens of all breeds up to 1 year of age. It is designed to support healthy growth and development. This dry food with a unique composition is intended for easy digestion in young kittens and for maintaining the right amount of energy.",
+    "For easy digestion: poultry meal is an excellent source of animal protein – for easy digestion and for maintaining the required amount of energy. For optimal growth: 63 % of the total protein is of animal origin, providing the energy a kitten needs to grow up healthy. For the right energy level: poultry fat is obtained from high-quality poultry; it is considered one of the most valuable ingredients in dry food and is used to maintain the required amount of energy in the body and to ensure excellent palatability.",
+    "For healthy skin and a shiny coat: a balanced combination of omega-3 and omega-6 fatty acids, biotin, zinc and vitamin B6 can help maintain healthy skin and a shiny coat. For strong immunity: an optimal amount of the natural antioxidant vitamin E can help strengthen the immune system and the animal’s resistance to disease.",
+    "With maize: an excellent source of carbohydrates that does not contain the wheat protein that causes allergic reactions. With sugar beet pulp: a source of fibre that helps maintain proper peristalsis of the digestive tract and improves stool quality.",
+    "ARATON is a brand created out of love for animals to meet their everyday needs. The complete Premium-class dry foods are made from high-quality, well-known ingredients that pets particularly love. Meat, rich in animal protein, comes first in the composition. That is why the ARATON motto says: good nutrition is a new tradition. This balanced food is what your pet needs every day! Made in the European Union."
+   ],
+   "composition": "Dehydrated poultry meat 29 %, maize, triticale, poultry fat, maize gluten, wheat bran, hydrolysed chicken liver, sugar beet pulp, herb processing products 0.1 % (thyme, sage, parsley, oregano).",
+   "additives": "Nutritional additives per 1 kg: vitamin A (3a672a) — 20000 IU, vitamin D3 (3a671)* — 2000 IU, vitamin E (3a700) — 480 mg, biotin (3a880) — 0.15 mg, iron (II) sulphate monohydrate (3b103) — 50 mg, calcium iodate anhydrous (3b202) — 1.5 mg, copper (II) sulphate pentahydrate (3b405) — 5 mg, manganous sulphate monohydrate (3b503) — 20 mg, zinc sulphate monohydrate (3b605) — 90 mg, sodium selenite (3b801) — 0.1 mg, taurine (3a370) — 1000 mg. Technological additives: antioxidants, preservatives. * Simultaneous use of vitamin D2 is not permitted.",
+   "analysis": [
+    {
+     "name": "Crude protein",
+     "value": "30 %"
+    },
+    {
+     "name": "Crude fibre",
+     "value": "3 %"
+    },
+    {
+     "name": "Crude fat",
+     "value": "11 %"
+    },
+    {
+     "name": "Crude ash",
+     "value": "7 %"
+    },
+    {
+     "name": "Calcium",
+     "value": "1.25 %"
+    },
+    {
+     "name": "Phosphorus",
+     "value": "1 %"
+    }
+   ],
+   "feeding": "Feeding recommendations: serve the food dry. Clean, fresh water must always be available."
+  },
+  "az": {
+   "full": [
+    "Araton Kitten 1 yaşa qədər bütün cinslərdən olan pişik balaları üçün tam rasionlu quru yemdir. O, sağlam böyüməni və inkişafı dəstəkləmək üçün nəzərdə tutulub. Unikal tərkibli bu quru yem gənc pişik balalarının asan həzmi və lazımi enerji miqdarının qorunması üçün yaradılıb.",
+    "Asan həzm üçün: quş əti unu heyvan mənşəli zülalın əla mənbəyidir – asan həzm və lazımi enerji miqdarını qorumaq üçün. Optimal böyümə üçün: ümumi zülal miqdarının 63 %-i heyvan mənşəli zülallardır, onlar pişik balasının sağlam böyüməsi üçün lazım olan enerjini verir. Lazımi enerji səviyyəsi üçün: quş yağı yüksək keyfiyyətli quş ətindən alınır; o, quru yemlərin tərkibində ən dəyərli inqrediyentlərdən biri sayılır və orqanizmdə lazımi enerji miqdarını qorumaq və əla yeyilməni təmin etmək üçün istifadə olunur.",
+    "Sağlam dəri və parlaq tük üçün: omeqa-3 və omeqa-6 yağ turşularının, biotinin, sinkin və B6 vitamininin balanslı birləşməsi dərinin sağlamlığını və tükün parlaqlığını qorumağa kömək edə bilər. Güclü immunitet üçün: təbii antioksidant olan E vitamininin optimal miqdarı immun sistemini və heyvanın xəstəliklərə qarşı müqavimətini gücləndirməyə kömək edə bilər.",
+    "Qarğıdalı ilə: allergik reaksiyalara səbəb olan buğda zülalını ehtiva etməyən əla karbohidrat mənbəyi. Şəkər çuğunduru cecəsi ilə: həzm traktının normal peristaltikasını qorumağa kömək edən və nəcisin keyfiyyətini yaxşılaşdıran lif mənbəyi.",
+    "ARATON heyvanlara sevgidən yaradılmış və onların gündəlik ehtiyaclarını təmin etmək məqsədi daşıyan ticarət markasıdır. Premium sinif tam rasionlu quru yemlər yüksək keyfiyyətli, yaxşı tanınan və ev heyvanlarının xüsusilə sevdiyi inqrediyentlərdən hazırlanır. Tərkibdə birinci yerdə heyvan mənşəli zülalla zəngin ət gəlir. Məhz buna görə ARATON-un şüarı deyir: düzgün qidalanma yeni ənənədir. Bu balanslı yem ev heyvanınıza hər gün lazım olandır! Avropa İttifaqında istehsal olunub."
+   ],
+   "composition": "Dehidratlaşdırılmış quş əti 29 %, qarğıdalı, tritikale, quş yağı, qarğıdalı qlüteni, buğda kəpəyi, hidrolizə edilmiş toyuq qaraciyəri, şəkər çuğunduru cecəsi, otların emalı məhsulları 0,1 % (kəklikotu, adaçayı, cəfəri, oreqano).",
+   "additives": "1 kq üçün qida əlavələri: A vitamini (3a672a) — 20000 BV, D3 vitamini (3a671)* — 2000 BV, E vitamini (3a700) — 480 mq, biotin (3a880) — 0,15 mq, dəmir (II) sulfat monohidrat (3b103) — 50 mq, susuz kalsium yodat (3b202) — 1,5 mq, mis (II) sulfat pentahidrat (3b405) — 5 mq, manqan sulfat monohidrat (3b503) — 20 mq, sink sulfat monohidrat (3b605) — 90 mq, natrium selenit (3b801) — 0,1 mq, taurin (3a370) — 1000 mq. Texnoloji əlavələr: antioksidantlar, konservantlar. * D2 vitamininin eyni vaxtda istifadəsinə icazə verilmir.",
+   "analysis": [
+    {
+     "name": "Xam protein",
+     "value": "30 %"
+    },
+    {
+     "name": "Xam lif",
+     "value": "3 %"
+    },
+    {
+     "name": "Xam yağ",
+     "value": "11 %"
+    },
+    {
+     "name": "Xam kül",
+     "value": "7 %"
+    },
+    {
+     "name": "Kalsium",
+     "value": "1,25 %"
+    },
+    {
+     "name": "Fosfor",
+     "value": "1 %"
+    }
+   ],
+   "feeding": "Qidalandırma tövsiyələri: yemi quru halda verin. Təmiz, təzə su həmişə əlçatan olmalıdır."
+  }
+ },
+ "araton:assets/products/art-cat-salmon.webp": {
+  "url": "https://www.kika.lt/products/araton-dry-food-for-adult-cats-with-salmon",
+  "sku": null,
+  "packs": [
+   "1.5 kg",
+   "15 kg"
+  ],
+  "feed": [],
+  "ru": {
+   "full": [
+    "Полнорационный сухой корм ARATON с лососем – повседневное, надёжное решение для хорошего самочувствия вашей кошки. Он создан с учётом реальной жизни, а не кратковременных тенденций в питании. Это корм, который каждый день помогает поддерживать сытость, хорошее самочувствие и энергию. Основной источник белка – лосось (18 %) – отлично усваивается и подходит даже более чувствительным кошкам.",
+    "Особенность этого корма – сбалансированный состав, ориентированный на потребности организма взрослой кошки. Лосось снабжает организм жирными кислотами омега-3 и омега-6, важными для работы сердца, зрения и состояния кожи. Добавленные цинк, биотин, витамин B6 и таурин помогают поддерживать здоровье шерсти, крепкое сердце, работу нервной системы и нормальный мышечный тонус. Пищеварение улучшают свекольный жом и клетчатка – пребиотики, которые поддерживают работу кишечника и помогают сохранять нормальную консистенцию стула. А натуральные травы – тимьян, шалфей, петрушка и орегано – способствуют укреплению иммунитета, поддержке мягкого пищеварения и общему хорошему самочувствию.",
+    "Рецептуры ARATON разрабатываются совместно с экспертами по питанию животных. Это сухой корм, подходящий взрослым кошкам всех пород – как активным, так и более чувствительным или привередливым. Сбалансированный, понятный состав гарантирует, что кошка получает только то, что нужно для повседневной жизни, – без избыточных добавок, просто и надёжно. Как говорят любители кошек: «Хороший корм – тот, который работает не на этикетке, а в повседневной жизни». ARATON выбирают владельцы, которые ценят не обещания, а реальные результаты: здоровую кожу, блестящую шерсть, активность и стабильное пищеварение. ARATON производится в Литве с соблюдением высоких стандартов качества. Это продукт семейства KIKA, созданный с любовью и ответственностью, чтобы правильное питание стало новой традицией вашей кошки. Каждый день.",
+    "Изготовлено БЕЗ: искусственных красителей – цвет от натуральных ингредиентов, без синтетических пигментов; искусственных ароматизаторов – настоящий запах без добавленных ароматов; ГМО – в составе нет генетически модифицированных ингредиентов; сои – без соевого белка и масла; молочных продуктов – без лактозы и молочных белков. Основные свойства: лосось – хорошо усваиваемый белок для ежедневного кормления; высококачественные белки лосося помогают поддерживать мышечный тонус и подходят даже более чувствительным кошкам. Омега-3 и омега-6 – для здоровой кожи, шерсти и работы сердца; жирные кислоты поддерживают увлажнённость кожи, блеск шерсти и здоровье сердечно-сосудистой системы. Таурин – для крепкого сердца, зрения и нервной системы; жизненно важная аминокислота, которую организм кошки не вырабатывает сам, – обязательна в ежедневном рационе. Натуральные травы – для мягкого пищеварения и иммунитета; тимьян, шалфей, петрушка и орегано помогают поддерживать пищеварение и укрепляют естественную защиту. Без искусственных красителей – только то, что нужно вашей кошке; чистая формула без лишних добавок – безопасное питание, адаптированное для ежедневного кормления.",
+    "Для кого? Для взрослых кошек от 1 года (всех пород); когда нужно поддержать здоровье кожи, шерсти и работу сердца; когда у кошки более чувствительное пищеварение или склонность к проблемам с кожей; когда нужен ежедневный сбалансированный корм с омега-кислотами; когда важно обеспечить достаточно энергии без лишнего жира; когда кошка привередлива – благодаря вкусу лосося и печени; для владельцев, которые ищут простое, но полноценное питание без искусственных добавок."
+   ],
+   "composition": "Дегидрированный лосось 18 %, кукуруза, тритикале, дегидрированная птица 8 %, пшеничные отруби, кукурузный глютен, жир птицы, гидролизованная печень, жом сахарной свёклы, продукты переработки трав 0,1 % (тимьян, шалфей, петрушка, орегано), минеральные вещества.",
+   "additives": "Питательные добавки на 1 кг: витамин A (3a672a) — 14000 МЕ, витамин D3 (3a671) — 1400 МЕ, витамин E (3a700) — 336 мг, витамин B6 (3a831) — 3 мг, биотин (3a880) — 0,11 мг, моногидрат сульфата железа (II) (3b103) — 35 мг, безводный йодат кальция (3b202) — 1,05 мг, пентагидрат сульфата меди (II) (3b405) — 3,5 мг, моногидрат сульфата марганца (3b503) — 14 мг, моногидрат сульфата цинка (3b605) — 63 мг, селенит натрия (3b801) — 0,07 мг, таурин (3a370) — 700 мг. Технологические добавки: антиоксиданты, консерванты.",
+   "analysis": [
+    {
+     "name": "Сырой протеин",
+     "value": "28 %"
+    },
+    {
+     "name": "Сырая клетчатка",
+     "value": "3 %"
+    },
+    {
+     "name": "Сырой жир",
+     "value": "9 %"
+    },
+    {
+     "name": "Сырая зола",
+     "value": "7 %"
+    },
+    {
+     "name": "Кальций",
+     "value": "1,2 %"
+    },
+    {
+     "name": "Фосфор",
+     "value": "0,9 %"
+    },
+    {
+     "name": "Омега-3 жирные кислоты",
+     "value": "0,22 %"
+    },
+    {
+     "name": "Омега-6 жирные кислоты",
+     "value": "1,52 %"
+    },
+    {
+     "name": "Энергетическая ценность",
+     "value": "3320 ккал/кг"
+    }
+   ],
+   "feeding": "Суточная норма: см. таблицу кормления. Указанные в таблице количества носят рекомендательный характер и должны корректироваться с учётом индивидуальных потребностей каждого питомца. Суточная норма может меняться в зависимости от температуры воздуха на улице, образа жизни, темперамента и активности питомца. Миска со свежей чистой водой всегда должна стоять в доступном для питомца месте."
+  },
+  "en": {
+   "full": [
+    "ARATON complete dry food with salmon is an everyday, reliable solution for your cat’s well-being. It was created with real life in mind rather than short-lived nutrition trends. It is a food that helps maintain satiety, well-being and energy every day. The main protein source – salmon (18 %) – is highly digestible and suitable even for more sensitive cats.",
+    "What sets this food apart is a balanced composition focused on the needs of an adult cat’s body. Salmon supplies omega-3 and omega-6 fatty acids, which are important for heart function, vision and skin condition. Added zinc, biotin, vitamin B6 and taurine help maintain a healthy coat, a strong heart, nervous function and proper muscle tone. Digestion is improved by beet pulp and fibre – prebiotics that support gut function and help maintain proper stool consistency. Natural herbs – thyme, sage, parsley and oregano – help strengthen immunity, support gentle digestion and contribute to overall well-being.",
+    "ARATON recipes are developed in cooperation with animal nutrition experts. It is a dry food suitable for adult cats of all breeds – active ones as well as more sensitive or pickier ones. The balanced, clear composition ensures that the cat gets only what it needs for everyday life – without excessive additives, simply and reliably. As cat lovers say: “A good food is one that works – not on the label, but in everyday life.” ARATON is chosen by owners who value not promises but real results: healthy skin, a shiny coat, activity and stable digestion. ARATON is made in Lithuania to high quality standards. It is a KIKA family product – created with love and responsibility so that good nutrition becomes your cat’s new tradition. Every day.",
+    "Made without: artificial colourings – colour from natural ingredients, no synthetic pigments; artificial flavourings – a genuine smell without added aroma; GMO – contains no genetically modified ingredients; soy – no soy protein or oil; dairy products – no lactose or milk proteins. Key features: salmon – well-digestible protein for daily feeding; high-quality proteins from salmon help maintain muscle tone and suit even more sensitive cats. Omega-3 and omega-6 – for healthy skin, coat and heart function; the fatty acids maintain skin moisture, coat shine and cardiovascular health. Taurine – for a strong heart, vision and nervous system; a vital amino acid that a cat’s body does not produce itself, essential in the daily diet. Natural herbs – for gentle digestion and immunity; thyme, sage, parsley and oregano help support digestion and strengthen natural defences. No artificial colourings – only what your cat needs; a clean formula without excessive additives – safe nutrition adapted for daily feeding.",
+    "Who is it for? Adult cats from 1 year of age (all breeds); when you need to support healthy skin, coat and heart function; when the cat has more sensitive digestion or is prone to skin problems; when you want a daily, balanced food with omega acids; when it is important to ensure enough energy without excess fat; when the cat is picky – thanks to the taste of salmon and liver; owners looking for simple yet complete nutrition without artificial additives."
+   ],
+   "composition": "Dehydrated salmon 18 %, maize, triticale, dehydrated poultry 8 %, wheat bran, maize gluten, poultry fat, hydrolysed liver, sugar beet pulp, herb processing products 0.1 % (thyme, sage, parsley, oregano), minerals.",
+   "additives": "Nutritional additives per 1 kg: vitamin A (3a672a) — 14000 IU, vitamin D3 (3a671) — 1400 IU, vitamin E (3a700) — 336 mg, vitamin B6 (3a831) — 3 mg, biotin (3a880) — 0.11 mg, iron (II) sulphate monohydrate (3b103) — 35 mg, calcium iodate anhydrous (3b202) — 1.05 mg, copper (II) sulphate pentahydrate (3b405) — 3.5 mg, manganous sulphate monohydrate (3b503) — 14 mg, zinc sulphate monohydrate (3b605) — 63 mg, sodium selenite (3b801) — 0.07 mg, taurine (3a370) — 700 mg. Technological additives: antioxidants, preservatives.",
+   "analysis": [
+    {
+     "name": "Crude protein",
+     "value": "28 %"
+    },
+    {
+     "name": "Crude fibre",
+     "value": "3 %"
+    },
+    {
+     "name": "Crude fat",
+     "value": "9 %"
+    },
+    {
+     "name": "Crude ash",
+     "value": "7 %"
+    },
+    {
+     "name": "Calcium",
+     "value": "1.2 %"
+    },
+    {
+     "name": "Phosphorus",
+     "value": "0.9 %"
+    },
+    {
+     "name": "Omega-3 fatty acids",
+     "value": "0.22 %"
+    },
+    {
+     "name": "Omega-6 fatty acids",
+     "value": "1.52 %"
+    },
+    {
+     "name": "Energy value",
+     "value": "3320 kcal/kg"
+    }
+   ],
+   "feeding": "Daily amount: see the feeding table. The amounts in the table are guidelines only and should be adjusted to the individual needs of each pet. The daily ration may vary depending on the outdoor temperature and on the pet’s lifestyle, temperament and activity. A bowl of fresh, clean water should always be within your pet’s reach."
+  },
+  "az": {
+   "full": [
+    "Qızılbalıq ilə ARATON tam rasionlu quru yemi pişiyinizin rifahı üçün gündəlik, etibarlı həlldir. O, qısamüddətli qidalanma meyllərini deyil, real həyatı nəzərə alaraq yaradılıb. Bu, hər gün toxluğu, gümrahlığı və enerjini qorumağa kömək edən yemdir. Əsas zülal mənbəyi – qızılbalıq (18 %) – əla həzm olunur və hətta daha həssas pişiklərə də uyğundur.",
+    "Bu yemin fərqli cəhəti yetkin pişik orqanizminin ehtiyaclarına yönəlmiş balanslı tərkibdir. Qızılbalıq orqanizmi ürəyin işi, görmə və dərinin vəziyyəti üçün vacib olan omeqa-3 və omeqa-6 yağ turşuları ilə təmin edir. Əlavə edilmiş sink, biotin, B6 vitamini və taurin sağlam tükü, güclü ürəyi, sinir sisteminin işini və normal əzələ tonusunu qorumağa kömək edir. Həzmi çuğundur cecəsi və lif – bağırsaqların işini dəstəkləyən və nəcisin normal konsistensiyasını qorumağa kömək edən prebiotiklər – yaxşılaşdırır. Təbii otlar – kəklikotu, adaçayı, cəfəri və oreqano – isə immunitetin güclənməsinə, yumşaq həzmin dəstəklənməsinə və ümumi gümrahlığa töhfə verir.",
+    "ARATON reseptləri heyvanların qidalanması üzrə ekspertlərlə birlikdə hazırlanır. Bu, bütün cinslərdən olan yetkin pişiklərə – həm aktiv, həm də daha həssas və ya seçici olanlara – uyğun quru yemdir. Balanslı, aydın tərkib pişiyin gündəlik həyat üçün yalnız lazım olanları almasını təmin edir – artıq əlavələr olmadan, sadə və etibarlı. Pişiksevərlərin dediyi kimi: “Yaxşı yem etiketdə deyil, gündəlik həyatda işləyən yemdir.” ARATON-u vədləri deyil, real nəticələri qiymətləndirən sahiblər seçir: sağlam dəri, parlaq tük, aktivlik və sabit həzm. ARATON yüksək keyfiyyət standartlarına riayət edilməklə Litvada istehsal olunur. Bu, KIKA ailəsinin məhsuludur – düzgün qidalanma pişiyinizin yeni ənənəsinə çevrilsin deyə sevgi və məsuliyyətlə yaradılıb. Hər gün.",
+    "Tərkibində YOXDUR: süni boyaqlar – rəng təbii inqrediyentlərdən gəlir, sintetik piqmentlər yoxdur; süni ətirləndiricilər – əlavə aromat olmadan təbii qoxu; GMO – tərkibdə genetik modifikasiya olunmuş inqrediyentlər yoxdur; soya – soya zülalı və yağı yoxdur; süd məhsulları – laktoza və süd zülalları yoxdur. Əsas xüsusiyyətlər: qızılbalıq – gündəlik qidalandırma üçün yaxşı həzm olunan zülal; qızılbalıqdan alınan yüksək keyfiyyətli zülallar əzələ tonusunu qorumağa kömək edir və hətta daha həssas pişiklərə də uyğundur. Omeqa-3 və omeqa-6 – sağlam dəri, tük və ürəyin işi üçün; yağ turşuları dərinin nəmliyini, tükün parlaqlığını və ürək-damar sisteminin sağlamlığını qoruyur. Taurin – güclü ürək, görmə və sinir sistemi üçün; pişik orqanizminin özünün hasil etmədiyi həyati vacib amin turşusu – gündəlik rasionda mütləqdir. Təbii otlar – yumşaq həzm və immunitet üçün; kəklikotu, adaçayı, cəfəri və oreqano həzmi dəstəkləməyə kömək edir və təbii müdafiəni gücləndirir. Süni boyaqlar olmadan – yalnız pişiyinizə lazım olanlar; artıq əlavələr olmadan təmiz formula – gündəlik qidalandırmaya uyğunlaşdırılmış təhlükəsiz qidalanma.",
+    "Kimlər üçündür? 1 yaşdan yuxarı yetkin pişiklər üçün (bütün cinslər); dərinin, tükün sağlamlığını və ürəyin işini dəstəkləmək lazım olduqda; pişiyin həzmi daha həssas olduqda və ya dəri problemlərinə meyilli olduqda; omeqa turşuları ilə gündəlik balanslı yem istədikdə; artıq yağ olmadan kifayət qədər enerji təmin etmək vacib olduqda; pişik seçici olduqda – qızılbalıq və qaraciyər dadı sayəsində; süni əlavələr olmadan sadə, lakin tam dəyərli qidalanma axtaran sahiblər üçün."
+   ],
+   "composition": "Dehidratlaşdırılmış qızılbalıq 18 %, qarğıdalı, tritikale, dehidratlaşdırılmış quş əti 8 %, buğda kəpəyi, qarğıdalı qlüteni, quş yağı, hidrolizə edilmiş qaraciyər, şəkər çuğunduru cecəsi, otların emalı məhsulları 0,1 % (kəklikotu, adaçayı, cəfəri, oreqano), minerallar.",
+   "additives": "1 kq üçün qida əlavələri: A vitamini (3a672a) — 14000 BV, D3 vitamini (3a671) — 1400 BV, E vitamini (3a700) — 336 mq, B6 vitamini (3a831) — 3 mq, biotin (3a880) — 0,11 mq, dəmir (II) sulfat monohidrat (3b103) — 35 mq, susuz kalsium yodat (3b202) — 1,05 mq, mis (II) sulfat pentahidrat (3b405) — 3,5 mq, manqan sulfat monohidrat (3b503) — 14 mq, sink sulfat monohidrat (3b605) — 63 mq, natrium selenit (3b801) — 0,07 mq, taurin (3a370) — 700 mq. Texnoloji əlavələr: antioksidantlar, konservantlar.",
+   "analysis": [
+    {
+     "name": "Xam protein",
+     "value": "28 %"
+    },
+    {
+     "name": "Xam lif",
+     "value": "3 %"
+    },
+    {
+     "name": "Xam yağ",
+     "value": "9 %"
+    },
+    {
+     "name": "Xam kül",
+     "value": "7 %"
+    },
+    {
+     "name": "Kalsium",
+     "value": "1,2 %"
+    },
+    {
+     "name": "Fosfor",
+     "value": "0,9 %"
+    },
+    {
+     "name": "Omeqa-3 yağ turşuları",
+     "value": "0,22 %"
+    },
+    {
+     "name": "Omeqa-6 yağ turşuları",
+     "value": "1,52 %"
+    },
+    {
+     "name": "Enerji dəyəri",
+     "value": "3320 kkal/kq"
+    }
+   ],
+   "feeding": "Gündəlik norma: qidalandırma cədvəlinə baxın. Cədvəldə göstərilən miqdarlar yalnız tövsiyə xarakteri daşıyır və hər bir ev heyvanının fərdi ehtiyaclarına uyğunlaşdırılmalıdır. Gündəlik norma çöldəki havanın temperaturundan, ev heyvanının həyat tərzindən, temperamentindən və aktivliyindən asılı olaraq dəyişə bilər. Təzə, təmiz su olan qab həmişə ev heyvanının əlçatan yerində olmalıdır."
+  }
+ },
+ "araton:assets/products/art-cat-outdoor.webp": {
+  "url": "https://www.kika.lt/products/araton-dry-food-for-active-adult-cats-with-chicken-and-turkey",
+  "sku": null,
+  "packs": [
+   "1.5 kg",
+   "15 kg"
+  ],
+  "feed": [],
+  "ru": {
+   "full": [
+    "Полнорационный сухой корм ARATON с птицей – повседневное, надёжное решение для хорошего самочувствия кошек, ведущих активный образ жизни. Он создан для кошек, которые часто выходят на улицу, охотятся, играют или просто любят быть активными. Это корм, который каждый день помогает поддерживать выносливость, хорошее самочувствие и крепкий иммунитет кошки даже в уличных условиях. Основные источники белка – курица и индейка – отлично усваиваются, обеспечивают кошку необходимой энергией и поддерживают мышечный тонус. Повышенное содержание белков и жиров обеспечивает достаточное количество калорий для активного дня. Таурин – обязательная часть рациона кошки – поддерживает работу сердца, зрение и нервную систему.",
+    "Добавленные жирные кислоты омега-3 и омега-6, цинк, биотин и витамин B6 помогают поддерживать здоровье кожи и густую блестящую шерсть, что важно как в холодную, так и в сырую погоду. Свекольный жом и клетчатка поддерживают здоровую работу кишечника и нормальную консистенцию стула. А натуральные травы – тимьян, шалфей, петрушка и орегано – способствуют бесперебойному пищеварению, мягкой работе кишечника и более крепкому иммунитету.",
+    "Рецептуры ARATON разрабатываются совместно с экспертами по питанию животных. Это сухой корм, подходящий взрослым кошкам всех пород, которые живут активно – на улице или в постоянном движении дома. Сбалансированная формула без искусственных красителей и избыточных добавок – понятный, осознанный выбор на каждый день. Как говорят опытные владельцы: «Лучший корм – тот, который позволяет кошке быть собой: полной сил, с блестящей шерстью и здоровым взглядом». ARATON производится в Литве с соблюдением высоких стандартов качества. Это продукт семейства KIKA, созданный с любовью и ответственностью, чтобы правильное питание стало ежедневной традицией свободно гуляющей кошки. Изготовлено БЕЗ: искусственных красителей – цвет от натуральных ингредиентов, без синтетических пигментов; искусственных ароматизаторов – настоящий запах без добавленных ароматов; ГМО – в составе нет генетически модифицированных ингредиентов; сои – без соевого белка и масла; молочных продуктов – без лактозы и молочных белков.",
+    "Основные свойства: птица – сбалансированные белки для мышц и выносливости активных кошек; курица и индейка дают энергию и поддерживают мышечный тонус в уличных условиях. Повышенное содержание жира – больше энергии для активной жизни без перегрузки; обеспечивает калориями для интенсивного движения и помогает поддерживать хорошую форму. Таурин – для поддержки сердца, зрения и нервной системы; жизненно важная для кошек аминокислота, обязательная в ежедневном рационе. Омега-кислоты, цинк, биотин – для здоровой кожи и густой шерсти; помогают сохранять блеск шерсти и защищают от раздражителей окружающей среды. Натуральные травы – для пищеварения и иммунной защиты; тимьян, шалфей, петрушка и орегано поддерживают кишечник и иммунитет.",
+    "Для кого? Для взрослых кошек от 1 года (всех пород); когда кошка много времени проводит на улице или очень активна; когда нужно больше энергии и выносливости без риска ожирения; когда важно поддерживать мышечный тонус, крепкий иммунитет и работу сердца; когда нужно защитить кожу и шерсть от воздействия окружающей среды; для владельцев, которые ищут повседневный корм без искусственных добавок; когда у кошки более чувствительное пищеварение и нужна мягкая формула с травами."
+   ],
+   "composition": "Дегидрированная курица 16 %, дегидрированная индейка 14 %, кукуруза, тритикале, пшеничные отруби, кукурузный глютен, жир птицы, гидролизованная печень, жом сахарной свёклы, продукты переработки трав 0,1 % (тимьян, шалфей, петрушка, орегано).",
+   "additives": "Питательные добавки на 1 кг: витамин A (3a672a) — 14000 МЕ, витамин D3 (3a671) — 1400 МЕ, витамин E (3a700) — 336 мг, витамин B6 (3a831) — 2,8 мг, биотин (3a880) — 0,11 мг, моногидрат сульфата железа (II) (3b103) — 35 мг, безводный йодат кальция (3b202) — 1,05 мг, пентагидрат сульфата меди (II) (3b405) — 3,5 мг, моногидрат сульфата марганца (3b503) — 14 мг, моногидрат сульфата цинка (3b605) — 63 мг, селенит натрия (3b801) — 0,07 мг, таурин (3a370) — 700 мг. Технологические добавки: антиоксиданты, консерванты.",
+   "analysis": [
+    {
+     "name": "Сырой протеин",
+     "value": "29 %"
+    },
+    {
+     "name": "Сырая клетчатка",
+     "value": "3 %"
+    },
+    {
+     "name": "Сырой жир",
+     "value": "12 %"
+    },
+    {
+     "name": "Сырая зола",
+     "value": "7 %"
+    },
+    {
+     "name": "Кальций",
+     "value": "1,35 %"
+    },
+    {
+     "name": "Фосфор",
+     "value": "1,1 %"
+    },
+    {
+     "name": "Энергетическая ценность",
+     "value": "3470 ккал/кг"
+    }
+   ],
+   "feeding": "Суточная норма: см. таблицу кормления. Указанные в таблице количества носят рекомендательный характер и должны корректироваться с учётом индивидуальных потребностей каждого питомца. Суточная норма может меняться в зависимости от температуры воздуха на улице, образа жизни, темперамента и активности питомца. Миска со свежей чистой водой всегда должна стоять в доступном для питомца месте."
+  },
+  "en": {
+   "full": [
+    "ARATON complete dry food with poultry is an everyday, reliable solution for the well-being of cats that lead an active life. It was created with cats in mind that often go outdoors, hunt, play or simply love being active. It is a food that helps maintain the cat’s endurance, well-being and strong immunity every day, even in outdoor conditions. The main protein sources – chicken and turkey – are highly digestible, supply the cat with the energy it needs and support muscle tone. The higher protein and fat content ensures enough calories for an active day. Taurine – an essential part of a cat’s diet – supports heart function, vision and the nervous system.",
+    "Added omega-3 and omega-6 fatty acids, zinc, biotin and vitamin B6 help maintain healthy skin and a thick, shiny coat, which is important in both cold and wet weather. Beet pulp and fibre support healthy gut function and proper stool consistency. Natural herbs – thyme, sage, parsley and oregano – contribute to smooth digestion, gentle gut function and stronger immunity.",
+    "ARATON recipes are developed in cooperation with animal nutrition experts. It is a dry food suitable for adult cats of all breeds that live actively – outdoors or constantly on the move at home. A balanced formula without artificial colourings and excessive additives – a clear, conscious choice for every day. As experienced owners say: “The best food is one that lets a cat be itself – full of strength, with a shiny coat and a healthy look.” ARATON is made in Lithuania to high quality standards. It is a KIKA family product – created with love and responsibility so that good nutrition becomes a daily tradition for a free-roaming cat. Made without: artificial colourings – colour from natural ingredients, no synthetic pigments; artificial flavourings – a genuine smell without added aroma; GMO – contains no genetically modified ingredients; soy – no soy protein or oil; dairy products – no lactose or milk proteins.",
+    "Key features: poultry – balanced proteins for the muscles and endurance of active cats; chicken and turkey provide energy and support muscle tone in outdoor conditions. Increased fat content – more energy for an active life without overload; it provides calories for intense movement and helps keep the cat in good shape. Taurine – to support the heart, vision and nervous system; a vital amino acid for cats, essential in the daily diet. Omega acids, zinc, biotin – for healthy skin and a thick coat; they help keep the coat shiny and protect against environmental irritants. Natural herbs – for digestion and immune protection; thyme, sage, parsley and oregano support the gut and immunity.",
+    "Who is it for? Adult cats from 1 year of age (all breeds); when the cat spends a lot of time outdoors or is very active; when more energy and endurance are needed without the risk of obesity; when it is important to maintain muscle tone, strong immunity and heart function; when you want to protect the skin and coat from environmental effects; owners looking for a daily food without artificial additives; when the cat has more sensitive digestion and needs a gentle formula with herbs."
+   ],
+   "composition": "Dehydrated chicken 16 %, dehydrated turkey 14 %, maize, triticale, wheat bran, maize gluten, poultry fat, hydrolysed liver, sugar beet pulp, herb processing products 0.1 % (thyme, sage, parsley, oregano).",
+   "additives": "Nutritional additives per 1 kg: vitamin A (3a672a) — 14000 IU, vitamin D3 (3a671) — 1400 IU, vitamin E (3a700) — 336 mg, vitamin B6 (3a831) — 2.8 mg, biotin (3a880) — 0.11 mg, iron (II) sulphate monohydrate (3b103) — 35 mg, calcium iodate anhydrous (3b202) — 1.05 mg, copper (II) sulphate pentahydrate (3b405) — 3.5 mg, manganous sulphate monohydrate (3b503) — 14 mg, zinc sulphate monohydrate (3b605) — 63 mg, sodium selenite (3b801) — 0.07 mg, taurine (3a370) — 700 mg. Technological additives: antioxidants, preservatives.",
+   "analysis": [
+    {
+     "name": "Crude protein",
+     "value": "29 %"
+    },
+    {
+     "name": "Crude fibre",
+     "value": "3 %"
+    },
+    {
+     "name": "Crude fat",
+     "value": "12 %"
+    },
+    {
+     "name": "Crude ash",
+     "value": "7 %"
+    },
+    {
+     "name": "Calcium",
+     "value": "1.35 %"
+    },
+    {
+     "name": "Phosphorus",
+     "value": "1.1 %"
+    },
+    {
+     "name": "Energy value",
+     "value": "3470 kcal/kg"
+    }
+   ],
+   "feeding": "Daily amount: see the feeding table. The amounts in the table are guidelines only and should be adjusted to the individual needs of each pet. The daily ration may vary depending on the outdoor temperature and on the pet’s lifestyle, temperament and activity. A bowl of fresh, clean water should always be within your pet’s reach."
+  },
+  "az": {
+   "full": [
+    "Quş əti ilə ARATON tam rasionlu quru yemi aktiv həyat sürən pişiklərin rifahı üçün gündəlik, etibarlı həlldir. O, tez-tez çölə çıxan, ov edən, oynayan və ya sadəcə aktiv olmağı sevən pişiklər nəzərə alınaraq yaradılıb. Bu, hər gün, hətta çöl şəraitində belə, pişiyin dözümlülüyünü, gümrahlığını və güclü immunitetini qorumağa kömək edən yemdir. Əsas zülal mənbələri – toyuq və hinduşka əti – əla həzm olunur, pişiyi lazımi enerji ilə təmin edir və əzələ tonusunu dəstəkləyir. Zülal və yağların daha yüksək miqdarı aktiv gün üçün kifayət qədər kalori təmin edir. Taurin – pişik rasionunun zəruri hissəsi – ürəyin işini, görməni və sinir sistemini dəstəkləyir.",
+    "Əlavə edilmiş omeqa-3 və omeqa-6 yağ turşuları, sink, biotin və B6 vitamini dərinin sağlamlığını və həm soyuq, həm də rütubətli havada vacib olan sıx, parlaq tükü qorumağa kömək edir. Çuğundur cecəsi və lif bağırsaqların sağlam işini və nəcisin normal konsistensiyasını dəstəkləyir. Təbii otlar – kəklikotu, adaçayı, cəfəri və oreqano – isə rahat həzmə, bağırsaqların yumşaq işinə və daha güclü immunitetə töhfə verir.",
+    "ARATON reseptləri heyvanların qidalanması üzrə ekspertlərlə birlikdə hazırlanır. Bu, aktiv yaşayan – çöldə və ya evdə daim hərəkətdə olan – bütün cinslərdən olan yetkin pişiklərə uyğun quru yemdir. Süni boyaqlar və artıq əlavələr olmadan balanslı formula – hər gün üçün aydın, şüurlu seçim. Təcrübəli sahiblərin dediyi kimi: “Ən yaxşı yem pişiyə özü olmağa imkan verəndir – güc dolu, parlaq tüklü və sağlam baxışlı.” ARATON yüksək keyfiyyət standartlarına riayət edilməklə Litvada istehsal olunur. Bu, KIKA ailəsinin məhsuludur – düzgün qidalanma sərbəst gəzən pişiyin gündəlik ənənəsinə çevrilsin deyə sevgi və məsuliyyətlə yaradılıb. Tərkibində YOXDUR: süni boyaqlar – rəng təbii inqrediyentlərdən gəlir, sintetik piqmentlər yoxdur; süni ətirləndiricilər – əlavə aromat olmadan təbii qoxu; GMO – tərkibdə genetik modifikasiya olunmuş inqrediyentlər yoxdur; soya – soya zülalı və yağı yoxdur; süd məhsulları – laktoza və süd zülalları yoxdur.",
+    "Əsas xüsusiyyətlər: quş əti – aktiv pişiklərin əzələləri və dözümlülüyü üçün balanslı zülallar; toyuq və hinduşka əti çöl şəraitində enerji verir və əzələ tonusunu dəstəkləyir. Artırılmış yağ miqdarı – yüklənmə olmadan aktiv həyat üçün daha çox enerji; intensiv hərəkət üçün kalori verir və yaxşı formanı qorumağa kömək edir. Taurin – ürəyin, görmənin və sinir sisteminin dəstəklənməsi üçün; pişiklər üçün həyati vacib, gündəlik rasionda mütləq olan amin turşusu. Omeqa turşuları, sink, biotin – sağlam dəri və sıx tük üçün; tükün parlaqlığını qorumağa kömək edir və ətraf mühitin qıcıqlandırıcılarından qoruyur. Təbii otlar – həzm və immun müdafiə üçün; kəklikotu, adaçayı, cəfəri və oreqano bağırsaqları və immuniteti dəstəkləyir.",
+    "Kimlər üçündür? 1 yaşdan yuxarı yetkin pişiklər üçün (bütün cinslər); pişik çox vaxtını çöldə keçirdikdə və ya çox aktiv olduqda; piylənmə riski olmadan daha çox enerji və dözümlülük lazım olduqda; əzələ tonusunu, güclü immuniteti və ürəyin işini qorumaq vacib olduqda; dərini və tükü ətraf mühitin təsirindən qorumaq istədikdə; süni əlavələr olmadan gündəlik yem axtaran sahiblər üçün; pişiyin həzmi daha həssas olduqda və otlarla yumşaq formula lazım olduqda."
+   ],
+   "composition": "Dehidratlaşdırılmış toyuq əti 16 %, dehidratlaşdırılmış hinduşka əti 14 %, qarğıdalı, tritikale, buğda kəpəyi, qarğıdalı qlüteni, quş yağı, hidrolizə edilmiş qaraciyər, şəkər çuğunduru cecəsi, otların emalı məhsulları 0,1 % (kəklikotu, adaçayı, cəfəri, oreqano).",
+   "additives": "1 kq üçün qida əlavələri: A vitamini (3a672a) — 14000 BV, D3 vitamini (3a671) — 1400 BV, E vitamini (3a700) — 336 mq, B6 vitamini (3a831) — 2,8 mq, biotin (3a880) — 0,11 mq, dəmir (II) sulfat monohidrat (3b103) — 35 mq, susuz kalsium yodat (3b202) — 1,05 mq, mis (II) sulfat pentahidrat (3b405) — 3,5 mq, manqan sulfat monohidrat (3b503) — 14 mq, sink sulfat monohidrat (3b605) — 63 mq, natrium selenit (3b801) — 0,07 mq, taurin (3a370) — 700 mq. Texnoloji əlavələr: antioksidantlar, konservantlar.",
+   "analysis": [
+    {
+     "name": "Xam protein",
+     "value": "29 %"
+    },
+    {
+     "name": "Xam lif",
+     "value": "3 %"
+    },
+    {
+     "name": "Xam yağ",
+     "value": "12 %"
+    },
+    {
+     "name": "Xam kül",
+     "value": "7 %"
+    },
+    {
+     "name": "Kalsium",
+     "value": "1,35 %"
+    },
+    {
+     "name": "Fosfor",
+     "value": "1,1 %"
+    },
+    {
+     "name": "Enerji dəyəri",
+     "value": "3470 kkal/kq"
+    }
+   ],
+   "feeding": "Gündəlik norma: qidalandırma cədvəlinə baxın. Cədvəldə göstərilən miqdarlar yalnız tövsiyə xarakteri daşıyır və hər bir ev heyvanının fərdi ehtiyaclarına uyğunlaşdırılmalıdır. Gündəlik norma çöldəki havanın temperaturundan, ev heyvanının həyat tərzindən, temperamentindən və aktivliyindən asılı olaraq dəyişə bilər. Təzə, təmiz su olan qab həmişə ev heyvanının əlçatan yerində olmalıdır."
+  }
+ },
+ "araton:assets/products/art-cat-sterilised.webp": {
+  "url": "https://petzone.com/ksa/en/catalog/product/view/id/69494/s/araton-adult-sterilised-chicken-cat-dry-food",
+  "sku": null,
+  "packs": [
+   "1.5 kg",
+   "15 kg"
+  ],
+  "feed": [
+   [
+    1,
+    1,
+    10,
+    15
+   ],
+   [
+    2,
+    2,
+    19,
+    30
+   ],
+   [
+    3,
+    3,
+    29,
+    45
+   ],
+   [
+    4,
+    4,
+    39,
+    61
+   ],
+   [
+    5,
+    5,
+    48,
+    76
+   ],
+   [
+    6,
+    6,
+    58,
+    91
+   ],
+   [
+    7,
+    7,
+    68,
+    106
+   ],
+   [
+    8,
+    8,
+    77,
+    121
+   ]
+  ],
+  "ru": {
+   "full": [
+    "Araton Adult Sterilised с курицей – полнорационный и сбалансированный сухой корм, специально разработанный для взрослых стерилизованных (кастрированных) кошек всех пород или кошек, склонных к набору веса; он отличается пониженной калорийностью и содержит необходимые питательные вещества для поддержки их особых потребностей в здоровье. Пониженное содержание калорий и жира помогает поддерживать здоровый вес.",
+    "Сбалансированное сочетание минералов (натрий, магний, фосфор) способствует здоровью мочевыводящих путей и оптимальному pH мочи. Корм обогащён таурином – аминокислотой, жизненно важной для здоровой работы сердца и зрения.",
+    "Свекольный жом помогает пищеварению и способствует развитию полезных кишечных бактерий. Сбалансированное сочетание жирных кислот, биотина, цинка и витамина B6 помогает сохранять блестящую шерсть и здоровую кожу. Основные ингредиенты – дегидрированное мясо птицы, кукуруза, тритикале, жир птицы и гидролизованная куриная печень."
+   ],
+   "composition": "Дегидрированное мясо птицы, кукуруза, тритикале, кукурузный глютен, пшеничные отруби, жир птицы, гидролизованная куриная печень, жом сахарной свёклы.",
+   "additives": "Питательные добавки на 1 кг: витамин A (3a672a) — 15000 МЕ, витамин D3 (3a671) — 1500 МЕ, витамин E (3a700) — 360 мг, моногидрат сульфата железа (II) (3b103) — 37,5 мг, безводный йодат кальция (3b202) — 1,13 мг, пентагидрат сульфата меди (II) (3b405) — 3,75 мг, моногидрат сульфата марганца (3b503) — 15 мг, моногидрат сульфата цинка (3b605) — 67,5 мг, селенит натрия (3b801) — 0,075 мг, таурин (3a370) — 750 мг. Технологические добавки: антиоксиданты, консерванты.",
+   "analysis": [
+    {
+     "name": "Сырой протеин",
+     "value": "24 %"
+    },
+    {
+     "name": "Сырая клетчатка",
+     "value": "3,5 %"
+    },
+    {
+     "name": "Сырой жир",
+     "value": "15 %"
+    },
+    {
+     "name": "Сырая зола",
+     "value": "6,8 %"
+    },
+    {
+     "name": "Кальций",
+     "value": "1,4 %"
+    },
+    {
+     "name": "Фосфор",
+     "value": "1,2 %"
+    }
+   ],
+   "feeding": "Рекомендации по кормлению: давайте корм в сухом виде. Чистая свежая вода всегда должна быть в доступе. Нормы кормления: см. таблицу. Указанные в таблице количества носят ориентировочный характер и должны корректироваться с учётом индивидуальных потребностей каждой кошки."
+  },
+  "en": {
+   "full": [
+    "Araton Adult Sterilised Chicken is a complete and balanced dry food specifically formulated for adult sterilised (neutered) cats of all breeds or those prone to weight gain, offering a reduced calorie level and essential nutrients to support their specific health needs. Its reduced calorie and fat levels support healthy weight maintenance.",
+    "A balanced blend of minerals (sodium, magnesium, phosphorus) promotes a healthy urinary tract and optimal urine pH. The food is enriched with taurine, an amino acid vital for healthy heart function and vision.",
+    "Sugar beet pulp aids digestion and promotes healthy gut bacteria. A balanced mix of fatty acids, biotin, zinc and vitamin B6 helps maintain a shiny coat and healthy skin. The main ingredients are dehydrated poultry meat, maize, triticale, poultry fat and hydrolysed chicken liver."
+   ],
+   "composition": "Dehydrated poultry meat, maize, triticale, maize gluten, wheat bran, poultry fat, hydrolysed chicken liver, sugar beet pulp.",
+   "additives": "Nutritional additives per 1 kg: vitamin A (3a672a) — 15000 IU, vitamin D3 (3a671) — 1500 IU, vitamin E (3a700) — 360 mg, iron (II) sulphate monohydrate (3b103) — 37.5 mg, calcium iodate anhydrous (3b202) — 1.13 mg, copper (II) sulphate pentahydrate (3b405) — 3.75 mg, manganous sulphate monohydrate (3b503) — 15 mg, zinc sulphate monohydrate (3b605) — 67.5 mg, sodium selenite (3b801) — 0.075 mg, taurine (3a370) — 750 mg. Technological additives: antioxidants, preservatives.",
+   "analysis": [
+    {
+     "name": "Crude protein",
+     "value": "24 %"
+    },
+    {
+     "name": "Crude fibre",
+     "value": "3.5 %"
+    },
+    {
+     "name": "Crude fat",
+     "value": "15 %"
+    },
+    {
+     "name": "Crude ash",
+     "value": "6.8 %"
+    },
+    {
+     "name": "Calcium",
+     "value": "1.4 %"
+    },
+    {
+     "name": "Phosphorus",
+     "value": "1.2 %"
+    }
+   ],
+   "feeding": "Feeding recommendations: serve the food dry. Clean, fresh water must always be available. Feeding guidelines: see the table. The amounts given in the table are indicative only and should be adjusted to each cat’s individual needs."
+  },
+  "az": {
+   "full": [
+    "Toyuq əti ilə Araton Adult Sterilised – bütün cinslərdən olan yetkin sterilizasiya edilmiş (axtalanmış) pişiklər və ya çəki artımına meylli pişiklər üçün xüsusi hazırlanmış tam rasionlu və balanslı quru yemdir; o, aşağı kalorililiyə malikdir və onların sağlamlıqla bağlı xüsusi ehtiyaclarını dəstəkləmək üçün zəruri qida maddələrini ehtiva edir. Azaldılmış kalori və yağ miqdarı sağlam çəkinin qorunmasına kömək edir.",
+    "Mineralların (natrium, maqnezium, fosfor) balanslı birləşməsi sidik yollarının sağlamlığına və sidiyin optimal pH səviyyəsinə şərait yaradır. Yem ürəyin sağlam işi və görmə üçün həyati vacib olan amin turşusu – taurinlə zənginləşdirilib.",
+    "Şəkər çuğunduru cecəsi həzmə kömək edir və faydalı bağırsaq bakteriyalarının inkişafına şərait yaradır. Yağ turşularının, biotinin, sinkin və B6 vitamininin balanslı qarışığı tükün parlaqlığını və dərinin sağlamlığını qorumağa kömək edir. Əsas inqrediyentlər dehidratlaşdırılmış quş əti, qarğıdalı, tritikale, quş yağı və hidrolizə edilmiş toyuq qaraciyəridir."
+   ],
+   "composition": "Dehidratlaşdırılmış quş əti, qarğıdalı, tritikale, qarğıdalı qlüteni, buğda kəpəyi, quş yağı, hidrolizə edilmiş toyuq qaraciyəri, şəkər çuğunduru cecəsi.",
+   "additives": "1 kq üçün qida əlavələri: A vitamini (3a672a) — 15000 BV, D3 vitamini (3a671) — 1500 BV, E vitamini (3a700) — 360 mq, dəmir (II) sulfat monohidrat (3b103) — 37,5 mq, susuz kalsium yodat (3b202) — 1,13 mq, mis (II) sulfat pentahidrat (3b405) — 3,75 mq, manqan sulfat monohidrat (3b503) — 15 mq, sink sulfat monohidrat (3b605) — 67,5 mq, natrium selenit (3b801) — 0,075 mq, taurin (3a370) — 750 mq. Texnoloji əlavələr: antioksidantlar, konservantlar.",
+   "analysis": [
+    {
+     "name": "Xam protein",
+     "value": "24 %"
+    },
+    {
+     "name": "Xam lif",
+     "value": "3,5 %"
+    },
+    {
+     "name": "Xam yağ",
+     "value": "15 %"
+    },
+    {
+     "name": "Xam kül",
+     "value": "6,8 %"
+    },
+    {
+     "name": "Kalsium",
+     "value": "1,4 %"
+    },
+    {
+     "name": "Fosfor",
+     "value": "1,2 %"
+    }
+   ],
+   "feeding": "Qidalandırma tövsiyələri: yemi quru halda verin. Təmiz, təzə su həmişə əlçatan olmalıdır. Qidalandırma normaları: cədvələ baxın. Cədvəldə göstərilən miqdarlar yalnız təxminidir və hər bir pişiyin fərdi ehtiyaclarına uyğunlaşdırılmalıdır."
+  }
+ },
+ "araton:assets/products/art-dog-pouch-lamb.webp": {
+  "url": "https://www.kika.lt/products/araton-visu-veisliu-jaunu-sunu-slapias-pasaras-su-eriena-ir-triusiena",
+  "sku": null,
+  "packs": [
+   "85 g",
+   "500 g"
+  ],
+  "feed": [],
+  "ru": {
+   "full": [
+    "Полнорационный влажный корм ARATON с ягнёнком и кроликом – сбалансированный выбор для растущей собаки. Пока щенок растёт, важно не просто насытиться – каждый кусочек должен обеспечивать хорошее пищеварение, здоровый рост и крепкий иммунитет. Этот влажный корм создан, чтобы помочь заложить прочную основу для вашего питомца с первых месяцев жизни. Он предназначен для молодых собак всех пород в возрасте от 1 до 12 месяцев; основные источники белка – ягнёнок (16 %) и кролик (8 %).",
+    "78 % ингредиентов животного происхождения и до 92 % белка животного происхождения – важные, легкоусвояемые питательные вещества для растущего организма. Ягнёнок и кролик дают собаке высококачественный белок, который помогает формировать мышечную массу и снабжает организм энергией; это нежное мясо подходит даже чувствительным щенкам. Рисовая мука и свекольный жом – мягкий источник углеводов и натуральные пребиотики, поддерживающие баланс пищеварения; вместе с клетчаткой они помогают поддерживать микрофлору кишечника и качество стула, что важно для щенков с более чувствительным пищеварением. Влажная текстура стимулирует аппетит и облегчает переход с материнского молока.",
+    "Травы – тимьян, шалфей, петрушка и орегано – традиционные ингредиенты, поддерживающие аппетит, естественную сопротивляемость организма и хорошее самочувствие. Глюкозамин и хондроитин важны для развития суставов: они помогают ухаживать за суставами и защищать хрящи растущих щенков в период активного роста, особенно у средних и крупных пород, и поддерживают гибкость. Сбалансированное содержание кальция и фосфора способствует крепости костей.",
+    "Витамины A, D3 и E и минералы (цинк, марганец, медь) необходимы для иммунной системы, здоровой кожи и шерсти, ферментативных процессов и полноценного развития. Таурин – незаменимая аминокислота, которую организм молодой собаки не вырабатывает сам, – поддерживает работу сердца, зрение и развитие нервной системы. Без искусственных ароматизаторов, красителей и усилителей вкуса – только понятная формула, адаптированная для роста, без лишних или плохо переносимых добавок, безопасная для чувствительного растущего организма.",
+    "Рецептуры ARATON разрабатываются вместе с экспертами по питанию животных с учётом реальных потребностей питомцев, а не маркетинговых уловок. Подходит для ежедневного кормления с 1 до 12 месяцев – как основной корм или как дополнение к нему; его можно сочетать с сухим кормом или использовать для постепенного перехода на твёрдую пищу. Произведено в Литве с соблюдением высоких стандартов качества. ARATON – продукт семейства KIKA, которому доверяют многие владельцы по всему миру, – чтобы ежедневное кормление было не только приятным, но и полезным."
+   ],
+   "composition": "78 % ингредиентов животного происхождения в кусочках (мясо и побочные продукты животного происхождения (в т. ч. 16 % ягнёнка, 8 % кролика)), бульон, рисовая мука, жом сахарной свёклы, хлорид натрия, продукты переработки трав 0,1 % (тимьян, шалфей, петрушка, орегано), минералы, глюкозамин (500 мг/кг), хондроитинсульфат (200 мг/кг).",
+   "additives": "Питательные добавки на 1 кг: витамин A (3a672a) — 1000 МЕ, витамин D3 (3a671) — 300 МЕ, витамин E (3a700) — 100 мг, безводный йодат кальция (3b202) — 0,5 мг, пентагидрат сульфата меди (II) (3b405) — 2 мг, моногидрат сульфата марганца (3b503) — 2 мг, оксид цинка (3b603) — 25 мг, таурин (3a370) — 1000 мг.",
+   "analysis": [
+    {
+     "name": "Сырой протеин",
+     "value": "8 %"
+    },
+    {
+     "name": "Сырая клетчатка",
+     "value": "0,7 %"
+    },
+    {
+     "name": "Сырой жир",
+     "value": "3,8 %"
+    },
+    {
+     "name": "Сырая зола",
+     "value": "1,9 %"
+    },
+    {
+     "name": "Влажность",
+     "value": "82 %"
+    },
+    {
+     "name": "Кальций",
+     "value": "0,3 %"
+    },
+    {
+     "name": "Фосфор",
+     "value": "0,2 %"
+    },
+    {
+     "name": "Натрий",
+     "value": "0,3 %"
+    },
+    {
+     "name": "Энергетическая ценность",
+     "value": "774 ккал/кг"
+    }
+   ],
+   "feeding": "Суточная норма: см. таблицу кормления. Указанные в таблице количества носят рекомендательный характер и должны корректироваться с учётом индивидуальных потребностей каждого питомца. Суточная норма может меняться в зависимости от температуры воздуха на улице, образа жизни, темперамента и активности питомца. Миска со свежей чистой водой всегда должна стоять в доступном для питомца месте. Для упаковки 500 г суточная норма в штуках в зависимости от возраста щенка и веса взрослой собаки (1–5 / 5–10 / 10–15 / 15–20 / 20–25 кг): 2–4 мес. – 0,5 / 1 / 1,5 / 2 / 2; 4–6 мес. – 0,5 / 1 / 2 / 2 / 2,5; 6–12 мес. – 0,5 / 1 / 2 / 2,5 / 3. После вскрытия хранить в холодильнике (+4 °C) и использовать в течение 48 часов."
+  },
+  "en": {
+   "full": [
+    "ARATON complete wet food with lamb and rabbit is a balanced choice for a growing dog. While your puppy is growing, it is not enough just to fill up – every bite should ensure smooth digestion, healthy growth and strong immunity. This wet food is designed to help build a solid foundation for your pet from the very first months of life. It is intended for young dogs of all breeds from 1 to 12 months; the main protein sources are lamb (16 %) and rabbit (8 %).",
+    "78 % ingredients of animal origin and up to 92 % protein of animal origin are important, easily absorbed nutrients for a growing body. Lamb and rabbit provide your dog with high-quality protein that helps build muscle mass and supplies the body with energy; these gentle meats suit even sensitive puppies. Rice flour and beet pulp are a gentle source of carbohydrates and natural prebiotics that support digestive balance; together with fibre they help maintain the gut microflora and stool quality, which matters for puppies with more sensitive digestion. The moist texture stimulates the appetite and eases the transition from mother’s milk.",
+    "Herbs – thyme, sage, parsley and oregano – are traditional ingredients that support appetite, natural resistance and better well-being. Glucosamine and chondroitin are important for joint development: they help care for the joints and protect the cartilage of growing puppies during the period of active growth, especially in medium and large breeds, and support flexibility. The balanced calcium and phosphorus content supports bone strength.",
+    "Vitamins A, D3 and E and minerals (zinc, manganese, copper) are essential for the immune system, healthy skin and coat, enzymatic processes and full development. Taurine – an essential amino acid that a young dog’s body does not produce on its own – supports heart function, vision and the development of the nervous system. No artificial flavourings, colourings or flavour enhancers – only a clear formula adapted to growth, without excessive or poorly tolerated additives, safe for a sensitive growing body.",
+    "ARATON recipes are developed together with animal nutrition experts, taking into account pets’ real needs rather than marketing tricks. Suitable for daily feeding from 1 to 12 months, either as the main food or as a complement to it; it can be combined with dry food or used for a gradual transition to solid food. Made in Lithuania to high quality standards. ARATON is a KIKA family product trusted by many owners around the world – so that daily feeding is not only enjoyable but also beneficial."
+   ],
+   "composition": "78 % ingredients of animal origin in chunks (meat and animal by-products (including 16 % lamb, 8 % rabbit)), broth, rice flour, sugar beet pulp, sodium chloride, herb processing products 0.1 % (thyme, sage, parsley, oregano), minerals, glucosamine (500 mg/kg), chondroitin sulphate (200 mg/kg).",
+   "additives": "Nutritional additives per 1 kg: vitamin A (3a672a) — 1000 IU, vitamin D3 (3a671) — 300 IU, vitamin E (3a700) — 100 mg, calcium iodate anhydrous (3b202) — 0.5 mg, copper (II) sulphate pentahydrate (3b405) — 2 mg, manganous sulphate monohydrate (3b503) — 2 mg, zinc oxide (3b603) — 25 mg, taurine (3a370) — 1000 mg.",
+   "analysis": [
+    {
+     "name": "Crude protein",
+     "value": "8 %"
+    },
+    {
+     "name": "Crude fibre",
+     "value": "0.7 %"
+    },
+    {
+     "name": "Crude fat",
+     "value": "3.8 %"
+    },
+    {
+     "name": "Crude ash",
+     "value": "1.9 %"
+    },
+    {
+     "name": "Moisture",
+     "value": "82 %"
+    },
+    {
+     "name": "Calcium",
+     "value": "0.3 %"
+    },
+    {
+     "name": "Phosphorus",
+     "value": "0.2 %"
+    },
+    {
+     "name": "Sodium",
+     "value": "0.3 %"
+    },
+    {
+     "name": "Energy value",
+     "value": "774 kcal/kg"
+    }
+   ],
+   "feeding": "Daily amount: see the feeding table. The amounts in the table are guidelines only and should be adjusted to the individual needs of each pet. The daily ration may vary depending on the outdoor temperature and on the pet’s lifestyle, temperament and activity. A bowl of fresh, clean water should always be within your pet’s reach. For the 500 g pack, the daily amount in pouches by the puppy’s age and expected adult weight (1–5 / 5–10 / 10–15 / 15–20 / 20–25 kg) is: 2–4 months – 0.5 / 1 / 1.5 / 2 / 2; 4–6 months – 0.5 / 1 / 2 / 2 / 2.5; 6–12 months – 0.5 / 1 / 2 / 2.5 / 3. After opening, store in the refrigerator (+4 °C) and use within 48 hours."
+  },
+  "az": {
+   "full": [
+    "Quzu və dovşan əti ilə ARATON tam rasionlu yaş yemi böyüyən it üçün balanslaşdırılmış seçimdir. Küçük böyüdükcə sadəcə doymaq kifayət deyil – hər tikə rahat həzmi, sağlam böyüməni və güclü immuniteti təmin etməlidir. Bu yaş yem ev heyvanınız üçün həyatının ilk aylarından möhkəm təməl qurmağa kömək etmək üçün yaradılıb. O, 1 aylıqdan 12 aylığa qədər bütün cinslərdən olan gənc itlər üçün nəzərdə tutulub; əsas zülal mənbələri quzu (16 %) və dovşan ətidir (8 %).",
+    "78 % heyvan mənşəli inqrediyentlər və 92 %-ə qədər heyvan mənşəli zülal böyüyən orqanizm üçün vacib, asan mənimsənilən qida maddələridir. Quzu və dovşan əti itinizi əzələ kütləsinin formalaşmasına kömək edən və orqanizmi enerji ilə təmin edən yüksək keyfiyyətli zülalla təmin edir; bu zərif ət hətta həssas küçüklərə də uyğundur. Düyü unu və çuğundur cecəsi karbohidratların yumşaq mənbəyi və həzm balansını dəstəkləyən təbii prebiotiklərdir; liflə birlikdə onlar bağırsaq mikroflorasını və nəcisin keyfiyyətini qorumağa kömək edir ki, bu da həzmi daha həssas olan küçüklər üçün vacibdir. Yaş tekstura iştahı artırır və ana südündən keçidi asanlaşdırır.",
+    "Otlar – kəklikotu, adaçayı, cəfəri və oreqano – iştahı, orqanizmin təbii müqavimətini və yaxşı əhvalı dəstəkləyən ənənəvi inqrediyentlərdir. Qlükozamin və xondroitin oynaqların inkişafı üçün vacibdir: onlar aktiv böyümə dövründə, xüsusilə orta və iri cinslərdə, böyüyən küçüklərin oynaqlarına qulluq etməyə və qığırdaqlarını qorumağa kömək edir, çevikliyi dəstəkləyir. Kalsium və fosforun balanslaşdırılmış miqdarı sümüklərin möhkəmliyinə kömək edir.",
+    "A, D3 və E vitaminləri və minerallar (sink, manqan, mis) immun sistemi, sağlam dəri və tük örtüyü, fermentativ proseslər və tam inkişaf üçün zəruridir. Taurin – gənc itin orqanizminin özünün istehsal etmədiyi əvəzolunmaz amin turşusu – ürəyin işini, görməni və sinir sisteminin inkişafını dəstəkləyir. Süni ətirləndiricilər, boyaqlar və dad gücləndiriciləri yoxdur – yalnız böyüməyə uyğunlaşdırılmış aydın formula, artıq və ya çətin qəbul olunan əlavələr olmadan, həssas böyüyən orqanizm üçün təhlükəsizdir.",
+    "ARATON reseptləri heyvanların qidalanması üzrə ekspertlərlə birlikdə, marketinq fəndlərini deyil, ev heyvanlarının real ehtiyaclarını nəzərə alaraq hazırlanır. 1 aylıqdan 12 aylığa qədər gündəlik qidalandırma üçün uyğundur – əsas yem kimi və ya ona əlavə kimi; quru yemlə birləşdirilə və ya bərk qidaya tədricən keçid üçün istifadə edilə bilər. Yüksək keyfiyyət standartlarına uyğun olaraq Litvada istehsal olunub. ARATON – bütün dünyada bir çox sahibin etibar etdiyi KIKA ailəsinin məhsuludur – gündəlik qidalandırma təkcə xoş deyil, həm də faydalı olsun deyə."
+   ],
+   "composition": "Tikələrdə 78 % heyvan mənşəli inqrediyentlər (ət və heyvan mənşəli əlavə məhsullar (o cümlədən 16 % quzu əti, 8 % dovşan əti)), bulyon, düyü unu, şəkər çuğunduru cecəsi, natrium xlorid, otların emalı məhsulları 0,1 % (kəklikotu, adaçayı, cəfəri, oreqano), minerallar, qlükozamin (500 mq/kq), xondroitin sulfat (200 mq/kq).",
+   "additives": "1 kq üçün qida əlavələri: A vitamini (3a672a) — 1000 BV, D3 vitamini (3a671) — 300 BV, E vitamini (3a700) — 100 mq, susuz kalsium yodat (3b202) — 0,5 mq, mis (II) sulfat pentahidrat (3b405) — 2 mq, manqan sulfat monohidrat (3b503) — 2 mq, sink oksid (3b603) — 25 mq, taurin (3a370) — 1000 mq.",
+   "analysis": [
+    {
+     "name": "Xam protein",
+     "value": "8 %"
+    },
+    {
+     "name": "Xam lif",
+     "value": "0,7 %"
+    },
+    {
+     "name": "Xam yağ",
+     "value": "3,8 %"
+    },
+    {
+     "name": "Xam kül",
+     "value": "1,9 %"
+    },
+    {
+     "name": "Nəmlik",
+     "value": "82 %"
+    },
+    {
+     "name": "Kalsium",
+     "value": "0,3 %"
+    },
+    {
+     "name": "Fosfor",
+     "value": "0,2 %"
+    },
+    {
+     "name": "Natrium",
+     "value": "0,3 %"
+    },
+    {
+     "name": "Enerji dəyəri",
+     "value": "774 kkal/kq"
+    }
+   ],
+   "feeding": "Gündəlik norma: qidalandırma cədvəlinə baxın. Cədvəldə göstərilən miqdarlar yalnız tövsiyə xarakteri daşıyır və hər bir ev heyvanının fərdi ehtiyaclarına uyğunlaşdırılmalıdır. Gündəlik norma çöldəki havanın temperaturundan, ev heyvanının həyat tərzindən, temperamentindən və aktivliyindən asılı olaraq dəyişə bilər. Təzə, təmiz su olan qab həmişə ev heyvanının əlçatan yerində olmalıdır. 500 q-lıq qablaşdırma üçün küçüyün yaşından və yetkin itin çəkisindən (1–5 / 5–10 / 10–15 / 15–20 / 20–25 kq) asılı olaraq gündəlik norma (ədədlə): 2–4 ay – 0,5 / 1 / 1,5 / 2 / 2; 4–6 ay – 0,5 / 1 / 2 / 2 / 2,5; 6–12 ay – 0,5 / 1 / 2 / 2,5 / 3. Açıldıqdan sonra soyuducuda (+4 °C) saxlayın və 48 saat ərzində istifadə edin."
+  }
+ },
+ "araton:assets/products/art-dog-pouch-beef.webp": {
+  "url": "https://www.kika.lt/products/araton-visu-veisliu-suaugusiu-sunu-slapias-pasaras-su-jautiena-ir-triusiena",
+  "sku": null,
+  "packs": [
+   "85 g",
+   "500 g"
+  ],
+  "feed": [
+   [
+    1,
+    5,
+    170,
+    510
+   ],
+   [
+    5,
+    10,
+    510,
+    850
+   ],
+   [
+    10,
+    15,
+    850,
+    1190
+   ]
+  ],
+  "ru": {
+   "full": [
+    "Полнорационный влажный корм ARATON с говядиной и кроликом предназначен для взрослых собак всех пород старше 1 года. Основные источники белка – говядина и кролик; ингредиенты животного происхождения составляют 78 % кусочков. Говядина и кролик дают полноценный высококачественный белок, который поддерживает мышечный тонус и энергию на каждый день, сытость и белковый баланс.",
+    "Кусочки в соусе – вкусный и легкоусвояемый выбор: влажная текстура стимулирует аппетит и помогает поддерживать правильный водный баланс. Свекольный жом и клетчатка действуют как пребиотики для пищеварительной системы – естественная поддержка микрофлоры кишечника и лучшая консистенция стула. Натуральные травы – тимьян, шалфей, петрушка и орегано – мягко помогают поддерживать пищеварительный комфорт и общее самочувствие и укрепляют сопротивляемость организма.",
+    "Витамины A, D3 и E поддерживают кожу, глаза, иммунитет и защиту клеток, а цинк, марганец и медь – функции кожи, шерсти и иммунной системы. Сбалансированная формула подходит для ежедневного кормления. Без искусственных красителей и ароматизаторов – чистая формула на каждый день и безопасный, ответственный выбор для более чувствительных собак и заботливых владельцев.",
+    "Корм – хороший выбор, когда собаке нужен вкусный влажный корм с высококачественным белком, когда у неё более чувствительное пищеварение или сниженный аппетит или когда ей нужно более влажное питание и дополнительная жидкость. Его можно использовать как дополнение к сухому корму в более мягкой, легко поедаемой форме. Он подойдёт владельцам, которые ищут понятный состав без искусственных ароматизаторов и красителей, и помогает поддерживать мышечную массу и хорошую работу пищеварения в ежедневном рационе."
+   ],
+   "composition": "78 % ингредиентов животного происхождения в кусочках (мясо и побочные продукты животного происхождения (в т. ч. 21 % говядины, 4 % кролика)), бульон, рисовая мука, жом сахарной свёклы, витальная пшеничная клейковина, 0,1 % продуктов переработки трав (тимьян, шалфей, петрушка, орегано).",
+   "additives": "Питательные добавки на 1 кг: витамин A (3a672a) — 1000 МЕ, витамин D3 (3a671) — 300 МЕ, витамин E (3a700) — 100 мг, безводный йодат кальция (3b202) — 0,5 мг, пентагидрат сульфата меди (II) (3b405) — 2 мг, моногидрат сульфата марганца (3b503) — 2 мг, оксид цинка (3b603) — 25 мг.",
+   "analysis": [
+    {
+     "name": "Сырой протеин",
+     "value": "8,7 %"
+    },
+    {
+     "name": "Сырая клетчатка",
+     "value": "1,0 %"
+    },
+    {
+     "name": "Сырой жир",
+     "value": "3,8 %"
+    },
+    {
+     "name": "Сырая зола",
+     "value": "2,5 %"
+    },
+    {
+     "name": "Влажность",
+     "value": "82 %"
+    },
+    {
+     "name": "Кальций",
+     "value": "0,2 %"
+    },
+    {
+     "name": "Фосфор",
+     "value": "0,15 %"
+    },
+    {
+     "name": "Энергетическая ценность",
+     "value": "743 ккал/кг"
+    }
+   ],
+   "feeding": "Суточная норма: см. таблицу кормления. Указанные в таблице количества носят рекомендательный характер и должны корректироваться с учётом индивидуальных потребностей каждого питомца. Суточная норма может меняться в зависимости от температуры воздуха на улице, образа жизни, темперамента и активности питомца. Миска со свежей чистой водой всегда должна стоять в доступном для питомца месте. Суточная норма в паучах по 85 г в зависимости от веса собаки: 1–5 кг – 2–6 шт.; 5–10 кг – 6–10 шт.; 10–15 кг – 10–14 шт. Суточная норма в паучах по 500 г в зависимости от веса собаки: 1–5 кг – 0,5–1 шт.; 5–10 кг – 1–1,5 шт.; 10–15 кг – 1,5–2,5 шт.; 15–20 кг – 2,5–3 шт.; 20–25 кг – 3–3,5 шт. После вскрытия хранить в холодильнике (+4 °C) и использовать в течение 48 часов."
+  },
+  "en": {
+   "full": [
+    "ARATON complete wet food with beef and rabbit is intended for adult dogs of all breeds from 1 year. The main protein sources are beef and rabbit, and ingredients of animal origin make up 78 % of the chunks. Beef and rabbit provide complete, high-quality protein that supports muscle tone and daily energy, satiety and protein balance.",
+    "Chunks in gravy are a tasty and easily digestible choice: the moist texture stimulates the appetite and helps maintain the right fluid balance. Beet pulp and fibre act as prebiotics for the digestive system – natural support for the gut microflora and better stool consistency. Natural herbs – thyme, sage, parsley and oregano – gently help maintain digestive comfort and general well-being and strengthen the body’s resistance.",
+    "Vitamins A, D3 and E support the skin, eyes, immunity and cell protection, while zinc, manganese and copper support the functions of the skin, coat and immune system. The balanced formula is suitable for daily feeding. No artificial colourings or flavourings – a clean formula for every day and a safe, responsible choice for more sensitive dogs and caring owners.",
+    "The food is a good choice when a dog needs a tasty wet food with high-quality protein, has more sensitive digestion or a reduced appetite, or needs a moister diet or extra fluid. It can complement dry food in a gentler, easy-to-eat form. It suits owners looking for a clear composition without artificial flavourings and colourings and helps maintain muscle mass and good digestive function in the daily diet."
+   ],
+   "composition": "78 % ingredients of animal origin in chunks (meat and animal by-products (including 21 % beef, 4 % rabbit)), broth, rice flour, sugar beet pulp, vital wheat gluten, 0.1 % herb processing products (thyme, sage, parsley, oregano).",
+   "additives": "Nutritional additives per 1 kg: vitamin A (3a672a) — 1000 IU, vitamin D3 (3a671) — 300 IU, vitamin E (3a700) — 100 mg, calcium iodate anhydrous (3b202) — 0.5 mg, copper (II) sulphate pentahydrate (3b405) — 2 mg, manganous sulphate monohydrate (3b503) — 2 mg, zinc oxide (3b603) — 25 mg.",
+   "analysis": [
+    {
+     "name": "Crude protein",
+     "value": "8.7 %"
+    },
+    {
+     "name": "Crude fibre",
+     "value": "1.0 %"
+    },
+    {
+     "name": "Crude fat",
+     "value": "3.8 %"
+    },
+    {
+     "name": "Crude ash",
+     "value": "2.5 %"
+    },
+    {
+     "name": "Moisture",
+     "value": "82 %"
+    },
+    {
+     "name": "Calcium",
+     "value": "0.2 %"
+    },
+    {
+     "name": "Phosphorus",
+     "value": "0.15 %"
+    },
+    {
+     "name": "Energy value",
+     "value": "743 kcal/kg"
+    }
+   ],
+   "feeding": "Daily amount: see the feeding table. The amounts in the table are guidelines only and should be adjusted to the individual needs of each pet. The daily ration may vary depending on the outdoor temperature and on the pet’s lifestyle, temperament and activity. A bowl of fresh, clean water should always be within your pet’s reach. Daily amount in 85 g pouches by dog weight: 1–5 kg – 2–6 pouches; 5–10 kg – 6–10 pouches; 10–15 kg – 10–14 pouches. Daily amount in 500 g pouches by dog weight: 1–5 kg – 0.5–1 pouches; 5–10 kg – 1–1.5 pouches; 10–15 kg – 1.5–2.5 pouches; 15–20 kg – 2.5–3 pouches; 20–25 kg – 3–3.5 pouches. After opening, store in the refrigerator (+4 °C) and use within 48 hours."
+  },
+  "az": {
+   "full": [
+    "Mal və dovşan əti ilə ARATON tam rasionlu yaş yemi 1 yaşdan yuxarı bütün cinslərdən olan yetkin itlər üçün nəzərdə tutulub. Əsas zülal mənbələri mal və dovşan ətidir; heyvan mənşəli inqrediyentlər tikələrin 78 %-ni təşkil edir. Mal və dovşan əti əzələ tonusunu və gündəlik enerjini, toxluq hissini və zülal balansını dəstəkləyən tam dəyərli, yüksək keyfiyyətli zülal verir.",
+    "Sousda tikələr dadlı və asan həzm olunan seçimdir: yaş tekstura iştahı artırır və düzgün maye balansını saxlamağa kömək edir. Çuğundur cecəsi və lif həzm sistemi üçün prebiotik kimi təsir göstərir – bağırsaq mikroflorasına təbii dəstək və nəcisin daha yaxşı konsistensiyası. Təbii otlar – kəklikotu, adaçayı, cəfəri və oreqano – həzm rahatlığını və ümumi əhvalı yumşaq şəkildə dəstəkləyir və orqanizmin müqavimətini gücləndirir.",
+    "A, D3 və E vitaminləri dərini, gözləri, immuniteti və hüceyrələrin qorunmasını, sink, manqan və mis isə dərinin, tük örtüyünün və immun sistemin funksiyalarını dəstəkləyir. Balanslaşdırılmış formula gündəlik qidalandırma üçün uyğundur. Süni boyaqlar və ətirləndiricilər yoxdur – hər gün üçün təmiz formula, daha həssas itlər və qayğıkeş sahiblər üçün təhlükəsiz, məsuliyyətli seçim.",
+    "Yem itə yüksək keyfiyyətli zülallı dadlı yaş yem lazım olduqda, həzmi daha həssas olduqda və ya iştahı azaldıqda, yaxud ona daha nəm qida və əlavə maye lazım olduqda yaxşı seçimdir. Onu daha yumşaq, asan yeyilən formada quru yemə əlavə kimi istifadə etmək olar. Süni ətirləndiricilər və boyaqlar olmadan aydın tərkib axtaran sahiblərə uyğundur və gündəlik rasionda əzələ kütləsini və həzmin yaxşı işini saxlamağa kömək edir."
+   ],
+   "composition": "Tikələrdə 78 % heyvan mənşəli inqrediyentlər (ət və heyvan mənşəli əlavə məhsullar (o cümlədən 21 % mal əti, 4 % dovşan əti)), bulyon, düyü unu, şəkər çuğunduru cecəsi, vital buğda kleykovinası, 0,1 % otların emalı məhsulları (kəklikotu, adaçayı, cəfəri, oreqano).",
+   "additives": "1 kq üçün qida əlavələri: A vitamini (3a672a) — 1000 BV, D3 vitamini (3a671) — 300 BV, E vitamini (3a700) — 100 mq, susuz kalsium yodat (3b202) — 0,5 mq, mis (II) sulfat pentahidrat (3b405) — 2 mq, manqan sulfat monohidrat (3b503) — 2 mq, sink oksid (3b603) — 25 mq.",
+   "analysis": [
+    {
+     "name": "Xam protein",
+     "value": "8,7 %"
+    },
+    {
+     "name": "Xam lif",
+     "value": "1,0 %"
+    },
+    {
+     "name": "Xam yağ",
+     "value": "3,8 %"
+    },
+    {
+     "name": "Xam kül",
+     "value": "2,5 %"
+    },
+    {
+     "name": "Nəmlik",
+     "value": "82 %"
+    },
+    {
+     "name": "Kalsium",
+     "value": "0,2 %"
+    },
+    {
+     "name": "Fosfor",
+     "value": "0,15 %"
+    },
+    {
+     "name": "Enerji dəyəri",
+     "value": "743 kkal/kq"
+    }
+   ],
+   "feeding": "Gündəlik norma: qidalandırma cədvəlinə baxın. Cədvəldə göstərilən miqdarlar yalnız tövsiyə xarakteri daşıyır və hər bir ev heyvanının fərdi ehtiyaclarına uyğunlaşdırılmalıdır. Gündəlik norma çöldəki havanın temperaturundan, ev heyvanının həyat tərzindən, temperamentindən və aktivliyindən asılı olaraq dəyişə bilər. Təzə, təmiz su olan qab həmişə ev heyvanının əlçatan yerində olmalıdır. İtin çəkisindən asılı olaraq 85 q-lıq paketlərlə gündəlik norma: 1–5 kq – 2–6 ədəd; 5–10 kq – 6–10 ədəd; 10–15 kq – 10–14 ədəd. İtin çəkisindən asılı olaraq 500 q-lıq paketlərlə gündəlik norma: 1–5 kq – 0,5–1 ədəd; 5–10 kq – 1–1,5 ədəd; 10–15 kq – 1,5–2,5 ədəd; 15–20 kq – 2,5–3 ədəd; 20–25 kq – 3–3,5 ədəd. Açıldıqdan sonra soyuducuda (+4 °C) saxlayın və 48 saat ərzində istifadə edin."
+  }
+ },
+ "araton:assets/products/art-dog-pouch-poultry.webp": {
+  "url": "https://www.kika.lt/products/araton-visu-veisliu-suaugusiu-sunu-slapias-pasaras-su-paukstiena-ir-triusiena",
+  "sku": null,
+  "packs": [
+   "85 g",
+   "500 g"
+  ],
+  "feed": [
+   [
+    1,
+    5,
+    250,
+    500
+   ],
+   [
+    5,
+    10,
+    500,
+    750
+   ],
+   [
+    10,
+    15,
+    750,
+    1250
+   ],
+   [
+    15,
+    20,
+    1250,
+    1500
+   ],
+   [
+    20,
+    25,
+    1500,
+    1750
+   ]
+  ],
+  "ru": {
+   "full": [
+    "Полнорационный влажный корм ARATON с птицей и кроликом – сбалансированный выбор для взрослой собаки. Когда важен не только вкус, но и ежедневное благополучие, этот корм становится надёжным решением. Предназначенный для взрослых собак всех пород старше 1 года, он обеспечивает важнейшими питательными веществами и помогает поддерживать здоровое пищеварение, крепкий иммунитет и хорошее состояние кожи и шерсти.",
+    "77 % ингредиентов животного происхождения, а целых 93 % всего белка – животного происхождения: это ценный источник белка, легко усваиваемый организмом собаки. Птица даёт энергию, а кролик мягок даже для более чувствительных собак; вместе они помогают поддерживать мышечную массу, мышечный тонус и энергию на каждый день. Кусочки в соусе имеют вкусную, нежную и легкоусвояемую текстуру, которая подходит даже привередливым собакам, собакам с более чувствительным желудком или сниженным аппетитом и тем, кто предпочитает более влажную и мягкую текстуру.",
+    "Рисовая мука и свекольный жом – мягкие, легкоусвояемые углеводы и натуральные пребиотики, которые помогают поддерживать микрофлору кишечника и хорошую консистенцию стула. Маннан-олигосахариды (MOS) – активные пребиотические соединения, которые способствуют укреплению пищеварительной системы, поддерживают баланс пищеварения и здоровую работу кишечника, а также иммунитет. Добавленные травы – тимьян, шалфей, петрушка и орегано – нужны не только для аромата, но и для естественной сопротивляемости организма, пищеварения и лучшего качества повседневной жизни.",
+    "Витамины A, D3 и E и минералы (цинк, марганец, медь) помогают поддерживать крепкую иммунную систему, здоровую кожу и глаза, блестящую шерсть и ферментативные процессы. Соотношение белков и жиров адаптировано к ежедневной активности собаки без риска ожирения. Без искусственных ароматизаторов, красителей и усилителей вкуса – только то, что важно собаке, без лишних добавок: чистый выбор на каждый день.",
+    "Рецептуры ARATON разрабатываются вместе с экспертами по питанию животных на основе реальных потребностей питомцев. Подходит для ежедневного кормления собак всех пород – как самостоятельный полноценный рацион или в сочетании с сухим кормом. Произведено в Литве с соблюдением высоких стандартов качества. ARATON – продукт семейства KIKA, которому доверяют сотни тысяч владельцев по всему миру, – чтобы ежедневное кормление было не только приятным, но и полезным."
+   ],
+   "composition": "77 % ингредиентов животного происхождения в кусочках (мясо и побочные продукты животного происхождения (в т. ч. 61 % птицы, 4 % кролика)), бульон, рисовая мука, жом сахарной свёклы, витальная пшеничная клейковина, маннан-олигосахариды (MOS), 0,1 % продуктов переработки трав (тимьян, шалфей, петрушка, орегано).",
+   "additives": "Питательные добавки на 1 кг: витамин A (3a672a) — 1000 МЕ, витамин D3 (3a671) — 300 МЕ, витамин E (3a700) — 100 мг, безводный йодат кальция (3b202) — 0,5 мг, пентагидрат сульфата меди (II) (3b405) — 2 мг, моногидрат сульфата марганца (3b503) — 2 мг, оксид цинка (3b603) — 25 мг.",
+   "analysis": [
+    {
+     "name": "Сырой протеин",
+     "value": "8,5 %"
+    },
+    {
+     "name": "Сырая клетчатка",
+     "value": "0,8 %"
+    },
+    {
+     "name": "Сырой жир",
+     "value": "3,5 %"
+    },
+    {
+     "name": "Сырая зола",
+     "value": "2 %"
+    },
+    {
+     "name": "Влажность",
+     "value": "82 %"
+    },
+    {
+     "name": "Кальций",
+     "value": "0,2 %"
+    },
+    {
+     "name": "Фосфор",
+     "value": "0,15 %"
+    },
+    {
+     "name": "Энергетическая ценность",
+     "value": "755 ккал/кг"
+    }
+   ],
+   "feeding": "Суточная норма: см. таблицу кормления. Указанные в таблице количества носят рекомендательный характер и должны корректироваться с учётом индивидуальных потребностей каждого питомца. Суточная норма может меняться в зависимости от температуры воздуха на улице, образа жизни, темперамента и активности питомца. Миска со свежей чистой водой всегда должна стоять в доступном для питомца месте. Суточная норма в паучах по 500 г в зависимости от веса собаки: 1–5 кг – 0,5–1 шт.; 5–10 кг – 1–1,5 шт.; 10–15 кг – 1,5–2,5 шт.; 15–20 кг – 2,5–3 шт.; 20–25 кг – 3–3,5 шт. После вскрытия хранить в холодильнике (+4 °C) и использовать в течение 48 часов."
+  },
+  "en": {
+   "full": [
+    "ARATON complete wet food with poultry and rabbit is a balanced choice for an adult dog. When not only taste but also daily well-being matters, this food becomes a reliable solution. Intended for adult dogs of all breeds from 1 year, it provides the most important nutrients and helps maintain healthy digestion, strong immunity and good skin and coat condition.",
+    "77 % ingredients of animal origin, and as much as 93 % of all protein is of animal origin – a high-value protein source that is easily absorbed by the dog’s body. Poultry provides energy, while rabbit is gentle even for more sensitive dogs; together they help maintain muscle mass, muscle tone and daily energy. Chunks in gravy have a tasty, gentle and easily digestible texture that suits even fussy dogs, dogs with a more sensitive stomach or a reduced appetite, and dogs that prefer a moister, softer texture.",
+    "Rice flour and beet pulp are gentle, digestible carbohydrates and natural prebiotics that help maintain the gut microflora and good stool consistency. Mannan-oligosaccharides (MOS) are active prebiotic compounds that help strengthen the digestive system, maintain digestive balance and healthy gut function and support immunity. The added herbs – thyme, sage, parsley and oregano – are there not only for aroma but also for natural resistance, digestion and a better quality of everyday life.",
+    "Vitamins A, D3 and E and minerals (zinc, manganese, copper) help maintain a strong immune system, healthy skin and eyes and a shiny coat and support enzymatic processes. The protein-to-fat ratio is adapted to a dog’s daily activity without the risk of obesity. No artificial flavourings, colourings or flavour enhancers – only what matters to a dog, without excessive additives: a clean choice for every day.",
+    "ARATON recipes are developed together with animal nutrition experts based on pets’ real needs. Suitable for daily feeding of dogs of all breeds – as a complete diet on its own or combined with dry food. Made in Lithuania to high quality standards. ARATON is a KIKA family product trusted by hundreds of thousands of owners around the world – so that daily feeding is not only enjoyable but also beneficial."
+   ],
+   "composition": "77 % ingredients of animal origin in chunks (meat and animal by-products (including 61 % poultry, 4 % rabbit)), broth, rice flour, sugar beet pulp, vital wheat gluten, mannan-oligosaccharides (MOS), 0.1 % herb processing products (thyme, sage, parsley, oregano).",
+   "additives": "Nutritional additives per 1 kg: vitamin A (3a672a) — 1000 IU, vitamin D3 (3a671) — 300 IU, vitamin E (3a700) — 100 mg, calcium iodate anhydrous (3b202) — 0.5 mg, copper (II) sulphate pentahydrate (3b405) — 2 mg, manganous sulphate monohydrate (3b503) — 2 mg, zinc oxide (3b603) — 25 mg.",
+   "analysis": [
+    {
+     "name": "Crude protein",
+     "value": "8.5 %"
+    },
+    {
+     "name": "Crude fibre",
+     "value": "0.8 %"
+    },
+    {
+     "name": "Crude fat",
+     "value": "3.5 %"
+    },
+    {
+     "name": "Crude ash",
+     "value": "2 %"
+    },
+    {
+     "name": "Moisture",
+     "value": "82 %"
+    },
+    {
+     "name": "Calcium",
+     "value": "0.2 %"
+    },
+    {
+     "name": "Phosphorus",
+     "value": "0.15 %"
+    },
+    {
+     "name": "Energy value",
+     "value": "755 kcal/kg"
+    }
+   ],
+   "feeding": "Daily amount: see the feeding table. The amounts in the table are guidelines only and should be adjusted to the individual needs of each pet. The daily ration may vary depending on the outdoor temperature and on the pet’s lifestyle, temperament and activity. A bowl of fresh, clean water should always be within your pet’s reach. Daily amount in 500 g pouches by dog weight: 1–5 kg – 0.5–1 pouches; 5–10 kg – 1–1.5 pouches; 10–15 kg – 1.5–2.5 pouches; 15–20 kg – 2.5–3 pouches; 20–25 kg – 3–3.5 pouches. After opening, store in the refrigerator (+4 °C) and use within 48 hours."
+  },
+  "az": {
+   "full": [
+    "Quş və dovşan əti ilə ARATON tam rasionlu yaş yemi yetkin it üçün balanslaşdırılmış seçimdir. Təkcə dad deyil, həm də gündəlik rifah vacib olduqda bu yem etibarlı həllə çevrilir. 1 yaşdan yuxarı bütün cinslərdən olan yetkin itlər üçün nəzərdə tutulan yem ən vacib qida maddələrini təmin edir, sağlam həzmi, güclü immuniteti, dərinin və tük örtüyünün yaxşı vəziyyətini saxlamağa kömək edir.",
+    "77 % heyvan mənşəli inqrediyentlər, bütün zülalın isə 93 %-i heyvan mənşəlidir – bu, itin orqanizmi tərəfindən asan mənimsənilən yüksək dəyərli zülal mənbəyidir. Quş əti enerji verir, dovşan əti isə hətta daha həssas itlər üçün də yumşaqdır; birlikdə onlar əzələ kütləsini, əzələ tonusunu və gündəlik enerjini saxlamağa kömək edir. Sousda tikələr dadlı, zərif və asan həzm olunan teksturaya malikdir və hətta seçici itlərə, mədəsi daha həssas və ya iştahı azalmış itlərə, həmçinin daha nəm, yumşaq teksturanı sevən itlərə uyğundur.",
+    "Düyü unu və çuğundur cecəsi bağırsaq mikroflorasını və nəcisin yaxşı konsistensiyasını saxlamağa kömək edən yumşaq, asan həzm olunan karbohidratlar və təbii prebiotiklərdir. Mannan-oliqosaxaridlər (MOS) həzm sistemini gücləndirməyə, həzm balansını və bağırsaqların sağlam işini saxlamağa, həmçinin immuniteti dəstəkləməyə kömək edən aktiv prebiotik birləşmələrdir. Əlavə edilmiş otlar – kəklikotu, adaçayı, cəfəri və oreqano – təkcə ətir üçün deyil, həm də orqanizmin təbii müqaviməti, həzm və gündəlik həyatın daha yaxşı keyfiyyəti üçündür.",
+    "A, D3 və E vitaminləri və minerallar (sink, manqan, mis) güclü immun sistemini, sağlam dərini və gözləri, parlaq tük örtüyünü saxlamağa kömək edir və fermentativ prosesləri dəstəkləyir. Zülal və yağ nisbəti itin gündəlik aktivliyinə piylənmə riski olmadan uyğunlaşdırılıb. Süni ətirləndiricilər, boyaqlar və dad gücləndiriciləri yoxdur – yalnız it üçün vacib olanlar, artıq əlavələr olmadan: hər gün üçün təmiz seçim.",
+    "ARATON reseptləri heyvanların qidalanması üzrə ekspertlərlə birlikdə ev heyvanlarının real ehtiyacları əsasında hazırlanır. Bütün cinslərdən olan itlərin gündəlik qidalandırılması üçün uyğundur – müstəqil tam dəyərli rasion kimi və ya quru yemlə birlikdə. Yüksək keyfiyyət standartlarına uyğun olaraq Litvada istehsal olunub. ARATON – bütün dünyada yüz minlərlə sahibin etibar etdiyi KIKA ailəsinin məhsuludur – gündəlik qidalandırma təkcə xoş deyil, həm də faydalı olsun deyə."
+   ],
+   "composition": "Tikələrdə 77 % heyvan mənşəli inqrediyentlər (ət və heyvan mənşəli əlavə məhsullar (o cümlədən 61 % quş əti, 4 % dovşan əti)), bulyon, düyü unu, şəkər çuğunduru cecəsi, vital buğda kleykovinası, mannan-oliqosaxaridlər (MOS), 0,1 % otların emalı məhsulları (kəklikotu, adaçayı, cəfəri, oreqano).",
+   "additives": "1 kq üçün qida əlavələri: A vitamini (3a672a) — 1000 BV, D3 vitamini (3a671) — 300 BV, E vitamini (3a700) — 100 mq, susuz kalsium yodat (3b202) — 0,5 mq, mis (II) sulfat pentahidrat (3b405) — 2 mq, manqan sulfat monohidrat (3b503) — 2 mq, sink oksid (3b603) — 25 mq.",
+   "analysis": [
+    {
+     "name": "Xam protein",
+     "value": "8,5 %"
+    },
+    {
+     "name": "Xam lif",
+     "value": "0,8 %"
+    },
+    {
+     "name": "Xam yağ",
+     "value": "3,5 %"
+    },
+    {
+     "name": "Xam kül",
+     "value": "2 %"
+    },
+    {
+     "name": "Nəmlik",
+     "value": "82 %"
+    },
+    {
+     "name": "Kalsium",
+     "value": "0,2 %"
+    },
+    {
+     "name": "Fosfor",
+     "value": "0,15 %"
+    },
+    {
+     "name": "Enerji dəyəri",
+     "value": "755 kkal/kq"
+    }
+   ],
+   "feeding": "Gündəlik norma: qidalandırma cədvəlinə baxın. Cədvəldə göstərilən miqdarlar yalnız tövsiyə xarakteri daşıyır və hər bir ev heyvanının fərdi ehtiyaclarına uyğunlaşdırılmalıdır. Gündəlik norma çöldəki havanın temperaturundan, ev heyvanının həyat tərzindən, temperamentindən və aktivliyindən asılı olaraq dəyişə bilər. Təzə, təmiz su olan qab həmişə ev heyvanının əlçatan yerində olmalıdır. İtin çəkisindən asılı olaraq 500 q-lıq paketlərlə gündəlik norma: 1–5 kq – 0,5–1 ədəd; 5–10 kq – 1–1,5 ədəd; 10–15 kq – 1,5–2,5 ədəd; 15–20 kq – 2,5–3 ədəd; 20–25 kq – 3–3,5 ədəd. Açıldıqdan sonra soyuducuda (+4 °C) saxlayın və 48 saat ərzində istifadə edin."
+  }
+ },
+ "araton:assets/products/art-cat-pouch-kitten.webp": {
+  "url": "https://www.kika.lt/products/araton-visu-veisliu-kaciuku-slapias-pasaras-su-kalakutiena-ir-vistiena",
+  "sku": null,
+  "packs": [
+   "85 g"
+  ],
+  "feed": [],
+  "ru": {
+   "full": [
+    "Полнорационный влажный корм ARATON с курицей и индейкой – сбалансированный выбор для растущего котёнка. Пока маленький котёнок растёт, важно не просто насытиться – каждый кусочек должен обеспечивать здоровое развитие, крепкий иммунитет и лёгкое пищеварение. Этот корм создан, чтобы с первых месяцев жизни помочь заложить прочную основу для вашего питомца. Он предназначен для котят всех пород в возрасте от 2 до 12 месяцев.",
+    "78 % ингредиентов животного происхождения – важный, легкоусвояемый белок для растущего организма, близкий к естественному питанию; высокая доля животных компонентов обеспечивает качество белка и правильный баланс питания для роста. Курица (34 %) и индейка (44 %) – нежное, натуральное и хорошо усваиваемое сочетание источников белка, которое помогает наращивать мышечную массу и снабжает организм энергией. Сочетание двух вкусов также помогает поддерживать интерес котёнка к корму.",
+    "Свекольный жом, пивные дрожжи, целлюлоза и травы – тимьян, шалфей, петрушка и орегано – поддерживают пищеварительный комфорт и работу кишечника, стимулируют аппетит и естественную сопротивляемость и помогают сохранять естественный баланс организма. Это мягкая формула, подходящая более чувствительным котятам. Добавленный таурин необходим организму кошки: он помогает поддерживать зрение, работу сердца и общее хорошее самочувствие.",
+    "Витамины A, D3 и E и минералы (железо, йод, марганец, цинк, медь) важны для иммунной системы, состояния кожи и шерсти и развития костей. Мягкий натуральный вкус без искусственных ароматизаторов, красителей и усилителей вкуса – чистый состав с понятными ингредиентами, которому можно доверять каждый день.",
+    "Рецептуры ARATON разрабатываются в сотрудничестве с экспертами по питанию животных на основе реальных потребностей питомцев – без лишних добавок и ненужных ингредиентов. Подходит для ежедневного кормления с 2 до 12 месяцев; можно использовать как основной корм или как дополнительный корм к сухому, в том числе для котят с более чувствительным пищеварением или сниженным аппетитом и для котят, которым важны более влажное питание и водный баланс. Произведено в Литве с соблюдением высоких стандартов качества. ARATON – продукт семейства KIKA, которому доверяют многие владельцы по всему миру, – чтобы ежедневное кормление было не только приятным, но и полезным."
+   ],
+   "composition": "78 % ингредиентов животного происхождения в кусочках (мясо и побочные продукты животного происхождения (в т. ч. 44 % индейки, 34 % курицы)), бульон, жом сахарной свёклы, целлюлоза, пивные дрожжи, хлорид натрия, продукты переработки трав 0,1 % (тимьян, шалфей, петрушка, орегано), минералы.",
+   "additives": "Питательные добавки на 1 кг: витамин A (3a672a) — 1000 МЕ, витамин D3 (3a671) — 300 МЕ, витамин E (3a700) — 100 мг, моногидрат сульфата железа (II) (3b103) — 2 мг, безводный йодат кальция (3b202) — 0,7 мг, пентагидрат сульфата меди (II) (3b405) — 2 мг, моногидрат сульфата марганца (3b503) — 2 мг, оксид цинка (3b603) — 10 мг, биотин (3a880) — 0,1 мг, таурин (3a370) — 1000 мг.",
+   "analysis": [
+    {
+     "name": "Сырой протеин",
+     "value": "9 %"
+    },
+    {
+     "name": "Сырая клетчатка",
+     "value": "0,9 %"
+    },
+    {
+     "name": "Сырой жир",
+     "value": "3,5 %"
+    },
+    {
+     "name": "Сырая зола",
+     "value": "2 %"
+    },
+    {
+     "name": "Влажность",
+     "value": "82 %"
+    },
+    {
+     "name": "Кальций",
+     "value": "0,2 %"
+    },
+    {
+     "name": "Фосфор",
+     "value": "0,2 %"
+    },
+    {
+     "name": "Натрий",
+     "value": "0,3 %"
+    },
+    {
+     "name": "Омега-3 жирные кислоты",
+     "value": "0,1 %"
+    },
+    {
+     "name": "Омега-6 жирные кислоты",
+     "value": "1 %"
+    },
+    {
+     "name": "Энергетическая ценность",
+     "value": "753 ккал/кг"
+    }
+   ],
+   "feeding": "Суточная норма: см. таблицу кормления. Указанные в таблице количества носят рекомендательный характер и должны корректироваться с учётом индивидуальных потребностей каждого питомца. Суточная норма может меняться в зависимости от температуры воздуха на улице, образа жизни, темперамента и активности питомца. Миска со свежей чистой водой всегда должна стоять в доступном для питомца месте. Суточная норма в паучах в зависимости от возраста котёнка и ожидаемого веса взрослой кошки: 1–2 мес. – 1,5–2,5 шт.; 2–4 мес. – 2,5–3,5 шт.; 4–6 мес. – 3,5–5 шт. После вскрытия хранить в холодильнике (+4 °C) и использовать в течение 48 часов."
+  },
+  "en": {
+   "full": [
+    "ARATON complete wet food with chicken and turkey is a balanced choice for a growing kitten. While a small kitten is growing, it is not enough just to fill up – every bite should ensure healthy development, strong immunity and easy digestion. This food is designed to help build a solid foundation for your pet from the first months of life. It is intended for kittens of all breeds from 2 to 12 months of age.",
+    "78 % ingredients of animal origin – important, easily absorbed protein for a growing body, close to natural nutrition; the high share of animal components ensures protein quality and the right nutritional balance for growth. Chicken (34 %) and turkey (44 %) are a gentle, natural and well-digestible combination of protein sources that helps build muscle mass and supplies the body with energy. The combination of two flavours also helps keep the kitten interested in its food.",
+    "Beet pulp, brewer’s yeast, cellulose and herbs – thyme, sage, parsley and oregano – support digestive comfort and gut function, stimulate the appetite and natural resistance and help maintain the body’s natural balance. It is a gentle formula suitable for more sensitive kittens. Added taurine is essential for the cat’s body: it helps maintain vision, heart function and overall well-being.",
+    "Vitamins A, D3 and E and minerals (iron, iodine, manganese, zinc, copper) are important for the immune system, skin and coat condition and bone development. A gentle, natural taste without artificial flavourings, colourings or flavour enhancers – a clean composition with clear ingredients that you can trust every day.",
+    "ARATON recipes are developed in cooperation with animal nutrition experts based on pets’ real needs – without excessive additives or unnecessary ingredients. Suitable for daily feeding from 2 to 12 months; it can be used as the main food or as a complementary food alongside dry food, including for kittens with a more sensitive digestive system or a reduced appetite and for kittens for whom a moister diet and fluid balance are important. Made in Lithuania to high quality standards. ARATON is a KIKA family product trusted by many owners around the world – so that daily feeding is not only enjoyable but also beneficial."
+   ],
+   "composition": "78 % ingredients of animal origin in chunks (meat and animal by-products (including 44 % turkey, 34 % chicken)), broth, sugar beet pulp, cellulose, brewer’s yeast, sodium chloride, herb processing products 0.1 % (thyme, sage, parsley, oregano), minerals.",
+   "additives": "Nutritional additives per 1 kg: vitamin A (3a672a) — 1000 IU, vitamin D3 (3a671) — 300 IU, vitamin E (3a700) — 100 mg, iron (II) sulphate monohydrate (3b103) — 2 mg, calcium iodate anhydrous (3b202) — 0.7 mg, copper (II) sulphate pentahydrate (3b405) — 2 mg, manganous sulphate monohydrate (3b503) — 2 mg, zinc oxide (3b603) — 10 mg, biotin (3a880) — 0.1 mg, taurine (3a370) — 1000 mg.",
+   "analysis": [
+    {
+     "name": "Crude protein",
+     "value": "9 %"
+    },
+    {
+     "name": "Crude fibre",
+     "value": "0.9 %"
+    },
+    {
+     "name": "Crude fat",
+     "value": "3.5 %"
+    },
+    {
+     "name": "Crude ash",
+     "value": "2 %"
+    },
+    {
+     "name": "Moisture",
+     "value": "82 %"
+    },
+    {
+     "name": "Calcium",
+     "value": "0.2 %"
+    },
+    {
+     "name": "Phosphorus",
+     "value": "0.2 %"
+    },
+    {
+     "name": "Sodium",
+     "value": "0.3 %"
+    },
+    {
+     "name": "Omega-3 fatty acids",
+     "value": "0.1 %"
+    },
+    {
+     "name": "Omega-6 fatty acids",
+     "value": "1 %"
+    },
+    {
+     "name": "Energy value",
+     "value": "753 kcal/kg"
+    }
+   ],
+   "feeding": "Daily amount: see the feeding table. The amounts in the table are guidelines only and should be adjusted to the individual needs of each pet. The daily ration may vary depending on the outdoor temperature and on the pet’s lifestyle, temperament and activity. A bowl of fresh, clean water should always be within your pet’s reach. Daily amount in pouches by the kitten’s age, depending on the expected adult cat weight: 1–2 months – 1.5–2.5 pouches; 2–4 months – 2.5–3.5 pouches; 4–6 months – 3.5–5 pouches. After opening, store in the refrigerator (+4 °C) and use within 48 hours."
+  },
+  "az": {
+   "full": [
+    "Toyuq və hinduşka əti ilə ARATON tam rasionlu yaş yemi böyüyən pişik balası üçün balanslaşdırılmış seçimdir. Kiçik pişik balası böyüdükcə sadəcə doymaq kifayət deyil – hər tikə sağlam inkişafı, güclü immuniteti və asan həzmi təmin etməlidir. Bu yem həyatın ilk aylarından ev heyvanınız üçün möhkəm təməl qurmağa kömək etmək üçün yaradılıb. O, 2 aylıqdan 12 aylığa qədər bütün cinslərdən olan pişik balaları üçün nəzərdə tutulub.",
+    "78 % heyvan mənşəli inqrediyentlər – böyüyən orqanizm üçün təbii qidalanmaya yaxın, vacib və asan mənimsənilən zülaldır; heyvan mənşəli komponentlərin yüksək payı zülalın keyfiyyətini və böyümə üçün düzgün qida balansını təmin edir. Toyuq (34 %) və hinduşka əti (44 %) – əzələ kütləsinin artmasına kömək edən və orqanizmi enerji ilə təmin edən zərif, təbii və yaxşı həzm olunan zülal mənbələri birləşməsidir. İki dadın birləşməsi həm də pişik balasının yemə marağını qoruyub saxlamağa kömək edir.",
+    "Çuğundur cecəsi, pivə mayası, sellüloza və otlar – kəklikotu, adaçayı, cəfəri və oreqano – həzm rahatlığını və bağırsaqların işini dəstəkləyir, iştahı və təbii müqaviməti artırır, orqanizmin təbii balansını saxlamağa kömək edir. Bu, daha həssas pişik balalarına uyğun yumşaq formuladır. Əlavə edilmiş taurin pişik orqanizmi üçün zəruridir: o, görməni, ürəyin işini və ümumi yaxşı əhvalı saxlamağa kömək edir.",
+    "A, D3 və E vitaminləri və minerallar (dəmir, yod, manqan, sink, mis) immun sistemi, dərinin və tük örtüyünün vəziyyəti və sümüklərin inkişafı üçün vacibdir. Süni ətirləndiricilər, boyaqlar və dad gücləndiriciləri olmadan zərif, təbii dad – hər gün etibar edə biləcəyiniz aydın inqrediyentli təmiz tərkib.",
+    "ARATON reseptləri heyvanların qidalanması üzrə ekspertlərlə əməkdaşlıqda ev heyvanlarının real ehtiyacları əsasında hazırlanır – artıq əlavələr və lazımsız inqrediyentlər olmadan. 2 aylıqdan 12 aylığa qədər gündəlik qidalandırma üçün uyğundur; əsas yem kimi və ya quru yemə əlavə yem kimi istifadə oluna bilər, o cümlədən həzm sistemi daha həssas və ya iştahı azalmış pişik balaları, həmçinin daha nəm qida və maye balansı vacib olan pişik balaları üçün. Yüksək keyfiyyət standartlarına uyğun olaraq Litvada istehsal olunub. ARATON – bütün dünyada bir çox sahibin etibar etdiyi KIKA ailəsinin məhsuludur – gündəlik qidalandırma təkcə xoş deyil, həm də faydalı olsun deyə."
+   ],
+   "composition": "Tikələrdə 78 % heyvan mənşəli inqrediyentlər (ət və heyvan mənşəli əlavə məhsullar (o cümlədən 44 % hinduşka əti, 34 % toyuq əti)), bulyon, şəkər çuğunduru cecəsi, sellüloza, pivə mayası, natrium xlorid, otların emalı məhsulları 0,1 % (kəklikotu, adaçayı, cəfəri, oreqano), minerallar.",
+   "additives": "1 kq üçün qida əlavələri: A vitamini (3a672a) — 1000 BV, D3 vitamini (3a671) — 300 BV, E vitamini (3a700) — 100 mq, dəmir (II) sulfat monohidrat (3b103) — 2 mq, susuz kalsium yodat (3b202) — 0,7 mq, mis (II) sulfat pentahidrat (3b405) — 2 mq, manqan sulfat monohidrat (3b503) — 2 mq, sink oksid (3b603) — 10 mq, biotin (3a880) — 0,1 mq, taurin (3a370) — 1000 mq.",
+   "analysis": [
+    {
+     "name": "Xam protein",
+     "value": "9 %"
+    },
+    {
+     "name": "Xam lif",
+     "value": "0,9 %"
+    },
+    {
+     "name": "Xam yağ",
+     "value": "3,5 %"
+    },
+    {
+     "name": "Xam kül",
+     "value": "2 %"
+    },
+    {
+     "name": "Nəmlik",
+     "value": "82 %"
+    },
+    {
+     "name": "Kalsium",
+     "value": "0,2 %"
+    },
+    {
+     "name": "Fosfor",
+     "value": "0,2 %"
+    },
+    {
+     "name": "Natrium",
+     "value": "0,3 %"
+    },
+    {
+     "name": "Omeqa-3 yağ turşuları",
+     "value": "0,1 %"
+    },
+    {
+     "name": "Omeqa-6 yağ turşuları",
+     "value": "1 %"
+    },
+    {
+     "name": "Enerji dəyəri",
+     "value": "753 kkal/kq"
+    }
+   ],
+   "feeding": "Gündəlik norma: qidalandırma cədvəlinə baxın. Cədvəldə göstərilən miqdarlar yalnız tövsiyə xarakteri daşıyır və hər bir ev heyvanının fərdi ehtiyaclarına uyğunlaşdırılmalıdır. Gündəlik norma çöldəki havanın temperaturundan, ev heyvanının həyat tərzindən, temperamentindən və aktivliyindən asılı olaraq dəyişə bilər. Təzə, təmiz su olan qab həmişə ev heyvanının əlçatan yerində olmalıdır. Pişik balasının yaşından və yetkin pişiyin gözlənilən çəkisindən asılı olaraq paketlərlə gündəlik norma: 1–2 ay – 1,5–2,5 ədəd; 2–4 ay – 2,5–3,5 ədəd; 4–6 ay – 3,5–5 ədəd. Açıldıqdan sonra soyuducuda (+4 °C) saxlayın və 48 saat ərzində istifadə edin."
+  }
+ },
+ "araton:assets/products/art-cat-pouch-salmon.webp": {
+  "url": "https://www.kika.lt/products/araton-visu-veisliu-suaugusiu-kaciu-slapias-pasaras-su-lasisa-ir-vistiena",
+  "sku": null,
+  "packs": [
+   "85 g"
+  ],
+  "feed": [
+   [
+    1,
+    2,
+    128,
+    212
+   ],
+   [
+    2,
+    4,
+    212,
+    298
+   ],
+   [
+    4,
+    6,
+    298,
+    425
+   ]
+  ],
+  "ru": {
+   "full": [
+    "Полнорационный влажный корм ARATON с лососем и курицей – когда натуральный вкус сочетается с реальной пользой для здоровья кошки. Этот корм создан для взрослых кошек всех пород и размеров старше 1 года, для ежедневного кормления: без лишних добавок, но с полезным содержимым. Основные источники белка – лосось (27 %) и курица (25 %).",
+    "Кусочки в сочном соусе, 76 % ингредиентов животного и водного происхождения, обогащение травами – всё создано с учётом естественных инстинктов кошки и желания владельца давать ей настоящую еду. Лосось – отличный источник омега-кислот для здоровой шерсти и кожи; курица нежная, легкоусвояемая и хорошо переносится даже более чувствительными питомцами. Эти белки дают ценные аминокислоты для мышечного тонуса и энергии на каждый день – вкус и польза в одном.",
+    "Добавленный таурин – незаменимая аминокислота, необходимая для здорового сердца, зрения и нервной системы. Натуральные растительные добавки – тимьян, шалфей, петрушка и орегано – не только улучшают вкус и придают натуральный аромат, но и обладают свойствами, поддерживающими пищеварение. Рисовая мука и пшеничный белок обеспечивают мягкий источник энергии без нагрузки на желудок и вместе с травами поддерживают щадящий, хорошо усваиваемый рацион.",
+    "Витамины A, D3 и E и важные микроэлементы – железо, медь, цинк, марганец – поддерживают крепкую иммунную защиту, здоровую кожу, блестящую шерсть и хорошее самочувствие питомца. Сбалансированное содержание жира обеспечивает нужный уровень энергии без перегрузки организма, а влажность 82 % помогает поддерживать достаточное потребление жидкости и хороший аппетит даже у самых привередливых кошек; нежные кусочки в соусе – текстура, которую любят даже чувствительные кошки и кошки с плохим аппетитом. В составе нет искусственных ароматизаторов, красителей и усилителей вкуса – только то, что действительно важно для организма кошки.",
+    "Рецептуры ARATON разрабатываются в сотрудничестве с экспертами по питанию животных. Это ответственный выбор для кошек, которым важны вкус, хорошее пищеварение и чистый состав: для кошек с чувствительным пищеварением или склонностью к пищевой непереносимости, для кошек, шерсть которых потеряла блеск или кожа склонна к сухости, и для кошек, которым важно состояние сердца, зрения и нервной системы. Подходит для ежедневного кормления в качестве основного корма или в сочетании с сухим кормом. Произведено в Литве с соблюдением высоких стандартов качества. ARATON – продукт семейства KIKA, которому доверяют сотни тысяч владельцев по всему миру, – чтобы ежедневное кормление было не только приятным, но и полезным."
+   ],
+   "composition": "76 % ингредиентов животного и водного происхождения в кусочках (мясо и побочные продукты животного происхождения (в т. ч. 25 % курицы), рыба и побочные продукты рыбы (в т. ч. 27 % лосося)), бульон, рисовая мука, пшеничная клейковина, целлюлоза, продукты переработки трав 0,1 % (тимьян, шалфей, петрушка, орегано).",
+   "additives": "Питательные добавки на 1 кг: витамин A (3a672a) — 1000 МЕ, витамин D3 (3a671) — 300 МЕ, витамин E (3a700) — 100 мг, моногидрат сульфата железа (II) (3b103) — 2 мг, безводный йодат кальция (3b202) — 0,7 мг, пентагидрат сульфата меди (II) (3b405) — 2 мг, моногидрат сульфата марганца (3b503) — 2 мг, оксид цинка (3b603) — 10 мг, биотин (3a880) — 0,1 мг, таурин (3a370) — 1000 мг.",
+   "analysis": [
+    {
+     "name": "Сырой протеин",
+     "value": "8,5 %"
+    },
+    {
+     "name": "Сырая клетчатка",
+     "value": "1,2 %"
+    },
+    {
+     "name": "Сырой жир",
+     "value": "3,5 %"
+    },
+    {
+     "name": "Сырая зола",
+     "value": "2 %"
+    },
+    {
+     "name": "Влажность",
+     "value": "82 %"
+    },
+    {
+     "name": "Кальций",
+     "value": "0,2 %"
+    },
+    {
+     "name": "Фосфор",
+     "value": "0,15 %"
+    },
+    {
+     "name": "Энергетическая ценность",
+     "value": "736 ккал/кг"
+    }
+   ],
+   "feeding": "Суточная норма: см. таблицу кормления. Указанные в таблице количества носят рекомендательный характер и должны корректироваться с учётом индивидуальных потребностей каждого питомца. Суточная норма может меняться в зависимости от температуры воздуха на улице, образа жизни, темперамента и активности питомца. Миска со свежей чистой водой всегда должна стоять в доступном для питомца месте. Суточная норма в паучах по 85 г в зависимости от веса кошки: 1–2 кг – 1,5–2,5 шт.; 2–4 кг – 2,5–3,5 шт.; 4–6 кг – 3,5–5 шт. После вскрытия хранить в холодильнике (+4 °C) и использовать в течение 48 часов."
+  },
+  "en": {
+   "full": [
+    "ARATON complete wet food with salmon and chicken – where natural taste meets real value for a cat’s health. This food is created for adult cats of all breeds and sizes from 1 year, for daily feeding: without excessive additives, but with beneficial content. The main protein sources are salmon (27 %) and chicken (25 %).",
+    "Chunks in a juicy gravy, 76 % ingredients of animal and aquatic origin, enriched with herbs – everything is designed with the cat’s natural instincts and the owner’s wish to give something real in mind. Salmon is an excellent source of omega acids for a healthy coat and skin; chicken is gentle, easily digestible and well tolerated even by more sensitive pets. These proteins provide high-value amino acids for muscle tone and daily energy – taste and benefit in one.",
+    "Added taurine is an essential amino acid needed for a healthy heart, vision and nervous system. Natural plant additives – thyme, sage, parsley and oregano – not only improve the taste and give a natural aroma but also have digestion-supporting properties. Rice flour and wheat protein provide a gentle source of energy without burdening the stomach and, together with the herbs, support a gentle, well-digestible diet.",
+    "Vitamins A, D3 and E and important trace elements – iron, copper, zinc, manganese – support strong immune protection, healthy skin, a shiny coat and the pet’s good well-being. The balanced fat content provides the right energy level without overloading the body, and a moisture content of 82 % helps maintain sufficient fluid intake and supports a good appetite even in the fussiest cats; the tender chunks in gravy are a texture loved even by sensitive cats or cats with a small appetite. The composition contains no artificial flavourings, colourings or flavour enhancers – only what really matters to a cat’s body.",
+    "ARATON recipes are developed in cooperation with animal nutrition experts. It is a responsible choice for cats for whom taste, good digestion and a clean composition matter: cats with sensitive digestion or a tendency to food intolerance, cats whose coat has lost its shine or whose skin tends to get dry, and cats for whom the condition of the heart, vision and nervous system is important. Suitable for daily feeding as the main food or combined with dry food. Made in Lithuania to high quality standards. ARATON is a KIKA family product trusted by hundreds of thousands of owners around the world – so that daily feeding is not only enjoyable but also beneficial."
+   ],
+   "composition": "76 % ingredients of animal and aquatic origin in chunks (meat and animal by-products (including 25 % chicken), fish and fish by-products (including 27 % salmon)), broth, rice flour, wheat gluten, cellulose, herb processing products 0.1 % (thyme, sage, parsley, oregano).",
+   "additives": "Nutritional additives per 1 kg: vitamin A (3a672a) — 1000 IU, vitamin D3 (3a671) — 300 IU, vitamin E (3a700) — 100 mg, iron (II) sulphate monohydrate (3b103) — 2 mg, calcium iodate anhydrous (3b202) — 0.7 mg, copper (II) sulphate pentahydrate (3b405) — 2 mg, manganous sulphate monohydrate (3b503) — 2 mg, zinc oxide (3b603) — 10 mg, biotin (3a880) — 0.1 mg, taurine (3a370) — 1000 mg.",
+   "analysis": [
+    {
+     "name": "Crude protein",
+     "value": "8.5 %"
+    },
+    {
+     "name": "Crude fibre",
+     "value": "1.2 %"
+    },
+    {
+     "name": "Crude fat",
+     "value": "3.5 %"
+    },
+    {
+     "name": "Crude ash",
+     "value": "2 %"
+    },
+    {
+     "name": "Moisture",
+     "value": "82 %"
+    },
+    {
+     "name": "Calcium",
+     "value": "0.2 %"
+    },
+    {
+     "name": "Phosphorus",
+     "value": "0.15 %"
+    },
+    {
+     "name": "Energy value",
+     "value": "736 kcal/kg"
+    }
+   ],
+   "feeding": "Daily amount: see the feeding table. The amounts in the table are guidelines only and should be adjusted to the individual needs of each pet. The daily ration may vary depending on the outdoor temperature and on the pet’s lifestyle, temperament and activity. A bowl of fresh, clean water should always be within your pet’s reach. Daily amount in 85 g pouches by cat weight: 1–2 kg – 1.5–2.5 pouches; 2–4 kg – 2.5–3.5 pouches; 4–6 kg – 3.5–5 pouches. After opening, store in the refrigerator (+4 °C) and use within 48 hours."
+  },
+  "az": {
+   "full": [
+    "Qızılbalıq və toyuq əti ilə ARATON tam rasionlu yaş yemi – təbii dadın pişiyin sağlamlığı üçün real fayda ilə birləşdiyi yem. Bu yem 1 yaşdan yuxarı bütün cins və ölçülərdən olan yetkin pişiklər üçün, gündəlik qidalandırma məqsədilə yaradılıb: artıq əlavələr olmadan, lakin faydalı tərkiblə. Əsas zülal mənbələri qızılbalıq (27 %) və toyuq ətidir (25 %).",
+    "Şirəli sousda tikələr, 76 % heyvan və su mənşəli inqrediyentlər, otlarla zənginləşdirilmə – hər şey pişiyin təbii instinktləri və sahibin ona həqiqi qida vermək istəyi nəzərə alınaraq yaradılıb. Qızılbalıq sağlam tük örtüyü və dəri üçün omeqa turşularının əla mənbəyidir; toyuq əti zərif, asan həzm olunandır və hətta daha həssas ev heyvanları tərəfindən yaxşı qəbul edilir. Bu zülallar əzələ tonusu və gündəlik enerji üçün dəyərli amin turşuları verir – dad və fayda bir yerdə.",
+    "Əlavə edilmiş taurin sağlam ürək, görmə və sinir sistemi üçün zəruri olan əvəzolunmaz amin turşusudur. Təbii bitki əlavələri – kəklikotu, adaçayı, cəfəri və oreqano – təkcə dadı yaxşılaşdırmır və təbii ətir vermir, həm də həzmi dəstəkləyən xüsusiyyətlərə malikdir. Düyü unu və buğda zülalı mədəni yükləmədən yumşaq enerji mənbəyi təmin edir və otlarla birlikdə yumşaq, yaxşı həzm olunan rasionu dəstəkləyir.",
+    "A, D3 və E vitaminləri və vacib mikroelementlər – dəmir, mis, sink, manqan – güclü immun müdafiəni, sağlam dərini, parlaq tük örtüyünü və ev heyvanının yaxşı əhvalını dəstəkləyir. Balanslaşdırılmış yağ miqdarı orqanizmi yükləmədən lazımi enerji səviyyəsini təmin edir, 82 % nəmlik isə kifayət qədər maye qəbulunu saxlamağa kömək edir və hətta ən seçici pişiklərdə yaxşı iştahı dəstəkləyir; sousda zərif tikələr hətta həssas və ya iştahı az olan pişiklərin sevdiyi teksturadır. Tərkibdə süni ətirləndiricilər, boyaqlar və dad gücləndiriciləri yoxdur – yalnız pişiyin orqanizmi üçün həqiqətən vacib olanlar.",
+    "ARATON reseptləri heyvanların qidalanması üzrə ekspertlərlə əməkdaşlıqda hazırlanır. Bu, dad, yaxşı həzm və təmiz tərkib vacib olan pişiklər üçün məsuliyyətli seçimdir: həzmi həssas və ya qida dözümsüzlüyünə meylli pişiklər, tük örtüyü parlaqlığını itirmiş və ya dərisi quruluğa meylli pişiklər, həmçinin ürək, görmə və sinir sisteminin vəziyyəti vacib olan pişiklər üçün. Əsas yem kimi və ya quru yemlə birlikdə gündəlik qidalandırma üçün uyğundur. Yüksək keyfiyyət standartlarına uyğun olaraq Litvada istehsal olunub. ARATON – bütün dünyada yüz minlərlə sahibin etibar etdiyi KIKA ailəsinin məhsuludur – gündəlik qidalandırma təkcə xoş deyil, həm də faydalı olsun deyə."
+   ],
+   "composition": "Tikələrdə 76 % heyvan və su mənşəli inqrediyentlər (ət və heyvan mənşəli əlavə məhsullar (o cümlədən 25 % toyuq əti), balıq və balıq əlavə məhsulları (o cümlədən 27 % qızılbalıq)), bulyon, düyü unu, buğda kleykovinası, sellüloza, otların emalı məhsulları 0,1 % (kəklikotu, adaçayı, cəfəri, oreqano).",
+   "additives": "1 kq üçün qida əlavələri: A vitamini (3a672a) — 1000 BV, D3 vitamini (3a671) — 300 BV, E vitamini (3a700) — 100 mq, dəmir (II) sulfat monohidrat (3b103) — 2 mq, susuz kalsium yodat (3b202) — 0,7 mq, mis (II) sulfat pentahidrat (3b405) — 2 mq, manqan sulfat monohidrat (3b503) — 2 mq, sink oksid (3b603) — 10 mq, biotin (3a880) — 0,1 mq, taurin (3a370) — 1000 mq.",
+   "analysis": [
+    {
+     "name": "Xam protein",
+     "value": "8,5 %"
+    },
+    {
+     "name": "Xam lif",
+     "value": "1,2 %"
+    },
+    {
+     "name": "Xam yağ",
+     "value": "3,5 %"
+    },
+    {
+     "name": "Xam kül",
+     "value": "2 %"
+    },
+    {
+     "name": "Nəmlik",
+     "value": "82 %"
+    },
+    {
+     "name": "Kalsium",
+     "value": "0,2 %"
+    },
+    {
+     "name": "Fosfor",
+     "value": "0,15 %"
+    },
+    {
+     "name": "Enerji dəyəri",
+     "value": "736 kkal/kq"
+    }
+   ],
+   "feeding": "Gündəlik norma: qidalandırma cədvəlinə baxın. Cədvəldə göstərilən miqdarlar yalnız tövsiyə xarakteri daşıyır və hər bir ev heyvanının fərdi ehtiyaclarına uyğunlaşdırılmalıdır. Gündəlik norma çöldəki havanın temperaturundan, ev heyvanının həyat tərzindən, temperamentindən və aktivliyindən asılı olaraq dəyişə bilər. Təzə, təmiz su olan qab həmişə ev heyvanının əlçatan yerində olmalıdır. Pişiyin çəkisindən asılı olaraq 85 q-lıq paketlərlə gündəlik norma: 1–2 kq – 1,5–2,5 ədəd; 2–4 kq – 2,5–3,5 ədəd; 4–6 kq – 3,5–5 ədəd. Açıldıqdan sonra soyuducuda (+4 °C) saxlayın və 48 saat ərzində istifadə edin."
+  }
+ },
+ "araton:assets/products/art-cat-pouch-beef.webp": {
+  "url": "https://www.kika.lt/products/araton-visu-veisliu-suaugusiu-kaciu-slapias-pasaras-su-jautiena-ir-vistiena",
+  "sku": null,
+  "packs": [
+   "85 g"
+  ],
+  "feed": [
+   [
+    1,
+    2,
+    128,
+    170
+   ],
+   [
+    2,
+    4,
+    170,
+    298
+   ],
+   [
+    4,
+    6,
+    298,
+    425
+   ]
+  ],
+  "ru": {
+   "full": [
+    "Полнорационный влажный корм ARATON с говядиной и курицей создан для взрослых кошек всех пород и размеров старше 1 года, для ежедневного кормления: без лишних добавок, но с полезным содержимым. Основные источники белка – говядина (29 %) и курица (26 %).",
+    "Кусочки в сочном соусе, 76 % ингредиентов животного происхождения, обогащение травами – всё создано с учётом естественных инстинктов кошки и желания владельца давать ей настоящую еду. Говядина питательная и с насыщенным вкусом, курица – нежная и легкоусвояемая. Вместе эти два вида белка дают все ценные аминокислоты, необходимые для поддержания мышечного тонуса и энергии, и способствуют сытости и хорошему самочувствию.",
+    "Добавленный таурин – незаменимая для кошек аминокислота, необходимая для здоровья сердца, зрения и работы нервной системы. Натуральные растительные добавки – тимьян, шалфей, петрушка и орегано – не только улучшают вкус и запах корма, но и помогают поддерживать хорошее пищеварение и естественный аппетит. Рисовая мука и пшеничный белок – мягкие источники энергии, подходящие даже более чувствительным кошкам.",
+    "Витамины A, D3 и E и микроэлементы – железо, медь, марганец, цинк – поддерживают крепкую иммунную систему, состояние кожи и шерсти и общую сопротивляемость организма; цинк и биотин помогают сохранять блеск шерсти. Сбалансированное содержание жира (3,8 %) и влаги (82 %) обеспечивает хороший аппетит и энергию для ежедневной активности без лишней нагрузки на организм и пищеварительную систему, а высокая влажность способствует потреблению жидкости с пищей. В составе нет искусственных ароматизаторов, красителей и усилителей вкуса – только то, что действительно важно для здоровья питомца.",
+    "Подходит кошкам, которым важна сытная и вкусная ежедневная еда, кошкам с более чувствительным пищеварением или сниженным аппетитом, а также питомцам, которым нужна поддержка работы сердца, зрения и иммунитета. Рецептуры ARATON разрабатываются вместе с экспертами по питанию животных на основе реальных потребностей питомцев. Произведено в Литве с соблюдением высоких стандартов качества. ARATON – продукт семейства KIKA, которому доверяют сотни тысяч владельцев по всему миру, – чтобы ежедневное кормление было не только приятным, но и полезным."
+   ],
+   "composition": "76 % ингредиентов животного происхождения в кусочках (мясо и побочные продукты животного происхождения (в т. ч. 29 % говядины, 26 % курицы)), бульон, рисовая мука, пшеничная клейковина, целлюлоза, продукты переработки трав 0,1 % (тимьян, шалфей, петрушка, орегано).",
+   "additives": "Питательные добавки на 1 кг: витамин A (3a672a) — 1000 МЕ, витамин D3 (3a671) — 300 МЕ, витамин E (3a700) — 100 мг, моногидрат сульфата железа (II) (3b103) — 2 мг, безводный йодат кальция (3b202) — 0,7 мг, пентагидрат сульфата меди (II) (3b405) — 2 мг, моногидрат сульфата марганца (3b503) — 2 мг, оксид цинка (3b603) — 10 мг, биотин (3a880) — 0,1 мг, таурин (3a370) — 1000 мг.",
+   "analysis": [
+    {
+     "name": "Сырой протеин",
+     "value": "8,8 %"
+    },
+    {
+     "name": "Сырая клетчатка",
+     "value": "1 %"
+    },
+    {
+     "name": "Сырой жир",
+     "value": "3,8 %"
+    },
+    {
+     "name": "Сырая зола",
+     "value": "2 %"
+    },
+    {
+     "name": "Влажность",
+     "value": "82 %"
+    },
+    {
+     "name": "Кальций",
+     "value": "0,25 %"
+    },
+    {
+     "name": "Фосфор",
+     "value": "0,2 %"
+    },
+    {
+     "name": "Энергетическая ценность",
+     "value": "760 ккал/кг"
+    }
+   ],
+   "feeding": "Суточная норма: см. таблицу кормления. Указанные в таблице количества носят рекомендательный характер и должны корректироваться с учётом индивидуальных потребностей каждого питомца. Суточная норма может меняться в зависимости от температуры воздуха на улице, образа жизни, темперамента и активности питомца. Миска со свежей чистой водой всегда должна стоять в доступном для питомца месте. Суточная норма в паучах по 85 г в зависимости от веса кошки: 1–2 кг – 1,5–2 шт.; 2–4 кг – 2–3,5 шт.; 4–6 кг – 3,5–5 шт. После вскрытия хранить в холодильнике (+4 °C) и использовать в течение 48 часов."
+  },
+  "en": {
+   "full": [
+    "ARATON complete wet food with beef and chicken is created for adult cats of all breeds and sizes from 1 year, for daily feeding: without excessive additives, but with beneficial content. The main protein sources are beef (29 %) and chicken (26 %).",
+    "Chunks in a juicy gravy, 76 % ingredients of animal origin, enriched with herbs – everything is designed with the cat’s natural instincts and the owner’s wish to give something real in mind. Beef is nutritious and rich in flavour, chicken is gentle and easily digestible. Together these two proteins provide all the valuable amino acids needed to maintain muscle tone and energy and promote satiety and well-being.",
+    "Added taurine is an essential amino acid for cats, needed for a healthy heart, vision and nervous system function. Natural plant additives – thyme, sage, parsley and oregano – not only improve the taste and aroma of the food but also help maintain smooth digestion and a natural appetite. Rice flour and wheat protein are gentle sources of energy, suitable even for more sensitive cats.",
+    "Vitamins A, D3 and E and trace elements – iron, copper, manganese, zinc – support a strong immune system, skin and coat condition and the body’s overall resistance; zinc and biotin help keep the coat shiny. The balanced fat (3.8 %) and moisture (82 %) content ensures a good appetite and energy for daily activity without excessive load on the body or the digestive system, and the high moisture encourages fluid intake through food. The composition contains no artificial flavourings, colourings or flavour enhancers – only what truly matters for your pet’s health.",
+    "Suitable for cats for whom a filling and tasty daily food matters, cats with more sensitive digestion or a reduced appetite, and pets that need support for heart function, vision and immunity. ARATON recipes are developed together with animal nutrition experts based on pets’ real needs. Made in Lithuania to high quality standards. ARATON is a KIKA family product trusted by hundreds of thousands of owners around the world – so that daily feeding is not only enjoyable but also beneficial."
+   ],
+   "composition": "76 % ingredients of animal origin in chunks (meat and animal by-products (including 29 % beef, 26 % chicken)), broth, rice flour, wheat gluten, cellulose, herb processing products 0.1 % (thyme, sage, parsley, oregano).",
+   "additives": "Nutritional additives per 1 kg: vitamin A (3a672a) — 1000 IU, vitamin D3 (3a671) — 300 IU, vitamin E (3a700) — 100 mg, iron (II) sulphate monohydrate (3b103) — 2 mg, calcium iodate anhydrous (3b202) — 0.7 mg, copper (II) sulphate pentahydrate (3b405) — 2 mg, manganous sulphate monohydrate (3b503) — 2 mg, zinc oxide (3b603) — 10 mg, biotin (3a880) — 0.1 mg, taurine (3a370) — 1000 mg.",
+   "analysis": [
+    {
+     "name": "Crude protein",
+     "value": "8.8 %"
+    },
+    {
+     "name": "Crude fibre",
+     "value": "1 %"
+    },
+    {
+     "name": "Crude fat",
+     "value": "3.8 %"
+    },
+    {
+     "name": "Crude ash",
+     "value": "2 %"
+    },
+    {
+     "name": "Moisture",
+     "value": "82 %"
+    },
+    {
+     "name": "Calcium",
+     "value": "0.25 %"
+    },
+    {
+     "name": "Phosphorus",
+     "value": "0.2 %"
+    },
+    {
+     "name": "Energy value",
+     "value": "760 kcal/kg"
+    }
+   ],
+   "feeding": "Daily amount: see the feeding table. The amounts in the table are guidelines only and should be adjusted to the individual needs of each pet. The daily ration may vary depending on the outdoor temperature and on the pet’s lifestyle, temperament and activity. A bowl of fresh, clean water should always be within your pet’s reach. Daily amount in 85 g pouches by cat weight: 1–2 kg – 1.5–2 pouches; 2–4 kg – 2–3.5 pouches; 4–6 kg – 3.5–5 pouches. After opening, store in the refrigerator (+4 °C) and use within 48 hours."
+  },
+  "az": {
+   "full": [
+    "Mal və toyuq əti ilə ARATON tam rasionlu yaş yemi 1 yaşdan yuxarı bütün cins və ölçülərdən olan yetkin pişiklər üçün, gündəlik qidalandırma məqsədilə yaradılıb: artıq əlavələr olmadan, lakin faydalı tərkiblə. Əsas zülal mənbələri mal əti (29 %) və toyuq ətidir (26 %).",
+    "Şirəli sousda tikələr, 76 % heyvan mənşəli inqrediyentlər, otlarla zənginləşdirilmə – hər şey pişiyin təbii instinktləri və sahibin ona həqiqi qida vermək istəyi nəzərə alınaraq yaradılıb. Mal əti qidalı və zəngin dadlıdır, toyuq əti isə zərif və asan həzm olunandır. Birlikdə bu iki zülal növü əzələ tonusunu və enerjini saxlamaq üçün lazım olan bütün dəyərli amin turşularını verir, toxluq hissinə və yaxşı əhvala kömək edir.",
+    "Əlavə edilmiş taurin pişiklər üçün əvəzolunmaz amin turşusudur və sağlam ürək, görmə və sinir sisteminin işi üçün zəruridir. Təbii bitki əlavələri – kəklikotu, adaçayı, cəfəri və oreqano – təkcə yemin dadını və ətrini yaxşılaşdırmır, həm də rahat həzmi və təbii iştahı saxlamağa kömək edir. Düyü unu və buğda zülalı hətta daha həssas pişiklərə uyğun yumşaq enerji mənbələridir.",
+    "A, D3 və E vitaminləri və mikroelementlər – dəmir, mis, manqan, sink – güclü immun sistemini, dərinin və tük örtüyünün vəziyyətini və orqanizmin ümumi müqavimətini dəstəkləyir; sink və biotin tük örtüyünün parlaqlığını qorumağa kömək edir. Yağın (3,8 %) və nəmliyin (82 %) balanslaşdırılmış miqdarı orqanizmə və həzm sisteminə artıq yük olmadan yaxşı iştahı və gündəlik aktivlik üçün enerjini təmin edir, yüksək nəmlik isə qida ilə maye qəbulunu artırır. Tərkibdə süni ətirləndiricilər, boyaqlar və dad gücləndiriciləri yoxdur – yalnız ev heyvanınızın sağlamlığı üçün həqiqətən vacib olanlar.",
+    "Toxluq verən və dadlı gündəlik qida vacib olan pişiklər, həzmi daha həssas və ya iştahı azalmış pişiklər, həmçinin ürəyin işinə, görməyə və immunitetə dəstək lazım olan ev heyvanları üçün uyğundur. ARATON reseptləri heyvanların qidalanması üzrə ekspertlərlə birlikdə ev heyvanlarının real ehtiyacları əsasında hazırlanır. Yüksək keyfiyyət standartlarına uyğun olaraq Litvada istehsal olunub. ARATON – bütün dünyada yüz minlərlə sahibin etibar etdiyi KIKA ailəsinin məhsuludur – gündəlik qidalandırma təkcə xoş deyil, həm də faydalı olsun deyə."
+   ],
+   "composition": "Tikələrdə 76 % heyvan mənşəli inqrediyentlər (ət və heyvan mənşəli əlavə məhsullar (o cümlədən 29 % mal əti, 26 % toyuq əti)), bulyon, düyü unu, buğda kleykovinası, sellüloza, otların emalı məhsulları 0,1 % (kəklikotu, adaçayı, cəfəri, oreqano).",
+   "additives": "1 kq üçün qida əlavələri: A vitamini (3a672a) — 1000 BV, D3 vitamini (3a671) — 300 BV, E vitamini (3a700) — 100 mq, dəmir (II) sulfat monohidrat (3b103) — 2 mq, susuz kalsium yodat (3b202) — 0,7 mq, mis (II) sulfat pentahidrat (3b405) — 2 mq, manqan sulfat monohidrat (3b503) — 2 mq, sink oksid (3b603) — 10 mq, biotin (3a880) — 0,1 mq, taurin (3a370) — 1000 mq.",
+   "analysis": [
+    {
+     "name": "Xam protein",
+     "value": "8,8 %"
+    },
+    {
+     "name": "Xam lif",
+     "value": "1 %"
+    },
+    {
+     "name": "Xam yağ",
+     "value": "3,8 %"
+    },
+    {
+     "name": "Xam kül",
+     "value": "2 %"
+    },
+    {
+     "name": "Nəmlik",
+     "value": "82 %"
+    },
+    {
+     "name": "Kalsium",
+     "value": "0,25 %"
+    },
+    {
+     "name": "Fosfor",
+     "value": "0,2 %"
+    },
+    {
+     "name": "Enerji dəyəri",
+     "value": "760 kkal/kq"
+    }
+   ],
+   "feeding": "Gündəlik norma: qidalandırma cədvəlinə baxın. Cədvəldə göstərilən miqdarlar yalnız tövsiyə xarakteri daşıyır və hər bir ev heyvanının fərdi ehtiyaclarına uyğunlaşdırılmalıdır. Gündəlik norma çöldəki havanın temperaturundan, ev heyvanının həyat tərzindən, temperamentindən və aktivliyindən asılı olaraq dəyişə bilər. Təzə, təmiz su olan qab həmişə ev heyvanının əlçatan yerində olmalıdır. Pişiyin çəkisindən asılı olaraq 85 q-lıq paketlərlə gündəlik norma: 1–2 kq – 1,5–2 ədəd; 2–4 kq – 2–3,5 ədəd; 4–6 kq – 3,5–5 ədəd. Açıldıqdan sonra soyuducuda (+4 °C) saxlayın və 48 saat ərzində istifadə edin."
+  }
+ },
+ "araton:assets/products/art-cat-pouch-turkey.webp": {
+  "url": "https://www.kika.lt/products/araton-visu-veisliu-suaugusiu-sterilizuotu-kaciu-slapias-pasaras-su-kalakutiena-ir-vistiena",
+  "sku": null,
+  "packs": [
+   "85 g"
+  ],
+  "feed": [
+   [
+    1,
+    2,
+    128,
+    212
+   ],
+   [
+    2,
+    4,
+    212,
+    340
+   ],
+   [
+    4,
+    6,
+    340,
+    425
+   ]
+  ],
+  "ru": {
+   "full": [
+    "Полнорационный влажный корм ARATON с индейкой и курицей – сбалансированный выбор для стерилизованной кошки, чьи потребности меняются, но главное остаётся неизменным: хорошее пищеварение, здоровая мочевыделительная система и сохранение мышечной массы. После стерилизации обмен веществ у кошки замедляется, а аппетит часто растёт – поэтому этот корм создан, чтобы помочь поддерживать оптимальное состояние тела без стресса и ограничений. Он предназначен для стерилизованных кошек всех пород старше 1 года, в том числе для кошек, склонных к набору веса после стерилизации.",
+    "78 % ингредиентов животного происхождения, а 93 % всего белка – животного происхождения: это способствует хорошему усвоению и даёт организму всё необходимое на каждый день. Основные источники белка – индейка (38 %) и курица (36 %): индейка постная, но питательная, курица легко усваивается. Вместе они – сбалансированный источник высококачественного животного белка, который помогает сохранять мышечный тонус и даёт сытость без лишних калорий, а сбалансированное содержание жира обеспечивает энергию без набора веса.",
+    "Корм обогащён натуральными добавками – клетчаткой, свекольным жомом (который действует как пребиотик) и традиционными травами: тимьяном, шалфеем, петрушкой и орегано. Эти ингредиенты поддерживают баланс пищеварения и микрофлору кишечника, облегчают пищеварение, стимулируют аппетит и способствуют естественной сопротивляемости организма. Формула для стерилизованных кошек создана для контроля веса и здоровья мочевыводящих путей – чтобы поддерживать оптимальное состояние тела и помогать защищать от проблем с мочевыводящими путями.",
+    "Таурин жизненно важен для сердца и зрения. Витамины D3 и E и минералы (цинк, марганец, медь) поддерживают иммунную систему, кожу и шерсть. Влажный корм ценен не только питательностью, но и приятной текстурой – сочные кусочки в соусе с приятным вкусом нравятся даже привередливым кошкам. Без искусственных ароматизаторов, красителей и усилителей вкуса – только понятная, чистая и функциональная формула для стерилизованной кошки.",
+    "Подходит для ежедневного кормления в качестве основного корма или как влажное дополнение к сухому корму. Рецептуры ARATON разрабатываются вместе с экспертами по питанию животных на основе реальных потребностей питомцев. Произведено в Литве с соблюдением высоких стандартов качества. ARATON – продукт семейства KIKA, которому доверяют многие владельцы по всему миру, – чтобы ежедневное кормление было не только приятным, но и полезным."
+   ],
+   "composition": "74 % ингредиентов животного происхождения в кусочках (мясо и побочные продукты животного происхождения (в т. ч. 38 % индейки, 36 % курицы)), бульон, рисовая мука, жом сахарной свёклы, витальная пшеничная клейковина, целлюлоза, продукты переработки трав 0,1 % (тимьян, шалфей, петрушка, орегано).",
+   "additives": "Питательные добавки на 1 кг: витамин D3 (3a671) — 300 МЕ, витамин E (3a700) — 100 мг, моногидрат сульфата железа (II) (3b103) — 2 мг, безводный йодат кальция (3b202) — 0,7 мг, пентагидрат сульфата меди (II) (3b405) — 2 мг, моногидрат сульфата марганца (3b503) — 2 мг, оксид цинка (3b603) — 10 мг, таурин (3a370) — 1000 мг, L-карнитин (3a910) — 50 мг, технически чистый DL-метионин (3c301) — 600 мг.",
+   "analysis": [
+    {
+     "name": "Сырой протеин",
+     "value": "8,9 %"
+    },
+    {
+     "name": "Сырая клетчатка",
+     "value": "1,5 %"
+    },
+    {
+     "name": "Сырой жир",
+     "value": "3 %"
+    },
+    {
+     "name": "Сырая зола",
+     "value": "2 %"
+    },
+    {
+     "name": "Влажность",
+     "value": "82 %"
+    },
+    {
+     "name": "Кальций",
+     "value": "0,2 %"
+    },
+    {
+     "name": "Фосфор",
+     "value": "0,15 %"
+    },
+    {
+     "name": "Энергетическая ценность",
+     "value": "703 ккал/кг"
+    }
+   ],
+   "feeding": "Суточная норма: см. таблицу кормления. Указанные в таблице количества носят рекомендательный характер и должны корректироваться с учётом индивидуальных потребностей каждого питомца. Суточная норма может меняться в зависимости от температуры воздуха на улице, образа жизни, темперамента и активности питомца. Миска со свежей чистой водой всегда должна стоять в доступном для питомца месте. Суточная норма в паучах по 85 г в зависимости от веса кошки: 1–2 кг – 1,5–2,5 шт.; 2–4 кг – 2,5–4 шт.; 4–6 кг – 4–5 шт. После вскрытия хранить в холодильнике (+4 °C) и использовать в течение 48 часов."
+  },
+  "en": {
+   "full": [
+    "ARATON complete wet food with turkey and chicken is a balanced choice for a sterilised cat whose needs change but whose priorities remain the same: good digestion, a healthy urinary system and maintained muscle mass. After sterilisation a cat’s metabolism slows down, but its appetite often increases – so this food is designed to help maintain optimal body condition without stress or restrictions. It is intended for sterilised cats of all breeds from 1 year, including cats prone to gaining weight after sterilisation.",
+    "78 % ingredients of animal origin, and 93 % of all protein is of animal origin – this promotes good absorption and provides the body with what it needs every day. The main protein sources are turkey (38 %) and chicken (36 %): turkey is lean but nutritious, chicken is easily digestible. Together they are a balanced source of high-quality animal protein that helps maintain muscle tone and provides satiety without excess calories, while the balanced fat content gives energy without weight gain.",
+    "The food is enriched with natural additives – fibre, beet pulp (which acts as a prebiotic) and traditional herbs: thyme, sage, parsley and oregano. These ingredients support digestive balance and the gut microflora, make digestion easier, stimulate the appetite and contribute to natural resistance. The formula for sterilised cats is designed to support weight control and urinary tract health – to maintain optimal body condition and help protect against urinary tract problems.",
+    "Taurine is vital for the heart and vision. Vitamins D3 and E and minerals (zinc, manganese, copper) support the immune system, skin and coat. The wet food offers not only nutritional value but also a pleasant texture – juicy chunks in gravy with a pleasant taste appeal even to fussy cats. No artificial flavourings, colourings or flavour enhancers – only a clear, clean and functional formula for a sterilised cat.",
+    "Suitable for daily feeding as the main food or as a moist complement to dry food. ARATON recipes are developed together with animal nutrition experts based on pets’ real needs. Made in Lithuania to high quality standards. ARATON is a KIKA family product trusted by many owners around the world – so that daily feeding is not only enjoyable but also beneficial."
+   ],
+   "composition": "74 % ingredients of animal origin in chunks (meat and animal by-products (including 38 % turkey, 36 % chicken)), broth, rice flour, sugar beet pulp, vital wheat gluten, cellulose, herb processing products 0.1 % (thyme, sage, parsley, oregano).",
+   "additives": "Nutritional additives per 1 kg: vitamin D3 (3a671) — 300 IU, vitamin E (3a700) — 100 mg, iron (II) sulphate monohydrate (3b103) — 2 mg, calcium iodate anhydrous (3b202) — 0.7 mg, copper (II) sulphate pentahydrate (3b405) — 2 mg, manganous sulphate monohydrate (3b503) — 2 mg, zinc oxide (3b603) — 10 mg, taurine (3a370) — 1000 mg, L-carnitine (3a910) — 50 mg, technically pure DL-methionine (3c301) — 600 mg.",
+   "analysis": [
+    {
+     "name": "Crude protein",
+     "value": "8.9 %"
+    },
+    {
+     "name": "Crude fibre",
+     "value": "1.5 %"
+    },
+    {
+     "name": "Crude fat",
+     "value": "3 %"
+    },
+    {
+     "name": "Crude ash",
+     "value": "2 %"
+    },
+    {
+     "name": "Moisture",
+     "value": "82 %"
+    },
+    {
+     "name": "Calcium",
+     "value": "0.2 %"
+    },
+    {
+     "name": "Phosphorus",
+     "value": "0.15 %"
+    },
+    {
+     "name": "Energy value",
+     "value": "703 kcal/kg"
+    }
+   ],
+   "feeding": "Daily amount: see the feeding table. The amounts in the table are guidelines only and should be adjusted to the individual needs of each pet. The daily ration may vary depending on the outdoor temperature and on the pet’s lifestyle, temperament and activity. A bowl of fresh, clean water should always be within your pet’s reach. Daily amount in 85 g pouches by cat weight: 1–2 kg – 1.5–2.5 pouches; 2–4 kg – 2.5–4 pouches; 4–6 kg – 4–5 pouches. After opening, store in the refrigerator (+4 °C) and use within 48 hours."
+  },
+  "az": {
+   "full": [
+    "Hinduşka və toyuq əti ilə ARATON tam rasionlu yaş yemi ehtiyacları dəyişən, lakin əsas prioritetləri eyni qalan sterilizasiya olunmuş pişik üçün balanslaşdırılmış seçimdir: yaxşı həzm, sağlam sidik sistemi və əzələ kütləsinin qorunması. Sterilizasiyadan sonra pişiyin maddələr mübadiləsi yavaşlayır, iştahı isə çox vaxt artır – buna görə də bu yem stress və məhdudiyyətlər olmadan optimal bədən vəziyyətini saxlamağa kömək etmək üçün yaradılıb. O, 1 yaşdan yuxarı bütün cinslərdən olan sterilizasiya olunmuş pişiklər, o cümlədən sterilizasiyadan sonra çəki artımına meylli pişiklər üçün nəzərdə tutulub.",
+    "78 % heyvan mənşəli inqrediyentlər, bütün zülalın isə 93 %-i heyvan mənşəlidir – bu, yaxşı mənimsənilməyə kömək edir və orqanizmi hər gün lazım olanlarla təmin edir. Əsas zülal mənbələri hinduşka (38 %) və toyuq ətidir (36 %): hinduşka əti yağsız, lakin qidalıdır, toyuq əti asan həzm olunur. Birlikdə onlar əzələ tonusunu saxlamağa kömək edən və artıq kalori olmadan toxluq verən yüksək keyfiyyətli heyvan zülalının balanslaşdırılmış mənbəyidir, balanslaşdırılmış yağ miqdarı isə çəki artımı olmadan enerji verir.",
+    "Yem təbii əlavələrlə – liflə, çuğundur cecəsi (prebiotik kimi təsir göstərir) və ənənəvi otlarla zənginləşdirilib: kəklikotu, adaçayı, cəfəri və oreqano. Bu inqrediyentlər həzm balansını və bağırsaq mikroflorasını dəstəkləyir, həzmi asanlaşdırır, iştahı artırır və orqanizmin təbii müqavimətinə töhfə verir. Sterilizasiya olunmuş pişiklər üçün formula çəkiyə nəzarət və sidik yollarının sağlamlığı üçün yaradılıb – optimal bədən vəziyyətini saxlamaq və sidik yolları problemlərindən qorunmağa kömək etmək üçün.",
+    "Taurin ürək və görmə üçün həyati əhəmiyyət daşıyır. D3 və E vitaminləri və minerallar (sink, manqan, mis) immun sistemini, dərini və tük örtüyünü dəstəkləyir. Yaş yem təkcə qida dəyəri ilə deyil, həm də xoş teksturası ilə seçilir – xoş dadlı sousda şirəli tikələr hətta seçici pişiklərin də xoşuna gəlir. Süni ətirləndiricilər, boyaqlar və dad gücləndiriciləri yoxdur – sterilizasiya olunmuş pişik üçün yalnız aydın, təmiz və funksional formula.",
+    "Əsas yem kimi və ya quru yemə nəm əlavə kimi gündəlik qidalandırma üçün uyğundur. ARATON reseptləri heyvanların qidalanması üzrə ekspertlərlə birlikdə ev heyvanlarının real ehtiyacları əsasında hazırlanır. Yüksək keyfiyyət standartlarına uyğun olaraq Litvada istehsal olunub. ARATON – bütün dünyada bir çox sahibin etibar etdiyi KIKA ailəsinin məhsuludur – gündəlik qidalandırma təkcə xoş deyil, həm də faydalı olsun deyə."
+   ],
+   "composition": "Tikələrdə 74 % heyvan mənşəli inqrediyentlər (ət və heyvan mənşəli əlavə məhsullar (o cümlədən 38 % hinduşka əti, 36 % toyuq əti)), bulyon, düyü unu, şəkər çuğunduru cecəsi, vital buğda kleykovinası, sellüloza, otların emalı məhsulları 0,1 % (kəklikotu, adaçayı, cəfəri, oreqano).",
+   "additives": "1 kq üçün qida əlavələri: D3 vitamini (3a671) — 300 BV, E vitamini (3a700) — 100 mq, dəmir (II) sulfat monohidrat (3b103) — 2 mq, susuz kalsium yodat (3b202) — 0,7 mq, mis (II) sulfat pentahidrat (3b405) — 2 mq, manqan sulfat monohidrat (3b503) — 2 mq, sink oksid (3b603) — 10 mq, taurin (3a370) — 1000 mq, L-karnitin (3a910) — 50 mq, texniki cəhətdən təmiz DL-metionin (3c301) — 600 mq.",
+   "analysis": [
+    {
+     "name": "Xam protein",
+     "value": "8,9 %"
+    },
+    {
+     "name": "Xam lif",
+     "value": "1,5 %"
+    },
+    {
+     "name": "Xam yağ",
+     "value": "3 %"
+    },
+    {
+     "name": "Xam kül",
+     "value": "2 %"
+    },
+    {
+     "name": "Nəmlik",
+     "value": "82 %"
+    },
+    {
+     "name": "Kalsium",
+     "value": "0,2 %"
+    },
+    {
+     "name": "Fosfor",
+     "value": "0,15 %"
+    },
+    {
+     "name": "Enerji dəyəri",
+     "value": "703 kkal/kq"
+    }
+   ],
+   "feeding": "Gündəlik norma: qidalandırma cədvəlinə baxın. Cədvəldə göstərilən miqdarlar yalnız tövsiyə xarakteri daşıyır və hər bir ev heyvanının fərdi ehtiyaclarına uyğunlaşdırılmalıdır. Gündəlik norma çöldəki havanın temperaturundan, ev heyvanının həyat tərzindən, temperamentindən və aktivliyindən asılı olaraq dəyişə bilər. Təzə, təmiz su olan qab həmişə ev heyvanının əlçatan yerində olmalıdır. Pişiyin çəkisindən asılı olaraq 85 q-lıq paketlərlə gündəlik norma: 1–2 kq – 1,5–2,5 ədəd; 2–4 kq – 2,5–4 ədəd; 4–6 kq – 4–5 ədəd. Açıldıqdan sonra soyuducuda (+4 °C) saxlayın və 48 saat ərzində istifadə edin."
+  }
  }
 };

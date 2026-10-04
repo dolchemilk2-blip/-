@@ -2601,7 +2601,7 @@ const FULL_DESC = {
    "comp": "Made in the EU from high-quality salmon protein and natural ingredients."
   }
  },
- "dogs||Superior Care · White Dogs · Junior||White Dogs Junior — White Fish": {
+ "dogs||Superior Care · White Dogs · Junior||White Dogs Junior — Salmon": {
   "az": {
    "full": [
     "White Dogs Junior — Ağ balıq, ağ və açıq xəzli bütün cins balalar üçün dənsiz qidadır. Asan həzm olunan ağ balıq zülalı böyümə dövründə həssas mədə üçün incə, lakin qidalı seçim təqdim edərək sağlam inkişafı dəstəkləyir.",

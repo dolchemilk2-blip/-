@@ -505,7 +505,9 @@ function openProductModal(item, lang, key, opts) {
       ${sectionsHtml}
       ${off ? officialHtml(off, offAll, dict) : block('products.composition', comp)}
       ${block('products.feeding', feeding)}
-      ${offAll && offAll.url ? `<a class="pmodal__src" href="https://www.naturesprotection.com${offAll.url}" target="_blank" rel="noopener">${dict['products.official'] || 'naturesprotection.com'} <span aria-hidden="true">↗</span></a>` : ''}
+      ${offAll && offAll.url ? (/^https?:/.test(offAll.url)
+        ? `<a class="pmodal__src" href="${offAll.url}" target="_blank" rel="noopener">${dict['products.source'] || ''}: ${offAll.url.replace(/^https?:\/\/(www\.)?/, '').split('/')[0]} <span aria-hidden="true">↗</span></a>`
+        : `<a class="pmodal__src" href="https://www.naturesprotection.com${offAll.url}" target="_blank" rel="noopener">${dict['products.official'] || 'naturesprotection.com'} <span aria-hidden="true">↗</span></a>`) : ''}
       ${tags ? `<div class="product__tags">${tags}</div>` : ''}
     </div>`;
   showModal(modal, body, opts || {}, item);
