@@ -149,8 +149,9 @@
   // фасовками (и для влажных кормов тоже); нет — по общей ориентировочной таблице, только для сухих кормов.
   const DRY = { np: ['dry', 'superior-care'], araton: ['dry'] };
   const official = (brand, sp, item) => {
-    if (brand !== 'np' || typeof NP_OFFICIAL === 'undefined' || !item.en) return null;
-    return NP_OFFICIAL[sp + '||' + (item.en.cat || '') + '||' + (item.en.name || '')] || null;
+    if (typeof NP_OFFICIAL === 'undefined' || !item.en) return null;
+    return (brand === 'np' && NP_OFFICIAL[sp + '||' + (item.en.cat || '') + '||' + (item.en.name || '')])
+      || (window.NP && NP.productId && NP_OFFICIAL[NP.productId(item, brand)]) || null;
   };
   const kgOf = s => { const m = /([\d.,]+)\s*(kg|g)\b/i.exec(s || ''); if (!m) return 0; const v = parseFloat(m[1].replace(',', '.')); return m[2].toLowerCase() === 'g' ? v / 1000 : v; };
   document.addEventListener('np:modal-open', e => {

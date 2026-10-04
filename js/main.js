@@ -477,7 +477,7 @@ function openProductModal(item, lang, key, opts) {
   // Полное описание: из item, затем из FULL_DESC (js/descriptions.js), затем обычное desc
   const ext = (key && typeof FULL_DESC !== 'undefined' && FULL_DESC[key] && FULL_DESC[key][lang]) || null;
   // Официальные данные с naturesprotection.com (js/np-official.js): описание, состав, добавки, анализ, кормление
-  const offAll = (key && typeof NP_OFFICIAL !== 'undefined' && NP_OFFICIAL[key]) || null;
+  const offAll = (typeof NP_OFFICIAL !== 'undefined' && ((key && NP_OFFICIAL[key]) || (opts && opts.id && NP_OFFICIAL[opts.id]))) || null;   // ключ NP или id товара (Araton)
   const off = offAll && (offAll[lang] || offAll.ru);
   const comp = (off && off.composition) || t.comp || (ext && ext.comp);
   const feeding = (off && off.feeding) || t.feeding || (ext && ext.feeding);
