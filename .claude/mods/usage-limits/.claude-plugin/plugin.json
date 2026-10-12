@@ -1,0 +1,1 @@
+{ "name": "usage-limits", "version": "0.1.0", "description": "Полосы лимитов Claude (5 часов и неделя) над полем ввода и в панели /limits", "types": "./types/index.d.ts" }
