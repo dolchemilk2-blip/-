@@ -59,6 +59,31 @@ async function refresh($: EngineInterface, list?: SessionRateLimit[]) {
   const fresh = list ?? (await $.session.usage()).rateLimits
   await update($, limits, () => toLimits(fresh))
   await update($, now, () => Date.now())
+  $.ui.status(statusText(toLimits(fresh)))
+}
+
+function textBar(pct: number, width: number): string {
+  const filled = Math.round((Math.max(0, Math.min(100, pct)) / 100) * width)
+  return '█'.repeat(filled) + '░'.repeat(width - filled)
+}
+
+// compact line pinned under the prompt
+function statusText(list: Limit[]): string | undefined {
+  const parts = WINDOWS.flatMap(({ kind, label }) => {
+    const limit = list.find(one => one.kind === kind)
+    return limit ? [`${label.trim()} ${textBar(limit.percentUsed, 10)} ${Math.round(limit.percentUsed)}%`] : []
+  })
+  return parts.length ? parts.join('  ·  ') : undefined
+}
+
+// full report as plain text, for surfaces that draw no band or pane
+function reportText(list: Limit[], at: number): string {
+  return WINDOWS.flatMap(({ kind, icon, label }) => {
+    const limit = list.find(one => one.kind === kind)
+    if (!limit) return []
+    const reset = untilReset(limit.resetsAt, at, kind === 'seven_day')
+    return [`${icon} ${label} ${textBar(limit.percentUsed, 20)} ${Math.round(limit.percentUsed)}%  ${reset}`]
+  }).join('\n')
 }
 
 async function draw($: EngineInterface, e: ResolveInput) {
@@ -124,10 +149,21 @@ export const register: Register = on => {
   })
 
   on('command.run', { command: 'limits' }, async $ => {
-    await refresh($)
-    await $.ui.open({ id: PANE, title: 'Лимиты Claude' })
+    const usage = await $.session.usage()
+    await refresh($, usage.rateLimits)
+    const opened = await $.ui.open({ id: PANE, title: 'Лимиты Claude' })
+    const surfaces = await $.session.surfaces()
+    const report = reportText(toLimits(usage.rateLimits), Date.now())
+    const kinds = usage.rateLimits.map(one => one.kind).join(', ') || 'нет'
+    const pane = opened.isPlaced ? 'показана' : `не показана (${opened.reason})`
 
-    return { text: 'Панель лимитов открыта.' }
+    return {
+      text: [
+        report || 'Данных о лимитах пока нет.',
+        '',
+        `диагностика: окна лимитов — ${kinds}; панель ${pane}; поверхности — ${surfaces.join(', ') || 'нет'}`,
+      ].join('\n'),
+    }
   })
 
   on('ui.render', { component: 'AbovePrompt' }, async ($, e, next) => {
