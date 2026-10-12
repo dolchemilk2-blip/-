@@ -60,6 +60,37 @@ async function refresh($: EngineInterface, list?: SessionRateLimit[]) {
   await update($, limits, () => toLimits(fresh))
   await update($, now, () => Date.now())
   $.ui.status(statusText(toLimits(fresh)))
+  await pinTitle($, toLimits(fresh))
+}
+
+const REMOTE = 'claude-code-remote'
+const TITLE_PREFIX = /^(?:⏱|📅)[^—]*— /u
+let pinned = ''
+let pinNote = 'ещё не обновлялось'
+
+// the session title is the one spot the app always shows: pin the limits there
+async function pinTitle($: EngineInterface, list: Limit[]) {
+  const parts = WINDOWS.flatMap(({ kind, icon }) => {
+    const limit = list.find(one => one.kind === kind)
+    return limit ? [`${icon} ${Math.round(limit.percentUsed)}%`] : []
+  })
+  const prefix = parts.join(' · ')
+  if (!prefix || prefix === pinned) return
+  try {
+    const got = await $.mcp.call(REMOTE, 'get_session', {})
+    const first = got.content[0]
+    const text = first?.type === 'text' ? (first.text ?? '') : ''
+    const ccr = (JSON.parse(text) as { ccr?: { id?: string; title?: string } }).ccr
+    if (!ccr?.id) throw new Error('нет id сессии')
+    const base = (ccr.title ?? '').replace(TITLE_PREFIX, '')
+    const title = base ? `${prefix} — ${base}` : prefix
+    const set = await $.mcp.call(REMOTE, 'set_session_title', { session_id: ccr.id, title })
+    if (set.isError) throw new Error('set_session_title вернул ошибку')
+    pinned = prefix
+    pinNote = `закреплено: «${title}»`
+  } catch (err) {
+    pinNote = `не удалось: ${err instanceof Error ? err.message : String(err)}`
+  }
 }
 
 function textBar(pct: number, width: number): string {
@@ -162,6 +193,7 @@ export const register: Register = on => {
         report || 'Данных о лимитах пока нет.',
         '',
         `диагностика: окна лимитов — ${kinds}; панель ${pane}; поверхности — ${surfaces.join(', ') || 'нет'}`,
+        `название сессии: ${pinNote}`,
       ].join('\n'),
     }
   })

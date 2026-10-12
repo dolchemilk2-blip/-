@@ -42,3 +42,20 @@ test('pane shows a hint before any reading', async $ => {
   })
   expect(await ui.find({ text: /после первого ответа/ })).toBeDefined()
 })
+
+test('pins the limits into the session title, keeping its name', async ($, on) => {
+  const titles: string[] = []
+  let title = '⏱ 10% · 📅 5% — Красивая полоса лимита'
+  on('session.measure', (_$, e) => ({ changed: e.changed }))
+  on('mcp.call', (_$, e) => {
+    if (e.tool === 'get_session') {
+      const text = JSON.stringify({ ccr: { id: 'session_x', title } })
+      return { value: { content: [{ type: 'text', text }], isError: false } }
+    }
+    title = String(e.args.title)
+    titles.push(title)
+    return { value: { content: [{ type: 'text', text: 'ok' }], isError: false } }
+  })
+  await $.session.measure({ context: { window: 200000 }, rateLimits: RATES, changed: ['rateLimits'] })
+  expect(titles).toEqual(['⏱ 62% · 📅 23% — Красивая полоса лимита'])
+})
