@@ -1,3 +1,6 @@
 node_modules/
 package-lock.json
 .DS_Store
+
+# промо-ролик: кадры и черновые рендеры
+promo/out/

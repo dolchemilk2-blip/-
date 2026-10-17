@@ -1,0 +1,646 @@
+<!doctype html>
+<html lang="az">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Promo 30s — AZ</title>
+<!--
+  30-секундный промо-ролик (вертикальный 1080×1920) на азербайджанском.
+  Вся анимация — функция времени renderAt(t): кадр однозначно определяется секундой, поэтому
+  promo/render.js снимает его покадрово (60 к/с) без рывков. Открытый в браузере файл просто проигрывает ролик.
+-->
+<style>
+@font-face{font-family:Onest;font-weight:400;src:url(fonts/onest-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:Onest;font-weight:400;src:url(fonts/onest-latin-ext-400-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:Onest;font-weight:500;src:url(fonts/onest-latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:Onest;font-weight:500;src:url(fonts/onest-latin-ext-500-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:Onest;font-weight:600;src:url(fonts/onest-latin-600-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:Onest;font-weight:600;src:url(fonts/onest-latin-ext-600-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:Onest;font-weight:700;src:url(fonts/onest-latin-700-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:Onest;font-weight:700;src:url(fonts/onest-latin-ext-700-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:Onest;font-weight:800;src:url(fonts/onest-latin-800-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:Onest;font-weight:800;src:url(fonts/onest-latin-ext-800-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2C60-2C7F,U+A720-A7FF}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:#000}
+body{overflow:hidden}
+#wrap{position:fixed;left:50%;top:50%;width:1080px;height:1920px;transform:translate(-50%,-50%) scale(var(--fit,1))}
+#stage{position:absolute;inset:0;overflow:hidden;background:#02110a;font-family:Onest,system-ui,sans-serif;color:#fff;-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
+canvas{position:absolute;left:0;top:0;width:1080px;height:1920px;pointer-events:none}
+.panel{position:absolute;inset:0;overflow:hidden;visibility:hidden}
+.layer{position:absolute;inset:0}
+.c{position:absolute;left:0;top:0;will-change:transform,opacity,filter;transform-origin:50% 50%}
+.c img,img.c{display:block}
+.tx{position:absolute;left:0;width:1080px;text-align:center;white-space:nowrap;line-height:1.08}
+.w{display:inline-block;overflow:hidden;vertical-align:top;padding:.08em .05em .16em;margin:-.08em -.05em -.16em}
+.wi{display:inline-block;will-change:transform,opacity,filter}
+.lbl{font-size:30px;font-weight:600;letter-spacing:.28em}
+.grad .wi{color:transparent;-webkit-background-clip:text;background-clip:text;background-repeat:no-repeat}
+
+/* сцена A */
+#aFlash{position:absolute;inset:0;background:radial-gradient(circle at 540px 800px,rgba(235,255,225,.95) 0,rgba(140,230,160,.45) 26%,rgba(20,90,50,0) 62%);opacity:0}
+/* сцена B */
+#gal{position:absolute;inset:0;perspective:1300px;perspective-origin:540px 900px;transform-style:preserve-3d}
+#bGlow{width:1150px;height:1150px;border-radius:50%;background:radial-gradient(circle,rgba(190,245,160,.55) 0,rgba(70,180,100,.28) 34%,rgba(10,60,30,0) 66%)}
+#bShadow{width:820px;height:110px;border-radius:50%;background:radial-gradient(ellipse,rgba(0,0,0,.55) 0,rgba(0,0,0,0) 70%)}
+.stat{position:absolute;width:300px;text-align:center}
+.stat b{display:block;font-size:84px;font-weight:800;letter-spacing:-.03em;line-height:1}
+.stat span{display:block;margin-top:14px;font-size:28px;font-weight:500;line-height:1.25;color:rgba(255,255,255,.72);white-space:normal}
+.vdiv{position:absolute;width:2px;height:130px;background:linear-gradient(rgba(255,255,255,0),rgba(255,255,255,.28),rgba(255,255,255,0));transform-origin:50% 50%}
+#ring,#ring2{position:absolute;border-radius:50%;border:10px solid rgba(255,255,255,.6);filter:blur(5px);opacity:0;pointer-events:none}
+.bloom{position:absolute;inset:0;opacity:0;pointer-events:none}
+/* сцена C */
+#pC{background:radial-gradient(ellipse at 50% 30%,#fffdf6 0,#f6f1e3 55%,#e9e1ca 100%)}
+#cPhoto{position:absolute;left:-260px;top:905px;width:1600px;mix-blend-mode:multiply;transform-origin:50% 85%}
+.chip{display:flex;align-items:center;gap:20px;height:86px;padding:0 40px 0 18px;border-radius:43px;background:#fff;color:#173b25;font-size:34px;font-weight:600;white-space:nowrap;box-shadow:0 14px 40px rgba(30,70,40,.13),0 2px 6px rgba(30,70,40,.06)}
+.ck{width:52px;height:52px;border-radius:50%;background:#009a4d;display:grid;place-items:center;flex:none}
+.ck svg{width:30px;height:30px}
+/* сцена D */
+.bname{font-weight:800;letter-spacing:-.035em;line-height:1}
+.bcap{font-size:42px;font-weight:500;color:rgba(255,255,255,.88)}
+#dHead{position:absolute;left:0;top:0;width:1080px;height:300px;opacity:0}
+#dCount{position:absolute;right:80px;top:212px;display:flex;align-items:baseline;gap:10px;font-weight:700}
+#dCount .roll{display:inline-block;position:relative;height:52px;width:62px;overflow:hidden;font-size:48px;line-height:52px}
+#dCount .roll span{position:absolute;left:0;top:0;width:100%;text-align:right}
+#dCount .of{font-size:30px;color:rgba(255,255,255,.6)}
+.edge{position:absolute;left:-200px;width:1480px;height:6px;background:linear-gradient(90deg,rgba(255,255,255,0),rgba(255,255,255,.9) 30%,rgba(255,255,255,.9) 70%,rgba(255,255,255,0));filter:blur(3px);transform-origin:50% 50%;opacity:0}
+.plinth{width:196px;border-radius:22px 22px 0 0;background:linear-gradient(180deg,rgba(255,255,255,.26),rgba(255,255,255,.05) 70%,rgba(255,255,255,0));border-top:2px solid rgba(255,255,255,.45);transform-origin:50% 100%}
+/* сцена E */
+#pE{background:radial-gradient(ellipse at 50% 48%,#166039 0,#0a3a21 50%,#03170c 100%)}
+#eGrid{position:absolute;inset:-200px;background-image:linear-gradient(rgba(255,255,255,.035) 2px,transparent 2px),linear-gradient(90deg,rgba(255,255,255,.035) 2px,transparent 2px);background-size:72px 72px}
+#eCard{width:900px;height:560px;border-radius:44px;background:rgba(255,255,255,.055);border:2px solid rgba(255,255,255,.13);overflow:hidden;box-shadow:0 40px 90px rgba(0,0,0,.35)}
+#eCard svg{position:absolute;inset:0}
+.hrs{display:inline-flex;align-items:center;gap:18px}
+/* сцена F */
+#pF{background:radial-gradient(ellipse at 50% 38%,#ffffff 0,#f5f8f0 55%,#e3eadb 100%)}
+#fSweep{position:absolute;background:linear-gradient(105deg,rgba(255,255,255,0) 42%,rgba(255,255,255,.85) 50%,rgba(255,255,255,0) 58%);background-size:300% 100%;background-repeat:no-repeat;-webkit-mask:url(media/logo.png) center/100% 100% no-repeat;mask:url(media/logo.png) center/100% 100% no-repeat}
+.pill{display:flex;align-items:center;gap:22px;height:96px;padding:0 44px 0 20px;border-radius:48px;background:#fff;color:#1d1d1f;font-size:38px;font-weight:600;white-space:nowrap;box-shadow:0 16px 44px rgba(20,60,30,.12),0 2px 6px rgba(20,60,30,.06)}
+.pill svg{width:60px;height:60px;flex:none}
+
+#vig{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 46%,rgba(0,0,0,0) 48%,rgba(0,0,0,.6) 100%);pointer-events:none}
+#grain{mix-blend-mode:overlay;opacity:.11}
+</style>
+</head>
+<body>
+<div id="wrap"><div id="stage">
+  <canvas id="bgc" width="1080" height="1920"></canvas>
+
+  <!-- A: пролог -->
+  <div class="layer" id="sA">
+    <div class="tx lbl" id="aLabel" style="top:300px;color:rgba(205,240,205,.78)">NATURE'S PROTECTION</div>
+    <svg class="c" id="aSpiral" width="700" height="700" viewBox="-350 -350 700 700" style="left:540px;top:790px;overflow:visible"></svg>
+    <div class="tx" id="aL1" style="top:1150px;font-size:58px;font-weight:500;color:rgba(255,255,255,.86)">Qidalanmanın əsasında</div>
+    <div class="tx grad" id="aL2" style="top:1222px;font-size:210px;font-weight:800;letter-spacing:-.045em">təbiət</div>
+    <div id="aFlash"></div>
+  </div>
+
+  <!-- B: упаковки в глубине -->
+  <div class="layer" id="sB">
+    <div id="gal"></div>
+    <div class="c" id="bGlow" style="left:540px;top:1030px"></div>
+    <div class="c" id="bShadow" style="left:540px;top:1392px"></div>
+    <img class="c" id="bHL" src="media/sc-red.png" style="left:300px;top:1062px;width:380px" alt="">
+    <img class="c" id="bHR" src="media/sc-dark.png" style="left:780px;top:1062px;width:380px" alt="">
+    <img class="c" id="bHC" src="media/sc-white.png" style="left:540px;top:1012px;width:430px" alt="">
+    <div class="tx" id="bL1" style="top:262px;font-size:56px;font-weight:500;color:rgba(255,255,255,.86)">Sevimli heyvanınız üçün</div>
+    <div class="tx" id="bL2" style="top:334px;font-size:112px;font-weight:800;letter-spacing:-.035em">sağlam qidalanma</div>
+    <div class="stat c" id="bS0" style="left:205px;top:1555px"><b>4</b><span>brend</span></div>
+    <div class="vdiv c" id="bD0" style="left:372px;top:1545px"></div>
+    <div class="stat c" id="bS1" style="left:540px;top:1555px"><b>260+</b><span>məhsul kataloqda</span></div>
+    <div class="vdiv c" id="bD1" style="left:708px;top:1545px"></div>
+    <div class="stat c" id="bS2" style="left:875px;top:1555px"><b>2004</b><span>fabrikin açıldığı il</span></div>
+    <div id="ring"></div>
+    <div class="bloom" id="bBloom" style="background:radial-gradient(circle at 540px 1010px,rgba(255,253,240,1) 0,rgba(240,255,225,.75) 16%,rgba(170,235,170,.25) 38%,rgba(30,100,60,0) 64%)"></div>
+  </div>
+
+  <!-- C: питомцы -->
+  <div class="panel" id="pC">
+    <img id="cPhoto" src="../assets/pets-2.jpg" alt="">
+    <div class="tx" id="cL1" style="top:250px;font-size:62px;font-weight:500;color:#2f7a45">Hər porsiyada</div>
+    <div class="tx" id="cL2" style="top:326px;font-size:108px;font-weight:800;letter-spacing:-.035em;color:#0d3a21">sağlamlıq qayğısı</div>
+    <div class="chip c" id="cC0" style="left:540px;top:585px"><span class="ck"><svg viewBox="0 0 30 30"><path d="M7 15.5l5.2 5.2L23.5 9" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" pathLength="1" stroke-dasharray="1"/></svg></span>İlk tərkib kimi seçmə ət</div>
+    <div class="chip c" id="cC1" style="left:540px;top:690px"><span class="ck"><svg viewBox="0 0 30 30"><path d="M7 15.5l5.2 5.2L23.5 9" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" pathLength="1" stroke-dasharray="1"/></svg></span>İmmunitet və həzm dəstəyi</div>
+    <div class="chip c" id="cC2" style="left:540px;top:795px"><span class="ck"><svg viewBox="0 0 30 30"><path d="M7 15.5l5.2 5.2L23.5 9" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" pathLength="1" stroke-dasharray="1"/></svg></span>Sağlam dəri və parlaq tük</div>
+  </div>
+
+  <!-- D: четыре бренда (панели создаются в JS) -->
+  <div id="dPanels"></div>
+  <div id="dHead">
+    <div class="lbl" style="position:absolute;left:80px;top:222px;color:rgba(255,255,255,.82)">DÖRD BREND</div>
+    <div id="dCount"><span class="roll"><span id="dN0">01</span><span id="dN1">02</span></span><span class="of">/ 04</span></div>
+  </div>
+
+  <!-- E: шоурум -->
+  <div class="panel" id="pE">
+    <div id="eGrid"></div>
+    <div class="tx lbl" id="eLbl" style="top:262px;color:#9fdcae">DİSTRİBYUTOR MAĞAZAMIZ</div>
+    <div class="tx" id="eT1" style="top:328px;font-size:140px;font-weight:800;letter-spacing:-.04em">The Showroom</div>
+    <div class="tx" id="eT2" style="top:486px;font-size:46px;font-weight:500;color:#bfe8c9">by Nature's Protection</div>
+    <div class="c" id="eCard" style="left:540px;top:925px">
+      <svg viewBox="0 0 900 560" width="900" height="560" id="eMap">
+        <g fill="none" stroke-linecap="round">
+          <path class="road" d="M-20 420 L920 250" stroke="rgba(255,255,255,.17)" stroke-width="18" pathLength="1"/>
+          <path class="road" d="M150 -20 L310 580" stroke="rgba(255,255,255,.15)" stroke-width="16" pathLength="1"/>
+          <path class="road" d="M-20 110 L920 50" stroke="rgba(255,255,255,.13)" stroke-width="14" pathLength="1"/>
+          <path class="road" d="M690 -20 Q760 300 930 530" stroke="rgba(255,255,255,.13)" stroke-width="14" pathLength="1"/>
+          <path class="road" d="M-20 270 L920 175" stroke="rgba(255,255,255,.08)" stroke-width="7" pathLength="1"/>
+          <path class="road" d="M440 -20 L500 580" stroke="rgba(255,255,255,.08)" stroke-width="7" pathLength="1"/>
+          <path class="road" d="M-20 520 L560 580" stroke="rgba(255,255,255,.08)" stroke-width="7" pathLength="1"/>
+          <path class="road" d="M820 -20 L870 160" stroke="rgba(255,255,255,.08)" stroke-width="7" pathLength="1"/>
+        </g>
+        <g id="ePark" style="transform-origin:400px 330px">
+          <path d="M318 268 C360 238 470 236 520 262 C560 284 566 352 536 392 C500 438 392 446 340 418 C292 392 280 296 318 268 Z" fill="rgba(80,200,115,.30)" stroke="rgba(150,235,170,.55)" stroke-width="3"/>
+          <g fill="rgba(140,230,160,.55)"><circle cx="370" cy="300" r="10"/><circle cx="398" cy="288" r="8"/><circle cx="480" cy="300" r="9"/><circle cx="505" cy="372" r="10"/><circle cx="352" cy="390" r="8"/></g>
+          <text x="428" y="352" text-anchor="middle" font-family="Onest" font-size="27" font-weight="600" fill="rgba(220,255,228,.92)">Koroğlu parkı</text>
+        </g>
+        <g id="eRipples"><circle r="20" fill="none" stroke="rgba(170,240,190,.8)" stroke-width="3"/><circle r="20" fill="none" stroke="rgba(170,240,190,.8)" stroke-width="3"/><circle r="20" fill="none" stroke="rgba(170,240,190,.8)" stroke-width="3"/></g>
+        <ellipse id="ePinSh" rx="34" ry="10" fill="rgba(0,0,0,.45)"/>
+        <g id="ePin">
+          <defs><linearGradient id="pinG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#dff3e5"/></linearGradient></defs>
+          <path d="M0 -170 C40 -170 64 -142 64 -108 C64 -70 18 -30 0 0 C-18 -30 -64 -70 -64 -108 C-64 -142 -40 -170 0 -170 Z" fill="url(#pinG)"/>
+          <circle cx="0" cy="-108" r="24" fill="#009a4d"/>
+        </g>
+      </svg>
+    </div>
+    <div class="tx" id="eA1" style="top:1272px;font-size:56px;font-weight:700">Ənvər Qasımzadə küç. 56C</div>
+    <div class="tx" id="eA2" style="top:1352px;font-size:38px;font-weight:500;color:rgba(255,255,255,.74)">Koroğlu parkının yanı, Bakı</div>
+    <div class="c" id="eA3" style="left:540px;top:1470px"><div class="hrs" style="font-size:42px;font-weight:600;color:#f1dfa6">
+      <svg width="50" height="50" viewBox="0 0 50 50"><circle cx="25" cy="25" r="21" fill="none" stroke="#f1dfa6" stroke-width="3.5"/><path id="eHandH" d="M25 25 L25 14" stroke="#f1dfa6" stroke-width="3.5" stroke-linecap="round"/><path id="eHandM" d="M25 25 L34 25" stroke="#f1dfa6" stroke-width="3.5" stroke-linecap="round"/></svg>
+      Hər gün 11:00–20:00</div></div>
+  </div>
+
+  <!-- F: финал -->
+  <div class="panel" id="pF">
+    <svg class="c" id="fSpiral" width="700" height="700" viewBox="-350 -350 700 700" style="left:254px;top:760px;overflow:visible"></svg>
+    <img class="c" id="fLogo" src="media/logo.png" style="left:540px;top:760px;width:860px" alt="">
+    <div class="c" id="fSweep" style="left:540px;top:760px;width:860px;height:271px"></div>
+    <div class="tx" id="fL1" style="top:1010px;font-size:52px;font-weight:500;color:#3a7d44">Sizə və heyvanınıza —</div>
+    <div class="tx" id="fL2" style="top:1082px;font-size:100px;font-weight:800;letter-spacing:-.035em;color:#0b3d22">birlikdə daha çox il</div>
+    <div class="pill c" id="fP0" style="left:540px;top:1352px">
+      <svg viewBox="0 0 60 60"><defs><linearGradient id="igG" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#feda75"/><stop offset=".3" stop-color="#fa7e1e"/><stop offset=".6" stop-color="#d62976"/><stop offset="1" stop-color="#4f5bd5"/></linearGradient></defs><rect x="2" y="2" width="56" height="56" rx="17" fill="url(#igG)"/><rect x="15" y="15" width="30" height="30" rx="9" fill="none" stroke="#fff" stroke-width="3.6"/><circle cx="30" cy="30" r="7.2" fill="none" stroke="#fff" stroke-width="3.6"/><circle cx="40.5" cy="19.5" r="2.4" fill="#fff"/></svg>
+      natures_protection_az</div>
+    <div class="pill c" id="fP1" style="left:540px;top:1466px">
+      <svg viewBox="0 0 60 60"><path d="M30 4C15.6 4 4 15.4 4 29.6c0 4.7 1.3 9.2 3.6 13L4 56l13.8-3.5c3.7 2 7.9 3.1 12.2 3.1C44.4 55.6 56 44.1 56 29.8S44.4 4 30 4z" fill="#25d366"/><path d="M22.2 17.6c-.6-1.3-1.2-1.3-1.8-1.4h-1.5c-.5 0-1.4.2-2.1 1-.7.8-2.8 2.7-2.8 6.6s2.9 7.7 3.3 8.2c.4.5 5.6 8.9 13.8 12.1 6.8 2.7 8.2 2.1 9.7 2 1.5-.1 4.8-2 5.4-3.9.7-1.9.7-3.5.5-3.9-.2-.3-.7-.5-1.5-.9s-4.8-2.4-5.5-2.6c-.7-.3-1.3-.4-1.8.4-.5.8-2.1 2.6-2.5 3.1-.5.5-.9.6-1.7.2-.8-.4-3.4-1.3-6.5-4-2.4-2.1-4-4.8-4.5-5.6-.5-.8 0-1.2.4-1.6.4-.4.8-.9 1.2-1.4.4-.5.5-.8.8-1.3.3-.5.1-1-.1-1.4-.2-.4-1.8-4.4-2.5-6z" fill="#fff"/></svg>
+      +994 10 220 05 25</div>
+  </div>
+
+  <div id="ring2"></div>
+  <div class="bloom" id="eBloom" style="background:radial-gradient(circle at 790px 957px,rgba(255,255,250,1) 0,rgba(235,255,230,.7) 14%,rgba(160,230,175,.22) 36%,rgba(20,80,45,0) 62%)"></div>
+  <canvas id="fx" width="1080" height="1920"></canvas>
+  <div id="vig"></div>
+  <canvas id="grain" width="540" height="960"></canvas>
+</div></div>
+
+<script>
+'use strict';
+const FPS = 60, DUR = 30, W = 1080, H = 1920;
+const $ = s => document.querySelector(s);
+const clamp = (v, a = 0, b = 1) => v < a ? a : v > b ? b : v;
+const lerp = (a, b, p) => a + (b - a) * p;
+const E = {
+  lin: t => t,
+  inCubic: t => t * t * t, outCubic: t => 1 - (1 - t) ** 3, inOutCubic: t => t < .5 ? 4 * t * t * t : 1 - (-2 * t + 2) ** 3 / 2,
+  inQuart: t => t ** 4, outQuart: t => 1 - (1 - t) ** 4, inOutQuart: t => t < .5 ? 8 * t ** 4 : 1 - (-2 * t + 2) ** 4 / 2,
+  outQuint: t => 1 - (1 - t) ** 5,
+  outExpo: t => t >= 1 ? 1 : 1 - 2 ** (-10 * t), inExpo: t => t <= 0 ? 0 : 2 ** (10 * t - 10),
+  inOutExpo: t => t <= 0 ? 0 : t >= 1 ? 1 : t < .5 ? 2 ** (20 * t - 10) / 2 : (2 - 2 ** (-20 * t + 10)) / 2,
+  inOutSine: t => -(Math.cos(Math.PI * t) - 1) / 2
+};
+const P = (t, a, b, e = E.lin) => e(clamp((t - a) / (b - a)));
+// затухающая пружина 0→1 (с перелётом), успокаивается примерно за dur секунд
+function spring(t, t0, dur = 1, z = .62) {
+  const x = t - t0; if (x <= 0) return 0;
+  const w0 = 4.6 / (z * dur), wd = w0 * Math.sqrt(1 - z * z);
+  return 1 - Math.exp(-z * w0 * x) * (Math.cos(wd * x) + z * w0 / wd * Math.sin(wd * x));
+}
+let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+
+// элемент с якорем в (left, top): центр (или низ) элемента в этой точке
+function T(el, o = {}) {
+  const s = o.s ?? 1, base = o.bottom ? 'translate(-50%,-100%)' : 'translate(-50%,-50%)';
+  el.style.transform = `${base} translate3d(${(o.x || 0).toFixed(2)}px,${(o.y || 0).toFixed(2)}px,${(o.z || 0).toFixed(1)}px) rotate(${(o.r || 0).toFixed(3)}deg)` +
+    (o.ry ? ` rotateY(${o.ry.toFixed(3)}deg)` : '') + ` scale(${(o.sx ?? s).toFixed(4)},${(o.sy ?? s).toFixed(4)})`;
+  const op = clamp(o.o ?? 1);
+  el.style.opacity = op.toFixed(4); el.style.visibility = op < .002 ? 'hidden' : 'visible';
+  const f = (o.b > .08 ? `blur(${o.b.toFixed(2)}px) ` : '') + (o.f || '');
+  el.style.filter = f || 'none';
+}
+function show(el, on) { el.style.display = on ? '' : 'none'; el.style.visibility = on ? 'visible' : 'hidden'; }
+
+// текст: слова или буквы в «окошках», въезжают снизу
+function split(el, chars) {
+  const text = el.textContent.trim(); el.textContent = '';
+  const parts = chars ? [...text] : text.split(' '), units = [];
+  parts.forEach((p, i) => {
+    if (!chars && i) el.append(' ');
+    const o = document.createElement('span'); o.className = 'w';
+    const n = document.createElement('span'); n.className = 'wi'; n.textContent = p === ' ' ? ' ' : p;
+    o.append(n); el.append(o); units.push(n);
+  });
+  return units;
+}
+function rise(units, t, t0, o = {}) {
+  const st = o.st ?? .08, d = o.d ?? .95, y = o.y ?? 112, b = o.b ?? 8, out = o.out;
+  units.forEach((u, i) => {
+    const p = P(t, t0 + i * st, t0 + i * st + d, o.e || E.outExpo);
+    let yy = (1 - p) * y, op = clamp(p * 1.7), bl = (1 - p) * b;
+    if (out) {
+      const s0 = out.t + i * (out.st ?? .025), q = P(t, s0, s0 + (out.d ?? .5), out.e || E.inCubic);
+      yy -= q * (out.y ?? 110); op *= 1 - q; bl += q * (out.b ?? 6);
+    }
+    u.style.transform = `translateY(${yy.toFixed(2)}%)`;
+    u.style.opacity = op.toFixed(4);
+    u.style.filter = bl > .1 ? `blur(${bl.toFixed(2)}px)` : 'none';
+  });
+}
+// крупная строка не шире maxW
+function textW(el) { const r = document.createRange(); r.selectNodeContents(el); const k = $('#stage').getBoundingClientRect().width / W; return r.getBoundingClientRect().width / k; }
+function fit(el, maxW = 980) { let fs = parseFloat(getComputedStyle(el).fontSize); while (textW(el) > maxW && fs > 20) { fs -= 2; el.style.fontSize = fs + 'px'; } }
+
+// ---------- спираль (мотив логотипа) ----------
+function buildSpiral(svg, opt) {
+  const NS = 'http://www.w3.org/2000/svg', id = svg.id;
+  const N = 600, turns = opt.turns, th1 = turns * 2 * Math.PI, C = [];
+  for (let i = 0; i <= N; i++) { const u = i / N, th = u * th1 + (opt.rot || 0), r = opt.r0 + (opt.r1 - opt.r0) * u ** 1.06; C.push([Math.cos(th) * r, Math.sin(th) * r, u]); }
+  const L = [], R = [];
+  for (let i = 0; i <= N; i++) {
+    const a = C[Math.max(0, i - 1)], b = C[Math.min(N, i + 1)], dx = b[0] - a[0], dy = b[1] - a[1], d = Math.hypot(dx, dy) || 1;
+    const nx = -dy / d, ny = dx / d, w = opt.w0 + (opt.w1 - opt.w0) * C[i][2] ** 1.15;
+    L.push([C[i][0] + nx * w / 2, C[i][1] + ny * w / 2]); R.push([C[i][0] - nx * w / 2, C[i][1] - ny * w / 2]);
+  }
+  const f = p => p[0].toFixed(1) + ' ' + p[1].toFixed(1);
+  const shape = 'M' + L.map(f).join('L') + 'L' + R.reverse().map(f).join('L') + 'Z';
+  const center = 'M' + C.map(f).join('L');
+  svg.innerHTML = `<defs>
+    <linearGradient id="${id}G" x1="-1" y1="-1" x2="1" y2="1" gradientUnits="objectBoundingBox"><stop offset="0" stop-color="${opt.c0}"/><stop offset="1" stop-color="${opt.c1}"/></linearGradient>
+    <filter id="${id}B" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="${opt.glowBlur || 14}"/></filter>
+    <mask id="${id}M" maskUnits="userSpaceOnUse" x="-400" y="-400" width="800" height="800"><path d="${center}" fill="none" stroke="#fff" stroke-width="${opt.w1 + 12}" stroke-linecap="round" pathLength="1" stroke-dasharray="1 1" class="sm"/></mask>
+    <radialGradient id="${id}H"><stop offset="0" stop-color="#fff"/><stop offset=".25" stop-color="${opt.head}" stop-opacity=".9"/><stop offset="1" stop-color="${opt.head}" stop-opacity="0"/></radialGradient>
+  </defs>
+  <g mask="url(#${id}M)">
+    ${opt.glow ? `<path d="${shape}" fill="${opt.glow}" filter="url(#${id}B)" class="sg"/>` : ''}
+    <path d="${shape}" fill="url(#${id}G)"/>
+  </g>
+  <path d="${center}" fill="none" stroke="none" class="sc"/>
+  <circle r="${opt.headR || 46}" fill="url(#${id}H)" class="sh"/>`;
+  const sm = svg.querySelector('.sm'), sc = svg.querySelector('.sc'), sh = svg.querySelector('.sh'), len = sc.getTotalLength();
+  return p => {
+    sm.style.strokeDashoffset = (1 - p).toFixed(4);
+    const pt = sc.getPointAtLength(len * clamp(p));
+    sh.setAttribute('cx', pt.x.toFixed(1)); sh.setAttribute('cy', pt.y.toFixed(1));
+    sh.style.opacity = (p > .002 && p < .998 ? 1 : 0) * clamp(Math.min(p, 1 - p) * 14);
+  };
+}
+
+// ---------- фон: градиент, лучи света ----------
+const bgc = $('#bgc'), bx = bgc.getContext('2d');
+const mix = (a, b, p) => a.map((v, i) => Math.round(lerp(v, b[i], p)));
+const rgb = a => `rgb(${a[0]},${a[1]},${a[2]})`;
+function drawBG(t) {
+  if (t > 10.2) { bgc.style.visibility = 'hidden'; return; }
+  bgc.style.visibility = 'visible';
+  const k = P(t, 3.8, 5.6, E.inOutSine);
+  const c0 = mix([16, 76, 44], [24, 98, 58], k), c1 = mix([2, 16, 9], [3, 24, 13], k);
+  const g = bx.createRadialGradient(540, 860, 40, 540, 900, 1500);
+  g.addColorStop(0, rgb(c0)); g.addColorStop(.55, rgb(mix(c0, c1, .62))); g.addColorStop(1, rgb(c1));
+  bx.globalCompositeOperation = 'source-over'; bx.fillStyle = g; bx.fillRect(0, 0, W, H);
+  const ray = P(t, .3, 2.6, E.inOutSine) * (1 - P(t, 3.7, 4.3) * .6) + P(t, 4.6, 6, E.inOutSine) * .5;
+  if (ray > .01) {
+    bx.globalCompositeOperation = 'lighter';
+    for (let i = 0; i < 7; i++) {
+      const a = (-90 + (i - 3) * 10.5 + Math.sin(t * .32 + i * 1.7) * 2.6) * Math.PI / 180, len = 2700, wd = 150 + i % 3 * 70;
+      const x0 = 540, y0 = -320;
+      const dirx = Math.sin(((i - 3) * 10.5 + Math.sin(t * .32 + i * 1.7) * 2.6) * Math.PI / 180), diry = Math.cos(((i - 3) * 10.5 + Math.sin(t * .32 + i * 1.7) * 2.6) * Math.PI / 180);
+      const Ex = x0 + dirx * len, Ey = y0 + diry * len, nx = diry, ny = -dirx;
+      const gr = bx.createLinearGradient(x0, y0, Ex, Ey);
+      const al = ray * (.05 + .035 * Math.sin(t * .9 + i * 2.1)) ;
+      gr.addColorStop(0, `rgba(215,255,200,${(al * 1.6).toFixed(3)})`); gr.addColorStop(.45, `rgba(170,235,170,${al.toFixed(3)})`); gr.addColorStop(1, 'rgba(120,200,140,0)');
+      bx.fillStyle = gr; bx.beginPath(); bx.moveTo(x0 - nx * 8, y0 - ny * 8); bx.lineTo(x0 + nx * 8, y0 + ny * 8);
+      bx.lineTo(Ex + nx * wd, Ey + ny * wd); bx.lineTo(Ex - nx * wd, Ey - ny * wd); bx.closePath(); bx.fill();
+    }
+    bx.globalCompositeOperation = 'source-over';
+  }
+}
+
+// ---------- частицы ----------
+const fx = $('#fx'), fxx = fx.getContext('2d');
+const PTS = Array.from({ length: 120 }, () => ({ x: rnd() * W, y: rnd() * H, z: .2 + rnd() * .8, ph: rnd() * 6.283, sp: .35 + rnd() * .75 }));
+function sprite(col) {
+  const c = document.createElement('canvas'); c.width = c.height = 64; const x = c.getContext('2d');
+  const g = x.createRadialGradient(32, 32, 0, 32, 32, 32); g.addColorStop(0, col.replace('A', '1')); g.addColorStop(.35, col.replace('A', '.5')); g.addColorStop(1, col.replace('A', '0'));
+  x.fillStyle = g; x.fillRect(0, 0, 64, 64); return c;
+}
+const SPR = { gold: sprite('rgba(232,247,190,A)'), white: sprite('rgba(255,255,255,A)'), warm: sprite('rgba(255,232,180,A)'), green: sprite('rgba(0,140,70,A)') };
+const keys = (t, ks) => { if (t <= ks[0][0]) return ks[0][1]; for (let i = 1; i < ks.length; i++) if (t <= ks[i][0]) return lerp(ks[i - 1][1], ks[i][1], E.inOutSine((t - ks[i - 1][0]) / (ks[i][0] - ks[i - 1][0]))); return ks[ks.length - 1][1]; };
+function drawFX(t) {
+  fxx.clearRect(0, 0, W, H);
+  const amt = keys(t, [[0, 0], [.8, 1], [9.2, 1], [9.8, 0], [13.1, 0], [13.8, .55], [22.2, .55], [22.8, 1], [26.1, 1], [26.7, 0], [28.2, 0], [29, .5], [30, .5]]);
+  if (amt < .01) return;
+  const spr = t < 10 ? SPR.gold : t < 22.4 ? SPR.white : t < 26.5 ? SPR.warm : SPR.green;
+  const warp = t < 3.6 || t > 5.2 ? 0 : P(t, 3.6, 4.05, E.inCubic) * (1 - P(t, 4.2, 5.2, E.outCubic));
+  fxx.globalCompositeOperation = t > 26.5 ? 'source-over' : 'lighter';
+  for (const p of PTS) {
+    const z = p.z;
+    const x = p.x + Math.sin(t * .37 * p.sp + p.ph) * 46 * z;
+    const y = ((p.y - t * 30 * p.sp * z) % (H + 120) + H + 120) % (H + 120) - 60;
+    const a = (t > 26.5 ? .18 : .55) * z * amt * (.7 + .3 * Math.sin(t * 1.3 + p.ph));
+    if (warp > .01) {
+      const dx = x - 540, dy = y - 800, d = Math.hypot(dx, dy) + 1, k = warp * 1100 * z;
+      fxx.strokeStyle = `rgba(225,255,215,${(a * 1.4).toFixed(3)})`; fxx.lineWidth = 1 + z * 3; fxx.lineCap = 'round';
+      fxx.beginPath(); fxx.moveTo(x, y); fxx.lineTo(x + dx / d * k, y + dy / d * k); fxx.stroke();
+    }
+    const r = 3 + z * z * 20;
+    fxx.globalAlpha = clamp(a * (1 - warp * .6)); fxx.drawImage(spr, x - r, y - r, r * 2, r * 2); fxx.globalAlpha = 1;
+  }
+  fxx.globalCompositeOperation = 'source-over';
+}
+// ---------- плёночное зерно ----------
+const grain = $('#grain'), gx = grain.getContext('2d');
+const NOISE = Array.from({ length: 6 }, () => {
+  const c = document.createElement('canvas'); c.width = 540; c.height = 960; const x = c.getContext('2d'), d = x.createImageData(540, 960);
+  for (let i = 0; i < d.data.length; i += 4) { const v = 128 + (rnd() - .5) * 120; d.data[i] = d.data[i + 1] = d.data[i + 2] = v; d.data[i + 3] = 255; }
+  x.putImageData(d, 0, 0); return c;
+});
+const drawGrain = f => gx.drawImage(NOISE[f % NOISE.length], 0, 0);
+
+// ================= СЦЕНЫ =================
+// A — пролог 0–4.4
+const spA = buildSpiral($('#aSpiral'), { turns: 2.7, r0: 4, r1: 262, w0: 3, w1: 40, c0: '#2fc06c', c1: '#e9f8b8', glow: 'rgba(160,240,150,.9)', head: '#dfffd0', rot: -.6 });
+const aL1 = split($('#aL1')), aL2 = split($('#aL2'), true);
+let aGrad = [];
+function sceneA(t) {
+  const on = t < 4.6; show($('#sA'), on); if (!on) return;
+  const lb = $('#aLabel'), lq = P(t, 3.45, 3.9, E.inCubic);
+  lb.style.opacity = (P(t, .5, 1.6, E.outCubic) * (1 - lq)).toFixed(3);
+  lb.style.letterSpacing = (.5 - .22 * P(t, .4, 2.2, E.outCubic)).toFixed(3) + 'em';
+  lb.style.transform = `translateY(${(-40 * lq).toFixed(1)}px)`;
+  const dp = P(t, .15, 2.35, E.inOutCubic); spA(dp);
+  const exit = P(t, 3.55, 4.45, E.inQuart);
+  T($('#aSpiral'), { s: (.78 + .22 * P(t, 0, 2.7, E.outCubic)) * (1 + exit * 8.5) * (1 + .02 * Math.sin(Math.max(0, t - 2.35) * 2.2) * P(t, 2.35, 2.8)),
+    r: -46 * (1 - P(t, 0, 2.8, E.outCubic)) + exit * 110, o: P(t, .1, .5) * (1 - P(t, 4.05, 4.45)), b: exit * 6 });
+  const out = { t: 3.5, st: .03, d: .5, y: 115, b: 8 };
+  rise(aL1, t, 1.2, { st: .1, d: 1, out });
+  rise(aL2, t, 1.5, { st: .06, d: 1.1, y: 100, b: 14, out: { ...out, t: 3.55 } });
+  // градиент букв «təbiət» общий на слово + блик 2.5–3.4
+  const sweep = lerp(-2.1, .1, P(t, 2.45, 3.45, E.inOutCubic));
+  aGrad.forEach(g => { g.u.style.backgroundPosition = `${(-g.off + sweep * g.wl).toFixed(1)}px 0`; });
+  $('#aFlash').style.opacity = (P(t, 3.8, 4.12, E.outCubic) * (1 - P(t, 4.12, 4.75, E.inOutSine)) * .78).toFixed(3);
+}
+
+// B — упаковки в глубине 3.9–10.1
+const GAL = [
+  ['np-salmon', 140, 560, -1100, 170, 18], ['np-mzg', 940, 430, -1600, 230, -15], ['np-beauty', 870, 1480, -800, 190, -12],
+  ['np-kitten', 170, 1360, -1900, 250, 14], ['ar-lamb', 990, 930, -2500, 290, -20], ['np-mobility', 90, 960, -2850, 210, 22],
+  ['ar-salmon', 290, 300, -3300, 270, 10], ['np-sensitive', 790, 250, -3650, 250, -10], ['tp-5in1', 660, 1700, -2250, 230, -8],
+  ['np-weight', 400, 1740, -3050, 220, 12], ['ar-poultry', 110, 1720, -4000, 290, 16], ['np-whitecats', 1000, 1660, -3550, 190, -14],
+  ['tp-magic', 980, 1260, -4300, 240, -10], ['ar-outdoor', 60, 200, -4650, 290, 18], ['np-dog-red', 760, 640, -5200, 240, -12], ['tp-detox', 300, 760, -5600, 220, 14]
+].map(([n, x, y, z, w, ry]) => { const im = new Image(); im.src = `media/${n}.png`; im.className = 'c'; im.style.cssText = `left:${x}px;top:${y}px;width:${w}px`; $('#gal').append(im); return { im, z, ry, ph: rnd() * 6 }; });
+const bL1 = split($('#bL1')), bL2 = split($('#bL2'));
+function sceneB(t) {
+  const on = t > 3.85 && t < 10.15; show($('#sB'), on); if (!on) return;
+  const zc = 3500 * P(t, 3.85, 6.8, E.outQuart) + 75 * Math.max(0, t - 3.85);
+  const dof = P(t, 5.2, 6.3, E.inOutSine);
+  GAL.forEach(g => {
+    const z = g.z + zc, zf = -250;
+    const o = clamp((z + 5600) / 900) * (1 - clamp((z - 650) / 380)) * P(t, 3.9, 4.4) * (1 - dof * .35);
+    T(g.im, { z, ry: g.ry + Math.sin(t * .6 + g.ph) * 6, r: Math.sin(t * .45 + g.ph) * 3, o: z > 1150 ? 0 : o, b: Math.min(18, Math.abs(z - zf) / 170) + dof * 5 });
+  });
+  // герои
+  const pc = spring(t, 5.1, 1.35, .66), bl = 16 * (1 - P(t, 5.1, 5.75, E.outCubic)), push = P(t, 8.9, 10, E.inOutSine);
+  const bob = k => Math.sin(t * 1.5 + k) * 7;
+  T($('#bHC'), { y: (1 - pc) * 820 + bob(0), s: (.74 + .26 * pc) * (1 + push * .05), o: P(t, 5.1, 5.4), b: bl, r: Math.sin(t * .9) * .6 });
+  const ps = spring(t, 5.5, 1.25, .7);
+  T($('#bHL'), { x: (1 - ps) * 240, y: (1 - ps) * 90 + bob(1.2), r: -9 * ps + Math.sin(t * .8 + 1) * .7, s: (.86 + .14 * ps) * (1 + push * .05), o: P(t, 5.5, 5.75), b: 6 * (1 - P(t, 5.5, 6, E.outCubic)) });
+  T($('#bHR'), { x: -(1 - ps) * 240, y: (1 - ps) * 90 + bob(2.4), r: 9 * ps + Math.sin(t * .8 + 2) * .7, s: (.86 + .14 * ps) * (1 + push * .05), o: P(t, 5.5, 5.75), b: 6 * (1 - P(t, 5.5, 6, E.outCubic)) });
+  T($('#bGlow'), { o: P(t, 5, 6.3, E.outCubic) * (.82 + .18 * Math.sin(t * 2.1)), s: .85 + .15 * P(t, 5, 6.5, E.outCubic) + .03 * Math.sin(t * 1.4) });
+  T($('#bShadow'), { o: P(t, 5.4, 6.2) * .9, s: .7 + .3 * pc });
+  rise(bL1, t, 5.85, { st: .09 }); rise(bL2, t, 6.0, { st: .1, d: 1.05 });
+  [0, 1, 2].forEach(i => {
+    const t0 = 6.7 + i * .15, p = P(t, t0, t0 + 1, E.outExpo);
+    T($('#bS' + i), { y: (1 - p) * 60, o: clamp(p * 1.6), b: (1 - p) * 8 });
+  });
+  [0, 1].forEach(i => { const p = P(t, 6.9 + i * .15, 7.8 + i * .15, E.outExpo); T($('#bD' + i), { sy: p, o: p }); });
+  $('#bS0 b').textContent = Math.max(1, Math.round(4 * P(t, 6.75, 7.4, E.outCubic)));
+  $('#bS1 b').textContent = Math.round(260 * P(t, 6.85, 8.1, E.outCubic)) + '+';
+  // переход: круг раскрывает светлую сцену
+  const r = 1750 * P(t, 9.2, 10.05, E.inOutQuart), ring = $('#ring');
+  ring.style.cssText = `left:${540 - r}px;top:${1010 - r}px;width:${2 * r}px;height:${2 * r}px;opacity:${(P(t, 9.2, 9.32) * (1 - P(t, 9.65, 10.05))).toFixed(3)}`;
+  $('#bBloom').style.opacity = (P(t, 8.95, 9.32, E.outCubic) * (1 - P(t, 9.32, 9.95, E.inOutSine)) * .92).toFixed(3);
+}
+
+// C — питомцы 9.2–13.4
+const cL1 = split($('#cL1')), cL2 = split($('#cL2'));
+function sceneC(t) {
+  const on = t > 9.2 && t < 13.75; show($('#pC'), on); if (!on) return;
+  const r = 1750 * P(t, 9.2, 10.05, E.inOutQuart);
+  $('#pC').style.clipPath = t < 10.05 ? `circle(${r.toFixed(1)}px at 540px 1010px)` : 'none';
+  const ex = P(t, 12.8, 13.35, E.inCubic);
+  const ph = $('#cPhoto');
+  ph.style.transform = `translateY(${(90 * (1 - P(t, 9.2, 13.4, E.outCubic)) - ex * 60).toFixed(2)}px) scale(${(1.16 - .16 * P(t, 9.2, 13.4, E.outCubic) + ex * .03).toFixed(4)})`;
+  ph.style.opacity = (1 - ex * .2).toFixed(3);
+  const out = { t: 12.75, st: .02, d: .5, y: 110 };
+  rise(cL1, t, 9.75, { st: .09, out }); rise(cL2, t, 9.9, { st: .1, d: 1.05, out: { ...out, t: 12.8 } });
+  [0, 1, 2].forEach(i => {
+    const t0 = 10.35 + i * .17, p = spring(t, t0, .9, .72), q = P(t, 12.8 + i * .04, 13.25 + i * .04, E.inCubic);
+    const el = $('#cC' + i);
+    T(el, { y: (1 - p) * 70 - q * 90, s: .9 + .1 * p, o: P(t, t0, t0 + .3) * (1 - q), b: q * 6 });
+    el.querySelector('path').style.strokeDashoffset = (1 - P(t, t0 + .22, t0 + .62, E.outCubic)).toFixed(3);
+  });
+}
+
+// D — четыре бренда 12.85–23.1
+const WD = [12.85, 15.3, 17.7, 20.1], WE = 22.35, WIPE = .75;
+const BR = [
+  { name: ["Nature's", 'Protection'], size: 150, cap: 'Pişik və itlər üçün qida və vitaminlər',
+    bg: 'radial-gradient(ellipse at 50% 62%,#22904f 0,#0d532c 45%,#052a16 100%)',
+    items: [['np-dog-mini', 282, 1240, 330, -9], ['np-dog-weight', 798, 1240, 330, 9], ['np-cat-indoor', 540, 1185, 380, 0], ['np-salmon', 915, 1500, 118, 8, 1], ['np-beauty', 168, 1530, 136, -7, 1]] },
+  { name: ['Araton'], size: 210, cap: 'Hər gün üçün balanslı qida',
+    bg: 'radial-gradient(ellipse at 50% 62%,#e6a646 0,#a9661d 45%,#45270a 100%)',
+    items: [['ar-outdoor', 150, 1272, 300, -15], ['ar-maxi', 930, 1272, 255, 15], ['ar-poultry', 335, 1215, 330, -7.5], ['ar-salmon', 745, 1215, 330, 7.5], ['ar-lamb', 540, 1185, 370, 0]] },
+  { name: ['Tauro', 'Pro Line'], size: 160, cap: 'Peşəkar qrumminq',
+    bg: 'radial-gradient(ellipse at 50% 58%,#93a0af 0,#5c6878 45%,#20272f 100%)', steps: true,
+    items: [['tp-5in1', 150], ['tp-magic', 345], ['tp-detox', 540], ['tp-fur', 735], ['tp-sens', 930]] },
+  { name: ['Misoko'], size: 210, cap: 'Oyuncaqlar və aksesuarlar',
+    bg: 'radial-gradient(ellipse at 50% 58%,#f7aecb 0,#d8709b 45%,#74264d 100%)', toys: true,
+    items: [ // имя, x, ширина, задержка, пол (низ), стартовый поворот, ряд
+      ['toy-beimr01375', 160, 175, .1, 1345, 26, 1], ['toy-beirj06374', 410, 270, .0, 1335, -18, 1], ['toy-beirj02939', 690, 255, .14, 1340, 22, 1], ['toy-beirj06663', 935, 165, .06, 1345, -30, 1],
+      ['toy-beirj01523', 205, 290, .2, 1625, -40, 0], ['toy-beimr01181', 515, 300, .3, 1640, 24, 0], ['toy-beirj06635', 815, 305, .25, 1630, -22, 0]] }
+];
+const TPL_FLORA = `<svg class="c" style="left:540px;top:1000px;width:1080px;height:1500px" viewBox="0 0 1080 1500" fill="none" stroke="rgba(255,255,255,.3)" stroke-width="3" stroke-linecap="round">
+  <g class="fl"><path pathLength="1" d="M70 1180 C120 1000 60 860 150 720"/><path pathLength="1" d="M150 720 C110 690 90 640 110 600 C150 620 170 670 150 720 Z"/><path pathLength="1" d="M118 960 C60 950 30 910 30 870 C80 870 112 912 118 960 Z"/>
+  <g transform="translate(150 590)"><path pathLength="1" d="M0 0 C-22 -40 22 -40 0 0 C40 -22 40 22 0 0 C22 40 -22 40 0 0 C-40 22 -40 -22 0 0 Z"/><circle pathLength="1" r="9"/></g></g>
+  <g class="fl"><path pathLength="1" d="M1010 1240 C960 1080 1030 960 940 820"/><path pathLength="1" d="M940 820 C985 800 1010 750 995 705 C955 720 930 770 940 820 Z"/><path pathLength="1" d="M968 1010 C1025 1000 1052 960 1050 920 C1000 922 970 965 968 1010 Z"/>
+  <g transform="translate(985 690) rotate(20)"><path pathLength="1" d="M0 0 C-26 -48 26 -48 0 0 C48 -26 48 26 0 0 C26 48 -26 48 0 0 C-48 26 -48 -26 0 0 Z"/><circle pathLength="1" r="10"/></g></g>
+  <g class="fl"><g transform="translate(860 230)"><path pathLength="1" d="M0 0 C-16 -30 16 -30 0 0 C30 -16 30 16 0 0 C16 30 -16 30 0 0 C-30 16 -30 -16 0 0 Z"/><circle pathLength="1" r="6"/></g>
+  <g transform="translate(210 260) rotate(-15)"><path pathLength="1" d="M0 0 C-14 -26 14 -26 0 0 C26 -14 26 14 0 0 C14 26 -14 26 0 0 C-26 14 -26 -14 0 0 Z"/><circle pathLength="1" r="5"/></g>
+  <path pathLength="1" d="M300 1440 C380 1380 460 1400 540 1360 C620 1400 700 1380 780 1440"/></g></svg>`;
+const dPanels = $('#dPanels');
+BR.forEach((b, i) => {
+  const p = document.createElement('div'); p.className = 'panel'; p.style.background = b.bg; dPanels.append(p);
+  const inner = document.createElement('div'); inner.className = 'layer'; p.append(inner);
+  if (b.steps) inner.insertAdjacentHTML('beforeend', TPL_FLORA);
+  const lines = b.name.map((n, k) => { const d = document.createElement('div'); d.className = 'tx bname'; d.style.cssText = `top:${(b.name.length > 1 ? 352 : 372) + k * (b.size * 1.02)}px;font-size:${b.size}px`; d.textContent = n; inner.append(d); return d; });
+  const cap = document.createElement('div'); cap.className = 'tx bcap'; cap.style.top = (b.name.length > 1 ? 690 : 618) + 'px'; cap.textContent = b.cap; inner.append(cap);
+  b.panel = p; b.inner = inner; b.lines = lines; b.cap = cap;
+  b.plinths = [];
+  if (b.steps) b.items.forEach((it, k) => { const h = 150 + k * 58, d = document.createElement('div'); d.className = 'plinth c'; d.style.cssText = `left:${it[1]}px;top:${1665 - h / 2}px;height:${h}px`; inner.append(d); b.plinths.push({ el: d, h }); });
+  b.els = b.items.map(it => { const im = new Image(); im.src = `media/${it[0]}.png`; im.className = 'c'; im.style.width = (b.steps ? 220 : it[b.toys ? 2 : 3]) + 'px'; inner.append(im); return im; });
+  const edge = document.createElement('div'); edge.className = 'edge'; p.append(edge); b.edge = edge;
+});
+// игрушки Misoko: честная физика падения с отскоками (рассчитывается заранее)
+function bounceTrack(h0) {
+  const g = 9000, e = .32, dt = 1 / 600, out = []; let y = -h0, v = 0, imp = [];
+  for (let i = 0; i < 600 * 3; i++) { v += g * dt; y += v * dt; if (y > 0) { y = 0; if (v > 260) { imp.push([i * dt, v]); v = -v * e; } else v = 0; } out.push(y); }
+  return { y: out, imp };
+}
+BR[3].tracks = BR[3].items.map(it => bounceTrack(it[6] ? 1150 : 1350));
+function placeBrand(b, i, t) {
+  const w0 = WD[i], w1 = i < 3 ? WD[i + 1] : WE, on = t > w0 && t < w1 + WIPE + .05;
+  show(b.panel, on); if (!on) return;
+  // диагональная «шторка» снизу вверх
+  const pe = P(t, w0, w0 + WIPE, E.inOutQuart), e = lerp(H + 300, -300, pe);
+  b.panel.style.clipPath = pe < 1 ? `polygon(0 ${(e + 180).toFixed(1)}px,100% ${(e - 180).toFixed(1)}px,100% 100%,0 100%)` : 'none';
+  b.edge.style.top = (e - 3) + 'px'; b.edge.style.transform = 'rotate(-18.43deg)';
+  b.edge.style.opacity = (Math.sin(Math.PI * pe) * .9).toFixed(3);
+  const par = (1 - P(t, w0 + .05, w0 + 1.05, E.outQuart)) * 200, ex = P(t, w1 + .02, w1 + .42, E.inCubic);
+  b.inner.style.transform = `translateY(${(par - ex * 140).toFixed(1)}px)`;
+  b.inner.style.opacity = (1 - ex).toFixed(3); b.inner.style.filter = ex > .01 ? `blur(${(ex * 8).toFixed(2)}px)` : 'none';
+  if (!b.units) { b.units = b.lines.map(l => split(l, true)); b.capU = split(b.cap); }
+  b.units.forEach((u, k) => rise(u, t, w0 + .3 + k * .12, { st: .035, d: .9, y: 105, b: 10 }));
+  rise(b.capU, t, w0 + .58, { st: .05, d: .9 });
+  const s0 = w0 + .42;
+  if (b.toys) {
+    b.items.forEach((it, k) => {
+      const tr = b.tracks[k], lt = t - (s0 + it[3]), el = b.els[k];
+      el.style.left = it[1] + 'px'; el.style.top = it[4] + 'px'; el.style.transformOrigin = '50% 100%';
+      if (lt <= 0) { T(el, { o: 0, bottom: true }); return; }
+      const idx = Math.min(tr.y.length - 1, Math.floor(lt * 600)), y = tr.y[idx];
+      let sq = 0; for (const [ti, v] of tr.imp) if (lt > ti) sq += Math.min(.24, v / 26000) * Math.exp(-(lt - ti) * 11) * Math.cos((lt - ti) * 34);
+      const r = it[5] * Math.exp(-lt * 2.4) + Math.sin(t * 1.3 + k) * 1.2 * P(lt, .8, 1.6);
+      T(el, { bottom: true, y, r, sx: 1 + sq, sy: 1 - sq, b: it[6] ? 2.2 : 0, o: 1, f: it[6] ? 'brightness(.93) saturate(.95)' : 'drop-shadow(0 24px 22px rgba(80,10,40,.28))' });
+    });
+  } else if (b.steps) {
+    b.items.forEach((it, k) => {
+      const pl = b.plinths[k], pp = P(t, s0 + k * .07, s0 + k * .07 + .85, E.outExpo);
+      T(pl.el, { sy: pp, y: (1 - pp) * pl.h / 2, o: clamp(pp * 3) });
+      const el = b.els[k], hh = el.naturalHeight * 220 / el.naturalWidth, cy = 1665 - pl.h - hh / 2 + 10;
+      el.style.left = it[1] + 'px'; el.style.top = cy + 'px';
+      const sp = spring(t, s0 + .18 + k * .07, 1, .58);
+      T(el, { y: -(1 - sp) * 300 + Math.sin(t * 1.4 + k * .9) * 5 * P(t, s0 + 1.2, s0 + 1.8), o: P(t, s0 + .18 + k * .07, s0 + .4 + k * .07), b: 8 * (1 - P(t, s0 + .18 + k * .07, s0 + .6 + k * .07, E.outCubic)), f: 'drop-shadow(0 26px 24px rgba(0,0,0,.35))' });
+    });
+    b.inner.querySelectorAll('.fl').forEach((g, k) => g.querySelectorAll('[pathLength]').forEach(pth => { pth.style.strokeDasharray = 1; pth.style.strokeDashoffset = (1 - P(t, w0 + .5 + k * .2, w0 + 1.9 + k * .2, E.inOutCubic)).toFixed(3); }));
+    b.inner.querySelector('svg.c').style.transform = 'translate(-50%,-50%)';
+  } else {
+    const n = b.items.length, centerIdx = n - 1;
+    b.items.forEach((it, k) => {
+      const el = b.els[k], small = it[5];
+      el.style.left = it[1] + 'px'; el.style.top = it[2] + 'px';
+      const order = small ? 3 : Math.abs(it[1] - 540) / 200, d = s0 + order * .07;
+      const sp = spring(t, d, 1.15, .64);
+      const fromX = (540 - it[1]) * (small ? 0 : .9), fromY = small ? 260 : 520;
+      T(el, { x: (1 - sp) * fromX, y: (1 - sp) * fromY + Math.sin(t * 1.5 + k) * (small ? 9 : 6), r: it[4] * sp + Math.sin(t * .8 + k) * .7, s: .8 + .2 * sp,
+        o: P(t, d, d + .25), b: (small ? 3 : 0) + 10 * (1 - P(t, d, d + .55, E.outCubic)), f: 'drop-shadow(0 30px 28px rgba(0,0,0,.32))' });
+    });
+  }
+}
+function sceneD(t) {
+  BR.forEach((b, i) => placeBrand(b, i, t));
+  const hd = $('#dHead'), o = P(t, 13.25, 13.75) * (1 - P(t, 22.3, 22.65));
+  hd.style.opacity = o.toFixed(3); hd.style.visibility = o > .002 ? 'visible' : 'hidden';
+  // счётчик 01→04 прокручивается
+  let i = 0; for (let k = 1; k < 4; k++) if (t > WD[k] + .15) i = k;
+  const next = Math.min(3, i + 1), q = i < 3 ? P(t, WD[next] + .15, WD[next] + .65, E.inOutCubic) : 0;
+  const a = $('#dN0'), b2 = $('#dN1');
+  a.textContent = '0' + (i + 1); b2.textContent = '0' + (next + 1);
+  a.style.transform = `translateY(${(-q * 100).toFixed(2)}%)`; a.style.opacity = 1 - q;
+  b2.style.transform = `translateY(${((1 - q) * 100).toFixed(2)}%)`; b2.style.opacity = q;
+}
+
+// E — шоурум 22.35–26.95
+const eT1 = split($('#eT1'), true), eT2 = split($('#eT2')), eA1 = split($('#eA1')), eA2 = split($('#eA2'));
+const PIN = { x: 700, y: 312 }, PIN_SCREEN = { x: 540 - 450 + PIN.x, y: 925 - 280 + PIN.y };
+function sceneE(t) {
+  const on = t > WE && t < 27; show($('#pE'), on); if (!on) return;
+  const pe = P(t, WE, WE + WIPE, E.inOutQuart), e = lerp(H + 300, -300, pe);
+  $('#pE').style.clipPath = pe < 1 ? `polygon(0 ${(e + 180).toFixed(1)}px,100% ${(e - 180).toFixed(1)}px,100% 100%,0 100%)` : 'none';
+  const par = (1 - P(t, WE + .05, WE + 1.15, E.outQuart)) * 200;
+  $('#eGrid').style.transform = `translateY(${(par * .5 - (t - WE) * 14).toFixed(1)}px) rotate(-8deg)`;
+  const lbl = $('#eLbl'); lbl.style.opacity = P(t, WE + .3, WE + .9).toFixed(3); lbl.style.letterSpacing = (.42 - .14 * P(t, WE + .3, WE + 1.5, E.outCubic)).toFixed(3) + 'em';
+  rise(eT1, t, WE + .35, { st: .03, d: .9, y: 105, b: 10 }); rise(eT2, t, WE + .7, { st: .07 });
+  const cp = P(t, WE + .4, WE + 1.3, E.outExpo);
+  T($('#eCard'), { y: (1 - cp) * 120 + par * .4, s: .93 + .07 * cp, o: clamp(cp * 1.5), b: (1 - cp) * 10 });
+  document.querySelectorAll('#eMap .road').forEach((r, k) => { r.style.strokeDasharray = 1; r.style.strokeDashoffset = (1 - P(t, WE + .55 + k * .06, WE + 1.55 + k * .06, E.inOutCubic)).toFixed(3); });
+  const pk = spring(t, WE + .95, .9, .6); $('#ePark').style.transform = `scale(${(.6 + .4 * pk).toFixed(4)})`; $('#ePark').style.opacity = P(t, WE + .95, WE + 1.2).toFixed(3);
+  const pd = spring(t, WE + 1.25, 1, .45), hgt = (1 - pd) * -260;
+  $('#ePin').setAttribute('transform', `translate(${PIN.x} ${(PIN.y + hgt).toFixed(1)})`); $('#ePin').style.opacity = P(t, WE + 1.25, WE + 1.4).toFixed(3);
+  const shs = clamp(1 + hgt / 300); $('#ePinSh').setAttribute('transform', `translate(${PIN.x} ${PIN.y}) scale(${shs.toFixed(3)})`); $('#ePinSh').style.opacity = (P(t, WE + 1.25, WE + 1.5) * shs).toFixed(3);
+  $('#eRipples').querySelectorAll('circle').forEach((c, k) => {
+    const st = WE + 1.7 + k * .55, ph = t < st ? -1 : ((t - st) % 1.65) / 1.65;
+    c.setAttribute('cx', PIN.x); c.setAttribute('cy', PIN.y);
+    c.setAttribute('r', ph < 0 ? 0 : (18 + ph * 150).toFixed(1)); c.style.opacity = ph < 0 ? 0 : ((1 - ph) * .7).toFixed(3);
+  });
+  rise(eA1, t, WE + 1.45, { st: .07 }); rise(eA2, t, WE + 1.62, { st: .06 });
+  const hp = P(t, WE + 1.8, WE + 2.7, E.outExpo); T($('#eA3'), { y: (1 - hp) * 50, o: clamp(hp * 1.6), b: (1 - hp) * 8 });
+  const ang = (t - WE) * 140; $('#eHandM').setAttribute('transform', `rotate(${ang.toFixed(1)} 25 25)`); $('#eHandH').setAttribute('transform', `rotate(${(ang / 12).toFixed(1)} 25 25)`);
+}
+
+// F — финал 26.05–30
+const spF = buildSpiral($('#fSpiral'), { turns: 2.3, r0: 4, r1: 128, w0: 3, w1: 30, c0: '#00a651', c1: '#7ccf9a', head: '#9be3b4', headR: 26, glowBlur: 8, rot: 2.2 });
+const fL1 = split($('#fL1')), fL2 = split($('#fL2'));
+function sceneF(t) {
+  $('#eBloom').style.opacity = (P(t, 25.8, 26.15, E.outCubic) * (1 - P(t, 26.15, 26.8, E.inOutSine)) * .9).toFixed(3);
+  const on = t > 26.05; show($('#pF'), on); show($('#ring2'), on && t < 27); if (!on) return;
+  const r = 2400 * P(t, 26.05, 26.95, E.inOutQuart), rg = $('#ring2');
+  rg.style.cssText = `left:${PIN_SCREEN.x - r}px;top:${PIN_SCREEN.y - r}px;width:${2 * r}px;height:${2 * r}px;opacity:${(P(t, 26.05, 26.15) * (1 - P(t, 26.5, 26.95))).toFixed(3)};border-color:rgba(200,245,210,.7)`;
+  $('#pF').style.clipPath = t < 26.95 ? `circle(${r.toFixed(1)}px at ${PIN_SCREEN.x}px ${PIN_SCREEN.y}px)` : 'none';
+  spF(P(t, 26.45, 27.3, E.inOutCubic));
+  const lg = P(t, 27.35, 27.85, E.outCubic), breathe = 1 + .008 * Math.sin((t - 28) * 1.6) * P(t, 28.2, 29), mv = P(t, 26.95, 27.6, E.inOutCubic);
+  T($('#fSpiral'), { x: (540 - 254) * (1 - mv), o: P(t, 26.4, 26.55) * (1 - P(t, 27.5, 27.85)), s: 1.55 - .55 * mv, r: -40 * (1 - P(t, 26.4, 27.6, E.outCubic)) });
+  const logo = $('#fLogo'); T(logo, { s: (.95 + .05 * lg) * breathe, o: lg, y: Math.sin((t - 28) * 1.2) * 3 * P(t, 28, 29) });
+  logo.style.clipPath = `inset(-5% ${(68 * (1 - P(t, 27.45, 28.15, E.inOutCubic))).toFixed(2)}% -5% -5%)`;
+  const sw = $('#fSweep'); T(sw, { s: breathe, o: P(t, 27.9, 28.1) * (1 - P(t, 28.9, 29.1)), y: Math.sin((t - 28) * 1.2) * 3 * P(t, 28, 29) });
+  sw.style.backgroundPosition = `${(lerp(115, -15, P(t, 27.95, 29, E.inOutCubic))).toFixed(2)}% 0`;
+  rise(fL1, t, 27.8, { st: .08 }); rise(fL2, t, 27.95, { st: .09, d: 1.05 });
+  [0, 1].forEach(i => { const t0 = 28.3 + i * .16, p = spring(t, t0, .95, .72); T($('#fP' + i), { y: (1 - p) * 70, s: .92 + .08 * p, o: P(t, t0, t0 + .3), b: (1 - P(t, t0, t0 + .45, E.outCubic)) * 6 }); });
+}
+
+function renderAt(t, frame) {
+  drawBG(t); sceneA(t); sceneB(t); sceneC(t); sceneD(t); sceneE(t); sceneF(t); drawFX(t);
+  $('#vig').style.opacity = keys(t, [[0, 1], [9.3, 1], [9.85, 0], [12.85, 0], [13.5, .55], [22.3, .55], [22.9, .9], [26.1, .9], [26.85, 0], [30, 0]]).toFixed(3);
+  drawGrain(frame ?? Math.round(t * FPS));
+}
+
+// ---------- подготовка ----------
+window.promoReady = (async () => {
+  await document.fonts.ready;
+  await Promise.all([...document.images].map(im => im.decode().catch(() => {})));
+  await Promise.all(['media/logo.png'].map(s => { const i = new Image(); i.src = s; return i.decode().catch(() => {}); }));
+  ['#aL2', '#bL2', '#cL2', '#eT1', '#eA1', '#fL2'].forEach(s => fit($(s)));
+  BR.forEach(b => b.lines.forEach(l => fit(l)));
+  // общий градиент на всё слово «təbiət»
+  const line = $('#aL2'), wl = line.scrollWidth, x0 = aL2[0].parentElement.offsetLeft;
+  aGrad = aL2.map(u => {
+    u.style.backgroundImage = 'linear-gradient(100deg,#6fc985 0%,#bfe99c 34%,#f8ffe8 44%,#ffffff 50%,#f8ffe8 56%,#bfe99c 66%,#6fc985 100%)';
+    u.style.backgroundSize = `${wl * 3}px 100%`;
+    return { u, off: u.parentElement.offsetLeft - x0, wl };
+  });
+  renderAt(0, 0);
+  return { FPS, DUR, W, H };
+})();
+window.renderAt = renderAt;
+
+// ---------- просмотр в браузере ----------
+if (!/render/.test(location.search)) {
+  const fitStage = () => document.documentElement.style.setProperty('--fit', Math.min(innerWidth / W, innerHeight / H));
+  fitStage(); addEventListener('resize', fitStage);
+  promoReady.then(() => {
+    let t0 = performance.now(), paused = false, pt = 0;
+    addEventListener('keydown', e => { if (e.code === 'Space') { paused = !paused; if (!paused) t0 = performance.now() - pt * 1000; } });
+    addEventListener('click', () => { t0 = performance.now(); });
+    const loop = now => { if (!paused) { pt = ((now - t0) / 1000) % DUR; renderAt(pt); } requestAnimationFrame(loop); };
+    requestAnimationFrame(loop);
+  });
+}
+</script>
+</body>
+</html>
