@@ -4,3 +4,4 @@ package-lock.json
 
 # промо-ролик: кадры и черновые рендеры
 promo/out/
+promo/audio/*.wav
