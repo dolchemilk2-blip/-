@@ -30,8 +30,24 @@
     rail._thumb.style.transform = 'translateX(' + (x / tr.clientWidth * 100) + '%)';
   }
 
+  // Ряд с плиткой на компьютере: плитка стоит на месте, поэтому и в конце ряда первая видимая карточка должна
+  // вставать ровно за плиткой, а не наполовину под ней. Хвост ряда (::after, --end) добирает недостающую ширину:
+  // тогда самое дальнее положение ряда совпадает с точкой снапа карточки.
+  function fitEnd(rail) {
+    const tr = rail._track, tile = tr && tr.querySelector(':scope > .group-tile');
+    const cards = tile ? tr.querySelectorAll(':scope > .product') : [];
+    if (!tile || cards.length < 2 || getComputedStyle(tile).position !== 'sticky') { if (tr) tr.style.removeProperty('--end'); return; }
+    const cs = getComputedStyle(tr);
+    const gap = parseFloat(cs.columnGap) || 0;
+    const contentW = tr.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+    const u = cards[1].offsetLeft - cards[0].offsetLeft;          // карточка + промежуток
+    const view = contentW - (cards[0].offsetLeft - tile.offsetLeft);   // видимая часть справа от плитки
+    const k = Math.max(1, Math.floor((view + gap) / u));         // столько карточек помещается целиком
+    tr.style.setProperty('--end', Math.max(0, view - k * u + gap) + 'px');
+  }
+
   function setup(rail) {
-    if (rail._track) { sync(rail); return; }
+    if (rail._track) { fitEnd(rail); sync(rail); return; }
     rail._track = rail.querySelector('.rail__track');
     rail._thumb = rail.querySelector('.rail__thumb');
     if (!rail._track || !rail._thumb) return;
@@ -42,9 +58,10 @@
     rail._track.addEventListener('scroll', later, { passive: true });
     // ряд, нарисованный во время смены бренда (сетка скрыта), получит размер позже — пересчитать тогда
     if (ro) ro.observe(rail._track);
+    fitEnd(rail);
     sync(rail);
   }
-  const ro = window.ResizeObserver ? new ResizeObserver(list => list.forEach(en => { const r = en.target.closest('.rail'); if (r) sync(r); })) : null;
+  const ro = window.ResizeObserver ? new ResizeObserver(list => list.forEach(en => { const r = en.target.closest('.rail'); if (r) { fitEnd(r); sync(r); } })) : null;
   function setupAll() { document.querySelectorAll('.rail').forEach(setup); }
 
   // Стрелки: на ширину видимой части (снап доводит до начала карточки)
@@ -100,7 +117,7 @@
   document.addEventListener('np:render-more', setupAll);
   document.addEventListener('np:ready', setupAll);
   let rsT = 0;
-  window.addEventListener('resize', () => { clearTimeout(rsT); rsT = setTimeout(() => document.querySelectorAll('.rail').forEach(sync), 120); });
+  window.addEventListener('resize', () => { clearTimeout(rsT); rsT = setTimeout(() => document.querySelectorAll('.rail').forEach(r => { fitEnd(r); sync(r); }), 120); });
 
   window.NPRails = { reveal, sync: setupAll };
 })();

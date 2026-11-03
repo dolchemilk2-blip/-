@@ -41,8 +41,8 @@ h3.cat-section__title { font-size: clamp(22px, 2vw, 28px); margin-bottom: 16px; 
 .rail__track::-webkit-scrollbar { display: none; }
 /* ширина карточки — доля видимой части ряда (--per карточек на экран); плитка группы — уже */
 .rail__track > * { scroll-snap-align: start; flex: 0 0 calc((100% - (var(--per) - 1) * var(--gap)) / var(--per)); min-width: 0; }
-.rail__track > .group-tile { flex-basis: calc((100% - (var(--per) - 1) * var(--gap)) / var(--per) * var(--tile, .62)); }
-@media (max-width: 819px) { .rail { --tile: .8; } }
+.rail__track > .group-tile { flex-basis: calc((100% - (var(--per) - 1) * var(--gap)) / var(--per) * var(--tile, .7)); }
+@media (max-width: 819px) { .rail { --tile: .88; } }
 /* один товар в ряду на телефоне — карточка во всю ширину (её строчная раскладка — mobile-catalog.css) */
 @media (max-width: 720px) { .rail__track > .product:only-child { flex-basis: 100%; } }
 
@@ -106,7 +106,7 @@ h3.cat-section__title { font-size: clamp(22px, 2vw, 28px); margin-bottom: 16px; 
 .group-tile:hover .group-tile__pics img:nth-child(3) { transform: rotate(3deg) translate(-2px, 2px); }
 .group-tile:hover .group-tile__pics img:only-child { transform: translateX(-50%) rotate(3deg) scale(1.04); }
 .group-tile__eyebrow { font: var(--t-footnote); letter-spacing: .02em; text-transform: uppercase; color: var(--ink-2-tint); }
-.group-tile__title { font: 700 22px/1.12 var(--font); letter-spacing: -0.02em; margin: 0; text-wrap: balance; overflow-wrap: anywhere; }
+.group-tile__title { font: 700 20px/1.14 var(--font); letter-spacing: -0.02em; margin: 0; text-wrap: balance; hyphens: auto; -webkit-hyphens: auto; overflow-wrap: break-word; }
 .group-tile__count { display: flex; align-items: center; justify-content: space-between; gap: 8px; font: 500 14px/1.3 var(--font); color: var(--ink-2-tint); font-variant-numeric: tabular-nums; }
 .group-tile__go { flex: none; width: 30px; height: 30px; padding: 6px; border-radius: 50%; color: #fff; background: var(--acc);
   box-shadow: 0 4px 12px color-mix(in srgb, var(--acc) 35%, transparent);
@@ -117,11 +117,15 @@ h3.cat-section__title { font-size: clamp(22px, 2vw, 28px); margin-bottom: 16px; 
 .group-tile--white { --coat: #1f7fa0; --coat-soft: #d6ecf4; --acc: #1f7fa0; }
 .group-tile--red { --coat: #b5561f; --coat-soft: #f7e2d2; --acc: #b5561f; }
 .group-tile--dark { --coat: #3a3f4a; --coat-soft: #e0e3e9; --acc: #3a3f4a; }
-.group-tile--coat .group-tile__title { font-size: 20px; }
-/* компьютер: плитка стоит на месте, карточки ряда уезжают под неё; снап — к первой карточке после плитки */
+.group-tile--coat .group-tile__title { font-size: 18px; }
+/* компьютер: плитка стоит на месте, карточки ряда уезжают под неё; снап — к первой карточке после плитки.
+   У залипшей плитки точки снапа нет: она едет вместе с прокруткой, и её «начало» давало остановку где угодно —
+   первая карточка застревала наполовину под плиткой. */
 @media (min-width: 820px) {
-  .rail--lead .rail__track > .group-tile { position: sticky; left: 0; z-index: 3; }
-  .rail--lead .rail__track { scroll-padding-inline-start: calc(var(--pad) + (100% - 2 * var(--pad) - (var(--per) - 1) * var(--gap)) / var(--per) * var(--tile, .62) + var(--gap)); }
+  .rail--lead .rail__track > .group-tile { position: sticky; left: 0; z-index: 3; scroll-snap-align: none; }
+  /* хвост ряда (ширину считает js/rails.js): в конце карточки тоже встают ровно за плиткой */
+  .rail--lead .rail__track::after { content: ''; flex: 0 0 var(--end, 0px); margin-left: calc(-1 * var(--gap)); scroll-snap-align: none; }
+  .cat-section .rail--lead .rail__track.products { scroll-padding-inline-start: calc(var(--pad) + (100% - 2 * var(--pad) - (var(--per) - 1) * var(--gap)) / var(--per) * var(--tile, .7) + var(--gap)); }
   .rail--lead.is-scrollable:not(.at-start) .rail__track > .group-tile { box-shadow: inset 0 0 0 1px rgba(0,0,0,.05), 16px 0 26px -16px rgba(0,0,0,.35); }
 }
 .rail--lead + .rail--lead { margin-top: 26px; }

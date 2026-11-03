@@ -1030,27 +1030,32 @@ function sectionParts(s, brand, lang, dict, mk, o) {
   // упаковок группы, цвет шерсти (у лакомств), название, число и стрелка «дальше». Упаковки не наложены друг на
   // друга: у фото белый фон, multiply растворяет его в плитке, а на наложенных пачках одна просвечивала бы сквозь другую.
   const pics = items => { const im = items.filter(it => it.img).slice(0, 3); return im.length ? `<span class="group-tile__pics" aria-hidden="true">${im.map(it => `<img src="${it.img}" alt="" loading="lazy" decoding="async">`).join('')}</span>` : ''; };
+  const spName = sp && (dict[SPECIES_HEAD[sp][1]] || tr(SPECIES_HEAD[sp][1]));
+  const eyebrow = o.banded ? spName : '';   // «Для собак» над названием — вид виден и когда заголовок вида уехал
   const tile = t => `
         <div class="group-tile${t.coat ? ' group-tile--coat group-tile--' + t.coat : ''}">
           ${t.items ? pics(t.items) : ''}
           ${t.coat ? '<span class="group-tile__dot" aria-hidden="true"></span>' : ''}
+          ${eyebrow ? `<span class="group-tile__eyebrow">${eyebrow}</span>` : ''}
           <h4 class="group-tile__title">${t.title}</h4>
           <span class="group-tile__count">${itemsLabel(t.n, lang)}<svg class="group-tile__go" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </div>`;
   const named = brand === 'np' || brand === 'araton';
-  const multi = groups.filter(g => !g.coat).length > 1;
-  const rows = [];   // группа (или подгруппа лакомств) — свой ряд со своей плиткой; одна группа — ряд без плитки
+  // полное название группы без значка вида в начале («🐶 Сухой корм» → «Сухой корм»)
+  const fullName = g => { const src = g.sub || g.group || {}; return String(src[lang] || src.ru || '').replace(/^[^\p{L}\p{N}]+/u, ''); };
+  const rows = [];   // группа (или подгруппа лакомств) — свой ряд, у каждого ряда своя плитка
   groups.forEach(g => {
     if (g.coat) { blocks.push(coatBlock(g, dict, mk, lang, '')); return; }
     const subs = brand === 'np' && s.id === 'treats' ? treatsSubgroups(g, dict) : null;
-    if (subs) { subs.forEach(sg => rows.push({ lead: true, html: tile({ title: sg.title, coat: sg.coat, n: sg.items.length, items: sg.items }) + cards(g, sg.items) })); return; }
+    if (subs) { subs.forEach(sg => rows.push(tile({ title: sg.title, coat: sg.coat, n: sg.items.length, items: sg.items }) + cards(g, sg.items))); return; }
     const items = brand === 'np' && s.id === 'treats' ? byStage(g.items) : g.items;
-    const name = named ? shortGroupLabel(g, lang) : ((g.group && (g.group[lang] || g.group.ru)) || '');
-    rows.push(multi ? { lead: true, html: tile({ title: name, n: items.length, items }) + cards(g, items) } : { html: cards(g, items) });
+    // NP / Araton — короткое имя: «Prime», «Superior Care» (раздел над рядом и так называется «Паучи», «Ветдиета»),
+    // «Сухой корм»; Tauro / Misoko — полное имя группы
+    const name = named ? shortGroupLabel(g, lang).replace(/^[^\p{L}\p{N}]+/u, '') : fullName(g);
+    rows.push(tile({ title: name, n: items.length, items }) + cards(g, items));
   });
-  rows.forEach(r => blocks.push(railHtml(r.html, r.lead)));
+  rows.forEach(r => blocks.push(railHtml(r, true)));
   const pid = sp ? sp + '-' + s.id : s.id;
-  const spName = sp && (dict[SPECIES_HEAD[sp][1]] || tr(SPECIES_HEAD[sp][1]));
   const band = o.band ? `
       <div class="sp-band sp-band--${sp}">${window.NPAge ? `<span class="sp-band__ico">${NPAge.icon(sp)}</span>` : ''}
         <h2 class="sp-band__title">${spName}</h2><span class="sp-band__count">${itemsLabel(o.bandCount, lang)}</span></div>` : '';
