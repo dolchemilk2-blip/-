@@ -1,40 +1,93 @@
-/* ===== Каталог v2: место по максимуму =====
-   - страница каталога шире (до 1480px), сетка 5 / 4 / 3 / 2 колонки;
-   - раздел — одна сплошная сетка: заголовок группы — плитка в ряду с карточками, ряды не обрываются;
+/* ===== Каталог v2 =====
+   - NP / Araton идут по видам: сначала все разделы «Для собак», потом «Для кошек» (.sp-band — заголовок вида);
+   - раздел — один ряд карточек (.rail): не помещается — уходит вбок, стрелки + ползунок (js/rails.js);
    - Superior Care: линейки белой · рыжей · тёмной шерсти колонками, у собак — полоска с собачками возраста. */
 
 body.page-catalog { --container: 1760px; }
 
-/* ---------- сплошная сетка раздела ---------- */
-.cat-section .products--flow { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 20px; align-items: stretch; }
-@media (max-width: 1659px) { .cat-section .products--flow { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
-@media (max-width: 1399px) { .cat-section .products--flow { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
-@media (max-width: 1099px) { .cat-section .products--flow { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-@media (max-width: 819px) { .cat-section .products--flow { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; } }
-.products--flow > .flow-full { grid-column: 1 / -1; }
-.products--flow > .coat-note { margin: -8px 0 4px; }
-.products--flow > .flow-full .cat-xlink { margin: 0; }
+/* ---------- заголовок вида: «Для собак» / «Для кошек» ---------- */
+.sp-band {
+  display: flex; align-items: center; gap: 14px; margin: 0 0 26px; padding: 14px 20px;
+  border-radius: var(--r-panel, 28px); background: linear-gradient(90deg, var(--tint-soft, #f1f7ec) 0%, rgba(255,255,255,0) 85%);
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,.035);
+}
+.cat-section + .cat-section--band { margin-top: 84px; }
+.sp-band__ico { flex: none; width: 52px; height: 52px; border-radius: 16px; display: grid; place-items: center; color: var(--brand-ink, #007a3d);
+  background: #fff; box-shadow: 0 4px 14px rgba(0,0,0,.06); }
+.sp-band__ico svg { width: 34px; height: 34px; }
+.sp-band__title { font: 700 clamp(28px, 2.8vw, 40px)/1.1 var(--font); letter-spacing: -0.025em; margin: 0; }
+.sp-band__count { font: var(--t-footnote); color: var(--ink-2-tint); padding: 3px 10px; border-radius: var(--r-pill); background: rgba(0,0,0,.05); white-space: nowrap; }
+/* раздел внутри вида — заголовок поменьше */
+.cat-section { margin-bottom: 52px; }
+h3.cat-section__title { font-size: clamp(22px, 2vw, 28px); margin-bottom: 16px; }
+.cat-section > .coat-note { margin: -8px 0 18px; }
+.cat-xlink-row { margin: -6px 0 14px; }
+.cat-xlink-row .cat-xlink { margin: 0; }
 
-/* ---------- плитка группы ---------- */
+/* ---------- ряд карточек: лишнее уходит вбок ---------- */
+.rail { --per: 6; --gap: 20px; --pad: 6px; position: relative; }
+@media (max-width: 1659px) { .rail { --per: 5; } }
+@media (max-width: 1399px) { .rail { --per: 4; } }
+@media (max-width: 1099px) { .rail { --per: 3; } }
+@media (max-width: 819px) { .rail { --per: 2.25; --gap: 12px; --pad: var(--gutter, 16px); } }
+.cat-section .rail__track.products {
+  display: flex; align-items: stretch; gap: var(--gap); grid-template-columns: none;
+  overflow-x: auto; overflow-y: hidden; overscroll-behavior-x: contain; scrollbar-width: none;
+  scroll-snap-type: x mandatory; scroll-padding-inline: var(--pad);
+  /* поля под подъём карточки при наведении и тень — их не обрезает прокрутка */
+  padding: 10px var(--pad) 22px; margin: -10px calc(-1 * var(--pad)) -22px;
+  position: relative;
+}
+.rail__track::-webkit-scrollbar { display: none; }
+/* ширина карточки — доля видимой части ряда (--per карточек на экран); плитка группы — уже */
+.rail__track > * { scroll-snap-align: start; flex: 0 0 calc((100% - (var(--per) - 1) * var(--gap)) / var(--per)); min-width: 0; }
+.rail__track > .group-tile { flex-basis: calc((100% - (var(--per) - 1) * var(--gap)) / var(--per) * var(--tile, .62)); }
+@media (max-width: 819px) { .rail { --tile: .8; } }
+/* один товар в ряду на телефоне — карточка во всю ширину (её строчная раскладка — mobile-catalog.css) */
+@media (max-width: 720px) { .rail__track > .product:only-child { flex-basis: 100%; } }
+
+/* ползунок — тонкая линия под рядом, отделяет следующий раздел; бегунок — видимая часть ряда */
+.rail__bar { position: relative; height: 3px; margin-top: 18px; border-radius: 2px; background: rgba(0,0,0,.07); touch-action: none; }
+.rail__bar::before { content: ''; position: absolute; left: 0; right: 0; top: -9px; bottom: -9px; }   /* удобнее попасть */
+.rail__thumb { position: absolute; left: 0; top: 0; bottom: 0; width: 0; border-radius: 2px; background: var(--brand, #009a4d); opacity: 0;
+  transition: opacity var(--dur-hover, 200ms) ease, height 160ms ease, top 160ms ease; }
+.rail.is-scrollable .rail__bar { cursor: pointer; }
+.rail.is-scrollable .rail__thumb { opacity: 1; cursor: grab; }
+.rail.is-scrollable .rail__bar:hover .rail__thumb, .rail.is-dragging .rail__thumb { top: -2px; bottom: -2px; }
+.rail.is-dragging .rail__thumb { cursor: grabbing; }
+.rail.is-dragging .rail__track { user-select: none; }
+
+/* стрелки — по краям ряда, только когда есть куда листать */
+.rail__btn {
+  position: absolute; top: calc(50% - 30px); z-index: 5; width: 48px; height: 48px; margin-top: -24px; border: 0; border-radius: 50%;
+  display: grid; place-items: center; color: var(--ink); background: rgba(255,255,255,.94); cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0,0,0,.14), inset 0 0 0 1px rgba(0,0,0,.05);
+  opacity: 0; visibility: hidden; transform: scale(.85);
+  transition: opacity var(--dur-hover, 200ms) ease, transform var(--spring-bouncy-dur, 420ms) var(--spring-bouncy, ease-out), visibility 0s linear var(--dur-hover, 200ms);
+}
+.rail__btn--prev { left: -14px; }
+.rail__btn--next { right: -14px; }
+.rail.is-scrollable:not(.at-start) .rail__btn--prev, .rail.is-scrollable:not(.at-end) .rail__btn--next {
+  opacity: 1; visibility: visible; transform: none; transition-delay: 0s;
+}
+.rail__btn:hover { color: var(--brand-ink, #007a3d); }
+.rail__btn:active { transform: scale(.92); }
+.rail__btn:focus-visible { outline: var(--focus-width, 2px) solid var(--focus-color, #007a3d); outline-offset: 2px; }
+@media (hover: none), (max-width: 819px) { .rail__btn { display: none; } }   /* телефон: свайп + ползунок */
+
+/* ---------- плитка группы (в начале её карточек в ряду) ---------- */
 .group-tile {
   display: flex; flex-direction: column; justify-content: flex-end; gap: 6px; min-height: 180px;
-  padding: 22px 22px 24px; border-radius: var(--r-card); color: var(--ink);
+  padding: 20px 20px 22px; border-radius: var(--r-card); color: var(--ink);
   background: linear-gradient(160deg, #fff 0%, var(--tint-soft, #f1f7ec) 100%);
   box-shadow: inset 0 0 0 1px rgba(0,0,0,.05);
   position: relative; overflow: hidden;
 }
-.group-tile__pics { position: absolute; left: 0; right: 0; top: 14px; height: 58%; pointer-events: none; }
-.group-tile__pics img { position: absolute; bottom: 0; height: 88%; width: auto; max-width: 46%; object-fit: contain; mix-blend-mode: multiply;
-  left: 50%; transform-origin: 50% 100%; }
-.group-tile__pics img:nth-child(1) { transform: translateX(-50%) rotate(0deg); z-index: 3; }
-.group-tile__pics img:nth-child(2) { transform: translateX(-92%) rotate(-8deg) scale(.82); z-index: 2; }
-.group-tile__pics img:nth-child(3) { transform: translateX(-8%) rotate(8deg) scale(.82); z-index: 1; }
-.group-tile:has(.group-tile__pics) .group-tile__ico { top: auto; bottom: 108px; }
-.group-tile__ico { position: absolute; top: 20px; left: 20px; width: 52px; height: 52px; border-radius: 16px; display: grid; place-items: center;
-  color: var(--brand-ink, #007a3d); background: rgba(255,255,255,.85); box-shadow: 0 6px 18px rgba(0,0,0,.06); }
-.group-tile__ico svg { width: 34px; height: 34px; }
+/* одна упаковка группы: у фото белый фон, multiply растворяет его в фоне плитки */
+.group-tile__pics { position: absolute; left: 12%; right: 12%; top: 20px; height: 46%; display: flex; align-items: flex-end; justify-content: center; pointer-events: none; }
+.group-tile__pics img { height: 100%; width: auto; max-width: 100%; min-width: 0; object-fit: contain; mix-blend-mode: multiply; transform: rotate(-4deg); }
 .group-tile__eyebrow { font: var(--t-footnote); letter-spacing: .02em; text-transform: uppercase; color: var(--ink-2-tint); }
-.group-tile__title { font: 700 24px/1.15 var(--font); letter-spacing: -0.02em; margin: 0; text-wrap: balance; }
+.group-tile__title { font: 700 22px/1.15 var(--font); letter-spacing: -0.02em; margin: 0; text-wrap: balance; }
 .group-tile__count { font: 500 14px/1.3 var(--font); color: var(--ink-2-tint); font-variant-numeric: tabular-nums; }
 .group-tile__dot { position: absolute; top: 22px; left: 22px; width: 18px; height: 18px; border-radius: 50%; background: var(--coat); box-shadow: 0 0 0 5px var(--coat-soft); }
 .group-tile--white { --coat: #1f7fa0; --coat-soft: #d6ecf4; }
@@ -90,8 +143,8 @@ body.page-catalog { --container: 1760px; }
 .coat-block.has-ages[data-age="all-life-stage"] .coat-col:not(:has(.product[data-age="all-life-stage"])) .coat-col__empty { display: block; }
 
 /* ---------- полоска возраста: тонкая линия, на ней маленькие силуэты ---------- */
-/* на широком экране — в одну строку с заголовком «Для собак» */
-.coat-block.has-ages { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: clamp(20px, 3vw, 48px); align-items: end; }
+/* над колонками шерсти (если у блока есть шапка — на широком экране в одну строку с ней) */
+.coat-block.has-ages:has(> .coat-block__head) { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: clamp(20px, 3vw, 48px); align-items: end; }
 .coat-block.has-ages > .coat-cols, .coat-block.has-ages > .products--rest { grid-column: 1 / -1; }
 .age-track { position: relative; display: grid; grid-template-columns: repeat(var(--n, 4), minmax(0, 1fr)); margin: 0; padding: 0; }
 /* «земля» — тонкая линия под силуэтами */
@@ -122,8 +175,8 @@ body.page-catalog { --container: 1760px; }
 html:not(.spr) .age-dog:active .age-dog__fig { transform: scale(.94); }
 /* средняя ширина: полоска под заголовком на всю ширину */
 @media (max-width: 1279px) {
-  .coat-block.has-ages { grid-template-columns: 1fr; }
-  .coat-block.has-ages > .age-track { margin-top: 12px; }
+  .coat-block.has-ages:has(> .coat-block__head) { grid-template-columns: 1fr; }
+  .coat-block.has-ages > .coat-block__head + .age-track { margin-top: 12px; }
 }
 
 /* ---------- планшет и телефон ---------- */
@@ -132,15 +185,20 @@ html:not(.spr) .age-dog:active .age-dog__fig { transform: scale(.94); }
   .coat-block .products--col { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 720px) {
-  .group-tile { grid-column: 1 / -1; min-height: 0; flex-direction: row; align-items: center; flex-wrap: wrap; gap: 4px 10px; padding: 12px 14px; }
-  .group-tile__pics { display: none; }
-  .group-tile__ico, .group-tile:has(.group-tile__pics) .group-tile__ico { position: static; width: 36px; height: 36px; border-radius: 12px; }
-  .group-tile__ico svg { width: 24px; height: 24px; }
-  .group-tile__dot { position: static; width: 12px; height: 12px; box-shadow: 0 0 0 4px var(--coat-soft); }
-  .group-tile__eyebrow { order: 3; width: 100%; font-size: 11px; display: none; }
-  .group-tile__title { font-size: 18px; }
+  .sp-band { gap: 10px; margin-bottom: 18px; padding: 10px 12px; border-radius: 20px; }
+  .cat-section + .cat-section--band { margin-top: 56px; }
+  .sp-band__ico { width: 40px; height: 40px; border-radius: 12px; }
+  .sp-band__ico svg { width: 26px; height: 26px; }
+  .sp-band__title { font-size: 26px; }
+  .cat-section { margin-bottom: 36px; }
+  h3.cat-section__title { font-size: 20px; margin-bottom: 10px; }
+  .rail__bar { margin-top: 14px; }
+  .group-tile { padding: 14px 14px 16px; border-radius: 18px; }
+  .group-tile__pics { top: 12px; left: 8px; right: 8px; height: 46%; }
+  .group-tile__title { font-size: 17px; }
   .group-tile--coat .group-tile__title { font-size: 16px; }
-  .group-tile__count { margin-left: auto; font-size: 12.5px; }
+  .group-tile__count { font-size: 12.5px; }
+  .group-tile__dot { top: 14px; left: 14px; width: 12px; height: 12px; box-shadow: 0 0 0 4px var(--coat-soft); }
   .coat-block { padding: 14px 10px; margin: 0 -6px; border-radius: 22px; }
   .coat-block .products--col { grid-template-columns: 1fr; gap: 8px; }
   .coat-block .products--col .product { grid-template-columns: 96px minmax(0, 1fr); }

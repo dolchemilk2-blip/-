@@ -724,13 +724,14 @@ function trapModalFocus(e) {
 const sprOK = () => !!(window.NPSpring && NPSpring.ok() && NPSpring.ready);
 const UNIT_IN_GROUP = '.product-group__title, .product-subgroup__title, .coat-insert, .coat-subline, .coat-block__head, .age-track, .coat-col__head, .products > .product';
 function screenUnits(grid) {
-  const vh = window.innerHeight, out = [];
+  const vh = window.innerHeight, vw = window.innerWidth, out = [];
   const walk = (els, deep) => {
     for (const el of els) {
       const r = el.getBoundingClientRect();
-      if (!r.height || r.bottom < 0) continue;
+      if (!r.height || r.bottom < 0 || r.right < 0 || r.left > vw) continue;   // also cards scrolled away in a row
       if (r.top > vh) return false;
-      if (deep && (el.classList.contains('cat-section') || el.classList.contains('products--flow'))) { if (walk(el.children, true) === false) return false; }
+      if (deep && el.classList.contains('cat-section')) { if (walk(el.children, true) === false) return false; }
+      else if (deep && el.classList.contains('rail')) { walk(el.querySelector('.rail__track').children, false); }
       else if (deep && (el.classList.contains('product-group') || el.classList.contains('coat-block'))) { if (walk(el.querySelectorAll(UNIT_IN_GROUP), false) === false) return false; }
       else out.push(el);
     }
@@ -742,8 +743,8 @@ function screenUnits(grid) {
 // Stable identity of a block across renders: its section + product id (cards) or class + text (titles, inserts…)
 function unitKey(el) {
   if (el._uk) return el._uk;
-  const sec = el.closest('[data-sec]'), id = el.getAttribute('data-id');
-  return (el._uk = (sec ? sec.getAttribute('data-sec') : '') + '|' + (id || el.className.split(' ')[0] + ':' + el.textContent.trim().slice(0, 60)));
+  const sec = el.closest('.cat-section'), id = el.getAttribute('data-id');   // section id: «dogs-dry» ≠ «cats-dry»
+  return (el._uk = (sec ? sec.id : '') + '|' + (id || el.className.split(' ')[0] + ':' + el.textContent.trim().slice(0, 60)));
 }
 // Newcomers: a 40ms staircase on a spring (≤10 steps), rising 10px from .99 — no blur (cards are big, and many).
 function enterUnits(els) {
@@ -967,7 +968,7 @@ function coatBlock(g, dict, mk, lang, head) {
       </div>`).join('');
   const rest = cols.none.length ? `<div class="products products--col products--rest">${cols.none.map(card).join('')}</div>` : '';
   return `
-    <div class="coat-block flow-full${track.html ? ' has-ages' : ''}" data-age="${track.cur}">
+    <div class="coat-block${track.html ? ' has-ages' : ''}" data-age="${track.cur}">
       ${head || ''}${track.html}
       <div class="coat-cols" style="--n:${used.length}">${colHtml}</div>${rest}
     </div>`;
@@ -992,74 +993,92 @@ function treatsSubgroups(g, dict) {
   return filled.map(k => ({ title: head[k] || '', coat: k !== 'other' ? k : '', items: byStage(b[k]) }));
 }
 
-// Раздел — одна сплошная сетка (.products--flow): заголовок группы — плитка в ряду с карточками, поэтому
-// ряды не обрываются на 1–2 товарах. Собаки идут первыми. Линейки Superior Care — блок во всю ширину (coatBlock).
-// blocks — куски раздела для порционной отрисовки: плитка + карточки одной группы, заметки, блок шерсти.
-function sectionParts(s, brand, lang, dict, mk) {
+// Каталог NP / Araton идёт по видам: сначала все разделы «Для собак», потом «Для кошек», потом «Для кошек и собак».
+// Раздел вида — один ряд карточек (.rail): не помещается — уходит вбок, листается стрелками и ползунком
+// (js/rails.js). Линейки Superior Care — блок шерсти колонками (coatBlock), без ряда.
+const SP_ORDER = ['dogs', 'cats', 'both'];
+const spOf = g => g.species || 'both';
+// Ряд карточек: дорожка + стрелки + ползунок (он же линия-разделитель перед следующим разделом)
+function railHtml(inner) {
+  const arrow = d => `<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="${d}" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+  return `
+      <div class="rail">
+        <div class="products rail__track">${inner}</div>
+        <button class="rail__btn rail__btn--prev" type="button" aria-label="${tr('rail.prev')}">${arrow('M15 5l-7 7 7 7')}</button>
+        <button class="rail__btn rail__btn--next" type="button" aria-label="${tr('rail.next')}">${arrow('M9 5l7 7-7 7')}</button>
+        <div class="rail__bar" aria-hidden="true"><span class="rail__thumb"></span></div>
+      </div>`;
+}
+// Раздел (или раздел одного вида — o.sp): заголовок, заметки, блок шерсти и/или ряд карточек.
+// blocks — куски раздела для порционной отрисовки. o.band — перед разделом заголовок вида («Для собак»).
+function sectionParts(s, brand, lang, dict, mk, o) {
+  o = o || {};
+  const sp = o.sp || '';
+  const groups = sp ? s.groups.filter(g => spOf(g) === sp) : s.groups;
+  const count = sp ? groups.reduce((n, g) => n + g.items.length, 0) : s.count;
   const title = (s.def && (s.def[lang] || s.def.ru)) || '';
   const blocks = [];
-  if (brand === 'np' && s.id === 'superior-care') blocks.push(`<p class="coat-note flow-full">${dict['products.coatNote'] || ''}</p>`);
+  if (brand === 'np' && s.id === 'superior-care' && o.firstOfSec !== false) blocks.push(`<p class="coat-note">${dict['products.coatNote'] || ''}</p>`);
   // «Сухой корм» NP: сухие корма Superior Care (по цвету шерсти) живут в своём разделе — даём прямой переход
-  if (brand === 'np' && s.id === 'dry' && currentSection === 'dry') {
+  if (brand === 'np' && s.id === 'dry' && currentSection === 'dry' && o.firstOfSec !== false) {
     const sc = sectionsFor('np', currentSpecies).find(x => x.id === 'superior-care');
-    if (sc && sc.count) blocks.push(`<div class="flow-full"><button class="cat-xlink" type="button" data-sec="superior-care">+ ${sc.count} ${tr('sections.scDry')} <span aria-hidden="true">→</span></button></div>`);
+    if (sc && sc.count) blocks.push(`<div class="cat-xlink-row"><button class="cat-xlink" type="button" data-sec="superior-care">+ ${sc.count} ${tr('sections.scDry')} <span aria-hidden="true">→</span></button></div>`);
   }
   const cards = (g, items) => items.map(it => mk(it, g.species)).join('');
-  // плитка группы: веер из 3 упаковок группы, значок вида (или цвет шерсти), название и число товаров
-  const pics = items => { const im = items.filter(it => it.img).slice(0, 3); return im.length ? `<span class="group-tile__pics" aria-hidden="true">${im.map(it => `<img src="${it.img}" alt="" loading="lazy" decoding="async">`).join('')}</span>` : ''; };
-  const tile = (o) => `
-      <div class="group-tile${o.coat ? ' group-tile--coat group-tile--' + o.coat : ''}${o.sp ? ' group-tile--' + o.sp : ''}">
-        ${o.items ? pics(o.items) : ''}
-        ${o.coat ? '<span class="group-tile__dot" aria-hidden="true"></span>' : (o.sp && window.NPAge ? `<span class="group-tile__ico">${NPAge.icon(o.sp)}</span>` : '')}
-        ${o.eyebrow ? `<span class="group-tile__eyebrow">${o.eyebrow}</span>` : ''}
-        <h3 class="group-tile__title">${o.title}</h3>
-        <span class="group-tile__count">${itemsLabel(o.n, lang)}</span>
-      </div>`;
-  const spLabel = sp => { const h = SPECIES_HEAD[sp]; return dict[h[1]] || tr(h[1]); };
-  if (brand === 'np' || brand === 'araton') {
-    const bySpecies = currentSpecies === 'all' || currentSpecies === 'baby';
-    ['dogs', 'cats', 'both'].forEach(sp => {
-      const gs = s.groups.filter(g => (g.species || 'both') === sp);
-      if (!gs.length) return;
-      const multi = gs.length > 1;
-      gs.forEach(g => {
-        if (g.coat) {
-          const n = g.items.length;
-          const head = `<div class="coat-block__head">${window.NPAge ? `<span class="coat-block__ico">${NPAge.icon(sp)}</span>` : ''}
-            <h3 class="coat-block__title">${bySpecies ? spLabel(sp) : (shortGroupLabel(g, lang) || spLabel(sp))}</h3><span class="coat-block__count">${itemsLabel(n, lang)}</span></div>`;
-          blocks.push(coatBlock(g, dict, mk, lang, head));
-          return;
-        }
-        const subs = brand === 'np' && s.id === 'treats' ? treatsSubgroups(g, dict) : null;
-        if (subs) {
-          subs.forEach(sg => blocks.push(tile({ title: sg.title, coat: sg.coat, eyebrow: bySpecies ? spLabel(sp) : '', n: sg.items.length, items: sg.items }) + cards(g, sg.items)));
-          return;
-        }
-        const items = brand === 'np' && s.id === 'treats' ? byStage(g.items) : g.items;
-        if (bySpecies) blocks.push(tile({ sp, title: multi ? shortGroupLabel(g, lang) : spLabel(sp), eyebrow: multi ? spLabel(sp) : '', n: items.length, items }) + cards(g, items));
-        else blocks.push((multi ? tile({ title: shortGroupLabel(g, lang), n: items.length, items }) : '') + cards(g, items));
-      });
-    });
-  } else {
-    const multi = s.groups.length > 1;
-    s.groups.forEach(g => {
-      const name = (g.group && (g.group[lang] || g.group.ru)) || '';
-      blocks.push((multi ? tile({ title: name, n: g.items.length, items: g.items }) : '') + cards(g, g.items));
-    });
-  }
+  // плитка группы в начале её карточек (узкая): одна упаковка группы, цвет шерсти (у лакомств), название и число.
+  // Одна, а не веер: у фото белый фон, а multiply на наложенных упаковках просвечивает одну сквозь другую.
+  const pics = items => { const im = items.find(it => it.img); return im ? `<span class="group-tile__pics" aria-hidden="true"><img src="${im.img}" alt="" loading="lazy" decoding="async"></span>` : ''; };
+  const tile = t => `
+        <div class="group-tile${t.coat ? ' group-tile--coat group-tile--' + t.coat : ''}">
+          ${t.items ? pics(t.items) : ''}
+          ${t.coat ? '<span class="group-tile__dot" aria-hidden="true"></span>' : ''}
+          <h4 class="group-tile__title">${t.title}</h4>
+          <span class="group-tile__count">${itemsLabel(t.n, lang)}</span>
+        </div>`;
+  const named = brand === 'np' || brand === 'araton';
+  const multi = groups.length > 1;
+  const row = [];
+  groups.forEach(g => {
+    if (g.coat) { blocks.push(coatBlock(g, dict, mk, lang, '')); return; }
+    const subs = brand === 'np' && s.id === 'treats' ? treatsSubgroups(g, dict) : null;
+    if (subs) { subs.forEach(sg => row.push(tile({ title: sg.title, coat: sg.coat, n: sg.items.length, items: sg.items }) + cards(g, sg.items))); return; }
+    const items = brand === 'np' && s.id === 'treats' ? byStage(g.items) : g.items;
+    const name = named ? shortGroupLabel(g, lang) : ((g.group && (g.group[lang] || g.group.ru)) || '');
+    row.push((multi ? tile({ title: name, n: items.length, items }) : '') + cards(g, items));
+  });
+  if (row.length) blocks.push(railHtml(row.join('')));
+  const pid = sp ? sp + '-' + s.id : s.id;
+  const spName = sp && (dict[SPECIES_HEAD[sp][1]] || tr(SPECIES_HEAD[sp][1]));
+  const band = o.band ? `
+      <div class="sp-band sp-band--${sp}">${window.NPAge ? `<span class="sp-band__ico">${NPAge.icon(sp)}</span>` : ''}
+        <h2 class="sp-band__title">${spName}</h2><span class="sp-band__count">${itemsLabel(o.bandCount, lang)}</span></div>` : '';
+  const h = o.banded ? 'h3' : 'h2';
   return {
-    id: s.id,
+    id: pid,
     open: `
-    <section class="cat-section" id="sec-${s.id}" data-sec="${s.id}" aria-labelledby="sec-${s.id}-t">
-      <h2 class="cat-section__title" id="sec-${s.id}-t"><span class="cat-section__name">${title}</span><span class="cat-section__count">${s.count}</span></h2>
-      <div class="products products--flow">`,
+    <section class="cat-section${sp ? ' cat-section--' + sp : ''}${o.band ? ' cat-section--band' : ''}" id="sec-${pid}" data-sec="${s.id}" aria-labelledby="sec-${pid}-t">${band}
+      <${h} class="cat-section__title" id="sec-${pid}-t"><span class="cat-section__name">${title}</span><span class="cat-section__count">${count}</span></${h}>`,
     blocks,
     close: `
-      </div>
     </section>`
   };
 }
-function sectionHtml(s, brand, lang, dict, mk) { const p = sectionParts(s, brand, lang, dict, mk); return p.open + p.blocks.join('') + p.close; }
+// Разделы к показу → куски разметки. NP / Araton: по видам (собаки → кошки → для обоих), иначе — по разделам.
+function catalogParts(shown, brand, lang, dict, mk) {
+  if (brand !== 'np' && brand !== 'araton') return shown.map(s => sectionParts(s, brand, lang, dict, mk));
+  const present = SP_ORDER.filter(sp => shown.some(s => s.groups.some(g => spOf(g) === sp)));
+  const banded = present.length > 1;
+  const parts = [], seen = new Set();
+  present.forEach(sp => {
+    const list = shown.filter(s => s.groups.some(g => spOf(g) === sp));
+    const bandCount = list.reduce((n, s) => n + s.groups.filter(g => spOf(g) === sp).reduce((m, g) => m + g.items.length, 0), 0);
+    list.forEach((s, i) => {
+      parts.push(sectionParts(s, brand, lang, dict, mk, { sp, banded, band: banded && i === 0, bandCount, firstOfSec: !seen.has(s.id) }));
+      seen.add(s.id);
+    });
+  });
+  return parts;
+}
 
 // Motion of a re-render (survivors / newcomers / leavers) is the caller's: morphGrid / activateBrand.
 // The first render is covered by the page's own entrance — no second layer of motion.
@@ -1120,7 +1139,7 @@ function renderProducts(brand, lang, chunk) {
     intro = `<section class="cat-section cat-section--systems" id="sec-systems" data-sec="systems" aria-label="${label}">${t.tplWhy}${t.showcase}</section>`;
   }
   const shown = secs.filter(s => s.id !== 'systems' && s.count && (currentSection === 'all' || s.id === currentSection));
-  const secParts = shown.map(s => sectionParts(s, brand, lang, dict, mk));
+  const secParts = catalogParts(shown, brand, lang, dict, mk);
   const head = banner + intro;
   const ids = str => str.split(' data-id="').length - 1;
   RENDER_COUNT = ids(head) + secParts.reduce((n, p) => n + p.blocks.reduce((m, b) => m + ids(b), 0), 0);
@@ -1596,6 +1615,7 @@ function openProduct(id, opts) {
   flushRender();
   const card = grid.querySelector('[data-id="' + cssEsc(id) + '"]');
   if (card && window.NPAge) NPAge.reveal(card);
+  if (card && window.NPRails) NPRails.reveal(card);   // a card further along its row: scroll the row to it
   const o = { id, brand: found.brand, card, keyboard: !!(opts && opts.keyboard) };
   if (card) {
     const pid = +card.getAttribute('data-pid');
