@@ -732,6 +732,7 @@ function screenUnits(grid) {
       if (r.top > vh) return false;
       if (deep && el.classList.contains('cat-section')) { if (walk(el.children, true) === false) return false; }
       else if (deep && el.classList.contains('rail')) { walk(el.querySelector('.rail__track').children, false); }
+      else if (deep && el.classList.contains('tpl-systems')) { if (walk(el.children, false) === false) return false; }
       else if (deep && (el.classList.contains('product-group') || el.classList.contains('coat-block'))) { if (walk(el.querySelectorAll(UNIT_IN_GROUP), false) === false) return false; }
       else out.push(el);
     }
@@ -928,6 +929,7 @@ function tplIntroHtml(brand, lang, dict) {
           <p class="tpl-system__note">${(sys.note[lang] || sys.note.ru)}</p>
         </section>`;
     }).join('');
+    showcase = `<div class="tpl-systems">${showcase}</div>`;   // по 2 комбо в ряд на компьютере (css/catalog-v2.css)
   }
   return { tplWhy, showcase };
 }

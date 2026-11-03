@@ -256,3 +256,34 @@ html:not(.spr) .age-dog:active .age-dog__fig { transform: scale(.94); }
 @media (prefers-reduced-motion: reduce) {
   .age-dog__fig, .age-dog::after { transition: none; }
 }
+
+/* ---------- Tauro: комбо (Step-системы) по 2 в ряд, разделены еле видной линией ---------- */
+@media (min-width: 1100px) {
+  .tpl-systems { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); --tpl-line: rgba(0, 0, 0, .06); }
+  .tpl-systems > .tpl-system { margin: 0; padding: 40px 36px 44px; min-width: 0; }
+  .tpl-systems > .tpl-system:nth-child(odd) { border-right: 1px solid var(--tpl-line); }
+  .tpl-systems > .tpl-system:nth-child(n+3) { border-top: 1px solid var(--tpl-line); }
+  /* нечётное последнее комбо — на весь ряд, по центру */
+  .tpl-systems > .tpl-system:last-child:nth-child(odd) { grid-column: 1 / -1; border-right: 0; }
+  /* в половине ширины флаконы ниже, подписи компактнее */
+  .tpl-systems .tpl-system__title { font-size: clamp(22px, 1.9vw, 28px); }
+  .tpl-systems .tpl-system__intro { font-size: 15px; }
+  .tpl-systems .tpl-system__stage { margin-top: 26px; gap: 10px; }
+  .tpl-systems .tpl-bottle { padding-top: 36px; }
+  .tpl-systems .tpl-bottle__num { font-size: 84px; }
+  .tpl-systems .tpl-bottle__img { height: 230px; }
+  .tpl-systems .tpl-bottle__img img { max-height: 230px; }
+  .tpl-systems .tpl-bottle__short { font-size: 12.5px; }
+  .tpl-systems .tpl-system__badges { margin-top: 20px; }
+  .tpl-systems .tpl-system__badges span { font-size: 12.5px; padding: 5px 12px; }
+  .tpl-systems .tpl-system__note { font-size: 13.5px; }
+}
+/* в паре части комбо стоят на одной высоте: шапка · флаконы · значки · примечание (описания разной длины) */
+@supports (grid-template-rows: subgrid) {
+  @media (min-width: 1100px) {
+    /* content-visibility (catalog.css) сдерживает вёрстку — с ним подсетка не работает; вне экрана флаконы и так на паузе (.is-offscreen) */
+    .tpl-systems > .tpl-system { display: grid; grid-template-rows: subgrid; grid-row: span 4; row-gap: 0; align-content: start; content-visibility: visible; contain: none; }
+    .tpl-systems > .tpl-system > .tpl-system__stage { align-self: end; }
+    .tpl-systems > .tpl-system > .tpl-system__badges { align-self: start; }
+  }
+}
