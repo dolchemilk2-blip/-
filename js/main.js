@@ -1984,12 +1984,12 @@ function initCatalog(initial) {
     openFromCard(card, true);
   });
 
-  // Desktop: cards lean toward the cursor (≤4° at the edge) with a soft glare (.spr-glare); Tauro bottles lean their image —
-  // not .tpl-bottle__img, which floats (4.6s) on its own transform. NPSpring.tilt listens to fine pointers only and
-  // goes flat while the page scrolls. Bottles also get the spring press (rows on phones, columns on desktop).
+  // Desktop: product cards do NOT lean toward the cursor (client: no tilt on mouse move). Only Tauro bottles lean their
+  // image — not .tpl-bottle__img, which floats (4.6s) on its own transform. NPSpring.tilt listens to fine pointers only
+  // and goes flat while the page scrolls. Bottles also get the spring press (rows on phones, columns on desktop).
   if (window.NPSpring) {
     NPSpring.press.add('.tpl-bottle');
-    NPSpring.tilt(grid, '.product.is-clickable, .tpl-bottle__img img', 8);   // ±4° at the edges
+    NPSpring.tilt(grid, '.tpl-bottle__img img', 8);   // ±4° at the edges
   }
 
   // Прямые ссылки после первого рендера
