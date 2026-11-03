@@ -54,17 +54,6 @@
     var S = window.NPSpring;
     return S && S.ease ? Math.ceil(S.ease(0.9, 0.5).duration) : 800;
   }
-  // Чипы быстрого выбора: подпись и чипы входят лесенкой 40ms на пружине (вместе с остальным героем)
-  function initChips() {
-    var nav = document.querySelector('.hero--home .intents');
-    var S = window.NPSpring;
-    if (!nav || !S || !S.enter) return;
-    var els = [nav.querySelector('.intents__label')].concat(Array.prototype.slice.call(nav.querySelectorAll('.intent'))).filter(Boolean);
-    nav.classList.add('mh-chips');
-    els.forEach(function (el, i) {
-      S.enter(el, { opacity: 0, transform: 'translateY(10px) scale(0.97)' }, [0.8, 0.42], { delay: 440 + Math.min(i, 9) * 40 });
-    });
-  }
   function playLines(el) {
     var st = el._mh;
     if (!st || st.state !== 'split') return;
@@ -255,7 +244,6 @@
         if (heroTitle) heroTitle.classList.add('mh-done');
       }
       clearTimeout(safety);
-      initChips();
       wrapWords();
       initCount();
       initTitles();

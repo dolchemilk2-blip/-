@@ -3,6 +3,10 @@
 
 // --- Ключи переводов главной (translations.js не редактируем) ---
 Object.assign(TRANSLATIONS.az, {
+  'products.tag': 'Məhsullarımız',
+  'home.hero.pagination': 'Slayd seçimi',
+  'home.hero.slide': 'Slayd',
+  'home.contact.mapTitle': 'Xəritədə mağaza: Ənvər Qasımzadə 56C, Bakı',
   'meta.title': "Nature's Protection — pişik və itlər üçün premium qidalanma",
   'meta.description': "Pişik və itlər üçün premium qida, qulluq və oyuncaqlar: Nature's Protection, Araton, Tauro Pro Line və Misoko.",
   'home.skip': 'Məzmuna keç',
@@ -11,11 +15,6 @@ Object.assign(TRANSLATIONS.az, {
   'home.hero.cta2': 'Tük rənginə görə seçin',
   'home.hero.prev': 'Əvvəlki şəkil',
   'home.hero.next': 'Növbəti şəkil',
-  'home.intent.label': 'Tez seçim',
-  'home.intent.steril': 'Sterilizə olunmuş pişiklər üçün',
-  'home.intent.mats': 'Dolaşıq tüklərə qarşı',
-  'home.intent.grain': 'Taxılsız qida',
-  'home.intent.misoko': 'Misoko oyuncaqları',
   'home.feed.tag': 'Kalkulyator',
   'home.feed.title': 'Nə qədər yem lazımdır?',
   'home.stat.brands.n': '4',
@@ -30,7 +29,6 @@ Object.assign(TRANSLATIONS.az, {
   'home.coat.red': 'Qırmızı',
   'home.coat.dark': 'Tünd',
   'home.coat.cta': 'Xəttə baxın',
-  'home.brands.title': 'Dörd brend',
   'home.brands.np': 'Pişik və itlər üçün qida və vitaminlər',
   'home.brands.araton': 'Hər gün üçün balanslı qida',
   'home.brands.tpl': 'Peşəkar qrumminq',
@@ -40,17 +38,12 @@ Object.assign(TRANSLATIONS.az, {
   'home.contact.hint': '«Göndər» düyməsini basın — poçt proqramınız hazır məktubla açılacaq.',
   'home.contact.ok': 'Məktub poçt proqramınızda açıldı — yalnız «Göndər» düyməsini basın.',
   'home.contact.subject': 'Saytdan müraciət',
-  'home.cats.tag': 'Kataloq',
-  'home.cats.title': 'Kateqoriyalar',
-  'home.cats.all': 'Bütün kataloq',
-  'home.cats.dry': 'Quru qida',
-  'home.cats.wet': 'Yaş qida',
-  'home.cats.treats': 'Mükafatlar',
-  'home.cats.vet': 'Baytar dieti',
-  'home.cats.coat': 'Tük qulluğu',
-  'home.cats.toys': 'Yumşaq oyuncaqlar'
 });
 Object.assign(TRANSLATIONS.ru, {
+  'products.tag': 'Наша продукция',
+  'home.hero.pagination': 'Выбор слайда',
+  'home.hero.slide': 'Слайд',
+  'home.contact.mapTitle': 'Магазин на карте: Ənvər Qasımzadə 56C, Bakı',
   'meta.title': "Nature's Protection — премиальное питание для кошек и собак",
   'meta.description': "Премиальные корма, уход и игрушки для кошек и собак: Nature's Protection, Araton, Tauro Pro Line и Misoko.",
   'home.skip': 'Перейти к содержанию',
@@ -59,11 +52,6 @@ Object.assign(TRANSLATIONS.ru, {
   'home.hero.cta2': 'Подобрать по окрасу',
   'home.hero.prev': 'Предыдущее фото',
   'home.hero.next': 'Следующее фото',
-  'home.intent.label': 'Быстрый выбор',
-  'home.intent.steril': 'Для стерилизованных кошек',
-  'home.intent.mats': 'От колтунов',
-  'home.intent.grain': 'Беззерновой корм',
-  'home.intent.misoko': 'Игрушки Misoko',
   'home.feed.tag': 'Калькулятор',
   'home.feed.title': 'Сколько корма нужно?',
   'home.stat.brands.n': '4',
@@ -78,7 +66,6 @@ Object.assign(TRANSLATIONS.ru, {
   'home.coat.red': 'Рыжая',
   'home.coat.dark': 'Тёмная',
   'home.coat.cta': 'Смотреть линейку',
-  'home.brands.title': 'Четыре бренда',
   'home.brands.np': 'Корма и витамины для кошек и собак',
   'home.brands.araton': 'Сбалансированные корма на каждый день',
   'home.brands.tpl': 'Профессиональный груминг',
@@ -88,17 +75,12 @@ Object.assign(TRANSLATIONS.ru, {
   'home.contact.hint': 'Нажмите «Отправить» — откроется ваша почтовая программа с готовым письмом.',
   'home.contact.ok': 'Письмо открыто в вашей почтовой программе — осталось нажать «Отправить».',
   'home.contact.subject': 'Сообщение с сайта',
-  'home.cats.tag': 'Каталог',
-  'home.cats.title': 'Категории',
-  'home.cats.all': 'Весь каталог',
-  'home.cats.dry': 'Сухой корм',
-  'home.cats.wet': 'Влажный корм',
-  'home.cats.treats': 'Лакомства',
-  'home.cats.vet': 'Ветеринарная диета',
-  'home.cats.coat': 'Уход за шерстью',
-  'home.cats.toys': 'Мягкие игрушки'
 });
 Object.assign(TRANSLATIONS.en, {
+  'products.tag': 'Our products',
+  'home.hero.pagination': 'Choose a slide',
+  'home.hero.slide': 'Slide',
+  'home.contact.mapTitle': 'Store location: Ənvər Qasımzadə 56C, Baku',
   'meta.title': "Nature's Protection — premium nutrition for cats and dogs",
   'meta.description': "Premium food, grooming and toys for cats and dogs: Nature's Protection, Araton, Tauro Pro Line and Misoko.",
   'home.skip': 'Skip to content',
@@ -107,11 +89,6 @@ Object.assign(TRANSLATIONS.en, {
   'home.hero.cta2': 'Choose by coat colour',
   'home.hero.prev': 'Previous photo',
   'home.hero.next': 'Next photo',
-  'home.intent.label': 'Quick picks',
-  'home.intent.steril': 'For sterilised cats',
-  'home.intent.mats': 'Detangling',
-  'home.intent.grain': 'Grain-free food',
-  'home.intent.misoko': 'Misoko toys',
   'home.feed.tag': 'Calculator',
   'home.feed.title': 'How much food is needed?',
   'home.stat.brands.n': '4',
@@ -126,7 +103,6 @@ Object.assign(TRANSLATIONS.en, {
   'home.coat.red': 'Red',
   'home.coat.dark': 'Dark',
   'home.coat.cta': 'See the range',
-  'home.brands.title': 'Four brands',
   'home.brands.np': 'Food and supplements for cats and dogs',
   'home.brands.araton': 'Balanced everyday food',
   'home.brands.tpl': 'Professional grooming',
@@ -136,15 +112,6 @@ Object.assign(TRANSLATIONS.en, {
   'home.contact.hint': 'Press “Send” and your email app opens with the message ready.',
   'home.contact.ok': 'Your email app has the message ready — just press Send.',
   'home.contact.subject': 'Message from the website',
-  'home.cats.tag': 'Catalogue',
-  'home.cats.title': 'Categories',
-  'home.cats.all': 'Full catalogue',
-  'home.cats.dry': 'Dry food',
-  'home.cats.wet': 'Wet food',
-  'home.cats.treats': 'Treats',
-  'home.cats.vet': 'Veterinary diet',
-  'home.cats.coat': 'Coat care',
-  'home.cats.toys': 'Soft toys'
 });
 
 (function () {
@@ -162,6 +129,7 @@ Object.assign(TRANSLATIONS.en, {
 
   // --- Переводы атрибутов: data-i18n-alt / data-i18n-aria (main.js переводит только текст) ---
   function applyAttrs() {
+    document.querySelectorAll('[data-i18n-title]').forEach(el => { const v = t(el.getAttribute('data-i18n-title')); if (v) el.title = v; });
     document.querySelectorAll('[data-i18n-alt]').forEach(el => { const v = t(el.getAttribute('data-i18n-alt')); if (v) el.alt = v; });
     document.querySelectorAll('[data-i18n-aria]').forEach(el => { const v = t(el.getAttribute('data-i18n-aria')); if (v) el.setAttribute('aria-label', v); });
   }
@@ -254,7 +222,7 @@ Object.assign(TRANSLATIONS.en, {
     });
   }
 
-  // --- Слайды героя: заранее декодируем 2-й/3-й кадр в простое, чтобы первый кроссфейд не дёргался ---
+  // --- Слайды героя: заранее декодируем остальные кадры в простое, чтобы первый кроссфейд не дёргался ---
   function predecodeSlides() {
     const imgs = Array.from(document.querySelectorAll('#heroBg .hero-bg__slide')).slice(1);
     if (!imgs.length) return;
@@ -265,6 +233,66 @@ Object.assign(TRANSLATIONS.en, {
     const idle = window.requestIdleCallback || (fn => setTimeout(fn, 600));
     if (document.readyState === 'complete') idle(go);
     else window.addEventListener('load', () => idle(go), { once: true });
+  }
+
+  // --- Точки и свайп поверх штатного слайдера main.js: один таймер и один источник текущего кадра ---
+  function initHeroNavigation() {
+    const bg = document.getElementById('heroBg');
+    const hero = bg && bg.closest('.hero--home');
+    const controls = hero && hero.querySelector('.hero-home__controls');
+    const next = document.getElementById('heroNext');
+    const prev = document.getElementById('heroPrev');
+    if (!controls || !next || !prev) return;
+    const slides = Array.from(bg.querySelectorAll('.hero-bg__slide'));
+    if (slides.length < 2) return;
+    const dots = document.createElement('div');
+    dots.className = 'hero-home__dots';
+    dots.setAttribute('role', 'group');
+    const activeIndex = () => slides.reduce((best, img, i) =>
+      (+img.style.zIndex || 0) > (+slides[best].style.zIndex || 0) ? i : best, 0);
+    const buttons = slides.map((img, i) => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'hero-dot';
+      button.setAttribute('aria-controls', 'heroBg');
+      button.addEventListener('click', () => {
+        const from = activeIndex();
+        const forward = (i - from + slides.length) % slides.length;
+        const backward = (from - i + slides.length) % slides.length;
+        const arrow = forward <= backward ? next : prev;
+        // Native button clicks use main.js's instant keyboard path for a direct jump.
+        for (let step = 0; step < Math.min(forward, backward); step++) arrow.click();
+      });
+      dots.appendChild(button);
+      return button;
+    });
+    const sync = () => {
+      const current = activeIndex();
+      dots.setAttribute('aria-label', t('home.hero.pagination'));
+      buttons.forEach((button, i) => {
+        const brand = slides[i].getAttribute('data-brand');
+        button.setAttribute('aria-label', t('home.hero.slide') + ' ' + (i + 1) + (brand ? ': ' + brand : ''));
+        button.setAttribute('aria-current', i === current ? 'true' : 'false');
+      });
+    };
+    controls.prepend(dots);
+    new MutationObserver(sync).observe(bg, { attributes: true, attributeFilter: ['style'], subtree: true });
+    document.addEventListener('np:lang', sync);
+    sync();
+
+    let start = null;
+    hero.addEventListener('pointerdown', e => {
+      if (!e.isPrimary || e.pointerType === 'mouse' || e.target.closest('a, button, input, select, textarea')) return;
+      start = { id: e.pointerId, x: e.clientX, y: e.clientY };
+    }, { passive: true });
+    hero.addEventListener('pointerup', e => {
+      if (!start || e.pointerId !== start.id) return;
+      const dx = e.clientX - start.x, dy = e.clientY - start.y;
+      start = null;
+      if (Math.abs(dx) < 48 || Math.abs(dx) < Math.abs(dy) * 1.3) return;
+      (dx < 0 ? next : prev).click();
+    }, { passive: true });
+    hero.addEventListener('pointercancel', () => { start = null; }, { passive: true });
   }
 
   // --- Глава «Цвет шерсти»: радиогруппа (CSS :has делает всю работу), клавиатура — мгновенно ---
@@ -301,14 +329,13 @@ Object.assign(TRANSLATIONS.en, {
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(again);
   }
 
-  // --- Плитки брендов и категорий: наклон к курсору на пружине (NPSpring.tilt, только мышь), блик на брендах ---
+  // --- Плитки брендов: наклон к курсору на пружине (NPSpring.tilt, только мышь), блик на брендах ---
   // Наклон пишет inline transform — у плиток нет своего transform (нажатие — свойство scale, подъём — translate).
   function initTilt() {
     const S = window.NPSpring;
     if (!S || !S.tilt || !window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
     document.querySelectorAll('.lineup__grid .tile').forEach(el => el.classList.add('spr-glare'));
     S.tilt('.lineup__grid', '.tile', 5);
-    S.tilt('.cats__grid', '.cat-tile', 4);
   }
 
   // --- Вкладки «О Nature's Protection»: ARIA, стрелки (клик обрабатывает main.js) и движение «Монтажки» ---
@@ -489,6 +516,7 @@ Object.assign(TRANSLATIONS.en, {
     initCoat();
     initScenes();
     predecodeSlides();
+    initHeroNavigation();
     initReveal();
     initTabs();
     initFaq();
