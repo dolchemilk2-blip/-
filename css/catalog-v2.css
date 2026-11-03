@@ -42,7 +42,7 @@ h3.cat-section__title { font-size: clamp(22px, 2vw, 28px); margin-bottom: 16px; 
 /* ширина карточки — доля видимой части ряда (--per карточек на экран); плитка группы — уже */
 .rail__track > * { scroll-snap-align: start; flex: 0 0 calc((100% - (var(--per) - 1) * var(--gap)) / var(--per)); min-width: 0; }
 .rail__track > .group-tile { flex-basis: calc((100% - (var(--per) - 1) * var(--gap)) / var(--per) * var(--tile, .7)); }
-@media (max-width: 819px) { .rail { --tile: .88; } }
+@media (max-width: 819px) { .rail { --tile: 1; } }   /* телефон: плитка шириной с карточку — упаковки крупнее, названия без переносов */
 /* один товар в ряду на телефоне — карточка во всю ширину (её строчная раскладка — mobile-catalog.css) */
 @media (max-width: 720px) { .rail__track > .product:only-child { flex-basis: 100%; } }
 
@@ -247,6 +247,11 @@ html:not(.spr) .age-dog:active .age-dog__fig { transform: scale(.94); }
   .group-tile { padding: 12px 12px 14px; border-radius: 18px; }
   .group-tile::after { left: 12px; right: 12px; height: 3px; }
   .group-tile__pics { min-height: 90px; margin: 0 -4px 8px; }
+  /* телефон: две упаковки крупно вместо трёх мелких */
+  .group-tile__pics img:nth-child(3) { display: none; }
+  .group-tile__pics img:nth-child(1) { height: 54%; max-width: 70%; top: 0; left: 0; }
+  .group-tile__pics img:nth-child(2) { height: 54%; max-width: 70%; top: 44%; right: 0; }
+  .group-tile__pics img:only-child { height: 78%; max-width: 90%; top: 6%; left: 50%; }
   .group-tile__title { font-size: 16px; }
   .group-tile--coat .group-tile__title { font-size: 15px; }
   .group-tile__count { font-size: 12px; }
@@ -305,4 +310,25 @@ html:not(.spr) .age-dog:active .age-dog__fig { transform: scale(.94); }
     .tpl-systems > .tpl-system > .tpl-system__stage { align-self: end; }
     .tpl-systems > .tpl-system > .tpl-system__badges { align-self: start; }
   }
+}
+
+/* ---------- окно товара на компьютере: шире, корм всегда посередине, прокручивается только текст ---------- */
+@media (min-width: 721px) {
+  .pmodal__dialog { width: min(1180px, calc(100vw - 48px)); overflow: hidden; }
+  .pmodal__body { display: flex; max-height: min(90vh, 900px); max-height: min(90dvh, 900px); }
+  /* левая колонка не прокручивается: картинка стоит по центру, пока читаешь текст справа */
+  .pmodal__media { flex: 0 0 44%; min-height: 360px; padding: 48px 40px; }
+  .pmodal__media img { max-height: min(520px, 70vh); }
+  .pmodal__info { flex: 1 1 auto; min-width: 0; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 44px 48px 40px; scrollbar-gutter: stable; }
+  /* свёрнутый длинный текст: несколько строк и мягкое затухание к низу */
+  .pmodal__desc.pm-clamp:not(.is-open) { max-height: 154px; }
+  .pmodal__section--comp > p.pm-clamp:not(.is-open) { max-height: 94px; }
+  .pm-clamp { overflow: hidden; }
+  .pm-clamp:not(.is-open) { -webkit-mask-image: linear-gradient(180deg, #000 55%, transparent); mask-image: linear-gradient(180deg, #000 55%, transparent); }
+  .pm-more { display: inline-flex; align-items: center; gap: 6px; min-height: 34px; margin: 2px 0 4px; padding: 0; border: 0; background: none; cursor: pointer;
+    font: 600 14px/1.3 var(--font); color: var(--brand-ink, #007a3d); }
+  .pm-more svg { transition: transform var(--spring-bouncy-dur, 420ms) var(--spring-bouncy, cubic-bezier(.3,1.4,.5,1)); }
+  .pm-more[aria-expanded="true"] svg { transform: rotate(180deg); }
+  .pm-more:hover span { text-decoration: underline; text-underline-offset: 3px; }
+  .pm-more:focus-visible { outline: var(--focus-width, 2px) solid var(--focus-color, #007a3d); outline-offset: 2px; border-radius: 6px; }
 }

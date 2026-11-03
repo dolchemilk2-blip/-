@@ -553,6 +553,31 @@ function setModalLock(on) {
 }
 
 const sheetMq = window.matchMedia('(max-width: 720px)');   // phones: the product is a bottom sheet
+// Компьютер: длинный текст в окне товара (описание, состав) свёрнут до нескольких строк; стрелка раскрывает его
+// полностью и сворачивает обратно. Телефон — свой «Читать полностью» (js/mobile.js).
+const pmDeskMq = window.matchMedia('(min-width: 721px)');
+function pmClampDesk(body) {
+  if (!pmDeskMq.matches || !body) return;
+  const chevron = '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  body.querySelectorAll('.pmodal__desc, .pmodal__section--comp > p').forEach(el => {
+    el.classList.add('pm-clamp');
+    if (el.scrollHeight <= el.clientHeight + 4) { el.classList.remove('pm-clamp'); return; }   // короткий — как есть
+    const btn = document.createElement('button');
+    btn.type = 'button'; btn.className = 'pm-more'; btn.setAttribute('aria-expanded', 'false');
+    btn.innerHTML = `<span>${tr('m.readAll')}</span>${chevron}`;
+    btn.addEventListener('click', () => {
+      const open = !el.classList.contains('is-open');
+      const from = el.clientHeight;
+      el.classList.toggle('is-open', open);
+      btn.setAttribute('aria-expanded', String(open));
+      btn.firstChild.textContent = tr(open ? 'm.less' : 'm.readAll');
+      if (reduceMotion() || !el.animate) return;
+      const to = open ? el.scrollHeight : el.clientHeight;
+      el.animate([{ height: from + 'px' }, { height: to + 'px' }], { duration: 320, easing: 'cubic-bezier(.2,.8,.2,1)' });
+    });
+    el.after(btn);
+  });
+}
 function showModal(modal, body, opts, item) {
   const dlg = modal.querySelector('.pmodal__dialog');
   const instant = !!opts.keyboard || reduceMotion();
@@ -591,7 +616,8 @@ function showModal(modal, body, opts, item) {
   setBackgroundInert(true);
   modal.classList.add('is-open');
   modalState = 'open';
-  if (dlg) { dlg.scrollTop = 0; dlg.focus({ preventScroll: true }); }
+  if (dlg) { dlg.scrollTop = 0; const inf = body.querySelector('.pmodal__info'); if (inf) inf.scrollTop = 0; dlg.focus({ preventScroll: true }); }
+  pmClampDesk(body);
   emit('np:modal-open', { id: modalId, item, brand: opts.brand || currentBrand, dialog: dlg });
   // the content follows the panel in a short spring staircase (after np:modal-open: phones have rebuilt the sections)
   if (!instant && sprOK()) {
@@ -612,7 +638,8 @@ function modalGhostOut(modal) {
   const phone = sheetMq.matches;
   // read first: where it is now (mid-zoom / mid-drag), how far it is scrolled
   const dcs = getComputedStyle(dlg), tr = dcs.transform, op = dcs.opacity, bop = getComputedStyle(bd).opacity;
-  const st = dlg.scrollTop, bst = body ? body.scrollTop : 0, h = dlg.offsetHeight;
+  const info = body && body.querySelector('.pmodal__info');
+  const st = dlg.scrollTop, bst = body ? body.scrollTop : 0, ist = info ? info.scrollTop : 0, h = dlg.offsetHeight;
   const g = modal.cloneNode(true);
   [g].concat(Array.from(g.querySelectorAll('[id]'))).forEach(x => x.removeAttribute('id'));
   g.classList.remove('is-closing'); g.classList.add('is-instant');
@@ -622,6 +649,8 @@ function modalGhostOut(modal) {
   const gd = g.querySelector('.pmodal__dialog'), gb = g.querySelector('.pmodal__backdrop'), gbody = g.querySelector('.pmodal__body');
   if (st) gd.scrollTop = st;
   if (gbody && bst) gbody.scrollTop = bst;
+  const ginfo = gbody && gbody.querySelector('.pmodal__info');
+  if (ginfo && ist) ginfo.scrollTop = ist;   // desktop: only the text column scrolls
   const t0 = tr === 'none' ? 'none' : tr;
   // Desktop: the mirror of the open — the panel shrinks back into the card it came from (its centre, roughly its
   // size) while the content fades first, so text is never seen squashed. No card on screen — settles back softly.
