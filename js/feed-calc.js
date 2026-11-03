@@ -12,7 +12,7 @@
   // шкала веса везде до 10 кг (и с официальной таблицей тоже); выше конца таблицы доза — по обменной массе (w^0.75)
   const MAX_KG = 10;
   const RANGE = { dogs: { min: 2, def: 5 }, cats: { min: 2, def: 4 } };
-  const PACKS = { dogs: [4, 12, 18], cats: [0.4, 2, 7] };
+  const PACKS = { dogs: [1.5, 2, 7.5, 10, 12, 15], cats: [2, 7, 15] };
   const I18N = {
     ru: { title: 'Сколько корма нужно?', tipTitle: 'Подбор корма по весу', tipText: 'Узнайте суточную норму для вашего питомца и на сколько дней хватит упаковки.', tipBtn: 'Рассчитать', close: 'Закрыть', weight: 'Вес питомца', kg: 'кг', g: 'г', dose: 'суточная доза', doseHint: 'Расчётная рекомендуемая доза',
       format: 'Выберите формат', dogs: 'Собака', cats: 'Кошка', days: n => n + ' ' + plural(n, 'день', 'дня', 'дней'),
@@ -169,6 +169,8 @@
     let packs = Array.from(new Set((txt.match(/\d+(?:[.,]\d+)?\s*(?:kg|кг)\b/gi) || []).map(s => parseFloat(s.replace(',', '.')))))
       .filter(v => v >= 0.3 && v <= 25).sort((a, b) => a - b);
     if (off && off.packs && off.packs.length) { const op = off.packs.map(kgOf).filter(v => v > 0).sort((a, b) => a - b); if (op.length) packs = op; }
+    // Исключаем 400 г после обоих источников: описания товара и официальных фасовок (в кг или г).
+    packs = packs.filter(v => v !== 0.4);
     const info = d.dialog && d.dialog.querySelector('.pmodal__info');
     if (!info) return;
     const box = document.createElement('section');

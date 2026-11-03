@@ -84,16 +84,6 @@
             <a href="products.html" class="btn btn--primary" data-i18n="home.hero.cta">Смотреть каталог</a>
             <a href="#coat" class="hero-home__link"><span data-i18n="home.hero.cta2">Подобрать по окрасу</span> <span aria-hidden="true">›</span></a>
           </div>
-
-          <nav class="intents" aria-labelledby="intentsLabel">
-            <p class="intents__label" id="intentsLabel" data-i18n="home.intent.label">Быстрый выбор</p>
-            <ul class="intents__list">
-              <li><a class="intent" href="products.html#q=Sterilised" data-i18n="home.intent.steril">Для стерилизованных кошек</a></li>
-              <li><a class="intent" href="products.html#q=Detangling" data-i18n="home.intent.mats">От колтунов</a></li>
-              <li><a class="intent" href="products.html#q=Grain%20Free" data-i18n="home.intent.grain">Беззерновой корм</a></li>
-              <li><a class="intent" href="products.html#brand=misoko" data-i18n="home.intent.misoko">Игрушки Misoko</a></li>
-            </ul>
-          </nav>
         </div>
 
         <dl class="hero-stats" data-mh-count>
@@ -163,66 +153,76 @@
     <section class="section lineup" id="brands" aria-labelledby="brandsTitle">
       <div class="container">
         <div class="home-head">
-          <p class="home-head__tag" data-reveal data-i18n="products.tag">Наша продукция</p>
-          <h2 class="home-head__title" id="brandsTitle" data-mh-lines data-i18n="home.brands.title">Четыре бренда</h2>
+          <h2 class="home-head__title" id="brandsTitle" data-mh-lines data-i18n="products.tag">Наша продукция</h2>
         </div>
         <ul class="lineup__grid">
           <li data-reveal><a class="tile tile--np" href="products.html#brand=np">
             <span class="tile__name">Nature's Protection</span>
             <span class="tile__line" data-i18n="home.brands.np">Корма и витамины для кошек и собак</span>
-            <img class="tile__img" src="assets/products/cat-sc-light.png" alt="" width="600" height="600" loading="lazy" />
+            <span class="tile__scene" aria-hidden="true">
+              <img class="tile__img tile__img--back" src="assets/float/np-sensitive.webp" alt="" width="700" height="700" loading="lazy" decoding="async" />
+              <img class="tile__img tile__img--front" src="assets/float/np-whitecats.webp" alt="" width="700" height="700" loading="lazy" decoding="async" />
+              <img class="tile__img tile__img--side" src="assets/float/np-salmonoil.webp" alt="" width="700" height="700" loading="lazy" decoding="async" />
+              <svg class="tile__bowl" viewBox="0 0 200 125" aria-hidden="true">
+                <ellipse cx="100" cy="111" rx="87" ry="9" fill="#28352b" opacity=".12"/>
+                <path d="M28 56h144l13 48c-15 16-155 16-170 0z" fill="var(--bowl-body)"/>
+                <ellipse cx="100" cy="57" rx="72" ry="23" fill="var(--bowl-rim)"/>
+                <ellipse cx="100" cy="55" rx="61" ry="17" fill="#5b3922"/>
+                <g fill="#a46c38" stroke="#704725" stroke-width="2">
+                  <ellipse cx="55" cy="49" rx="10" ry="6" transform="rotate(-15 55 49)"/><ellipse cx="77" cy="44" rx="9" ry="7"/>
+                  <ellipse cx="99" cy="40" rx="10" ry="6"/><ellipse cx="121" cy="43" rx="9" ry="7"/>
+                  <ellipse cx="143" cy="49" rx="10" ry="6" transform="rotate(15 143 49)"/>
+                  <ellipse cx="65" cy="61" rx="10" ry="6"/><ellipse cx="88" cy="57" rx="9" ry="7"/>
+                  <ellipse cx="111" cy="56" rx="10" ry="7"/><ellipse cx="134" cy="61" rx="9" ry="6"/>
+                  <ellipse cx="88" cy="68" rx="10" ry="5"/><ellipse cx="112" cy="68" rx="9" ry="5"/>
+                </g>
+                <path d="M22 92c36 12 120 12 156 0" fill="none" stroke="var(--bowl-rim)" stroke-width="3" opacity=".65"/>
+                <ellipse cx="100" cy="90" rx="11" ry="8" fill="var(--bowl-rim)" opacity=".8"/>
+              </svg>
+            </span>
           </a></li>
           <li data-reveal><a class="tile tile--araton" href="products.html#brand=araton">
             <span class="tile__name">Araton</span>
             <span class="tile__line" data-i18n="home.brands.araton">Сбалансированные корма на каждый день</span>
-            <img class="tile__img" src="assets/products/art-cat-kitten.png" alt="" loading="lazy" />
+            <span class="tile__scene" aria-hidden="true">
+              <img class="tile__img tile__img--back" src="assets/products/art-dog-lamb.webp" alt="" width="700" height="700" loading="lazy" decoding="async" />
+              <img class="tile__img tile__img--front" src="assets/products/art-cat-salmon.webp" alt="" width="700" height="700" loading="lazy" decoding="async" />
+              <img class="tile__img tile__img--side" src="assets/products/art-dog-pouch-beef.webp" alt="" width="700" height="700" loading="lazy" decoding="async" />
+              <svg class="tile__bowl" viewBox="0 0 200 125" aria-hidden="true">
+                <ellipse cx="100" cy="111" rx="87" ry="9" fill="#28352b" opacity=".12"/>
+                <path d="M28 56h144l13 48c-15 16-155 16-170 0z" fill="var(--bowl-body)"/>
+                <ellipse cx="100" cy="57" rx="72" ry="23" fill="var(--bowl-rim)"/>
+                <ellipse cx="100" cy="55" rx="61" ry="17" fill="#5b3922"/>
+                <g fill="#a46c38" stroke="#704725" stroke-width="2">
+                  <ellipse cx="55" cy="49" rx="10" ry="6" transform="rotate(-15 55 49)"/><ellipse cx="77" cy="44" rx="9" ry="7"/>
+                  <ellipse cx="99" cy="40" rx="10" ry="6"/><ellipse cx="121" cy="43" rx="9" ry="7"/>
+                  <ellipse cx="143" cy="49" rx="10" ry="6" transform="rotate(15 143 49)"/>
+                  <ellipse cx="65" cy="61" rx="10" ry="6"/><ellipse cx="88" cy="57" rx="9" ry="7"/>
+                  <ellipse cx="111" cy="56" rx="10" ry="7"/><ellipse cx="134" cy="61" rx="9" ry="6"/>
+                  <ellipse cx="88" cy="68" rx="10" ry="5"/><ellipse cx="112" cy="68" rx="9" ry="5"/>
+                </g>
+                <path d="M22 92c36 12 120 12 156 0" fill="none" stroke="var(--bowl-rim)" stroke-width="3" opacity=".65"/>
+                <ellipse cx="100" cy="90" rx="11" ry="8" fill="var(--bowl-rim)" opacity=".8"/>
+              </svg>
+            </span>
           </a></li>
           <li data-reveal><a class="tile tile--tpl" href="products.html#brand=tpl">
             <span class="tile__name">Tauro Pro Line</span>
             <span class="tile__line" data-i18n="home.brands.tpl">Профессиональный груминг</span>
-            <img class="tile__img" src="assets/products/tpl-pn-5in1.webp" alt="" loading="lazy" />
+            <span class="tile__scene" aria-hidden="true">
+              <img class="tile__img tile__img--back" src="assets/products/tpl-un-deep.webp" alt="" width="700" height="700" loading="lazy" decoding="async" />
+              <img class="tile__img tile__img--front" src="assets/products/tpl-pn-magicplex.webp" alt="" width="700" height="700" loading="lazy" decoding="async" />
+              <img class="tile__img tile__img--side" src="assets/products/tpl-un-puremist.webp" alt="" width="700" height="700" loading="lazy" decoding="async" />
+            </span>
           </a></li>
           <li data-reveal><a class="tile tile--misoko" href="products.html#brand=misoko">
             <span class="tile__name">Misoko</span>
             <span class="tile__line" data-i18n="home.brands.misoko">Игрушки и аксессуары</span>
-            <img class="tile__img" src="assets/products/misoko-beimr01182.webp" alt="" loading="lazy" />
-          </a></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ===== 3b. Categories: deep links into catalogue sections (#brand=…&sec=…) ===== -->
-    <section class="section cats" id="cats" aria-labelledby="catsTitle">
-      <div class="container">
-        <div class="home-head cats__head">
-          <p class="home-head__tag" data-reveal data-i18n="home.cats.tag">Каталог</p>
-          <h2 class="home-head__title" id="catsTitle" data-mh-lines data-i18n="home.cats.title">Категории</h2>
-          <a class="cats__all" data-reveal href="products.html"><span data-i18n="home.cats.all">Весь каталог</span> <span aria-hidden="true">›</span></a>
-        </div>
-        <ul class="cats__grid">
-          <li data-reveal><a class="cat-tile" href="products.html#brand=np&amp;sec=dry">
-            <img class="cat-tile__img" src="assets/products/dog-wd-adult-salmon.webp" alt="" width="200" height="200" loading="lazy" decoding="async" />
-            <span class="cat-tile__text"><span class="cat-tile__name" data-i18n="home.cats.dry">Сухой корм</span><span class="cat-tile__brand">Nature's Protection</span></span>
-          </a></li>
-          <li data-reveal><a class="cat-tile" href="products.html#brand=np&amp;sec=wet">
-            <img class="cat-tile__img" src="assets/products/cat-can-whitefish.webp" alt="" width="200" height="200" loading="lazy" decoding="async" />
-            <span class="cat-tile__text"><span class="cat-tile__name" data-i18n="home.cats.wet">Влажный корм</span><span class="cat-tile__brand">Nature's Protection</span></span>
-          </a></li>
-          <li data-reveal><a class="cat-tile" href="products.html#brand=np&amp;sec=treats">
-            <img class="cat-tile__img" src="assets/products/cat-snack-urinary.webp" alt="" width="200" height="200" loading="lazy" decoding="async" />
-            <span class="cat-tile__text"><span class="cat-tile__name" data-i18n="home.cats.treats">Лакомства</span><span class="cat-tile__brand">Nature's Protection</span></span>
-          </a></li>
-          <li data-reveal><a class="cat-tile" href="products.html#brand=np&amp;sec=vet">
-            <img class="cat-tile__img" src="assets/products/scvet-derma.webp" alt="" width="200" height="200" loading="lazy" decoding="async" />
-            <span class="cat-tile__text"><span class="cat-tile__name" data-i18n="home.cats.vet">Ветеринарная диета</span><span class="cat-tile__brand">Nature's Protection</span></span>
-          </a></li>
-          <li data-reveal><a class="cat-tile" href="products.html#brand=tpl&amp;sec=coat">
-            <img class="cat-tile__img" src="assets/products/tpl-un-volume.webp" alt="" width="200" height="200" loading="lazy" decoding="async" />
-            <span class="cat-tile__text"><span class="cat-tile__name" data-i18n="home.cats.coat">Уход за шерстью</span><span class="cat-tile__brand">Tauro Pro Line</span></span>
-          </a></li>
-          <li data-reveal><a class="cat-tile" href="products.html#brand=misoko&amp;sec=soft">
-            <img class="cat-tile__img" src="assets/products/misoko-beimr01182.webp" alt="" width="200" height="200" loading="lazy" decoding="async" />
-            <span class="cat-tile__text"><span class="cat-tile__name" data-i18n="home.cats.toys">Мягкие игрушки</span><span class="cat-tile__brand">Misoko</span></span>
+            <span class="tile__scene" aria-hidden="true">
+              <img class="tile__img tile__img--back" src="assets/products/misoko-hanyt125395.webp" alt="" width="700" height="700" loading="lazy" decoding="async" />
+              <img class="tile__img tile__img--front" src="assets/products/misoko-beixj00603.webp" alt="" width="700" height="700" loading="lazy" decoding="async" />
+              <img class="tile__img tile__img--side" src="assets/products/misoko-kinmsk70556.webp" alt="" width="700" height="700" loading="lazy" decoding="async" />
+            </span>
           </a></li>
         </ul>
       </div>
@@ -358,13 +358,16 @@
             <p class="buy__shopName">The Showroom by Nature's Protection</p>
             <p class="buy__shopNote" data-i18n="stores.shop">Наш дистрибьюторский магазин</p>
           </div>
-          <ul class="buy__list">
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><a href="https://www.google.com/maps/search/?api=1&query=%C6%8Fnv%C9%99r%20Qas%C4%B1mzad%C9%99%2056C%2C%20Bak%C4%B1" target="_blank" rel="noopener"><span class="buy__two"><span data-i18n="contact.street">ул. Энвера Гасымзаде, 56C</span><small data-i18n="contact.landmark">Рядом с парком Короглу, Баку</small></span></a></li>
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-i18n="contact.hours">Ежедневно 11:00–20:00</span></li>
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h3l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 4 5a2 2 0 0 1 2-2z"/></svg><a href="tel:+994102200525">+994 10 220 05 25</a></li>
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="0.9" class="dot"/></svg><a href="https://www.instagram.com/natures_protection_az/" target="_blank" rel="noopener" data-i18n="contact.instagram">Наш Instagram</a></li>
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 19.5l1.2-3.6A8 8 0 1 1 8.4 18.6z"/><path d="M9.2 8.6c.2-.4.6-.4.9-.2l.8 1.6c.1.3 0 .5-.2.7l-.5.5c.5 1 1.3 1.9 2.4 2.4l.5-.5c.2-.2.5-.3.7-.2l1.6.8c.3.2.3.6 0 .9-.5.7-1.3 1-2.1.7a8 8 0 0 1-4.4-4.4c-.3-.8 0-1.6.3-2.3z" class="dot"/></svg><a href="https://wa.me/994102200525" target="_blank" rel="noopener" data-i18n="contact.whatsapp">Наш WhatsApp</a></li>
-          </ul>
+          <div class="buy__location">
+            <ul class="buy__list">
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><a href="https://www.google.com/maps/search/?api=1&query=%C6%8Fnv%C9%99r%20Qas%C4%B1mzad%C9%99%2056C%2C%20Bak%C4%B1" target="_blank" rel="noopener"><span class="buy__two"><span data-i18n="contact.street">ул. Энвера Гасымзаде, 56C</span><small data-i18n="contact.landmark">Рядом с парком Короглу, Баку</small></span></a></li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-i18n="contact.hours">Ежедневно 11:00–20:00</span></li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h3l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 4 5a2 2 0 0 1 2-2z"/></svg><a href="tel:+994102200525">+994 10 220 05 25</a></li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="0.9" class="dot"/></svg><a href="https://www.instagram.com/natures_protection_az/" target="_blank" rel="noopener" data-i18n="contact.instagram">Наш Instagram</a></li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 19.5l1.2-3.6A8 8 0 1 1 8.4 18.6z"/><path d="M9.2 8.6c.2-.4.6-.4.9-.2l.8 1.6c.1.3 0 .5-.2.7l-.5.5c.5 1 1.3 1.9 2.4 2.4l.5-.5c.2-.2.5-.3.7-.2l1.6.8c.3.2.3.6 0 .9-.5.7-1.3 1-2.1.7a8 8 0 0 1-4.4-4.4c-.3-.8 0-1.6.3-2.3z" class="dot"/></svg><a href="https://wa.me/994102200525" target="_blank" rel="noopener" data-i18n="contact.whatsapp">Наш WhatsApp</a></li>
+            </ul>
+            <iframe class="buy__map" src="https://www.google.com/maps?q=%C6%8Fnv%C9%99r+Qas%C4%B1mzad%C9%99+56C,+Bak%C4%B1&amp;output=embed" width="320" height="320" loading="lazy" title="Магазин на карте: Ənvər Qasımzadə 56C, Bakı" data-i18n-title="home.contact.mapTitle" allowfullscreen></iframe>
+          </div>
         </div>
 
         <form class="contact__form buy__form" id="contactForm" aria-labelledby="contactTitle">

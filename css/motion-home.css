@@ -34,17 +34,13 @@
     mhLineBlur var(--duration-slow, 400ms) var(--ease-smooth-out) backwards;
   animation-delay: calc(80ms + var(--li, 0) * 70ms);
 }
-/* quick-intent chips: motion-home.js staggers them in on springs (40ms), so the row itself does not rise */
-.mh-js .intents.mh-chips { animation: none; }
-
 /* ---------- 1. Hero ---------- */
 .mh-js .hero-home__title { animation: none; }                       /* the lines replace homeRise */
 .mh-js .hero-home__title:not(.mh-lines):not(.mh-done) { opacity: 0; } /* one frame, until split */
-/* sub-text, buttons, chips and stats follow the headline (homeRise from home.css: 16px, 700ms) */
+/* sub-text, buttons and stats follow the headline (homeRise from home.css: 16px, 700ms) */
 .mh-js .hero-home__eyebrow { animation-delay: 0ms; }
 .mh-js .hero-home__text { animation-delay: 300ms; }
 .mh-js .hero-home__actions { animation-delay: 380ms; }
-.mh-js .intents { animation-delay: 460ms; }
 .mh-js .hero-stats { animation-delay: 540ms; }
 .hero-stats dt { font-variant-numeric: tabular-nums; }              /* mobile-home's font shorthand resets it */
 /* background settles 1.06 → 1 (the `scale` property, so it composes with the scrubbed transform) */
@@ -71,12 +67,12 @@
 .mh-js .coat__cat { translate: 0 calc((.5 - var(--mh-p)) * 24px); }
 .mh-js .coat__dog { translate: 0 calc((.5 - var(--mh-p)) * 72px); }
 
-/* ---------- 5. Brand tiles + category rows: the product image grows in with its card ---------- */
-.mh-js.home-js main [data-reveal].is-in :is(.tile__img, .cat-tile__img) {
+/* ---------- 5. Brand tiles: every product image grows in with its card ---------- */
+.mh-js.home-js main [data-reveal].is-in .tile__img {
   animation: mhImgIn 700ms var(--ease-out) backwards;
   animation-delay: calc(var(--ri, 0) * var(--stagger));
 }
-.mh-js.home-js main [data-reveal].is-instant :is(.tile__img, .cat-tile__img) { animation: none; }
+.mh-js.home-js main [data-reveal].is-instant .tile__img { animation: none; }
 
 /* ---------- 7. Quality journey: the line draws with scroll, each dot fills as it is passed ---------- */
 .mh-js .journey { --mh-a: .2; --mh-b: .55; }
@@ -126,7 +122,7 @@
 @media (prefers-reduced-motion: reduce) {
   .hero--home, .coat, .mh-words, .journey { animation: none !important; --mh-p: 1; }
   .hero--home { --mh-p: 0; }
-  .mh-line__in, .hero-home__title, .hero--home .hero-bg, .tile__img, .cat-tile__img { animation: none !important; transform: none; }
+  .mh-line__in, .hero-home__title, .hero--home .hero-bg, .tile__img { animation: none !important; transform: none; }
   .hero--home .hero-bg, .hero--home .hero-home__inner, .coat__cat, .coat__dog { transform: none !important; translate: none !important; opacity: 1 !important; }
   [data-mh-wipe] { clip-path: none !important; }
   .mh-w { opacity: 1 !important; }
