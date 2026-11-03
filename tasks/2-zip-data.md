@@ -34,7 +34,7 @@
 4. Maxi Adult: убрать 4 кг → только 12.
 5. Adult Lamb: оставить только 12 кг.
 
-Общее правило: у сухих кормов вариант 400 г убрать везде. У консервов и паучей, где 400 г — единственный объём, не трогать.
+Общее правило: у сухих кормов вариант 400 г убрать везде. У консервов фасовки — по таблице ниже (пункт G1).
 
 ## B. Название для тёмной шерсти (собаки)
 Сухой корм «Dark Coat — All breeds» (Superior Care, собаки): добавить в название мясо домашней птицы:
@@ -47,8 +47,10 @@
 ## C. Азербайджанская версия: названия по-английски
 У **всех** товаров всех брендов поле `az.name` сделать таким же, как английское `en.name` (например «White Cats — Siyənək» → «White Cats — Herring»). Описания (`az.desc`), теги и категории остаются на азербайджанском.
 
-## D. «Life Long MZG» → «Supplements»
-Везде, где это название линейки или категории (`RANGES` и поле `cat` у товаров, на всех языках), заменить «Life Long MZG» на «Supplements». Не трогать слово «MicroZeoGen» в описаниях.
+## D. «Life Long MZG»
+- В карточках товаров (поле `cat`) все товары MZG пометить как «Vitamins» / «Витамины» / «Vitaminlər» — так же, как остальные витамины.
+- Название линейки на главной (`RANGES` в `js/translations.js`): «Life Long MZG» → «Supplements».
+- Слово «MicroZeoGen» в описаниях не трогать.
 
 ## E. «Послы» → «Амбассадоры» на всех языках
 - ru: `tab.ambassadors`: «Послы» → «Амбассадоры». В текстах «посол бренда» → «амбассадор бренда».
@@ -57,6 +59,56 @@
 
 ## F. Убрать слово «sürfələridir»
 `js/translations.js`, ключ `values.v3.text` (az): «…ət, balıq və ya həşərat sürfələridir.» → «…ət, balıq və ya həşərat.».
+
+## G. Правки клиента по скриншотам (архив с пометками)
+
+### G1. Консервы для собак — указать размеры банок
+Размер вписать и в `packs` (`js/np-official.js`), и в конец описания, где сейчас «200 г.»:
+| Товар (ru) | Фасовки |
+|---|---|
+| Ягнёнок (Puppy) | 200 г, 400 г |
+| Телятина (Puppy) | 200 г, 400 г |
+| Lamb — Взрослые собаки | 200 г, 400 г |
+| Говядина и индейка | 200 г, 400 г |
+| Дичь (Game) | 200 г, 400 г; из названия убрать слово «Game» на всех языках → «Дичь» |
+| Телятина и утка (Small Breed) | 200 г, 400 г |
+| Индейка (высокая банка) | только 400 г |
+| White Dogs Wellness Soup — Тунец и лосось | 140 мл |
+
+### G2. Названия разделов и категорий
+- Az: «Pauçlar» (паучи) → «Jele».
+- Категория «Superior Care · Flowpack» → «Superior Care · Snacks» на всех языках. Ключи в `np-official.js` и `descriptions.js` переименовать.
+
+### G3. Nature's Protection — добавки
+- Malt Paste: вторую пасту (Anti-Hairball Malt Paste) явно подписать как пасту для стерилизованных кошек — в названии.
+- Healthy Pregnancy — это витамины, категория «Vitamins» (см. пункт D).
+- **Удалить товары:** «MicroZeoGen — Detox & Calcium» (кошки) и «Recovery & Performance» (собаки). Удалить и их записи в `np-official.js` и `descriptions.js`.
+
+### G4. Araton (`js/catalog.js`)
+- Названия сухих кормов для собак:
+  - Lamb → «Adult Lamb»;
+  - Active → «Adult Active»;
+  - Maxi → «Adult Maxi»;
+  - Poultry → «Adult Poultry»;
+  - Junior → «Junior Poultry».
+- Фасовка сухих кормов Araton — одна: 15 кг (`packs` в `js/np-official.js` по ключам `araton:…`).
+- Az: в подписи возраста «<1 il» → «<1 yaş» (везде, где «il» про возраст).
+- **Удалить товар:** пауч для котят «Kitten — Turkey & Chicken».
+
+### G5. Tauro Pro Line, азербайджанские тексты
+- «bariyeri» → «bariyer».
+- Убрать слова «itaətkar və».
+- «ağladıcı» → «ağardıcı».
+- Заголовок системы «Tökülməyə qarşı və tük böyüməsi üçün — Fur Growth · Step 1·2·3» → «Tük tökülməyə qarşı və tük böyüməsi üçün».
+- «Keçələşməyə» → «Dolaşıqlaşmağa».
+
+Тексты Tauro лежат в `js/catalog.js` и/или `js/translations.js` — искать поиском по словам.
+
+### G6. Misoko (`js/catalog.js`)
+- «Yengəc» — это воротник, не игрушка. Убрать из игрушек и перенести в раздел «Gəzinti və gigiyena» как воротник («yaxalıq»), на всех языках.
+- «Suiti» → «Su iti» (раздельно).
+- «Krossovka» → «Ayaqqabı».
+- Спрей «Ləkə və qoxu təmizləyici sprey»: указать три вида — лимон, лаванда, без запаха (az: limon, lavanda, qoxusuz) — в описании и тегах, на всех языках.
 
 ## Проверка
 - Все 4 файла — валидный JavaScript, например `node -e "require('vm').runInNewContext(require('fs').readFileSync('js/np-official.js','utf8'))"`.
