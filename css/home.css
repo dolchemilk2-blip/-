@@ -416,3 +416,13 @@ html.spr .tile__img { transition: transform var(--spring-snappy-dur) var(--sprin
   animation: t-check-plate var(--duration-very-slow) var(--ease-bounce) both;
 }
 @media (prefers-reduced-motion: reduce) { .form__ok.is-done::before { animation: none; } }
+
+/* ---------- Hero: текст к левому краю экрана (компьютер) ----------
+   Контейнер страницы центрирован, и на широком экране текст начинался на трети ширины, поверх животных на фото.
+   Здесь он прижат к левому краю, а затемнение слева (scrim) как раз под ним. */
+@media (min-width: 900px) {
+  .hero--home .hero-home__inner { max-width: none; margin: 0; padding-left: clamp(32px, 4.6vw, 88px); padding-right: clamp(32px, 4.6vw, 88px); }
+  .hero-home__content { max-width: 640px; }
+  .hero-home__title { font-size: clamp(42px, 4.6vw, 74px); }
+  .hero-stats { max-width: 640px; }
+}
