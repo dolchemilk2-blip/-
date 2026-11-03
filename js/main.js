@@ -424,7 +424,7 @@ function coatOf(item) {
   return null;
 }
 
-function productCard(item, lang, id, uid) {
+function productCard(item, lang, id, uid, attrs) {
   const t = item[lang] || item.ru;
   const dict = TRANSLATIONS[lang] || TRANSLATIONS.ru;
   const tags = (t.tags || []).map(x => `<span>${x}</span>`).join('');
@@ -445,7 +445,7 @@ function productCard(item, lang, id, uid) {
   const did = uid ? ` data-id="${uid}"` : '';
   const more = `<span class="product__more">${dict['products.more'] || 'Подробнее'}<svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>`;
   return `
-    <article class="product${coat ? ' product--coat product--coat-' + coat : ''} is-clickable spr-glare"${pid}${did}>
+    <article class="product${coat ? ' product--coat product--coat-' + coat : ''} is-clickable spr-glare"${pid}${did}${attrs || ''}>
       <div class="product__img">${ribbon}${media}<div class="product__actions"></div></div>
       <div class="product__body">
         <span class="product__cat">${t.cat}</span>
@@ -722,7 +722,7 @@ function trapModalFocus(e) {
 // never laid out for this. All reads happen before the update and right after it; the motion itself is springs
 // (NPSpring: FLIP on `translate`, WAAPI enters) — nothing is measured per frame.
 const sprOK = () => !!(window.NPSpring && NPSpring.ok() && NPSpring.ready);
-const UNIT_IN_GROUP = '.product-group__title, .product-subgroup__title, .coat-insert, .coat-subline, .products > .product';
+const UNIT_IN_GROUP = '.product-group__title, .product-subgroup__title, .coat-insert, .coat-subline, .coat-block__head, .age-track, .coat-col__head, .products > .product';
 function screenUnits(grid) {
   const vh = window.innerHeight, out = [];
   const walk = (els, deep) => {
@@ -730,8 +730,8 @@ function screenUnits(grid) {
       const r = el.getBoundingClientRect();
       if (!r.height || r.bottom < 0) continue;
       if (r.top > vh) return false;
-      if (deep && el.classList.contains('cat-section')) { if (walk(el.children, true) === false) return false; }
-      else if (deep && el.classList.contains('product-group')) { if (walk(el.querySelectorAll(UNIT_IN_GROUP), false) === false) return false; }
+      if (deep && (el.classList.contains('cat-section') || el.classList.contains('products--flow'))) { if (walk(el.children, true) === false) return false; }
+      else if (deep && (el.classList.contains('product-group') || el.classList.contains('coat-block'))) { if (walk(el.querySelectorAll(UNIT_IN_GROUP), false) === false) return false; }
       else out.push(el);
     }
     return true;
@@ -931,41 +931,46 @@ function tplIntroHtml(brand, lang, dict) {
   return { tplWhy, showcase };
 }
 
-// Суперпремиум-группа Superior Care: карточки по цвету шерсти со вставками и подлинейками (Starter → All life stage)
-function coatGroupInner(g, dict, mk) {
-  const buckets = { white: [], red: [], dark: [], none: [] };
-  g.items.forEach(it => { buckets[coatOf(it) || 'none'].push(it); });
-  let inner = '';
-  const LINE_ORDER = ['starter', 'junior', 'adult-small', 'all-life-stage'];
-  const LINE_KEY = { 'starter': 'line.starter', 'junior': 'line.junior', 'adult-small': 'line.adultSmall', 'all-life-stage': 'line.allLifeStage' };
-  ['white', 'red', 'dark'].forEach(c => {
-    if (!buckets[c].length) return;
-    inner += `
-      <div class="coat-insert coat-insert--${c}">
-        <span class="coat-insert__dot"></span>
-        <div class="coat-insert__text">
-          <h4>${dict['coat.' + c + '.title'] || ''}</h4>
-          <p>${dict['coat.' + c + '.desc'] || ''}</p>
-        </div>
-      </div>`;
-    // Если в группе есть подлинейки (Starter/Junior/Adult/All Life Stage) — делим по ним
-    if (buckets[c].some(it => it.line)) {
-      LINE_ORDER.forEach(ln => {
-        const items = buckets[c].filter(it => it.line === ln);
-        if (!items.length) return;
-        inner += `<h4 class="coat-subline coat-subline--${c}">${dict[LINE_KEY[ln]] || ''}</h4>
-          <div class="products">${items.map(it => mk(it, g.species)).join('')}</div>`;
-      });
-      const rest = buckets[c].filter(it => !it.line);
-      if (rest.length) inner += `<div class="products">${rest.map(it => mk(it, g.species)).join('')}</div>`;
-    } else {
-      inner += `<div class="products">${buckets[c].map(it => mk(it, g.species)).join('')}</div>`;
-    }
-  });
-  if (buckets.none.length) {
-    inner += `<div class="products">${buckets.none.map(it => mk(it, g.species)).join('')}</div>`;
+// Возраст корма для «собачек возраста»: из поля line (White Dogs) или из названия (Red/Dark Coat)
+const AGE_ORDER = ['starter', 'junior', 'adult', 'all-life-stage'];
+function ageOf(it) {
+  if (it.line) return it.line === 'adult-small' ? 'adult' : it.line;
+  const s = (it.en && ((it.en.cat || '') + ' ' + (it.en.name || ''))) || '';
+  return /Starter/i.test(s) ? 'starter' : /Junior|Puppy/i.test(s) ? 'junior' : /All Life Stage/i.test(s) ? 'all-life-stage' : 'adult';
+}
+// Сколько товаров: «5 товаров» / «5 məhsul» / «5 products»
+function itemsLabel(n, lang) {
+  if (lang === 'az') return n + ' məhsul';
+  if (lang === 'en') return n + (n === 1 ? ' product' : ' products');
+  const m = n % 100, k = n % 10;
+  return n + (m > 10 && m < 20 ? ' товаров' : k === 1 ? ' товар' : k >= 2 && k <= 4 ? ' товара' : ' товаров');
+}
+// Superior Care: три линейки по цвету шерсти стоят рядом колонками (белая · рыжая · тёмная), товары идут вниз.
+// У собак над колонками — полоска с собачками возраста (js/age-dogs.js): нажатие оставляет корма этого возраста.
+function coatBlock(g, dict, mk, lang, head) {
+  const cols = { white: [], red: [], dark: [], none: [] };
+  g.items.forEach(it => { cols[coatOf(it) || 'none'].push(it); });
+  const used = ['white', 'red', 'dark'].filter(c => cols[c].length);
+  const ages = g.species === 'dogs' ? AGE_ORDER.filter(a => g.items.some(it => ageOf(it) === a)) : [];
+  let track = { cur: 'all', html: '' };
+  if (ages.length > 1 && window.NPAge) {
+    const counts = {}; g.items.forEach(it => { const a = ageOf(it); counts[a] = (counts[a] || 0) + 1; });
+    track = NPAge.track(ages, counts, ages.includes('adult') ? 'adult' : ages[0]);
   }
-  return inner;
+  const card = it => mk(it, g.species, track.html ? ` data-age="${ageOf(it)}"` : '');
+  const none = dict['age.none'] || (window.NPAge ? NPAge.t('age.none') : '');
+  const colHtml = used.map(c => `
+      <div class="coat-col coat-col--${c}">
+        <div class="coat-col__head"><span class="coat-col__dot" aria-hidden="true"></span>
+          <div><h4>${dict['coat.' + c + '.title'] || ''}</h4><p>${dict['coat.' + c + '.desc'] || ''}</p></div></div>
+        <div class="products products--col">${cols[c].map(card).join('')}${track.html ? `<p class="coat-col__empty">${none}</p>` : ''}</div>
+      </div>`).join('');
+  const rest = cols.none.length ? `<div class="products products--col products--rest">${cols.none.map(card).join('')}</div>` : '';
+  return `
+    <div class="coat-block flow-full${track.html ? ' has-ages' : ''}" data-age="${track.cur}">
+      ${head || ''}${track.html}
+      <div class="coat-cols" style="--n:${used.length}">${colHtml}</div>${rest}
+    </div>`;
 }
 
 // Короткое название группы внутри раздела: «Prime · Влажный корм (паучи)» → «Prime»
@@ -977,64 +982,80 @@ function shortGroupLabel(g, lang) {
 const SPECIES_HEAD = { cats: ['🐱', 'products.tabCats'], dogs: ['🐶', 'products.tabDogs'], both: ['🐾', 'sections.both'] };
 
 // Раздел: заголовок + группы-подзаголовки. NP/Araton при «Все»/«Малыши» — подзаголовки «Для кошек» / «Для собак».
-// NP «Лакомства»: внутри группы — подзаголовки по цвету шерсти (White / Red) и функциональные NP; молодые — первыми
-function treatsGroupInner(g, dict, mk) {
+// NP «Лакомства»: подгруппы по цвету шерсти (White / Red) и функциональные NP; молодые — первыми
+function treatsSubgroups(g, dict) {
   const b = { white: [], red: [], other: [] };
   g.items.forEach(it => { const c = coatOf(it); (b[c === 'white' || c === 'red' ? c : 'other']).push(it); });
   const filled = ['white', 'red', 'other'].filter(k => b[k].length);
-  if (filled.length < 2) return `<div class="products">${byStage(g.items).map(it => mk(it, g.species)).join('')}</div>`;
+  if (filled.length < 2) return null;
   const head = { white: dict['coat.white.title'], red: dict['coat.red.title'], other: dict['treats.general'] || tr('treats.general') };
-  return filled.map(k => `<h4 class="product-subgroup__title${k !== 'other' ? ' coat-subline--' + k : ''}">${head[k] || ''}</h4>` +
-    `<div class="products">${byStage(b[k]).map(it => mk(it, g.species)).join('')}</div>`).join('');
+  return filled.map(k => ({ title: head[k] || '', coat: k !== 'other' ? k : '', items: byStage(b[k]) }));
 }
 
+// Раздел — одна сплошная сетка (.products--flow): заголовок группы — плитка в ряду с карточками, поэтому
+// ряды не обрываются на 1–2 товарах. Собаки идут первыми. Линейки Superior Care — блок во всю ширину (coatBlock).
+// blocks — куски раздела для порционной отрисовки: плитка + карточки одной группы, заметки, блок шерсти.
 function sectionParts(s, brand, lang, dict, mk) {
   const title = (s.def && (s.def[lang] || s.def.ru)) || '';
-  const groupBody = g => g.coat ? coatGroupInner(g, dict, mk)
-    : (brand === 'np' && s.id === 'treats') ? treatsGroupInner(g, dict, mk)
-    : `<div class="products">${g.items.map(it => mk(it, g.species)).join('')}</div>`;
-  const wrapGroup = (inner, head, coat) => `
-      <div class="product-group${coat ? ' product-group--coat' : ''}">
-        ${head ? `<h3 class="product-group__title">${head}</h3>` : ''}
-        ${inner}
-      </div>`;
-  const blocks = [];   // top-level pieces of the section: notes and product groups (the unit of chunked rendering)
-  if (brand === 'np' && s.id === 'superior-care') blocks.push(`<p class="coat-note">${dict['products.coatNote'] || ''}</p>`);
+  const blocks = [];
+  if (brand === 'np' && s.id === 'superior-care') blocks.push(`<p class="coat-note flow-full">${dict['products.coatNote'] || ''}</p>`);
   // «Сухой корм» NP: сухие корма Superior Care (по цвету шерсти) живут в своём разделе — даём прямой переход
   if (brand === 'np' && s.id === 'dry' && currentSection === 'dry') {
     const sc = sectionsFor('np', currentSpecies).find(x => x.id === 'superior-care');
-    if (sc && sc.count) blocks.push(`<button class="cat-xlink" type="button" data-sec="superior-care">+ ${sc.count} ${tr('sections.scDry')} <span aria-hidden="true">→</span></button>`);
+    if (sc && sc.count) blocks.push(`<div class="flow-full"><button class="cat-xlink" type="button" data-sec="superior-care">+ ${sc.count} ${tr('sections.scDry')} <span aria-hidden="true">→</span></button></div>`);
   }
+  const cards = (g, items) => items.map(it => mk(it, g.species)).join('');
+  // плитка группы: веер из 3 упаковок группы, значок вида (или цвет шерсти), название и число товаров
+  const pics = items => { const im = items.filter(it => it.img).slice(0, 3); return im.length ? `<span class="group-tile__pics" aria-hidden="true">${im.map(it => `<img src="${it.img}" alt="" loading="lazy" decoding="async">`).join('')}</span>` : ''; };
+  const tile = (o) => `
+      <div class="group-tile${o.coat ? ' group-tile--coat group-tile--' + o.coat : ''}${o.sp ? ' group-tile--' + o.sp : ''}">
+        ${o.items ? pics(o.items) : ''}
+        ${o.coat ? '<span class="group-tile__dot" aria-hidden="true"></span>' : (o.sp && window.NPAge ? `<span class="group-tile__ico">${NPAge.icon(o.sp)}</span>` : '')}
+        ${o.eyebrow ? `<span class="group-tile__eyebrow">${o.eyebrow}</span>` : ''}
+        <h3 class="group-tile__title">${o.title}</h3>
+        <span class="group-tile__count">${itemsLabel(o.n, lang)}</span>
+      </div>`;
+  const spLabel = sp => { const h = SPECIES_HEAD[sp]; return dict[h[1]] || tr(h[1]); };
   if (brand === 'np' || brand === 'araton') {
     const bySpecies = currentSpecies === 'all' || currentSpecies === 'baby';
-    ['cats', 'dogs', 'both'].forEach(sp => {
+    ['dogs', 'cats', 'both'].forEach(sp => {
       const gs = s.groups.filter(g => (g.species || 'both') === sp);
       if (!gs.length) return;
       const multi = gs.length > 1;
-      const coat = gs.some(g => g.coat);
-      if (bySpecies) {
-        const h = SPECIES_HEAD[sp];
-        const head = `<span class="product-group__ico" aria-hidden="true">${h[0]}</span>${dict[h[1]] || tr(h[1])}`;
-        const inner = gs.map(g => (multi ? `<h4 class="product-subgroup__title">${shortGroupLabel(g, lang)}</h4>` : '') + groupBody(g)).join('');
-        blocks.push(wrapGroup(inner, head, coat));
-      } else {
-        gs.forEach(g => { blocks.push(wrapGroup(groupBody(g), multi ? shortGroupLabel(g, lang) : '', g.coat)); });
-      }
+      gs.forEach(g => {
+        if (g.coat) {
+          const n = g.items.length;
+          const head = `<div class="coat-block__head">${window.NPAge ? `<span class="coat-block__ico">${NPAge.icon(sp)}</span>` : ''}
+            <h3 class="coat-block__title">${bySpecies ? spLabel(sp) : (shortGroupLabel(g, lang) || spLabel(sp))}</h3><span class="coat-block__count">${itemsLabel(n, lang)}</span></div>`;
+          blocks.push(coatBlock(g, dict, mk, lang, head));
+          return;
+        }
+        const subs = brand === 'np' && s.id === 'treats' ? treatsSubgroups(g, dict) : null;
+        if (subs) {
+          subs.forEach(sg => blocks.push(tile({ title: sg.title, coat: sg.coat, eyebrow: bySpecies ? spLabel(sp) : '', n: sg.items.length, items: sg.items }) + cards(g, sg.items)));
+          return;
+        }
+        const items = brand === 'np' && s.id === 'treats' ? byStage(g.items) : g.items;
+        if (bySpecies) blocks.push(tile({ sp, title: multi ? shortGroupLabel(g, lang) : spLabel(sp), eyebrow: multi ? spLabel(sp) : '', n: items.length, items }) + cards(g, items));
+        else blocks.push((multi ? tile({ title: shortGroupLabel(g, lang), n: items.length, items }) : '') + cards(g, items));
+      });
     });
   } else {
     const multi = s.groups.length > 1;
     s.groups.forEach(g => {
       const name = (g.group && (g.group[lang] || g.group.ru)) || '';
-      blocks.push(wrapGroup(groupBody(g), multi ? name : '', g.coat));
+      blocks.push((multi ? tile({ title: name, n: g.items.length, items: g.items }) : '') + cards(g, g.items));
     });
   }
   return {
     id: s.id,
     open: `
     <section class="cat-section" id="sec-${s.id}" data-sec="${s.id}" aria-labelledby="sec-${s.id}-t">
-      <h2 class="cat-section__title" id="sec-${s.id}-t"><span class="cat-section__name">${title}</span><span class="cat-section__count">${s.count}</span></h2>`,
+      <h2 class="cat-section__title" id="sec-${s.id}-t"><span class="cat-section__name">${title}</span><span class="cat-section__count">${s.count}</span></h2>
+      <div class="products products--flow">`,
     blocks,
     close: `
+      </div>
     </section>`
   };
 }
@@ -1085,11 +1106,11 @@ function renderProducts(brand, lang, chunk) {
     : '';
   // Реестр карточек для модального окна: id = индекс в MODAL_ITEMS.
   MODAL_ITEMS = []; MODAL_KEYS = [];
-  const mk = (it, species) => {
+  const mk = (it, species, attrs) => {
     const id = MODAL_ITEMS.length;
     MODAL_ITEMS.push(it);
     MODAL_KEYS.push(descKeyFor(brand, species, it));
-    return productCard(it, lang, id, productId(it, brand));
+    return productCard(it, lang, id, productId(it, brand), attrs);
   };
   // Tauro: «зачем нужны степы» + витрины флаконов — при «Все» и в разделе «Комплексы Step»
   let intro = '';
@@ -1136,7 +1157,7 @@ function renderRest(wrap, rest, detail) {
   const idle = window.requestIdleCallback ? f => requestIdleCallback(f, { timeout: 250 }) : f => setTimeout(f, 32);
   const put = u => {
     const sec = !u.first && document.getElementById('sec-' + u.p.id);
-    if (sec && sec.parentNode === wrap) sec.insertAdjacentHTML('beforeend', u.b);
+    if (sec && sec.parentNode === wrap) (sec.querySelector(':scope > .products--flow') || sec).insertAdjacentHTML('beforeend', u.b);
     else wrap.insertAdjacentHTML('beforeend', u.p.open + u.b + u.p.close);
   };
   const step = all => {
@@ -1574,6 +1595,7 @@ function openProduct(id, opts) {
   if (found.brand !== currentBrand && NPCtl.activateBrand) NPCtl.activateBrand(found.brand, { animate: false, updateHash: true, keepScroll: true });
   flushRender();
   const card = grid.querySelector('[data-id="' + cssEsc(id) + '"]');
+  if (card && window.NPAge) NPAge.reveal(card);
   const o = { id, brand: found.brand, card, keyboard: !!(opts && opts.keyboard) };
   if (card) {
     const pid = +card.getAttribute('data-pid');

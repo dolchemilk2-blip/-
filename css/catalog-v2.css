@@ -1,0 +1,160 @@
+/* ===== Каталог v2: место по максимуму =====
+   - страница каталога шире (до 1480px), сетка 5 / 4 / 3 / 2 колонки;
+   - раздел — одна сплошная сетка: заголовок группы — плитка в ряду с карточками, ряды не обрываются;
+   - Superior Care: линейки белой · рыжей · тёмной шерсти колонками, у собак — полоска с собачками возраста. */
+
+body.page-catalog { --container: 1760px; }
+
+/* ---------- сплошная сетка раздела ---------- */
+.cat-section .products--flow { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 20px; align-items: stretch; }
+@media (max-width: 1659px) { .cat-section .products--flow { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+@media (max-width: 1399px) { .cat-section .products--flow { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (max-width: 1099px) { .cat-section .products--flow { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 819px) { .cat-section .products--flow { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; } }
+.products--flow > .flow-full { grid-column: 1 / -1; }
+.products--flow > .coat-note { margin: -8px 0 4px; }
+.products--flow > .flow-full .cat-xlink { margin: 0; }
+
+/* ---------- плитка группы ---------- */
+.group-tile {
+  display: flex; flex-direction: column; justify-content: flex-end; gap: 6px; min-height: 180px;
+  padding: 22px 22px 24px; border-radius: var(--r-card); color: var(--ink);
+  background: linear-gradient(160deg, #fff 0%, var(--tint-soft, #f1f7ec) 100%);
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,.05);
+  position: relative; overflow: hidden;
+}
+.group-tile__pics { position: absolute; left: 0; right: 0; top: 14px; height: 58%; pointer-events: none; }
+.group-tile__pics img { position: absolute; bottom: 0; height: 88%; width: auto; max-width: 46%; object-fit: contain; mix-blend-mode: multiply;
+  left: 50%; transform-origin: 50% 100%; }
+.group-tile__pics img:nth-child(1) { transform: translateX(-50%) rotate(0deg); z-index: 3; }
+.group-tile__pics img:nth-child(2) { transform: translateX(-92%) rotate(-8deg) scale(.82); z-index: 2; }
+.group-tile__pics img:nth-child(3) { transform: translateX(-8%) rotate(8deg) scale(.82); z-index: 1; }
+.group-tile:has(.group-tile__pics) .group-tile__ico { top: auto; bottom: 108px; }
+.group-tile__ico { position: absolute; top: 20px; left: 20px; width: 52px; height: 52px; border-radius: 16px; display: grid; place-items: center;
+  color: var(--brand-ink, #007a3d); background: rgba(255,255,255,.85); box-shadow: 0 6px 18px rgba(0,0,0,.06); }
+.group-tile__ico svg { width: 34px; height: 34px; }
+.group-tile__eyebrow { font: var(--t-footnote); letter-spacing: .02em; text-transform: uppercase; color: var(--ink-2-tint); }
+.group-tile__title { font: 700 24px/1.15 var(--font); letter-spacing: -0.02em; margin: 0; text-wrap: balance; }
+.group-tile__count { font: 500 14px/1.3 var(--font); color: var(--ink-2-tint); font-variant-numeric: tabular-nums; }
+.group-tile__dot { position: absolute; top: 22px; left: 22px; width: 18px; height: 18px; border-radius: 50%; background: var(--coat); box-shadow: 0 0 0 5px var(--coat-soft); }
+.group-tile--white { --coat: #1f7fa0; --coat-soft: #d6ecf4; }
+.group-tile--red { --coat: #b5561f; --coat-soft: #f7e2d2; }
+.group-tile--dark { --coat: #3a3f4a; --coat-soft: #e0e3e9; }
+.group-tile--coat .group-tile__title { font-size: 20px; }
+
+/* ---------- Superior Care: блок линеек шерсти ---------- */
+.coat-block {
+  padding: 22px; border-radius: var(--r-panel, 28px);
+  background: linear-gradient(180deg, var(--tint-soft, #f1f7ec) 0%, rgba(255,255,255,0) 100%);
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,.04);
+}
+.coat-block + .coat-block { margin-top: 4px; }
+.coat-block__head { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.coat-block__ico { width: 44px; height: 44px; border-radius: 14px; display: grid; place-items: center; color: var(--brand-ink, #007a3d); background: #fff; box-shadow: 0 4px 14px rgba(0,0,0,.06); }
+.coat-block__ico svg { width: 30px; height: 30px; }
+.coat-block__title { font: var(--t-headline); letter-spacing: -0.01em; margin: 0; }
+.coat-block__count { font: var(--t-footnote); color: var(--ink-2-tint); padding: 3px 10px; border-radius: var(--r-pill); background: rgba(0,0,0,.05); }
+
+.coat-cols { display: grid; grid-template-columns: repeat(var(--n, 3), minmax(0, 1fr)); gap: 16px; margin-top: 16px; align-items: start; }
+.coat-col { --coat: #1f7fa0; --coat-soft: #d6ecf4; background: #fff; border-radius: 22px; padding: 16px; box-shadow: var(--shadow); border-top: 4px solid var(--coat); }
+.coat-col--red { --coat: #b5561f; --coat-soft: #f7e2d2; }
+.coat-col--dark { --coat: #3a3f4a; --coat-soft: #e0e3e9; }
+.coat-col__head { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 14px; }
+.coat-col__dot { flex: none; width: 14px; height: 14px; margin-top: 4px; border-radius: 50%; background: var(--coat); box-shadow: 0 0 0 4px var(--coat-soft); }
+.coat-col__head h4 { font: 600 17px/1.3 var(--font); letter-spacing: -0.01em; margin: 0 0 4px; }
+.coat-col__head p { font: 400 13px/1.45 var(--font); color: var(--ink-2-tint); margin: 0; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+
+/* карточки в колонке — компактной строкой: картинка слева, текст справа */
+.coat-block .products--col { display: grid; grid-template-columns: 1fr; gap: 10px; }
+.coat-block .products--col .product { display: grid; grid-template-columns: 116px minmax(0, 1fr); align-items: center; }
+.coat-block .products--col .product__img { height: 136px; padding: 10px 6px 8px; border-radius: var(--r-card) 0 0 var(--r-card); }
+.coat-block .products--col .product__img::before { bottom: 6px; height: 8px; }
+.coat-block .products--col .product__body { padding: 12px 14px 12px 6px; }
+.coat-block .products--col .product__cat { font-size: 11.5px; margin-bottom: 3px; }
+.coat-block .products--col .product__name { font-size: 15.5px; margin-bottom: 4px; }
+.coat-block .products--col .product__desc { font-size: 13px; line-height: 1.4; -webkit-line-clamp: 2; }
+.coat-block .products--col .product__tags, .coat-block .products--col .coat-ribbon { display: none; }
+.coat-block .products--col .product__more { margin-top: 6px; font-size: 13px; }
+.coat-block .products--col .product__actions { top: 6px; right: auto; left: 6px; transform: scale(.82); transform-origin: top left; }
+.coat-block .products--rest { margin-top: 16px; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
+
+/* фильтр возраста: видны корма выбранного возраста; если в линейке их нет — короткая пометка */
+.coat-col__empty { display: none; margin: 0; padding: 18px 14px; border-radius: 16px; text-align: center; font: 500 13.5px/1.4 var(--font); color: var(--ink-2-tint); background: var(--card-bg, #f2f4f5); }
+.coat-block.has-ages[data-age="starter"] .product[data-age]:not([data-age="starter"]),
+.coat-block.has-ages[data-age="junior"] .product[data-age]:not([data-age="junior"]),
+.coat-block.has-ages[data-age="adult"] .product[data-age]:not([data-age="adult"]),
+.coat-block.has-ages[data-age="all-life-stage"] .product[data-age]:not([data-age="all-life-stage"]) { display: none; }
+.coat-block.has-ages[data-age="starter"] .coat-col:not(:has(.product[data-age="starter"])) .coat-col__empty,
+.coat-block.has-ages[data-age="junior"] .coat-col:not(:has(.product[data-age="junior"])) .coat-col__empty,
+.coat-block.has-ages[data-age="adult"] .coat-col:not(:has(.product[data-age="adult"])) .coat-col__empty,
+.coat-block.has-ages[data-age="all-life-stage"] .coat-col:not(:has(.product[data-age="all-life-stage"])) .coat-col__empty { display: block; }
+
+/* ---------- полоска с собачками возраста ---------- */
+.age-track {
+  position: relative; display: grid; grid-template-columns: repeat(var(--n, 4), minmax(0, 1fr)); gap: 8px;
+  margin: 14px 0 0; padding: 6px 4px 2px; border-radius: 22px; background: rgba(255,255,255,.7);
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,.05);
+}
+/* «земля», на которой стоят собаки */
+.age-track::before {
+  content: ''; position: absolute; left: 18px; right: 18px; top: 128px; height: 4px; border-radius: 2px;
+  background: linear-gradient(90deg, rgba(0,154,77,.15), rgba(0,154,77,.55) 50%, rgba(0,154,77,.15));
+}
+.age-dog {
+  appearance: none; -webkit-appearance: none; border: 0; background: none; font: inherit; color: var(--ink-2);
+  display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 6px 4px 10px; border-radius: 18px; cursor: pointer;
+  position: relative; -webkit-tap-highlight-color: transparent;
+}
+.age-dog__fig { height: 120px; display: flex; align-items: flex-end; justify-content: center; transform-origin: 50% 100%; }
+.age-dog__fig svg { height: var(--h, 80px); width: auto; display: block; overflow: visible;
+  filter: grayscale(.6) opacity(.78); transition: filter var(--dur-hover, 200ms) var(--ease-color, ease), transform var(--spring-bouncy-dur, 420ms) var(--spring-bouncy, ease-out); }
+.age-dog__label { display: inline-flex; align-items: center; gap: 6px; margin-top: 6px; font: 600 15px/1.2 var(--font); color: var(--ink-2); letter-spacing: -0.01em; }
+.age-dog__n { min-width: 20px; padding: 1px 6px; border-radius: var(--r-pill); font: 600 11.5px/1.5 var(--font); font-variant-numeric: tabular-nums; color: var(--ink-2-tint); background: rgba(0,0,0,.06); }
+.age-dog__hint { font: 400 12.5px/1.3 var(--font); color: var(--ink-2-tint); }
+.age-dog[aria-pressed="true"] .age-dog__fig svg { filter: none; transform: translateY(-2px) scale(1.04); }
+.age-dog[aria-pressed="true"] .age-dog__label { color: var(--brand-ink, #007a3d); }
+.age-dog[aria-pressed="true"] .age-dog__n { color: #fff; background: var(--brand-ink, #007a3d); }
+/* активная собака: светлое пятно на «земле» */
+.age-dog::after { content: ''; position: absolute; left: 50%; top: 120px; width: 56px; height: 12px; margin-left: -23px; border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(0,154,77,.45), rgba(0,154,77,0)); opacity: 0; transition: opacity var(--dur-hover, 200ms) ease; }
+.age-dog[aria-pressed="true"]::after { opacity: 1; }
+.age-dog:focus-visible { outline: var(--focus-width, 2px) solid var(--focus-color, #007a3d); outline-offset: 2px; }
+@media (hover: hover) and (pointer: fine) {
+  .age-dog:not([aria-pressed="true"]):hover .age-dog__fig svg { filter: grayscale(.3) opacity(.9); transform: translateY(-3px); }
+}
+html:not(.spr) .age-dog:active .age-dog__fig { transform: scale(.96); }
+
+/* ---------- планшет и телефон ---------- */
+@media (max-width: 1099px) {
+  .coat-cols { grid-template-columns: 1fr; }
+  .coat-block .products--col { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 720px) {
+  .group-tile { grid-column: 1 / -1; min-height: 0; flex-direction: row; align-items: center; flex-wrap: wrap; gap: 4px 10px; padding: 12px 14px; }
+  .group-tile__pics { display: none; }
+  .group-tile__ico, .group-tile:has(.group-tile__pics) .group-tile__ico { position: static; width: 36px; height: 36px; border-radius: 12px; }
+  .group-tile__ico svg { width: 24px; height: 24px; }
+  .group-tile__dot { position: static; width: 12px; height: 12px; box-shadow: 0 0 0 4px var(--coat-soft); }
+  .group-tile__eyebrow { order: 3; width: 100%; font-size: 11px; display: none; }
+  .group-tile__title { font-size: 18px; }
+  .group-tile--coat .group-tile__title { font-size: 16px; }
+  .group-tile__count { margin-left: auto; font-size: 12.5px; }
+  .coat-block { padding: 14px 10px; margin: 0 -6px; border-radius: 22px; }
+  .coat-block .products--col { grid-template-columns: 1fr; gap: 8px; }
+  .coat-block .products--col .product { grid-template-columns: 96px minmax(0, 1fr); }
+  .coat-block .products--col .product__img { height: 112px; }
+  .coat-col { padding: 12px; border-radius: 18px; }
+  .coat-cols { gap: 12px; margin-top: 12px; }
+  .age-track { gap: 2px; padding: 4px 0 0; }
+  .age-track::before { top: 94px; left: 10px; right: 10px; }
+  .age-dog { padding: 4px 0 8px; }
+  .age-dog__fig { height: 88px; }
+  .age-dog__fig svg { height: calc(var(--h, 80px) * .78); }
+  .age-dog::after { top: 86px; }
+  .age-dog__label { font-size: 12.5px; gap: 4px; flex-wrap: wrap; justify-content: center; text-align: center; }
+  .age-dog__hint { font-size: 11px; text-align: center; }
+  .age-dog__n { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .age-dog__fig svg { transition: none; }
+}
