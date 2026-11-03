@@ -14,7 +14,7 @@ const TPL_SYSTEMS = [
       "en": "Sensitive skin system — Step 1·2·3"
     },
     "intro": {
-      "az": "Həssas, quru və qıcıqlanmış dərili it və pişiklər üçün peşəkar üçmərhələli qulluq sistemi. Kompleks dərini yumşaq təmizləyir, qaşınma, qızartı və pullanmanı azaldır, qoruyucu bariyeri bərpa edir və tükü sağlam, yumşaq və parlaq edir. Bütün it və pişik cinsləri üçün uyğundur.",
+      "az": "Həssas, quru və qıcıqlanmış dərili it və pişiklər üçün peşəkar üçmərhələli qulluq sistemi. Kompleks dərini yumşaq təmizləyir, qaşınma, qızartı və pullanmanı azaldır, qoruyucu bariyer bərpa edir və tükü sağlam, yumşaq və parlaq edir. Bütün it və pişik cinsləri üçün uyğundur.",
       "ru": "Профессиональная трёхэтапная система ухода для собак и кошек с чувствительной, сухой и раздражённой кожей. Комплекс мягко очищает кожу, уменьшает зуд, покраснение и шелушение, восстанавливает защитный барьер и делает шерсть здоровой, мягкой и блестящей. Подходит для всех пород собак и кошек.",
       "en": "A professional three-step care system for dogs and cats with sensitive, dry and irritated skin. The complex gently cleanses the skin, reduces itching, redness and flaking, restores the protective barrier and makes the coat healthy, soft and shiny. Suitable for all dog and cat breeds."
     },
@@ -320,7 +320,7 @@ const TPL_SYSTEMS = [
         "color": "#4fa6b6",
         "img": "assets/products/tpl-pn-sensitive-cond.webp",
         "short": {
-          "az": "Yumşaldır və nəmləndirir — tük itaətkar və parlaq olur.",
+          "az": "Yumşaldır və nəmləndirir — tük parlaq olur.",
           "ru": "Смягчает и увлажняет — шерсть послушная и блестящая.",
           "en": "Softens and hydrates — a smooth, manageable, shiny coat."
         },
@@ -963,12 +963,12 @@ const TPL_SYSTEMS = [
       "en": "Damaged-coat repair — Magic-Plex · Step 1·2·3"
     },
     "intro": {
-      "az": "Zədələnmiş, quru, kövrək və dolaşmış tükün bərpası üçün hazırlanmış peşəkar üç mərhələli baxım sistemi. Xüsusilə uzun, sıx, qıvrım və tüklü örtüyü olan, müntəzəm daranma tələb edən it və pişiklər üçün tövsiyə olunur. Kompleks tük strukturunu möhkəmləndirməyə kömək edir, daranmanı asanlaşdırır, keçələşmənin qarşısını alır və tükü möhkəmləndirərək bol tük tökülməsini azaltmağa yardım edir. Bütün cins it və pişiklər üçün uyğundur.",
+      "az": "Zədələnmiş, quru, kövrək və dolaşmış tükün bərpası üçün hazırlanmış peşəkar üç mərhələli baxım sistemi. Xüsusilə uzun, sıx, qıvrım və tüklü örtüyü olan, müntəzəm daranma tələb edən it və pişiklər üçün tövsiyə olunur. Kompleks tük strukturunu möhkəmləndirməyə kömək edir, daranmanı asanlaşdırır, dolaşıqlaşmanın qarşısını alır və tükü möhkəmləndirərək bol tük tökülməsini azaltmağa yardım edir. Bütün cins it və pişiklər üçün uyğundur.",
       "ru": "Профессиональная трёхэтапная система ухода, разработанная для восстановления повреждённой, сухой, ломкой и спутанной шерсти. Особенно рекомендуется для собак и кошек с длинной, густой, кудрявой и пушистой шерстью, которая требует регулярного расчёсывания. Комплекс помогает укрепить структуру волоса, облегчает расчёсывание, уменьшает образование колтунов и способствует снижению обильной линьки за счёт укрепления шерсти. Подходит для собак и кошек всех пород.",
       "en": "A professional three-step care system developed to restore damaged, dry, brittle and tangled coats. Especially recommended for dogs and cats with long, thick, curly and fluffy coats that need regular brushing. The system helps strengthen the hair structure, makes brushing easier, reduces matting and helps cut down heavy shedding by reinforcing the coat. Suitable for dogs and cats of all breeds."
     },
     "note": {
-      "az": "Magic-Plex kompleksini zədələnmiş tük zamanı, qroominqdən sonra, mövsümi tük tökülməsi dövründə, həmçinin uzuntüklü və qıvrım cins it və pişiklərin müntəzəm baxımı üçün kurs şəklində istifadə etmək tövsiyə olunur. Hər üç mərhələnin birlikdə tətbiqi tükü möhkəmləndirməyə, daranmanı asanlaşdırmağa, keçələşməni azaltmağa və tükü daha hamar, parlaq və sağlam etməyə kömək edir.",
+      "az": "Magic-Plex kompleksini zədələnmiş tük zamanı, qroominqdən sonra, mövsümi tük tökülməsi dövründə, həmçinin uzuntüklü və qıvrım cins it və pişiklərin müntəzəm baxımı üçün kurs şəklində istifadə etmək tövsiyə olunur. Hər üç mərhələnin birlikdə tətbiqi tükü möhkəmləndirməyə, daranmanı asanlaşdırmağa, dolaşıqlaşmanı azaltmağa və tükü daha hamar, parlaq və sağlam etməyə kömək edir.",
       "ru": "Комплекс Magic-Plex рекомендуется использовать курсом при повреждённой шерсти, после груминга, в период сезонной линьки и для регулярного ухода за длинношёрстными и кудрявыми породами собак и кошек. Использование всех трёх этапов помогает укрепить шерсть, облегчить расчёсывание, уменьшить образование колтунов, сделать шерсть более гладкой, блестящей и здоровой.",
       "en": "The Magic-Plex system is best used as a course for damaged coats, after grooming, during seasonal shedding and for the regular care of long-haired and curly breeds of dogs and cats. Using all three steps together helps strengthen the coat, make brushing easier, reduce matting and leave the coat smoother, shinier and healthier."
     },
@@ -1412,7 +1412,7 @@ const TPL_SYSTEMS = [
               },
               {
                 "title": "Təsvir",
-                "text": "Baxımın yekun mərhələsi. Kondisioner tükü intensiv qidalandırır və nəmləndirir, tük kutikulasını bağlayır və şampundan sonrakı nəticəni möhkəmləndirir. Tükü hamar, ipəkvari edir və gündəlik daranmanı əhəmiyyətli dərəcədə asanlaşdırır. Keçələşmənin qarşısını almağa kömək edir, tükün pırtlaşmasını və statik elektriki azaldır. Xüsusilə qıvrım, uzun və sıx tüklü heyvanlar üçün, həmçinin mövsümi tük tökülməsi dövründə tövsiyə olunur."
+                "text": "Baxımın yekun mərhələsi. Kondisioner tükü intensiv qidalandırır və nəmləndirir, tük kutikulasını bağlayır və şampundan sonrakı nəticəni möhkəmləndirir. Tükü hamar, ipəkvari edir və gündəlik daranmanı əhəmiyyətli dərəcədə asanlaşdırır. Dolaşıqlaşmanın qarşısını almağa kömək edir, tükün pırtlaşmasını və statik elektriki azaldır. Xüsusilə qıvrım, uzun və sıx tüklü heyvanlar üçün, həmçinin mövsümi tük tökülməsi dövründə tövsiyə olunur."
               },
               {
                 "title": "İstifadə qaydası",
@@ -1422,7 +1422,7 @@ const TPL_SYSTEMS = [
             "tags": [
               "Qidalanma və nəmlənmə",
               "Asan daranma",
-              "Keçələşməyə qarşı"
+              "Dolaşıqlaşmağa qarşı"
             ]
           },
           "ru": {
@@ -1567,7 +1567,7 @@ const TPL_SYSTEMS = [
         "Silikonsuz",
         "SLS-siz",
         "Parabensiz",
-        "Ağladıcı təsir"
+        "Ağardıcı təsir"
       ],
       "ru": [
         "Без силиконов",
@@ -1588,7 +1588,7 @@ const TPL_SYSTEMS = [
         "color": "#8ba62f",
         "img": "assets/products/tpl-un-wc-deep.webp",
         "short": {
-          "az": "Tükü dərindən təmizləyir — kir, piy və kosmetika qalıqlarını yuyub ağladıcı baxıma hazırlayır.",
+          "az": "Tükü dərindən təmizləyir — kir, piy və kosmetika qalıqlarını yuyub ağardıcı baxıma hazırlayır.",
           "ru": "Глубоко очищает шерсть — убирает грязь, жир и остатки косметики, готовит к отбеливающему уходу.",
           "en": "Deeply cleanses the coat — removes dirt, grease and product residue and preps it for whitening care."
         },
@@ -1607,7 +1607,7 @@ const TPL_SYSTEMS = [
                   "Açıq tük",
                   "Sarımtıllıq",
                   "Çirklənmiş tük",
-                  "Ağladıcı baxıma hazırlıq"
+                  "Ağardıcı baxıma hazırlıq"
                 ]
               },
               {
@@ -1636,7 +1636,7 @@ const TPL_SYSTEMS = [
               },
               {
                 "title": "Təsvir",
-                "text": "Peşəkar baxımın ilk mərhələsi. Şampun tükü və dərini çirkdən, dəri piyindən və kosmetik vasitə qalıqlarından dərindən təmizləyir. Tükü ağladıcı baxıma hazırlayır və sonrakı mərhələlərin aktiv komponentlərinin maksimum effektiv işləməsinə imkan verir."
+                "text": "Peşəkar baxımın ilk mərhələsi. Şampun tükü və dərini çirkdən, dəri piyindən və kosmetik vasitə qalıqlarından dərindən təmizləyir. Tükü ağardıcı baxıma hazırlayır və sonrakı mərhələlərin aktiv komponentlərinin maksimum effektiv işləməsinə imkan verir."
               },
               {
                 "title": "İstifadə qaydası",
@@ -1774,7 +1774,7 @@ const TPL_SYSTEMS = [
           "az": {
             "cat": "White Coat · STEP 2",
             "name": "White Coat Whitening Shampoo",
-            "desc": "Addım 2 — ağladıcı baxımın əsas mərhələsi.",
+            "desc": "Addım 2 — ağardıcı baxımın əsas mərhələsi.",
             "sections": [
               {
                 "title": "Kimə uyğundur",
@@ -1803,7 +1803,7 @@ const TPL_SYSTEMS = [
               },
               {
                 "title": "Təsvir",
-                "text": "Ağladıcı baxımın əsas mərhələsi. Şampun tükün təbii ağlığını vurğulamağa kömək edir, sarımtıllığı azaldır və tükə parlaq, təmiz çalar qaytarır. Müntəzəm istifadə zamanı tük daha işıltılı, baxımlı olur və təbii parlaqlıq qazanır."
+                "text": "Ağardıcı baxımın əsas mərhələsi. Şampun tükün təbii ağlığını vurğulamağa kömək edir, sarımtıllığı azaldır və tükə parlaq, təmiz çalar qaytarır. Müntəzəm istifadə zamanı tük daha işıltılı, baxımlı olur və təbii parlaqlıq qazanır."
               },
               {
                 "title": "İstifadə qaydası",
@@ -1811,7 +1811,7 @@ const TPL_SYSTEMS = [
               }
             ],
             "tags": [
-              "Ağladıcı təsir",
+              "Ağardıcı təsir",
               "Sarımtıllığa qarşı",
               "Əsas mərhələ"
             ]
@@ -1923,7 +1923,7 @@ const TPL_SYSTEMS = [
           "az": {
             "cat": "White Coat · STEP 3",
             "name": "White Coat Shampoo",
-            "desc": "Addım 3 — ağladıcı effekti gücləndirən mərhələ.",
+            "desc": "Addım 3 — ağardıcı effekti gücləndirən mərhələ.",
             "sections": [
               {
                 "title": "Kimə uyğundur",
@@ -1950,7 +1950,7 @@ const TPL_SYSTEMS = [
               },
               {
                 "title": "Təsvir",
-                "text": "Baxımın üçüncü mərhələsi ağladıcı effekti gücləndirir, ağ tükü daha parlaq və işıltılı edir. Zəngin ağ çaları qorumağa kömək edir, tükü yumşaq, hamar və vizual olaraq daha həcmli edir."
+                "text": "Baxımın üçüncü mərhələsi ağardıcı effekti gücləndirir, ağ tükü daha parlaq və işıltılı edir. Zəngin ağ çaları qorumağa kömək edir, tükü yumşaq, hamar və vizual olaraq daha həcmli edir."
               },
               {
                 "title": "İstifadə qaydası",
@@ -2056,7 +2056,7 @@ const TPL_SYSTEMS = [
         "color": "#46a97e",
         "img": "assets/products/tpl-un-hydrate-mask.webp",
         "short": {
-          "az": "Tükü dərindən qidalandırır və bərpa edir — ipəkvari edir və ağladıcı effekti möhkəmləndirir.",
+          "az": "Tükü dərindən qidalandırır və bərpa edir — ipəkvari edir və ağardıcı effekti möhkəmləndirir.",
           "ru": "Глубоко питает и восстанавливает шерсть — делает её шелковистой и закрепляет эффект отбеливания.",
           "en": "Deeply nourishes and restores the coat — makes it silky and locks in the whitening effect."
         },
@@ -2092,7 +2092,7 @@ const TPL_SYSTEMS = [
                   "İpəkvarilik verir",
                   "Daranmasını asanlaşdırır",
                   "Tük kutikulasını bağlayır",
-                  "Ağladıcı effekti möhkəmləndirir"
+                  "Ağardıcı effekti möhkəmləndirir"
                 ]
               },
               {
@@ -2766,7 +2766,7 @@ const TPL_SYSTEMS = [
       "en": "Tauro Pro Line · Pure Nature"
     },
     "title": {
-      "az": "Tökülməyə qarşı və tük böyüməsi üçün — Fur Growth · Step 1·2·3",
+      "az": "Tük tökülməyə qarşı və tük böyüməsi üçün",
       "ru": "Против выпадения и для роста шерсти — Fur Growth · Step 1·2·3",
       "en": "Anti-shedding & fur-growth system — Step 1·2·3"
     },
@@ -3544,7 +3544,7 @@ const TPL_SYSTEMS = [
           "az": {
             "cat": "Derma Care · STEP 2",
             "name": "Dry & Itchy Skin Relief Shampoo",
-            "desc": "Step 2 — əsas qulluq. Həssas dərini sakitləşdirir və bariyeri bərpa edir.",
+            "desc": "Step 2 — əsas qulluq. Həssas dərini sakitləşdirir və bariyer bərpa edir.",
             "sections": [
               {
                 "title": "Kimə uyğundur",

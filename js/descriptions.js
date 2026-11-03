@@ -469,32 +469,6 @@ const FULL_DESC = {
    "comp": "Formulated to support optimal growth and immune protection in kittens."
   }
  },
- "cats||Life Long MZG||MicroZeoGen — Detox & Calcium": {
-  "az": {
-   "full": [
-    "MicroZeoGen — Detox & Calcium, vulkanik mənşəli təbii klinoptilolit olan MicroZeoGen əsasında hazırlanmış MZG sistemidir və həm pişiklər, həm də itlər üçün uyğundur. Bu təbii detoks dəstəyi orqanizmdən zərərli maddələrin və ağır metalların çıxarılmasına kömək edərək sevimlinizin daxili tarazlığına qayğı göstərir.",
-    "Eyni zamanda bu formula diş daşının yaranmasının qarşısını almağa, sümükləri, oynaqları və dişləri möhkəm saxlamağa dəstək verir. Asanlıqla qidaya əlavə edilən toz şəklində təqdim olunan bu məhsul gündəlik sağlamlıq qayğısının zərif bir hissəsinə çevrilir."
-   ],
-   "feeding": "Bağlamadakı cədvələ uyğun olaraq qidaya əlavə edin və heyvanın növünə, yaşına və çəkisinə görə tənzimləyin; daim təmiz, təzə su təmin edin.",
-   "comp": "Təbii vulkanik klinoptilolit (MicroZeoGen) detoks və antioksidant dəstəyi üçün əsas tərkibdir."
-  },
-  "ru": {
-   "full": [
-    "MicroZeoGen — Detox & Calcium — это система MZG на основе MicroZeoGen, природного клиноптилолита вулканического происхождения, подходящая и для кошек, и для собак. Эта естественная детокс-поддержка помогает выводить токсины и тяжёлые металлы из организма, заботясь о внутреннем равновесии вашего любимца.",
-    "Вместе с тем эта формула помогает предотвращать образование зубного камня и поддерживает крепость костей, суставов и зубов. В удобной форме порошка, легко добавляемого к корму, она становится мягкой частью ежедневной заботы о здоровье."
-   ],
-   "feeding": "Добавляйте к корму согласно таблице на упаковке, корректируя под вид животного, возраст и вес; всегда обеспечивайте доступ к чистой свежей воде.",
-   "comp": "Природный вулканический клиноптилолит (MicroZeoGen) служит основой для детокса и антиоксидантной поддержки."
-  },
-  "en": {
-   "full": [
-    "MicroZeoGen — Detox & Calcium is an MZG system built around MicroZeoGen, a natural clinoptilolite of volcanic origin, suitable for both cats and dogs. This natural detox support helps remove toxins and heavy metals from the body, caring for your companion's inner balance.",
-    "At the same time, this formula helps prevent the build-up of tartar and supports strong bones, joints and teeth. Presented as a powder that is easy to add to food, it becomes a gentle part of everyday health care."
-   ],
-   "feeding": "Add to food according to the table on the pack, adjusting to the animal's species, age and weight; always provide access to clean, fresh water.",
-   "comp": "Natural volcanic clinoptilolite (MicroZeoGen) forms the basis for detox and antioxidant support."
-  }
- },
  "cats||Vitamins||Daily Vitamin Formula": {
   "az": {
    "full": [
@@ -521,7 +495,7 @@ const FULL_DESC = {
    "comp": "Contains carefully selected vitamins and minerals for immunity, digestion and bone health."
   }
  },
- "cats||Life Long MZG||Healthy Pregnancy": {
+ "cats||Vitamins||Healthy Pregnancy": {
   "az": {
    "full": [
     "Healthy Pregnancy, vulkanik mənşəli təbii MicroZeoGen əsasında hazırlanmış MZG sistemidir və həm pişiklər, həm də itlər üçün uyğundur. Bu xüsusi formula dişiləri hamiləlikdən əvvəl, hamiləlik dövründə və ondan sonra dəstəkləyərək həyatın bu mühüm mərhələsində onların sağlamlığına qayğı göstərir.",
@@ -989,7 +963,7 @@ const FULL_DESC = {
    "comp": "A grain-free recipe with a high percentage of animal protein and quality ingredients."
   }
  },
- "dogs||Superior Care · Dark Coat||Dark Coat — All breeds": {
+ "dogs||Superior Care · Dark Coat||Dark Coat — Poultry": {
   "az": {
    "full": [
     "Qara və tünd tükü olan bütün cins yetkin itlər üçün hazırlanmış bu Dark Coat resepti tükün dərinliyini və zənginliyini qorumağa yönəlib. DCE kompleksinin köməyi ilə tünd və qara çalarlar uzun müddət dolğun və parlaq qalır.",
@@ -1483,33 +1457,7 @@ const FULL_DESC = {
    "comp": "Contains salmon oil, a valued source of Omega-3 for skin and coat health, with no artificial additives."
   }
  },
- "dogs||Life Long MZG||Recovery & Performance": {
-  "az": {
-   "full": [
-    "Recovery & Performance, pişik və itlər üçün hazırlanmış MZG sistemidir və təbii volkanik mənşəli klinoptilolit olan MicroZeoGen əsasında işləyir. O, enerji səviyyəsini dəstəkləyir və orqanizmin aktiv yükdən sonra daha tez bərpa olunmasına kömək edir.",
-    "MicroZeoGen-in təbii detoks və antioksidant xüsusiyyətləri toksinlərin xaric olunmasına dəstək olur, bağırsaq və immun sistemin sağlamlığına töhfə verir. Bu, xüsusilə aktiv, idmançı və ya bərpa dövründə olan heyvanlar üçün ideal gündəlik dəstəkdir."
-   ],
-   "feeding": "Toz formanı qabın üzərindəki cədvələ uyğun olaraq yeməyə əlavə edin; heyvanın yaşına, çəkisinə və aktivliyinə görə tənzimləyin və daim təmiz su təmin edin.",
-   "comp": "Tərkibində təbii volkanik mənşəli MicroZeoGen (klinoptilolit) vardır."
-  },
-  "ru": {
-   "full": [
-    "Recovery & Performance — это система MZG для кошек и собак на основе MicroZeoGen, природного клиноптилолита вулканического происхождения. Она поддерживает уровень энергии и помогает организму быстрее восстанавливаться после нагрузок.",
-    "Природные детокс- и антиоксидантные свойства MicroZeoGen способствуют выведению токсинов и поддерживают здоровье кишечника и иммунитета. Это идеальная ежедневная поддержка для активных, спортивных питомцев или животных в период восстановления."
-   ],
-   "feeding": "Добавляйте порошок к корму согласно таблице на упаковке; корректируйте с учётом возраста, веса и активности животного и всегда обеспечивайте свежую воду.",
-   "comp": "Содержит MicroZeoGen (клиноптилолит) природного вулканического происхождения."
-  },
-  "en": {
-   "full": [
-    "Recovery & Performance is an MZG system for cats and dogs built around MicroZeoGen, a natural clinoptilolite of volcanic origin. It supports healthy energy levels and helps the body recover faster after exertion.",
-    "The natural detox and antioxidant properties of MicroZeoGen aid the removal of toxins and support gut and immune health. It is an ideal daily companion for active, sporting pets or animals in a recovery phase."
-   ],
-   "feeding": "Add the powder to food following the feeding table on the pack; adjust to your pet's age, weight and activity, and always provide fresh water.",
-   "comp": "Contains MicroZeoGen (clinoptilolite) of natural volcanic origin."
-  }
- },
- "dogs||Life Long MZG||Active Detox": {
+ "dogs||Vitamins||Active Detox": {
   "az": {
    "full": [
     "Active Detox, pişik və itlər üçün MZG sistemidir və təbii volkanik mənşəli klinoptilolit olan MicroZeoGen-in gücündən faydalanır. O, sağlam bağırsaq və düzgün həzm prosesini dəstəkləyərək orqanizmin tam detoksuna kömək edir.",
@@ -1691,7 +1639,7 @@ const FULL_DESC = {
    "comp": "Made with carefully selected herbal ingredients, free from artificial additives."
   }
  },
- "dogs||Life Long MZG||Healthy Growth": {
+ "dogs||Vitamins||Healthy Growth": {
   "az": {
    "full": [
     "Healthy Growth, böyüməkdə olan pişiklər və itlər üçün hazırlanmış MZG sistemidir və sağlam dişlər, oynaqlar və sümüklər, sərbəst hərəkət, eləcə də optimal inkişaf üçün düşünülüb. Təbii vulkanik mənşəli MicroZeoGen daxili tarazlığı dəstəkləyərək gənc orqanizmin güclü təməl qurmasına kömək edir.",
@@ -1717,7 +1665,7 @@ const FULL_DESC = {
    "comp": "Built around natural MicroZeoGen (clinoptilolite) of volcanic origin, with antioxidant properties."
   }
  },
- "dogs||Life Long MZG||Healthy Ageing": {
+ "dogs||Vitamins||Healthy Ageing": {
   "az": {
    "full": [
     "Healthy Ageing, yaşlı pişiklər və itlər üçün hazırlanmış MZG sistemidir və dişlər, oynaqlar və sümüklər, sərbəst hərəkət, qida maddələrinin udulması və immunitet üçün düşünülüb. Təbii vulkanik mənşəli MicroZeoGen toksinlərin təbii şəkildə təmizlənməsinə kömək edərək yaşlanan orqanizmi içəridən dəstəkləyir.",
@@ -2055,7 +2003,7 @@ const FULL_DESC = {
    "comp": "Made with a high percentage of animal protein, with no soy, no GMO and no artificial additives."
   }
  },
- "dogs||Superior Care · Flowpack||White Dogs Junior — Brain Development": {
+ "dogs||Superior Care · Snacks||White Dogs Junior — Brain Development": {
   "az": {
    "full": [
     "Açıq və ağ tüklü küçüklər üçün hazırlanmış bu porsiyalı funksional snack hər ləzzətli tikəni dəyərli inkişaf anına çevirir. Qızılbalıqla zəngin formula gənc beynin sağlam inkişafını dəstəkləmək üçün düşünülüb.",
@@ -2081,7 +2029,7 @@ const FULL_DESC = {
    "comp": "Made with quality salmon and Omega oils, with no artificial colours or additives."
   }
  },
- "dogs||Superior Care · Flowpack||White Dogs — Clear Vision": {
+ "dogs||Superior Care · Snacks||White Dogs — Clear Vision": {
   "az": {
    "full": [
     "Açıq və ağ tüklü yetkin itlər üçün bu porsiyalı funksional snack gündəlik qayğını dadlı bir anla birləşdirir. Qızılbalıqla zəngin formula sağlam görmə qabiliyyətini dəstəkləmək üçün düşünülmüş, hər tikəyə həm ləzzət, həm də fayda qatır.",
@@ -2107,7 +2055,7 @@ const FULL_DESC = {
    "comp": "Made with quality salmon, with no soy, no GMO and no artificial colours."
   }
  },
- "dogs||Superior Care · Flowpack||White Dogs Junior — Cognitive & Vision Support": {
+ "dogs||Superior Care · Snacks||White Dogs Junior — Cognitive & Vision Support": {
   "az": {
    "full": [
     "Açıq və ağ tüklü küçüklər üçün bu porsiyalı funksional snack böyümənin ən vacib anlarına qayğı göstərir. Qızılbalıqla zəngin formula həm idrak qabiliyyətini, həm də sağlam görməni dəstəkləmək üçün düşünülüb, hər ləzzətli tikəni faydalı edir.",
@@ -2133,7 +2081,7 @@ const FULL_DESC = {
    "comp": "Made with quality salmon and Omega oils, with no artificial colours or additives."
   }
  },
- "dogs||Superior Care · Flowpack||White Dogs — Hypoallergenic Dental": {
+ "dogs||Superior Care · Snacks||White Dogs — Hypoallergenic Dental": {
   "az": {
    "full": [
     "Açıq və ağ tüklü yetkin itlər üçün bu porsiyalı funksional snack gündəlik diş qayğısını həssas həzm sistemlərinə uyğun şəkildə təqdim edir. Ağ balıqla hazırlanmış hipoallergen formula ləzzətli çeynəmə anını sağlam dişlər və ağız üçün faydaya çevirir.",
@@ -2159,7 +2107,7 @@ const FULL_DESC = {
    "comp": "Made with quality white fish, with no soy, no GMO and no artificial colours."
   }
  },
- "dogs||Superior Care · Flowpack||White Dogs — Mobility & Joint Health": {
+ "dogs||Superior Care · Snacks||White Dogs — Mobility & Joint Health": {
   "az": {
    "full": [
     "Açıq və ağ tüklü yetkin itlər üçün bu porsiyalı funksional snack hərəkət sevincini qoruyur. Quzu əti ilə hazırlanmış formula oynaqların sağlamlığını və rahat hərəkətliyi dəstəkləmək üçün düşünülüb, hər tikəyə həm ləzzət, həm də fayda qatır.",

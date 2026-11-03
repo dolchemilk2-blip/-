@@ -7,8 +7,7 @@ const NP_OFFICIAL = {
   "sku": "NPSC47630",
   "packs": [
    "1.5 kg",
-   "7 kg",
-   "400 g"
+   "7 kg"
   ],
   "feed": [],
   "ru": {
@@ -175,8 +174,7 @@ const NP_OFFICIAL = {
   "sku": "NPSC47631",
   "packs": [
    "1.5 kg",
-   "7 kg",
-   "400 g"
+   "7 kg"
   ],
   "feed": [],
   "ru": {
@@ -343,8 +341,7 @@ const NP_OFFICIAL = {
   "sku": "NPSC47632",
   "packs": [
    "1.5 kg",
-   "7 kg",
-   "400 g"
+   "7 kg"
   ],
   "feed": [
    [
@@ -722,8 +719,7 @@ const NP_OFFICIAL = {
   "sku": "NPSC45663",
   "packs": [
    "1.5 kg",
-   "10 kg",
-   "4 kg"
+   "10 kg"
   ],
   "feed": [
    [
@@ -932,6 +928,7 @@ const NP_OFFICIAL = {
   "url": "/product/dry-grain-free-pet-food-with-white-fish-protein-for-adult-dogs-of-small-and-mini-breeds-with-white-coat-2/",
   "sku": "NPSC45668",
   "packs": [
+   "1.5 kg",
    "10 kg"
   ],
   "feed": [
@@ -1153,8 +1150,8 @@ const NP_OFFICIAL = {
   "url": "/product/dry-grain-free-food-for-adult-dogs-of-small-breeds-with-white-coat-with-insect/",
   "sku": "NPSC47300",
   "packs": [
-   "10kg",
-   "1.5 kg"
+   "1.5 kg",
+   "10 kg"
   ],
   "feed": [
    [
@@ -1364,7 +1361,6 @@ const NP_OFFICIAL = {
   "url": "/product/dry-grain-free-pet-food-with-insect-for-dogs-of-all-sizes-and-life-stages-with-white-coat/",
   "sku": "NPSC47600",
   "packs": [
-   "4 kg",
    "10 kg"
   ],
   "feed": [
@@ -1964,7 +1960,6 @@ const NP_OFFICIAL = {
   "url": "/product/dry-pet-food-with-poultry-and-krill-for-kittens-up-to-1-year-old/",
   "sku": "NPS45757",
   "packs": [
-   "400 g",
    "2 kg",
    "7 kg"
   ],
@@ -2152,7 +2147,6 @@ const NP_OFFICIAL = {
   "url": "/product/dry-pet-food-with-poultry-for-adult-cats/",
   "sku": "NPS45763",
   "packs": [
-   "400 g",
    "2 kg",
    "7 kg"
   ],
@@ -2364,8 +2358,6 @@ const NP_OFFICIAL = {
   "url": "/product/dry-pet-food-with-poultry-for-urinary-health-of-adult-cats/",
   "sku": "NPS45769",
   "packs": [
-   "400 g",
-   "2 kg",
    "7 kg"
   ],
   "feed": [
@@ -2575,7 +2567,6 @@ const NP_OFFICIAL = {
   "url": "/product/dry-pet-food-with-poultry-for-sterilised-adult-cats/",
   "sku": "NPS45775",
   "packs": [
-   "400 g",
    "2 kg",
    "7 kg"
   ],
@@ -2798,7 +2789,6 @@ const NP_OFFICIAL = {
   "url": "/product/dry-food-for-adult-large-breed-dogs-with-poultry/",
   "sku": "NPS45741",
   "packs": [
-   "4 kg",
    "12 kg"
   ],
   "feed": [
@@ -3658,8 +3648,7 @@ const NP_OFFICIAL = {
   "sku": "KIK24521",
   "packs": [
    "200 g",
-   "400 g",
-   "800 g"
+   "400 g"
   ],
   "feed": [],
   "ru": {
@@ -3764,8 +3753,7 @@ const NP_OFFICIAL = {
   "sku": "KIK45086",
   "packs": [
    "200 g",
-   "400 g",
-   "800 g"
+   "400 g"
   ],
   "feed": [],
   "ru": {
@@ -3870,8 +3858,7 @@ const NP_OFFICIAL = {
   "sku": "KIK24517",
   "packs": [
    "200 g",
-   "400 g",
-   "800 g"
+   "400 g"
   ],
   "feed": [],
   "ru": {
@@ -4397,8 +4384,7 @@ const NP_OFFICIAL = {
   "sku": "KIK45092",
   "packs": [
    "200 g",
-   "400 g",
-   "800 g"
+   "400 g"
   ],
   "feed": [],
   "ru": {
@@ -10773,47 +10759,6 @@ const NP_OFFICIAL = {
    "feeding": "Gündə 3 qram (təxminən 6 sm pasta) verin, yaxşı olar ki, birbaşa tübikdən. Adi yemə əlavə etmək olar. Lazım gələrsə, miqdarı iki dəfə artırmaq olar. Gündəlik rasionu adi yemlə tamamlayın. Ev heyvanının həmişə təzə və təmiz su olan qabı olmalıdır. Otaq temperaturunda, sərin və quru yerdə, birbaşa günəş şüalarından uzaq saxlayın."
   }
  },
- "cats||Life Long MZG||MicroZeoGen — Detox & Calcium": {
-  "url": "/product/microzeogen-with-calcium-complementary-feed-for-dogs-and-cats-with-calcium/",
-  "sku": "CAN63290",
-  "packs": [
-   "250 g"
-  ],
-  "feed": [],
-  "ru": {
-   "full": [
-    "Здоровье, которое начинается изнутри. Функциональная, натуральная и подходящая для ежедневного применения кормовая добавка, созданная для собак и кошек, когда требуется больше, чем обычный уход. Инновационная формула с Microzeogen® – динамически микронизированным клиноптилолитом вулканического происхождения – помогает детоксицировать организм, поддерживать крепкие кости и суставы, обеспечивает хорошее усвоение питательных веществ и сияющую шерсть. Содержащиеся минералы – кальций, фосфор, кремний и магний – способствуют всестороннему благополучию питомца: от клетки до каждого шага.",
-    "Nature’s Protection Microzeogen® (MZG) с кальцием – это больше, чем простая добавка. Microzeogen® действует как природный молекулярный фильтр: помогает выводить из организма токсины, аммиак и тяжёлые металлы, поддерживает оптимальный баланс кишечной микробиоты – основу хорошего самочувствия и крепкого иммунитета. Кальций, фосфор и кремний важны для крепких костей, суставов и зубов, а магний – для функций мышц, нервной системы и кислотно-щелочного равновесия. Кремний участвует в синтезе коллагена, поэтому помогает коже обновляться, а шерсти оставаться блестящей и крепкой.",
-    "Формула создана в сотрудничестве с учёными, ветеринарами и специалистами по кинологии. Международные исследования и многолетний опыт питомника Tauro Kennel подтвердили: Microzeogen® (MZG) помогает поддерживать отличное самочувствие, укрепляет кости и суставы, улучшает усвоение питательных веществ, а результаты заметны как в повседневной жизни, так и во внешнем виде питомцев. «Это не просто добавка. Это ответственное решение для хозяев, которые хотят видеть своего питомца энергичным, подвижным и сияющим здоровьем», – команда Nature’s Protection."
-   ],
-   "composition": "клиноптилолит осадочного происхождения (1g568) – 75 %, мел (карбонат кальция) – 25 %.",
-   "additives": "",
-   "analysis": [],
-   "feeding": "Давать с кормом или после него, смешивая с пищей или водой. Рекомендуется использовать ежедневно, постоянно или по рекомендации ветеринара. Щенкам и взрослым собакам: ½ чайной ложки (2 грамма) на 10 кг массы тела, но не более 2 чайных ложек в день. Котятам: ¼ чайной ложки (1 грамм) в день. Взрослым кошкам: ½ чайной ложки (2 грамма) на 3–8 кг массы тела."
-  },
-  "en": {
-   "full": [
-    "Health that starts from within. A functional, natural, and everyday dietary supplement designed for dogs and cats when you want more than just the usual routine. The innovative formula with Microzeogen® – dynamically micronized volcanic clinoptilolite – helps detoxify the body, maintain strong bones and joints, ensure good nutrient absorption, and promote a shiny coat. The various minerals it contains – calcium, phosphorus, silicon, and magnesium – contribute to your pet’s overall well-being, from the cellular level to every step they take.",
-    "Nature’s Protection Microzeogen® with calcium is more than just a supplement. Microzeogen® acts as a natural molecular filter: it helps remove toxins, ammonia, and heavy metals from the body and maintains optimal intestinal microbiota balance – the foundation for well-being and a strong immune system. Calcium, phosphorus, and silicon are important for strong bones, joints, and teeth, while magnesium is important for muscle and nerve function and acid-base balance. Silicon participates in collagen synthesis, helping the skin to regenerate and the coat to remain shiny and strong.",
-    "The formula was developed in collaboration with scientists, veterinarians, and cynology specialists. International research and years of experience at the Tauro Kennel have confirmed that Microzeogen® helps maintain excellent well-being, strengthens bones and joints, improves nutrient absorption, and the results are visible both in everyday life and in the appearance of pets. “This is not just a supplement. It is a responsible decision for owners who want to see their pets energetic, agile, and glowing with health.” – Nature’s Protection team."
-   ],
-   "composition": "Clinoptilolite of sedimentary origin (1g568) – 75 %, chalk (calcium carbonate) – 25 %.",
-   "additives": "",
-   "analysis": [],
-   "feeding": "Administer with or after food, mixed with feed or water. Recommended for daily use, continuously or as recommended by a veterinarian. For puppies and adult dogs: ½ teaspoon (2 grams)/10 kg body weight, but no more than 2 teaspoons per day. For kittens: ¼ teaspoon (1 gram) per day. For adult cats: ½ teaspoon (2 grams)/3–8 kg body weight."
-  },
-  "az": {
-   "full": [
-    "İçəridən başlayan sağlamlıq. Adi qulluqdan daha artığı tələb olunduqda itlər və pişiklər üçün yaradılmış, gündəlik istifadəyə uyğun funksional, təbii yem əlavəsi. Microzeogen® – vulkanik mənşəli dinamik mikronizə edilmiş klinoptilolit – ilə innovativ formula orqanizmi detoksikasiya etməyə, sümükləri və oynaqları möhkəm saxlamağa kömək edir, qida maddələrinin yaxşı mənimsənilməsini və parlaq tükü təmin edir. Tərkibdəki minerallar – kalsium, fosfor, silisium və maqnezium – hüceyrədən hər addıma qədər ev heyvanının hərtərəfli rifahına kömək edir.",
-    "Kalsiumlu Nature’s Protection Microzeogen® (MZG) sadə əlavədən daha artığıdır. Microzeogen® təbii molekulyar filtr kimi təsir göstərir: toksinləri, ammonyakı və ağır metalları orqanizmdən xaric etməyə kömək edir, yaxşı əhvalın və güclü immunitetin əsası olan bağırsaq mikrobiotasının optimal balansını qoruyur. Kalsium, fosfor və silisium möhkəm sümüklər, oynaqlar və dişlər üçün, maqnezium isə əzələlərin, sinir sisteminin funksiyaları və turşu-qələvi balansı üçün vacibdir. Silisium kollagen sintezində iştirak edir, buna görə də dərinin yenilənməsinə, tükün isə parlaq və möhkəm qalmasına kömək edir.",
-    "Formula alimlər, baytarlar və kinologiya mütəxəssisləri ilə əməkdaşlıqda yaradılıb. Beynəlxalq tədqiqatlar və Tauro Kennel pitomnikinin çoxillik təcrübəsi təsdiqləyib: Microzeogen® (MZG) əla əhvalı qorumağa kömək edir, sümükləri və oynaqları möhkəmləndirir, qida maddələrinin mənimsənilməsini yaxşılaşdırır, nəticələr isə həm gündəlik həyatda, həm də ev heyvanlarının xarici görünüşündə nəzərə çarpır. «Bu, sadəcə əlavə deyil. Bu, ev heyvanını enerjili, çevik və sağlamlıqdan parlayan görmək istəyən sahiblər üçün məsuliyyətli qərardır», – Nature’s Protection komandası."
-   ],
-   "composition": "çöküntü mənşəli klinoptilolit (1g568) – 75 %, təbaşir (kalsium karbonat) – 25 %.",
-   "additives": "",
-   "analysis": [],
-   "feeding": "Yemlə birlikdə və ya yemdən sonra, yemə və ya suya qarışdıraraq verin. Hər gün, fasiləsiz və ya baytarın tövsiyəsinə uyğun istifadə edilməsi tövsiyə olunur. Küçüklərə və yetkin itlərə: hər 10 kq bədən çəkisinə ½ çay qaşığı (2 qram), lakin gündə 2 çay qaşığından çox olmamaqla. Pişik balalarına: gündə ¼ çay qaşığı (1 qram). Yetkin pişiklərə: 3–8 kq bədən çəkisinə ½ çay qaşığı (2 qram)."
-  }
- },
  "cats||Vitamins||Daily Vitamin Formula": {
   "url": "/product/complementary-feed-for-adult-cats-for-immune-digestive-system-support/",
   "sku": "CAN63299",
@@ -10906,7 +10851,7 @@ const NP_OFFICIAL = {
    "feeding": "Tövsiyə olunan gündəlik norma: 3 kq-a qədər çəkisi olan pişiklərə – 3 tablet, 3–6 kq – 4 tablet, 6–10 kq – 5 tablet. Hamilə və əmizdirən, həmçinin gənc, böyüməkdə olan pişiklər üçün dozanı iki dəfə artırmaq olar. Bu əlavəni D2 vitamini ilə birlikdə vermək olmaz. Tövsiyə olunan gündəlik normanı aşmayın."
   }
  },
- "cats||Life Long MZG||Healthy Pregnancy": {
+ "cats||Vitamins||Healthy Pregnancy": {
   "url": "/product/healthy-pregnancy-complementary-feed-for-adult-dogs-and-cats-to-support-female-dogs-and-cats-before-during-and-after-pregnancy/",
   "sku": "CAN63551",
   "packs": [
@@ -11510,151 +11455,7 @@ const NP_OFFICIAL = {
    "feeding": "Hər 10 kq bədən çəkisinə 1 tablet, lakin 5 tabletdən çox olmamaqla. Göstərilən qidalanma tövsiyəsini aşmayın. Sərin və quru yerdə saxlayın. Uşaqların əli çatmayan yerdə saxlayın. Yalnız heyvanlar üçündür."
   }
  },
- "dogs||Life Long MZG||Recovery & Performance": {
-  "url": "/product/complementary-feed-for-adult-dogs-and-cats-for-maintaining-energy-levels-and-body-recovery/",
-  "sku": "CAN63553",
-  "packs": [
-   "250 g",
-   "250 g"
-  ],
-  "feed": [],
-  "ru": {
-   "full": [
-    "NP Recovery and Performance – пищевая добавка для взрослых собак и кошек для поддержания энергии и быстрого восстановления организма. Она помогает поддерживать активность и тонус тела домашнего питомца в период активных физических нагрузок или интенсивных дрессировок.",
-    "Добавка содержит магнезит – естественный источник магния, минерала, необходимого организму домашнего животного для многих процессов: правильной работы мышечной системы, нормального функционирования нервной системы, а также здоровья костной системы. Нормализация работы этих систем придаёт питомцу особую бодрость и активность.",
-    "Пищевая добавка содержит необходимые для организма питомца питательные вещества и минералы, а их тщательно продуманное сочетание и сбалансированное количество помогает быстро восстановить организм и силы домашнего животного после активных физических нагрузок или интенсивных дрессировок.",
-    "Содержащиеся в составе добавки кальций и магний необходимы для поддержания здоровья костной системы и зубов домашнего животного. В свою очередь, здоровые костная и мышечная системы позволяют питомцу быть энергичным и физически активным. Предназначено для взрослых собак и кошек. Произведено в ЕС."
-   ],
-   "composition": "карбонат кальция и магния, порошок из яичной скорлупы.",
-   "additives": "Технологические добавки: доломит-магнезит (1g598) – 150 г, клиноптилолит осадочного происхождения (1g568) – 800 г.",
-   "analysis": [
-    {
-     "name": "Сырой протеин",
-     "value": "0,5 %"
-    },
-    {
-     "name": "Сырая клетчатка",
-     "value": "0,5 %"
-    },
-    {
-     "name": "Сырой жир",
-     "value": "1 %"
-    },
-    {
-     "name": "Сырая зола",
-     "value": "94,6 %"
-    },
-    {
-     "name": "Влажность",
-     "value": "1,9 %"
-    },
-    {
-     "name": "Натрий",
-     "value": "0,30 %"
-    },
-    {
-     "name": "Кальций",
-     "value": "7,61 %"
-    },
-    {
-     "name": "Фосфор",
-     "value": "0,01 %"
-    }
-   ],
-   "feeding": "Для молодых и взрослых собак: 1/2 чайной ложки (2 грамма) на 10 кг массы тела, но не более 2 чайных ложек в день. Для кошек: 1 г/день (для кошек массой 2–7 кг), для кошек массой >7–10 кг – 1,5 г/день."
-  },
-  "en": {
-   "full": [
-    "Nature’s Protection Recovery and Performance is a specially formulated feed supplement for adult dogs and cats that helps restore the activity, physical condition and energy level of your pet’s body. It is particularly beneficial for pets that experience exhaustion or fatigue due to intensive activities, physical exertion, training, sterilization or other operations.",
-    "This supplement is enriched with clinoptilolite of volcanic origin from nature – MicroZeoGen. It acts as an antioxidant and removes toxins, heavy metals and viruses from the pet’s body; once detoxified, the body is cleansed and ready to absorb antioxidants, vitamins and minerals.",
-    "The formula is enriched with a unique blend of calcium and magnesium carbonate and eggshell powder. Calcium and magnesium carbonate are essential minerals that are required for healthy bone development and maintenance. Eggshell powder is a natural source of calcium that is easily absorbed by the body, which makes it an ideal ingredient for supporting healthy bone growth and recovery.",
-    "Nature’s Protection Recovery and Performance is an effective option to ensure that your pet remains healthy and active, recovers quickly from fatigue or exhaustion and restores lost strength. It can also help maintain a regular heart rate and strengthen muscles, supporting your pet’s overall health and well-being."
-   ],
-   "composition": "calcium and magnesium carbonate, eggshell powder.",
-   "additives": "Technological additives: dolomite-magnesite (1g598) – 150 g, clinoptilolite of sedimentary origin (1g568) – 800 g.",
-   "analysis": [
-    {
-     "name": "Crude protein",
-     "value": "0.5 %"
-    },
-    {
-     "name": "Crude fibre",
-     "value": "0.5 %"
-    },
-    {
-     "name": "Crude fat",
-     "value": "1 %"
-    },
-    {
-     "name": "Crude ash",
-     "value": "94.6 %"
-    },
-    {
-     "name": "Moisture",
-     "value": "1.9 %"
-    },
-    {
-     "name": "Sodium",
-     "value": "0.30 %"
-    },
-    {
-     "name": "Calcium",
-     "value": "7.61 %"
-    },
-    {
-     "name": "Phosphorus",
-     "value": "0.01 %"
-    }
-   ],
-   "feeding": "Young and adult dogs: 1/2 teaspoon (2 grams) per 10 kg body weight, but maximum 2 teaspoons per day. Cats: 1 g/day (cats of 2–7 kg body weight); cats of >7–10 kg body weight: 1,5 g/day."
-  },
-  "az": {
-   "full": [
-    "NP Recovery and Performance yetkin itlər və pişiklər üçün enerjini qorumaq və orqanizmin sürətli bərpası məqsədilə hazırlanmış qida əlavəsidir. O, aktiv fiziki yüklənmələr və ya intensiv təlimlər dövründə ev heyvanının bədəninin aktivliyini və tonusunu qorumağa kömək edir.",
-    "Əlavənin tərkibində maqnezit var – bu, ev heyvanının orqanizminə bir çox proseslər üçün lazım olan maqneziumun təbii mənbəyidir: əzələ sisteminin düzgün işi, sinir sisteminin normal fəaliyyəti, həmçinin sümük sisteminin sağlamlığı. Bu sistemlərin işinin normallaşması ev heyvanına xüsusi gümrahlıq və aktivlik verir.",
-    "Qida əlavəsi ev heyvanının orqanizmi üçün lazım olan qida maddələrini və mineralları ehtiva edir, onların diqqətlə düşünülmüş birləşməsi və balanslaşdırılmış miqdarı aktiv fiziki yüklənmələrdən və ya intensiv təlimlərdən sonra heyvanın orqanizmini və gücünü sürətlə bərpa etməyə kömək edir.",
-    "Tərkibdəki kalsium və maqnezium ev heyvanının sümük sisteminin və dişlərinin sağlamlığını qorumaq üçün vacibdir. Öz növbəsində, sağlam sümük və əzələ sistemləri ev heyvanına enerjili və fiziki cəhətdən aktiv olmağa imkan verir. Yetkin itlər və pişiklər üçün nəzərdə tutulub. Aİ-də istehsal olunub."
-   ],
-   "composition": "kalsium və maqnezium karbonat, yumurta qabığı tozu.",
-   "additives": "Texnoloji əlavələr: dolomit-maqnezit (1g598) – 150 q, çökmə mənşəli klinoptilolit (1g568) – 800 q.",
-   "analysis": [
-    {
-     "name": "Xam protein",
-     "value": "0,5 %"
-    },
-    {
-     "name": "Xam lif",
-     "value": "0,5 %"
-    },
-    {
-     "name": "Xam yağ",
-     "value": "1 %"
-    },
-    {
-     "name": "Xam kül",
-     "value": "94,6 %"
-    },
-    {
-     "name": "Nəmlik",
-     "value": "1,9 %"
-    },
-    {
-     "name": "Natrium",
-     "value": "0,30 %"
-    },
-    {
-     "name": "Kalsium",
-     "value": "7,61 %"
-    },
-    {
-     "name": "Fosfor",
-     "value": "0,01 %"
-    }
-   ],
-   "feeding": "Gənc və yetkin itlər üçün: hər 10 kq bədən çəkisinə 1/2 çay qaşığı (2 qram), lakin gündə 2 çay qaşığından çox olmamaqla. Pişiklər üçün: gündə 1 q (2–7 kq çəkisi olan pişiklər üçün), çəkisi >7–10 kq olan pişiklər üçün gündə 1,5 q."
-  }
- },
- "dogs||Life Long MZG||Active Detox": {
+ "dogs||Vitamins||Active Detox": {
   "url": "/product/active-detox-complementary-feed-for-adult-dogs-and-cats-for-body-detox/",
   "sku": "CAN63552",
   "packs": [
@@ -12227,7 +12028,7 @@ const NP_OFFICIAL = {
    "feeding": "Hər 10 kq bədən çəkisinə ½ çay qaşığı, maksimum 4 çay qaşığı (1 çay qaşığı ≈ 5 q). 4 həftəlik kurs şəklində, lazım olduqda daha uzun müddət verin. Hamiləlik dövründə verməyin. Toz yemlə qarışdırılaraq verilir. Quru yem su ilə isladılmalıdır. Heyvan eyni zamanda dərman qəbul edirsə, dərmanın verilməsi ilə Nature’s Protection Stop Stool Eating Formula əlavəsinin verilməsi arasında ən azı 2 saat fasilə olmalıdır. Sərin, quru yerdə saxlayın. Uşaqların əli çatmayan yerdə saxlayın. Yalnız heyvanlar üçün."
   }
  },
- "dogs||Life Long MZG||Healthy Growth": {
+ "dogs||Vitamins||Healthy Growth": {
   "url": "/product/complementary-feed-for-growing-dogs-and-cats-for-teeth-joints-bones/",
   "sku": "CAN451418",
   "packs": [
@@ -12621,8 +12422,7 @@ const NP_OFFICIAL = {
   "sku": null,
   "packs": [
    "1.5 kg",
-   "10 kg",
-   "17 kg"
+   "10 kg"
   ],
   "feed": [
    [
@@ -12847,7 +12647,6 @@ const NP_OFFICIAL = {
   "url": "/product/dry-grain-free-pet-food-with-white-fish-protein-for-dogs-of-all-sizes-and-lifestages-with-white-coat/",
   "sku": null,
   "packs": [
-   "4 kg",
    "10 kg"
   ],
   "feed": [
@@ -13283,7 +13082,7 @@ const NP_OFFICIAL = {
    "feeding": "Yemi quru halda verin. Ev heyvanının təmiz və təzə suya daim çıxışı olmalıdır."
   }
  },
- "dogs||Superior Care · Dark Coat||Dark Coat — All breeds": {
+ "dogs||Superior Care · Dark Coat||Dark Coat — Poultry": {
   "url": "/product/dry-food-for-adult-dogs-of-all-breeds-with-black-coat-with-poultry/",
   "sku": null,
   "packs": [
@@ -13488,8 +13287,6 @@ const NP_OFFICIAL = {
   "url": "/product/dry-pet-food-with-poultry-for-adult-cats-with-sensitive-digestion/",
   "sku": null,
   "packs": [
-   "400 g",
-   "2 kg",
    "7 kg"
   ],
   "feed": [
@@ -13881,7 +13678,6 @@ const NP_OFFICIAL = {
   "url": "/product/dry-food-for-adult-dogs-of-all-breeds-for-weight-control-after-sterilization-with-poultry-and-krill-2/",
   "sku": null,
   "packs": [
-   "4 kg",
    "12 kg"
   ],
   "feed": [
@@ -14134,7 +13930,6 @@ const NP_OFFICIAL = {
   "url": "/product/dry-food-for-adult-small-breed-dogs-with-lamb/",
   "sku": null,
   "packs": [
-   "500 g",
    "2 kg",
    "7.5 kg"
   ],
@@ -14358,8 +14153,6 @@ const NP_OFFICIAL = {
   "url": "/product/dry-food-for-adult-dogs-of-all-breeds-with-lamb/",
   "sku": null,
   "packs": [
-   "500 g",
-   "4 kg",
    "12 kg"
   ],
   "feed": [
@@ -14941,7 +14734,7 @@ const NP_OFFICIAL = {
    "feeding": "İtlər üçün bədən çəkisindən asılı olaraq tövsiyə olunan gündəlik norma: 2 kq-dan az – 0,5 ml; 2–5 kq – 1,5 ml; 5–10 kq – 2,5 ml; 10–20 kq – 5 ml; 20 kq-dan çox – 7,5 ml; 50 kq-dan çox – 10 ml. Pişiklər üçün: 2 kq-dan az – 0,3 ml; 2–5 kq – 1 ml; 5–7 kq – 2 ml; 7–10 kq – 2,5 ml. Yağın yemlə qarışdırılması tövsiyə olunur. Qaranlıq yerdə, otaq temperaturundan yüksək olmayan temperaturda saxlayın. Qablaşdırma açıldıqdan sonra soyuducuda saxlayın və 12 həftə ərzində istifadə edin."
   }
  },
- "dogs||Life Long MZG||Healthy Ageing": {
+ "dogs||Vitamins||Healthy Ageing": {
   "url": "https://natures-protection.com.ua/np-healthy-ageing-formula-complementary-feed-for-senior-dogs-and-cats-for-teeth-joints-bones-250-g_1679993948",
   "sku": null,
   "packs": [
@@ -15445,7 +15238,7 @@ const NP_OFFICIAL = {
    "feeding": "Gündəlik doza havanın temperaturundan, ev heyvanının həyat tərzindən, temperamentindən və aktivliyindən asılı olaraq dəyişə bilər. Təmiz, təzə su həmişə əlçatan olmalıdır. İtin bədən çəkisinə görə gündə tövsiyə olunan qəlyanaltı sayı: 1–10 kq – 0,5 əd.; 11–25 kq – 1 əd.; 25 kq-dan çox – 2 əd. Sərin və quru yerdə, +25 °C-dən yüksək olmayan temperaturda saxlayın. Partiya nömrəsi və yararlılıq müddəti: qablaşdırmaya baxın."
   }
  },
- "dogs||Superior Care · Flowpack||White Dogs Junior — Brain Development": {
+ "dogs||Superior Care · Snacks||White Dogs Junior — Brain Development": {
   "url": "/product/complementary-grain-free-feed-snacks-for-junior-dogs-with-salmon-2/",
   "sku": null,
   "packs": [
@@ -15612,7 +15405,7 @@ const NP_OFFICIAL = {
    "feeding": "Gündəlik doza havanın temperaturundan, ev heyvanının həyat tərzindən, temperamentindən və aktivliyindən asılı olaraq dəyişə bilər. Təmiz, təzə su həmişə əlçatan olmalıdır. İtin bədən çəkisinə görə gündə tövsiyə olunan qəlyanaltı sayı: 1–5 kq – 1 əd.; 5–10 kq – 1–2 əd.; 10–15 kq – 2–3 əd.; 15–20 kq – 3–4 əd.; 20–30 kq – 4–6 əd.; 30–40 kq – 6–7 əd. Sərin və quru yerdə, +25 °C-dən yüksək olmayan temperaturda saxlayın. Partiya nömrəsi və yararlılıq müddəti: qablaşdırmaya baxın."
   }
  },
- "dogs||Superior Care · Flowpack||White Dogs Junior — Cognitive & Vision Support": {
+ "dogs||Superior Care · Snacks||White Dogs Junior — Cognitive & Vision Support": {
   "url": "/product/complementary-grain-free-feed-snacks-for-sensitive-care-with-salmon-for-junior-all-breed-dogs-with-white-coat/",
   "sku": null,
   "packs": [
@@ -16671,7 +16464,7 @@ const NP_OFFICIAL = {
    "feeding": "Gündəlik doza havanın temperaturundan, ev heyvanının həyat tərzindən, temperamentindən və aktivliyindən asılı olaraq dəyişə bilər. Təmiz, təzə su həmişə əlçatan olmalıdır. Sərin və quru yerdə, +25 °C-dən yüksək olmayan temperaturda saxlayın. Partiya nömrəsi və yararlılıq müddəti: qablaşdırmaya baxın."
   }
  },
- "dogs||Superior Care · Flowpack||White Dogs — Clear Vision": {
+ "dogs||Superior Care · Snacks||White Dogs — Clear Vision": {
   "url": "/product/snacks-with-salmon-for-adult-dogs-with-white-and-light-coat/",
   "sku": null,
   "packs": [
@@ -16841,7 +16634,7 @@ const NP_OFFICIAL = {
    "feeding": "Gündəlik doza havanın temperaturundan, ev heyvanının həyat tərzindən, temperamentindən və aktivliyindən asılı olaraq dəyişə bilər. Təmiz, təzə su həmişə əlçatan olmalıdır. Bədən çəkisinə görə tövsiyə olunan gündəlik norma: 1–5 kq – 1 əd.; 5–10 kq – 1–2 əd.; 10–15 kq – 2–3 əd.; 15–20 kq – 3–4 əd.; 20–30 kq – 4–6 əd.; 30–40 kq – 6–7 əd."
   }
  },
- "dogs||Superior Care · Flowpack||White Dogs — Hypoallergenic Dental": {
+ "dogs||Superior Care · Snacks||White Dogs — Hypoallergenic Dental": {
   "url": "/product/complementary-grain-free-feed-snacks-for-adult-dogs-with-white-fish-4/",
   "sku": null,
   "packs": [
@@ -17023,7 +16816,7 @@ const NP_OFFICIAL = {
    "feeding": "Gündəlik doza havanın temperaturundan, ev heyvanının həyat tərzindən, temperamentindən və aktivliyindən asılı olaraq dəyişə bilər. Təmiz, təzə su həmişə əlçatan olmalıdır. Bədən çəkisinə görə tövsiyə olunan gündəlik norma: 1–10 kq – 0,5 əd.; 10–25 kq – 1 əd.; 25–60 kq – 2 əd."
   }
  },
- "dogs||Superior Care · Flowpack||White Dogs — Mobility & Joint Health": {
+ "dogs||Superior Care · Snacks||White Dogs — Mobility & Joint Health": {
   "url": "/product/complementary-grain-free-feed-snacks-to-support-mobility-and-joint-health-with-lamb-for-adult-all-breed-dogs-with-white-coat/",
   "sku": null,
   "packs": [
@@ -17197,7 +16990,6 @@ const NP_OFFICIAL = {
   "url": "https://www.kika.lt/products/araton-dry-food-for-junior-all-breed-dogs-with-poultry",
   "sku": null,
   "packs": [
-   "3 kg",
    "15 kg"
   ],
   "feed": [],
@@ -17332,7 +17124,6 @@ const NP_OFFICIAL = {
   "url": "https://www.kika.lt/products/araton-dry-food-for-junior-dogs-of-all-breeds-with-lamb",
   "sku": null,
   "packs": [
-   "3 kg",
    "15 kg"
   ],
   "feed": [],
@@ -17491,7 +17282,6 @@ const NP_OFFICIAL = {
   "url": "https://www.kika.lt/products/araton-dry-food-for-adult-dogs-of-all-breeds-with-lamb",
   "sku": null,
   "packs": [
-   "3 kg",
    "15 kg"
   ],
   "feed": [],
@@ -17626,7 +17416,6 @@ const NP_OFFICIAL = {
   "url": "https://www.kika.lt/products/araton-dry-food-for-adult-dogs-of-all-breeds-with-poultry",
   "sku": null,
   "packs": [
-   "3 kg",
    "15 kg"
   ],
   "feed": [],
@@ -18029,7 +17818,6 @@ const NP_OFFICIAL = {
   "url": "https://www.kika.lt/products/araton-dry-food-for-kittens-with-poultry",
   "sku": null,
   "packs": [
-   "1.5 kg",
    "15 kg"
   ],
   "feed": [],
@@ -18152,7 +17940,6 @@ const NP_OFFICIAL = {
   "url": "https://www.kika.lt/products/araton-dry-food-for-adult-cats-with-salmon",
   "sku": null,
   "packs": [
-   "1.5 kg",
    "15 kg"
   ],
   "feed": [],
@@ -18311,7 +18098,6 @@ const NP_OFFICIAL = {
   "url": "https://www.kika.lt/products/araton-dry-food-for-active-adult-cats-with-chicken-and-turkey",
   "sku": null,
   "packs": [
-   "1.5 kg",
    "15 kg"
   ],
   "feed": [],
@@ -18446,7 +18232,6 @@ const NP_OFFICIAL = {
   "url": "https://petzone.com/ksa/en/catalog/product/view/id/69494/s/araton-adult-sterilised-chicken-cat-dry-food",
   "sku": null,
   "packs": [
-   "1.5 kg",
    "15 kg"
   ],
   "feed": [
