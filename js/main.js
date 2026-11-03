@@ -257,7 +257,7 @@ const stageSorted = groups => groups.map(g => (g.coat ? g : Object.assign({}, g,
 // Азербайджанские названия в PRODUCTS (translations.js не правим): кальки → принятые в магазинах слова
 const AZ_FIX = [
   [/Funksional snacklər/g, 'Funksional qəlyanaltılar'], [/snackləri/g, 'qəlyanaltıları'], [/snacklər/g, 'qəlyanaltılar'],
-  [/Mükafatlar/g, 'Qəlyanaltılar'], [/\(paket\)/g, '(pauç)'], [/Baytar dieti/g, 'Baytarlıq pəhrizi']
+  [/Mükafatlar/g, 'Qəlyanaltılar'], [/\(paket\)/g, '(jele)'], [/Baytar dieti/g, 'Baytarlıq pəhrizi']
 ];
 function fixAz(o, keys) {
   if (!o) return;
