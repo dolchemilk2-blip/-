@@ -21,66 +21,35 @@
   const lang = () => (window.NP && NP.lang ? NP.lang() : document.documentElement.lang) || 'ru';
   const t = k => (T[lang()] || T.ru)[k] || T.ru[k] || '';
 
-  // ---------- иллюстрации: плоские собаки одного стиля, растут по мере взросления ----------
-  // viewBox 0 0 140 104, земля — y = 100. Цвета шерсти — переменные, чтобы у каждого возраста была своя порода.
-  const eye = (x, y, r) => `<circle cx="${x}" cy="${y}" r="${r}" fill="#2a2420"/><circle cx="${x + r * .35}" cy="${y - r * .35}" r="${r * .36}" fill="#fff"/>`;
-  const PUPPY = (c) => `
-    <ellipse cx="70" cy="100.5" rx="25" ry="3.4" fill="rgba(0,0,0,.12)"/>
-    <path d="M88 93c11-1 15-8 12-17" fill="none" stroke="${c.dark}" stroke-width="6" stroke-linecap="round"/>
-    <path d="M50 100c-3-24 8-36 20-36s23 12 20 36z" fill="${c.fur}"/>
-    <ellipse cx="70" cy="82" rx="9" ry="11" fill="${c.cream}"/>
-    <rect x="58" y="84" width="8" height="17" rx="4" fill="${c.fur}"/><rect x="74" y="84" width="8" height="17" rx="4" fill="${c.fur}"/>
-    <ellipse cx="62" cy="99" rx="5.5" ry="2.6" fill="${c.cream}"/><ellipse cx="78" cy="99" rx="5.5" ry="2.6" fill="${c.cream}"/>
-    <path d="M57 66q13 7 26 0" fill="none" stroke="#009a4d" stroke-width="3.6" stroke-linecap="round"/><circle cx="70" cy="70" r="2.6" fill="#f2c94c"/>
-    <ellipse cx="52" cy="50" rx="7" ry="13" transform="rotate(18 52 50)" fill="${c.dark}"/>
-    <ellipse cx="88" cy="50" rx="7" ry="13" transform="rotate(-18 88 50)" fill="${c.dark}"/>
-    <circle cx="70" cy="50" r="18" fill="${c.fur}"/>
-    <ellipse cx="70" cy="59" rx="9.5" ry="7" fill="${c.cream}"/>
-    <ellipse cx="70" cy="55.5" rx="3.4" ry="2.5" fill="#2a2420"/>
-    <path d="M70 58v3.2M66.5 61.5q3.5 2.4 7 0" fill="none" stroke="#2a2420" stroke-width="1.4" stroke-linecap="round"/>
-    ${eye(62.5, 47, 2.6)}${eye(77.5, 47, 2.6)}`;
-  const JUNIOR = (c) => `
-    <ellipse cx="72" cy="100.5" rx="36" ry="3.4" fill="rgba(0,0,0,.12)"/>
-    <path d="M44 66c-10-6-12-17-6-26" fill="none" stroke="${c.dark}" stroke-width="5.5" stroke-linecap="round"/>
-    <rect x="45" y="74" width="8" height="27" rx="4" fill="${c.shade}"/><rect x="82" y="74" width="8" height="27" rx="4" fill="${c.shade}"/>
-    <ellipse cx="68" cy="71" rx="28" ry="13" fill="${c.fur}"/>
-    <path d="M54 62q10-6 22 0" fill="none" stroke="${c.dark}" stroke-width="8" stroke-linecap="round" opacity=".55"/>
-    <ellipse cx="72" cy="78" rx="17" ry="5" fill="${c.cream}"/>
-    <rect x="53" y="76" width="8" height="25" rx="4" fill="${c.fur}"/><rect x="90" y="75" width="8" height="26" rx="4" fill="${c.fur}"/>
-    <ellipse cx="57" cy="99.5" rx="5" ry="2.4" fill="${c.cream}"/><ellipse cx="94" cy="99.5" rx="5" ry="2.4" fill="${c.cream}"/>
-    <path d="M90 66q8 5 15-1" fill="none" stroke="#009a4d" stroke-width="3.4" stroke-linecap="round"/>
-    <circle cx="100" cy="54" r="14" fill="${c.fur}"/>
-    <ellipse cx="94" cy="53" rx="6" ry="12" transform="rotate(22 94 53)" fill="${c.dark}"/>
-    <ellipse cx="111" cy="60" rx="9" ry="6.4" fill="${c.cream}"/>
-    <ellipse cx="118.5" cy="57.5" rx="3" ry="2.4" fill="#2a2420"/>
-    <path d="M110 64q5 4 9 0" fill="none" stroke="#2a2420" stroke-width="1.3" stroke-linecap="round"/>
-    <path d="M112 64.5q1.5 5 4 .5" fill="#f08c8c"/>
-    ${eye(104, 50.5, 2.3)}`;
-  const ADULT = (c) => `
-    <ellipse cx="74" cy="100.5" rx="46" ry="3.6" fill="rgba(0,0,0,.12)"/>
-    <path d="M34 63c-11 6-13 18-9 28" fill="none" stroke="${c.dark}" stroke-width="7" stroke-linecap="round"/>
-    <rect x="36" y="70" width="9" height="31" rx="4.5" fill="${c.shade}"/><rect x="94" y="70" width="9" height="31" rx="4.5" fill="${c.shade}"/>
-    <path d="M30 66c0-12 14-18 40-18s40 5 40 17-12 16-40 16-40-3-40-15z" fill="${c.fur}"/>
-    <path d="M42 54q26-8 52-1" fill="none" stroke="${c.dark}" stroke-width="11" stroke-linecap="round" opacity=".7"/>
-    <ellipse cx="99" cy="70" rx="11" ry="12" fill="${c.cream}"/>
-    <rect x="46" y="72" width="9" height="29" rx="4.5" fill="${c.fur}"/><rect x="104" y="71" width="9" height="30" rx="4.5" fill="${c.fur}"/>
-    <ellipse cx="50.5" cy="99.5" rx="5.6" ry="2.5" fill="${c.cream}"/><ellipse cx="108.5" cy="99.5" rx="5.6" ry="2.5" fill="${c.cream}"/>
-    <path d="M100 53q9 6 17 0" fill="none" stroke="#009a4d" stroke-width="3.8" stroke-linecap="round"/><circle cx="108" cy="57" r="2.8" fill="#f2c94c"/>
-    <path d="M101 33l3-17 10 13z" fill="${c.dark}"/><path d="M112 31l7-15 5 16z" fill="${c.dark}"/>
-    <circle cx="110" cy="41" r="15" fill="${c.fur}"/>
-    <path d="M113 45c6-2 14-1 17 3 2 4-2 8-9 8-6 0-9-3-8-11z" fill="${c.cream}"/>
-    <ellipse cx="129" cy="48" rx="3.2" ry="2.6" fill="#2a2420"/>
-    <path d="M120 54q4 3 8 0" fill="none" stroke="#2a2420" stroke-width="1.3" stroke-linecap="round"/>
-    ${eye(113, 37.5, 2.4)}`;
+  // ---------- силуэты: минимализм, одна сплошная заливка (currentColor), растут по мере взросления ----------
+  // Земля — нижний край viewBox. Цвет задаёт CSS: серый у неактивных, зелёный бренда у выбранного возраста.
+  const tail = (d, w) => `<path d="${d}" fill="none" stroke="currentColor" stroke-width="${w}" stroke-linecap="round"/>`;
+  // щенок в профиль: круглое тельце, короткие лапы, большая голова, висячее ухо, хвостик торчком
+  const PUPPY = `<ellipse cx="19" cy="27" rx="12" ry="7.5"/>
+    <rect x="10" y="28" width="5" height="12" rx="2.5"/><rect x="14.5" y="28" width="5" height="12" rx="2.5"/>
+    <rect x="22.5" y="28" width="5" height="12" rx="2.5"/><rect x="27" y="28" width="5" height="12" rx="2.5"/>
+    <circle cx="31" cy="15" r="9"/><ellipse cx="39" cy="18" rx="4.5" ry="3.5"/>
+    <ellipse cx="23.5" cy="17" rx="3" ry="6.5" transform="rotate(25 23.5 17)"/>${tail('M8.5 24q-4-2-3-7', 3)}`;
+  // подросток стоит в профиль: длинные лапы, висячее ухо
+  const JUNIOR = `<rect x="10" y="17" width="27" height="10" rx="5"/>
+    <rect x="12" y="22" width="4" height="18" rx="2"/><rect x="16.5" y="22" width="4" height="18" rx="2"/>
+    <rect x="29" y="22" width="4" height="18" rx="2"/><rect x="33.5" y="22" width="4" height="18" rx="2"/>
+    <path d="M31 21l6-13 6 2-5 14z"/><circle cx="41" cy="9" r="5.5"/><ellipse cx="47" cy="11" rx="4.5" ry="2.8"/>
+    <ellipse cx="38" cy="11" rx="2.3" ry="5" transform="rotate(20 38 11)"/>${tail('M11 20q-6-3-6-10', 2.8)}`;
+  // взрослая: крупнее, стоячие уши, вытянутая морда
+  const ADULT = `<rect x="10" y="19" width="34" height="13" rx="6.5"/><ellipse cx="41" cy="26" rx="6.5" ry="7.5"/>
+    <rect x="12" y="26" width="4.6" height="20" rx="2.3"/><rect x="17.4" y="26" width="4.6" height="20" rx="2.3"/>
+    <rect x="35.5" y="26" width="4.6" height="20" rx="2.3"/><rect x="41" y="26" width="4.6" height="20" rx="2.3"/>
+    <path d="M37 22l6-13 7 2-3 16z"/><circle cx="47" cy="11" r="6.2"/><path d="M50 8.5l9 4q.5 3-3 3.5h-7z"/>
+    <path d="M42.5 8l1.5-8 4.5 6z"/><path d="M46.5 6l4-6.5 1.3 8z"/>${tail('M11 22q-7 3-7 13', 3.4)}`;
   const DOGS = {
-    starter: { h: 80, svg: PUPPY({ fur: '#f0cf9a', dark: '#c98f52', cream: '#fff6e6', shade: '#e0b97f' }) },
-    junior: { h: 94, svg: JUNIOR({ fur: '#f1e3cf', dark: '#8f5a33', cream: '#fffaf1', shade: '#dcc8ab' }) },
-    adult: { h: 114, svg: ADULT({ fur: '#c98a4e', dark: '#4a3a30', cream: '#f3dcc0', shade: '#b07a43' }) },
-    // все возрасты: взрослая собака и щенок рядом
-    'all-life-stage': { h: 114, svg: `<g transform="translate(-14 16) scale(.84)">${ADULT({ fur: '#e9e2d6', dark: '#8d7b6a', cream: '#ffffff', shade: '#d9d0c2' })}</g>` +
-      `<g transform="translate(72 44) scale(.56)">${PUPPY({ fur: '#f3e3c8', dark: '#b58a5f', cream: '#ffffff', shade: '#e6d2b0' })}</g>` }
+    starter: { h: 21, vb: '0 5 45 35', svg: PUPPY },
+    junior: { h: 29, vb: '0 0 52 40', svg: JUNIOR },
+    adult: { h: 38, vb: '0 -2 61 48', svg: ADULT },
+    // все возрасты: взрослая собака и щенок напротив, мордой к ней
+    'all-life-stage': { h: 38, vb: '0 -2 95 48', svg: ADULT + `<g transform="translate(96 14.8) scale(-.78 .78)">${PUPPY}</g>` }
   };
-  const dogSvg = age => `<svg viewBox="0 0 140 104" aria-hidden="true" focusable="false"><g stroke="rgba(70,45,25,.28)" stroke-width="1.1" paint-order="stroke">${DOGS[age].svg}</g></svg>`;
+  const dogSvg = age => `<svg viewBox="${DOGS[age].vb}" aria-hidden="true" focusable="false"><g fill="currentColor">${DOGS[age].svg}</g></svg>`;
 
   // ---------- иконки плиток «Для собак / Для кошек» ----------
   const ICON = {
@@ -96,8 +65,8 @@
     const dogs = ages.map(a => `
       <button class="age-dog" type="button" data-age="${a}" aria-pressed="${a === cur}" style="--h:${DOGS[a].h}px">
         <span class="age-dog__fig">${dogSvg(a)}</span>
-        <span class="age-dog__label">${t('age.' + a)}<span class="age-dog__n">${counts[a] || 0}</span></span>
-        <span class="age-dog__hint">${t('age.' + a + '.hint')}</span>
+        <span class="age-dog__txt"><span class="age-dog__label">${t('age.' + a)}<span class="age-dog__n">${counts[a] || 0}</span></span>
+        <span class="age-dog__hint">${t('age.' + a + '.hint')}</span></span>
       </button>`).join('');
     return { cur, html: `<div class="age-track" role="group" aria-label="${t('age.title')}" style="--n:${ages.length}">${dogs}</div>` };
   }
@@ -111,7 +80,7 @@
     if (reduce()) return;
     const fig = from && from.querySelector('.age-dog__fig');
     if (fig && fig.animate) fig.animate([{ transform: 'translateY(0) scale(1,1)' }, { transform: 'translateY(2px) scale(1.06,.92)', offset: .18 },
-      { transform: 'translateY(-14px) scale(.97,1.04)', offset: .5 }, { transform: 'translateY(0) scale(1,1)' }], { duration: 560, easing: 'cubic-bezier(.3,.7,.3,1)' });
+      { transform: 'translateY(-7px) scale(.97,1.04)', offset: .5 }, { transform: 'translateY(0) scale(1,1)' }], { duration: 560, easing: 'cubic-bezier(.3,.7,.3,1)' });
     const shown = Array.from(block.querySelectorAll('.product[data-age="' + age + '"], .coat-col__empty')).filter(el => el.offsetParent);
     if (window.NPSpring && NPSpring.ok && NPSpring.ok() && NPSpring.stagger) NPSpring.stagger(shown, 45, { opacity: 0, transform: 'translateY(12px) scale(0.98)' }, [0.88, 0.42]);
     else shown.forEach((el, i) => el.animate && el.animate([{ opacity: 0, transform: 'translateY(12px)' }, { opacity: 1, transform: 'none' }], { duration: 320, delay: i * 45, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'backwards' }));
