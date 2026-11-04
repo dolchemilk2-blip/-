@@ -5,7 +5,7 @@
 | 1 | **Claude** (облачная сессия) | Каталог: место на экране, собаки выше кошек, линейки шерсти в ряд, интерактивные собачки возраста. **Уже сделано, никому не отдавать.** | `products.html`, `js/main.js`, `js/age-dogs.js`, `css/catalog-v2.css`, `css/catalog.css`, `css/mobile-catalog.css`, `css/motion-catalog.css`, `js/motion-catalog.js` |
 | 2 | **Antigravity**, 4 агента | Данные и тексты: фасовки и банки консервов, названия, правки по скриншотам клиента из zip, «Амбассадоры», слово sürfələridir | `js/translations.js`, `js/catalog.js`, `js/tpl-system.js`, `js/np-official.js`, `js/descriptions.js` |
 | 3 | **GPT** | Главная страница: 4 слайда, карточки брендов, калькулятор, карта | `index.html`, `js/home.js`, `js/motion-home.js`, `css/home.css`, `css/mobile-home.css`, `css/motion-home.css`, `js/feed-calc.js`, `css/feed-calc.css`, `assets/hero/` |
-| 4 | **GPT** | Векторные собачки (SVG) для полоски «возраст собаки»: щенок, подросток, взрослая, взрослая со щенком. Только SVG-код, встраивает Claude | ничего не правит — присылает 4 SVG (`tasks/4-gpt-dogs-svg.md`) |
+| 4 | **GPT** | Собачки для полоски «возраст собаки». **Сделано:** GPT прислал картинки (не вектор), они подключены маской — `assets/age-dogs/*.webp` | — |
 
 ## Что кому отправить
 - **Antigravity:** открыть в нём папку проекта (клон репозитория на диске D), вставить текст из `tasks/2-antigravity-data.md` и положить рядом zip со скриншотами клиента (например в `tasks/zip/`). Antigravity правит файлы прямо в папке. Это важно: `js/np-official.js` весит 1,7 МБ, чат такой файл целиком не вернёт.

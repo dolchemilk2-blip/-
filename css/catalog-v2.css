@@ -191,7 +191,10 @@ h3.cat-section__title { font-size: clamp(22px, 2vw, 28px); margin-bottom: 16px; 
 }
 .age-dog__fig { position: relative; flex: none; display: flex; align-items: flex-end; transform-origin: 50% 100%; color: #c4ccc7;
   transition: color var(--dur-hover, 200ms) var(--ease-color, ease); }
-.age-dog__fig svg { position: relative; height: var(--h, 30px); width: auto; display: block; overflow: visible;
+/* силуэт — картинка-маска: форма из прозрачности файла, цвет — currentColor (серый / зелёный) */
+.age-dog__pic { position: relative; display: block; height: var(--h, 30px); aspect-ratio: var(--ar, 1.25); background-color: currentColor;
+  -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; -webkit-mask-size: contain; mask-size: contain;
+  -webkit-mask-position: center bottom; mask-position: center bottom;
   transition: transform var(--spring-bouncy-dur, 420ms) var(--spring-bouncy, cubic-bezier(.3,1.4,.5,1)); }
 /* тень на «земле» под собакой; у выбранной — зелёное свечение */
 .age-dog__fig::before { content: ''; position: absolute; left: 6%; right: 6%; bottom: -4px; height: 8px; border-radius: 50%;
@@ -200,10 +203,6 @@ h3.cat-section__title { font-size: clamp(22px, 2vw, 28px); margin-bottom: 16px; 
   background: radial-gradient(closest-side, rgba(0,154,77,.32), rgba(0,154,77,0)); opacity: 0; transition: opacity var(--dur-hover, 200ms) ease; }
 .age-dog[aria-pressed="true"] .age-dog__fig::after { opacity: 1; }
 .age-dog[aria-pressed="true"] .age-dog__fig::before { opacity: 0; }
-/* хвост виляет: у только что выбранной собаки — три взмаха, при наведении — пока мышь над ней */
-.age-tail { transform-box: fill-box; transform-origin: 100% 60%; }
-.age-dog[aria-pressed="true"] .age-tail { animation: ageWag .5s ease-in-out 3; }
-@keyframes ageWag { 0%, 100% { transform: rotate(0); } 30% { transform: rotate(-14deg); } 70% { transform: rotate(10deg); } }
 .age-dog__txt { display: flex; flex-direction: column; min-width: 0; padding-bottom: 3px; text-align: left; }
 .age-dog__label { display: inline-flex; align-items: center; gap: 5px; font: 600 14px/1.2 var(--font); color: var(--ink-2); letter-spacing: -0.01em; white-space: nowrap; }
 .age-dog__n { min-width: 18px; padding: 0 5px; border-radius: var(--r-pill); font: 600 11px/1.55 var(--font); font-variant-numeric: tabular-nums; text-align: center; color: var(--ink-2-tint); background: rgba(0,0,0,.06); }
@@ -220,8 +219,7 @@ h3.cat-section__title { font-size: clamp(22px, 2vw, 28px); margin-bottom: 16px; 
 .age-dog:focus-visible { outline: var(--focus-width, 2px) solid var(--focus-color, #007a3d); outline-offset: 2px; }
 @media (hover: hover) and (pointer: fine) {
   .age-dog:not([aria-pressed="true"]):hover .age-dog__fig { color: #93a29a; }
-  .age-dog:hover .age-dog__fig svg { transform: translateY(-3px); }
-  .age-dog:hover .age-tail { animation: ageWag .5s ease-in-out infinite; }
+  .age-dog:hover .age-dog__pic { transform: translateY(-3px); }
 }
 html:not(.spr) .age-dog:active .age-dog__fig { transform: scale(.94); }
 /* средняя ширина: полоска под заголовком на всю ширину */
@@ -268,7 +266,7 @@ html:not(.spr) .age-dog:active .age-dog__fig { transform: scale(.94); }
   /* телефон: силуэт над подписью, линия под силуэтами, без пояснений */
   .age-dog { flex-direction: column; align-items: center; gap: 0; padding: 2px 2px 0; border-radius: 10px; }
   .age-dog__fig { height: 32px; }
-  .age-dog__fig svg { height: calc(var(--h, 30px) * .84); }
+  .age-dog__pic { height: calc(var(--h, 30px) * .84); }
   .age-dog__txt { order: 2; padding: 6px 0 2px; text-align: center; align-items: center; }
   .age-dog__label { font-size: 12px; gap: 4px; }
   .age-dog__hint, .age-dog__n { display: none; }
@@ -276,9 +274,8 @@ html:not(.spr) .age-dog:active .age-dog__fig { transform: scale(.94); }
   .age-dog::after { top: 32px; bottom: auto; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .age-dog__fig, .age-dog__fig svg, .age-dog::after { transition: none; }
-  .age-tail { animation: none !important; }
-  .age-dog:hover .age-dog__fig svg { transform: none; }
+  .age-dog__fig, .age-dog__pic, .age-dog::after { transition: none; }
+  .age-dog:hover .age-dog__pic { transform: none; }
 }
 
 /* ---------- Tauro: комбо (Step-системы) по 2 в ряд, разделены еле видной линией ---------- */
