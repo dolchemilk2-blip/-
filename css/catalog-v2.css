@@ -247,8 +247,10 @@ html:not(.spr) .age-dog:active .age-dog__fig { transform: scale(.94); }
   .group-tile__pics { min-height: 90px; margin: 0 -4px 8px; }
   /* телефон: две упаковки крупно вместо трёх мелких */
   .group-tile__pics img:nth-child(3) { display: none; }
-  .group-tile__pics img:nth-child(1) { height: 54%; max-width: 70%; top: 0; left: 0; }
-  .group-tile__pics img:nth-child(2) { height: 54%; max-width: 70%; top: 44%; right: 0; }
+  /* рядом, у нижнего края, с лёгким наклоном навстречу — не по диагонали через всю плитку и без наложения */
+  /* у фото белые поля вокруг товара: картинки крупнее и сдвинуты друг к другу, перекрываются только поля */
+  .group-tile__pics img:nth-child(1) { top: auto; bottom: 0; left: 5%; height: 96%; max-width: 64%; transform: rotate(-4deg); }
+  .group-tile__pics img:nth-child(2) { top: auto; bottom: 3%; right: 5%; left: auto; height: 88%; max-width: 60%; transform: rotate(5deg); z-index: 1; }
   .group-tile__pics img:only-child { height: 78%; max-width: 90%; top: 6%; left: 50%; }
   .group-tile__title { font-size: 16px; }
   .group-tile--coat .group-tile__title { font-size: 15px; }
