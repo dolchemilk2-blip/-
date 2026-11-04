@@ -76,8 +76,9 @@
   .tile { min-height: 270px; padding: 16px 12px; border-radius: 20px; }
   .tile__name { font: 700 18px/1.15 var(--font); letter-spacing: -0.015em; }
   .tile__line { max-width: none; margin-top: 6px; font: 400 13px/1.35 var(--font); }
-  .tile__scene { min-height: 138px; margin: 14px -4px -8px; }
-  .tile__bowl { width: 40%; }
+  /* узкая карточка: сцена почти квадратная, товары крупнее (--mx / --mw на каждом товаре) */
+  .tile__scene { aspect-ratio: 1.12 / 1; margin: 12px -4px -8px; }
+  .tile__item { left: var(--mx, var(--x)); width: var(--mw, var(--w)); filter: drop-shadow(0 6px 6px rgba(40, 34, 24, .16)); }
 
   /* ---------- 4. About tabs: one full-width row, content-proportional segments ---------- */
   .home-values .tabs {

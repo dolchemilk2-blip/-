@@ -68,11 +68,11 @@
 .mh-js .coat__dog { translate: 0 calc((.5 - var(--mh-p)) * 72px); }
 
 /* ---------- 5. Brand tiles: every product image grows in with its card ---------- */
-.mh-js.home-js main [data-reveal].is-in .tile__img {
+.mh-js.home-js main [data-reveal].is-in .tile__item {
   animation: mhImgIn 700ms var(--ease-out) backwards;
   animation-delay: calc(var(--ri, 0) * var(--stagger));
 }
-.mh-js.home-js main [data-reveal].is-instant .tile__img { animation: none; }
+.mh-js.home-js main [data-reveal].is-instant .tile__item { animation: none; }
 
 /* ---------- 7. Quality journey: the line draws with scroll, each dot fills as it is passed ---------- */
 .mh-js .journey { --mh-a: .2; --mh-b: .55; }
@@ -122,7 +122,7 @@
 @media (prefers-reduced-motion: reduce) {
   .hero--home, .coat, .mh-words, .journey { animation: none !important; --mh-p: 1; }
   .hero--home { --mh-p: 0; }
-  .mh-line__in, .hero-home__title, .hero--home .hero-bg, .tile__img { animation: none !important; transform: none; }
+  .mh-line__in, .hero-home__title, .hero--home .hero-bg, .tile__item { animation: none !important; transform: none; }
   .hero--home .hero-bg, .hero--home .hero-home__inner, .coat__cat, .coat__dog { transform: none !important; translate: none !important; opacity: 1 !important; }
   [data-mh-wipe] { clip-path: none !important; }
   .mh-w { opacity: 1 !important; }
