@@ -14,12 +14,12 @@ const TPL_SYSTEMS = [
       "en": "Sensitive skin system — Step 1·2·3"
     },
     "intro": {
-      "az": "Həssas, quru və qıcıqlanmış dərili it və pişiklər üçün peşəkar üçmərhələli qulluq sistemi. Kompleks dərini yumşaq təmizləyir, qaşınma, qızartı və pullanmanı azaldır, qoruyucu bariyer bərpa edir və tükü sağlam, yumşaq və parlaq edir. Bütün it və pişik cinsləri üçün uyğundur.",
+      "az": "Həssas, quru və qıcıqlanmış dərili it və pişiklər üçün peşəkar üçmərhələli qulluq sistemi. Kompleks dərini yumşaq təmizləyir, qaşınma, qızartı və pullanmanı azaldır, qoruyucu baryeri bərpa edir və tükü sağlam, yumşaq və parlaq edir. Bütün it və pişik cinsləri üçün uyğundur.",
       "ru": "Профессиональная трёхэтапная система ухода для собак и кошек с чувствительной, сухой и раздражённой кожей. Комплекс мягко очищает кожу, уменьшает зуд, покраснение и шелушение, восстанавливает защитный барьер и делает шерсть здоровой, мягкой и блестящей. Подходит для всех пород собак и кошек.",
       "en": "A professional three-step care system for dogs and cats with sensitive, dry and irritated skin. The complex gently cleanses the skin, reduces itching, redness and flaking, restores the protective barrier and makes the coat healthy, soft and shiny. Suitable for all dog and cat breeds."
     },
     "note": {
-      "az": "Maksimum effekt hər üç mərhələdən birlikdə istifadə etdikdə əldə olunur. Sistem dərin təmizləmə, intensiv qulluq, qoruyucu bariyer bərpası və dəri ilə tükün uzunmüddətli sağlamlığını təmin edir.",
+      "az": "Maksimum effekt hər üç mərhələdən birlikdə istifadə etdikdə əldə olunur. Sistem dərin təmizləmə, intensiv qulluq, qoruyucu baryerin bərpası və dəri ilə tükün uzunmüddətli sağlamlığını təmin edir.",
       "ru": "Максимальный эффект достигается при использовании всех трёх этапов вместе. Система обеспечивает глубокое очищение, интенсивный уход, восстановление защитного барьера и длительное здоровье кожи и шерсти.",
       "en": "Maximum effect is achieved when all three steps are used together. The system delivers deep cleansing, intensive care, barrier restoration and long-lasting skin and coat health."
     },
@@ -224,7 +224,7 @@ const TPL_SYSTEMS = [
               },
               {
                 "title": "Təsvir",
-                "text": "Qulluğun əsas mərhələsi. Şampun həssas dərini sakitləşdirir, qaşınma, qıcıqlanma və qızartını azaltmağa kömək edir, dərinin təbii qoruyucu bariyer dəstəkləyir və tükü intensiv nəmləndirir. Quruluğa və qıcıqlanmaya meylli həssas dərili ev heyvanları üçün uyğundur."
+                "text": "Qulluğun əsas mərhələsi. Şampun həssas dərini sakitləşdirir, qaşınma, qıcıqlanma və qızartını azaltmağa kömək edir, dərinin təbii qoruyucu baryerini dəstəkləyir və tükü intensiv nəmləndirir. Quruluğa və qıcıqlanmaya meylli həssas dərili ev heyvanları üçün uyğundur."
               },
               {
                 "title": "İstifadə qaydası",
@@ -3332,7 +3332,7 @@ const TPL_SYSTEMS = [
       "en": "Sensitive & problem-skin care — Derma Care · Step 1–3"
     },
     "intro": {
-      "az": "Həssas, quru, qıcıqlanmış və allergik reaksiyalara meylli dəriyə malik it və pişiklər üçün xüsusi olaraq hazırlanmış peşəkar qulluq sistemidir. Kompleks qaşınmanı, qızartını, soyulmanı və quruluğu azaltmağa kömək edir, dərinin təbii qoruyucu bariyer dəstəkləyir və sağlam tükün bərpasına şərait yaradır. Xüsusilə həssas dəriyə, mövsümi qıcıqlanmalara və dermatoloji problemlərə malik, həmçinin intensiv qrumingdən sonrakı ev heyvanları üçün tövsiyə olunur.",
+      "az": "Həssas, quru, qıcıqlanmış və allergik reaksiyalara meylli dəriyə malik it və pişiklər üçün xüsusi olaraq hazırlanmış peşəkar qulluq sistemidir. Kompleks qaşınmanı, qızartını, soyulmanı və quruluğu azaltmağa kömək edir, dərinin təbii qoruyucu baryerini dəstəkləyir və sağlam tükün bərpasına şərait yaradır. Xüsusilə həssas dəriyə, mövsümi qıcıqlanmalara və dermatoloji problemlərə malik, həmçinin intensiv qrumingdən sonrakı ev heyvanları üçün tövsiyə olunur.",
       "ru": "Профессиональная система ухода, разработанная специально для собак и кошек с чувствительной, сухой, раздраженной и склонной к аллергическим реакциям кожей. Комплекс помогает уменьшить зуд, покраснение, шелушение и сухость, поддерживает естественный защитный барьер кожи и способствует восстановлению здоровой шерсти. Особенно рекомендуется питомцам с чувствительной кожей, сезонными раздражениями, дерматологическими проблемами и после интенсивного груминга.",
       "en": "A professional care system developed specifically for dogs and cats with sensitive, dry, irritated and allergy-prone skin. The complex helps reduce itching, redness, flaking and dryness, supports the skin's natural protective barrier and promotes the restoration of healthy coat. It is especially recommended for pets with sensitive skin, seasonal irritations, dermatological issues and after intensive grooming."
     },
@@ -3412,7 +3412,7 @@ const TPL_SYSTEMS = [
               },
               {
                 "title": "Təsvir",
-                "text": "Peşəkar qulluğun ilk mərhələsi. Şampun dərini və tükü dərindən təmizləyir, çirki və artıq dəri piyini dərinin təbii qoruyucu bariyer pozmadan çıxarır. Dərini sonrakı mərhələlərin aktiv komponentlərinin təsirinə hazırlayır və daha effektiv qulluğa şərait yaradır."
+                "text": "Peşəkar qulluğun ilk mərhələsi. Şampun dərini və tükü dərindən təmizləyir, çirki və artıq dəri piyini dərinin təbii qoruyucu baryerini pozmadan çıxarır. Dərini sonrakı mərhələlərin aktiv komponentlərinin təsirinə hazırlayır və daha effektiv qulluğa şərait yaradır."
               },
               {
                 "title": "İstifadə qaydası",
@@ -3534,7 +3534,7 @@ const TPL_SYSTEMS = [
         "color": "#9c6b3a",
         "img": "assets/products/tpl-dc-intensive.webp",
         "short": {
-          "az": "Qıcıqlanmış dərini sakitləşdirir — qaşınmanı azaldır və dəri bariyer bərpa edir.",
+          "az": "Qıcıqlanmış dərini sakitləşdirir — qaşınmanı azaldır və dəri baryerini bərpa edir.",
           "ru": "Успокаивает раздраженную кожу — уменьшает зуд и восстанавливает кожный барьер.",
           "en": "Soothes irritated skin — reduces itching and restores the skin barrier."
         },
@@ -3544,7 +3544,7 @@ const TPL_SYSTEMS = [
           "az": {
             "cat": "Derma Care · STEP 2",
             "name": "Dry & Itchy Skin Relief Shampoo",
-            "desc": "Step 2 — əsas qulluq. Həssas dərini sakitləşdirir və bariyer bərpa edir.",
+            "desc": "Step 2 — əsas qulluq. Həssas dərini sakitləşdirir və baryeri bərpa edir.",
             "sections": [
               {
                 "title": "Kimə uyğundur",
@@ -3570,12 +3570,12 @@ const TPL_SYSTEMS = [
                   "Dərini sakitləşdirir",
                   "Qıcıqlanmanı azaldır",
                   "İntensiv nəmləndirir",
-                  "Dəri bariyer bərpasını dəstəkləyir"
+                  "Dəri baryerinin bərpasını dəstəkləyir"
                 ]
               },
               {
                 "title": "Təsvir",
-                "text": "Qulluğun əsas mərhələsi. Şampun qıcıqlanmış dərini sakitləşdirməyə kömək edir, qaşınma və quruluq hissini azaldır, təbii qoruyucu bariyer bərpasına şərait yaradır və dərinin, tükün sağlamlığını dəstəkləyir. Xüsusilə həssas dəriyə və qıcıqlanmağa meylli ev heyvanları üçün tövsiyə olunur."
+                "text": "Qulluğun əsas mərhələsi. Şampun qıcıqlanmış dərini sakitləşdirməyə kömək edir, qaşınma və quruluq hissini azaldır, təbii qoruyucu baryerin bərpasına şərait yaradır və dərinin, tükün sağlamlığını dəstəkləyir. Xüsusilə həssas dəriyə və qıcıqlanmağa meylli ev heyvanları üçün tövsiyə olunur."
               },
               {
                 "title": "İstifadə qaydası",
@@ -4027,7 +4027,7 @@ const TPL_SYSTEMS = [
                   "İntensiv nəmləndirir",
                   "Dərini yumşaldır",
                   "Qıcıqlanmanı azaldır",
-                  "Dərinin qoruyucu bariyer bərpa etməyə kömək edir"
+                  "Dərinin qoruyucu baryerini bərpa etməyə kömək edir"
                 ]
               },
               {
