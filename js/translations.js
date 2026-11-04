@@ -509,7 +509,7 @@ const PRODUCTS = {
       group: { az: "Quru qida", ru: "Сухой корм", en: "Dry food" },
       items: [
         { emoji: "🐾", img: "assets/products/cat-sterilised.png", baby: true,
-          az: { cat: "Kitten", name: "Kitten — Poultry", desc: "1 yaşa qədər bütün cins balaca pişiklər üçün quş ətli qida; 63% heyvani protein, buğdasız, südəmizdirən pişiklər üçün uyğundur.", tags: ["Quş əti", "<1 il", "Buğdasız"] },
+          az: { cat: "Kitten", name: "Kitten — Poultry", desc: "1 yaşa qədər bütün cins balaca pişiklər üçün quş ətli qida; 63% heyvani protein, buğdasız, südəmizdirən pişiklər üçün uyğundur.", tags: ["Quş əti", "<1 yaş", "Buğdasız"] },
           ru: { cat: "Kitten", name: "Kitten — Птица", desc: "Корм с птицей для котят всех пород до 1 года; 63% животного белка, без пшеницы, подходит кормящим кошкам.", tags: ["Птица", "<1 года", "Без пшеницы"] },
           en: { cat: "Kitten", name: "Kitten — Poultry", desc: "Poultry food for kittens of all breeds under 1 year; 63% animal protein, no wheat, suitable for lactating cats.", tags: ["Poultry", "<1 year", "No wheat"] } },
         { emoji: "🏠", img: "assets/products/cat-indoor.png",
