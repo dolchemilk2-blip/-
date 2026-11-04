@@ -2836,3 +2836,6 @@ const FULL_DESC = {
   }
  }
 };
+
+// Salmon Oil — для кошек и собак: у кошек то же описание, что у собак
+FULL_DESC["cats||Oils||Salmon Oil"] = FULL_DESC["dogs||Oils||Salmon Oil"];

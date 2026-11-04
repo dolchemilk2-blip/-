@@ -562,6 +562,10 @@ const PRODUCTS = {
     {
       group: { az: "Qida əlavələri", ru: "Добавки и витамины", en: "Supplements & vitamins" },
       items: [
+        { emoji: "🐟", img: "assets/products/supp-salmon-oil.webp",
+          az: { cat: "Yağlar", name: "Salmon Oil", desc: "Pişik və itlər üçün qızılbalıq yağı; sağlam dəri və parlaq tük üçün Omega-3 mənbəyi. 300 ml.", tags: ["Omega-3", "Dəri və tük"] },
+          ru: { cat: "Масла", name: "Salmon Oil", desc: "Лососёвое масло для кошек и собак; источник Омега-3 для здоровой кожи и блестящей шерсти. 300 мл.", tags: ["Омега-3", "Кожа и шерсть"] },
+          en: { cat: "Oils", name: "Salmon Oil", desc: "Salmon oil for cats and dogs; a source of Omega-3 for healthy skin and a shiny coat. 300 ml.", tags: ["Omega-3", "Skin & coat"] } },
         { emoji: "✨", img: "assets/products/cat-supp-beauty.webp",
           az: { cat: "Vitaminlər", name: "Beauty Formula", desc: "Pişiklər üçün vitamin və minerallar; sağlam dəri və parlaq tük üçün gözəllik kompleksi. 60 q / 120 tablet.", tags: ["Vitaminlər", "Dəri və tük"] },
           ru: { cat: "Витамины", name: "Beauty Formula", desc: "Витамины и минералы для кошек; бьюти-комплекс для здоровой кожи и блестящей шерсти. 60 г / 120 таблеток.", tags: ["Витамины", "Кожа и шерсть"] },
@@ -788,10 +792,6 @@ const PRODUCTS = {
           az: { cat: "Yaş qida (konserv)", name: "Turkey", desc: "Həssas həzmli yetkin itlər üçün hinduşka ilə konserv; taxılsız və qlütensiz. 400 q.", tags: ["Hinduşka", "Həssas həzm"] },
           ru: { cat: "Влажный корм (консервы)", name: "Индейка", desc: "Консервы с индейкой для взрослых собак с чувствительным пищеварением; беззерновые и без глютена. 400 г.", tags: ["Индейка", "Чувствительное пищеварение"] },
           en: { cat: "Wet food (can)", name: "Turkey", desc: "Canned food with turkey for adult dogs with sensitive digestion; grain free and gluten free. 400 g.", tags: ["Turkey", "Sensitive digestion"] } },
-        { emoji: "🍲", img: "assets/products/dog-can-wellness-soup.webp",
-          az: { cat: "Superior Care · Şorba", name: "White Dogs Wellness Soup — Tuna & Salmon", desc: "Açıq tüklü yetkin itlər üçün sağlamlıq şorbası: tunes və qızılbalıq qarışığı, dəri və tük üçün. 140 ml.", tags: ["Şorba", "Tunes", "Qızılbalıq"] },
-          ru: { cat: "Superior Care · Суп", name: "White Dogs Wellness Soup — Тунец и лосось", desc: "Велнес-суп для взрослых собак со светлой шерстью: микс тунца и лосося, для кожи и шерсти. 140 мл.", tags: ["Суп", "Тунец", "Лосось"] },
-          en: { cat: "Superior Care · Soup", name: "White Dogs Wellness Soup — Tuna & Salmon", desc: "Wellness soup for light-coated adult dogs: tuna and salmon mix, for skin and coat. 140 ml.", tags: ["Soup", "Tuna", "Salmon"] } }
       ]
     },
     {
@@ -967,7 +967,11 @@ const PRODUCTS = {
         { emoji: "🐟", img: "assets/products/scp-dog-dark.webp",
           az: { cat: "Superior Care · Dark Coat", name: "Dark Coat — Trout & Krill", desc: "Tünd tüklü itlər üçün sousda fileto: alabalıq və kril, DCE kompleksi ilə tünd rəngi qoruyur. 85 q.", tags: ["Alabalıq", "Kril", "Dark Coat"] },
           ru: { cat: "Superior Care · Dark Coat", name: "Dark Coat — Форель и криль", desc: "Филе в соусе для собак с тёмной шерстью: форель и криль, комплекс DCE сохраняет тёмный окрас. 85 г.", tags: ["Форель", "Криль", "Dark Coat"] },
-          en: { cat: "Superior Care · Dark Coat", name: "Dark Coat — Trout & Krill", desc: "Fillets in gravy for dark-coated dogs: trout and krill, DCE complex preserves the dark colour. 85 g.", tags: ["Trout", "Krill", "Dark Coat"] } }
+          en: { cat: "Superior Care · Dark Coat", name: "Dark Coat — Trout & Krill", desc: "Fillets in gravy for dark-coated dogs: trout and krill, DCE complex preserves the dark colour. 85 g.", tags: ["Trout", "Krill", "Dark Coat"] } },
+        { emoji: "🍲", img: "assets/products/dog-can-wellness-soup.webp",
+          az: { cat: "Superior Care · Şorba", name: "White Dogs Wellness Soup — Tuna & Salmon", desc: "Açıq tüklü yetkin itlər üçün sağlamlıq şorbası: tunes və qızılbalıq qarışığı, dəri və tük üçün. 140 ml.", tags: ["Şorba", "Tunes", "Qızılbalıq"] },
+          ru: { cat: "Superior Care · Суп", name: "White Dogs Wellness Soup — Тунец и лосось", desc: "Велнес-суп для взрослых собак со светлой шерстью: микс тунца и лосося, для кожи и шерсти. 140 мл.", tags: ["Суп", "Тунец", "Лосось"] },
+          en: { cat: "Superior Care · Soup", name: "White Dogs Wellness Soup — Tuna & Salmon", desc: "Wellness soup for light-coated adult dogs: tuna and salmon mix, for skin and coat. 140 ml.", tags: ["Soup", "Tuna", "Salmon"] } },
       ]
     },
     {

@@ -19571,3 +19571,6 @@ const NP_OFFICIAL = {
   }
  }
 };
+
+// Salmon Oil — для кошек и собак: у кошек та же запись, что у собак
+NP_OFFICIAL["cats||Oils||Salmon Oil"] = NP_OFFICIAL["dogs||Oils||Salmon Oil"];
