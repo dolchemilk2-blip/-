@@ -614,6 +614,19 @@ const PRODUCTS = {
       ]
     },
     {
+      group: { az: "Lifestyle · Qəlyanaltılar", ru: "Lifestyle · Лакомства", en: "Lifestyle · Treats" },
+      items: [
+        { emoji: "🦆", img: "assets/products/cat-snack-ls-duck-strips.webp",
+          az: { cat: "Lifestyle · Qəlyanaltılar", name: "Soft Duck Strips", desc: "Həssas yetkin pişiklər üçün taxılsız yumşaq ördək zolaqları; hipoallergen qəlyanaltı. 75 q.", tags: ["Ördək", "Taxılsız", "Hipoallergen"] },
+          ru: { cat: "Lifestyle · Лакомства", name: "Мягкие полоски из утки", desc: "Беззерновые мягкие полоски из утки для взрослых кошек с чувствительностью; гипоаллергенное лакомство. 75 г.", tags: ["Утка", "Беззерновые", "Гипоаллергенные"] },
+          en: { cat: "Lifestyle · Snacks", name: "Soft Duck Strips", desc: "Grain-free soft duck strips for adult cats with sensitivities; a hypoallergenic treat. 75 g.", tags: ["Duck", "Grain-free", "Hypoallergenic"] } },
+        { emoji: "🫐", img: "assets/products/cat-snack-ls-rabbit-blueberries.webp",
+          az: { cat: "Lifestyle · Qəlyanaltılar", name: "Rabbit with Blueberries", desc: "Həssas yetkin pişiklər üçün qaragilə ilə dovşan əti qəlyanaltısı; taxılsız, hipoallergen. 75 q.", tags: ["Dovşan", "Taxılsız", "Hipoallergen"] },
+          ru: { cat: "Lifestyle · Лакомства", name: "Кролик с черникой", desc: "Лакомство из кролика с черникой для взрослых кошек с чувствительностью; беззерновое, гипоаллергенное. 75 г.", tags: ["Кролик", "Беззерновые", "Гипоаллергенные"] },
+          en: { cat: "Lifestyle · Snacks", name: "Rabbit with Blueberries", desc: "Rabbit treat with blueberries for adult cats with sensitivities; grain free, hypoallergenic. 75 g.", tags: ["Rabbit", "Grain-free", "Hypoallergenic"] } }
+      ]
+    },
+    {
       group: { az: "Prime · Yaş qida (paket)", ru: "Prime · Влажный корм (паучи)", en: "Prime · Wet food (pouches)" },
       items: [
         { emoji: "🍗", img: "assets/products/prime-kitten.webp", baby: true,
@@ -792,6 +805,10 @@ const PRODUCTS = {
           az: { cat: "Yaş qida (konserv)", name: "Turkey", desc: "Həssas həzmli yetkin itlər üçün hinduşka ilə konserv; taxılsız və qlütensiz. 400 q.", tags: ["Hinduşka", "Həssas həzm"] },
           ru: { cat: "Влажный корм (консервы)", name: "Индейка", desc: "Консервы с индейкой для взрослых собак с чувствительным пищеварением; беззерновые и без глютена. 400 г.", tags: ["Индейка", "Чувствительное пищеварение"] },
           en: { cat: "Wet food (can)", name: "Turkey", desc: "Canned food with turkey for adult dogs with sensitive digestion; grain free and gluten free. 400 g.", tags: ["Turkey", "Sensitive digestion"] } },
+        { emoji: "🍲", img: "assets/products/dog-can-wellness-soup.webp",
+          az: { cat: "Superior Care · Şorba", name: "White Dogs Wellness Soup — Tuna & Salmon", desc: "Açıq tüklü yetkin itlər üçün sağlamlıq şorbası: tunes və qızılbalıq qarışığı, dəri və tük üçün. 140 ml.", tags: ["Şorba", "Tunes", "Qızılbalıq"] },
+          ru: { cat: "Superior Care · Суп", name: "White Dogs Wellness Soup — Тунец и лосось", desc: "Велнес-суп для взрослых собак со светлой шерстью: микс тунца и лосося, для кожи и шерсти. 140 мл.", tags: ["Суп", "Тунец", "Лосось"] },
+          en: { cat: "Superior Care · Soup", name: "White Dogs Wellness Soup — Tuna & Salmon", desc: "Wellness soup for light-coated adult dogs: tuna and salmon mix, for skin and coat. 140 ml.", tags: ["Soup", "Tuna", "Salmon"] } }
       ]
     },
     {
@@ -925,6 +942,85 @@ const PRODUCTS = {
       ]
     },
     {
+      group: { az: "Lifestyle · Qəlyanaltılar", ru: "Lifestyle · Лакомства", en: "Lifestyle · Treats" },
+      items: [
+        { emoji: "🦴", img: "assets/products/dog-snack-ls-lamb-sticks.webp",
+          az: { cat: "Lifestyle · Qəlyanaltılar", name: "Lamb Sticks", desc: "Həssas yetkin itlər üçün taxılsız quzu əti çubuqları; hipoallergen qəlyanaltı. 75 q.", tags: ["Quzu əti", "Taxılsız", "Hipoallergen"] },
+          ru: { cat: "Lifestyle · Лакомства", name: "Палочки из ягнёнка", desc: "Беззерновые палочки из ягнёнка для взрослых собак с чувствительностью; гипоаллергенное лакомство. 75 г.", tags: ["Ягнёнок", "Беззерновые", "Гипоаллергенные"] },
+          en: { cat: "Lifestyle · Snacks", name: "Lamb Sticks", desc: "Grain-free lamb sticks for adult dogs with sensitivities; a hypoallergenic treat. 75 g.", tags: ["Lamb", "Grain-free", "Hypoallergenic"] } },
+        { emoji: "🍭", img: "assets/products/dog-snack-ls-lamb-lollipop.webp",
+          az: { cat: "Lifestyle · Qəlyanaltılar", name: "Lamb Lollipop", desc: "Həssas yetkin itlər üçün taxılsız quzu ətindən lolipoplar; hipoallergen qəlyanaltı. 75 q.", tags: ["Quzu əti", "Taxılsız", "Hipoallergen"] },
+          ru: { cat: "Lifestyle · Лакомства", name: "Леденцы из ягнёнка", desc: "Беззерновые леденцы из ягнёнка для взрослых собак с чувствительностью; гипоаллергенное лакомство. 75 г.", tags: ["Ягнёнок", "Беззерновые", "Гипоаллергенные"] },
+          en: { cat: "Lifestyle · Snacks", name: "Lamb Lollipop", desc: "Grain-free lamb lollipops for adult dogs with sensitivities; a hypoallergenic treat. 75 g.", tags: ["Lamb", "Grain-free", "Hypoallergenic"] } },
+        { emoji: "🦴", img: "assets/products/dog-snack-ls-rabbit-sticks.webp",
+          az: { cat: "Lifestyle · Qəlyanaltılar", name: "Rabbit Sticks", desc: "Həssas yetkin itlər üçün taxılsız dovşan əti çubuqları; hipoallergen qəlyanaltı. 75 q.", tags: ["Dovşan", "Taxılsız", "Hipoallergen"] },
+          ru: { cat: "Lifestyle · Лакомства", name: "Палочки из кролика", desc: "Беззерновые палочки из кролика для взрослых собак с чувствительностью; гипоаллергенное лакомство. 75 г.", tags: ["Кролик", "Беззерновые", "Гипоаллергенные"] },
+          en: { cat: "Lifestyle · Snacks", name: "Rabbit Sticks", desc: "Grain-free rabbit sticks for adult dogs with sensitivities; a hypoallergenic treat. 75 g.", tags: ["Rabbit", "Grain-free", "Hypoallergenic"] } },
+        { emoji: "🦴", img: "assets/products/dog-snack-ls-duck-sticks.webp",
+          az: { cat: "Lifestyle · Qəlyanaltılar", name: "Duck Sticks", desc: "Həssas yetkin itlər üçün taxılsız ördək əti çubuqları; hipoallergen qəlyanaltı. 75 q.", tags: ["Ördək", "Taxılsız", "Hipoallergen"] },
+          ru: { cat: "Lifestyle · Лакомства", name: "Палочки из утки", desc: "Беззерновые палочки из утки для взрослых собак с чувствительностью; гипоаллергенное лакомство. 75 г.", tags: ["Утка", "Беззерновые", "Гипоаллергенные"] },
+          en: { cat: "Lifestyle · Snacks", name: "Duck Sticks", desc: "Grain-free duck sticks for adult dogs with sensitivities; a hypoallergenic treat. 75 g.", tags: ["Duck", "Grain-free", "Hypoallergenic"] } },
+        { emoji: "🌀", img: "assets/products/dog-snack-ls-duck-cod-roll.webp",
+          az: { cat: "Lifestyle · Qəlyanaltılar", name: "Duck & Cod Roll", desc: "Həssas yetkin itlər üçün taxılsız ördək və treskadan rulonlar; hipoallergen qəlyanaltı. 75 q.", tags: ["Ördək", "Treska", "Taxılsız"] },
+          ru: { cat: "Lifestyle · Лакомства", name: "Рулетики из утки и трески", desc: "Беззерновые рулетики из утки и трески для взрослых собак с чувствительностью; гипоаллергенное лакомство. 75 г.", tags: ["Утка", "Треска", "Беззерновые"] },
+          en: { cat: "Lifestyle · Snacks", name: "Duck & Cod Roll", desc: "Grain-free duck and cod rolls for adult dogs with sensitivities; a hypoallergenic treat. 75 g.", tags: ["Duck", "Cod", "Grain-free"] } },
+        { emoji: "🦴", img: "assets/products/dog-snack-ls-rawhide-beef.webp",
+          az: { cat: "Lifestyle · Qəlyanaltılar", name: "Rawhide Stick with Beef", desc: "Həssas yetkin itlər üçün taxılsız mal əti ilə xam dəri çubuqları; hipoallergen qəlyanaltı. 75 q.", tags: ["Mal əti", "Taxılsız", "Uzunmüddətli"] },
+          ru: { cat: "Lifestyle · Лакомства", name: "Палочки из сыромятной кожи с говядиной", desc: "Беззерновые палочки из сыромятной кожи с говядиной для взрослых собак с чувствительностью; гипоаллергенное лакомство. 75 г.", tags: ["Говядина", "Беззерновые", "Долгоиграющее"] },
+          en: { cat: "Lifestyle · Snacks", name: "Rawhide Stick with Beef", desc: "Grain-free rawhide sticks with beef for adult dogs with sensitivities; a hypoallergenic treat. 75 g.", tags: ["Beef", "Grain-free", "Long lasting"] } },
+        { emoji: "🦴", img: "assets/products/dog-snack-ls-rawhide-duck-cod.webp",
+          az: { cat: "Lifestyle · Qəlyanaltılar", name: "Rawhide Stick with Duck & Cod", desc: "Həssas yetkin itlər üçün taxılsız ördək və treska ilə xam dəri çubuqları; hipoallergen qəlyanaltı. 75 q.", tags: ["Ördək", "Treska", "Uzunmüddətli"] },
+          ru: { cat: "Lifestyle · Лакомства", name: "Палочки из сыромятной кожи с уткой и треской", desc: "Беззерновые палочки из сыромятной кожи с уткой и треской для взрослых собак с чувствительностью; гипоаллергенное лакомство. 75 г.", tags: ["Утка", "Треска", "Долгоиграющее"] },
+          en: { cat: "Lifestyle · Snacks", name: "Rawhide Stick with Duck & Cod", desc: "Grain-free rawhide sticks with duck and cod for adult dogs with sensitivities; a hypoallergenic treat. 75 g.", tags: ["Duck", "Cod", "Long lasting"] } }
+      ]
+    },
+    {
+      group: { az: "Təbii çeynəmələr · Superior Care", ru: "Натуральные жевательные · Superior Care", en: "Natural chews · Superior Care Long Lasting Snacks" },
+      items: [
+        { emoji: "🐰", img: "assets/products/dog-chew-rabbit-ear.webp",
+          az: { cat: "Superior Care · Long Lasting Snacks", name: "Rabbit Ear", desc: "Bütün cins yetkin itlər üçün təbii uzunmüddətli çeynəmə: dovşan qulağı. Hipoallergen, buğdasız, dişlərin təmiz qalmasına kömək edir. 75 q.", tags: ["Dovşan", "Uzunmüddətli", "Hipoallergen"] },
+          ru: { cat: "Superior Care · Long Lasting Snacks", name: "Кроличье ухо", desc: "Натуральное долгоиграющее лакомство для взрослых собак всех пород: кроличье ухо. Гипоаллергенное, без пшеницы, помогает поддерживать зубы чистыми. 75 г.", tags: ["Кролик", "Долгоиграющее", "Гипоаллергенные"] },
+          en: { cat: "Superior Care · Long Lasting Snacks", name: "Rabbit Ear", desc: "Natural long-lasting chew for adult dogs of all breeds: a rabbit ear. Hypoallergenic, wheat free, helps keep teeth clean. 75 g.", tags: ["Rabbit", "Long lasting", "Hypoallergenic"] } },
+        { emoji: "🐰", img: "assets/products/dog-chew-ears-salmon.webp",
+          az: { cat: "Superior Care · Long Lasting Snacks", name: "Rabbit Ears with Salmon Filling", desc: "Bütün cins yetkin itlər üçün təbii uzunmüddətli çeynəmə: dovşan qulağı, qızılbalıq içliyi ilə. Hipoallergen, buğdasız, dişlərin təmiz qalmasına kömək edir. 75 q.", tags: ["Dovşan", "Qızılbalıq", "Uzunmüddətli"] },
+          ru: { cat: "Superior Care · Long Lasting Snacks", name: "Кроличьи уши с начинкой из лосося", desc: "Натуральное долгоиграющее лакомство для взрослых собак всех пород: кроличье ухо с начинкой из лосося. Гипоаллергенное, без пшеницы, помогает поддерживать зубы чистыми. 75 г.", tags: ["Кролик", "Лосось", "Долгоиграющее"] },
+          en: { cat: "Superior Care · Long Lasting Snacks", name: "Rabbit Ears with Salmon Filling", desc: "Natural long-lasting chew for adult dogs of all breeds: a rabbit ear with salmon filling. Hypoallergenic, wheat free, helps keep teeth clean. 75 g.", tags: ["Rabbit", "Salmon", "Long lasting"] } },
+        { emoji: "🐰", img: "assets/products/dog-chew-ears-rabbit.webp",
+          az: { cat: "Superior Care · Long Lasting Snacks", name: "Rabbit Ears with Rabbit Filling", desc: "Bütün cins yetkin itlər üçün təbii uzunmüddətli çeynəmə: dovşan qulağı, dovşan əti içliyi ilə. Hipoallergen, buğdasız, dişlərin təmiz qalmasına kömək edir. 75 q.", tags: ["Dovşan", "Uzunmüddətli", "Hipoallergen"] },
+          ru: { cat: "Superior Care · Long Lasting Snacks", name: "Кроличьи уши с начинкой из кролика", desc: "Натуральное долгоиграющее лакомство для взрослых собак всех пород: кроличье ухо с начинкой из кролика. Гипоаллергенное, без пшеницы, помогает поддерживать зубы чистыми. 75 г.", tags: ["Кролик", "Долгоиграющее", "Гипоаллергенные"] },
+          en: { cat: "Superior Care · Long Lasting Snacks", name: "Rabbit Ears with Rabbit Filling", desc: "Natural long-lasting chew for adult dogs of all breeds: a rabbit ear with rabbit filling. Hypoallergenic, wheat free, helps keep teeth clean. 75 g.", tags: ["Rabbit", "Long lasting", "Hypoallergenic"] } },
+        { emoji: "🐰", img: "assets/products/dog-chew-ears-lamb.webp",
+          az: { cat: "Superior Care · Long Lasting Snacks", name: "Rabbit Ears with Lamb Filling", desc: "Bütün cins yetkin itlər üçün təbii uzunmüddətli çeynəmə: dovşan qulağı, quzu əti içliyi ilə. Hipoallergen, buğdasız, dişlərin təmiz qalmasına kömək edir. 75 q.", tags: ["Dovşan", "Quzu əti", "Uzunmüddətli"] },
+          ru: { cat: "Superior Care · Long Lasting Snacks", name: "Кроличьи уши с начинкой из ягнёнка", desc: "Натуральное долгоиграющее лакомство для взрослых собак всех пород: кроличье ухо с начинкой из ягнёнка. Гипоаллергенное, без пшеницы, помогает поддерживать зубы чистыми. 75 г.", tags: ["Кролик", "Ягнёнок", "Долгоиграющее"] },
+          en: { cat: "Superior Care · Long Lasting Snacks", name: "Rabbit Ears with Lamb Filling", desc: "Natural long-lasting chew for adult dogs of all breeds: a rabbit ear with lamb filling. Hypoallergenic, wheat free, helps keep teeth clean. 75 g.", tags: ["Rabbit", "Lamb", "Long lasting"] } },
+        { emoji: "🐰", img: "assets/products/dog-chew-ears-duck.webp",
+          az: { cat: "Superior Care · Long Lasting Snacks", name: "Rabbit Ears with Duck Filling", desc: "Bütün cins yetkin itlər üçün təbii uzunmüddətli çeynəmə: dovşan qulağı, ördək əti içliyi ilə. Hipoallergen, buğdasız, dişlərin təmiz qalmasına kömək edir. 75 q.", tags: ["Dovşan", "Ördək", "Uzunmüddətli"] },
+          ru: { cat: "Superior Care · Long Lasting Snacks", name: "Кроличьи уши с начинкой из утки", desc: "Натуральное долгоиграющее лакомство для взрослых собак всех пород: кроличье ухо с начинкой из утки. Гипоаллергенное, без пшеницы, помогает поддерживать зубы чистыми. 75 г.", tags: ["Кролик", "Утка", "Долгоиграющее"] },
+          en: { cat: "Superior Care · Long Lasting Snacks", name: "Rabbit Ears with Duck Filling", desc: "Natural long-lasting chew for adult dogs of all breeds: a rabbit ear with duck filling. Hypoallergenic, wheat free, helps keep teeth clean. 75 g.", tags: ["Rabbit", "Duck", "Long lasting"] } }
+      ]
+    },
+    {
+      group: { az: "Yumşaq və təlim qəlyanaltıları", ru: "Мягкие и для дрессировки", en: "Soft & training treats" },
+      items: [
+        { emoji: "❤️", img: "assets/products/dog-snack-sc-rabbit-hearts.webp",
+          az: { cat: "Superior Care · Snacks", name: "Rabbit Heart Bites", desc: "Həssas həzmli yetkin itlər üçün qəlyanaltı: dovşan ürəyi tikələri; ağ tüklü itlərə də uyğundur. 75 q.", tags: ["Dovşan", "Həssas həzm"] },
+          ru: { cat: "Superior Care · Snacks", name: "Кусочки кроличьего сердца", desc: "Лакомство для взрослых собак с чувствительным пищеварением: кусочки кроличьего сердца; подходит и собакам со светлой шерстью. 75 г.", tags: ["Кролик", "Чувствительное пищеварение"] },
+          en: { cat: "Superior Care · Snacks", name: "Rabbit Heart Bites", desc: "Treats for adult dogs with sensitive digestion: rabbit heart bites; also suitable for white-coated dogs. 75 g.", tags: ["Rabbit", "Sensitive digestion"] } },
+        { emoji: "🦆", img: "assets/products/dog-snack-sc-duck-slices.webp",
+          az: { cat: "Superior Care · Snacks", name: "Soft Duck Slices", desc: "Həssas həzmli yetkin itlər üçün qəlyanaltı: yumşaq ördək dilimləri; hipoallergen, ağ tüklü itlərə də uyğundur. 75 q.", tags: ["Ördək", "Həssas həzm"] },
+          ru: { cat: "Superior Care · Snacks", name: "Мягкие ломтики утки", desc: "Лакомство для взрослых собак с чувствительным пищеварением: мягкие ломтики утки; гипоаллергенное, подходит и собакам со светлой шерстью. 75 г.", tags: ["Утка", "Чувствительное пищеварение"] },
+          en: { cat: "Superior Care · Snacks", name: "Soft Duck Slices", desc: "Treats for adult dogs with sensitive digestion: soft duck slices; hypoallergenic, also suitable for white-coated dogs. 75 g.", tags: ["Duck", "Sensitive digestion"] } },
+        { emoji: "🌀", img: "assets/products/dog-snack-np-rabbit-cod-rolls.webp",
+          az: { cat: "Nature's Protection · Snacks", name: "Rabbit & Cod Rolls", desc: "Həssas həzmli yetkin itlər üçün dovşan və treska rulonları; hipoallergen və taxılsız. 75 q.", tags: ["Dovşan", "Treska", "Hipoallergen"] },
+          ru: { cat: "Nature's Protection · Snacks", name: "Рулетики из кролика и трески", desc: "Рулетики из кролика и трески для взрослых собак с чувствительным пищеварением; гипоаллергенные и беззерновые. 75 г.", tags: ["Кролик", "Треска", "Гипоаллергенные"] },
+          en: { cat: "Nature's Protection · Snacks", name: "Rabbit & Cod Rolls", desc: "Rabbit and cod rolls for adult dogs with sensitive digestion; hypoallergenic and grain free. 75 g.", tags: ["Rabbit", "Cod", "Hypoallergenic"] } },
+        { emoji: "🎾", img: "assets/products/dog-snack-np-beef-sticks.webp",
+          az: { cat: "Nature's Protection · Snacks", name: "Beef Sticks", desc: "Təlim üçün mal əti çubuqları; ətlə zəngin, süni rəngləyicisiz. 75 q.", tags: ["Mal əti", "Təlim üçün"] },
+          ru: { cat: "Nature's Protection · Snacks", name: "Палочки из говядины", desc: "Палочки из говядины для дрессировки; богаты мясом, без искусственных красителей. 75 г.", tags: ["Говядина", "Для дрессировки"] },
+          en: { cat: "Nature's Protection · Snacks", name: "Beef Sticks", desc: "Beef sticks for training; rich in meat, no artificial colours. 75 g.", tags: ["Beef", "For training"] } }
+      ]
+    },
+    {
       group: { az: "Prime · Yaş qida (paket)", ru: "Prime · Влажный корм (паучи)", en: "Prime · Wet food (pouches)" },
       items: [
         { emoji: "🐶", img: "assets/products/prime-puppy.webp", baby: true,
@@ -967,11 +1063,7 @@ const PRODUCTS = {
         { emoji: "🐟", img: "assets/products/scp-dog-dark.webp",
           az: { cat: "Superior Care · Dark Coat", name: "Dark Coat — Trout & Krill", desc: "Tünd tüklü itlər üçün sousda fileto: alabalıq və kril, DCE kompleksi ilə tünd rəngi qoruyur. 85 q.", tags: ["Alabalıq", "Kril", "Dark Coat"] },
           ru: { cat: "Superior Care · Dark Coat", name: "Dark Coat — Форель и криль", desc: "Филе в соусе для собак с тёмной шерстью: форель и криль, комплекс DCE сохраняет тёмный окрас. 85 г.", tags: ["Форель", "Криль", "Dark Coat"] },
-          en: { cat: "Superior Care · Dark Coat", name: "Dark Coat — Trout & Krill", desc: "Fillets in gravy for dark-coated dogs: trout and krill, DCE complex preserves the dark colour. 85 g.", tags: ["Trout", "Krill", "Dark Coat"] } },
-        { emoji: "🍲", img: "assets/products/dog-can-wellness-soup.webp",
-          az: { cat: "Superior Care · Şorba", name: "White Dogs Wellness Soup — Tuna & Salmon", desc: "Açıq tüklü yetkin itlər üçün sağlamlıq şorbası: tunes və qızılbalıq qarışığı, dəri və tük üçün. 140 ml.", tags: ["Şorba", "Tunes", "Qızılbalıq"] },
-          ru: { cat: "Superior Care · Суп", name: "White Dogs Wellness Soup — Тунец и лосось", desc: "Велнес-суп для взрослых собак со светлой шерстью: микс тунца и лосося, для кожи и шерсти. 140 мл.", tags: ["Суп", "Тунец", "Лосось"] },
-          en: { cat: "Superior Care · Soup", name: "White Dogs Wellness Soup — Tuna & Salmon", desc: "Wellness soup for light-coated adult dogs: tuna and salmon mix, for skin and coat. 140 ml.", tags: ["Soup", "Tuna", "Salmon"] } },
+          en: { cat: "Superior Care · Dark Coat", name: "Dark Coat — Trout & Krill", desc: "Fillets in gravy for dark-coated dogs: trout and krill, DCE complex preserves the dark colour. 85 g.", tags: ["Trout", "Krill", "Dark Coat"] } }
       ]
     },
     {

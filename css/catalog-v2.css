@@ -336,9 +336,10 @@ html:not(.spr) .age-dog:active .age-dog__fig { transform: scale(.94); }
 /* компьютер: в переключателе вместо значка — круглое фото */
 .species__pic { position: relative; display: inline-block; flex: none; width: 28px; height: 28px; margin: -3px 0 -3px -9px; border-radius: 50%; overflow: hidden; background-color: #fff; box-shadow: 0 0 0 1px var(--hairline); }
 .species__pic img { display: block; width: 100%; height: 100%; object-fit: cover; }
-.species__btn[data-species="dogs"] .species__pic img { object-position: 60% 30%; }
-.species__btn[data-species="cats"] .species__pic img { object-position: 55% 35%; }
-.species__btn[data-species="all"] .species__pic img { object-position: 30% 50%; }
+.species__btn[data-species="dogs"] .species__pic img { object-position: 50% 28%; }
+.species__btn[data-species="cats"] .species__pic img { object-position: 45% 30%; }
+.species__btn[data-species="all"] .species__pic img { object-position: 50% 32%; }
+.species__btn[data-species="baby"] .species__pic img { object-position: 50% 40%; }
 .species__btn { gap: 8px; }
 /* ---------- кнопка «Подбор корма» в каталоге ---------- */
 .fnd-cta {
@@ -395,7 +396,7 @@ html:not(.spr) .age-dog:active .age-dog__fig { transform: scale(.94); }
   }
   .catalog-bar .species__pic { display: block; width: 100%; height: 50px; margin: 0; border-radius: 12px; box-shadow: none; }
   .catalog-bar .species__pic::after { content: ''; position: absolute; inset: 0; border-radius: inherit; box-shadow: inset 0 0 0 1px var(--hairline); pointer-events: none; }
-  .catalog-bar .species__pic img { object-position: 50% 40% !important; }
+  .catalog-bar .species__pic img { object-position: 50% 35% !important; }
   .catalog-bar .species .species__btn.is-active { color: var(--brand-ink); }
   .catalog-bar .species .species__btn.is-active .species__pic::after { box-shadow: inset 0 0 0 2.5px var(--brand-ink); }
   .catalog-bar .species .species__btn[aria-disabled="true"] { opacity: .45; }
