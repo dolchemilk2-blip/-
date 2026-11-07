@@ -509,8 +509,18 @@ function openProductModal(item, lang, key, opts) {
         ? `<a class="pmodal__src" href="${offAll.url}" target="_blank" rel="noopener">${dict['products.source'] || ''}: ${offAll.url.replace(/^https?:\/\/(www\.)?/, '').split('/')[0]} <span aria-hidden="true">↗</span></a>`
         : `<a class="pmodal__src" href="https://www.naturesprotection.com${offAll.url}" target="_blank" rel="noopener">${dict['products.official'] || 'naturesprotection.com'} <span aria-hidden="true">↗</span></a>`) : ''}
       ${tags ? `<div class="product__tags">${tags}</div>` : ''}
+      ${orderHtml(t)}
     </div>`;
   showModal(modal, body, opts || {}, item);
+}
+
+// Заказ в WhatsApp: кнопка внизу окна товара (на телефоне — под большим пальцем), сообщение уже с названием товара
+function orderHtml(t) {
+  const name = [t.cat, t.name].filter(Boolean).join(' — ').replace(/<[^>]*>/g, '').replace(/&amp;/g, '&');
+  const href = 'https://wa.me/994102200525?text=' + encodeURIComponent(tr('order.msg', { name }));
+  return `<div class="pm-order"><a class="btn btn--primary pm-order__btn" href="${href}" target="_blank" rel="noopener">` +
+    `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 19.5l1.2-3.6A8 8 0 1 1 8.4 18.6z"/><path class="f" d="M9.2 8.6c.2-.4.6-.4.9-.2l.8 1.6c.1.3 0 .5-.2.7l-.5.5c.5 1 1.3 1.9 2.4 2.4l.5-.5c.2-.2.5-.3.7-.2l1.6.8c.3.2.3.6 0 .9-.5.7-1.3 1-2.1.7a8 8 0 0 1-4.4-4.4c-.3-.8 0-1.6.3-2.3z"/></svg>` +
+    `<span>${tr('order.wa')}</span></a></div>`;
 }
 
 // Состав по официальной странице: ингредиенты, добавки на 1 кг (свёрнуты — длинный список) и анализ таблицей
@@ -983,6 +993,10 @@ function coatBlock(g, dict, mk, lang, head) {
   const cols = { white: [], red: [], dark: [], none: [] };
   g.items.forEach(it => { cols[coatOf(it) || 'none'].push(it); });
   const used = ['white', 'red', 'dark'].filter(c => cols[c].length);
+  // телефон: колонки не стоят друг под другом — переключатель «Ağ / Kürən / Tünd» показывает одну
+  const on = used.includes(COAT_ON[g.species]) ? COAT_ON[g.species] : used[0];
+  const sw = used.length > 1 ? `<div class="coat-switch" role="group" aria-label="${tr('coat.pick')}">${used.map(c =>
+    `<button type="button" class="coat-switch__b${c === on ? ' is-on' : ''}" data-coat-pick="${c}" aria-pressed="${c === on}"><span class="coat-switch__dot coat-switch__dot--${c}" aria-hidden="true"></span>${tr('coatsw.' + c)}</button>`).join('')}</div>` : '';
   const ages = g.species === 'dogs' ? AGE_ORDER.filter(a => g.items.some(it => ageOf(it) === a)) : [];
   let track = { cur: 'all', html: '' };
   if (ages.length > 1 && window.NPAge) {
@@ -999,8 +1013,8 @@ function coatBlock(g, dict, mk, lang, head) {
       </div>`).join('');
   const rest = cols.none.length ? `<div class="products products--col products--rest">${cols.none.map(card).join('')}</div>` : '';
   return `
-    <div class="coat-block${track.html ? ' has-ages' : ''}" data-age="${track.cur}">
-      ${head || ''}${track.html}
+    <div class="coat-block${track.html ? ' has-ages' : ''}" data-age="${track.cur}" data-sp="${g.species || ''}" data-coat-on="${on || ''}">
+      ${head || ''}${track.html}${sw}
       <div class="coat-cols" style="--n:${used.length}">${colHtml}</div>${rest}
     </div>`;
 }
@@ -1029,12 +1043,48 @@ function treatsSubgroups(g, dict) {
 // (js/rails.js). Линейки Superior Care — блок шерсти колонками (coatBlock), без ряда.
 const SP_ORDER = ['dogs', 'cats', 'both'];
 const spOf = g => g.species || 'both';
+// Телефон: заголовок полки и кнопка «Hamısı» (раскрыть ряд сеткой) — на компьютере скрыты, там плитка группы
+const SHELF_T = {
+  az: { 'shelf.all': 'Hamısı', 'shelf.less': 'Yığ', 'coat.pick': 'Tük rəngi', 'coatsw.white': 'Ağ', 'coatsw.red': 'Kürən', 'coatsw.dark': 'Tünd', 'order.wa': 'WhatsApp ilə sifariş et', 'order.msg': 'Salam! Bu məhsulu sifariş etmək istəyirəm: {name}' },
+  ru: { 'shelf.all': 'Все', 'shelf.less': 'Свернуть', 'coat.pick': 'Цвет шерсти', 'coatsw.white': 'Белая', 'coatsw.red': 'Рыжая', 'coatsw.dark': 'Тёмная', 'order.wa': 'Заказать в WhatsApp', 'order.msg': 'Здравствуйте! Хочу заказать: {name}' },
+  en: { 'shelf.all': 'See all', 'shelf.less': 'Show less', 'coat.pick': 'Coat colour', 'coatsw.white': 'White', 'coatsw.red': 'Red', 'coatsw.dark': 'Dark', 'order.wa': 'Order on WhatsApp', 'order.msg': 'Hello! I would like to order: {name}' }
+};
+Object.keys(SHELF_T).forEach(l => { if (TRANSLATIONS[l]) Object.assign(TRANSLATIONS[l], SHELF_T[l]); });
+const COAT_ON = {};   // выбранный цвет шерсти в блоке Superior Care на телефоне — по виду (переживает перерисовку)
+function shelfAllBtn() {
+  return `<button class="shelf-all" type="button" aria-expanded="false"><span>${tr('shelf.all')}</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>`;
+}
+function shelfHead(title, n, solo) {
+  return `
+      <div class="shelf-head"><h4 class="shelf-head__t">${title}<span class="shelf-head__n">${n}</span></h4>${!solo && n > 2 ? shelfAllBtn() : ''}</div>`;
+}
+function toggleShelf(btn) {
+  const head = btn.closest('.shelf-head, .cat-section__head');
+  let rail = head && head.nextElementSibling;
+  while (rail && !rail.classList.contains('rail')) rail = rail.nextElementSibling;
+  if (!rail) return;
+  const open = !rail.classList.contains('is-grid');
+  rail.classList.toggle('is-grid', open);
+  btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  btn.querySelector('span').textContent = tr(open ? 'shelf.less' : 'shelf.all');
+  const track = rail.querySelector('.rail__track');
+  if (track) track.scrollLeft = 0;
+  if (!open && head.getBoundingClientRect().top < 0) head.scrollIntoView({ block: 'start' });   // свернули внизу длинной сетки
+}
+function pickCoat(btn) {
+  const block = btn.closest('.coat-block');
+  if (!block) return;
+  const c = btn.getAttribute('data-coat-pick');
+  block.setAttribute('data-coat-on', c);
+  COAT_ON[block.getAttribute('data-sp')] = c;
+  block.querySelectorAll('[data-coat-pick]').forEach(b => { const on = b === btn; b.classList.toggle('is-on', on); b.setAttribute('aria-pressed', on ? 'true' : 'false'); });
+}
 // Ряд карточек: дорожка + стрелки + ползунок (он же линия-разделитель перед следующим разделом).
 // lead — ряд начинается плиткой группы (раздел из нескольких групп: у каждой свой ряд).
-function railHtml(inner, lead) {
+function railHtml(inner, lead, grid) {
   const arrow = d => `<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="${d}" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
   return `
-      <div class="rail${lead ? ' rail--lead' : ''}">
+      <div class="rail${lead ? ' rail--lead' : ''}${grid ? ' is-grid' : ''}">
         <div class="products rail__track">${inner}</div>
         <button class="rail__btn rail__btn--prev" type="button" aria-label="${tr('rail.prev')}">${arrow('M15 5l-7 7 7 7')}</button>
         <button class="rail__btn rail__btn--next" type="button" aria-label="${tr('rail.next')}">${arrow('M9 5l7 7-7 7')}</button>
@@ -1049,6 +1099,9 @@ function sectionParts(s, brand, lang, dict, mk, o) {
   const groups = sp ? s.groups.filter(g => spOf(g) === sp) : s.groups;
   const count = sp ? groups.reduce((n, g) => n + g.items.length, 0) : s.count;
   const title = (s.def && (s.def[lang] || s.def.ru)) || '';
+  const chipName = (s.def && s.def.chip && (s.def.chip[lang] || s.def.chip.ru)) || '';
+  // телефон: короткое имя раздела (как на чипе), полное остаётся для экранного диктора
+  const titleHtml = chipName && chipName !== title ? `<span class="t-full">${title}</span><span class="t-short" aria-hidden="true">${chipName}</span>` : title;
   const blocks = [];
   if (brand === 'np' && s.id === 'superior-care' && o.firstOfSec !== false) blocks.push(`<p class="coat-note">${dict['products.coatNote'] || ''}</p>`);
   // «Сухой корм» NP: сухие корма Superior Care (по цвету шерсти) живут в своём разделе — даём прямой переход
@@ -1078,14 +1131,19 @@ function sectionParts(s, brand, lang, dict, mk, o) {
   groups.forEach(g => {
     if (g.coat) { blocks.push(coatBlock(g, dict, mk, lang, '')); return; }
     const subs = brand === 'np' && s.id === 'treats' ? treatsSubgroups(g, dict) : null;
-    if (subs) { subs.forEach(sg => rows.push(tile({ title: sg.title, coat: sg.coat, n: sg.items.length, items: sg.items }) + cards(g, sg.items))); return; }
+    if (subs) { subs.forEach(sg => rows.push({ title: sg.title, n: sg.items.length, html: tile({ title: sg.title, coat: sg.coat, n: sg.items.length, items: sg.items }) + cards(g, sg.items) })); return; }
     const items = brand === 'np' && s.id === 'treats' ? byStage(g.items) : g.items;
     // NP / Araton — короткое имя: «Prime», «Superior Care» (раздел над рядом и так называется «Паучи», «Ветдиета»),
     // «Сухой корм»; Tauro / Misoko — полное имя группы
     const name = named ? shortGroupLabel(g, lang).replace(/^[^\p{L}\p{N}]+/u, '') : fullName(g);
-    rows.push(tile({ title: name, n: items.length, items }) + cards(g, items));
+    rows.push({ title: name, n: items.length, html: tile({ title: name, n: items.length, items }) + cards(g, items) });
   });
-  rows.forEach(r => blocks.push(railHtml(r, true)));
+  // Телефон: вместо плитки — заголовок полки «Название · N · Hamısı ›»; «Hamısı» раскрывает ряд сеткой в 2 колонки.
+  // Один раздел на экране (выбран чип) — ряды сразу сеткой. Ряд в разделе один — кнопка стоит в заголовке раздела.
+  const solo = currentSection !== 'all';
+  const single = rows.length === 1;
+  rows.forEach(r => blocks.push((single ? '' : shelfHead(r.title, r.n, solo)) + railHtml(r.html, true, solo)));
+  const secAll = single && !solo && rows[0].n > 2 ? shelfAllBtn() : '';
   const pid = sp ? sp + '-' + s.id : s.id;
   const band = o.band ? `
       <div class="sp-band sp-band--${sp}">${window.NPAge ? `<span class="sp-band__ico">${NPAge.icon(sp)}</span>` : ''}
@@ -1095,7 +1153,7 @@ function sectionParts(s, brand, lang, dict, mk, o) {
     id: pid,
     open: `
     <section class="cat-section${sp ? ' cat-section--' + sp : ''}${o.band ? ' cat-section--band' : ''}" id="sec-${pid}" data-sec="${s.id}" aria-labelledby="sec-${pid}-t">${band}
-      <${h} class="cat-section__title" id="sec-${pid}-t"><span class="cat-section__name">${title}</span><span class="cat-section__count">${count}</span></${h}>`,
+      <div class="cat-section__head"><${h} class="cat-section__title" id="sec-${pid}-t"><span class="cat-section__name">${titleHtml}</span><span class="cat-section__count">${count}</span></${h}>${secAll}</div>`,
     blocks,
     close: `
     </section>`
@@ -1999,6 +2057,10 @@ function initCatalog(initial) {
     openProductModal(item, getLang(), MODAL_KEYS[pid], { id: card.getAttribute('data-id'), brand: currentBrand, card, keyboard });
   };
   grid.addEventListener('click', e => {
+    const sa = e.target.closest('.shelf-all');
+    if (sa) { toggleShelf(sa); return; }
+    const cp = e.target.closest('[data-coat-pick]');
+    if (cp) { pickCoat(cp); return; }
     const x = e.target.closest('.cat-xlink');
     if (x) { setSection(x.getAttribute('data-sec'), { animate: e.detail !== 0 }); return; }
     const card = e.target.closest('[data-pid]');

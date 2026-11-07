@@ -21,8 +21,9 @@
   <link rel="stylesheet" href="css/tpl-why.css?v=17" />
   <link rel="stylesheet" href="css/motion-catalog.css?v=17" />
   <link rel="stylesheet" href="css/feed-calc.css?v=17" />
-  <link rel="stylesheet" href="css/catalog-v2.css?v=18" />
+  <link rel="stylesheet" href="css/catalog-v2.css?v=20" />
   <link rel="stylesheet" href="css/finder.css?v=1" />
+  <link rel="stylesheet" href="css/compact.css?v=1" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 </head>
 <body class="page-enter page-catalog">
@@ -73,7 +74,8 @@
     <div class="container">
       <a href="index.html" class="page-hero__back" data-i18n="products.backHome">← Ana səhifə</a>
       <span class="section__tag" data-i18n="products.tag">Məhsullarımız</span>
-      <h1 class="section__title" data-i18n="products.title">Məhsul kataloqu</h1>
+      <h1 class="section__title"><span class="t-full" data-i18n="products.title">Məhsul kataloqu</span><span class="t-short" data-i18n="nav.products" aria-hidden="true">Məhsullar</span></h1>
+      <button class="m-search-btn" id="mSearchBtn" type="button" aria-label="Axtarış" aria-controls="npSearchInput"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-3.5-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
       <p class="section__subtitle" data-i18n="products.intro">Aşağıdakı bölmədən brendi seçin və pişiklər və itlər üçün qida, qulluq vasitələri və oyuncaqlara baxın.</p>
       <button type="button" class="fnd-cta" data-finder><span class="fnd-cta__ico" aria-hidden="true"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="16" rx="4.2" ry="3.4"/><ellipse cx="6.2" cy="10.6" rx="1.8" ry="2.3"/><ellipse cx="17.8" cy="10.6" rx="1.8" ry="2.3"/><ellipse cx="9.4" cy="6.4" rx="1.8" ry="2.3"/><ellipse cx="14.6" cy="6.4" rx="1.8" ry="2.3"/></svg></span><span class="fnd-cta__txt"><span class="fnd-cta__t" data-i18n="finder.cta.t">Qida seçimi</span><span class="fnd-cta__s" data-i18n="finder.cta.s">Cinsi, yaşı və xüsusiyyətlərinə görə</span></span><svg class="fnd-cta__go" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
     </div>
@@ -98,7 +100,6 @@
         <button class="species__btn species__btn--baby" type="button" role="radio" aria-checked="false" tabindex="-1" data-species="baby"><span class="species__pic" aria-hidden="true"><img src="assets/species/baby.webp" alt="" width="480" height="360" decoding="async"></span><span data-i18n="products.babies">Balalar</span></button>
       </div>
 
-      <button class="m-search-btn" id="mSearchBtn" type="button" aria-label="Axtarış" aria-controls="npSearchInput"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-3.5-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
     </div>
   </div>
 
@@ -176,7 +177,8 @@
   <script src="js/feed-calc.js?v=18"></script>
   <script src="js/age-dogs.js?v=6"></script>
   <script src="js/rails.js?v=3"></script>
-  <script src="js/main.js?v=26"></script>
+  <script src="js/main.js?v=28"></script>
   <script src="js/finder.js?v=1"></script>
+  <script src="js/compact.js?v=1"></script>
 </body>
 </html>

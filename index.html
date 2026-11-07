@@ -14,10 +14,11 @@
   <link rel="stylesheet" href="css/styles.css?v=17" />
   <link rel="stylesheet" href="css/home.css?v=21" />
   <link rel="stylesheet" href="css/mobile.css?v=17" />
-  <link rel="stylesheet" href="css/mobile-home.css?v=18" />
+  <link rel="stylesheet" href="css/mobile-home.css?v=19" />
   <link rel="stylesheet" href="css/motion-home.css?v=18" />
   <link rel="stylesheet" href="css/feed-calc.css?v=17" />
   <link rel="stylesheet" href="css/finder.css?v=1" />
+  <link rel="stylesheet" href="css/compact.css?v=1" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 </head>
 <body class="page-enter home">
@@ -249,13 +250,15 @@
     </section>
 
     <!-- ===== Калькулятор кормления (js/feed-calc.js) ===== -->
-    <section class="section feedcalc" id="feeding" aria-labelledby="feedTitle">
+    <section class="section feedcalc" id="feeding" aria-labelledby="feedTitle" data-m-box>
       <div class="container">
         <div class="home-head">
           <p class="home-head__tag" data-reveal data-i18n="home.feed.tag">Kalkulyator</p>
           <h2 class="home-head__title" id="feedTitle" data-i18n="home.feed.title">Nə qədər yem lazımdır?</h2>
+          <p class="m-lead" data-i18n="compact.calcLead">Heyvanın çəkisinə və qablaşdırmaya görə gündəlik norma.</p>
         </div>
-        <div data-feed-calc></div>
+        <button type="button" class="m-open" data-m-open aria-expanded="false" aria-controls="feedBody" data-open-key="compact.calc" data-less-key="compact.less"><span>Hesabla</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div data-feed-calc id="feedBody"></div>
       </div>
     </section>
 
@@ -390,8 +393,9 @@
           </div>
         </div>
 
-        <form class="contact__form buy__form" id="contactForm" aria-labelledby="contactTitle">
+        <form class="contact__form buy__form" id="contactForm" aria-labelledby="contactTitle" data-m-box>
           <h3 class="buy__formTitle" id="contactTitle" data-i18n="contact.title">Bizimlə əlaqə saxlayın</h3>
+          <button type="button" class="m-open" data-m-open aria-expanded="false" aria-controls="contactForm" data-open-key="compact.mail" data-less-key="compact.less"><span>E-poçtla yazın</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
           <p class="buy__hint" id="contactHint" data-i18n="home.contact.hint">«Göndər» düyməsini basın — poçt proqramınız hazır məktubla açılacaq.</p>
           <label for="cfName"><span data-i18n="contact.name">Ad</span></label>
           <input type="text" id="cfName" name="name" autocomplete="name" required />
@@ -445,7 +449,8 @@
   <script src="js/mobile.js?v=17"></script>
   <script src="js/motion-home.js?v=17"></script>
   <script src="js/feed-calc.js?v=18"></script>
-  <script src="js/main.js?v=26"></script>
+  <script src="js/main.js?v=28"></script>
   <script src="js/finder.js?v=1"></script>
+  <script src="js/compact.js?v=1"></script>
 </body>
 </html>

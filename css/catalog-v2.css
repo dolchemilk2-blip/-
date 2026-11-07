@@ -340,23 +340,6 @@ html:not(.spr) .age-dog:active .age-dog__fig { transform: scale(.94); }
 .species__btn[data-species="cats"] .species__pic img { object-position: 55% 35%; }
 .species__btn[data-species="all"] .species__pic img { object-position: 30% 50%; }
 .species__btn { gap: 8px; }
-/* телефон: четыре плитки с фото, подпись снизу */
-@media (max-width: 720px) {
-  .catalog-bar .species { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; padding: 0; border-radius: 0; background: none; }
-  .catalog-bar .species .species__indicator { display: none; }
-  .catalog-bar .species .species__btn {
-    flex-direction: column; justify-content: flex-start; gap: 6px; min-height: 0; padding: 0; border-radius: 14px;
-    background: none; box-shadow: none; font: 600 12.5px/1.2 var(--font); color: var(--ink-2);
-  }
-  .catalog-bar .species__pic { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; margin: 0; border-radius: 14px; box-shadow: none; }
-  .catalog-bar .species__pic::after { content: ''; position: absolute; inset: 0; border-radius: inherit; box-shadow: inset 0 0 0 1px var(--hairline); transition: box-shadow var(--dur-hover) var(--ease-color); pointer-events: none; }
-  .catalog-bar .species__pic img { object-position: 50% 50% !important; }
-  .catalog-bar .species .species__btn.is-active { color: var(--brand-ink); }
-  .catalog-bar .species .species__btn.is-active .species__pic::after { box-shadow: inset 0 0 0 2.5px var(--brand-ink); }
-  .catalog-bar .species .species__btn[aria-disabled="true"] { opacity: .45; }
-  .catalog-bar .m-search-btn { align-self: start; margin-top: 8px; }
-}
-
 /* ---------- кнопка «Подбор корма» в каталоге ---------- */
 .fnd-cta {
   display: inline-flex; align-items: center; gap: 14px; max-width: 100%; margin-top: 18px; padding: 10px 18px 10px 10px;
@@ -374,3 +357,114 @@ html:not(.spr) .age-dog:active .age-dog__fig { transform: scale(.94); }
 @media (hover: hover) and (pointer: fine) { .fnd-cta:hover { background-color: color-mix(in srgb, var(--accent) 16%, #fff); } }
 .fnd-cta:focus-visible { outline: var(--focus-width, 2px) solid var(--focus-color, var(--accent)); outline-offset: 3px; }
 @media (max-width: 720px) { .fnd-cta { display: flex; width: 100%; margin-top: 12px; } }
+
+/* =====================================================================
+   Телефон: компактный каталог (≤720px)
+   Верх в одну строку, бренды одним рядом, полки вместо плиток групп, карточки без описания,
+   Superior Care — переключатель цвета шерсти. Компьютер не меняется.
+   ===================================================================== */
+.t-short, .shelf-head, .shelf-all, .coat-switch { display: none; }
+.cat-section__head { display: contents; }
+@media (max-width: 720px) {
+  /* 1. «Məhsullar» · поиск · «Qida seçimi» — одна строка */
+  .page-hero { padding: 10px 0 0; }
+  .page-hero .container { display: flex; align-items: center; gap: 8px; }
+  .page-hero .section__title { flex: 1 1 auto; min-width: 0; font-size: 26px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .t-full { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .t-short { display: inline; }
+  .page-hero .m-search-btn { grid-column: auto; flex: none; width: 44px; height: 44px; }
+  .page-hero .fnd-cta { display: inline-flex; flex: none; width: auto; margin: 0; min-height: 44px; padding: 0 14px 0 6px; gap: 8px; border-radius: 999px; }
+  .page-hero .fnd-cta__ico { width: 32px; height: 32px; border-radius: 50%; }
+  .page-hero .fnd-cta__ico svg { width: 19px; height: 19px; }
+  .page-hero .fnd-cta__s, .page-hero .fnd-cta__go { display: none; }
+  .page-hero .fnd-cta__t { font-size: 14.5px; white-space: nowrap; }
+
+  /* 2. Бренды одним рядом, названия в две строки */
+  .catalog-bar { padding: 10px 0 6px; }
+  .catalog-bar__inner { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  .catalog-bar .tabs { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 2px; padding: 3px; border-radius: 14px; }
+  .catalog-bar .tab { min-height: 46px; padding: 0 4px; border-radius: 11px; font: 600 13px/1.15 var(--font); white-space: normal; text-align: center; }
+  .catalog-bar .tabs__indicator { border-radius: 11px; }
+
+  /* 3. Кошки / собаки / малыши: фото пониже, подпись снизу */
+  .catalog-bar .species { grid-column: 1; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; padding: 0; border-radius: 0; background: none; }
+  .catalog-bar .species .species__indicator { display: none; }
+  .catalog-bar .species .species__btn {
+    flex-direction: column; justify-content: flex-start; gap: 5px; min-height: 0; padding: 0; border-radius: 12px;
+    background: none; box-shadow: none; font: 600 13px/1.2 var(--font); color: var(--ink-2);
+  }
+  .catalog-bar .species__pic { display: block; width: 100%; height: 50px; margin: 0; border-radius: 12px; box-shadow: none; }
+  .catalog-bar .species__pic::after { content: ''; position: absolute; inset: 0; border-radius: inherit; box-shadow: inset 0 0 0 1px var(--hairline); pointer-events: none; }
+  .catalog-bar .species__pic img { object-position: 50% 40% !important; }
+  .catalog-bar .species .species__btn.is-active { color: var(--brand-ink); }
+  .catalog-bar .species .species__btn.is-active .species__pic::after { box-shadow: inset 0 0 0 2.5px var(--brand-ink); }
+  .catalog-bar .species .species__btn[aria-disabled="true"] { opacity: .45; }
+
+  /* 4. «107 məhsul göstərilir» — только когда выбран раздел или есть пояснение */
+  .cat-result:not(:has(.cat-result__reset, .cat-result__note)) { display: none; }
+  .cat-result { margin: 6px 0 10px; }
+
+  /* 5. Заголовки: вид — тонкой строкой, раздел — с кнопкой «Hamısı» справа */
+  .sp-band { gap: 10px; margin-bottom: 12px; padding: 6px 12px 6px 6px; border-radius: 16px; }
+  .sp-band__ico { width: 36px; height: 36px; border-radius: 11px; }
+  .sp-band__ico svg { width: 24px; height: 24px; }
+  .sp-band__title { font-size: 22px; }
+  .cat-section { margin-bottom: 30px; }
+  .cat-section + .cat-section--band { margin-top: 40px; }
+  .cat-section__head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 10px; scroll-margin-top: calc(var(--sticky-offset, 120px) + 8px); }
+  .cat-section__head > .cat-section__title, .cat-section__head > h3.cat-section__title { margin: 0; min-width: 0; }
+  .shelf-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 44px; margin: 0 0 4px; scroll-margin-top: calc(var(--sticky-offset, 120px) + 8px); }
+  .rail + .shelf-head { margin-top: 16px; }
+  .shelf-head__t { display: flex; align-items: baseline; gap: 8px; min-width: 0; margin: 0; font: 600 16px/1.25 var(--font); letter-spacing: -.01em; color: var(--ink); }
+  .shelf-head__n { flex: none; font: 500 13px/1 var(--font); color: var(--ink-2); }
+  .shelf-all {
+    display: inline-flex; align-items: center; gap: 2px; flex: none; min-height: 44px; padding: 0 0 0 12px;
+    border: 0; background: none; cursor: pointer; white-space: nowrap; font: 600 14px/1 var(--font); color: var(--brand-ink, #007a3d);
+  }
+  .shelf-all svg { width: 16px; height: 16px; transition: transform var(--duration-fast, 250ms) var(--ease-smooth-out, ease); }
+  .shelf-all[aria-expanded="true"] svg { transform: rotate(-90deg); }
+  .shelf-all:focus-visible { outline: var(--focus-width, 2px) solid var(--focus-color, #007a3d); outline-offset: 2px; border-radius: 8px; }
+
+  /* 6. Полки: без плитки группы; «Hamısı» — сетка в 2 колонки */
+  .rail__track > .group-tile { display: none; }
+  .rail--lead .rail__track::after { display: none; }
+  .cat-section .rail.is-grid .rail__track.products {
+    display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 10px;
+    overflow: visible; scroll-snap-type: none; padding: 0; margin: 0;
+  }
+  .rail.is-grid .rail__track > * { flex: none; }
+  .rail.is-grid .rail__bar { display: none; }
+  .rail__bar { margin-top: 12px; }
+
+  /* 7. Карточка: крупнее упаковка, без описания (оно в окне товара), подписи не мельче 13px */
+  .rail .product__img, .coat-block .products--col .product__img { height: 150px; }
+  .rail .product__desc { display: none; }
+  .rail .product__body { padding: 8px 12px 14px; }
+  .rail .product__cat, .coat-block .products--col .product__cat { font-size: 13px; }
+  .rail .product__name, .coat-block .products--col .product__name { font-size: 15px; line-height: 1.25; }
+  .rail .products > .product:only-child .product__desc, .rail__track > .product:only-child .product__desc { display: -webkit-box; }
+
+  /* 8. Superior Care: «Ağ / Kürən / Tünd» — видна одна колонка */
+  .coat-block { padding: 10px 8px 12px; }
+  .coat-switch { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 3px; margin: 8px 0 0; padding: 3px; border-radius: 14px; background: rgba(0,0,0,.05); }
+  .coat-switch__b {
+    display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-height: 44px; padding: 0 6px;
+    border: 0; border-radius: 11px; background: none; cursor: pointer; font: 600 14px/1.1 var(--font); color: var(--ink-2);
+    transition: background-color var(--dur-hover) var(--ease-color), color var(--dur-hover) var(--ease-color), box-shadow var(--dur-hover) var(--ease-color);
+  }
+  .coat-switch__b.is-on { background: #fff; color: var(--ink); box-shadow: var(--shadow-thumb, 0 2px 8px rgba(0,0,0,.12)); }
+  .coat-switch__b:focus-visible { outline: var(--focus-width, 2px) solid var(--focus-color, #007a3d); outline-offset: 2px; }
+  .coat-switch__dot { width: 12px; height: 12px; flex: none; border-radius: 50%; box-shadow: inset 0 0 0 1px rgba(0,0,0,.18); }
+  .coat-switch__dot--white { background: #fbf8f1; }
+  .coat-switch__dot--red { background: #c26a2c; }
+  .coat-switch__dot--dark { background: #2b2521; }
+  .coat-block[data-coat-on] .coat-col { display: none; }
+  .coat-block[data-coat-on="white"] .coat-col--white,
+  .coat-block[data-coat-on="red"] .coat-col--red,
+  .coat-block[data-coat-on="dark"] .coat-col--dark { display: block; }
+  .coat-block[data-coat-on=""] .coat-col { display: block; }
+  .coat-cols { margin-top: 10px; }
+  .coat-col { padding: 0; border: 0; border-radius: 0; background: none; box-shadow: none; }   /* видна одна колонка — без второй рамки */
+  .coat-col__head { display: none; }   /* что за линия — видно по переключателю и по ленточке на карточке */
+  .coat-block .products--col .product__desc { display: none; }
+}

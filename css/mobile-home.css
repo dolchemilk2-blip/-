@@ -177,3 +177,87 @@
   .home .section { padding: 48px 0; }
   .home-values .brand-tab { padding: 0 6px; }
 }
+
+/* =====================================================================
+   Компактная главная на телефоне (план «компактный дизайн»): короче секции,
+   первый экран ~55%, второстепенное — лентой или по кнопке (js/compact.js).
+   ===================================================================== */
+@media (max-width: 720px) {
+  /* ритм: меньше пустоты между блоками, заголовки 26–28px */
+  .home .section { padding: 36px 0; }
+  .home-head { margin-bottom: 14px; }
+  .home-head__title { font-size: clamp(25px, 7vw, 28px); }
+
+  /* 1. Первый экран: ~55% экрана, две кнопки рядом, без цифр и стрелок */
+  .hero--home { min-height: 0; height: min(58svh, 500px); min-height: 430px; }
+  .hero-home__inner { padding-top: 64px; padding-bottom: 20px; gap: 0; justify-content: flex-end; }
+  .hero-home__eyebrow { margin-bottom: 8px; }
+  .hero-home__title { font-size: clamp(30px, 8.4vw, 34px); }
+  .hero-home__text { margin: 10px 0 16px; font-size: 15px; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .hero-home__actions { flex-direction: row; gap: 10px; }
+  .hero--home .hero-home__actions .btn--primary { flex: 1 1 0; width: auto; min-height: 50px; padding: 0 12px; }
+  .hero-home__link {
+    flex: 1 1 0; justify-content: center; min-height: 50px; padding: 0 12px; border-radius: 999px;
+    border: 1.5px solid rgba(255, 255, 255, .55); background-color: rgba(255, 255, 255, .12);
+    -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); font-weight: 600;
+  }
+  .hero-stats { display: none; }
+  #heroPrev, #heroNext { display: none; }
+  .hero-home__controls { top: 12px; }
+
+  /* 2. Подбор корма: короче заголовок и плитки */
+  .pick { padding-top: 28px; padding-bottom: 8px; }
+  .pick__lead { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .pick-tile__pic { aspect-ratio: 16 / 11; }
+  .pick-tile__lbl { padding: 10px 12px 12px; font-size: 16px; }
+
+  /* 3. Цвет шерсти: картинка и текст меньше */
+  .coat { padding: 32px 0; }
+  .coat__title { font-size: clamp(25px, 7vw, 28px); }
+  .coat__stage { width: min(100%, 250px); margin-top: 8px; }
+  .coat__texts { margin: 10px 0 14px; min-height: 0; }
+  .coat__text p { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; font-size: 14.5px; }
+  .coat__cta { min-height: 48px; }
+
+  /* 4. Бренды: плитки ниже */
+  .tile { min-height: 0; padding: 14px 12px; }
+  .tile__scene { aspect-ratio: 1.4 / 1; margin-top: 8px; }
+
+  /* 5. Калькулятор: по кнопке «Hesabla» */
+  .feedcalc .home-head { margin-bottom: 12px; }
+
+  /* 6. О бренде: ценности — горизонтальной лентой */
+  .home-values .tabs { margin-bottom: 16px; }
+  .home-values .values__grid {
+    display: flex; gap: 10px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none;
+    margin: 0 calc(-1 * var(--gutter)); padding: 0 var(--gutter) 4px; scroll-padding-inline: var(--gutter);
+  }
+  .home-values .values__grid::-webkit-scrollbar { display: none; }
+  .home-values .value-card { flex: 0 0 82%; scroll-snap-align: start; padding: 14px 14px 16px; }
+  .home-values .value-card p { font-size: 14px; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+
+  /* 7. «До и после» и о бренде — фото ниже, текст плотнее */
+  .home-about__inner { gap: 16px; }
+  .home-about__photo { aspect-ratio: 16 / 10; }
+  .home-about__content > p:not(.home-head__tag), .home-about__lead { font-size: 15.5px; line-height: 1.5; }
+  .home-about__list { margin-top: 14px; gap: 6px; }
+
+  /* 8. Качество: 2×2 вместо столбика */
+  .journey { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .journey::before, .journey::after { display: none; }
+  .journey__stop { display: block; padding: 12px; border-radius: 16px; background-color: var(--paper-2); }
+  .journey__stop::before, .journey__stop::after { display: none; }
+  .journey__num { display: block; margin-bottom: 4px; }
+  .journey__stop h3 { font-size: 15.5px; }
+  .journey__stop p { margin-top: 4px; font-size: 13.5px; }
+
+  /* 9. Где купить: карточка магазина; карта — по ссылке адреса (Google Maps), форма — по кнопке */
+  .buy__inner { gap: 20px; }
+  .buy__map { display: none; }
+  .buy__location { margin-top: 8px; }
+  .buy__shop { margin-top: 14px; }
+  .buy__form { padding: 16px; }
+  .buy__form:not(.is-open) { gap: 0; }
+  .buy__formTitle { margin: 0 0 12px; font-size: 18px; }
+
+}
