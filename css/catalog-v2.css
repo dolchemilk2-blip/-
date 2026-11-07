@@ -374,30 +374,3 @@ html:not(.spr) .age-dog:active .age-dog__fig { transform: scale(.94); }
 @media (hover: hover) and (pointer: fine) { .fnd-cta:hover { background-color: color-mix(in srgb, var(--accent) 16%, #fff); } }
 .fnd-cta:focus-visible { outline: var(--focus-width, 2px) solid var(--focus-color, var(--accent)); outline-offset: 3px; }
 @media (max-width: 720px) { .fnd-cta { display: flex; width: 100%; margin-top: 12px; } }
-
-/* ---------- бренды логотипами (название — в aria-label) ---------- */
-.tab__name { display: none; }
-.tab__logo { display: block; width: auto; height: 24px; pointer-events: none; }
-.tab__logo--np { height: 22px; }
-.tab__logo--tpl { height: 32px; margin: -5px 0; }
-.tab__logo--misoko { height: 26px; aspect-ratio: 182 / 64; margin: -2px 0; }
-.tab__logo--araton { height: 38px; margin: -8px 0; }
-.catalog-bar .tab { display: inline-flex; align-items: center; justify-content: center; }
-/* активный бренд — белая «таблетка» с тенью, логотипы остальных приглушены */
-.catalog-bar .tabs .tabs__indicator { background-color: #fff; box-shadow: var(--shadow-thumb, 0 2px 8px rgba(0,0,0,.12)); }
-.catalog-bar .tab.is-active { background-color: #fff; box-shadow: var(--shadow-thumb, 0 2px 8px rgba(0,0,0,.12)); }
-.catalog-bar .tabs:has(.tabs__indicator) .tab.is-active { background-color: transparent; box-shadow: none; }
-.catalog-bar .tab .tab__logo { transition: opacity var(--dur-hover) var(--ease-color), filter var(--dur-hover) var(--ease-color); }
-.catalog-bar .tab:not(.is-active) .tab__logo { opacity: .72; filter: grayscale(.45); }
-@media (hover: hover) and (pointer: fine) {
-  .catalog-bar .tab:not(.is-active):hover .tab__logo { opacity: .9; filter: none; }
-  .catalog-bar .tab:not(.is-active):hover { background-color: rgba(255, 255, 255, .6); }
-}
-@media (max-width: 720px) {
-  .catalog-bar .tab { min-height: 48px; }
-  .tab__logo { height: 26px; }
-  .tab__logo--np { height: 25px; }
-  .tab__logo--tpl { height: 36px; margin: -6px 0; }
-  .tab__logo--misoko { height: 30px; margin: -3px 0; }
-  .tab__logo--araton { height: 42px; margin: -8px 0; }
-}
