@@ -19574,3 +19574,1984 @@ const NP_OFFICIAL = {
 
 // Salmon Oil — для кошек и собак: у кошек та же запись, что у собак
 NP_OFFICIAL["cats||Oils||Salmon Oil"] = NP_OFFICIAL["dogs||Oils||Salmon Oil"];
+
+// ===== Новые лакомства (Lifestyle, Superior Care Long Lasting Snacks и др.): официальные страницы naturesprotection.com =====
+NP_OFFICIAL["dogs||Lifestyle · Snacks||Lamb Sticks"] = {
+ "url": "/product/snack-for-dogs-lamb-sticks/",
+ "sku": "SNK46125",
+ "packs": [
+  "75 g"
+ ],
+ "feed": [],
+ "ru": {
+  "full": [
+   "Палочки из баранины – высококачественные лакомства, разработанные для того, чтобы радовать собаку вкусным, натуральным и питательным угощением. Изготовленные из тщательно отобранных ингредиентов, они отличаются приятным вкусом, который понравится даже самым привередливым питомцам. Данные лакомства оптимально подходят для собак всех пород и размеров – от маленьких до крупных – что делает их незаменимым выбором в качестве награды за тренировку, перекуса или дополнения к ежедневному рациону.",
+   "Рецептура не содержит искусственных красителей, усилителей вкуса и консервантов, что делает продукт чистым и натуральным выбором. Баранина – это диетический, легкоусвояемый и питательный источник белка. Благодаря этим свойствам лакомства особенно подходят для собак с чувствительным пищеварением или питомцам склонных к набору веса. Каждая палочка разработана таким образом, чтобы сохранять натуральный вкус и питательную ценность, оставаясь при этом приятной для жевания и легкоусвояемой.",
+   "Данные лакомства сочетают особый вкус, качество и заботу – они разработаны не только для радостных моментов, но и для поддержания благополучия домашнего питомца. Это натуральный, полезный и сбалансированный выбор, который помогает поддерживать энергию, общее здоровье и полноценность рациона домашнего любимца."
+  ],
+  "composition": "Баранина 44,8%, курица 30%, крахмал 12%, глицерин 6%, растительный белок 3%, сорбит 4%, соль 0,2%.",
+  "additives": "",
+  "analysis": [
+   {
+    "name": "Сырой протеин",
+    "value": "21 %"
+   },
+   {
+    "name": "Сырая клетчатка",
+    "value": "1 %"
+   },
+   {
+    "name": "Сырой жир",
+    "value": "7 %"
+   },
+   {
+    "name": "Сырая зола",
+    "value": "4 %"
+   },
+   {
+    "name": "Влажность",
+    "value": "23 %"
+   }
+  ],
+  "feeding": "Давайте между основными приёмами кормлениями в зависимости от веса, возраста и активности вашего питомца. Не подходит для щенков младше 3 месяцев. У питомца всегда должен быть доступ к свежей и чистой воде."
+ },
+ "en": {
+  "full": [
+   "Lamb sticks – high-quality treats created to give your dog a delicious, natural, and nutritious indulgence. Made from carefully selected ingredients, they stand out with their mild, pleasant taste that even the pickiest pets will love. These treats are suitable for dogs of all breeds and sizes – from small to large – making them an excellent choice as a training reward, an occasional snack, or a complement to the daily diet.",
+   "The recipe contains no artificial colors, flavor enhancers, or preservatives, making it a clean and natural choice you can trust. Lamb is a lean, easily digestible, and highly nutritious source of protein. Thanks to these properties, these treats are especially suitable for dogs with sensitive digestion or a tendency to gain weight. Each stick is crafted to preserve its natural flavor and nutritional value, remaining both enjoyable to chew and easy to digest.",
+   "These treats combine taste, quality, and care – designed not only for moments of joy but also to support your pet’s well-being. Treat your dog to a natural, healthy, and balanced choice that helps maintain energy, good mood, and overall vitality every day."
+  ],
+  "composition": "Lamb 44.8%, chicken 30%, starch 12%, glycerin 6%, vegetable protein 3%, sorbitol 4%, salt 0.2%.",
+  "additives": "",
+  "analysis": [
+   {
+    "name": "Crude protein",
+    "value": "21 %"
+   },
+   {
+    "name": "Crude fibre",
+    "value": "1 %"
+   },
+   {
+    "name": "Crude fat",
+    "value": "7 %"
+   },
+   {
+    "name": "Crude ash",
+    "value": "4 %"
+   },
+   {
+    "name": "Moisture",
+    "value": "23 %"
+   }
+  ],
+  "feeding": "Serve between main meals according to your pet’s weight, age, and activity level. Not suitable for puppies younger than 3 months. Fresh, clean water should always be available."
+ },
+ "az": {
+  "full": [
+   "Quzu əti çubuqları – itinizə dadlı, təbii və qidalı ləzzət vermək üçün yaradılmış yüksək keyfiyyətli qəlyanaltılardır. Diqqətlə seçilmiş tərkiblərdən hazırlanır və hətta ən seçici heyvanların da sevəcəyi yumşaq, xoş dadı ilə seçilir. Bütün cins və ölçülü itlər üçün – kiçikdən iriyə qədər – uyğundur: təlim zamanı mükafat, arabir qəlyanaltı və ya qayğı əlaməti kimi əla seçimdir.",
+   "Reseptdə süni rəngləyicilər, dad gücləndiricilər və konservantlar yoxdur – bu, etibar edə biləcəyiniz təmiz və təbii seçimdir. Quzu əti az yağlı, asan həzm olunan və çox qidalı protein mənbəyidir. Buna görə bu qəlyanaltılar xüsusilə həssas həzmli və ya çəki artımına meyilli itlər üçün uyğundur. Hər çubuq təbii dadını və qida dəyərini qoruyacaq şəkildə hazırlanır.",
+   "Bu qəlyanaltılar dadı, keyfiyyəti və qayğını birləşdirir – təkcə sevinc anları üçün deyil, həm də heyvanınızın rifahını dəstəkləmək üçün. İtinizi hər gün enerjini, əhval-ruhiyyəni və ümumi canlılığı qorumağa kömək edən təbii, sağlam və balanslı seçimlə ərköyünləşdirin."
+  ],
+  "composition": "Quzu əti 44,8 %, toyuq əti 30 %, nişasta 12 %, qliserin 6 %, bitki zülalı 3 %, sorbitol 4 %, duz 0,2 %.",
+  "additives": "",
+  "analysis": [
+   {
+    "name": "Xam protein",
+    "value": "21 %"
+   },
+   {
+    "name": "Xam lif",
+    "value": "1 %"
+   },
+   {
+    "name": "Xam yağ",
+    "value": "7 %"
+   },
+   {
+    "name": "Xam kül",
+    "value": "4 %"
+   },
+   {
+    "name": "Nəmlik",
+    "value": "23 %"
+   }
+  ],
+  "feeding": "Əsas yeməklər arasında ev heyvanının çəkisini, yaşını və aktivliyini nəzərə alaraq verin. 3 aylıqdan kiçik küçüklər üçün uyğun deyil. Təmiz, təzə su həmişə əlçatan olmalıdır."
+ }
+};
+NP_OFFICIAL["dogs||Lifestyle · Snacks||Lamb Lollipop"] = {
+ "url": "/product/snack-for-dogs-lamb-lollipop/",
+ "sku": "SNK46131",
+ "packs": [
+  "75 g"
+ ],
+ "feed": [],
+ "ru": {
+  "full": [
+   "Лакомства-палочки для собак Nature’s Protection Lifestyle с ягнёнком — сочетают прекрасный вкус и функциональность. Разработаны не только для удовлетворения вкусовых предпочтений домашнего питомца, но и для поддержания гигиены полости рта. Приготовлены из легкоусвояемого ягнёнка — высококачественного источника белка, содержат 25% говяжьей кожи, которая помогает очищать зубы и поддерживать гигиену рта. Беззлаковая формула подходит для чувствительных собак. Каждый кусочек мягко массирует дёсны и снижает накопление зубного налёта, а удобная упаковка с застёжкой zip-lock защищает лакомства от влаги и сохраняет их свежесть. Тщательно отобранные ингредиенты отвечают специфическим питательным потребностям собак, делая дынные палочки идеальными для ежедневного использования — они поддерживают пищеварение и чистоту зубов,поскольку способствуют жеванию."
+  ],
+  "composition": "Ягнёнок 65%, говяжья кожа 25%, картофельный крахмал 7%, глицерин 3%.",
+  "additives": "",
+  "analysis": [
+   {
+    "name": "Сырой протеин",
+    "value": "30 %"
+   },
+   {
+    "name": "Сырая клетчатка",
+    "value": "3 %"
+   },
+   {
+    "name": "Сырой жир",
+    "value": "4 %"
+   },
+   {
+    "name": "Сырая зола",
+    "value": "3 %"
+   },
+   {
+    "name": "Влажность",
+    "value": "23 %"
+   }
+  ],
+  "feeding": "Давайте между основными кормлениями, учитывая вес, возраст и уровень активности питомца. Не подходит для щенков младше 3 месяцев. У питомца должна быть миска с чистой свежей водой."
+ },
+ "en": {
+  "full": [
+   "Nature’s Protection Lifestyle lamb sticks for dogs are treats that combine great taste with functionality. These snacks are designed not only to satisfy your dog’s taste preferences but also to support dental and oral care. Made from easily digestible lamb—a reliable, high-quality source of protein—and enriched with 25% beef hide to help naturally clean teeth and maintain oral hygiene.",
+   "The grain-free formula makes them suitable even for more sensitive dogs. Each bite gently massages the gums and reduces plaque buildup, while the convenient zip-lock packaging protects the treats from moisture and preserves their freshness. Carefully selected ingredients meet dogs’ specific nutritional needs, making these sticks perfect for daily use—they help support good digestion and dental cleanliness, promoting natural chewing and everyday comfort."
+  ],
+  "composition": "Lamb 65%, beef hide 25%, potato starch 7%, glycerin 3%.",
+  "additives": "",
+  "analysis": [
+   {
+    "name": "Crude protein",
+    "value": "30 %"
+   },
+   {
+    "name": "Crude fibre",
+    "value": "3 %"
+   },
+   {
+    "name": "Crude fat",
+    "value": "4 %"
+   },
+   {
+    "name": "Crude ash",
+    "value": "3 %"
+   },
+   {
+    "name": "Moisture",
+    "value": "23 %"
+   }
+  ],
+  "feeding": "Give between main meals, taking into account your pet’s weight, age, and activity level. Not suitable for puppies younger than 3 months. A bowl of fresh, clean water should always be available to your pet."
+ },
+ "az": {
+  "full": [
+   "Nature’s Protection Lifestyle quzu əti qəlyanaltıları gözəl dadı funksionallıqla birləşdirir. Onlar itinizin dad üstünlüklərini təmin etməklə yanaşı, diş və ağız boşluğu qulluğunu da dəstəkləmək üçün hazırlanıb. Asan həzm olunan quzu ətindən – etibarlı, yüksək keyfiyyətli protein mənbəyindən – hazırlanır və dişləri təbii yolla təmizləməyə və ağız gigiyenasını qorumağa kömək edən 25 % mal dərisi ilə zənginləşdirilib.",
+   "Taxılsız formula onları daha həssas itlər üçün də uyğun edir. Hər dişləmə diş ətini yumşaq masaj edir və ərpin yığılmasını azaldır, rahat zip-lock qablaşdırma isə qəlyanaltıları nəmdən qoruyur və təzəliyini saxlayır. Diqqətlə seçilmiş tərkiblər itlərin xüsusi qida ehtiyaclarına cavab verir və bu qəlyanaltıları gündəlik istifadə üçün ideal edir – yaxşı həzmi və dişlərin təmizliyini dəstəkləyir."
+  ],
+  "composition": "Quzu əti 65 %, mal dərisi 25 %, kartof nişastası 7 %, qliserin 3 %.",
+  "additives": "",
+  "analysis": [
+   {
+    "name": "Xam protein",
+    "value": "30 %"
+   },
+   {
+    "name": "Xam lif",
+    "value": "3 %"
+   },
+   {
+    "name": "Xam yağ",
+    "value": "4 %"
+   },
+   {
+    "name": "Xam kül",
+    "value": "3 %"
+   },
+   {
+    "name": "Nəmlik",
+    "value": "23 %"
+   }
+  ],
+  "feeding": "Əsas yeməklər arasında ev heyvanının çəkisini, yaşını və aktivliyini nəzərə alaraq verin. 3 aylıqdan kiçik küçüklər üçün uyğun deyil. Təmiz, təzə su həmişə əlçatan olmalıdır."
+ }
+};
+NP_OFFICIAL["dogs||Lifestyle · Snacks||Rawhide Stick with Beef"] = {
+ "url": "/product/snacks-for-dogs-rawhide-foaming-sticks-with-beef/",
+ "sku": "SNK46142",
+ "packs": [
+  "75 g"
+ ],
+ "feed": [],
+ "ru": {
+  "full": [
+   "Палочки из говяжьей кожи – это высококачественные, натуральные лакомства для собак, обеспечивающие сбалансированное питание и эффективный уход за зубами. Ароматные палочки доставляют питомцу долгоиграющее жевательное удовольствие, которое соответствует его природному инстинкту.",
+   "Изготовленные из тщательно отобранных ингредиентов, данные лакомства богаты питательными веществами и легко усваиваются. Говядина — диетическое гипоаллергенное мясо, оптимально подходящее для собак с чувствительным пищеварением или склонностью к аллергиям. Лакомство является источником белка и железа, поддерживает мышечный тонус, энергетический баланс и помогает контролировать вес питомца. Содержание трески и мяса птицы обеспечивает организм питомца высококачественным белком и жирными кислотами Омега-3, которые поддерживают здоровье кожи и блеск шерсти.",
+   "Твёрдая структура обеспечивает лакомству не только выраженный вкус, но и особую функциональность – жевание помогает естественным образом очищать зубы, снижать образование зубного налёта и массировать десны. Таким образом, данные лакомства способствуют поддержанию гигиены полости рта и свежести дыхания питомца.",
+   "Продукт не содержит зерновых и ингредиентов, что делает его подходящим даже для чувствительных или аллергичных питомцев. Лакомства также не содержат искусственных красителей, усилителей вкуса или антиоксидантов — только натуральные компоненты, полезные для здоровья собаки. Легкоусвояемая формула деликатно воздействует на пищеварительную систему, делая данные лакомства идеально подходящими для ежедневного перекуса или в качестве функционального поощрения во время тренировок.",
+   "Палочки из говяжьей кожи – это не просто вкусное лакомство, а продуманный выбор, который объединяет вкус, питательную ценность и оздоровительный эффект в одном продукте. Позвольте домашнему любимцу наслаждаться натуральным, здоровым и вкусным перекусом, который помогает поддерживать общее здоровье и гигиену полости рта."
+  ],
+  "composition": "Говядина 45,6%, палочки из говяжьей кожи 15%, мясо птицы 10%, треска 10%, глицерин 8%, крахмал 6%, растительные белки 3%, сорбитол 2%, соль 0,5%.",
+  "additives": "",
+  "analysis": [
+   {
+    "name": "Сырой протеин",
+    "value": "28 %"
+   },
+   {
+    "name": "Сырая клетчатка",
+    "value": "2 %"
+   },
+   {
+    "name": "Сырой жир",
+    "value": "5 %"
+   },
+   {
+    "name": "Сырая зола",
+    "value": "4,5 %"
+   },
+   {
+    "name": "Влажность",
+    "value": "21 %"
+   }
+  ],
+  "feeding": "Давайте между основными приёмами кормлениями в зависимости от веса, возраста и активности вашего питомца. Не подходит для щенков младше 3 месяцев. У питомца всегда должен быть доступ к свежей и чистой воде."
+ },
+ "en": {
+  "full": [
+   "Cattle hide sticks with beef – high-quality, natural treats created for dogs who value a healthy lifestyle, balanced nutrition, and proper dental care. These delicious sticks not only bring joy to your pet but also provide long-lasting chewing satisfaction that fulfills their natural chewing instinct. Made from carefully selected ingredients, these treats are rich in nutrients and easily digestible. Beef is a lean meat with hypoallergenic properties, making it suitable for sensitive or allergy-prone dogs.",
+   "It is a natural source of protein and iron, helping to maintain muscle tone, energy balance, and proper weight control. The addition of cod and poultry provides extra high-quality proteins and Omega-3 fatty acids, which support healthy skin and a shiny coat. The firm texture of the cattle hide ensures that the treat is not only tasty but also functional – chewing helps naturally clean teeth, reduce plaque buildup, and massage gums. In this way, these treats contribute to maintaining oral hygiene and keeping breath fresh. The product is made without grains or grain-based ingredients, making it suitable even for sensitive or allergic pets. It contains no artificial colors, flavor enhancers, or antioxidants – only natural components beneficial to your dog’s health.",
+   "The easily digestible formula is gentle on the digestive system, making these treats ideal for daily enjoyment or as a functional reward during training. Cattle hide sticks with beef – not just a tasty treat, but a thoughtful choice that combines flavor, nutritional value, and health benefits in one product.",
+   "Let your pet enjoy a natural, healthy, and delicious snack that helps maintain good well-being, clean teeth, and a happy mood every day."
+  ],
+  "composition": "Beef 45.6%, cattle hide sticks 15%, poultry meat 10%, cod 10%, glycerin 8%, starch 6%, vegetable proteins 3%, sorbitol 2%, salt 0.5%.",
+  "additives": "",
+  "analysis": [
+   {
+    "name": "Crude protein",
+    "value": "28 %"
+   },
+   {
+    "name": "Crude fibre",
+    "value": "2 %"
+   },
+   {
+    "name": "Crude fat",
+    "value": "5 %"
+   },
+   {
+    "name": "Crude ash",
+    "value": "4,5 %"
+   },
+   {
+    "name": "Moisture",
+    "value": "21 %"
+   }
+  ],
+  "feeding": "Serve between main meals according to your pet’s weight, age, and activity level. Not suitable for puppies younger than 3 months. Fresh, clean water should always be available."
+ },
+ "az": {
+  "full": [
+   "Mal əti ilə mal dərisi çubuqları – sağlam həyat tərzini, balanslı qidalanmanı və düzgün diş qulluğunu dəyərləndirən itlər üçün yaradılmış yüksək keyfiyyətli, təbii qəlyanaltılardır. Bu dadlı çubuqlar heyvanınıza təkcə sevinc vermir, həm də təbii çeynəmə instinktini təmin edən uzunmüddətli çeynəmə zövqü bəxş edir. Diqqətlə seçilmiş tərkiblərdən hazırlanır, qida maddələri ilə zəngindir və asan həzm olunur.",
+   "Mal əti protein və dəmirin təbii mənbəyidir: əzələ tonusunu, enerji balansını və düzgün çəki nəzarətini qorumağa kömək edir. Treska və quş əti əlavə yüksək keyfiyyətli protein və sağlam dəri və parlaq tükü dəstəkləyən Omega-3 yağ turşuları verir. Mal dərisinin bərk teksturası qəlyanaltını həm dadlı, həm də funksional edir – çeynəmə dişləri təbii yolla təmizləməyə və ərpi azaltmağa kömək edir.",
+   "Asan həzm olunan formula həzm sisteminə qarşı yumşaqdır – bu qəlyanaltılar gündəlik ləzzət və ya təlim zamanı funksional mükafat üçün idealdır. Mal əti ilə mal dərisi çubuqları – sadəcə dadlı qəlyanaltı deyil, dadı, qida dəyərini və sağlamlığa faydanı birləşdirən düşünülmüş seçimdir.",
+   "Qoy heyvanınız hər gün yaxşı rifahı, təmiz dişləri və şən əhval-ruhiyyəni qorumağa kömək edən təbii, sağlam və dadlı qəlyanaltıdan zövq alsın."
+  ],
+  "composition": "Mal əti 45,6 %, mal dərisi çubuqları 15 %, quş əti 10 %, treska 10 %, qliserin 8 %, nişasta 6 %, bitki zülalları 3 %, sorbitol 2 %, duz 0,5 %.",
+  "additives": "",
+  "analysis": [
+   {
+    "name": "Xam protein",
+    "value": "28 %"
+   },
+   {
+    "name": "Xam lif",
+    "value": "2 %"
+   },
+   {
+    "name": "Xam yağ",
+    "value": "5 %"
+   },
+   {
+    "name": "Xam kül",
+    "value": "4,5 %"
+   },
+   {
+    "name": "Nəmlik",
+    "value": "21 %"
+   }
+  ],
+  "feeding": "Əsas yeməklər arasında ev heyvanının çəkisini, yaşını və aktivliyini nəzərə alaraq verin. 3 aylıqdan kiçik küçüklər üçün uyğun deyil. Təmiz, təzə su həmişə əlçatan olmalıdır."
+ }
+};
+NP_OFFICIAL["dogs||Lifestyle · Snacks||Rawhide Stick with Duck & Cod"] = {
+ "url": "/product/snack-for-dogs-rawhide-sticks-with-duck-and-cod-rolls/",
+ "sku": "SNK46132",
+ "packs": [
+  "75 g"
+ ],
+ "feed": [],
+ "ru": {
+  "full": [
+   "Жевательные палочки из говяжьей кожи с уткой и треской — высококачественные натуральные лакомства, разработанные с заботой о здоровье и природных потребностях собаки. Лакомство не только обеспечивает долгоиграющее удовольствие от жевания, но и помогает поддерживать гигиену полости рта — жевание снижает образование зубного налёта, очищает зубы и массирует десны.",
+   "Изготовленные из тщательно подобранных ингредиентов животного происхождения — утки, трески и говяжьей кожи, данные лакомства обладают высокой питательной ценностью и натуральным вкусом. Утка — диетический источник птицы с гипоаллергенными свойствами, подходящий даже для чувствительных или склонных к аллергии питомцев. Треска — белая рыба, богатая жирными кислотами Омега-3 и витаминами A и D, которые способствуют поддержанию здоровью кожи, иммунитета, гибкости суставов и блеску шерсти.",
+   "Лакомства не содержат искусственных красителей, антиоксидантов и усилителей вкуса — только натуральные компоненты, полезные для организма собаки. Продукт также не содержит зерновых, что делает его оптимально подходящим для питомцев с чувствительным пищеварением или пищевой непереносимостью. Легкоусвояемый состав деликатен для желудочно-кишечного тракта и поддерживает общее здоровье домашнего любимца.",
+   "Палочки имеют более плотную текстуру, что стимулирует жевание и доставляет собаке долгоиграющее удовольствие. Их также можно использовать как полезное поощрение во время тренировок или как ежедневный перекус. Качественные ингредиенты, натуральный вкус и функциональная польза делают данные лакомства отличным выбором для владельцев стремящихся предоставить своим питомцам, сбалансированное питание."
+  ],
+  "composition": "Утка 51,5%, жевательные палочки из говяжьей кожи 25%, треска 8%, глицерин 6%, крахмал 5%, сорбитол 2%, растительные белки 2%, соль 0,5%.",
+  "additives": "",
+  "analysis": [
+   {
+    "name": "Сырой протеин",
+    "value": "35 %"
+   },
+   {
+    "name": "Сырая клетчатка",
+    "value": "1 %"
+   },
+   {
+    "name": "Сырой жир",
+    "value": "3,5 %"
+   },
+   {
+    "name": "Сырая зола",
+    "value": "4,5 %"
+   },
+   {
+    "name": "Влажность",
+    "value": "21 %"
+   }
+  ],
+  "feeding": "Давайте между основными приёмами кормлениями в зависимости от веса, возраста и активности вашего питомца. Не подходит для щенков младше 3 месяцев. У питомца всегда должен быть доступ к свежей и чистой воде."
+ },
+ "en": {
+  "full": [
+   "Cattle hide sticks with duck and cod – high-quality, natural treats designed with your dog’s health and natural needs in mind. This delicious snack not only provides long-lasting enjoyment but also helps maintain good oral hygiene – chewing reduces plaque buildup, cleans teeth, and massages gums.",
+   "Made from carefully selected animal-based ingredients – duck, cod, and cattle hide – these treats offer high nutritional value and a natural flavor. Duck is a lean poultry source with hypoallergenic properties, making it suitable even for sensitive or allergy-prone pets. Cod is a lean white fish rich in Omega-3 fatty acids and vitamins A and D, which help maintain healthy skin, strong immunity, joint flexibility, and a shiny coat.",
+   "These treats are made without artificial colors, antioxidants, or flavor enhancers – only from natural components beneficial to your dog’s body. The product is also grain-free, making it ideal for pets with sensitive digestion or food intolerances. The easily digestible composition is gentle on the digestive tract and supports overall well-being on a daily basis.",
+   "The sticks have a slightly firmer texture, encouraging natural chewing behavior and keeping your dog engaged for longer. They are a great choice not only for occupying your pet but also for satisfying its natural chewing instinct. They can also be used as a healthy reward during training or as a daily treat.",
+   "High-quality ingredients, natural flavor, and functional benefits make these treats an excellent choice for dogs who value balanced nutrition, good well-being, and healthy teeth."
+  ],
+  "composition": "Duck 51.5%, cattle hide sticks 25%, cod 8%, glycerin 6%, starch 5%, sorbitol 2%, vegetable proteins 2%, salt 0.5%.",
+  "additives": "",
+  "analysis": [
+   {
+    "name": "Crude protein",
+    "value": "35 %"
+   },
+   {
+    "name": "Crude fibre",
+    "value": "1 %"
+   },
+   {
+    "name": "Crude fat",
+    "value": "3.5 %"
+   },
+   {
+    "name": "Crude ash",
+    "value": "4.5 %"
+   },
+   {
+    "name": "Moisture",
+    "value": "21 %"
+   }
+  ],
+  "feeding": "Serve between main meals according to your pet’s weight, age, and activity level. Not suitable for puppies younger than 3 months. Fresh, clean water should always be available."
+ },
+ "az": {
+  "full": [
+   "Ördək və treska ilə mal dərisi çubuqları – itinizin sağlamlığı və təbii ehtiyacları nəzərə alınmaqla hazırlanmış yüksək keyfiyyətli, təbii qəlyanaltılardır. Bu dadlı qəlyanaltı təkcə uzunmüddətli zövq vermir, həm də ağız gigiyenasını qorumağa kömək edir – çeynəmə ərpin yığılmasını azaldır, dişləri təmizləyir və diş ətini masaj edir.",
+   "Diqqətlə seçilmiş heyvani tərkiblərdən – ördək, treska və mal dərisindən – hazırlanan bu qəlyanaltılar yüksək qida dəyəri və təbii dad təqdim edir. Ördək hipoallergen xüsusiyyətli az yağlı quş əti mənbəyidir və həssas və ya allergiyaya meyilli heyvanlar üçün də uyğundur. Treska Omega-3 yağ turşuları, A və D vitaminləri ilə zəngin az yağlı ağ balıqdır – sağlam dəriyə, güclü immunitetə və oynaqlara dəstək olur.",
+   "Qəlyanaltılar süni rəngləyicilər, antioksidantlar və dad gücləndiricilər olmadan hazırlanır – yalnız itin orqanizmi üçün faydalı təbii komponentlərdən. Məhsul taxılsızdır və həssas həzmli və ya qida dözümsüzlüyü olan heyvanlar üçün idealdır. Asan həzm olunan tərkib həzm traktına qarşı yumşaqdır və gündəlik rifahı dəstəkləyir.",
+   "Çubuqlar bir qədər bərk teksturaya malikdir, təbii çeynəmə davranışını həvəsləndirir və itinizi daha uzun müddət məşğul saxlayır. Onları təlim zamanı sağlam mükafat və ya gündəlik qəlyanaltı kimi də istifadə etmək olar.",
+   "Yüksək keyfiyyətli tərkib, təbii dad və funksional fayda bu qəlyanaltıları balanslı qidalanmanı, yaxşı rifahı və sağlam dişləri dəyərləndirən itlər üçün əla seçim edir."
+  ],
+  "composition": "Ördək əti 51,5 %, mal dərisi çubuqları 25 %, treska 8 %, qliserin 6 %, nişasta 5 %, sorbitol 2 %, bitki zülalları 2 %, duz 0,5 %.",
+  "additives": "",
+  "analysis": [
+   {
+    "name": "Xam protein",
+    "value": "35 %"
+   },
+   {
+    "name": "Xam lif",
+    "value": "1 %"
+   },
+   {
+    "name": "Xam yağ",
+    "value": "3.5 %"
+   },
+   {
+    "name": "Xam kül",
+    "value": "4.5 %"
+   },
+   {
+    "name": "Nəmlik",
+    "value": "21 %"
+   }
+  ],
+  "feeding": "Əsas yeməklər arasında ev heyvanının çəkisini, yaşını və aktivliyini nəzərə alaraq verin. 3 aylıqdan kiçik küçüklər üçün uyğun deyil. Təmiz, təzə su həmişə əlçatan olmalıdır."
+ }
+};
+NP_OFFICIAL["dogs||Lifestyle · Snacks||Duck & Cod Roll"] = {
+ "url": "/product/snacks-for-dogs-duck-and-cod-rolls/",
+ "sku": "SNK46129",
+ "packs": [
+  "75 g"
+ ],
+ "feed": [],
+ "ru": {
+  "full": [
+   "Рулетики из утки и трески – это натуральные, высококачественные лакомства, разработанные для сбалансированного питания и приятного удовольствия. Они сочетают два ценных белка животного происхождения — утку и треску, известные своими питательными и гипоаллергенными свойствами. Треска — диетическая белая рыба, богатая жирными кислотами Омега-3 и витаминами A и D, которые помогают поддерживать здоровье кожи, блеск шерсти и крепкость костей. Утка — легкоусвояемый источник белка с низким содержанием жира, оптимально подходящий для собак, склонных к аллергиям или набору избыточного веса.",
+   "Лакомства не содержат зерновых, которые способны вызывать аллергические реакции, что делает их подходящими даже для гиперчувствительных или аллергичных питомцев. Без искусственных красителей, антиоксидантов и ароматизаторов — только натуральные ингредиенты, поддерживающие баланс рациона.",
+   "Жуя данные рулеты, питомец естественным образом очищает зубы от налёта и массирует десна, что способствует гигиене полости рта. Жирные кислоты Омега-3 и Омега-6 в свою очередь способствуют здоровью кожи и блеску шерсти.",
+   "Это осознанный и ответственный выбор для владельцев, которые стремятся предложить домашним любимцам полезный, питательный и вкусный перекус — каждый кусочек сочетает в себе натуральность, выраженный вкус и искреннюю заботу о благополучии домашнего животного."
+  ],
+  "composition": "Утка 71.8%, треска 20%, сорбитол 2%, глицерин 2%, растительный белок 2%, крахмал 2%, соль 0.2%.",
+  "additives": "",
+  "analysis": [
+   {
+    "name": "Сырой протеин",
+    "value": "23 %"
+   },
+   {
+    "name": "Сырая клетчатка",
+    "value": "1 %"
+   },
+   {
+    "name": "Сырой жир",
+    "value": "5 %"
+   },
+   {
+    "name": "Сырая зола",
+    "value": "4 %"
+   },
+   {
+    "name": "Влажность",
+    "value": "23 %"
+   }
+  ],
+  "feeding": "Давать между основными кормлениями, исходя из веса, возраста и активности питомца. Не подходит для щенков младше 3 месяцев. У питомца всегда должен быть доступ к свежей воде."
+ },
+ "en": {
+  "full": [
+   "Duck and Cod Rolls – natural, high-quality treats created for responsible nutrition and enjoyable indulgence. They combine two valuable animal-based proteins – duck and cod – known for their nutritional benefits and hypoallergenic properties. Cod is a lean white fish rich in Omega-3 fatty acids and vitamins A and D, which help maintain healthy skin, a shiny coat, and strong bones.",
+   "Duck is an easily digestible, low-fat protein source, suitable for dogs prone to allergies or excess weight. These treats contain no grains that may trigger allergic reactions, making them suitable even for sensitive or allergy-prone pets. Free from artificial colorants, antioxidants, and flavor enhancers – only natural ingredients that support a balanced canine diet. By chewing these rolls, dogs naturally clean their teeth, helping reduce plaque and massage gums, thus supporting oral hygiene.",
+   "The Omega-3 and Omega-6 fatty acids present in the treats may also contribute to a healthy, glossy coat and nourished skin. An excellent choice for owners who want to offer their pets a healthy, nutritious, and delicious way to indulge – every bite blends naturalness, taste, and genuine care for the pet’s well-being."
+  ],
+  "composition": "Duck 71.8%, cod 20%, sorbitol 2%, glycerin 2%, vegetable protein 2%, starch 2%, salt 0.2%.",
+  "additives": "",
+  "analysis": [
+   {
+    "name": "Crude protein",
+    "value": "23 %"
+   },
+   {
+    "name": "Crude fibre",
+    "value": "1 %"
+   },
+   {
+    "name": "Crude fat",
+    "value": "5 %"
+   },
+   {
+    "name": "Crude ash",
+    "value": "4 %"
+   },
+   {
+    "name": "Moisture",
+    "value": "23 %"
+   }
+  ],
+  "feeding": "Serve between main meals according to your pet’s weight, age, and activity level. Not suitable for puppies younger than 3 months. Fresh, clean water should always be available."
+ },
+ "az": {
+  "full": [
+   "Ördək və treska rulonları – məsuliyyətli qidalanma və xoş ləzzət üçün yaradılmış təbii, yüksək keyfiyyətli qəlyanaltılardır. Onlar qida faydası və hipoallergen xüsusiyyətləri ilə tanınan iki dəyərli heyvani proteini – ördək və treskanı birləşdirir. Treska Omega-3 yağ turşuları, A və D vitaminləri ilə zəngin az yağlı ağ balıqdır: sağlam dəri, parlaq tük və güclü sümüklər üçün.",
+   "Ördək asan həzm olunan, az yağlı protein mənbəyidir və allergiyaya və ya artıq çəkiyə meyilli itlər üçün uyğundur. Qəlyanaltılarda allergik reaksiyalar yarada biləcək taxıl yoxdur, buna görə həssas və ya allergiyaya meyilli heyvanlara da uyğundur. Süni rəngləyicilər, antioksidantlar və dad gücləndiricilər yoxdur – yalnız balanslı it rasionunu dəstəkləyən təbii tərkiblər.",
+   "Tərkibdəki Omega-3 və Omega-6 yağ turşuları sağlam, parlaq tükə və qidalanmış dəriyə də töhfə verə bilər. Heyvanına sağlam, qidalı və dadlı ərköyünlük təqdim etmək istəyən sahiblər üçün əla seçim – hər tikədə təbiilik, dad və səmimi qayğı birləşir."
+  ],
+  "composition": "Ördək əti 71,8 %, treska 20 %, sorbitol 2 %, qliserin 2 %, bitki zülalı 2 %, nişasta 2 %, duz 0,2 %.",
+  "additives": "",
+  "analysis": [
+   {
+    "name": "Xam protein",
+    "value": "23 %"
+   },
+   {
+    "name": "Xam lif",
+    "value": "1 %"
+   },
+   {
+    "name": "Xam yağ",
+    "value": "5 %"
+   },
+   {
+    "name": "Xam kül",
+    "value": "4 %"
+   },
+   {
+    "name": "Nəmlik",
+    "value": "23 %"
+   }
+  ],
+  "feeding": "Əsas yeməklər arasında ev heyvanının çəkisini, yaşını və aktivliyini nəzərə alaraq verin. 3 aylıqdan kiçik küçüklər üçün uyğun deyil. Təmiz, təzə su həmişə əlçatan olmalıdır."
+ }
+};
+NP_OFFICIAL["dogs||Lifestyle · Snacks||Rabbit Sticks"] = {
+ "url": "/product/snacks-for-dogs-rabbit-sticks/",
+ "sku": "SNK46124",
+ "packs": [
+  "75 g"
+ ],
+ "feed": [],
+ "ru": {
+  "full": [
+   "Палочки из кролика — высококачественные натуральные лакомства, разработанные для того, чтобы дарить питомцу вкусное и полезное удовольствие. Изготовленные из тщательно отобранных ингредиентов, они обладают отличным вкусом, легкой усвояемостью и высокой питательной ценностью. Лакомства оптимально подходят даже для гиперчувствительных или склонных к аллергии собак.",
+   "Основным источником белка в лакомствах является диетическое кроличье мясо, обладающее гипоаллергенными свойствами. Оно деликатно воздействует на пищеварительную систему и подходит для питомцев с ограниченной диетой. Кролик в комбинации с курицей обеспечивает легкоусвояемый белок, который помогает поддерживать мышечный тонус, энергетический баланс и оптимальную физическую форму домашнего животного. Данные белки также являются источником железа, необходимого для кровообращения и общей жизненной силы питомца.",
+   "Палочки из кролика не содержат злаков и продуктов на их основе, что делает их оптимально подходящими для собак с пищевой непереносимостью или чувствительным пищеварением. В составе отсутствуют искусственные красители, антиоксиданты и усилители вкуса – только натуральные компоненты, полезные для организма домашнего животного. Сбалансированная формула обеспечивает не только долгоиграющее жевательное удовольствие, но и поддерживает пищеварение и ежедневное благополучие питомца.",
+   "Данные палочки подходят для собак разных размеров и возрастов. Благодаря аромату и натуральной текстуре данные лакомства прекрасно подходят для поощрения во время тренировок, а также ежедневного перекуса. Они обогащают ежедневный рацион собаки высококачественным белком и необходимыми питательными веществами.",
+   "Палочки из кролика – это способ заботы о благополучии собаки, сочетающий вкус, пользу и качество. Позвольте вашему питомцу наслаждаться лакомством, отвечающим самым высоким стандартам и дарящим ему радость каждый день."
+  ],
+  "composition": "Кролик 46,5%, курица 30%, крахмал 13%, глицерин 6%, растительные белки 5%, сорбитол 4%, соль 0,5%.",
+  "additives": "",
+  "analysis": [
+   {
+    "name": "Сырой протеин",
+    "value": "21 %"
+   },
+   {
+    "name": "Сырая клетчатка",
+    "value": "1 %"
+   },
+   {
+    "name": "Сырой жир",
+    "value": "7 %"
+   },
+   {
+    "name": "Сырая зола",
+    "value": "4 %"
+   },
+   {
+    "name": "Влажность",
+    "value": "23 %"
+   }
+  ],
+  "feeding": "Давайте между основными приёмами кормлениями в зависимости от веса, возраста и активности вашего питомца. Не подходит для щенков младше 3 месяцев. У питомца всегда должен быть доступ к свежей и чистой воде."
+ },
+ "en": {
+  "full": [
+   "Rabbit sticks – high-quality, natural treats designed to give your pet a delicious and wholesome indulgence. Made from carefully selected ingredients, they offer excellent taste, easy digestibility, and high nutritional value, making them perfect even for sensitive or allergy-prone dogs. The main protein source, lean rabbit meat, is known for its hypoallergenic properties. It is gentle on the digestive system and suitable for pets that require a mild or limited diet.",
+   "Rabbit, combined with chicken, provides easily absorbable proteins that help maintain muscle tone, energy balance, and optimal body condition. These proteins are also a natural source of iron, essential for healthy blood circulation and overall vitality. Rabbit sticks are made without grains or grain-based ingredients, making them suitable for dogs with food intolerances or sensitive digestion. They contain no artificial colors, antioxidants, or flavor enhancers – only natural components beneficial to your pet’s body. The balanced formula not only offers a pleasant chewing experience but also supports healthy digestion and daily well-being.",
+   "Each stick is suitable for dogs of different sizes and ages. With their delicious taste and natural texture, these treats are perfect as a reward during training or as a simple way to show affection to your pet. They complement your dog’s daily diet by adding high-quality proteins and essential nutrients.",
+   "Rabbit sticks – a natural way to care for your dog’s well-being, combining taste, health, and quality. Let your pet enjoy a treat that meets the highest standards and brings joy every single day."
+  ],
+  "composition": "Rabbit 46.5%, chicken 30%, starch 13%, glycerin 6%, vegetable proteins 5%, sorbitol 4%, salt 0.5%.",
+  "additives": "",
+  "analysis": [
+   {
+    "name": "Crude protein",
+    "value": "21 %"
+   },
+   {
+    "name": "Crude fibre",
+    "value": "1 %"
+   },
+   {
+    "name": "Crude fat",
+    "value": "7 %"
+   },
+   {
+    "name": "Crude ash",
+    "value": "4 %"
+   },
+   {
+    "name": "Moisture",
+    "value": "23 %"
+   }
+  ],
+  "feeding": "Serve between main meals according to your pet’s weight, age, and activity level. Not suitable for puppies younger than 3 months. Fresh, clean water should always be available."
+ },
+ "az": {
+  "full": [
+   "Dovşan əti çubuqları – heyvanınıza dadlı və faydalı ləzzət vermək üçün hazırlanmış yüksək keyfiyyətli, təbii qəlyanaltılardır. Diqqətlə seçilmiş tərkiblərdən hazırlanır, əla dad, asan həzm və yüksək qida dəyəri təqdim edir – həssas və ya allergiyaya meyilli itlər üçün də uyğundur. Əsas protein mənbəyi olan az yağlı dovşan əti hipoallergen xüsusiyyətləri ilə tanınır və həzm sisteminə qarşı yumşaqdır.",
+   "Toyuq əti ilə birlikdə dovşan əti əzələ tonusunu, enerji balansını və optimal bədən vəziyyətini qorumağa kömək edən asan mənimsənilən proteinlər verir. Bu proteinlər sağlam qan dövranı və ümumi canlılıq üçün vacib olan dəmirin də təbii mənbəyidir. Çubuqlar taxılsız hazırlanır, qida dözümsüzlüyü və ya həssas həzmi olan itlər üçün uyğundur.",
+   "Hər çubuq müxtəlif ölçü və yaşda olan itlərə uyğundur. Dadlı tamı və təbii teksturası sayəsində təlim zamanı mükafat və ya heyvanınıza sevgi göstərmək üçün idealdır. İtinizin gündəlik rasionunu yüksək keyfiyyətli protein və vacib qida maddələri ilə tamamlayır.",
+   "Dovşan əti çubuqları – dadı, sağlamlığı və keyfiyyəti birləşdirən, itinizin rifahına təbii qayğı yolu."
+  ],
+  "composition": "Dovşan əti 46,5 %, toyuq əti 30 %, nişasta 13 %, qliserin 6 %, bitki zülalları 5 %, sorbitol 4 %, duz 0,5 %.",
+  "additives": "",
+  "analysis": [
+   {
+    "name": "Xam protein",
+    "value": "21 %"
+   },
+   {
+    "name": "Xam lif",
+    "value": "1 %"
+   },
+   {
+    "name": "Xam yağ",
+    "value": "7 %"
+   },
+   {
+    "name": "Xam kül",
+    "value": "4 %"
+   },
+   {
+    "name": "Nəmlik",
+    "value": "23 %"
+   }
+  ],
+  "feeding": "Əsas yeməklər arasında ev heyvanının çəkisini, yaşını və aktivliyini nəzərə alaraq verin. 3 aylıqdan kiçik küçüklər üçün uyğun deyil. Təmiz, təzə su həmişə əlçatan olmalıdır."
+ }
+};
+NP_OFFICIAL["dogs||Lifestyle · Snacks||Duck Sticks"] = {
+ "url": "/product/snack-for-dogs-duck-sticks/",
+ "sku": "SNK46127",
+ "packs": [
+  "75 g"
+ ],
+ "feed": [],
+ "ru": {
+  "full": [
+   "Палочки из утятины — лакомства самого высокого качества для собак всех пород. Это вкусный, питательный и сбалансированный перекус, а также поощрение. Основной ингредиент — высококачественная утка, являющаяся диетическим, легкоусвояемым источником белка, который обеспечивает организм питомца важными питательными веществами для поддержания тонуса мышц, энергетического баланса и общего здоровья. Благодаря уникальному составу данные палочки особенно подходят для собак, склонных к набору избыточного веса или имеющих чувствительное пищеварение.",
+   "Приготовлены из натуральных, тщательно отобранных ингредиентов, не содержат искусственных красителей, антиокислителей и усилителей вкуса — чистый, полезный и ответственный выбор для тех владельцев, которые стремятся предложить питомцам что-то одновременно вкусное и здоровое. Натуральный вкус утки придаёт лакомствам выраженный аромат и приятный вкус, что делает их особо привлекательными даже для самых привередливых собак.",
+   "Палочки оптимально подходят в качестве поощрения во время дрессировок, как награда за хорошее поведение или просто для ежедневного удовольствия. Их мягкая, жевательная текстура дарит питомцу особое вкусовое удовольствие, а сбалансированная формула поддерживает его общее здоровье. Это оптимальный способ выразить заботу и любовь — каждый кусочек сочетает в себе натуральность, вкус и качество, обеспечивая питомцу активность и здоровье."
+  ],
+  "composition": "Утка 80,8%, крахмал 8%, глицерин 6%, растительный белок 3%, сорбитол 2%, соль 0,2%.",
+  "additives": "",
+  "analysis": [
+   {
+    "name": "Сырой протеин",
+    "value": "23 %"
+   },
+   {
+    "name": "Сырая клетчатка",
+    "value": "1 %"
+   },
+   {
+    "name": "Сырой жир",
+    "value": "5 %"
+   },
+   {
+    "name": "Сырая зола",
+    "value": "4 %"
+   },
+   {
+    "name": "Влажность",
+    "value": "23 %"
+   }
+  ],
+  "feeding": "Давать между основными кормлениями, исходя из веса, возраста и активности питомца. Не подходит для щенков младше 3 месяцев. У питомца всегда должен быть доступ к свежей воде."
+ },
+ "en": {
+  "full": [
+   "Duck Sticks – premium-quality treats crafted to provide your dog with a tasty, nutritious, and well-balanced reward. The main ingredient, high-quality duck, is a lean, easily digestible, and protein-rich source that supplies essential nutrients to help maintain muscle tone, energy balance, and overall wellbeing.",
+   "Thanks to their composition, these sticks are especially suitable for dogs prone to excess weight or with sensitive digestion. Made from natural, carefully selected ingredients and free from artificial colorants, antioxidants, and flavor enhancers, these treats are a clean, wholesome, and responsible choice for owners who want to offer their pets something both healthy and delicious.",
+   "The natural duck flavor delivers an exceptional aroma and pleasant taste, making them highly appealing even to the pickiest dogs. These sticks are ideal for training, as a reward for good behavior, or simply for everyday enjoyment. Their soft, chewable texture provides a satisfying experience, while the balanced formula supports your pet’s wellbeing.",
+   "A perfect way to show care and affection – every bite combines naturalness, flavor, and quality, keeping your dog happy, active, and healthy."
+  ],
+  "composition": "Duck 80.8%, starch 8%, glycerin 6%, vegetable protein 3%, sorbitol 2%, salt 0.2%.",
+  "additives": "",
+  "analysis": [
+   {
+    "name": "Crude protein",
+    "value": "23 %"
+   },
+   {
+    "name": "Crude fibre",
+    "value": "1 %"
+   },
+   {
+    "name": "Crude fat",
+    "value": "5 %"
+   },
+   {
+    "name": "Crude ash",
+    "value": "4 %"
+   },
+   {
+    "name": "Moisture",
+    "value": "23 %"
+   }
+  ],
+  "feeding": "Serve between main meals according to your pet’s weight, age, and activity level. Not suitable for puppies younger than 3 months. Fresh, clean water should always be available."
+ },
+ "az": {
+  "full": [
+   "Ördək əti çubuqları – itinizə dadlı, qidalı və balanslı mükafat vermək üçün hazırlanmış premium keyfiyyətli qəlyanaltılardır. Əsas tərkib – yüksək keyfiyyətli ördək əti – az yağlı, asan həzm olunan və proteinlə zəngin mənbədir: əzələ tonusunu, enerji balansını və ümumi rifahı qorumaq üçün vacib qida maddələri verir.",
+   "Tərkibinə görə bu çubuqlar xüsusilə artıq çəkiyə meyilli və ya həssas həzmli itlər üçün uyğundur. Təbii, diqqətlə seçilmiş tərkiblərdən hazırlanır, süni rəngləyicilər, antioksidantlar və dad gücləndiricilər yoxdur – heyvanına həm sağlam, həm də dadlı nəsə vermək istəyən sahiblər üçün təmiz və məsuliyyətli seçim.",
+   "Təbii ördək dadı əla ətir və xoş tam verir, buna görə hətta ən seçici itlər də onları sevir. Çubuqlar təlim, yaxşı davranışa görə mükafat və ya sadəcə gündəlik ləzzət üçün idealdır. Yumşaq, çeynənən teksturası xoş təcrübə yaradır, balanslı formula isə heyvanın rifahını dəstəkləyir.",
+   "Qayğı və sevgi göstərməyin mükəmməl yolu – hər tikədə təbiilik, dad və keyfiyyət birləşir, itiniz isə xoşbəxt, aktiv və sağlam qalır."
+  ],
+  "composition": "Ördək əti 80,8 %, nişasta 8 %, qliserin 6 %, bitki zülalı 3 %, sorbitol 2 %, duz 0,2 %.",
+  "additives": "",
+  "analysis": [
+   {
+    "name": "Xam protein",
+    "value": "23 %"
+   },
+   {
+    "name": "Xam lif",
+    "value": "1 %"
+   },
+   {
+    "name": "Xam yağ",
+    "value": "5 %"
+   },
+   {
+    "name": "Xam kül",
+    "value": "4 %"
+   },
+   {
+    "name": "Nəmlik",
+    "value": "23 %"
+   }
+  ],
+  "feeding": "Əsas yeməklər arasında ev heyvanının çəkisini, yaşını və aktivliyini nəzərə alaraq verin. 3 aylıqdan kiçik küçüklər üçün uyğun deyil. Təmiz, təzə su həmişə əlçatan olmalıdır."
+ }
+};
+NP_OFFICIAL["cats||Lifestyle · Snacks||Soft Duck Strips"] = {
+ "url": "/product/snack-for-cats-soft-duck-strips/",
+ "sku": "SNK46152",
+ "packs": [
+  "75 g"
+ ],
+ "feed": [],
+ "ru": {
+  "full": [
+   "Мягкие полоски из утки – высококачественные натуральные лакомства, разработанные с заботой о здоровье и сбалансированном питании домашнего питомца. Основной ингредиент – диетическая утка, ценный источник белка с низким содержанием жира, что делает данные лакомства идеальными для контроля веса.",
+   "Продукт не содержит злаков и пшеницы, поэтому оптимально подходит даже для чувствительных питомцев. Мягкие полоски вкусны, легко жуются, не содержат искусственных красителей и усилителей вкуса – это здоровый способ побаловать кошку, не причиняя вреда её здоровью.",
+   "Использование высококачественного мяса в качестве основного ингредиента обеспечивает организм белком для поддержания тонуса мышц, здоровья кожи и блеска шерсти. Мягкие полоски из утки отлично подходят как для редких поощрений, так и для ежедневных перекусов. Они не только дарят питомцу особое удовольствие, но и способствуют его общему здоровью и сбалансированному рациону. Благодаря высококачественному составу и нежной текстуре, данные лакомства оптимально подходят даже для самым привередливых кошек, владельцы которых стремятся предоставить им натуральное и полезное удовольствие."
+  ],
+  "composition": "Утка 91,8%, глицерин 5%, крахмал 2%, растительные белки 1%, соль 0,2%.",
+  "additives": "",
+  "analysis": [
+   {
+    "name": "Сырой протеин",
+    "value": "40 %"
+   },
+   {
+    "name": "Сырая клетчатка",
+    "value": "1 %"
+   },
+   {
+    "name": "Сырой жир",
+    "value": "3,5 %"
+   },
+   {
+    "name": "Сырая зола",
+    "value": "4 %"
+   },
+   {
+    "name": "Влажность",
+    "value": "23 %"
+   }
+  ],
+  "feeding": "Давать между основными приёмами пищи в зависимости от веса, возраста и активности питомца. Не подходит для котят младше 3 месяцев. У питомца всегда должен быть доступ к свежей и чистой воде."
+ },
+ "en": {
+  "full": [
+   "Soft duck strips – high-quality natural treats designed with your pet’s health and daily nutrition in mind. The main ingredient, lean duck, is an excellent source of protein with low fat content, making these treats ideal for weight control.",
+   "This product is grain- and wheat-free, making it perfectly suitable even for sensitive pets. The soft strips are tasty, easy to chew, and contain no artificial colors or flavor enhancers – a healthier way to treat your cat without compromising its well-being.",
+   "Using premium-quality meat as the main ingredient, these treats provide the necessary protein to help maintain muscle tone, healthy skin, and a shiny coat. Soft duck strips are a great choice both as an occasional reward and for daily indulgence. They not only offer moments of pleasure but also contribute to your cat’s overall well-being and balanced diet. With their high-quality composition and gentle texture, these treats are perfect even for picky cats looking for a natural and healthy delight."
+  ],
+  "composition": "Duck 91.8%, glycerin 5%, starch 2%, vegetable proteins 1%, salt 0.2%.",
+  "additives": "",
+  "analysis": [
+   {
+    "name": "Crude protein",
+    "value": "40 %"
+   },
+   {
+    "name": "Crude fibre",
+    "value": "1 %"
+   },
+   {
+    "name": "Crude fat",
+    "value": "3,5 %"
+   },
+   {
+    "name": "Crude ash",
+    "value": "4 %"
+   },
+   {
+    "name": "Moisture",
+    "value": "23 %"
+   }
+  ],
+  "feeding": "Serve between main meals according to your pet’s weight, age, and activity level. Not suitable for kittens younger than 3 months. Fresh, clean water should always be available."
+ },
+ "az": {
+  "full": [
+   "Yumşaq ördək zolaqları – heyvanınızın sağlamlığı və gündəlik qidalanması nəzərə alınmaqla hazırlanmış yüksək keyfiyyətli təbii qəlyanaltılardır. Əsas tərkib – az yağlı ördək əti – yağı az olan əla protein mənbəyidir, buna görə bu qəlyanaltılar çəki nəzarəti üçün idealdır.",
+   "Məhsul taxılsız və buğdasızdır, həssas heyvanlar üçün də tam uyğundur. Yumşaq zolaqlar dadlıdır, asan çeynənir, süni rəngləyicilər və dad gücləndiricilər yoxdur – pişiyinizi onun rifahına zərər vermədən ərköyünləşdirməyin daha sağlam yolu.",
+   "Əsas tərkib kimi premium keyfiyyətli ətdən istifadə olunduğu üçün bu qəlyanaltılar əzələ tonusunu, sağlam dərini və parlaq tükü qorumaq üçün lazımi proteini verir. Yumşaq ördək zolaqları həm arabir mükafat, həm də gündəlik ərköyünlük üçün əla seçimdir və pişiyinizin ümumi rifahına və balanslı rasionuna töhfə verir."
+  ],
+  "composition": "Ördək əti 91,8 %, qliserin 5 %, nişasta 2 %, bitki zülalları 1 %, duz 0,2 %.",
+  "additives": "",
+  "analysis": [
+   {
+    "name": "Xam protein",
+    "value": "40 %"
+   },
+   {
+    "name": "Xam lif",
+    "value": "1 %"
+   },
+   {
+    "name": "Xam yağ",
+    "value": "3,5 %"
+   },
+   {
+    "name": "Xam kül",
+    "value": "4 %"
+   },
+   {
+    "name": "Nəmlik",
+    "value": "23 %"
+   }
+  ],
+  "feeding": "Əsas yeməklər arasında pişiyin çəkisini, yaşını və aktivliyini nəzərə alaraq verin. Təmiz, təzə içməli su həmişə əlçatan olmalıdır. 3 aylıqdan kiçik pişik balaları üçün uyğun deyil."
+ }
+};
+NP_OFFICIAL["cats||Lifestyle · Snacks||Rabbit with Blueberries"] = {
+ "url": "/product/snack-for-cats-with-rabbit-and-blueberries/",
+ "sku": "SNK46148",
+ "packs": [
+  "75 g"
+ ],
+ "feed": [],
+ "ru": {
+  "full": [
+   "Nature’s Protection Lifestyle кролик с черникой – натуральные лакомства, высокой вкусовой привлекательности и пользы для организма кошки.",
+   "Кролик (85 %) — нежирный, легкоусвояемый источник белка, подходящий для кошек с чувствительным пищеварением и контроля веса.",
+   "Черника (5 %) – суперфуд, источник антиоксидантов, витаминов C и K, а также магния, способствующий поддержанию иммунитета и общего здоровья.",
+   "Картофельный крахмал (7 %) придаёт приятную консистенцию и повышает усвояемость, а глицерин (3 %) сохраняет мягкость и влажность продукта.",
+   "Беззерновая формула снижает риск аллергий и поддерживает пищеварение.",
+   "Упаковка с застёжкой zip-lock сохраняет натуральный вкус и текстуру лакомств."
+  ],
+  "composition": "Кролик (85 %), картофельный крахмал (7 %), черника (5 %), глицерин (3 %).",
+  "additives": "",
+  "analysis": [
+   {
+    "name": "Сырой протеин",
+    "value": "30 %"
+   },
+   {
+    "name": "Сырой жир",
+    "value": "4 %"
+   },
+   {
+    "name": "Сырая клетчатка",
+    "value": "1 %"
+   },
+   {
+    "name": "Сырая зола",
+    "value": "3 %"
+   },
+   {
+    "name": "Влажность",
+    "value": "23 %"
+   }
+  ],
+  "feeding": "Давать между основными приёмами пищи в зависимости от веса, возраста и активности кошки. У питомца должен быть доступ к чистой, свежей питьевой воде. Не подходит для котят младше 3 месяцев."
+ },
+ "en": {
+  "full": [
+   "Nature’s Protection Lifestyle “Rabbit with Blueberries” are exceptional natural treats crafted to provide both taste and health benefits. Rabbit (85 %) is a lean, easily digestible source of protein suitable for cats with sensitive digestion and weight control needs.",
+   "Blueberries (5 %) act as a superfood – a natural source of antioxidants, vitamins C and K, and magnesium – helping to maintain immunity and overall vitality. Potato starch (7 %) provides consistency and supports digestibility, while glycerine (3 %) helps preserve softness and moisture. The grain-free formula minimizes the risk of allergies and supports gentle digestion.",
+   "The resealable zip-lock package maintains the product’s natural flavour and texture until the last treat."
+  ],
+  "composition": "Rabbit 85 %, potato starch 7 %, blueberries 5 %, glycerin 3 %.",
+  "additives": "",
+  "analysis": [
+   {
+    "name": "Crude protein",
+    "value": "30 %"
+   },
+   {
+    "name": "Crude fibre",
+    "value": "1 %"
+   },
+   {
+    "name": "Crude fat",
+    "value": "4 %"
+   },
+   {
+    "name": "Crude ash",
+    "value": "3 %"
+   },
+   {
+    "name": "Moisture",
+    "value": "23 %"
+   }
+  ],
+  "feeding": "Feed between main meals according to your cat’s weight, age and activity level. Always ensure access to clean, fresh drinking water. Not suitable for kittens under 3 months of age."
+ },
+ "az": {
+  "full": [
+   "Nature’s Protection Lifestyle «Qaragilə ilə dovşan əti» – həm dad, həm də sağlamlıq faydası vermək üçün hazırlanmış müstəsna təbii qəlyanaltılardır. Dovşan əti (85 %) həssas həzmli və çəki nəzarətinə ehtiyacı olan pişiklər üçün uyğun, az yağlı, asan həzm olunan protein mənbəyidir.",
+   "Qaragilə (5 %) superqida kimi çıxış edir – antioksidantların, C və K vitaminlərinin və maqneziumun təbii mənbəyidir, immuniteti və ümumi canlılığı qorumağa kömək edir. Kartof nişastası (7 %) konsistensiya verir və həzmi dəstəkləyir, qliserin (3 %) isə yumşaqlığı və nəmliyi saxlayır. Taxılsız formula allergiya riskini azaldır və yumşaq həzmi dəstəkləyir.",
+   "Təkrar bağlanan zip-lock qablaşdırma məhsulun təbii dadını və teksturasını son qəlyanaltıya qədər qoruyur."
+  ],
+  "composition": "Dovşan əti 85 %, kartof nişastası 7 %, qaragilə 5 %, qliserin 3 %.",
+  "additives": "",
+  "analysis": [
+   {
+    "name": "Xam protein",
+    "value": "30 %"
+   },
+   {
+    "name": "Xam lif",
+    "value": "1 %"
+   },
+   {
+    "name": "Xam yağ",
+    "value": "4 %"
+   },
+   {
+    "name": "Xam kül",
+    "value": "3 %"
+   },
+   {
+    "name": "Nəmlik",
+    "value": "23 %"
+   }
+  ],
+  "feeding": "Əsas yeməklər arasında pişiyin çəkisini, yaşını və aktivliyini nəzərə alaraq verin. Təmiz, təzə içməli su həmişə əlçatan olmalıdır. 3 aylıqdan kiçik pişik balaları üçün uyğun deyil."
+ }
+};
+NP_OFFICIAL["dogs||Superior Care · Long Lasting Snacks||Rabbit Ear"] = {
+ "url": "/product/dog-snack-rabbit-ear-for-adult-all-breed-dogs/",
+ "sku": "KIKNPSC70538",
+ "packs": [
+  "75 g"
+ ],
+ "feed": [],
+ "ru": {
+  "full": [
+   "Лакомство Nature’s Protection Superior Care для взрослых собак всех пород, уши кролика без шерсти – больше чем просто перекус. Натуральное, состоящее из одного ингредиента, угощение для ежедневного баловства и дополнительных преимуществ – от гигиены зубов до занятости и поддержания здоровья.",
+   "100% натуральные уши кролика без шерсти – легкоусвояемый, высококачественный источник животного белка. Жевание помогает механически очищать зубы, уменьшать образование зубного налёта и укреплять челюстные мышцы. Это естественный способ занять собаку, снизить скуку и удовлетворить её инстинктивную потребность жевать.",
+   "Каждый кусок имеет своё назначение. Чтобы ваша собака могла наслаждаться натуральным лакомством без искусственных добавок, красителей и консервантов, а вы были уверены в прозрачности и качестве ингредиентов.",
+   "Это лакомство основано на ответственном подходе к питанию питомцев – чем короче список ингредиентов, тем яснее преимущества. Уши кролика без шерсти подходят собакам разных пород, включая чувствительных и мелких. Это выбор для тех, кто ценит натуральность, прозрачный состав и функциональное баловство в повседневной жизни.",
+   "Производство осуществляется в соответствии со строгими стандартами контроля качества с использованием сырья от надёжных поставщиков. Безопасность и высокий уровень качества обеспечиваются на каждом этапе.",
+   "Nature’s Protection Superior Care – когда даже лакомство становится частью ответственного ухода."
+  ],
+  "composition": "Ухо кролика 100%.",
+  "additives": "",
+  "analysis": [
+   {
+    "name": "Сырой протеин",
+    "value": "50 %"
+   },
+   {
+    "name": "Сырая клетчатка",
+    "value": "1 %"
+   },
+   {
+    "name": "Сырой жир",
+    "value": "15 %"
+   },
+   {
+    "name": "Сырая зола",
+    "value": "15 %"
+   },
+   {
+    "name": "Влажность",
+    "value": "18 %"
+   }
+  ],
+  "feeding": "Давайте во время основных приёмов пищи, учитывая вес, возраст и уровень активности вашего питомца. Не подходит для щенков младше 3 месяцев. Всегда должна быть доступна чистая свежая вода."
+ },
+ "en": {
+  "full": [
+   "Nature’s Protection Superior Care treats for adult dogs of all breeds, rabbit ears, skinless – more than just a snack. It is a natural, single-ingredient treat for daily pampering and additional benefits – from dental hygiene to keeping your dog busy and maintaining good health.",
+   "100% natural rabbit ears without fur – an easily digestible, high-quality source of animal protein. Chewing can help mechanically clean teeth, reduce plaque buildup, and strengthen jaw muscles. It is a natural way to keep your dog busy, reduce boredom, and satisfy its instinctive need to chew.",
+   "Every bite has a purpose. So that your dog can enjoy a natural treat without artificial additives, colorants, or preservatives, and you can rest assured about the clarity and quality of the ingredients.",
+   "This treat is based on a responsible approach to pet nutrition – the shorter the list of ingredients, the clearer the benefits. Rabbit ears without fur are suitable for dogs of various breeds, including more sensitive or smaller pets. This is the choice for those who value naturalness, transparent ingredients, and functional pampering in their daily routine.",
+   "Production is carried out in accordance with strict quality control standards, using only raw materials from reliable suppliers. Safety and high product quality are ensured at every stage.",
+   "Nature’s Protection Superior Care – when even a treat becomes part of responsible care."
+  ],
+  "composition": "Rabbit ear 100 %.",
+  "additives": "",
+  "analysis": [
+   {
+    "name": "Crude protein",
+    "value": "50 %"
+   },
+   {
+    "name": "Crude fibre",
+    "value": "1 %"
+   },
+   {
+    "name": "Crude fat",
+    "value": "15 %"
+   },
+   {
+    "name": "Crude ash",
+    "value": "15 %"
+   },
+   {
+    "name": "Moisture",
+    "value": "18 %"
+   }
+  ],
+  "feeding": "Give during the main meals, taking into account your pet’s weight, age, and activity level. Not suitable for puppies that are younger than 3 months. Clean, fresh water should be available at all times."
+ },
+ "az": {
+  "full": [
+   "Bütün cins yetkin itlər üçün Nature’s Protection Superior Care qəlyanaltısı – tüksüz dovşan qulaqları – sadəcə qəlyanaltıdan daha artığıdır. Bu, gündəlik ərköyünləşdirmə və əlavə fayda üçün təbii, tək tərkibli qəlyanaltıdır – diş gigiyenasından itin məşğul olmasına və yaxşı sağlamlığa qədər.",
+   "100 % təbii tüksüz dovşan qulaqları – asan həzm olunan, keyfiyyətli heyvani protein mənbəyi. Çeynəmə dişləri mexaniki təmizləməyə, ərpin yığılmasını azaltmağa və çənə əzələlərini gücləndirməyə kömək edə bilər. Bu, itinizi məşğul saxlamağın, darıxmanı azaltmağın və instinktiv çeynəmə ehtiyacını təmin etməyin təbii yoludur.",
+   "Hər tikənin bir məqsədi var: itiniz süni əlavələr, rəngləyicilər və konservantlar olmadan təbii qəlyanaltıdan zövq alsın, siz isə tərkibin aydınlığına və keyfiyyətinə əmin olasınız.",
+   "Bu qəlyanaltı ev heyvanlarının qidalanmasına məsuliyyətli yanaşmaya əsaslanır – tərkib siyahısı nə qədər qısadırsa, fayda bir o qədər aydındır. Tüksüz dovşan qulaqları müxtəlif cins itlərə, o cümlədən daha həssas və ya kiçik heyvanlara uyğundur. Bu, təbiiliyi, şəffaf tərkibi və gündəlik funksional ərköyünləşdirməni dəyərləndirənlərin seçimidir.",
+   "İstehsal ciddi keyfiyyət nəzarəti standartlarına uyğun aparılır, yalnız etibarlı təchizatçıların xammalından istifadə olunur. Hər mərhələdə təhlükəsizlik və yüksək keyfiyyət təmin edilir.",
+   "Nature’s Protection Superior Care – hətta qəlyanaltı da məsuliyyətli qayğının bir hissəsinə çevriləndə."
+  ],
+  "composition": "Dovşan qulağı 100 %.",
+  "additives": "",
+  "analysis": [
+   {
+    "name": "Xam protein",
+    "value": "50 %"
+   },
+   {
+    "name": "Xam lif",
+    "value": "1 %"
+   },
+   {
+    "name": "Xam yağ",
+    "value": "15 %"
+   },
+   {
+    "name": "Xam kül",
+    "value": "15 %"
+   },
+   {
+    "name": "Nəmlik",
+    "value": "18 %"
+   }
+  ],
+  "feeding": "Ev heyvanının çəkisini, yaşını və aktivliyini nəzərə alaraq verin. 3 aylıqdan kiçik küçüklər üçün uyğun deyil. Təmiz, təzə su həmişə əlçatan olmalıdır."
+ }
+};
+NP_OFFICIAL["dogs||Superior Care · Long Lasting Snacks||Rabbit Ears with Salmon Filling"] = {
+ "url": "/product/dog-snack-rabbit-ear-with-salmon-filling-for-adult-all-breed-dogs/",
+ "sku": "KIKNPSC70539",
+ "packs": [
+  "75 g"
+ ],
+ "feed": [],
+ "ru": {
+  "full": [
+   "Лакомства Nature’s Protection Superior Care для взрослых собак всех пород — уши кролика с лососевой начинкой — это больше, чем просто перекус. Это натуральное жевательное лакомство с функциональной начинкой, созданное для ежедневного поощрения и дополнительных преимуществ — от гигиены зубов до поддержания общего здоровья.",
+   "Уши кролика без шерсти — легкоусвояемый высококачественный источник животного белка с добавлением лососевой начинки. Лосось является ценным источником омега-3 жирных кислот, которые помогают поддерживать здоровую кожу, блестящую шерсть и общее самочувствие. Жевание способствует механической чистке зубов, снижает образование налёта и укрепляет жевательные мышцы, а ароматная начинка придаёт дополнительный вкус и мотивацию.",
+   "В каждом кусочке — смысл. Чтобы ваша собака могла наслаждаться натуральным функциональным лакомством без искусственных красителей и консервантов, а вы могли быть уверены в прозрачности и качестве ингредиентов.",
+   "Это лакомство создано на основе ответственного подхода к питанию питомцев, сочетая натуральную текстуру жевательного продукта с питательной лососевой начинкой. Уши кролика без кожи с начинкой подходят для собак разных пород, включая более чувствительных или мелких питомцев. Это выбор тех, кто ценит натуральность, прозрачный состав и функциональное баловство в повседневном уходе.",
+   "Производство осуществляется по строгим стандартам контроля качества с использованием только сырья от надёжных поставщиков. Безопасность и высокое качество продукции гарантируются на каждом этапе.",
+   "Nature’s Protection Superior Care — когда даже лакомство становится частью ответственного ухода."
+  ],
+  "composition": "Лосось 57,1 %, уши кролика 35 %, растительный белок 3 %, глицерин 3 %, картофельный крахмал 1,5 %, соль 0,38 %.",
+  "additives": "Добавки/1 кг: технологические добавки: сорбат калия (1k202) – 0,2 г.",
+  "analysis": [
+   {
+    "name": "Сырой протеин",
+    "value": "35 %"
+   },
+   {
+    "name": "Сырая клетчатка",
+    "value": "1 %"
+   },
+   {
+    "name": "Сырой жир",
+    "value": "8 %"
+   },
+   {
+    "name": "Сырая зола",
+    "value": "7,5 %"
+   },
+   {
+    "name": "Влажность",
+    "value": "20 %"
+   }
+  ],
+  "feeding": "Давайте во время основных приёмов пищи, учитывая вес, возраст и уровень активности питомца. Не подходит для щенков младше 3 месяцев. Постоянно должен быть доступ к чистой свежей воде."
+ },
+ "en": {
+  "full": [
+   "Nature’s Protection Superior Care treats for adult dogs of all breeds, rabbit ears with salmon filling, are more than just a snack. It is a natural chew treat with a functional filling, designed for daily pampering and additional benefits – from dental hygiene to maintaining well-being.",
+   "Rabbit ears without fur are an easily digestible, high-quality source of animal protein, supplemented with salmon filling. Salmon is a valuable source of omega-3 fatty acids, which can help maintain healthy skin, a shiny coat, and overall well-being. Chewing can help mechanically clean teeth, reduce plaque buildup, and strengthen jaw muscles, while the aromatic filling provides extra flavor and motivation.",
+   "Every bite has a purpose. So that your dog can enjoy a natural, functional treat without artificial colors or preservatives, and you can rest assured about the clarity and quality of the ingredients.",
+   "This treat is based on a responsible approach to pet nutrition, combining the natural texture of a chew with a nutritious salmon filling. The skinless rabbit ears with filling are suitable for dogs of various breeds, including more sensitive or smaller pets. This is the choice for those who value naturalness, transparent composition, and functional pampering in their daily routine.",
+   "Production is carried out in accordance with strict quality control standards, using only raw materials from reliable suppliers. Safety and high product quality are ensured at every stage.",
+   "Nature’s Protection Superior Care – when even a treat becomes part of responsible care."
+  ],
+  "composition": "Salmon 57,1 %, rabbit ears 35 %, plant protein 3 %, glycerin 3 %, potato starch 1,5 %, salt 0,38 %.",
+  "additives": "Additives/1 kg: technological additives: potassium sorbate (1k202) – 0,2 g.",
+  "analysis": [
+   {
+    "name": "Crude protein",
+    "value": "35 %"
+   },
+   {
+    "name": "Crude fibre",
+    "value": "1 %"
+   },
+   {
+    "name": "Crude fat",
+    "value": "8 %"
+   },
+   {
+    "name": "Crude ash",
+    "value": "7,5 %"
+   },
+   {
+    "name": "Moisture",
+    "value": "20 %"
+   }
+  ],
+  "feeding": "Give during the main meals, taking into account your pet’s weight, age, and activity level. Not suitable for puppies that are younger than 3 months. Clean, fresh water should be available at all times."
+ },
+ "az": {
+  "full": [
+   "Bütün cins yetkin itlər üçün Nature’s Protection Superior Care qəlyanaltısı – qızılbalıq içlikli dovşan qulaqları – sadəcə qəlyanaltıdan daha artığıdır. Bu, gündəlik ərköyünləşdirmə və əlavə fayda üçün funksional içlikli təbii çeynəmə qəlyanaltısıdır – diş gigiyenasından ümumi rifaha qədər.",
+   "Tüksüz dovşan qulaqları asan həzm olunan, keyfiyyətli heyvani protein mənbəyidir və qızılbalıq içliyi ilə tamamlanır. Qızılbalıq sağlam dəri, parlaq tük və ümumi rifahı qorumağa kömək edə bilən Omega-3 yağ turşularının dəyərli mənbəyidir. Çeynəmə dişləri mexaniki təmizləməyə, ərpin yığılmasını azaltmağa və çənə əzələlərini gücləndirməyə kömək edə bilər, ətirli içlik isə əlavə dad və motivasiya verir.",
+   "Hər tikənin bir məqsədi var: itiniz süni rəngləyicilər və konservantlar olmadan təbii, funksional qəlyanaltıdan zövq alsın, siz isə tərkibin aydınlığına və keyfiyyətinə əmin olasınız.",
+   "Bu qəlyanaltı ev heyvanlarının qidalanmasına məsuliyyətli yanaşmaya əsaslanır: çeynəmənin təbii teksturası qidalı qızılbalıq içliyi ilə birləşir. İçlikli tüksüz dovşan qulaqları müxtəlif cins itlərə, o cümlədən daha həssas və ya kiçik heyvanlara uyğundur. Bu, təbiiliyi, şəffaf tərkibi və gündəlik funksional ərköyünləşdirməni dəyərləndirənlərin seçimidir.",
+   "İstehsal ciddi keyfiyyət nəzarəti standartlarına uyğun aparılır, yalnız etibarlı təchizatçıların xammalından istifadə olunur. Hər mərhələdə təhlükəsizlik və yüksək keyfiyyət təmin edilir.",
+   "Nature’s Protection Superior Care – hətta qəlyanaltı da məsuliyyətli qayğının bir hissəsinə çevriləndə."
+  ],
+  "composition": "Qızılbalıq 57,1 %, dovşan qulaqları 35 %, bitki zülalı 3 %, qliserin 3 %, kartof nişastası 1,5 %, duz 0,38 %.",
+  "additives": "Əlavələr/1 kq: texnoloji əlavələr: kalium sorbat (1k202) – 0,2 q.",
+  "analysis": [
+   {
+    "name": "Xam protein",
+    "value": "35 %"
+   },
+   {
+    "name": "Xam lif",
+    "value": "1 %"
+   },
+   {
+    "name": "Xam yağ",
+    "value": "8 %"
+   },
+   {
+    "name": "Xam kül",
+    "value": "7,5 %"
+   },
+   {
+    "name": "Nəmlik",
+    "value": "20 %"
+   }
+  ],
+  "feeding": "Ev heyvanının çəkisini, yaşını və aktivliyini nəzərə alaraq verin. 3 aylıqdan kiçik küçüklər üçün uyğun deyil. Təmiz, təzə su həmişə əlçatan olmalıdır."
+ }
+};
+NP_OFFICIAL["dogs||Superior Care · Long Lasting Snacks||Rabbit Ears with Rabbit Filling"] = {
+ "url": "/product/dog-snack-rabbit-ear-with-rabbit-meat-filling-for-adult-all-breed-dogs/",
+ "sku": "KIKNPSC70542",
+ "packs": [
+  "75 g"
+ ],
+ "feed": [],
+ "ru": {
+  "full": [
+   "Лакомства Nature’s Protection Superior Care для взрослых собак всех пород, уши кролика с начинкой из кроличьего мяса — это не просто перекус. Это натуральное жевательное лакомство с функциональной начинкой, которое создано для ежедневного баловства и дополнительной пользы — от ухода за зубами до поддержания здоровья.",
+   "Уши кролика без шерсти — легкоусвояемый, высококачественный источник животного белка, дополненный начинкой из кроличьего мяса. Кроличье мясо — мягкий, хорошо переносимый вид белка, часто выбираемый для собак с чувствительным пищеварением или непереносимостью определенных продуктов. Жевание помогает механически очищать зубы, уменьшать образование налета и укреплять жевательные мышцы, а вкусная начинка приносит дополнительное удовольствие и мотивацию.",
+   "Каждый кусочек имеет смысл. Чтобы ваш питомец получал натуральное, функциональное лакомство без искусственных красителей и консервантов, а вы могли быть уверены в прозрачности и качестве состава.",
+   "Это лакомство основано на ответственном подходе к питанию домашних животных — сочетает натуральную текстуру жевательного продукта с питательной начинкой из кроличьего мяса. Уши кролика без кожи с начинкой подходят для взрослых собак разных пород, в том числе более чувствительных и мелких. Это выбор тех, кто ценит натуральность, прозрачный состав и функциональное баловство в повседневном уходе.",
+   "Производство осуществляется в соответствии со строгими стандартами контроля качества с использованием только сырья от надёжных поставщиков. Безопасность и высокое качество продукта гарантируются на каждом этапе.",
+   "Nature’s Protection Superior Care — когда даже лакомство становится частью ответственного ухода."
+  ],
+  "composition": "Кролик 57,1 %, уши кролика 35 %, растительный белок 3 %, глицерин 3 %, картофельный крахмал 1,5 %, соль 0,38 %.",
+  "additives": "Добавки/1 кг: технологические добавки: сорбат калия (1к202) — 0,2 г.",
+  "analysis": [
+   {
+    "name": "Сырой протеин",
+    "value": "35 %"
+   },
+   {
+    "name": "Сырая клетчатка",
+    "value": "1 %"
+   },
+   {
+    "name": "Сырой жир",
+    "value": "8 %"
+   },
+   {
+    "name": "Сырая зола",
+    "value": "7,5 %"
+   },
+   {
+    "name": "Влажность",
+    "value": "20 %"
+   }
+  ],
+  "feeding": "Давайте во время основных приёмов пищи, учитывая вес, возраст и уровень активности питомца. Не подходит для щенков младше 3 месяцев. Всегда должен быть доступ к чистой и свежей воде."
+ },
+ "en": {
+  "full": [
+   "Nature’s Protection Superior Care treats for adult dogs of all breeds, rabbit ears with rabbit meat filling, are more than just a snack. It is a natural chew treat with a functional filling, designed for daily pampering and additional benefits – from dental hygiene to maintaining well-being.",
+   "Rabbit ears without fur are an easily digestible, high-quality source of animal protein, supplemented with rabbit meat filling. Rabbit meat is a mild, well-tolerated type of protein, often chosen for sensitive dogs or those with food intolerances. Chewing can help mechanically clean teeth, reduce plaque buildup, and strengthen jaw muscles, while the rich-tasting filling provides extra enjoyment and motivation.",
+   "Every bite has a purpose. So that your dog can enjoy a natural, functional treat without artificial colors or preservatives, and you can rest assured about the clarity and quality of the ingredients.",
+   "This treat is based on a responsible approach to pet nutrition, combining the natural texture of a chew with a nutritious rabbit meat filling. The skinless rabbit ears with filling are suitable for adult dogs of various breeds, including more sensitive or smaller pets. This is the choice for those who value naturalness, transparent composition, and functional pampering in their daily routine.",
+   "Production is carried out in accordance with strict quality control standards, using only raw materials from reliable suppliers. Safety and high product quality are ensured at every stage.",
+   "Nature’s Protection Superior Care – when even a treat becomes part of responsible care."
+  ],
+  "composition": "Rabbit 57,1 %, rabbit ears 35 %, plant protein 3 %, glycerin 3 %, potato starch 1,5 %, salt 0,38 %.",
+  "additives": "Additives/1 kg: technological additives: potassium sorbate (1k202) – 0,2 g.",
+  "analysis": [
+   {
+    "name": "Crude protein",
+    "value": "35 %"
+   },
+   {
+    "name": "Crude fibre",
+    "value": "1 %"
+   },
+   {
+    "name": "Crude fat",
+    "value": "8 %"
+   },
+   {
+    "name": "Crude ash",
+    "value": "7,5 %"
+   },
+   {
+    "name": "Moisture",
+    "value": "20 %"
+   }
+  ],
+  "feeding": "Give during the main meals, taking into account your pet’s weight, age, and activity level. Not suitable for puppies that are younger than 3 months. Clean, fresh water should be available at all times."
+ },
+ "az": {
+  "full": [
+   "Bütün cins yetkin itlər üçün Nature’s Protection Superior Care qəlyanaltısı – dovşan əti içlikli dovşan qulaqları – sadəcə qəlyanaltıdan daha artığıdır. Bu, gündəlik ərköyünləşdirmə və əlavə fayda üçün funksional içlikli təbii çeynəmə qəlyanaltısıdır – diş gigiyenasından ümumi rifaha qədər.",
+   "Tüksüz dovşan qulaqları asan həzm olunan, keyfiyyətli heyvani protein mənbəyidir və dovşan əti içliyi ilə tamamlanır. Dovşan əti yumşaq, yaxşı qəbul olunan protein növüdür və tez-tez həssas və ya qida dözümsüzlüyü olan itlər üçün seçilir. Çeynəmə dişləri mexaniki təmizləməyə, ərpin yığılmasını azaltmağa və çənə əzələlərini gücləndirməyə kömək edə bilər, ətirli içlik isə əlavə dad və motivasiya verir.",
+   "Hər tikənin bir məqsədi var: itiniz süni rəngləyicilər və konservantlar olmadan təbii, funksional qəlyanaltıdan zövq alsın, siz isə tərkibin aydınlığına və keyfiyyətinə əmin olasınız.",
+   "Bu qəlyanaltı ev heyvanlarının qidalanmasına məsuliyyətli yanaşmaya əsaslanır: çeynəmənin təbii teksturası qidalı dovşan əti içliyi ilə birləşir. İçlikli tüksüz dovşan qulaqları müxtəlif cins itlərə, o cümlədən daha həssas və ya kiçik heyvanlara uyğundur. Bu, təbiiliyi, şəffaf tərkibi və gündəlik funksional ərköyünləşdirməni dəyərləndirənlərin seçimidir.",
+   "İstehsal ciddi keyfiyyət nəzarəti standartlarına uyğun aparılır, yalnız etibarlı təchizatçıların xammalından istifadə olunur. Hər mərhələdə təhlükəsizlik və yüksək keyfiyyət təmin edilir.",
+   "Nature’s Protection Superior Care – hətta qəlyanaltı da məsuliyyətli qayğının bir hissəsinə çevriləndə."
+  ],
+  "composition": "Dovşan əti 57,1 %, dovşan qulaqları 35 %, bitki zülalı 3 %, qliserin 3 %, kartof nişastası 1,5 %, duz 0,38 %.",
+  "additives": "Əlavələr/1 kq: texnoloji əlavələr: kalium sorbat (1k202) – 0,2 q.",
+  "analysis": [
+   {
+    "name": "Xam protein",
+    "value": "35 %"
+   },
+   {
+    "name": "Xam lif",
+    "value": "1 %"
+   },
+   {
+    "name": "Xam yağ",
+    "value": "8 %"
+   },
+   {
+    "name": "Xam kül",
+    "value": "7,5 %"
+   },
+   {
+    "name": "Nəmlik",
+    "value": "20 %"
+   }
+  ],
+  "feeding": "Ev heyvanının çəkisini, yaşını və aktivliyini nəzərə alaraq verin. 3 aylıqdan kiçik küçüklər üçün uyğun deyil. Təmiz, təzə su həmişə əlçatan olmalıdır."
+ }
+};
+NP_OFFICIAL["dogs||Superior Care · Long Lasting Snacks||Rabbit Ears with Lamb Filling"] = {
+ "url": "/product/dog-snack-rabbit-ear-with-lamb-meat-filling-for-adult-all-breed-dogs/",
+ "sku": "KIKNPSC70541",
+ "packs": [
+  "75 g"
+ ],
+ "feed": [],
+ "ru": {
+  "full": [
+   "Лакомство Nature’s Protection Superior Care для взрослых собак всех пород — уши кролика с начинкой из ягнятины — это больше, чем просто перекус. Это натуральное жевательное лакомство с функциональной начинкой, созданное для ежедневного поощрения и дополнительной пользы — от гигиены полости рта до улучшения самочувствия.",
+   "Уши кролика без шерсти — легкоусвояемый, высококачественный источник животного белка, дополненный начинкой из ягнятины. Ягнятина считается более мягким, хорошо переносимым белком, подходящим для собак с чувствительным пищеварением. Жевание помогает механически очищать зубы, уменьшает образование зубного налета и укрепляет мышцы челюсти, а вкусная начинка дарит дополнительное удовольствие и мотивацию.",
+   "Каждое угощение имеет свою цель. Чтобы ваша собака могла наслаждаться натуральным функциональным лакомством без искусственных красителей и консервантов, а вы могли быть уверены в чистоте и качестве ингредиентов.",
+   "Это лакомство основано на ответственном подходе к питанию питомцев, сочетая натуральную текстуру жевательного продукта с питательной начинкой из ягнятины. Уши кролика без кожи с начинкой подходят для взрослых собак разных пород, включая чувствительных и мелких питомцев. Это выбор тех, кто ценит натуральность, прозрачный состав и функциональное поощрение в ежедневном уходе.",
+   "Производство осуществляется в соответствии с строгими стандартами контроля качества с использованием только сырья от надежных поставщиков. Безопасность и высокое качество продукции гарантируются на каждом этапе.",
+   "Nature’s Protection Superior Care — когда даже лакомство становится частью ответственной заботы."
+  ],
+  "composition": "Ягнятина 57,1 %, уши кролика 35 %, растительный белок 3 %, глицерин 3 %, картофельный крахмал 1,5 %, соль 0,38 %.",
+  "additives": "Добавки/1 кг: технологические добавки: сорбат калия (1k202) — 0,2 г.",
+  "analysis": [
+   {
+    "name": "Сырой протеин",
+    "value": "35 %"
+   },
+   {
+    "name": "Сырая клетчатка",
+    "value": "1 %"
+   },
+   {
+    "name": "Сырой жир",
+    "value": "15 %"
+   },
+   {
+    "name": "Сырая зола",
+    "value": "7,5 %"
+   },
+   {
+    "name": "Влажность",
+    "value": "20 %"
+   }
+  ],
+  "feeding": "Давайте во время основных приёмов пищи с учётом веса, возраста и активности вашего питомца. Не подходит для щенков младше 3 месяцев. Всегда обеспечьте свежую питьевую воду."
+ },
+ "en": {
+  "full": [
+   "Nature’s Protection Superior Care treats for adult dogs of all breeds, rabbit ears with lamb filling, are more than just a snack. It is a natural chew treat with a functional filling, designed for daily pampering and additional benefits – from dental hygiene to maintaining well-being.",
+   "Rabbit ears without fur are an easily digestible, high-quality source of animal protein, supplemented with lamb filling. Lamb is considered a milder, well-tolerated type of protein, suitable for sensitive dogs. Chewing can help mechanically clean teeth, reduce plaque buildup, and strengthen jaw muscles, while the rich-tasting filling provides extra pleasure and motivation.",
+   "Every bite has a purpose. So that your dog can enjoy a natural, functional treat without artificial colors or preservatives, and you can rest assured about the clarity and quality of the ingredients.",
+   "This treat is based on a responsible approach to pet nutrition, combining the natural texture of a chew with a nutritious lamb filling. The skinless rabbit ears with filling are suitable for adult dogs of various breeds, including more sensitive or smaller pets. This is the choice for those who value naturalness, transparent composition, and functional pampering in their daily routine.",
+   "Production is carried out in accordance with strict quality control standards, using only raw materials from reliable suppliers. Safety and high product quality are ensured at every stage.",
+   "Nature’s Protection Superior Care – when even a treat becomes part of responsible care."
+  ],
+  "composition": "Lamb 57,1 %, rabbit ears 35 %, plant protein 3 %, glycerin 3 %, potato starch 1,5 %, salt 0,38 %.",
+  "additives": "Additives/1 kg: technological additives: potassium sorbate (1k202) – 0,2 g.",
+  "analysis": [
+   {
+    "name": "Crude protein",
+    "value": "35 %"
+   },
+   {
+    "name": "Crude fibre",
+    "value": "1 %"
+   },
+   {
+    "name": "Crude fat",
+    "value": "15 %"
+   },
+   {
+    "name": "Crude ash",
+    "value": "7,5 %"
+   },
+   {
+    "name": "Moisture",
+    "value": "20 %"
+   }
+  ],
+  "feeding": "Give during the main meals, taking into account your pet’s weight, age, and activity level. Not suitable for puppies that are younger than 3 months. Clean, fresh water should be available at all times."
+ },
+ "az": {
+  "full": [
+   "Bütün cins yetkin itlər üçün Nature’s Protection Superior Care qəlyanaltısı – quzu əti içlikli dovşan qulaqları – sadəcə qəlyanaltıdan daha artığıdır. Bu, gündəlik ərköyünləşdirmə və əlavə fayda üçün funksional içlikli təbii çeynəmə qəlyanaltısıdır – diş gigiyenasından ümumi rifaha qədər.",
+   "Tüksüz dovşan qulaqları asan həzm olunan, keyfiyyətli heyvani protein mənbəyidir və quzu əti içliyi ilə tamamlanır. Quzu əti daha yumşaq, yaxşı qəbul olunan protein növü sayılır və həssas itlər üçün uyğundur. Çeynəmə dişləri mexaniki təmizləməyə, ərpin yığılmasını azaltmağa və çənə əzələlərini gücləndirməyə kömək edə bilər, ətirli içlik isə əlavə dad və motivasiya verir.",
+   "Hər tikənin bir məqsədi var: itiniz süni rəngləyicilər və konservantlar olmadan təbii, funksional qəlyanaltıdan zövq alsın, siz isə tərkibin aydınlığına və keyfiyyətinə əmin olasınız.",
+   "Bu qəlyanaltı ev heyvanlarının qidalanmasına məsuliyyətli yanaşmaya əsaslanır: çeynəmənin təbii teksturası qidalı quzu əti içliyi ilə birləşir. İçlikli tüksüz dovşan qulaqları müxtəlif cins itlərə, o cümlədən daha həssas və ya kiçik heyvanlara uyğundur. Bu, təbiiliyi, şəffaf tərkibi və gündəlik funksional ərköyünləşdirməni dəyərləndirənlərin seçimidir.",
+   "İstehsal ciddi keyfiyyət nəzarəti standartlarına uyğun aparılır, yalnız etibarlı təchizatçıların xammalından istifadə olunur. Hər mərhələdə təhlükəsizlik və yüksək keyfiyyət təmin edilir.",
+   "Nature’s Protection Superior Care – hətta qəlyanaltı da məsuliyyətli qayğının bir hissəsinə çevriləndə."
+  ],
+  "composition": "Quzu əti 57,1 %, dovşan qulaqları 35 %, bitki zülalı 3 %, qliserin 3 %, kartof nişastası 1,5 %, duz 0,38 %.",
+  "additives": "Əlavələr/1 kq: texnoloji əlavələr: kalium sorbat (1k202) – 0,2 q.",
+  "analysis": [
+   {
+    "name": "Xam protein",
+    "value": "35 %"
+   },
+   {
+    "name": "Xam lif",
+    "value": "1 %"
+   },
+   {
+    "name": "Xam yağ",
+    "value": "15 %"
+   },
+   {
+    "name": "Xam kül",
+    "value": "7,5 %"
+   },
+   {
+    "name": "Nəmlik",
+    "value": "20 %"
+   }
+  ],
+  "feeding": "Ev heyvanının çəkisini, yaşını və aktivliyini nəzərə alaraq verin. 3 aylıqdan kiçik küçüklər üçün uyğun deyil. Təmiz, təzə su həmişə əlçatan olmalıdır."
+ }
+};
+NP_OFFICIAL["dogs||Superior Care · Long Lasting Snacks||Rabbit Ears with Duck Filling"] = {
+ "url": "/product/dog-snack-rabbit-ear-with-duck-filling-for-adult-all-breed-dogs/",
+ "sku": "KIKNPSC70540",
+ "packs": [
+  "75 g"
+ ],
+ "feed": [],
+ "ru": {
+  "full": [
+   "Лакомства Nature’s Protection Superior Care для взрослых собак всех пород, ушки кролика с начинкой из утки — это больше, чем просто угощение. Это натуральная жевательная игрушка с функциональной начинкой, созданная для ежедневного баловства и дополнительных преимуществ — от гигиены зубов до поддержания общего самочувствия.",
+   "Ушки кролика без шерсти — легкоусвояемый, высококачественный источник животного белка с дополнением из утиной начинки. Утиное мясо — питательный и ароматный источник животного белка, ценимый за хорошую усвояемость и вкус. Жевание помогает механически очищать зубы, уменьшать налёт и укреплять жевательные мышцы, а насыщенная начинка придаёт дополнительную мотивацию и удовольствие.",
+   "Каждый кусочек несёт смысл. Чтобы ваша собака могла наслаждаться натуральным, функциональным лакомством без искусственных красителей и консервантов, а вы были уверены в прозрачности и качестве ингредиентов.",
+   "Это лакомство основано на ответственном подходе к питанию питомцев, сочетающем натуральную текстуру жевательного продукта с питательной утиной начинкой. Безшерстные ушки кролика с начинкой подходят для собак разных пород, включая чувствительных или маленьких питомцев. Это выбор для тех, кто ценит натуральность, прозрачный состав и функциональное баловство в повседневной жизни.",
+   "Производство проводится в соответствии со строгими стандартами контроля качества с использованием сырья от надёжных поставщиков. Безопасность и высокое качество продукции гарантируются на каждом этапе.",
+   "Nature’s Protection Superior Care — когда даже лакомство становится частью заботы с ответственностью."
+  ],
+  "composition": "Утка 57,1 %, ушки кролика 35 %, растительный белок 3 %, глицерин 3 %, картофельный крахмал 1,5 %, соль 0,38 %.",
+  "additives": "Добавки/1 кг: технологические добавки: сорбат калия (1k202) – 0,2 г.",
+  "analysis": [
+   {
+    "name": "Сырой протеин",
+    "value": "35 %"
+   },
+   {
+    "name": "Сырая клетчатка",
+    "value": "1 %"
+   },
+   {
+    "name": "Сырой жир",
+    "value": "10 %"
+   },
+   {
+    "name": "Сырая зола",
+    "value": "7,5 %"
+   },
+   {
+    "name": "Влажность",
+    "value": "20 %"
+   }
+  ],
+  "feeding": "Давать во время основных приёмов пищи, учитывая вес, возраст и активность питомца. Не подходит для щенков моложе 3 месяцев. Всегда обеспечивайте свежею, чистую воду."
+ },
+ "en": {
+  "full": [
+   "Nature’s Protection Superior Care treats for adult dogs of all breeds, rabbit ears with duck filling, are more than just a snack. It is a natural chew treat with a functional filling, designed for daily pampering and additional benefits – from dental hygiene to maintaining well-being.",
+   "Rabbit ears without fur are an easily digestible, high-quality source of animal protein, supplemented with duck filling. Duck is a nutritious and aromatic type of animal protein, valued for its good digestibility and taste. Chewing can help mechanically clean teeth, reduce plaque buildup, and strengthen jaw muscles, while the rich-tasting filling provides additional motivation and enjoyment.",
+   "Every bite has a purpose. So that your dog can enjoy a natural, functional treat without artificial colors or preservatives, and you can rest assured about the clarity and quality of the ingredients.",
+   "This treat is based on a responsible approach to pet nutrition, combining the natural texture of a chew with a nutritious duck filling. The skinless rabbit ears with filling are suitable for dogs of various breeds, including more sensitive or smaller pets. This is the choice for those who value naturalness, transparent composition, and functional pampering in their daily routine.",
+   "Production is carried out in accordance with strict quality control standards, using only raw materials from reliable suppliers. Safety and high product quality are ensured at every stage.",
+   "Nature’s Protection Superior Care – when even a treat becomes part of responsible care."
+  ],
+  "composition": "Duck 57,1 %, rabbit ears 35 %, plant protein 3 %, glycerin 3 %, potato starch 1,5 %, salt 0,38 %.",
+  "additives": "Additives/1 kg: technological additives: potassium sorbate (1k202) – 0,2 g.",
+  "analysis": [
+   {
+    "name": "Crude protein",
+    "value": "35 %"
+   },
+   {
+    "name": "Crude fibre",
+    "value": "1 %"
+   },
+   {
+    "name": "Crude fat",
+    "value": "10 %"
+   },
+   {
+    "name": "Crude ash",
+    "value": "7,5 %"
+   },
+   {
+    "name": "Moisture",
+    "value": "20 %"
+   }
+  ],
+  "feeding": "Give during the main meals, taking into account your pet’s weight, age, and activity level. Not suitable for puppies that are younger than 3 months. Clean, fresh water should be available at all times."
+ },
+ "az": {
+  "full": [
+   "Bütün cins yetkin itlər üçün Nature’s Protection Superior Care qəlyanaltısı – ördək əti içlikli dovşan qulaqları – sadəcə qəlyanaltıdan daha artığıdır. Bu, gündəlik ərköyünləşdirmə və əlavə fayda üçün funksional içlikli təbii çeynəmə qəlyanaltısıdır – diş gigiyenasından ümumi rifaha qədər.",
+   "Tüksüz dovşan qulaqları asan həzm olunan, keyfiyyətli heyvani protein mənbəyidir və ördək əti içliyi ilə tamamlanır. Ördək əti yaxşı həzm olunması və dadı ilə qiymətləndirilən qidalı və ətirli heyvani protein növüdür. Çeynəmə dişləri mexaniki təmizləməyə, ərpin yığılmasını azaltmağa və çənə əzələlərini gücləndirməyə kömək edə bilər, ətirli içlik isə əlavə dad və motivasiya verir.",
+   "Hər tikənin bir məqsədi var: itiniz süni rəngləyicilər və konservantlar olmadan təbii, funksional qəlyanaltıdan zövq alsın, siz isə tərkibin aydınlığına və keyfiyyətinə əmin olasınız.",
+   "Bu qəlyanaltı ev heyvanlarının qidalanmasına məsuliyyətli yanaşmaya əsaslanır: çeynəmənin təbii teksturası qidalı ördək əti içliyi ilə birləşir. İçlikli tüksüz dovşan qulaqları müxtəlif cins itlərə, o cümlədən daha həssas və ya kiçik heyvanlara uyğundur. Bu, təbiiliyi, şəffaf tərkibi və gündəlik funksional ərköyünləşdirməni dəyərləndirənlərin seçimidir.",
+   "İstehsal ciddi keyfiyyət nəzarəti standartlarına uyğun aparılır, yalnız etibarlı təchizatçıların xammalından istifadə olunur. Hər mərhələdə təhlükəsizlik və yüksək keyfiyyət təmin edilir.",
+   "Nature’s Protection Superior Care – hətta qəlyanaltı da məsuliyyətli qayğının bir hissəsinə çevriləndə."
+  ],
+  "composition": "Ördək əti 57,1 %, dovşan qulaqları 35 %, bitki zülalı 3 %, qliserin 3 %, kartof nişastası 1,5 %, duz 0,38 %.",
+  "additives": "Əlavələr/1 kq: texnoloji əlavələr: kalium sorbat (1k202) – 0,2 q.",
+  "analysis": [
+   {
+    "name": "Xam protein",
+    "value": "35 %"
+   },
+   {
+    "name": "Xam lif",
+    "value": "1 %"
+   },
+   {
+    "name": "Xam yağ",
+    "value": "10 %"
+   },
+   {
+    "name": "Xam kül",
+    "value": "7,5 %"
+   },
+   {
+    "name": "Nəmlik",
+    "value": "20 %"
+   }
+  ],
+  "feeding": "Ev heyvanının çəkisini, yaşını və aktivliyini nəzərə alaraq verin. 3 aylıqdan kiçik küçüklər üçün uyğun deyil. Təmiz, təzə su həmişə əlçatan olmalıdır."
+ }
+};
+NP_OFFICIAL["dogs||Superior Care · Snacks||Rabbit Heart Bites"] = {
+ "url": "/product/snacks-for-dogs-rabbit-heart-bites/",
+ "sku": "SNK46121",
+ "packs": [
+  "75 g"
+ ],
+ "feed": [],
+ "ru": {
+  "full": [
+   "Лакомства для собак Nature’s Protection Superior Care — это высококачественные, натуральные, полезные и сбалансированные продукты, разных вкусов и видов, созданные для небольших перекусов и общего разнообразия рациона различных домашних животных. Данные лакомства не содержат искусственных красителей, антиоксидантов и усилителей вкуса. Жевательные лакомства массируют десна собаки и счищают мягкий зубной налёт, что предотвращает образование зубного камня и в целом является профилактикой стоматологических заболеваний.",
+   "Натуральный вкус и запах",
+   "В составе лакомства только натуральные и полезные для организма питомца компоненты. Лакомство является отличным выбором при желании разнообразить рацион или побаловать домашнего любимца.",
+   "Оптимально подходит для собак с белым окрасом шерсти",
+   "Тщательно подобранная комбинация белков, помогает урегулировать и поддержать надлежащий состав слезно жидкости, а это в свою очередь помогает избавиться от коричневых пятен возле глаз, а также потемнений на мордочке и лапах белошерстного питомца.",
+   "Тщательно продуманный гипоаллергенный состав",
+   "Продукт не содержит злаковых культур, которые могут вызывать аллергические реакции.",
+   "Подходит для собак с чувствительной пищеварительной системой",
+   "Продукт оптимально подходит для домашних питомцев с чувствительной системой пищеварения и способствует улучшению работы желудочно-кишечного тракта.",
+   "Удобная упаковка",
+   "Удобная, легко открывающаяся упаковка со струнным зажимом (англ. zip lock) надежно защищает лакомства от влаги и сохраняет его аромат.",
+   "Основные характеристики:",
+   "Предназначено для взрослых собак.",
+   "Вес — 75 гр.",
+   "Сделано в Китае."
+  ],
+  "composition": "Мясо курицы 44,5 %, кроличьи потрошки 25 %, крахмал 15 %, глицерин 6 %, растительные белки 5 %, сорбит 4 %, cоль 0,5 %.",
+  "additives": "",
+  "analysis": [
+   {
+    "name": "Сырой протеин",
+    "value": "21 %"
+   },
+   {
+    "name": "Сырая клетчатка",
+    "value": "1 %"
+   },
+   {
+    "name": "Сырой жир",
+    "value": "7 %"
+   },
+   {
+    "name": "Сырая зола",
+    "value": "4 %"
+   },
+   {
+    "name": "Влажность",
+    "value": "23 %"
+   }
+  ],
+  "feeding": "Давать между основными кормлениями, исходя из веса, возраста и активности питомца. Подходит для щенков старше 3 месяцев. У питомца всегда должна быть миска со свежей водой. Хранить в сухом и прохладном месте, защищенном от прямых солнечных лучей — температуре не выше +25 ⁰C. После вскрытия упаковки использовать в течение 3 дней."
+ },
+ "en": {
+  "full": [
+   "Nature’s Protection Superior Care snacks are high-quality, natural treats specially crafted to provide a delicious and healthy reward for your pet. With their unique flavours and carefully selected ingredients, these snacks are designed to meet the diverse needs of various pets, making them a versatile choice for pet owners who prioritize health and nutrition.",
+   "The snacks are made with a commitment to purity and quality, being completely free of artificial colours, flavour enhancers, and other unnecessary additives. This ensures that your pet enjoys a natural, wholesome snack without exposure to potentially harmful ingredients.",
+   "The key ingredient in these snacks is premium rabbit meat, a lean and easily digestible protein source. Rabbit meat is not only rich in essential nutrients but also an ideal choice for pets that require weight management or have sensitive digestive systems. Its low-fat content makes it suitable for maintaining a healthy body condition while supporting muscle development and overall vitality.",
+   "Nature’s Protection Superior Care snacks are a perfect blend of taste and nutrition, ensuring your pet gets a delicious treat while benefiting from a premium-quality composition designed with their health and well-being in mind."
+  ],
+  "composition": "Chicken 44,5 %, rabbit heart 25 %, starch 15 %, glycerin 6 %, plant protein 5 %, sorbitol 4 %, salt 0,5 %.",
+  "additives": "",
+  "analysis": [
+   {
+    "name": "Crude protein",
+    "value": "21 %"
+   },
+   {
+    "name": "Crude fibre",
+    "value": "1 %"
+   },
+   {
+    "name": "Crude fat",
+    "value": "7 %"
+   },
+   {
+    "name": "Crude ash",
+    "value": "4 %"
+   },
+   {
+    "name": "Moisture",
+    "value": "23 %"
+   }
+  ],
+  "feeding": "Daily dose may vary according to outdoor temperature, pet’s lifestyle, temperament and activity. Clean, fresh water should be available at all times."
+ },
+ "az": {
+  "full": [
+   "Nature’s Protection Superior Care qəlyanaltıları heyvanınıza dadlı və sağlam mükafat vermək üçün xüsusi hazırlanmış yüksək keyfiyyətli, təbii qəlyanaltılardır. Özünəməxsus dadları və diqqətlə seçilmiş tərkibləri ilə müxtəlif heyvanların fərqli ehtiyaclarına cavab verir – sağlamlığı və qidalanmanı ön planda tutan sahiblər üçün universal seçimdir.",
+   "Qəlyanaltılar təmizlik və keyfiyyətə sadiqliklə hazırlanır: süni rəngləyicilər, dad gücləndiricilər və digər lazımsız əlavələr tamamilə yoxdur. Beləliklə, heyvanınız potensial zərərli tərkiblər olmadan təbii, faydalı qəlyanaltıdan zövq alır.",
+   "Bu qəlyanaltıların əsas tərkibi premium dovşan ətidir – az yağlı və asan həzm olunan protein mənbəyi. Dovşan əti vacib qida maddələri ilə zəngindir və çəki nəzarətinə ehtiyacı olan və ya həssas həzmli heyvanlar üçün ideal seçimdir. Az yağlı olduğu üçün sağlam bədən vəziyyətini qorumağa, əzələlərin inkişafını və ümumi canlılığı dəstəkləməyə uyğundur.",
+   "Nature’s Protection Superior Care qəlyanaltıları dad və qidalanmanın mükəmməl birləşməsidir: heyvanınız dadlı qəlyanaltı alır, sağlamlığı və rifahı nəzərə alınaraq hazırlanmış premium tərkibdən də faydalanır."
+  ],
+  "composition": "Toyuq əti 44,5 %, dovşan ürəyi 25 %, nişasta 15 %, qliserin 6 %, bitki zülalı 5 %, sorbitol 4 %, duz 0,5 %.",
+  "additives": "",
+  "analysis": [
+   {
+    "name": "Xam protein",
+    "value": "21 %"
+   },
+   {
+    "name": "Xam lif",
+    "value": "1 %"
+   },
+   {
+    "name": "Xam yağ",
+    "value": "7 %"
+   },
+   {
+    "name": "Xam kül",
+    "value": "4 %"
+   },
+   {
+    "name": "Nəmlik",
+    "value": "23 %"
+   }
+  ],
+  "feeding": "Gündəlik norma xarici mühitin temperaturundan, ev heyvanının həyat tərzindən, temperamentindən və aktivliyindən asılı olaraq dəyişə bilər. Təmiz, təzə su həmişə əlçatan olmalıdır."
+ }
+};
+NP_OFFICIAL["dogs||Superior Care · Snacks||Soft Duck Slices"] = {
+ "url": "/product/snacks-for-dogs-soft-duck-slices/",
+ "sku": "SNK46122",
+ "packs": [
+  "75 g"
+ ],
+ "feed": [],
+ "ru": {
+  "full": [
+   "Лакомства для собак Nature’s Protection Superior Care — это высококачественные, натуральные, полезные и сбалансированные продукты, разных вкусов и видов, созданные для небольших перекусов и общего разнообразия рациона различных домашних животных. Данные лакомства не содержат искусственных красителей, антиоксидантов и усилителей вкуса.",
+   "Натуральный вкус и запах",
+   "В составе лакомства только натуральные и полезные для организма домашнего питомца компоненты. Данный продукт является отличным выбором при желании разнообразить рацион или побаловать домашнего любимца.",
+   "Для собак с белым и светлым окрасом шерсти",
+   "Тщательно подобранная комбинация белков, помогает урегулировать состав слезной жидкости, что в свою очередь помогает избавиться от коричневых пятен возле глаз, а также потемнений на мордочке и лапах белошерстного питомца.",
+   "Оптимально подходит для домашних животных, склонных к пищевой аллергии",
+   "Мясо утки — гипоаллергенный продукт, который оптимально подходит для собак, склонных к пищевой аллергии.",
+   "Натуральный состав",
+   "В составе — 92,8 % мяса утки. Мясо утки — источник диетического белка, отлично подходящий для поддержания оптимального веса домашнего питомца.",
+   "Удобная упаковка",
+   "Удобная, легко открывающаяся упаковка со струнным зажимом (англ. zip lock) надежно защищает лакомства от влаги.",
+   "Основные характеристики:",
+   "Предназначено для взрослых собак.",
+   "Состав — 92,8 % мяса утки.",
+   "Вес — 75 гр.",
+   "Сделано в Китае."
+  ],
+  "composition": "Мясо утки 92,8 %, глицерин 5 %, крахмал 1 %, растительные белки 1 %, cоль 0,2 %.",
+  "additives": "",
+  "analysis": [
+   {
+    "name": "Сырой протеин",
+    "value": "38 %"
+   },
+   {
+    "name": "Сырая клетчатка",
+    "value": "0,2 %"
+   },
+   {
+    "name": "Сырой жир",
+    "value": "3,5 %"
+   },
+   {
+    "name": "Сырая зола",
+    "value": "4 %"
+   },
+   {
+    "name": "Влажность",
+    "value": "23 %"
+   }
+  ],
+  "feeding": "Давать между основными кормлениями, исходя из веса, возраста и активности питомца. Подходит для щенков старше 3 месяцев.У питомца всегда должна быть миска со свежей водой. Хранить в сухом и прохладном месте, защищенном от прямых солнечных лучей — температуре не выше +25 ⁰C. После вскрытия упаковки использовать в течение 3 дней."
+ },
+ "en": {
+  "full": [
+   "Nature’s Protection Superior Care snacks are premium-quality, natural treats specially created to cater to the diverse needs of pets. With their unique flavours and wide variety, these snacks are a perfect choice for pet owners who prioritize both health and taste in their pet’s diet.",
+   "These snacks are completely free from artificial colours and flavour enhancers, ensuring a pure, natural product that supports your pet’s overall well-being. Their carefully balanced composition makes them not only a delicious treat but also a wholesome addition to your pet’s daily diet.",
+   "The main ingredient in these snacks is high-quality duck, a lean and easily digestible source of protein. Duck meat is rich in essential nutrients, such as iron and amino acids, and its hypoallergenic properties make it suitable for pets with food sensitivities or allergies. Its low-fat content also helps maintain a healthy weight and supports muscle development.",
+   "Nature’s Protection Superior Care snacks are designed to provide a healthy, delicious, and natural reward that pets love, while promoting their health and happiness."
+  ],
+  "composition": "Duck 92,8 %, glycerin 5 %, starch 1 %, plant protein 1 %, salt 0,2 %.",
+  "additives": "",
+  "analysis": [
+   {
+    "name": "Crude protein",
+    "value": "38 %"
+   },
+   {
+    "name": "Crude fibre",
+    "value": "0,2 %"
+   },
+   {
+    "name": "Crude fat",
+    "value": "3,5 %"
+   },
+   {
+    "name": "Crude ash",
+    "value": "4 %"
+   },
+   {
+    "name": "Moisture",
+    "value": "23 %"
+   }
+  ],
+  "feeding": "Daily dose may vary according to outdoor temperature, pet’s lifestyle, temperament and activity. Clean, fresh water should be available at all times."
+ },
+ "az": {
+  "full": [
+   "Nature’s Protection Superior Care qəlyanaltıları heyvanların müxtəlif ehtiyaclarını qarşılamaq üçün xüsusi yaradılmış premium keyfiyyətli, təbii qəlyanaltılardır. Özünəməxsus dadları və geniş çeşidi ilə heyvanının rasionunda həm sağlamlığa, həm də dada önəm verən sahiblər üçün mükəmməl seçimdir.",
+   "Bu qəlyanaltılarda süni rəngləyicilər və dad gücləndiricilər tamamilə yoxdur – heyvanınızın ümumi rifahını dəstəkləyən təmiz, təbii məhsuldur. Diqqətlə balanslaşdırılmış tərkibi onları təkcə dadlı qəlyanaltı deyil, həm də gündəlik rasiona faydalı əlavə edir.",
+   "Əsas tərkib yüksək keyfiyyətli ördək ətidir – az yağlı və asan həzm olunan protein mənbəyi. Ördək əti dəmir və amin turşuları kimi vacib qida maddələri ilə zəngindir, hipoallergen xüsusiyyətləri isə onu qida həssaslığı və ya allergiyası olan heyvanlar üçün uyğun edir. Az yağlı olması sağlam çəkini qorumağa və əzələlərin inkişafını dəstəkləməyə kömək edir.",
+   "Nature’s Protection Superior Care qəlyanaltıları heyvanların sevdiyi sağlam, dadlı və təbii mükafat olmaqla yanaşı, onların sağlamlığına və xoşbəxtliyinə də töhfə verir."
+  ],
+  "composition": "Ördək əti 92,8 %, qliserin 5 %, nişasta 1 %, bitki zülalı 1 %, duz 0,2 %.",
+  "additives": "",
+  "analysis": [
+   {
+    "name": "Xam protein",
+    "value": "38 %"
+   },
+   {
+    "name": "Xam lif",
+    "value": "0,2 %"
+   },
+   {
+    "name": "Xam yağ",
+    "value": "3,5 %"
+   },
+   {
+    "name": "Xam kül",
+    "value": "4 %"
+   },
+   {
+    "name": "Nəmlik",
+    "value": "23 %"
+   }
+  ],
+  "feeding": "Gündəlik norma xarici mühitin temperaturundan, ev heyvanının həyat tərzindən, temperamentindən və aktivliyindən asılı olaraq dəyişə bilər. Təmiz, təzə su həmişə əlçatan olmalıdır."
+ }
+};
+NP_OFFICIAL["dogs||Nature's Protection · Snacks||Rabbit & Cod Rolls"] = {
+ "url": "/product/snack-for-dogs-rabbit-and-cod-rolls/",
+ "sku": "SNK46095",
+ "packs": [
+  "75 g"
+ ],
+ "feed": [],
+ "ru": {
+  "full": [
+   "Лакомства для собак NATURE»S PROTECTION — это высококачественные натуральные и сбалансированные деликатесы, разных видов и вкусов, созданные для небольших перекусов и общего разнообразия рациона домашних животных. Данные лакомства не содержат искусственных красителей, антиоксидантов и усилителей вкуса, в их составе — только природные ингредиенты, полезные для организма питомца.",
+   "Натуральный состав",
+   "Рулетики из мяса крольчатины и трески — изысканное лакомство для собак, в состав которого входят только полезные для организма питомца — натуральные ингредиенты. Продукт содержит 58,5 % мяса кролика и 35 % трески. Крольчатина — легкоусвояемое, диетическое мясо, поэтому продукт отлично подходит для питомцев с чувствительной системой пищеварения; треска богата полиненасыщенными жирными кислотами Омега-3 и Омега-6, а также витаминами А и D, поддерживающими здоровье кожи, блеск и густоту шерсти питомца.",
+   "Не содержит искусственных красителей",
+   "Продукт не содержит искусственных красителей и усилителей вкуса.",
+   "Для собак со склонностью к пищевой аллергии",
+   "Лакомство не содержит ингредиентов зернового происхождения, поэтому подходит для животных склонных к пищевой аллергии.",
+   "Для поддержания оптимального веса",
+   "В основе лакомства — крольчатина и треска, богатые источники высококачественного белка, легкоусвояемые, диетические и гипоаллергенные продукты, помогающие поддерживать оптимальный вес тела питомца.",
+   "Удобная упаковка",
+   "Удобная, легко открывающаяся упаковка со струнным зажимом (англ. zip lock) защищает лакомства от влаги.",
+   "Основные характеристики:",
+   "Состав: 58,5 % мяса кролика, 35 % трески.",
+   "Отлично подойдёт как для процесса дрессировки, так и при желании побаловать домашнего любимца.",
+   "Предназначено для взрослых собак.",
+   "Подходит для питомцев склонных к аллергии.",
+   "Сделано в Китае."
+  ],
+  "composition": "Мясо кролика 58,5 %, треска 35 %, крахмал 2 %, сорбит 2 %, глицерин 2 %, cоль 0,5 %.",
+  "additives": "",
+  "analysis": [
+   {
+    "name": "Сырой протеин",
+    "value": "30 %"
+   },
+   {
+    "name": "Сырая клетчатка",
+    "value": "2 %"
+   },
+   {
+    "name": "Сырой жир",
+    "value": "3 %"
+   },
+   {
+    "name": "Сырая зола",
+    "value": "1 %"
+   },
+   {
+    "name": "Влажность",
+    "value": "18 %"
+   }
+  ],
+  "feeding": "Давать между кормлениями, исходя из веса, возраста и активности питомца. Подходит для щенков старше 3 месяцев. У питомца всегда должна быть миска со свежей водой. Хранить в сухом и прохладном месте, защищенном от прямых солнечных лучей — температуре не выше +25 ⁰C. После вскрытия упаковки употребить в течение 3 дней."
+ },
+ "en": {
+  "full": [
+   "Nature’s Protection snacks are high-quality, natural, unique flavours, and different types of snacks, designed to meet the needs of various pets. These snacks are free of artificial colours, and flavour enhancers. The composition contains high-quality rabbit meat. It is a low-weight meat. Cod – hypoallergenic, lean fish, source of Omega-3 and Omega-6 fattyacids, source of vitamins A and D."
+  ],
+  "composition": "Rabbit 58,5 %, cod 35 %, starch 2 %, sorbitol 2 %, glycerin 2 %, salt 0,5 %.",
+  "additives": "",
+  "analysis": [
+   {
+    "name": "Crude protein",
+    "value": "30 %"
+   },
+   {
+    "name": "Crude fibre",
+    "value": "1 %"
+   },
+   {
+    "name": "Crude fat",
+    "value": "2 %"
+   },
+   {
+    "name": "Crude ash",
+    "value": "3 %"
+   },
+   {
+    "name": "Moisture",
+    "value": "18 %"
+   }
+  ],
+  "feeding": "Daily dose may vary according to outdoor temperature, pet’s lifestyle, temperament and activity. Clean, fresh water should be available at all times."
+ },
+ "az": {
+  "full": [
+   "Nature’s Protection qəlyanaltıları müxtəlif heyvanların ehtiyaclarına cavab vermək üçün hazırlanmış yüksək keyfiyyətli, təbii, özünəməxsus dadlı və müxtəlif növ qəlyanaltılardır. Süni rəngləyicilər və dad gücləndiricilər yoxdur. Tərkibində yüksək keyfiyyətli dovşan əti var – az yağlı ət. Treska – hipoallergen, az yağlı balıq, Omega-3 və Omega-6 yağ turşularının, A və D vitaminlərinin mənbəyidir."
+  ],
+  "composition": "Dovşan əti 58,5 %, treska 35 %, nişasta 2 %, sorbitol 2 %, qliserin 2 %, duz 0,5 %.",
+  "additives": "",
+  "analysis": [
+   {
+    "name": "Xam protein",
+    "value": "30 %"
+   },
+   {
+    "name": "Xam lif",
+    "value": "1 %"
+   },
+   {
+    "name": "Xam yağ",
+    "value": "2 %"
+   },
+   {
+    "name": "Xam kül",
+    "value": "3 %"
+   },
+   {
+    "name": "Nəmlik",
+    "value": "18 %"
+   }
+  ],
+  "feeding": "Gündəlik norma xarici mühitin temperaturundan, ev heyvanının həyat tərzindən, temperamentindən və aktivliyindən asılı olaraq dəyişə bilər. Təmiz, təzə su həmişə əlçatan olmalıdır."
+ }
+};
+NP_OFFICIAL["dogs||Nature's Protection · Snacks||Beef Sticks"] = {
+ "url": "/product/snack-for-dogs-beef-sticks/",
+ "sku": "SNK46109",
+ "packs": [
+  "75 g"
+ ],
+ "feed": [],
+ "ru": {
+  "full": [
+   "Лакомства для собак NATURE»S PROTECTION — это высококачественные натуральные и сбалансированные деликатесы, разных видов и вкусов, созданные для небольших перекусов и общего разнообразия рациона домашних животных. Данные лакомства не содержат искусственных красителей, антиоксидантов и усилителей вкуса, в их составе только полезные для организма питомца — природные ингредиенты.",
+   "Натуральный состав",
+   "Полочки из говядины — натуральное и полезное лакомство для собак. Отлично подойдёт как для процесса дрессировки, так и при желании побаловать домашнего любимца. В состав продукта входит 71,8 % высококачественной говядины и 21 % говяжьего сердца и печени. Лакомство с высоким содержанием белка, способствует поддержанию оптимального веса питомца.",
+   "Не содержит искусственных красителей",
+   "Продукт не содержит искусственных красителей и усилителей вкуса.",
+   "Для поддержания оптимального веса",
+   "Говядина — диетический продукт с высоким содержанием высококачественного белка и низким содержанием жира, способствующий достижению и / или поддержанию оптимального веса питомца.",
+   "Удобная упаковка",
+   "Удобная, легко открывающаяся упаковка со струнным зажимом (англ. zip lock) защищает лакомства от влаги.",
+   "Основные характеристики:",
+   "Состав: 71, 8 % говядины и 21 % говяжьего сердца и печени.",
+   "Отлично подойдёт как для процесса дрессировки, так и при желании побаловать домашнего любимца.",
+   "Предназначено для взрослых собак.",
+   "Подходит для поддержания оптимального веса питомца.",
+   "Сделано в Китае."
+  ],
+  "composition": "Говядина 71,8 %, говяжья печень, сердце 21 %, гороховый протеин 3 %, крахмал 2 %, сорбит 1 %, глицерин 1 %, cоль 0,2 %.",
+  "additives": "",
+  "analysis": [
+   {
+    "name": "Сырой протеин",
+    "value": "33 %"
+   },
+   {
+    "name": "Сырая клетчатка",
+    "value": "1 %"
+   },
+   {
+    "name": "Сырой жир",
+    "value": "5 %"
+   },
+   {
+    "name": "Сырая зола",
+    "value": "5 %"
+   },
+   {
+    "name": "Влажность",
+    "value": "23 %"
+   }
+  ],
+  "feeding": "Давать между кормлениями, исходя из веса, возраста и активности питомца. Подходит для щенков старше 3 месяцев. У питомца всегда должна быть миска со свежей водой. Хранить в сухом и прохладном месте, защищенном от прямых солнечных лучей — температуре не выше +25 ⁰C. После вскрытия упаковки употребить в течение 3 дней."
+ },
+ "en": {
+  "full": [
+   "Nature’s Protection snacks are high-quality, natural, unique flavours, and different types of snacks, designed to meet the needs of various pets. These snacks are free of artificial colours, and flavour enhancers. The composition contains high-quality beef. It is a lean protein source which may be beneficial for weight control."
+  ],
+  "composition": "Beef 71,8 %, beef heart and liver 21 %, pea proteins 3 %, starch 2 %, sorbitol 1 %, glycerin 1 %, salt 0,2 %.",
+  "additives": "",
+  "analysis": [
+   {
+    "name": "Crude protein",
+    "value": "33 %"
+   },
+   {
+    "name": "Crude fibre",
+    "value": "1 %"
+   },
+   {
+    "name": "Crude fat",
+    "value": "5 %"
+   },
+   {
+    "name": "Crude ash",
+    "value": "5 %"
+   },
+   {
+    "name": "Moisture",
+    "value": "23 %"
+   }
+  ],
+  "feeding": "Daily dose may vary according to outdoor temperature, pet’s lifestyle, temperament and activity. Clean, fresh water should be available at all times."
+ },
+ "az": {
+  "full": [
+   "Nature’s Protection qəlyanaltıları müxtəlif heyvanların ehtiyaclarına cavab vermək üçün hazırlanmış yüksək keyfiyyətli, təbii, özünəməxsus dadlı və müxtəlif növ qəlyanaltılardır. Süni rəngləyicilər və dad gücləndiricilər yoxdur. Tərkibində yüksək keyfiyyətli mal əti var – çəki nəzarəti üçün faydalı ola bilən az yağlı protein mənbəyi."
+  ],
+  "composition": "Mal əti 71,8 %, mal ürəyi və qaraciyəri 21 %, noxud zülalları 3 %, nişasta 2 %, sorbitol 1 %, qliserin 1 %, duz 0,2 %.",
+  "additives": "",
+  "analysis": [
+   {
+    "name": "Xam protein",
+    "value": "33 %"
+   },
+   {
+    "name": "Xam lif",
+    "value": "1 %"
+   },
+   {
+    "name": "Xam yağ",
+    "value": "5 %"
+   },
+   {
+    "name": "Xam kül",
+    "value": "5 %"
+   },
+   {
+    "name": "Nəmlik",
+    "value": "23 %"
+   }
+  ],
+  "feeding": "Gündəlik norma xarici mühitin temperaturundan, ev heyvanının həyat tərzindən, temperamentindən və aktivliyindən asılı olaraq dəyişə bilər. Təmiz, təzə su həmişə əlçatan olmalıdır."
+ }
+};
