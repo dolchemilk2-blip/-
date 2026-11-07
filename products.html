@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="ru" class="is-booting">
+<html lang="az" class="is-booting">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#ffffff" />
-  <title data-i18n="meta.title">Nature's Protection — Каталог</title>
-  <meta name="description" data-i18n="meta.description" content="Каталог продукции для кошек и собак." />
+  <title data-i18n="meta.title">Nature's Protection — Ev heyvanları üçün premium qida</title>
+  <meta name="description" data-i18n="meta.description" content="Pişiklər və itlər üçün premium qida və qulluq: Nature's Protection, Araton, Tauro Pro Line, Misoko." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -21,11 +21,12 @@
   <link rel="stylesheet" href="css/tpl-why.css?v=17" />
   <link rel="stylesheet" href="css/motion-catalog.css?v=17" />
   <link rel="stylesheet" href="css/feed-calc.css?v=17" />
-  <link rel="stylesheet" href="css/catalog-v2.css?v=16" />
+  <link rel="stylesheet" href="css/catalog-v2.css?v=17" />
+  <link rel="stylesheet" href="css/finder.css?v=1" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 </head>
 <body class="page-enter page-catalog">
-  <a class="skip-link" href="#products" data-i18n="a11y.skip">Перейти к каталогу</a>
+  <a class="skip-link" href="#products" data-i18n="a11y.skip">Kataloqa keç</a>
 
   <!-- ===== Header ===== -->
   <header class="header" id="header">
@@ -35,14 +36,14 @@
       </a>
 
       <nav class="nav" id="nav">
-        <a href="index.html#home" class="nav__link" data-i18n="nav.home">Главная</a>
-        <a href="products.html" class="nav__link nav__link--active" data-i18n="nav.products">Продукция</a>
-        <a href="index.html#about" class="nav__link" data-i18n="nav.about">О бренде</a>
-        <a href="index.html#values" class="nav__link" data-i18n="nav.values">Ценности</a>
-        <a href="index.html#quality" class="nav__link" data-i18n="nav.quality">Качество</a>
-        <a href="index.html#stores" class="nav__link" data-i18n="nav.stores">Где купить</a>
-        <a href="index.html#contact" class="nav__link" data-i18n="nav.contact">Контакты</a>
-        <div class="nav-extra"><div class="nav-lang" role="group" aria-label="Выбор языка"><button type="button" class="nav-lang__btn" data-lang-pick="az" lang="az" aria-pressed="false">AZ</button><button type="button" class="nav-lang__btn" data-lang-pick="ru" lang="ru" aria-pressed="true">RU</button><button type="button" class="nav-lang__btn" data-lang-pick="en" lang="en" aria-pressed="false">EN</button></div></div>
+        <a href="index.html#home" class="nav__link" data-i18n="nav.home">Ana səhifə</a>
+        <a href="products.html" class="nav__link nav__link--active" data-i18n="nav.products">Məhsullar</a>
+        <a href="index.html#about" class="nav__link" data-i18n="nav.about">Brend haqqında</a>
+        <a href="index.html#values" class="nav__link" data-i18n="nav.values">Dəyərlər</a>
+        <a href="index.html#quality" class="nav__link" data-i18n="nav.quality">Keyfiyyət</a>
+        <a href="index.html#stores" class="nav__link" data-i18n="nav.stores">Haradan almaq</a>
+        <a href="index.html#contact" class="nav__link" data-i18n="nav.contact">Əlaqə</a>
+        <div class="nav-extra"><div class="nav-lang" role="group" aria-label="Dil seçimi"><button type="button" class="nav-lang__btn" data-lang-pick="az" lang="az" aria-pressed="true">AZ</button><button type="button" class="nav-lang__btn" data-lang-pick="ru" lang="ru" aria-pressed="false">RU</button><button type="button" class="nav-lang__btn" data-lang-pick="en" lang="en" aria-pressed="false">EN</button></div></div>
       </nav>
 
       <div class="header__actions">
@@ -50,7 +51,7 @@
         <a class="hdr-ico" href="https://wa.me/994102200525" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 19.5l1.2-3.6A8 8 0 1 1 8.4 18.6z"/><path d="M9.2 8.6c.2-.4.6-.4.9-.2l.8 1.6c.1.3 0 .5-.2.7l-.5.5c.5 1 1.3 1.9 2.4 2.4l.5-.5c.2-.2.5-.3.7-.2l1.6.8c.3.2.3.6 0 .9-.5.7-1.3 1-2.1.7a8 8 0 0 1-4.4-4.4c-.3-.8 0-1.6.3-2.3z" class="dot"/></svg></a>
         <div class="lang" id="lang">
           <button class="lang__current" id="langBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="langMenu">
-            <span id="langLabel">RU</span>
+            <span id="langLabel">AZ</span>
             <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
           <ul class="lang__menu" id="langMenu" role="menu">
@@ -70,33 +71,34 @@
   <!-- ===== Products page hero ===== -->
   <section class="page-hero">
     <div class="container">
-      <a href="index.html" class="page-hero__back" data-i18n="products.backHome">← На главную</a>
-      <span class="section__tag" data-i18n="products.tag">Наша продукция</span>
-      <h1 class="section__title" data-i18n="products.title">Каталог продукции</h1>
-      <p class="section__subtitle" data-i18n="products.intro">Выберите бренд ниже и посмотрите корма, средства ухода и игрушки для кошек и собак.</p>
+      <a href="index.html" class="page-hero__back" data-i18n="products.backHome">← Ana səhifə</a>
+      <span class="section__tag" data-i18n="products.tag">Məhsullarımız</span>
+      <h1 class="section__title" data-i18n="products.title">Məhsul kataloqu</h1>
+      <p class="section__subtitle" data-i18n="products.intro">Aşağıdakı bölmədən brendi seçin və pişiklər və itlər üçün qida, qulluq vasitələri və oyuncaqlara baxın.</p>
+      <button type="button" class="fnd-cta" data-finder><span class="fnd-cta__ico" aria-hidden="true"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="16" rx="4.2" ry="3.4"/><ellipse cx="6.2" cy="10.6" rx="1.8" ry="2.3"/><ellipse cx="17.8" cy="10.6" rx="1.8" ry="2.3"/><ellipse cx="9.4" cy="6.4" rx="1.8" ry="2.3"/><ellipse cx="14.6" cy="6.4" rx="1.8" ry="2.3"/></svg></span><span class="fnd-cta__txt"><span class="fnd-cta__t" data-i18n="finder.cta.t">Qida seçimi</span><span class="fnd-cta__s" data-i18n="finder.cta.s">Cinsi, yaşı və xüsusiyyətlərinə görə</span></span><svg class="fnd-cta__go" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
     </div>
   </section>
 
   <!-- ===== Sticky catalog toolbar ===== -->
   <div class="catalog-bar" id="catalogBar">
     <div class="container catalog-bar__inner">
-      <div class="tabs" id="tabs" role="tablist" aria-label="Бренды">
-        <button class="tab is-active" type="button" role="tab" id="tab-np" aria-selected="true" aria-controls="productsGrid" data-brand="np">Nature's Protection</button>
-        <button class="tab" type="button" role="tab" id="tab-araton" aria-selected="false" aria-controls="productsGrid" tabindex="-1" data-brand="araton">Araton</button>
-        <button class="tab" type="button" role="tab" id="tab-tpl" aria-selected="false" aria-controls="productsGrid" tabindex="-1" data-brand="tpl">Tauro Pro Line</button>
-        <button class="tab" type="button" role="tab" id="tab-misoko" aria-selected="false" aria-controls="productsGrid" tabindex="-1" data-brand="misoko">Misoko</button>
+      <div class="tabs" id="tabs" role="tablist" aria-label="Brendlər">
+        <button class="tab is-active" type="button" role="tab" id="tab-np" aria-selected="true" aria-controls="productsGrid" data-brand="np" aria-label="Nature&#39;s Protection"><img class="tab__logo tab__logo--np" src="assets/brands/np.png" alt="" decoding="async"><span class="tab__name">Nature's Protection</span></button>
+        <button class="tab" type="button" role="tab" id="tab-araton" aria-selected="false" aria-controls="productsGrid" tabindex="-1" data-brand="araton" aria-label="Araton"><img class="tab__logo tab__logo--araton" src="assets/brands/araton.png" alt="" decoding="async"><span class="tab__name">Araton</span></button>
+        <button class="tab" type="button" role="tab" id="tab-tpl" aria-selected="false" aria-controls="productsGrid" tabindex="-1" data-brand="tpl" aria-label="Tauro Pro Line"><img class="tab__logo tab__logo--tpl" src="assets/brands/tauro.png" alt="" decoding="async"><span class="tab__name">Tauro Pro Line</span></button>
+        <button class="tab" type="button" role="tab" id="tab-misoko" aria-selected="false" aria-controls="productsGrid" tabindex="-1" data-brand="misoko" aria-label="Misoko"><img class="tab__logo tab__logo--misoko" src="assets/brands/misoko.svg" alt="" decoding="async"><span class="tab__name">Misoko</span></button>
       </div>
 
       <div class="catalog-bar__search" id="catalogSearch"></div>
 
-      <div class="species" id="species" role="radiogroup" aria-label="Для кого">
-        <button class="species__btn is-active" type="button" role="radio" aria-checked="true" data-species="all"><span data-i18n="products.all">Все</span></button>
-        <button class="species__btn" type="button" role="radio" aria-checked="false" tabindex="-1" data-species="cats"><span class="species__ico" aria-hidden="true">🐱</span><span class="species__lbl" data-i18n="products.tabCats">Для кошек</span><span class="species__lbl--s" data-i18n="m.sp.cats">Кошки</span></button>
-        <button class="species__btn" type="button" role="radio" aria-checked="false" tabindex="-1" data-species="dogs"><span class="species__ico" aria-hidden="true">🐶</span><span class="species__lbl" data-i18n="products.tabDogs">Для собак</span><span class="species__lbl--s" data-i18n="m.sp.dogs">Собаки</span></button>
-        <button class="species__btn species__btn--baby" type="button" role="radio" aria-checked="false" tabindex="-1" data-species="baby"><span class="species__ico" aria-hidden="true">🍼</span><span data-i18n="products.babies">Малыши</span></button>
+      <div class="species" id="species" role="radiogroup" aria-label="Kimin üçün">
+        <button class="species__btn is-active" type="button" role="radio" aria-checked="true" data-species="all"><span class="species__pic" aria-hidden="true"><img src="assets/species/all.webp" alt="" width="480" height="360" decoding="async"></span><span data-i18n="products.all">Hamısı</span></button>
+        <button class="species__btn" type="button" role="radio" aria-checked="false" tabindex="-1" data-species="cats"><span class="species__pic" aria-hidden="true"><img src="assets/species/cats.webp" alt="" width="480" height="360" decoding="async"></span><span class="species__lbl" data-i18n="products.tabCats">Pişiklər üçün</span><span class="species__lbl--s" data-i18n="m.sp.cats">Pişiklər</span></button>
+        <button class="species__btn" type="button" role="radio" aria-checked="false" tabindex="-1" data-species="dogs"><span class="species__pic" aria-hidden="true"><img src="assets/species/dogs.webp" alt="" width="480" height="360" decoding="async"></span><span class="species__lbl" data-i18n="products.tabDogs">İtlər üçün</span><span class="species__lbl--s" data-i18n="m.sp.dogs">İtlər</span></button>
+        <button class="species__btn species__btn--baby" type="button" role="radio" aria-checked="false" tabindex="-1" data-species="baby"><span class="species__pic" aria-hidden="true"><img src="assets/species/baby.webp" alt="" width="480" height="360" decoding="async"></span><span data-i18n="products.babies">Balalar</span></button>
       </div>
 
-      <button class="m-search-btn" id="mSearchBtn" type="button" aria-label="Поиск" aria-controls="npSearchInput"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-3.5-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      <button class="m-search-btn" id="mSearchBtn" type="button" aria-label="Axtarış" aria-controls="npSearchInput"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-3.5-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
     </div>
   </div>
 
@@ -109,7 +111,7 @@
       <div id="productsGrid" role="tabpanel" aria-labelledby="tab-np"></div>
 
       <div class="ranges-block">
-        <h2 class="ranges__title" data-i18n="products.rangesTitle">Линейки Nature's Protection</h2>
+        <h2 class="ranges__title" data-i18n="products.rangesTitle">Nature's Protection xətləri</h2>
         <div class="ranges" id="rangesGrid"></div>
       </div>
     </div>
@@ -123,27 +125,27 @@
         <a href="index.html" class="logo logo--light">
           <img src="assets/logo.png" alt="Nature's Protection — Life at its best" class="logo__img" width="178" height="60" />
         </a>
-        <p data-i18n="footer.about">Премиальное питание и уход для кошек и собак, вдохновлённые природой.</p>
+        <p data-i18n="footer.about">Təbiətdən ilhamlanan pişik və itlər üçün premium qida və qulluq.</p>
       </div>
       <div class="footer__col">
-        <h4 data-i18n="footer.nav">Навигация</h4>
-        <a href="index.html#home" data-i18n="nav.home">Главная</a>
-        <a href="index.html#about" data-i18n="nav.about">О бренде</a>
-        <a href="index.html#values" data-i18n="nav.values">Ценности</a>
-        <a href="index.html#quality" data-i18n="nav.quality">Качество</a>
-        <a href="index.html#contact" data-i18n="nav.contact">Контакты</a>
+        <h4 data-i18n="footer.nav">Naviqasiya</h4>
+        <a href="index.html#home" data-i18n="nav.home">Ana səhifə</a>
+        <a href="index.html#about" data-i18n="nav.about">Brend haqqında</a>
+        <a href="index.html#values" data-i18n="nav.values">Dəyərlər</a>
+        <a href="index.html#quality" data-i18n="nav.quality">Keyfiyyət</a>
+        <a href="index.html#contact" data-i18n="nav.contact">Əlaqə</a>
       </div>
       <div class="footer__col">
-        <h4 data-i18n="footer.contacts">Контакты</h4>
-        <a href="https://www.instagram.com/natures_protection_az/" target="_blank" rel="noopener" data-i18n="contact.instagram">Наш Instagram</a>
-        <a href="https://wa.me/994102200525" target="_blank" rel="noopener" data-i18n="contact.whatsapp">Наш WhatsApp</a>
+        <h4 data-i18n="footer.contacts">Əlaqə</h4>
+        <a href="https://www.instagram.com/natures_protection_az/" target="_blank" rel="noopener" data-i18n="contact.instagram">Instagram səhifəmiz</a>
+        <a href="https://wa.me/994102200525" target="_blank" rel="noopener" data-i18n="contact.whatsapp">WhatsApp-ımız</a>
         <a href="tel:+994102200525">+994 10 220 05 25</a>
-        <span data-i18n="contact.address">ул. Энвера Гасымзаде, 56C, Баку</span>
+        <span data-i18n="contact.address">Ənvər Qasımzadə küç. 56C, Bakı</span>
       </div>
     </div>
     <div class="footer__bottom">
       <div class="container">
-        <span>© <span id="year"></span> Nature's Protection. <span data-i18n="footer.rights">Все права защищены.</span></span>
+        <span>© <span id="year"></span> Nature's Protection. <span data-i18n="footer.rights">Bütün hüquqlar qorunur.</span></span>
       </div>
     </div>
   </footer>
@@ -155,7 +157,7 @@
     <div class="pmodal__backdrop" data-close></div>
     <div class="pmodal__dialog" role="dialog" aria-modal="true" aria-labelledby="pmodalName" tabindex="-1">
       <div class="pmodal__actions"></div>
-      <button class="pmodal__close" type="button" data-close aria-label="Закрыть">&times;</button>
+      <button class="pmodal__close" type="button" data-close aria-label="Bağla">&times;</button>
       <div class="pmodal__body" id="pmodalBody"></div>
     </div>
   </div>
@@ -174,6 +176,7 @@
   <script src="js/feed-calc.js?v=18"></script>
   <script src="js/age-dogs.js?v=6"></script>
   <script src="js/rails.js?v=3"></script>
-  <script src="js/main.js?v=25"></script>
+  <script src="js/main.js?v=26"></script>
+  <script src="js/finder.js?v=1"></script>
 </body>
 </html>

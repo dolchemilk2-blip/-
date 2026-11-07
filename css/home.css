@@ -418,3 +418,15 @@ html.spr .tile__item { transition: transform var(--spring-snappy-dur) var(--spri
   .hero-home__title { font-size: clamp(42px, 4.6vw, 74px); }
   .hero-stats { max-width: 640px; }
 }
+
+/* ---------- логотипы брендов в карточках ---------- */
+.tile__logo { display: block; width: auto; height: clamp(32px, 3.2vw, 46px); }
+.tile__logo--tpl { height: clamp(42px, 4.2vw, 58px); }
+.tile__logo--misoko { height: clamp(32px, 3.3vw, 46px); aspect-ratio: 182 / 64; }
+.tile__logo--araton { height: clamp(54px, 5.2vw, 74px); margin: -6px 0 -4px; }
+@media (max-width: 720px) {
+  .tile__logo { height: 28px; }
+  .tile__logo--tpl { height: 36px; }
+  .tile__logo--misoko { height: 30px; }
+  .tile__logo--araton { height: 44px; margin: -4px 0 -2px; }
+}

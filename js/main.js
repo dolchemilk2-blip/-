@@ -1,7 +1,7 @@
 // ===== Логика сайта: языки, меню, продукты, форма =====
 
 const LANGS = ['az', 'ru', 'en'];
-const DEFAULT_LANG = 'ru';
+const DEFAULT_LANG = 'az';
 
 // ===== Ключи переводов модуля CORE (translations.js не редактируем) =====
 Object.assign(TRANSLATIONS.az, {
