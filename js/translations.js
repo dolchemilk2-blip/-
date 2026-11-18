@@ -560,6 +560,19 @@ const PRODUCTS = {
       ]
     },
     {
+      group: { az: "BOOST · Qida əlavələri (çeynənən)", ru: "BOOST · Добавки (жевательные)", en: "BOOST · Supplements (soft chews)" },
+      items: [
+        { emoji: "🧶", img: "assets/products/cat-supp-boost-hairball.webp",
+          az: { cat: "BOOST · Çeynənən tabletlər", name: "BOOST Anti-Hairball", desc: "Yetkin pişiklər üçün yumşaq çeynənən tabletlər: psillium qabığı, inulin, alma püresi və kətan toxumu tük topalarının əmələ gəlməsini azaltmağa və təbii yolla xaric olunmasına kömək edir. 120 q.", tags: ["Tük topaları", "Həzm", "Çeynənən"] },
+          ru: { cat: "BOOST · Жевательные таблетки", name: "BOOST Anti-Hairball", desc: "Мягкие жевательные таблетки для взрослых кошек: шелуха псиллиума, инулин, яблочная масса и льняная мука помогают снизить образование комков шерсти и поддерживают их естественное выведение. 120 г.", tags: ["Комки шерсти", "Пищеварение", "Жевательные"] },
+          en: { cat: "BOOST · Soft chews", name: "BOOST Anti-Hairball", desc: "Soft chews for adult cats: psyllium husk, inulin, apple pulp and linseed help reduce hairball formation and support natural elimination. 120 g.", tags: ["Hairball", "Digestion", "Soft chews"] } },
+        { emoji: "💧", img: "assets/products/cat-supp-boost-urinary.webp",
+          az: { cat: "BOOST · Çeynənən tabletlər", name: "BOOST Urinary Support", desc: "Sidik yollarının normal işinə dəstək üçün yetkin pişiklərə yumşaq çeynənən tabletlər: mərcanı, D-mannoza, xitozan və sidiyin düzgün pH-ı üçün DL-metionin. 120 q.", tags: ["Sidik yolları", "Mərcanı", "Çeynənən"] },
+          ru: { cat: "BOOST · Жевательные таблетки", name: "BOOST Urinary Support", desc: "Мягкие жевательные таблетки для взрослых кошек для поддержки нормальной работы мочевыводящих путей: клюква, D-манноза, хитозан и DL-метионин для правильного pH мочи. 120 г.", tags: ["Мочевыводящие пути", "Клюква", "Жевательные"] },
+          en: { cat: "BOOST · Soft chews", name: "BOOST Urinary Support", desc: "Soft chews for adult cats to support normal urinary tract function: cranberry, D-mannose, chitosan and DL-methionine for an appropriate urine pH. 120 g.", tags: ["Urinary", "Cranberry", "Soft chews"] } }
+      ]
+    },
+    {
       group: { az: "Qida əlavələri", ru: "Добавки и витамины", en: "Supplements & vitamins" },
       items: [
         { emoji: "🐟", img: "assets/products/supp-salmon-oil.webp",
@@ -594,6 +607,27 @@ const PRODUCTS = {
           az: { cat: "Vitaminlər", name: "Faugis — Wellness Formula 5in1", desc: "Pişik və itlər üçün silisium əsaslı damcı; oynaqlar, vətər və bağlar, ürək, sümüklər və sağlam dəri-tük üçün 5-i-1 dəstək. 30 ml.", tags: ["Silisium", "5in1", "Pişik və it"] },
           ru: { cat: "Витамины", name: "Faugis — Wellness Formula 5in1", desc: "Капли на основе кремния для кошек и собак; поддержка 5-в-1: суставы, сухожилия и связки, сердце, кости и здоровая кожа и шерсть. 30 мл.", tags: ["Кремний", "5in1", "Кошки и собаки"] },
           en: { cat: "Vitamins", name: "Faugis — Wellness Formula 5in1", desc: "Silicon-based drops for cats and dogs; 5-in-1 support for joints, tendons and ligaments, heart, bones and healthy skin and coat. 30 ml.", tags: ["Silicon", "5in1", "Cats & dogs"] } }
+      ]
+    },
+    {
+      group: { az: "Kremli qəlyanaltılar · Superior Care", ru: "Кремовые лакомства · Superior Care", en: "Creamy treats · Superior Care" },
+      items: [
+        { emoji: "🐟", img: "assets/products/cat-snack-cream-hairball.webp",
+          az: { cat: "Superior Care · Kremli qəlyanaltılar", name: "Anti-Hairball Cream — Tuna & Anchovies", desc: "Yetkin pişiklər üçün tunes (40%) və hamsi ilə kremli funksional qəlyanaltı; psillium qabığı və sellüloza tük topalarına nəzarətə kömək edir. Taxılsız. 4 × 15 q.", tags: ["Tük topaları", "Tunes", "Taxılsız"] },
+          ru: { cat: "Superior Care · Кремовые лакомства", name: "Anti-Hairball Cream — Тунец и анчоусы", desc: "Кремовое функциональное лакомство для взрослых кошек с тунцом (40%) и анчоусами; шелуха псиллиума и целлюлоза помогают контролировать комки шерсти. Без зерновых. 4 × 15 г.", tags: ["Комки шерсти", "Тунец", "Без зерновых"] },
+          en: { cat: "Superior Care · Creamy snacks", name: "Anti-Hairball Cream — Tuna & Anchovies", desc: "Creamy functional treat for adult cats with tuna (40%) and anchovies; psyllium husk and cellulose help with hairball control. Grain free. 4 × 15 g.", tags: ["Hairball", "Tuna", "Grain-free"] } },
+        { emoji: "🛡️", img: "assets/products/cat-snack-cream-immunity.webp",
+          az: { cat: "Superior Care · Kremli qəlyanaltılar", name: "Immunity Support Cream — Tuna", desc: "Yetkin pişiklər üçün tunes (45%), yaşıl çay ekstraktı və balıq kollageni ilə kremli funksional qəlyanaltı; təbii immunitetə dəstək. Taxılsız. 4 × 15 q.", tags: ["İmmunitet", "Tunes", "Taxılsız"] },
+          ru: { cat: "Superior Care · Кремовые лакомства", name: "Immunity Support Cream — Тунец", desc: "Кремовое функциональное лакомство для взрослых кошек с тунцом (45%), экстрактом зелёного чая и рыбным коллагеном для поддержки естественного иммунитета. Без зерновых. 4 × 15 г.", tags: ["Иммунитет", "Тунец", "Без зерновых"] },
+          en: { cat: "Superior Care · Creamy snacks", name: "Immunity Support Cream — Tuna", desc: "Creamy functional treat for adult cats with tuna (45%), green tea extract and fish collagen to support natural immune function. Grain free. 4 × 15 g.", tags: ["Immunity", "Tuna", "Grain-free"] } },
+        { emoji: "✨", img: "assets/products/cat-snack-cream-skin-chicken.webp",
+          az: { cat: "Superior Care · Kremli qəlyanaltılar", name: "Skin & Coat Cream — Chicken & Herring", desc: "Yetkin pişiklər üçün toyuq (30%), siyənək (17%) və qızılbalıq yağı ilə kremli funksional qəlyanaltı; sağlam dəri və parlaq tük üçün. Taxılsız. 4 × 15 q.", tags: ["Dəri və tük", "Toyuq", "Siyənək"] },
+          ru: { cat: "Superior Care · Кремовые лакомства", name: "Skin & Coat Cream — Курица и сельдь", desc: "Кремовое функциональное лакомство для взрослых кошек с курицей (30%), сельдью (17%) и лососёвым маслом для здоровой кожи и блестящей шерсти. Без зерновых. 4 × 15 г.", tags: ["Кожа и шерсть", "Курица", "Сельдь"] },
+          en: { cat: "Superior Care · Creamy snacks", name: "Skin & Coat Cream — Chicken & Herring", desc: "Creamy functional treat for adult cats with chicken (30%), herring (17%) and salmon oil for healthy skin and a shiny coat. Grain free. 4 × 15 g.", tags: ["Skin & coat", "Chicken", "Herring"] } },
+        { emoji: "🐠", img: "assets/products/cat-snack-cream-skin-salmon.webp",
+          az: { cat: "Superior Care · Kremli qəlyanaltılar", name: "Skin & Coat Cream — Tuna & Salmon", desc: "Yetkin pişiklər üçün tunes (28%), qızılbalıq (18%) və qızılbalıq yağı ilə kremli funksional qəlyanaltı; sağlam dəri və parlaq tük üçün. Taxılsız. 4 × 15 q.", tags: ["Dəri və tük", "Tunes", "Qızılbalıq"] },
+          ru: { cat: "Superior Care · Кремовые лакомства", name: "Skin & Coat Cream — Тунец и лосось", desc: "Кремовое функциональное лакомство для взрослых кошек с тунцом (28%), лососем (18%) и лососёвым маслом для здоровой кожи и блестящей шерсти. Без зерновых. 4 × 15 г.", tags: ["Кожа и шерсть", "Тунец", "Лосось"] },
+          en: { cat: "Superior Care · Creamy snacks", name: "Skin & Coat Cream — Tuna & Salmon", desc: "Creamy functional treat for adult cats with tuna (28%), salmon (18%) and salmon oil for healthy skin and a shiny coat. Grain free. 4 × 15 g.", tags: ["Skin & coat", "Tuna", "Salmon"] } }
       ]
     },
     {
@@ -740,6 +774,10 @@ const PRODUCTS = {
     {
       group: { az: "Quru qida", ru: "Сухой корм", en: "Dry food" },
       items: [
+        { emoji: "🐟", img: "assets/products/dog-sc-hypo-salmon.webp",
+          az: { cat: "Superior Care · Hipoallergen", name: "Hypoallergenic Grain Free — Salmon", desc: "Allergiyaya meylli və ya həssas mədəli bütün cins yetkin itlər üçün taxılsız tam rasionlu qida: əsas protein qızılbalıqdır (42%), taxıl əvəzinə kartof və noxud. 1,5 kq / 10 kq.", tags: ["Qızılbalıq", "Taxılsız", "Hipoallergen"] },
+          ru: { cat: "Superior Care · Гипоаллергенный", name: "Hypoallergenic Grain Free — Лосось", desc: "Полнорационный беззерновой корм для взрослых собак всех пород, склонных к аллергии или с чувствительным пищеварением: основной белок — лосось (42%), вместо зерновых — картофель и горох. 1,5 кг / 10 кг.", tags: ["Лосось", "Без зерновых", "Гипоаллергенный"] },
+          en: { cat: "Superior Care · Hypoallergenic", name: "Hypoallergenic Grain Free — Salmon", desc: "Complete grain-free food for adult dogs of all breeds prone to allergies or with a sensitive stomach: salmon (42%) is the main protein, with potato and peas instead of grains. 1.5 kg / 10 kg.", tags: ["Salmon", "Grain-free", "Hypoallergenic"] } },
         { emoji: "⚖️", img: "assets/products/dog-large.png",
           az: { cat: "Weight Control", name: "Weight Control Sterilised — Poultry", desc: "Sterilizə olunmuş bütün cins yetkin itlər üçün quş ətli qida; 68% heyvani protein, buğdasız, sağlam çəki üçün.", tags: ["Quş əti", "Sterilised", "Buğdasız"] },
           ru: { cat: "Weight Control", name: "Weight Control Sterilised — Птица", desc: "Корм с птицей для стерилизованных взрослых собак всех пород; 68% животного белка, без пшеницы, для здорового веса.", tags: ["Птица", "Sterilised", "Без пшеницы"] },
@@ -809,6 +847,19 @@ const PRODUCTS = {
           az: { cat: "Superior Care · Şorba", name: "White Dogs Wellness Soup — Tuna & Salmon", desc: "Açıq tüklü yetkin itlər üçün sağlamlıq şorbası: tunes və qızılbalıq qarışığı, dəri və tük üçün. 140 ml.", tags: ["Şorba", "Tunes", "Qızılbalıq"] },
           ru: { cat: "Superior Care · Суп", name: "White Dogs Wellness Soup — Тунец и лосось", desc: "Велнес-суп для взрослых собак со светлой шерстью: микс тунца и лосося, для кожи и шерсти. 140 мл.", tags: ["Суп", "Тунец", "Лосось"] },
           en: { cat: "Superior Care · Soup", name: "White Dogs Wellness Soup — Tuna & Salmon", desc: "Wellness soup for light-coated adult dogs: tuna and salmon mix, for skin and coat. 140 ml.", tags: ["Soup", "Tuna", "Salmon"] } }
+      ]
+    },
+    {
+      group: { az: "BOOST · Qida əlavələri (çeynənən)", ru: "BOOST · Добавки (жевательные)", en: "BOOST · Supplements (soft chews)" },
+      items: [
+        { emoji: "🌿", img: "assets/products/dog-supp-boost-calming.webp",
+          az: { cat: "BOOST · Çeynənən tabletlər", name: "BOOST Calming Support", desc: "Stresli vəziyyətlər (səfər, tək qalma, güclü səslər) üçün yetkin itlərə yumşaq çeynənən tabletlər: L-triptofan, maqnezium, valeriana, melissa, aşvaqanda və L-teanin. 180 q.", tags: ["Sakitlik", "Stress", "Çeynənən"] },
+          ru: { cat: "BOOST · Жевательные таблетки", name: "BOOST Calming Support", desc: "Мягкие жевательные таблетки для взрослых собак в стрессовых ситуациях (поездки, одиночество, громкие звуки): L-триптофан, магний, валериана, мелисса, ашваганда и L-теанин. 180 г.", tags: ["Спокойствие", "Стресс", "Жевательные"] },
+          en: { cat: "BOOST · Soft chews", name: "BOOST Calming Support", desc: "Soft chews for adult dogs in stressful situations (travel, being alone, loud noises): L-tryptophan, magnesium, valerian, lemon balm, ashwagandha and L-theanine. 180 g.", tags: ["Calm", "Stress", "Soft chews"] } },
+        { emoji: "🦴", img: "assets/products/dog-supp-boost-joint.webp",
+          az: { cat: "BOOST · Çeynənən tabletlər", name: "BOOST Joint Support", desc: "Oynaqların elastikliyi üçün yetkin itlərə yumşaq çeynənən tabletlər: qlükozamin, xondroitin, MSM, yaşıldodaqlı midiya, kollagen, hialuron turşusu, bosvelliya və zerdəçal. 180 q.", tags: ["Oynaqlar", "Hərəkətlilik", "Çeynənən"] },
+          ru: { cat: "BOOST · Жевательные таблетки", name: "BOOST Joint Support", desc: "Мягкие жевательные таблетки для взрослых собак для гибкости суставов: глюкозамин, хондроитин, MSM, зеленогубая мидия, коллаген, гиалуроновая кислота, босвеллия и куркума. 180 г.", tags: ["Суставы", "Подвижность", "Жевательные"] },
+          en: { cat: "BOOST · Soft chews", name: "BOOST Joint Support", desc: "Soft chews for adult dogs to keep joints flexible: glucosamine, chondroitin, MSM, green-lipped mussel, collagen, hyaluronic acid, boswellia and turmeric. 180 g.", tags: ["Joints", "Mobility", "Soft chews"] } }
       ]
     },
     {

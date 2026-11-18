@@ -387,6 +387,84 @@ const BRANDS_EXTRA = {
       "species": "both",
       "items": [
         {
+          "img": "assets/products/tpl-un-eyeear.webp",
+          "az": {
+            "cat": "Göz və qulaq baxımı",
+            "name": "Pure Mist Pro — Eye & Ear Care",
+            "desc": "Göz və qulaqların gündəlik gigiyenası üçün damcı uclu Ultra Natural Care vasitəsi: altı mineralla ionlaşdırılmış qələvi su (pH 11), kimyəvi əlavələr yoxdur. İt və pişiklər üçün, 150 ml.",
+            "tags": [
+              "Gözlər",
+              "Qulaqlar",
+              "Gündəlik"
+            ],
+            "full": [
+              "Ev heyvanlarının göz və qulaqlarının gündəlik gigiyenası üçün vasitə. Əsası altı ionlu ionlaşdırılmış qələvi sudur (pH 11): kalsium, maqnezium, bikarbonat, xlorid, sulfat və natrium. Bu ionlar suyun təbii mineral tərkibini təşkil edir; əlavə kimyəvi maddələr istifadə olunmur.",
+              "Göz qapaqları nahiyəsini, gözətrafı tükləri və qulaq seyvanının xarici hissəsini təmizləyir. İt, pişik və digər heyvanlarda müntəzəm istifadə üçün uyğundur.",
+              "Bu, gigiyena vasitəsidir, müalicə üçün nəzərdə tutulmayıb."
+            ],
+            "sections": [
+              {
+                "title": "İstifadə qaydası",
+                "list": [
+                  "Birbaşa və ya pambıq disk, yaxud yumşaq cuna ilə tətbiq edin — vəziyyətə və heyvanın rahatlığına görə.",
+                  "Gözlər: çirkin yayılmaması üçün xarici küncdən daxili küncə doğru silin.",
+                  "Qulaqlar: yalnız qulağın xarici hissəsi və qulaq kanalının görünən hissəsi."
+                ]
+              }
+            ]
+          },
+          "ru": {
+            "cat": "Уход за глазами и ушами",
+            "name": "Pure Mist Pro — Eye & Ear Care",
+            "desc": "Средство Ultra Natural Care с носиком-капельницей для ежедневной гигиены глаз и ушей: ионизированная щелочная вода (pH 11) с шестью минералами, без химических добавок. Для собак и кошек, 150 мл.",
+            "tags": [
+              "Глаза",
+              "Уши",
+              "Ежедневно"
+            ],
+            "full": [
+              "Средство для ежедневной гигиены глаз и ушей питомцев. Основа — ионизированная щелочная вода (pH 11) с шестью ионами: кальций, магний, бикарбонат, хлорид, сульфат и натрий. Они образуют природный минеральный состав воды; дополнительные химические добавки не используются.",
+              "Очищает область век, шерсть вокруг глаз и наружную часть ушной раковины. Подходит для регулярного применения у собак, кошек и других животных.",
+              "Это гигиеническое средство, оно не предназначено для лечения."
+            ],
+            "sections": [
+              {
+                "title": "Как применять",
+                "list": [
+                  "Наносите напрямую или ватным диском либо мягкой марлей — в зависимости от ситуации и комфорта питомца.",
+                  "Глаза: протирайте от внешнего угла к внутреннему, чтобы не разносить загрязнения.",
+                  "Уши: только наружная часть уха и видимая часть слухового прохода."
+                ]
+              }
+            ]
+          },
+          "en": {
+            "cat": "Eye & ear care",
+            "name": "Pure Mist Pro — Eye & Ear Care",
+            "desc": "Ultra Natural Care solution with a dropper tip for daily eye and ear hygiene: ionised alkaline water (pH 11) with six minerals, no added chemicals. For dogs and cats, 150 ml.",
+            "tags": [
+              "Eyes",
+              "Ears",
+              "Daily"
+            ],
+            "full": [
+              "A product for daily eye and ear hygiene of pets. Its base is ionised alkaline water (pH 11) with six ions — calcium, magnesium, bicarbonate, chloride, sulphate and sodium — which make up the natural mineral composition of water; no additional chemical additives are used.",
+              "It cleanses the eyelid area, the fur around the eyes and the outer ear flap. Suitable for regular use in dogs, cats and other animals.",
+              "This is a hygiene product: it is not intended for medical treatment."
+            ],
+            "sections": [
+              {
+                "title": "How to use",
+                "list": [
+                  "Apply directly or with a cotton pad or soft gauze, depending on the situation and your pet's comfort.",
+                  "Eyes: wipe from the outer to the inner corner so impurities don't spread.",
+                  "Ears: only the outer ear and the visible part of the ear canal."
+                ]
+              }
+            ]
+          }
+        },
+        {
           "img": "assets/products/tpl-un-puremist.webp",
           "az": {
             "cat": "Sprey · 6in1",
@@ -560,6 +638,84 @@ const BRANDS_EXTRA = {
       "species": "both",
       "items": [
         {
+          "img": "assets/products/tpl-acc-rake.webp",
+          "az": {
+            "cat": "Aksesuar",
+            "name": "Deshedding Undercoat Rake",
+            "desc": "Fırlanan ikiqat paslanmayan polad dişli alt tük darağı (0,8 və 0,6 mm aralıq): üst tükü zədələmədən ölü alt tükü çıxarır. M və L ölçüləri.",
+            "tags": [
+              "Alt tük",
+              "Tük tökülməsi",
+              "M · L"
+            ],
+            "full": [
+              "TAURO alt tük darağı tükə müntəzəm qulluq üçün nəzərdə tutulub: artıq tükü və ölü alt tükü effektiv şəkildə çıxarır. Tam quru və dolaşıqsız tükdə istifadə edin — belə daramaq bərabər və nəzarətli olur.",
+              "Paslanmayan poladdan ikiqat dişlər sürtünməni və mexaniki qıcıqlanmanı azaldır, qulluq daha yumşaq və bərabər olur. İki diş aralığı (0,8 və 0,6 mm) üst tükü zədələmədən və dəriyə artıq yük vermədən alt tükü yığır.",
+              "Balanslı konstruksiya və erqonomik sap uzun müddət işləyəndə də əldə möhkəm durur və kəskin dartmaların qarşısını almağa kömək edir.",
+              "Ölçünü tükün sahəsinə və heyvanın bədən quruluşuna görə seçin. Müntəzəm daramaq alt tükün keçələşməsini azaldır, evdə və ya salonda qulluğu asanlaşdırır."
+            ],
+            "sections": [
+              {
+                "title": "Ölçülər",
+                "list": [
+                  "M — 76 × 40 mm daraq hissəsi, narıncı sap",
+                  "L — 110 × 40 mm daraq hissəsi, bənövşəyi sap"
+                ]
+              }
+            ]
+          },
+          "ru": {
+            "cat": "Аксессуар",
+            "name": "Deshedding Undercoat Rake",
+            "desc": "Грабли для подшёрстка с вращающимися двойными зубьями из нержавеющей стали (шаг 0,8 и 0,6 мм): убирают отмерший подшёрсток, не повреждая остевой волос. Размеры M и L.",
+            "tags": [
+              "Подшёрсток",
+              "Линька",
+              "M · L"
+            ],
+            "full": [
+              "Грабли TAURO для подшёрстка предназначены для регулярного ухода: они эффективно удаляют лишнюю шерсть и отмерший подшёрсток. Используйте их на полностью сухой и распутанной шерсти — так вычёсывание будет ровным и контролируемым.",
+              "Двойные зубья из нержавеющей стали снижают трение и механическое раздражение, поэтому уход становится мягче и равномернее. Два шага зубьев (0,8 и 0,6 мм) собирают подшёрсток, не повреждая остевой волос и не нагружая кожу.",
+              "Сбалансированная конструкция и эргономичная ручка надёжно лежат в руке даже при долгой работе и помогают избегать резких рывков.",
+              "Размер подбирайте по площади шерсти и сложению питомца. Регулярное вычёсывание уменьшает свалявшийся подшёрсток и упрощает груминг дома или в салоне."
+            ],
+            "sections": [
+              {
+                "title": "Размеры",
+                "list": [
+                  "M — полотно 76 × 40 мм, оранжевая ручка",
+                  "L — полотно 110 × 40 мм, фиолетовая ручка"
+                ]
+              }
+            ]
+          },
+          "en": {
+            "cat": "Accessory",
+            "name": "Deshedding Undercoat Rake",
+            "desc": "Undercoat rake with rotating double stainless-steel teeth (0.8 and 0.6 mm spacing): removes dead undercoat without damaging the top coat. Sizes M and L.",
+            "tags": [
+              "Undercoat",
+              "Shedding",
+              "M · L"
+            ],
+            "full": [
+              "The TAURO undercoat rake is designed for regular coat care: it effectively removes excess coat and dead undercoat. Use it on a completely dry, tangle-free coat for even, controlled brushing.",
+              "Double stainless-steel teeth reduce friction and mechanical irritation, making grooming gentler and more consistent. Two tooth spacings (0.8 and 0.6 mm) collect the undercoat without damaging the top coat or straining the skin.",
+              "The balanced construction and ergonomic handle give a secure grip during long sessions and help avoid sudden pulling movements.",
+              "Choose the size by coat area and body build. Regular brushing reduces undercoat matting and makes grooming easier at home or in a salon."
+            ],
+            "sections": [
+              {
+                "title": "Sizes",
+                "list": [
+                  "M — 76 × 40 mm blade, orange handle",
+                  "L — 110 × 40 mm blade, purple handle"
+                ]
+              }
+            ]
+          }
+        },
+        {
           "img": "assets/products/tpl-acc-slicker.webp",
           "az": {
             "cat": "Aksesuar",
@@ -616,6 +772,54 @@ const BRANDS_EXTRA = {
             "tags": [
               "Brush",
               "Wood"
+            ]
+          }
+        },
+        {
+          "img": "assets/products/tpl-acc-massagebrush.webp",
+          "az": {
+            "cat": "Aksesuar",
+            "name": "Massage Brush",
+            "desc": "Oval uclu paslanmayan polad pinləri və antistatik örtüyü olan taxta masaj fırçası; sıx tükü darayır, orta və iri cinslər üçün. İki ölçü.",
+            "tags": [
+              "Fırça",
+              "Masaj",
+              "Ağac"
+            ],
+            "full": [
+              "Tauro Pro Line masaj fırçası peşəkar qruminq alətidir: yüngüldür, erqonomik forması isə əlin yorulmasının qarşısını alır. Xüsusi forması sayəsində ən sıx tükü belə darayır; orta və iri cinslər, həmçinin bol tüklü heyvanlar üçün nəzərdə tutulub.",
+              "STOP texnologiyası pinlərin yastığın içinə ilişib qalmasına imkan vermir, oval uclar isə dərini yumşaq masaj edir və qan dövranını yaxşılaşdırır. Antistatik örtük tükün elektriklənməsinin qarşısını alır, tük daha hamar və parlaq qalır.",
+              "Sap bərk ağacdan, pinlər paslanmayan poladdandır. Bütün tük tipləri üçün uyğundur."
+            ]
+          },
+          "ru": {
+            "cat": "Аксессуар",
+            "name": "Massage Brush",
+            "desc": "Деревянная массажная щётка со стальными пинами с овальными кончиками и антистатическим покрытием; прочёсывает густую шерсть, для средних и крупных пород. Два размера.",
+            "tags": [
+              "Щётка",
+              "Массаж",
+              "Дерево"
+            ],
+            "full": [
+              "Массажная щётка Tauro Pro Line — профессиональный инструмент для груминга: она лёгкая, а эргономичная форма помогает рукам не уставать. Благодаря особой форме щётка прочёсывает даже самую густую шерсть; она предназначена для средних и крупных пород и питомцев с обильной шерстью.",
+              "Технология STOP не даёт пинам застревать в подушке, а овальные кончики мягко массируют кожу и улучшают кровообращение. Антистатическое покрытие не даёт шерсти электризоваться, поэтому она остаётся более гладкой и блестящей.",
+              "Ручка из твёрдой древесины, пины из нержавеющей стали. Подходит для всех типов шерсти."
+            ]
+          },
+          "en": {
+            "cat": "Accessory",
+            "name": "Massage Brush",
+            "desc": "Wooden massage brush with oval-tipped stainless-steel pins and an anti-static coating; combs through dense coats, for medium and large breeds. Two sizes.",
+            "tags": [
+              "Brush",
+              "Massage",
+              "Wood"
+            ],
+            "full": [
+              "The Tauro Pro Line Massage Brush is a professional grooming tool: it is lightweight, and its ergonomic shape helps prevent hand fatigue. Thanks to its special shape it combs through even the densest coats; it is designed for medium and large breeds and pets with a lot of coat.",
+              "STOP technology keeps the pins from getting stuck inside the cushion, and the oval tips gently massage the skin and improve blood circulation. The anti-static coating stops the hair from becoming electrified, so the coat stays smoother and shinier.",
+              "Hardwood handle and stainless-steel pins. Suitable for all coat types."
             ]
           }
         },

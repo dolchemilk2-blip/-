@@ -71,6 +71,10 @@
       'why.indoorBase': 'Ev pişikləri üçün yüngül gündəlik formula.',
       'why.vitamins': 'Gündəlik vitamin və minerallar.',
       'why.lifestyle': 'Lifestyle: taxılsız, hipoallergen qəlyanaltı.',
+      'why.eyeear': 'Gündəlik gigiyena: göz ətrafını və qulaqları yumşaq təmizləyir; müalicə vasitəsi deyil.',
+      'why.cream': 'Kremli qəlyanaltı birbaşa paketdən verilir; 88 % nəmlik gündəlik maye qəbuluna töhfə verir.',
+      'why.boostUrinary': 'BOOST: mərcanı, D-mannoza və DL-metionin — sidik yollarının normal işinə dəstək.',
+      'why.hypo': 'Taxılsız: əsas protein qızılbalıqdır, taxıl əvəzinə kartof və noxud.',
       'why.chew': 'Təbii uzunmüddətli çeynəmə — dişlərin təmiz qalmasına kömək edir.',
       'why.training': 'Təlim və mükafat üçün ətli çubuqlar.',
       'why.growthSnack': 'Böyümə dövrü üçün funksional qəlyanaltı.',
@@ -146,6 +150,10 @@
       'why.indoorBase': 'Лёгкая формула на каждый день для домашних кошек.',
       'why.vitamins': 'Витамины и минералы на каждый день.',
       'why.lifestyle': 'Lifestyle: беззерновое гипоаллергенное лакомство.',
+      'why.eyeear': 'Ежедневная гигиена: мягко очищает область вокруг глаз и уши; это не лечебное средство.',
+      'why.cream': 'Кремовое лакомство дают прямо из пакетика; 88 % влаги помогают дневному питьевому режиму.',
+      'why.boostUrinary': 'BOOST: клюква, D-манноза и DL-метионин — поддержка нормальной работы мочевыводящих путей.',
+      'why.hypo': 'Беззерновой: основной белок — лосось, вместо зерновых — картофель и горох.',
       'why.chew': 'Натуральное долгоиграющее лакомство — помогает поддерживать зубы чистыми.',
       'why.training': 'Мясные палочки для дрессировки и поощрения.',
       'why.growthSnack': 'Функциональное лакомство на период роста.',
@@ -221,6 +229,10 @@
       'why.indoorBase': 'Light everyday formula for indoor cats.',
       'why.vitamins': 'Everyday vitamins and minerals.',
       'why.lifestyle': 'Lifestyle: grain-free, hypoallergenic treat.',
+      'why.eyeear': 'Daily hygiene: gently cleans around the eyes and the ears; not a treatment.',
+      'why.cream': 'A creamy treat fed straight from the sachet; 88 % moisture adds to daily fluid intake.',
+      'why.boostUrinary': 'BOOST: cranberry, D-mannose and DL-methionine to support normal urinary tract function.',
+      'why.hypo': 'Grain free: salmon is the main protein, with potato and peas instead of grains.',
       'why.chew': 'Natural long-lasting chew — helps keep teeth clean.',
       'why.training': 'Meaty sticks for training and rewards.',
       'why.growthSnack': 'Functional treat for the growth period.',
@@ -379,6 +391,7 @@
     { b: 'np', sp: 'dogs', k: 'dry', n: 'Mini Adult — Lamb', st: A, sz: ['mini'], base: 4, why: 'why.miniKibble' },
     { b: 'np', sp: 'dogs', k: 'dry', n: 'Maxi Adult — Poultry', st: A, sz: ['large'], base: 4 },
     { b: 'np', sp: 'dogs', k: 'dry', n: 'Adult Lamb — Lamb', st: A, base: 3, why: 'why.adultLamb' },
+    { b: 'np', sp: 'dogs', k: 'dry', n: 'Hypoallergenic Grain Free — Salmon', st: A, req: ['allergy', 'digestion', 'skin'], base: 3, f: { allergy: 5, digestion: 3, skin: 2 }, why: 'why.hypo' },
     // ---- собаки · Araton (выгодная альтернатива)
     { b: 'araton', sp: 'dogs', k: 'alt', n: 'Junior Poultry', st: J, base: 3 },
     { b: 'araton', sp: 'dogs', k: 'alt', n: 'Junior Lamb', st: J, base: 2, f: { allergy: 1 } },
@@ -411,6 +424,7 @@
     { b: 'np', sp: 'dogs', k: 'extra', n: 'Junior — Healthy Growth', st: J, base: 2, why: 'why.growthSnack' },
     { b: 'np', sp: 'dogs', k: 'extra', n: 'White Dogs — Clear Vision', st: A, coat: ['white'], req: ['tears'], base: 1, f: { tears: 5 } },
     { b: 'tpl', k: 'extra', n: 'Stainless Look', req: ['tears'], base: 1, f: { tears: 6 }, why: 'why.stainless', care: true },
+    { b: 'tpl', k: 'extra', n: 'Pure Mist Pro — Eye & Ear Care', req: ['tears'], base: 1, f: { tears: 3 }, why: 'why.eyeear', care: true, quiet: true },
     { b: 'tpl', k: 'extra', n: 'Whitening Shampoo', coat: ['white'], base: 0, f: { tears: 2, skin: 1 }, why: 'why.whiteShampoo', care: true },
     { b: 'np', sp: 'dogs', k: 'extra', n: 'White Dogs — Intestinal Care', st: A, coat: ['white'], req: ['digestion'], base: 1, f: { digestion: 5 } },
     { b: 'np', sp: 'dogs', k: 'extra', n: 'Red Coat — Hypoallergenic & Intestinal Care', st: A, coat: ['red', 'dark'], req: ['digestion', 'allergy'], base: 1, f: { digestion: 4, allergy: 4 } },
@@ -424,11 +438,13 @@
     { b: 'np', sp: 'dogs', k: 'extra', n: 'Red Coat — Weight Control', st: A, coat: ['red', 'dark'], req: ['weight', 'sterilised'], base: 1, f: { weight: 4, sterilised: 2 } },
     { b: 'np', sp: 'dogs', k: 'extra', n: 'Healthy Ageing', st: ['senior'], base: 6, f: { joints: 2 }, why: 'why.ageing' },
     { b: 'np', sp: 'dogs', k: 'extra', n: 'Mobility Formula', st: A, req: ['joints'], base: 1, f: { joints: 5 } },
+    { b: 'np', sp: 'dogs', k: 'extra', n: 'BOOST Joint Support', st: A, req: ['joints'], base: 1, f: { joints: 5 } },
     { b: 'np', sp: 'dogs', k: 'extra', n: 'White Dogs — Healthy Hips & Joints', st: A, coat: ['white'], req: ['joints'], base: 1, f: { joints: 4 } },
     { b: 'np', k: 'extra', n: 'Faugis — Wellness Formula 5in1', st: A, req: ['joints'], base: 1, f: { joints: 3 }, only: 'dogs' },
     { b: 'np', sp: 'dogs', k: 'extra', n: 'Red Coat — Healthy Body & Endurance', st: ['adult'], coat: ['red', 'dark'], req: ['active'], base: 1, f: { active: 4 } },
     { b: 'np', sp: 'dogs', k: 'extra', n: 'White Dogs — Endurance', st: ['adult'], coat: ['white'], req: ['active'], base: 1, f: { active: 4 } },
     { b: 'np', sp: 'dogs', k: 'extra', n: 'Comfort Calm', st: A, req: ['calm'], base: 1, f: { calm: 6 } },
+    { b: 'np', sp: 'dogs', k: 'extra', n: 'BOOST Calming Support', st: A, req: ['calm'], base: 1, f: { calm: 5 } },
     { b: 'np', sp: 'dogs', k: 'extra', n: 'Rabbit Heart Bites', st: A, req: ['digestion'], base: 1, f: { digestion: 3 } },
     { b: 'np', sp: 'dogs', k: 'extra', n: 'Soft Duck Slices', st: A, req: ['digestion', 'allergy'], base: 1, f: { digestion: 2, allergy: 2 } },
     { b: 'np', sp: 'dogs', k: 'extra', n: 'Rabbit & Cod Rolls', st: A, req: ['digestion', 'allergy'], base: 0, f: { digestion: 2, allergy: 2 } },
@@ -477,11 +493,17 @@
     { b: 'np', sp: 'cats', k: 'extra', n: 'Milk Replacer for Kittens', st: S, base: 9, why: 'why.milk' },
     { b: 'np', sp: 'cats', k: 'extra', n: 'Malt Paste', st: ALL, req: ['hairball'], base: 1, f: { hairball: 5 } },
     { b: 'np', sp: 'cats', k: 'extra', n: 'Anti-Hairball Malt Paste', st: A, req: ['hairball'], base: 1, f: { hairball: 4, sterilised: 2 } },
+    { b: 'np', sp: 'cats', k: 'extra', n: 'BOOST Anti-Hairball', st: A, req: ['hairball'], base: 1, f: { hairball: 5 } },
+    { b: 'np', sp: 'cats', k: 'extra', n: 'Anti-Hairball Cream — Tuna & Anchovies', st: A, req: ['hairball'], base: 0, f: { hairball: 4, picky: 1 }, why: 'why.cream' },
     { b: 'np', sp: 'cats', k: 'extra', n: 'Oral Care — Functional snacks', st: A, req: ['teeth'], base: 1, f: { teeth: 5 } },
     { b: 'np', sp: 'cats', k: 'extra', n: 'Sterilised — Functional snacks', st: A, req: ['sterilised', 'weight'], base: 1, f: { sterilised: 3, weight: 3 } },
     { b: 'np', sp: 'cats', k: 'extra', n: 'Urinary — Functional snacks', st: A, req: ['urinary'], base: 1, f: { urinary: 4 } },
+    { b: 'np', sp: 'cats', k: 'extra', n: 'BOOST Urinary Support', st: A, req: ['urinary'], base: 1, f: { urinary: 5 }, why: 'why.boostUrinary', quiet: true },
     { b: 'np', sp: 'cats', k: 'extra', n: 'Salmon Oil', st: ALL, req: ['skin'], base: 1, f: { skin: 5 } },
     { b: 'np', sp: 'cats', k: 'extra', n: 'Beauty Formula', st: ALL, req: ['skin'], base: 1, f: { skin: 3 } },
+    { b: 'np', sp: 'cats', k: 'extra', n: 'Skin & Coat Cream — Tuna & Salmon', st: A, req: ['skin'], base: 0, f: { skin: 3, picky: 1 }, why: 'why.cream' },
+    { b: 'np', sp: 'cats', k: 'extra', n: 'Skin & Coat Cream — Chicken & Herring', st: A, req: ['skin'], base: 0, f: { skin: 2, picky: 1 }, why: 'why.cream' },
+    { b: 'np', sp: 'cats', k: 'extra', n: 'Immunity Support Cream — Tuna', st: A, req: ['picky'], base: 0, f: { picky: 2 }, why: 'why.cream' },
     { b: 'np', k: 'extra', n: 'Healthy Ageing', st: ['senior'], base: 6, f: { joints: 2 }, why: 'why.ageing', only: 'cats' },
     { b: 'np', sp: 'cats', k: 'extra', n: 'Faugis — Wellness Formula 5in1', st: A, req: ['joints'], base: 1, f: { joints: 4 } },
     { b: 'np', sp: 'cats', k: 'extra', n: 'Daily Vitamin Formula', st: ALL, base: 1, why: 'why.vitamins' },
@@ -522,7 +544,7 @@
     if (extraLoading) return extraLoading;
     extraLoading = new Promise(res => {
       const s = document.createElement('script');
-      s.src = 'js/catalog.js?v=18';
+      s.src = 'js/catalog.js?v=19';
       s.onload = s.onerror = () => { INDEX = null; res(); };
       document.head.appendChild(s);
       setTimeout(res, 4000);
@@ -583,7 +605,7 @@
     const whiteLine = d.coat && d.coat.length === 1 && d.coat[0] === 'white' && !d.care;
     if (d.coat && !d.care) push(d.coat.length > 1 ? 'why.coat.reddark' : 'why.coat.' + d.coat[0]);
     if (d.sz && st.size !== 'medium') push('why.size.' + st.size);
-    x.hit.forEach(f => { if (!(f === 'tears' && (whiteLine || d.why === 'why.stainless'))) push('why.f.' + f); });
+    if (!d.quiet) x.hit.forEach(f => { if (!(f === 'tears' && (whiteLine || d.why === 'why.stainless'))) push('why.f.' + f); });
     if (d.vet) push('why.vet');
     if (d.b === 'araton') push('why.araton');
     if (d.why2) push(d.why2);

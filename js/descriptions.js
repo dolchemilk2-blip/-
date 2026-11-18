@@ -3470,3 +3470,329 @@ FULL_DESC["dogs||Nature's Protection · Snacks||Beef Sticks"] = {
   "comp": "Beef 71,8 %, beef heart and liver 21 %, pea proteins 3 %, starch 2 %, sorbitol 1 %, glycerin 1 %, salt 0,2 %."
  }
 };
+
+// ===== Новинки из магазина: кремы Superior Care для кошек, BOOST, Hypoallergenic Grain Free Salmon (официальные страницы naturesprotection.com) =====
+FULL_DESC["cats||Superior Care · Creamy snacks||Anti-Hairball Cream — Tuna & Anchovies"] = {
+ "az": {
+  "full": [
+   "Nature’s Protection Superior Care Anti-Hairball — yetkin pişiklər üçün tunes və hamsi ilə kremli funksional qəlyanaltı; yalnız əlavə qidalanma üçün nəzərdə tutulmuş 4 × 15 q-lıq rahat paketlərdə.",
+   "Reseptin əsasını tunes (40 %), hamsi (6 %), sellüloza və psillium qabığı təşkil edir. Tük topalarına nəzarəti dəstəkləyir, gündəlik rifaha töhfə verir və sahibinə hər gün ev heyvanı ilə dadlı və faydalı an bölüşmək imkanı yaradır.",
+   "Kremli tekstura qəlyanaltını birbaşa paketdən verməyə imkan verir — təlim zamanı mükafat, emosional bağ, səyahət və ya baytar ziyarəti üçün rahat seçimdir. Yüksək nəmlik (88 %) gündəlik maye qəbuluna töhfə verir; bu, pişiklər üçün xüsusilə vacibdir.",
+   "Taxılsız, soyasız, süni boya, ətir və GMO-suz — gündəlik rasion üçün təmiz tərkib. Avropa İttifaqında yüksək keyfiyyət standartlarına uyğun olaraq, diqqətlə seçilmiş sertifikatlı inqrediyentlərdən istehsal olunur.",
+   "Ev heyvanını təkcə dadla deyil, gündəlik qidalanmanı dəstəkləyən funksional inqrediyentlərlə də sevindirmək istəyən sahiblər üçün məsuliyyətli seçim."
+  ],
+  "feeding": "Yalnız əlavə qidalanma üçün. Balanslı rasion üçün tam rasionlu yemlə birlikdə verilməsi tövsiyə olunur. Pişiyin çəkisinə görə tövsiyə olunan miqdar: 1–2 kq — gündə 2–3 paket; 2–4 kq — 3–4 paket; 4 kq-dan çox — 4–5 paket. Təmiz, təzə su həmişə əlçatan olmalıdır. Miqdar tövsiyə xarakterlidir — fərdi ehtiyaclara görə tənzimləyin.",
+  "comp": "Balıq bulyonu, tunes 40 %, hamsi 6 %, tapioka nişastası, hidrolizə olunmuş balıq, sellüloza 1 %, qızılbalıq yağı, psillium qabığı 0,5 %, pivə mayası, minerallar, inulin (FOS mənbəyi), balıq kollageni 0,1 %."
+ },
+ "ru": {
+  "full": [
+   "NATURE’S PROTECTION SUPERIOR CARE Anti-Hairball кремовые функциональные лакомства для взрослых кошек с тунцом и анчоусами 4 × 15 г в пакетах, предназначенные для обогащения рациона.",
+   "Основу рецепта составляют – тунец (40 %), анчоусы (6 %), целлюлоза и шелуха семян псиллиума, которые помогают контролировать образование комков шерсти, способствуют общему здоровью и дарят владельцу возможность ежедневно радовать питомца вкусным и полезным перекусом.",
+   "Кремовая текстура позволяет давать лакомство прямо из пакетика – что особо удобно для поощрения во время дрессировки, укрепления эмоциональной связи, в путешествиях или при визите к ветеринару. Высокое содержание влаги (88 %) способствует оптимальному питьевому режиму, что особенно важно для кошек.",
+   "Без зерновых, сои, искусственных красителей, ароматизаторов и ГМО – чистый состав для здорового ежедневного рациона. Произведено в Европейском союзе согласно самым высоким стандартам качества с использованием тщательно отобранных сертифицированных ингредиентов.",
+   "Данные лакомства – это ответственный выбор владельцев, которые стремятся радовать питомца не только вкусными, но и функциональными продуктами, помогающими обогатить ежедневный рацион."
+  ],
+  "feeding": "Предназначено только для дополнительного кормления. Рекомендуется давать вместе с полнорационным кормом для сбалансированного питания. Рекомендуемое количество в зависимости от веса кошки: 1–2 кг – 2–3 пакетика в день; 2–4 кг – 3–4 пакетика; свыше 4 кг – 4–5 пакетиков. У питомца всегда должна быть свежая и чистая вода. Количество является рекомендуемым – оно корректируется индивидуально согласно потребностям.",
+  "comp": "Рыбный бульон, тунец 40 %, анчоусы 6 %, тапиоковый крахмал, гидролизованная рыба, целлюлоза 1 %, лососевое масло, оболочки семян псиллиума 0,5 %, пивные дрожжи, минералы, инулин (источник FOS), рыбный коллаген 0,1 %."
+ },
+ "en": {
+  "full": [
+   "Nature’s Protection Superior Care Anti-Hairball creamy functional snacks for adult cats with tuna and anchovies is a convenient creamy functional snack in 4 × 15 g sachets for supplementary feeding only.",
+   "The recipe is built around tuna (40 %), anchovies (6 %), cellulose and psyllium husk. It helps support hairball control, contributes to daily wellbeing and gives owners a chance to share a tasty, wholesome moment with their pet every day.",
+   "The creamy texture allows the snack to be fed straight from the sachet — a convenient choice for training rewards, bonding moments, travel or vet visits. The high moisture content (88 %) contributes to daily fluid intake, which is especially important for cats.",
+   "Free of grains, soy, artificial colours, flavours and GMO — a clean-label choice for daily routines. Made in the European Union to high quality standards, using carefully selected, certified ingredients.",
+   "A responsible choice for owners who want to treat their pet not just to flavour but also to functional ingredients that support daily nutrition."
+  ],
+  "feeding": "For supplementary feeding only. Recommended to feed alongside a complete food to keep the diet balanced. Suggested amounts by cat weight: 1–2 kg — 2–3 sachets per day; 2–4 kg — 3–4 sachets; over 4 kg — 4–5 sachets. Clean, fresh water should be available at all times. Amounts are guidelines only — adjust to individual needs.",
+  "comp": "Fish broth, tuna 40 %, anchovies 6 %, tapioca starch, hydrolysed fish, cellulose 1 %, salmon oil, psyllium husk 0.5 %, brewer’s yeast, minerals, inulin (source of FOS), fish collagen 0.1 %."
+ }
+};
+FULL_DESC["cats||Superior Care · Creamy snacks||Immunity Support Cream — Tuna"] = {
+ "az": {
+  "full": [
+   "Nature’s Protection Superior Care Immunity Support — yetkin pişiklər üçün tunesli kremli funksional qəlyanaltı; yalnız əlavə qidalanma üçün nəzərdə tutulmuş 4 × 15 q-lıq rahat paketlərdə.",
+   "Reseptin əsasını tunes (45 %), yaşıl çay ekstraktı və balıq kollageni təşkil edir. İmmun sistemin təbii fəaliyyətini dəstəkləyir, gündəlik rifaha töhfə verir və sahibinə hər gün ev heyvanı ilə dadlı və faydalı an bölüşmək imkanı yaradır.",
+   "Kremli tekstura qəlyanaltını birbaşa paketdən verməyə imkan verir — təlim zamanı mükafat, emosional bağ, səyahət və ya baytar ziyarəti üçün rahat seçimdir. Yüksək nəmlik (88 %) gündəlik maye qəbuluna töhfə verir; bu, pişiklər üçün xüsusilə vacibdir.",
+   "Taxılsız, soyasız, süni boya, ətir və GMO-suz — gündəlik rasion üçün təmiz tərkib. Avropa İttifaqında yüksək keyfiyyət standartlarına uyğun olaraq, diqqətlə seçilmiş sertifikatlı inqrediyentlərdən istehsal olunur.",
+   "Ev heyvanını təkcə dadla deyil, gündəlik qidalanmanı dəstəkləyən funksional inqrediyentlərlə də sevindirmək istəyən sahiblər üçün məsuliyyətli seçim."
+  ],
+  "feeding": "Yalnız əlavə qidalanma üçün. Balanslı rasion üçün tam rasionlu yemlə birlikdə verilməsi tövsiyə olunur. Pişiyin çəkisinə görə tövsiyə olunan miqdar: 1–2 kq — gündə 2–3 paket; 2–4 kq — 3–4 paket; 4 kq-dan çox — 4–5 paket. Təmiz, təzə su həmişə əlçatan olmalıdır. Miqdar tövsiyə xarakterlidir — fərdi ehtiyaclara görə tənzimləyin.",
+  "comp": "Tunes 45 %, balıq bulyonu, tapioka nişastası, hidrolizə olunmuş balıq, qızılbalıq yağı, sellüloza, pivə mayası, minerallar, psillium qabığı 0,2 %, inulin (FOS mənbəyi), qurudulmuş Schizochytrium sp. yosunu 0,16 %, balıq kollageni 0,1 %, yaşıl çay."
+ },
+ "ru": {
+  "full": [
+   "NATURE’S PROTECTION SUPERIOR CARE Immunity Support кремовые функциональные лакомства для взрослых кошек с тунцом 4 × 15 г, предназначены для обогащения рациона.",
+   "Основу рецептуры составляют тунец (45 %), экстракт зелёного чая и рыбный коллаген, которые помогают поддерживать иммунную систему, способствуют хорошему самочувствию и дают владельцу возможность ежедневно радовать питомца вкусным и полезным перекусом.",
+   "Кремовая текстура позволяет давать лакомство прямо из пакетика – что особо удобно для поощрения во время дрессировки, укрепления эмоциональной связи, в путешествиях или при визите к ветеринару. Высокое содержание влаги (88 %) способствует оптимальному питьевому режиму, что особенно важно для кошек.",
+   "Без зерновых, сои, искусственных красителей, ароматизаторов и ГМО – чистый состав для здорового ежедневного рациона. Произведено в Европейском союзе согласно самым высоким стандартам качества с использованием тщательно отобранных сертифицированных ингредиентов.",
+   "Данные лакомства – это ответственный выбор владельцев, которые стремятся радовать питомца не только вкусными, но и функциональными продуктами, помогающими обогатить ежедневный рацион."
+  ],
+  "feeding": "Предназначено только для дополнительного кормления. Рекомендуется давать вместе с полнорационным кормом для сбалансированного питания. Рекомендуемое количество в зависимости от веса кошки: 1–2 кг – 2–3 пакетика в день; 2–4 кг – 3–4 пакетика; свыше 4 кг – 4–5 пакетиков. У питомца всегда должна быть свежая и чистая вода. Количество является рекомендуемым – оно корректируется индивидуально согласно потребностям.",
+  "comp": "Тунец 45 %, рыбный бульон, тапиоковый крахмал, гидролизованная рыба, лососевое масло, целлюлоза, пивные дрожжи, минералы, шелуха семян псиллиума 0,2 %, инулин (источник FOS), сушёные водоросли Schizochytrium sp. 0,16 %, рыбный коллаген 0,1 %, зелёный чай."
+ },
+ "en": {
+  "full": [
+   "Nature’s Protection Superior Care Immunity Support creamy functional snacks for adult cats with tuna is a convenient creamy functional snack in 4 × 15 g sachets for supplementary feeding only.",
+   "The recipe is built around tuna (45 %), green tea extract and fish collagen. It helps support natural immune-system function, contributes to daily wellbeing and gives owners a chance to share a tasty, wholesome moment with their pet every day.",
+   "The creamy texture allows the snack to be fed straight from the sachet — a convenient choice for training rewards, bonding moments, travel or vet visits. The high moisture content (88 %) contributes to daily fluid intake, which is especially important for cats.",
+   "Free of grains, soy, artificial colours, flavours and GMO — a clean-label choice for daily routines. Made in the European Union to high quality standards, using carefully selected, certified ingredients.",
+   "A responsible choice for owners who want to treat their pet not just to flavour but also to functional ingredients that support daily nutrition."
+  ],
+  "feeding": "For supplementary feeding only. Recommended to feed alongside a complete food to keep the diet balanced. Suggested amounts by cat weight: 1–2 kg — 2–3 sachets per day; 2–4 kg — 3–4 sachets; over 4 kg — 4–5 sachets. Clean, fresh water should be available at all times. Amounts are guidelines only — adjust to individual needs.",
+  "comp": "Tuna 45 %, fish broth, tapioca starch, hydrolysed fish, salmon oil, cellulose, brewer’s yeast, minerals, psyllium husk 0.2 %, inulin (source of FOS), dried algae Schizochytrium sp. 0.16 %, fish collagen 0.1 %, green tea."
+ }
+};
+FULL_DESC["cats||Superior Care · Creamy snacks||Skin & Coat Cream — Chicken & Herring"] = {
+ "az": {
+  "full": [
+   "Nature’s Protection Superior Care Skin&Coat — yetkin pişiklər üçün toyuq və siyənəkli kremli funksional qəlyanaltı; yalnız əlavə qidalanma üçün nəzərdə tutulmuş 4 × 15 q-lıq rahat paketlərdə.",
+   "Reseptin əsasını toyuq (30 %), siyənək (17 %) və qızılbalıq yağı təşkil edir. Sağlam dərini və parlaq tükü dəstəkləyir, gündəlik rifaha töhfə verir və sahibinə hər gün ev heyvanı ilə dadlı və faydalı an bölüşmək imkanı yaradır.",
+   "Kremli tekstura qəlyanaltını birbaşa paketdən verməyə imkan verir — təlim zamanı mükafat, emosional bağ, səyahət və ya baytar ziyarəti üçün rahat seçimdir. Yüksək nəmlik (88 %) gündəlik maye qəbuluna töhfə verir; bu, pişiklər üçün xüsusilə vacibdir.",
+   "Taxılsız, soyasız, süni boya, ətir və GMO-suz — gündəlik rasion üçün təmiz tərkib. Avropa İttifaqında yüksək keyfiyyət standartlarına uyğun olaraq, diqqətlə seçilmiş sertifikatlı inqrediyentlərdən istehsal olunur.",
+   "Ev heyvanını təkcə dadla deyil, gündəlik qidalanmanı dəstəkləyən funksional inqrediyentlərlə də sevindirmək istəyən sahiblər üçün məsuliyyətli seçim."
+  ],
+  "feeding": "Yalnız əlavə qidalanma üçün. Balanslı rasion üçün tam rasionlu yemlə birlikdə verilməsi tövsiyə olunur. Pişiyin çəkisinə görə tövsiyə olunan miqdar: 1–2 kq — gündə 2–3 paket; 2–4 kq — 3–4 paket; 4 kq-dan çox — 4–5 paket. Təmiz, təzə su həmişə əlçatan olmalıdır. Miqdar tövsiyə xarakterlidir — fərdi ehtiyaclara görə tənzimləyin.",
+  "comp": "Toyuq bulyonu, toyuq 30 %, siyənək 17 %, tapioka nişastası, hidrolizə olunmuş toyuq, sellüloza, qızılbalıq yağı, pivə mayası, minerallar, psillium qabığı 0,5 %, qurudulmuş Schizochytrium sp. yosunu 0,16 %, inulin (FOS mənbəyi), balıq kollageni 0,1 %."
+ },
+ "ru": {
+  "full": [
+   "NATURE’S PROTECTION SUPERIOR CARE Skin&Coat кремовые функциональные лакомства для взрослых кошек с курицей и сельдью (4 × 15 г в пакетиках), предназначенные для обогащения ежедневного рациона.",
+   "Основу рецепта составляют курица (30 %), сельдь (17 %) и лососевое масло, которые помогают поддерживать здоровье кожи и блеск шерсти, а также способствуют общему здоровью и дарят владельцу возможность ежедневно радовать питомца вкусным и полезным перекусом.",
+   "Кремовая текстура позволяет давать лакомство прямо из пакетика – что особо удобно для поощрения во время дрессировки, укрепления эмоциональной связи, в путешествиях или при визите к ветеринару. Высокое содержание влаги (88 %) способствует оптимальному питьевому режиму, что особенно важно для кошек.",
+   "Без зерновых, сои, искусственных красителей, ароматизаторов и ГМО – чистый состав для здорового ежедневного рациона. Произведено в Европейском союзе согласно самым высоким стандартам качества с использованием тщательно отобранных сертифицированных ингредиентов.",
+   "Данные лакомства – это ответственный выбор владельцев, которые стремятся радовать питомца не только вкусными, но и функциональными продуктами, помогающими обогатить ежедневный рацион."
+  ],
+  "feeding": "Предназначено только для дополнительного кормления. Рекомендуется давать вместе с полнорационным кормом для сбалансированного питания. Рекомендуемое количество в зависимости от веса кошки: 1–2 кг – 2–3 пакетика в день; 2–4 кг – 3–4 пакетика; свыше 4 кг – 4–5 пакетиков. У питомца всегда должна быть свежая и чистая вода. Количество является рекомендуемым – оно корректируется индивидуально согласно потребностям.",
+  "comp": "Куриный бульон, курица 30 %, сельдь 17 %, тапиоковый крахмал, гидролизованная курица, целлюлоза, лососевое масло, пивные дрожжи, минералы, оболочки семян псиллиума 0,5 %, сушеные водоросли Schizochytrium sp. 0,16 %, инулин (источник FOS), рыбный коллаген 0,1 %."
+ },
+ "en": {
+  "full": [
+   "Nature’s Protection Superior Care Skin&Coat creamy functional snacks for adult cats with chicken and herring is a convenient creamy functional snack in 4 × 15 g sachets for supplementary feeding only.",
+   "The recipe is built around chicken (30 %), herring (17 %) and salmon oil. It helps support healthy skin and a shiny coat, contributes to daily wellbeing and gives owners a chance to share a tasty, wholesome moment with their pet every day.",
+   "The creamy texture allows the snack to be fed straight from the sachet — a convenient choice for training rewards, bonding moments, travel or vet visits. The high moisture content (88 %) contributes to daily fluid intake, which is especially important for cats.",
+   "Free of grains, soy, artificial colours, flavours and GMO — a clean-label choice for daily routines. Made in the European Union to high quality standards, using carefully selected, certified ingredients.",
+   "A responsible choice for owners who want to treat their pet not just to flavour but also to functional ingredients that support daily nutrition."
+  ],
+  "feeding": "For supplementary feeding only. Recommended to feed alongside a complete food to keep the diet balanced. Suggested amounts by cat weight: 1–2 kg — 2–3 sachets per day; 2–4 kg — 3–4 sachets; over 4 kg — 4–5 sachets. Clean, fresh water should be available at all times. Amounts are guidelines only — adjust to individual needs.",
+  "comp": "Chicken broth, chicken 30 %, herring 17 %, tapioca starch, hydrolysed chicken, cellulose, salmon oil, brewer’s yeast, minerals, psyllium husk 0.5 %, dried algae Schizochytrium sp. 0.16 %, inulin (source of FOS), fish collagen 0.1 %."
+ }
+};
+FULL_DESC["cats||Superior Care · Creamy snacks||Skin & Coat Cream — Tuna & Salmon"] = {
+ "az": {
+  "full": [
+   "Nature’s Protection Superior Care Skin&Coat — yetkin pişiklər üçün tunes və qızılbalıqlı kremli funksional qəlyanaltı; yalnız əlavə qidalanma üçün nəzərdə tutulmuş 4 × 15 q-lıq rahat paketlərdə.",
+   "Reseptin əsasını tunes (28 %), qızılbalıq (18 %) və qızılbalıq yağı təşkil edir. Sağlam dərini və parlaq tükü dəstəkləyir, gündəlik rifaha töhfə verir və sahibinə hər gün ev heyvanı ilə dadlı və faydalı an bölüşmək imkanı yaradır.",
+   "Kremli tekstura qəlyanaltını birbaşa paketdən verməyə imkan verir — təlim zamanı mükafat, emosional bağ, səyahət və ya baytar ziyarəti üçün rahat seçimdir. Yüksək nəmlik (88 %) gündəlik maye qəbuluna töhfə verir; bu, pişiklər üçün xüsusilə vacibdir.",
+   "Taxılsız, soyasız, süni boya, ətir və GMO-suz — gündəlik rasion üçün təmiz tərkib. Avropa İttifaqında yüksək keyfiyyət standartlarına uyğun olaraq, diqqətlə seçilmiş sertifikatlı inqrediyentlərdən istehsal olunur.",
+   "Ev heyvanını təkcə dadla deyil, gündəlik qidalanmanı dəstəkləyən funksional inqrediyentlərlə də sevindirmək istəyən sahiblər üçün məsuliyyətli seçim."
+  ],
+  "feeding": "Yalnız əlavə qidalanma üçün. Balanslı rasion üçün tam rasionlu yemlə birlikdə verilməsi tövsiyə olunur. Pişiyin çəkisinə görə tövsiyə olunan miqdar: 1–2 kq — gündə 2–3 paket; 2–4 kq — 3–4 paket; 4 kq-dan çox — 4–5 paket. Təmiz, təzə su həmişə əlçatan olmalıdır. Miqdar tövsiyə xarakterlidir — fərdi ehtiyaclara görə tənzimləyin.",
+  "comp": "Balıq bulyonu, tunes 28 %, qızılbalıq 18 %, tapioka nişastası, hidrolizə olunmuş balıq, sellüloza, qızılbalıq yağı, pivə mayası, minerallar, psillium qabığı 0,3 %, inulin (FOS mənbəyi), qurudulmuş Schizochytrium sp. yosunu 0,16 %, balıq kollageni 0,1 %."
+ },
+ "ru": {
+  "full": [
+   "NATURE’S PROTECTION SUPERIOR CARE Skin&Coat кремовые функциональные лакомства для взрослых кошек с тунцом и лососем, 4 × 15 г в пакетиках, предназначенные для обогащения рациона.",
+   "Основу рецепта составляют тунец (28 %), лосось (18 %) и лососевое масло, которые помогают поддерживать здоровье кожи и блеск шерсти, способствуют общему здоровью и дают владельцу возможность ежедневно радовать питомца вкусным и полезным перекусом.",
+   "Кремовая текстура позволяет давать лакомство прямо из пакетика – что особо удобно для поощрения во время дрессировки, укрепления эмоциональной связи, в путешествиях или при визите к ветеринару. Высокое содержание влаги (88 %) способствует оптимальному питьевому режиму, что особенно важно для кошек.",
+   "Без зерновых, сои, искусственных красителей, ароматизаторов и ГМО – чистый состав для здорового ежедневного рациона. Произведено в Европейском союзе согласно самым высоким стандартам качества с использованием тщательно отобранных сертифицированных ингредиентов.",
+   "Данные лакомства – это ответственный выбор владельцев, которые стремятся радовать питомца не только вкусными, но и функциональными продуктами, помогающими обогатить ежедневный рацион."
+  ],
+  "feeding": "Предназначено только для дополнительного кормления. Рекомендуется давать вместе с полнорационным кормом для сбалансированного питания. Рекомендуемое количество в зависимости от веса кошки: 1–2 кг – 2–3 пакетика в день; 2–4 кг – 3–4 пакетика; свыше 4 кг – 4–5 пакетиков. У питомца всегда должна быть свежая и чистая вода. Количество является рекомендуемым – оно корректируется индивидуально согласно потребностям.",
+  "comp": "Рыбный бульон, тунец 28 %, лосось 18 %, тапиоковый крахмал, гидролизованная рыба, целлюлоза, лососевое масло, пивные дрожжи, минералы, шелуха семян псиллиума 0,3 %, инулин (источник FOS), сушеные водоросли Schizochytrium sp. 0,16 %, рыбный коллаген 0,1 %."
+ },
+ "en": {
+  "full": [
+   "Nature’s Protection Superior Care Skin&Coat creamy functional snacks for adult cats with tuna and salmon is a convenient creamy functional snack in 4 × 15 g sachets for supplementary feeding only.",
+   "The recipe is built around tuna (28 %), salmon (18 %) and salmon oil. It helps support healthy skin and a shiny coat, contributes to daily wellbeing and gives owners a chance to share a tasty, wholesome moment with their pet every day.",
+   "The creamy texture allows the snack to be fed straight from the sachet — a convenient choice for training rewards, bonding moments, travel or vet visits. The high moisture content (88 %) contributes to daily fluid intake, which is especially important for cats.",
+   "Free of grains, soy, artificial colours, flavours and GMO — a clean-label choice for daily routines. Made in the European Union to high quality standards, using carefully selected, certified ingredients.",
+   "A responsible choice for owners who want to treat their pet not just to flavour but also to functional ingredients that support daily nutrition."
+  ],
+  "feeding": "For supplementary feeding only. Recommended to feed alongside a complete food to keep the diet balanced. Suggested amounts by cat weight: 1–2 kg — 2–3 sachets per day; 2–4 kg — 3–4 sachets; over 4 kg — 4–5 sachets. Clean, fresh water should be available at all times. Amounts are guidelines only — adjust to individual needs.",
+  "comp": "Fish broth, tuna 28 %, salmon 18 %, tapioca starch, hydrolysed fish, cellulose, salmon oil, brewer’s yeast, minerals, psyllium husk 0.3 %, inulin (source of FOS), dried algae Schizochytrium sp. 0.16 %, fish collagen 0.1 %."
+ }
+};
+FULL_DESC["cats||BOOST · Soft chews||BOOST Anti-Hairball"] = {
+ "az": {
+  "full": [
+   "Tük topaları pişiklərdə, xüsusilə uzuntüklülərdə və mövsümi tüktökmə dövründə tez-tez rast gəlinən problemdir. Nature’s Protection BOOST Anti-Hairball yumşaq çeynənən əlavələri onların əmələ gəlməsini azaltmağa və təbii yolla xaric olunmasını dəstəkləməyə kömək etmək üçün hazırlanıb.",
+   "Formulda psillium qabığı var — udulmuş tüklərin həzm traktından rahat keçməsinə kömək edən təbii lif mənbəyi. Prebiotik lif olan inulin bağırsaq mikroflorasının balansına töhfə verir və normal həzmi dəstəkləyir.",
+   "Qurudulmuş alma püresi və kətan toxumu əlavə lif verir və həzmin müntəzəmliyini qorumağa kömək edir. Pişiklər üçün əvəzolunmaz amin turşusu olan taurin ümumi rifaha töhfə verir və normal fizioloji funksiyaları dəstəkləyir.",
+   "Klinoptilolit (Microzeogen®) daxili balansı dəstəkləməyə kömək edir.",
+   "Yumşaq çeynənən forma gündəlik qəbulu asan və xoş edir, adi qulluğu sadə vərdişə çevirir.",
+   "Bu, sadəcə əlavə deyil — pişiyinizin həzm rahatlığına gündəlik dəstəkdir: tük topalarının yaratdığı narahatlığı azaltmağa və ümumi rifahı qorumağa kömək edir."
+  ],
+  "feeding": "Əsas yemləmələrin arasında verin. Tövsiyə olunan gündəlik miqdarı aşmayın. Təmiz, təzə su həmişə əlçatan olmalıdır.\nTövsiyə olunan gündəlik miqdar:\n• 4 kq-a qədər – 1 tablet\n• 4 kq-dan çox – 2 tablet",
+  "comp": "İnaktivləşdirilmiş pivə mayası, kartof nişastası, bitki qliserini, kartof lopaları, qurudulmuş alma püresi, psillium tozu, hidrolizə olunmuş heyvan zülalları, inulin, təmizlənmiş kokos yağı, tapioka unu, qızılbalıq yağı, kətan toxumu tozu."
+ },
+ "ru": {
+  "full": [
+   "Комки шерсти в желудке – распространённая проблема, особенно у длинношерстных кошек и в периоды линьки. Мягкие жевательные добавки Nature’s Protection BOOST Anti-Hairball разработаны для снижения образования и поддержания их выведения.",
+   "Формула содержит шелуху псиллиума – натуральный источник клетчатки, поддерживающий прохождение шерсти через пищеварительный тракт. Инулин, пребиотическая клетчатка, способствует балансу микрофлоры кишечника и пищеварению.",
+   "Сушёная яблочная масса и льняная мука обеспечивают дополнительную поддержку клетчаткой для улучшения стула. Таурин, незаменимая аминокислота, способствует общему здоровью и поддержанию физиологических функций кошки.",
+   "Клиноптилолит (Microzeogen®) помогает поддерживать внутренний баланс.",
+   "Мягкая жевательная форма делает ежедневный приём добавок удобным, превращая рутинный уход в приятную привычку.",
+   "Это больше, чем добавка – это ежедневная поддержка пищеварительного тракта кошки, помогающая снизить дискомфорт и предотвратить образование комков шерсти в желудке."
+  ],
+  "feeding": "Давать между основными кормлениями. Не превышать рекомендуемую суточную дозу. У питомца всегда должен быть доступ к чистой воде.\nРекомендуемая суточная доза:\n• До 4 кг – 1 мягкая жевательная таблетка\n• Более 4 кг – 2 мягких жевательных таблетки",
+  "comp": "Инактивированные прессованные дрожжи, картофельный крахмал, растительный глицерин, картофельные хлопья, сушёная яблочная масса, порошок псиллиума, гидролизованные животные белки, инулин, рафинированное кокосовое масло, мука тапиоки, лососевое масло, льняная мука."
+ },
+ "en": {
+  "full": [
+   "Hairballs are a common issue for cats, especially those with longer coats or during seasonal shedding. Nature’s Protection BOOST Anti-Hairball soft chew supplements are designed to help reduce their formation and support natural elimination.",
+   "The formula contains psyllium husk – a natural source of fibre that helps support the smooth passage of ingested hair through the digestive tract. Inulin, a prebiotic fibre, contributes to a balanced gut microbiome and supports normal digestion.",
+   "Dried apple pulp and linseed provide additional fibre support, helping maintain digestive regularity. Taurine, an essential amino acid for cats, contributes to overall well-being and supports normal physiological functions.",
+   "Clinoptilolite (Microzeogen®) helps support internal balance.",
+   "The soft chew format makes daily supplementation easy and enjoyable, helping turn routine care into a simple habit.",
+   "This is more than a supplement – it is daily support for your cat’s digestive comfort, helping reduce hairball discomfort and maintain overall well-being."
+  ],
+  "feeding": "Give between regular meals. Do not exceed the recommended daily amount. Fresh, clean water should be available at all times.\nRecommended daily amount:\n• Up to 4 kg – 1 soft chew\n• Over 4 kg – 2 soft chews",
+  "comp": "Inactivated brewer’s yeast, potato starch, vegetable glycerin, potato flakes, dried apple pulp, psyllium powder, hydrolysed animal proteins, inulin, refined coconut oil, tapioca flour, salmon oil, linseed powder."
+ }
+};
+FULL_DESC["dogs||BOOST · Soft chews||BOOST Calming Support"] = {
+ "az": {
+  "full": [
+   "İtlər müxtəlif vəziyyətlərdə stres yaşaya bilər — səfər zamanı, mühit dəyişəndə, tək qalanda və ya güclü qıcıqlandırıcılara məruz qalanda. Nature’s Protection BOOST Calming Support yumşaq çeynənən əlavələri emosional balansı və daha sakit vəziyyəti qorumağa kömək edən gündəlik qida dəstəyi kimi hazırlanıb.",
+   "Formul serotoninin sintezində iştirak edən və daha rahat əhval-ruhiyyəni dəstəkləyə bilən amin turşusu L-triptofanla zənginləşdirilib. Maqnezium qlisinat sinir sisteminin normal işində mühüm rol oynayır və rahatlamağa, ümumi balansa töhfə verə bilər.",
+   "Valeriana kökü ekstraktı, melissa və aşvaqanda kimi bitki inqrediyentləri ənənəvi olaraq sakitləşdirici xüsusiyyətlərinə görə qiymətləndirilir; L-teanin olan yaşıl çay ekstraktı isə yuxululuq yaratmadan rahatlamağa kömək edə bilər.",
+   "Bundan əlavə, formuldakı klinoptilolit (seolit) daxili balansı dəstəkləməyə və ümumi rifaha töhfə verə bilər.",
+   "Yumşaq və dadlı tekstura bu əlavələri itin gündəlik rejiminə asanlıqla daxil etməyə imkan verir — həm ev heyvanı, həm də sahibi üçün stressiz.",
+   "Bu, sadəcə əlavə deyil — itinizin müxtəlif vəziyyətlərdə özünü daha sakit, təhlükəsiz və rahat hiss etməsinə kömək etmək üçün düşünülmüş gündəlik dəstək sistemidir."
+  ],
+  "feeding": "Əlavə yem əsas yemləmələrin arasında verilə bilər. Tövsiyə olunan gündəlik dozanı aşmayın. Təzə içməli su həmişə əlçatan olmalıdır.\nTövsiyə olunan gündəlik miqdar:\n• 10 kq-a qədər – 1 tablet\n• 10–30 kq – 2 tablet\n• 30 kq-dan çox – 3 tablet",
+  "comp": "İnaktivləşdirilmiş pivə mayası, kartof nişastası, bitki qliserini, kartof lopaları, qurudulmuş alma püresi, tapioka unu, çətənə toxumu yağı, təmizlənmiş kokos yağı, hidrolizə olunmuş heyvan zülalları, maqnezium qlisinat, aşvaqanda tozu, melissa tozu, kətan toxumu tozu."
+ },
+ "ru": {
+  "full": [
+   "Собаки могут испытывать стресс в разных ситуациях — во время поездок, при изменении окружения, наличии внешних раздражителей и когда остаются одни. Мягкие жевательные добавки Nature’s Protection BOOST Calming Support разработаны для ежедневной поддержки эмоционального баланса и спокойствия.",
+   "Формула обогащена L-триптофаном — аминокислотой, участвующей в синтезе серотонина, которая способствует расслаблению. Глицинат магния играет важную роль в нормальном функционировании нервной системы и способствует эмоциональному балансу.",
+   "Растительные компоненты, такие как экстракт корня валерианы, мелисса и ашваганда, традиционно ценятся за успокаивающие свойства, а экстракт зелёного чая с L-теанином также способствует расслаблению без сонливости.",
+   "Более того, находящийся в составе клиноптилолит (зеолит), помогает поддерживать внутреннее равновесие и общее здоровье.",
+   "Мягкая и приятная текстура делает данные добавки легко интегрируемыми в ежедневный рацион собаки — без стресса (ни для питомца, ни для владельца).",
+   "Это больше, чем добавка — это продуманная ежедневная система обогащения рациона, помогающая собаке чувствовать себя спокойнее и комфортнее в самых разных ситуациях."
+  ],
+  "feeding": "Давать между основными кормлениями. Не превышать рекомендуемую суточную дозу. У питомца всегда должен быть доступ к чистой воде.\nРекомендуемая суточная доза:\n• До 10 кг – 1 мягкая жевательная таблетка\n• 10–30 кг – 2 мягкие жевательные таблетки\n• Свыше 30 кг – 3 мягкие жевательные таблетки",
+  "comp": "Инактивированные пивные дрожжи, картофельный крахмал, растительный глицерин, картофельные хлопья, сушёная яблочная мякоть, тапиоковая мука, масло семян конопли, рафинированное кокосовое масло, гидролизованные белки животного происхождения, глицинат магния, порошок ашваганды, порошок мелиссы, порошок льняного семени."
+ },
+ "en": {
+  "full": [
+   "Dogs can experience stress in various situations – during travel, environmental changes, when left alone or exposed to strong stimuli. Nature’s Protection BOOST Calming Support soft chew supplements are designed as a daily nutritional support solution to help maintain emotional balance and a calmer state.",
+   "The formula is enriched with L-tryptophan – an amino acid involved in serotonin synthesis, which may help support a more relaxed mood. Magnesium glycinate plays an important role in normal nervous system function and may contribute to relaxation and overall balance.",
+   "Plant-based ingredients such as valerian root extract, lemon balm and ashwagandha are traditionally valued for their calming properties, while green tea extract containing L-theanine may help promote relaxation without causing drowsiness.",
+   "Additionally, clinoptilolite (zeolite) included in the formula may help support internal balance and contribute to overall well-being.",
+   "The soft, palatable texture makes these supplements easy to integrate into your dog’s daily routine – stress-free for both pet and owner.",
+   "This is more than just a supplement – it is a thoughtfully developed daily support system designed to help your dog feel calmer, more secure and comfortable in different situations."
+  ],
+  "feeding": "Give between regular meals. Do not exceed the recommended daily dose. Fresh drinking water should always be available.\nRecommended daily amount:\n• Up to 10 kg – 1 soft chew\n• 10–30 kg – 2 soft chews\n• Over 30 kg – 3 soft chews",
+  "comp": "Inactivated brewer’s yeast, potato starch, vegetable glycerin, potato flakes, dried apple pulp, tapioca flour, hemp seed oil, refined coconut oil, hydrolysed animal proteins, magnesium glycinate, ashwagandha powder, lemon balm powder, linseed powder."
+ }
+};
+FULL_DESC["dogs||BOOST · Soft chews||BOOST Joint Support"] = {
+ "az": {
+  "full": [
+   "Oynaqların sağlamlığı itin hərəkətliliyi, rahatlığı və ümumi həyat keyfiyyəti üçün vacibdir — it aktiv, yaşlı olsun və ya sadəcə əlavə dəstəyə ehtiyac duysun. Nature’s Protection BOOST Joint Support yumşaq çeynənən əlavələri oynaqların elastikliyini qorumağa və gündəlik hərəkəti dəstəkləməyə kömək etmək üçün hazırlanıb.",
+   "Formulda qığırdağın mühüm struktur komponentləri olan və oynaqların bütövlüyünü qorumağa kömək edə bilən qlükozamin və xondroitin kimi əsas funksional inqrediyentlər birləşdirilib. MSM (metilsulfonilmetan) və yaşıldodaqlı midiya oynaqların rahatlığı və hərəkətliliyi üçün əlavə dəstək verir.",
+   "Kollagen (Colartix®) və hialuron turşusu oynaqların quruluşunu və sürtkü mayesini dəstəkləmək üçün əlavə olunub, bu da daha rahat hərəkətə töhfə verir. C vitamini kollagenin sintezində rol oynayır, E vitamini isə hüceyrələri oksidləşdirici stresdən qorumağa kömək edir.",
+   "Boswellia serrata və zerdəçal kimi bitki ekstraktları ənənəvi olaraq oynaqların rahatlığını qorumaqdakı dəstəkləyici roluna görə qiymətləndirilir; qara istiot ekstraktı isə aktiv maddələrin mənimsənilməsini yaxşılaşdırmağa kömək edir.",
+   "Formuldakı klinoptilolit (seolit) daxili balansı dəstəkləməyə kömək edə bilər.",
+   "Yumşaq çeynənən forma gündəlik qəbulu sadə və rahat edir, stressiz və davamlı dəstək təmin edir.",
+   "Bu, sadəcə əlavə deyil — itinizin aktiv, çevik və rahat qalmasına kömək etmək üçün hazırlanmış gündəlik hərəkətlilik dəstəyi sistemidir."
+  ],
+  "feeding": "Əlavə yem əsas yemləmələrin arasında verilə bilər. Tövsiyə olunan gündəlik dozanı aşmayın. Təzə içməli su həmişə əlçatan olmalıdır.\nTövsiyə olunan gündəlik miqdar:\n• 10 kq-a qədər – 1 tablet\n• 10–30 kq – 2 tablet\n• 30 kq-dan çox – 3 tablet",
+  "comp": "İnaktivləşdirilmiş pivə mayası, kartof nişastası, bitki qliserini, qurudulmuş alma püresi, kartof lopaları, heyvan toxumalarından qlükozamin (xərçəngkimilər), metilsulfonilmetan (MSM), yaşıldodaqlı midiya tozu, hidrolizə olunmuş heyvan zülalı, tapioka unu, təmizlənmiş kokos yağı, kollagen (Colartix®), qızılbalıq yağı, xondroitin sulfat, hialuron turşusu, kətan toxumu tozu."
+ },
+ "ru": {
+  "full": [
+   "Здоровье суставов является ключевым для подвижности, комфорта и общего качества жизни собаки — независимо от того, активна ли она, стареет или нуждается в дополнительной поддержке. Мягкие жевательные добавки Nature’s Protection BOOST Joint Support разработаны для поддержания гибкости суставов и облегчения повседневного движения.",
+   "Формула сочетает важные функциональные компоненты, такие как глюкозамин и хондроитин, которые являются структурными элементами хряща и помогают сохранять здоровье суставов. МСМ (метилсульфонилметан) и порошок мидиевых моллюсков обеспечивают дополнительную поддержку для подвижности суставов.",
+   "Коллаген (Colartix®) и гиалуроновая кислота способствуют поддержанию структуры суставов и их смазке, что способствует плавности движений. Витамин C участвует в синтезе коллагена, а витамин E защищает клетки от окислительного стресса.",
+   "Растительные экстракты босвеллии и куркумы традиционно ценятся за поддержания здоровья суставов, а экстракт черного перца повышает усвоение активных веществ.",
+   "В состав также входит клиноптилолит (зеолит), который способствует внутреннему балансу и общему здоровью питомца.",
+   "Мягкие жевательные таблетки делают ежедневное их применение простым и удобным, обеспечивая поддержку здоровья без стресса.",
+   "Это не просто добавка — это система поддержания подвижности, которая помогает собаке оставаться активной."
+  ],
+  "feeding": "Давать между основными кормлениями. Не превышать рекомендуемую суточную дозу. У питомца всегда должен быть доступ к чистой воде.\nРекомендуемая суточная доза:\n• До 10 кг – 1 мягкая жевательная таблетка\n• 10–30 кг – 2 мягкие жевательные таблетки\n• Свыше 30 кг – 3 мягкие жевательные таблетки",
+  "comp": "Инактивированные пивные дрожжи, картофельный крахмал, растительный глицерин, сушеные яблочные выжимки, картофельные хлопья, глюкозамин из тканей животных (панцири ракообразных), метилсульфонилметан (МСМ), порошок зеленомидиевых моллюсков, гидролизованный животный белок, мука тапиоки, очищенное кокосовое масло, коллаген (Colartix®), лососевое масло, сульфат хондроитина, гиалуроновая кислота, порошок семян льна."
+ },
+ "en": {
+  "full": [
+   "Joint health is essential for a dog’s mobility, comfort and overall quality of life – whether the dog is active, aging or simply requires additional support. Nature’s Protection BOOST Joint Support soft chew supplements are designed to help maintain joint flexibility and support everyday movement.",
+   "The formula combines key functional ingredients such as glucosamine and chondroitin, which are important structural components of cartilage and may help maintain joint integrity. MSM (methylsulfonylmethane) and green-lipped mussel provide additional support for joint comfort and mobility.",
+   "Collagen (Colartix®) and hyaluronic acid are included to help support joint structure and lubrication, contributing to smoother movement. Vitamin C plays a role in collagen synthesis, while vitamin E helps protect cells from oxidative stress.",
+   "Plant extracts such as Boswellia serrata and turmeric are traditionally valued for their supportive role in maintaining joint comfort, while black pepper extract helps improve absorption of active compounds.",
+   "Clinoptilolite (zeolite) included in the formula may help support internal balance.",
+   "The soft chew format makes daily supplementation simple and convenient, ensuring consistent support without stress.",
+   "This is more than just a supplement – it is a daily mobility support system designed to help your dog stay active, flexible and comfortable."
+  ],
+  "feeding": "Give between regular meals. Do not exceed the recommended daily dose. Fresh drinking water should always be available.\nRecommended daily amount:\n• Up to 10 kg – 1 soft chew\n• 10–30 kg – 2 soft chews\n• Over 30 kg – 3 soft chews",
+  "comp": "Inactivated brewer’s yeast, potato starch, vegetable glycerin, dried apple pulp, potato flakes, glucosamine from animal tissues (crustaceans), methylsulfonylmethane (MSM), green-lipped mussel powder, hydrolysed animal protein, tapioca flour, refined coconut oil, collagen (Colartix®), salmon oil, chondroitin sulphate, hyaluronic acid, flaxseed powder."
+ }
+};
+FULL_DESC["cats||BOOST · Soft chews||BOOST Urinary Support"] = {
+ "az": {
+  "full": [
+   "Sidik yollarının həssaslığı pişiklərdə tez-tez rast gəlinən problemdir və onların ümumi rahatlığına və davranışına təsir edə bilər. Nature’s Protection BOOST Urinary Support sidik sisteminin normal işini və gündəlik rifahı dəstəkləməyə kömək etmək üçün diqqətlə hazırlanmış əlavə yemdir.",
+   "Bu yumşaq çeynənən əlavələrdə diqqətlə seçilmiş inqrediyentlər birləşdirilib. Mərcanı sidik yollarının sağlamlığını dəstəkləmək üçün geniş istifadə olunan təbii inqrediyentdir. D-mannoza sidik yollarının təmizliyini qorumağa töhfə verə bilər, xitozan isə daxili balansı dəstəkləyir.",
+   "DL-metionin sidiyin uyğun pH balansını qorumağa kömək edə bilən əvəzolunmaz amin turşusudur. Bu inqrediyentlər birlikdə sidik sistemi üçün əlverişli mühit yaratmağa və ümumi rifahı dəstəkləməyə kömək edə bilər.",
+   "Yumşaq çeynənən forma əlavəni verməyi asanlaşdırır və o, hətta seçici pişiklər üçün də çox dadlıdır. Bu, pişiyin gündəlik rasionunu əlavə stres yaratmadan funksional inqrediyentlərlə zənginləşdirməyin sadə yoludur.",
+   "Nature’s Protection BOOST Urinary Support pişiyinin sidik yollarının sağlamlığına hər gün qayğı göstərmək istəyən sahiblər üçün praktik seçimdir."
+  ],
+  "feeding": "Əsas yemləmələrin arasında verin. Tövsiyə olunan gündəlik miqdarı aşmayın. Təmiz, təzə su həmişə əlçatan olmalıdır.\nTövsiyə olunan gündəlik miqdar:\n• 4 kq-a qədər – 1 tablet\n• 4 kq-dan çox – 2 tablet",
+  "comp": "İnaktivləşdirilmiş pivə mayası, kartof nişastası, bitki qliserini, mərcanı tozu, kartof lopaları, qurudulmuş alma püresi, hidrolizə olunmuş heyvan zülalları, xitozan, D-mannoza, təmizlənmiş kokos yağı, qızılbalıq yağı, tapioka unu, kətan toxumu tozu."
+ },
+ "ru": {
+  "full": [
+   "Чувствительность мочевыводящих путей — распространённая проблема у кошек, которая влияет на их общее здоровье и поведение. Nature’s Protection BOOST Urinary Support — тщательно разработанная пищевая добавка, предназначенная для поддержания мочевыводящей системы и ежедневного благополучия питомца.",
+   "Мягкие жевательные добавки содержат тщательно продуманное сочетание ингредиентов. Клюква широко используется как натуральное средство для поддержания здоровья мочевыводящих путей. D-манноза способствует очищению мочевыводящих путей, а хитозан помогает поддерживать внутренний баланс и общее здоровье питомца.",
+   "DL-метионин — незаменимая аминокислота, способствующая поддержанию оптимального pH мочи. Сочетание данных ингредиентов особо благоприятно для мочевыводящей системы, а также поддерживает общее здоровье домашнего животного.",
+   "Мягкая жевательная форма облегчает прием добавки и делает её привлекательной даже для самых привередливых кошек. Это простой способ обогатить ежедневный рацион кошки функциональными ингредиентами без дополнительного стресса.",
+   "Nature’s Protection BOOST Urinary Support — практичный выбор для владельцев, которые стремятся заботиться о здоровье мочевыводящих путей своей кошки."
+  ],
+  "feeding": "Давать между основными кормлениями. Не превышать рекомендованную суточную норму. У питомца всегда должен быть доступ к чистой воде.\nРекомендуемая суточная доза:\n• До 4 кг – 1 мягкая жевательная таблетка\n• Свыше 4 кг – 2 мягкие жевательные таблетки",
+  "comp": "Инактивированные пивные дрожжи, картофельный крахмал, растительный глицерин, порошок клюквы, картофельные хлопья, сушеная яблочная пульпа, гидролизованные животные белки, хитозан, D-манноза, очищенное кокосовое масло, лососевое масло, мука тапиоки, льняная мука."
+ },
+ "en": {
+  "full": [
+   "Urinary tract sensitivity is a common issue in cats and may affect their overall comfort and behavior. Nature’s Protection BOOST Urinary Support is a carefully formulated complementary feed designed to help support normal urinary system function and daily well-being.",
+   "These soft chew supplements contain a thoughtfully selected combination of ingredients. Cranberry is widely used as a natural ingredient to help support urinary tract health. D-mannose may contribute to maintaining urinary tract cleanliness, while chitosan supports internal balance.",
+   "DL-methionine is an essential amino acid that may help maintain an appropriate urinary pH balance. Together, these ingredients may help create a favorable environment for the urinary system and support overall well-being.",
+   "The soft chew format makes the supplement easy to administer and highly palatable, even for more selective cats. It offers a simple way to enrich your cat’s daily diet with functional ingredients without causing additional stress.",
+   "Nature’s Protection BOOST Urinary Support is a practical choice for pet owners who want to care for their cat’s urinary health every day."
+  ],
+  "feeding": "Give between regular meals. Do not exceed the recommended daily amount. Fresh, clean water should be available at all times.\nRecommended daily amount:\n• Up to 4 kg – 1 soft chew\n• Over 4 kg – 2 soft chews",
+  "comp": "Inactivated brewer’s yeast, potato starch, vegetable glycerin, cranberry powder, potato flakes, dried apple pulp, hydrolysed animal proteins, chitosan, D-mannose, refined coconut oil, salmon oil, tapioca flour, linseed powder."
+ }
+};
+FULL_DESC["dogs||Superior Care · Hypoallergenic||Hypoallergenic Grain Free — Salmon"] = {
+ "az": {
+  "full": [
+   "NATURE’S PROTECTION SUPERIOR CARE qızılbalıqlı hipoallergen taxılsız quru qidası allergiyaya meylli və ya həssas mədəli bütün cins yetkin itlər üçün hazırlanıb. Əsas protein qızılbalıqdır (42 %), taxılları isə qurudulmuş kartof və noxud əvəz edir.",
+   "Prebiotik FOS faydalı bağırsaq bakteriyaları üçün qida rolunu oynayır və rahat həzmi, normal formalı nəcisi qorumağa kömək edə bilər. Şəkər çuğunduru pulpası müntəzəm həzmi dəstəkləyə bilən fermentləşən lif əlavə edir, yukka isə nəcis iyini azaltmağa kömək edə bilər. Çöküntü mənşəli təbii mineral olan klinoptilolit həzm traktında arzuolunmaz maddələri bağlamağa kömək edə bilər.",
+   "Allergiyaya meylli itlərdə dəri və tük də eyni diqqətə layiqdir. Qızılbalıq yağı və kətan toxumu elastik dərini və parlaq tükü qorumağa kömək edə bilən omeqa-3 yağ turşuları verir. Quş yağı omeqa-6 və gündəlik aktivlik üçün enerji əlavə edir, sink və biotin isə sağlam dərini və möhkəm tükü dəstəkləyə bilər.",
+   "Vitamin-mineral premiksli tam rasionlu qida kimi əlavə vasitələr olmadan əsas gündəlik yemək ola bilər. E vitamini immun funksiyasını, A vitamini isə yaxşı görməni dəstəkləməyə kömək edə bilər. Rozmarin və tokoferol ekstraktları qidanın daha uzun müddət təzə qalmasına kömək edir."
+  ],
+  "feeding": "Cədvəldə göstərilən miqdar yalnız tövsiyə xarakterlidir və hər ev heyvanının fərdi ehtiyaclarına görə tənzimlənməlidir. Gündəlik norma havanın temperaturundan, həyat tərzindən, temperamentdən və aktivlikdən asılı olaraq dəyişə bilər. Təmiz, təzə su həmişə əlçatan olmalıdır. Yemləmə normaları: cədvələ baxın.",
+  "comp": "Qızılbalıq 42 % (qurudulmuş və xırda üyüdülmüş qızılbalıq, dehidratlaşdırılmış qızılbalıq), qurudulmuş kartof, noxud, quş yağı, şəkər çuğunduru pulpası, qızılbalıq yağı, kətan toxumu, sellüloza, prebiotik fruktooliqosaxaridlər (FOS) 0,2 %, Mojave yukkası 0,02 %, qurudulmuş gülümbahar (lütein mənbəyi) 0,02 %."
+ },
+ "ru": {
+  "full": [
+   "NATURE’S PROTECTION SUPERIOR CARE — гипоаллергенный беззерновой сухой корм с лососем для взрослых собак всех пород, склонных к аллергии или с чувствительным пищеварением. Основной белок — лосось (42 %), а вместо зерновых — сушёный картофель и горох.",
+   "Пребиотик FOS служит пищей для полезных бактерий кишечника и может помогать поддерживать спокойное пищеварение и нормально сформированный стул. Жом сахарной свёклы добавляет ферментируемую клетчатку для регулярного пищеварения, а юкка может помогать уменьшать запах стула. Клиноптилолит — натуральный минерал осадочного происхождения — может помогать связывать нежелательные вещества в пищеварительном тракте.",
+   "Коже и шерсти собак, склонных к аллергии, нужно не меньше внимания. Лососёвое масло и льняное семя дают жирные кислоты омега-3, которые могут помогать сохранять кожу эластичной, а шерсть — блестящей. Птичий жир добавляет омега-6 и энергию для ежедневной активности, а цинк и биотин могут поддерживать здоровье кожи и крепость шерсти.",
+   "Это полнорационный корм с витаминно-минеральным премиксом: он может быть основным ежедневным рационом без дополнительных добавок. Витамин E может поддерживать иммунитет, а витамин A — хорошее зрение. Экстракты розмарина и токоферолов помогают корму дольше оставаться свежим."
+  ],
+  "feeding": "Указанные в таблице количества носят исключительно ориентировочный характер и должны корректироваться с учетом индивидуальных потребностей каждого питомца. Суточная норма корма может варьироваться в зависимости от температуры на улице, образа жизни, темперамента и уровня активности питомца. Чистая свежая вода должна быть доступна в любое время.\nРекомендации по кормлению: см. таблицу.",
+  "comp": "Лосось 42 % (сушеный и мелкоизмельченный лосось, дегидратированный лосось), сушеный картофель, горох, птичий жир, жом сахарной свеклы, лососевое масло, льняное семя, целлюлоза, пребиотические фруктоолигосахариды (FOS) 0,2 %, юкка мохаве 0,02 %, сушёная календула (источник лютеина) 0,02 %."
+ },
+ "en": {
+  "full": [
+   "NATURE’S PROTECTION SUPERIOR CARE hypoallergenic grain free dry dog food with salmon is made for adult dogs of all breeds that are prone to allergies or have a sensitive stomach. Salmon (42%) is the main protein, and dried potato and peas replace cereal grains.",
+   "FOS, a prebiotic, serves as food for beneficial gut bacteria and may help maintain smooth digestion and well-formed stools. Sugar beet pulp adds fermentable fiber that may help support regular digestion, and yucca may help reduce stool odor. Clinoptilolite, a natural mineral of sedimentary origin, may help bind unwanted substances in the digestive tract.",
+   "Skin and coat deserve the same attention in dogs prone to allergies. Salmon oil and linseed supply omega-3 fatty acids that may help maintain supple skin and a shiny coat. Poultry fat adds omega-6 and energy for everyday activity, while zinc and biotin may support healthy skin and a strong coat.",
+   "As a complete food with a vitamin and mineral premix, it can be the main daily meal without added supplements. Vitamin E may help support immune function, and vitamin A may help maintain good eyesight. Rosemary and tocopherol extracts help keep the food fresh for longer."
+  ],
+  "feeding": "The amounts presented in the table are guidelines only and should be adapted to the individual needs of each pet. Daily dose may vary according to outdoor temperature, pet’s lifestyle, temperament and activity. Clean, fresh water should be available at all times.\nFeeding guide: see table.",
+  "comp": "Salmon 42 % (dried and finely ground salmon, dehydrated salmon), dried potato, peas, poultry fat, sugar beet pulp, salmon oil, linseed, cellulose, prebiotic fructooligosaccharides (FOS) 0,2 %, mojave yucca 0,02 %, dried marigold (a source of lutein) 0,02 %."
+ }
+};
