@@ -53,6 +53,20 @@
       'why.f.outdoor': 'Çölə çıxan aktiv pişiklər üçün.',
       'why.vet': 'Baytar pəhrizi: yalnız həkimin tövsiyəsi ilə.',
       'why.araton': 'Araton — hər gün üçün balanslı qida, sərfəli seçim.',
+      'why.f.picky.dry': 'Dadlı resept — seçici heyvanlar da həvəslə yeyir.',
+      'why.f.picky.treat': 'Dadlı qəlyanaltı — iştahı az olanları həvəsləndirir.',
+      'why.art.juniorPoultry': 'Araton: süddən kəsildikdən yetkinliyə qədər bütün cins balalar üçün; asan həzm olunan quş əti.',
+      'why.art.juniorLamb': 'Araton: 2–12 aylıq bütün cins balalar üçün quzu əti; həssas həzmə də uyğundur.',
+      'why.art.adultLamb': 'Araton: 1 yaşdan bütün cinslər üçün quzu əti; həssas həzm və dəri-tük problemlərində tövsiyə olunur.',
+      'why.art.adultPoultry': 'Araton: xüsusi qida ehtiyacı olmayan yetkin itlər üçün gündəlik quş ətli qida.',
+      'why.art.active': 'Araton: aktiv itlər üçün — daha çox enerji (15 % yağ) və əzələ tonusu.',
+      'why.art.maxi': 'Araton: iri cinslər (25–80 kq) üçün; oynaqlar üçün qlükozamin və xondroitin ilə.',
+      'why.art.kitten': 'Araton: 1 yaşa qədər bütün cins pişik balaları üçün; asan həzm olunan quş əti.',
+      'why.art.salmon': 'Araton: qızılbalıq (18 %) — dəri və tük üçün omeqa-3 və omeqa-6; həssas həzmli və seçici pişiklərə də uyğundur.',
+      'why.art.outdoor': 'Araton: çölə çıxan və çox aktiv pişiklər üçün — daha çox protein və enerji.',
+      'why.art.sterilised': 'Araton: sterilizə olunmuş və çəki yığmağa meylli pişiklər üçün — az kalori, sidik yolları üçün balanslı minerallar.',
+      'note.coatAge': 'Bu tük rəngi üçün xüsusi quru qida bu yaşa uyğun deyil — yaşa uyğun qidalar seçilib.',
+      'note.coatSize': 'Bu tük rəngi üçün quru qida yalnız kiçik cinslər (10 kq-a qədər) üçündür — itin ölçüsünə uyğun qidalar seçilib.',
       'why.prime': 'Premium yaş qida: 98% heyvani protein.',
       'why.als': 'Bütün yaşlar və ölçülər üçün (All Life Stage).',
       'why.starterWhite': 'Ağ tüklü balaların ilk quru qidası.',
@@ -132,6 +146,20 @@
       'why.f.outdoor': 'Для активных кошек, которые гуляют на улице.',
       'why.vet': 'Ветеринарная диета: только по рекомендации врача.',
       'why.araton': 'Araton — сбалансированный корм на каждый день, выгодный выбор.',
+      'why.f.picky.dry': 'Вкусный рецепт — подходит и привередам.',
+      'why.f.picky.treat': 'Вкусное лакомство — хорошо мотивирует малоежек.',
+      'why.art.juniorPoultry': 'Araton: для щенков всех пород от отъёма до взрослого возраста; легкоусвояемая птица.',
+      'why.art.juniorLamb': 'Araton: ягнёнок для щенков всех пород от 2 до 12 месяцев; подходит и при чувствительном пищеварении.',
+      'why.art.adultLamb': 'Araton: ягнёнок для собак всех пород от 1 года; рекомендован при чувствительном пищеварении и проблемах кожи и шерсти.',
+      'why.art.adultPoultry': 'Araton: корм с птицей на каждый день для взрослых собак без особых потребностей в питании.',
+      'why.art.active': 'Araton: для активных собак — больше энергии (жир 15 %) и поддержка мышечного тонуса.',
+      'why.art.maxi': 'Araton: для крупных пород (25–80 кг); с глюкозамином и хондроитином для суставов.',
+      'why.art.kitten': 'Araton: для котят всех пород до 1 года; легкоусвояемая птица.',
+      'why.art.salmon': 'Araton: лосось (18 %) — омега-3 и омега-6 для кожи и шерсти; подходит и кошкам с чувствительным пищеварением, и привередам.',
+      'why.art.outdoor': 'Araton: для кошек, которые гуляют на улице или очень активны, — больше белка и энергии.',
+      'why.art.sterilised': 'Araton: для стерилизованных кошек и склонных к набору веса — меньше калорий, сбалансированные минералы для мочевыводящих путей.',
+      'note.coatAge': 'Корма с учётом этого окраса для такого возраста нет — подобраны корма по возрасту.',
+      'note.coatSize': 'Корм для такого окраса выпускается только для мелких пород (до 10 кг) — подобраны корма по размеру собаки.',
       'why.prime': 'Премиальный влажный корм: 98% животного белка.',
       'why.als': 'Для всех возрастов и размеров (All Life Stage).',
       'why.starterWhite': 'Первый сухой корм для щенков со светлой шерстью.',
@@ -211,6 +239,20 @@
       'why.f.outdoor': 'For active cats that go outdoors.',
       'why.vet': 'Veterinary diet: only on a vet’s recommendation.',
       'why.araton': 'Araton — balanced everyday food, a budget-friendly choice.',
+      'why.f.picky.dry': 'A tasty recipe that suits picky eaters too.',
+      'why.f.picky.treat': 'A tasty treat that tempts picky eaters.',
+      'why.art.juniorPoultry': 'Araton: for puppies of all breeds from weaning to adulthood; easily digestible poultry.',
+      'why.art.juniorLamb': 'Araton: lamb for puppies of all breeds aged 2–12 months; also suits sensitive digestion.',
+      'why.art.adultLamb': 'Araton: lamb for dogs of all breeds from 1 year; recommended for sensitive digestion and skin or coat problems.',
+      'why.art.adultPoultry': 'Araton: everyday poultry food for adult dogs with no special dietary needs.',
+      'why.art.active': 'Araton: for active dogs — more energy (15 % fat) and muscle tone.',
+      'why.art.maxi': 'Araton: for large breeds (25–80 kg); with glucosamine and chondroitin for the joints.',
+      'why.art.kitten': 'Araton: for kittens of all breeds up to 1 year; easily digestible poultry.',
+      'why.art.salmon': 'Araton: salmon (18 %) — omega-3 and omega-6 for skin and coat; also suits cats with sensitive digestion and picky eaters.',
+      'why.art.outdoor': 'Araton: for cats that go outdoors or are very active — more protein and energy.',
+      'why.art.sterilised': 'Araton: for sterilised cats and cats prone to weight gain — fewer calories, balanced minerals for the urinary tract.',
+      'note.coatAge': 'There is no coat-colour dry food for this age, so the picks follow the age.',
+      'note.coatSize': 'The dry food for this coat colour is made only for small breeds (up to 10 kg), so the picks follow your dog’s size.',
       'why.prime': 'Premium wet food: 98% animal protein.',
       'why.als': 'For all ages and sizes (All Life Stage).',
       'why.starterWhite': 'First dry food for light-coated puppies.',
@@ -368,7 +410,8 @@
 
   // ---------- Правила подбора ----------
   // b бренд · sp вид · n английское название в каталоге · k группа (dry | alt | wet | extra | vet)
-  // st возрасты · sz размеры · coat окрасы · req нужен хотя бы один из признаков · f вес признака
+  // st возрасты · sz размеры · coat окрасы · req нужен хотя бы один из признаков · not — не при этих признаках · f вес признака
+  // fits (Araton) — признаки из официального «для кого»
   // base базовый вес · why/why2 своё объяснение · vet ветеринарная диета · care средство ухода
   const A = ['adult', 'senior'], J = ['junior'], S = ['starter'], ALL = ['junior', 'adult', 'senior'];
   const P = [
@@ -392,13 +435,14 @@
     { b: 'np', sp: 'dogs', k: 'dry', n: 'Maxi Adult — Poultry', st: A, sz: ['large'], base: 4 },
     { b: 'np', sp: 'dogs', k: 'dry', n: 'Adult Lamb — Lamb', st: A, base: 3, why: 'why.adultLamb' },
     { b: 'np', sp: 'dogs', k: 'dry', n: 'Hypoallergenic Grain Free — Salmon', st: A, req: ['allergy', 'digestion', 'skin'], base: 3, f: { allergy: 5, digestion: 3, skin: 2 }, why: 'why.hypo' },
-    // ---- собаки · Araton (выгодная альтернатива)
-    { b: 'araton', sp: 'dogs', k: 'alt', n: 'Junior Poultry', st: J, base: 3 },
-    { b: 'araton', sp: 'dogs', k: 'alt', n: 'Junior Lamb', st: J, base: 2, f: { allergy: 1 } },
-    { b: 'araton', sp: 'dogs', k: 'alt', n: 'Adult Maxi', st: A, sz: ['large'], base: 3 },
-    { b: 'araton', sp: 'dogs', k: 'alt', n: 'Adult Active', st: ['adult'], base: 1, f: { active: 5 } },
-    { b: 'araton', sp: 'dogs', k: 'alt', n: 'Adult Lamb', st: A, base: 3, f: { allergy: 1 } },
-    { b: 'araton', sp: 'dogs', k: 'alt', n: 'Adult Poultry', st: A, base: 2 },
+    // ---- собаки · Araton (выгодная альтернатива). У Araton нет кормов по окрасу шерсти. fits — что корм учитывает по
+    // официальному «для кого»: альтернатива показывается, только если учитывает всё то же, что и подобранный Nature's Protection
+    { b: 'araton', sp: 'dogs', k: 'alt', n: 'Junior Poultry', st: J, base: 3, fits: ['digestion'], f: { digestion: 1 }, why: 'why.art.juniorPoultry' },
+    { b: 'araton', sp: 'dogs', k: 'alt', n: 'Junior Lamb', st: J, base: 2, fits: ['digestion', 'active'], f: { digestion: 2, active: 1 }, why: 'why.art.juniorLamb' },
+    { b: 'araton', sp: 'dogs', k: 'alt', n: 'Adult Maxi', st: A, sz: ['large'], base: 3, fits: ['joints'], f: { joints: 3 }, why: 'why.art.maxi' },
+    { b: 'araton', sp: 'dogs', k: 'alt', n: 'Adult Active', st: ['adult'], req: ['active'], base: 1, fits: ['active'], f: { active: 5 }, why: 'why.art.active' },
+    { b: 'araton', sp: 'dogs', k: 'alt', n: 'Adult Lamb', st: A, base: 3, fits: ['digestion', 'skin'], f: { digestion: 2, skin: 2 }, why: 'why.art.adultLamb' },
+    { b: 'araton', sp: 'dogs', k: 'alt', n: 'Adult Poultry', st: A, base: 2, fits: [], why: 'why.art.adultPoultry' },
     // ---- собаки · влажный корм
     { b: 'np', sp: 'dogs', k: 'wet', n: 'Prime Puppy — Chicken & Turkey', st: ['starter', 'junior'], base: 5, why2: 'why.prime' },
     { b: 'np', sp: 'dogs', k: 'wet', n: 'Lamb (Puppy)', st: ['starter', 'junior'], base: 4 },
@@ -466,13 +510,13 @@
     { b: 'np', sp: 'cats', k: 'dry', n: 'Red Cats — Herring (RCE)', st: A, coat: ['red'], base: 6 },
     { b: 'np', sp: 'cats', k: 'dry', n: 'Dark Cats — Herring (DCE)', st: A, coat: ['dark'], base: 6 },
     { b: 'np', sp: 'cats', k: 'dry', n: 'Sterilised — Poultry', st: A, req: ['sterilised', 'weight'], base: 3, f: { sterilised: 6, weight: 2 } },
-    { b: 'np', sp: 'cats', k: 'dry', n: 'Indoor — Poultry', st: A, base: 4, f: { indoor: 4, weight: 3 }, why: 'why.indoorBase' },
+    { b: 'np', sp: 'cats', k: 'dry', n: 'Indoor — Poultry', st: A, not: ['outdoor'], base: 4, f: { indoor: 4, weight: 3 }, why: 'why.indoorBase' },
     { b: 'np', sp: 'cats', k: 'dry', n: 'Sensitive Digestion — Poultry', st: A, req: ['digestion'], base: 3, f: { digestion: 7 } },
-    // ---- кошки · Araton
-    { b: 'araton', sp: 'cats', k: 'alt', n: 'Kitten', st: ['starter', 'junior'], base: 3 },
-    { b: 'araton', sp: 'cats', k: 'alt', n: 'Sterilised', st: A, req: ['sterilised', 'weight'], base: 2, f: { sterilised: 4, weight: 2 } },
-    { b: 'araton', sp: 'cats', k: 'alt', n: 'Outdoor', st: ['adult'], req: ['outdoor'], base: 2, f: { outdoor: 5 } },
-    { b: 'araton', sp: 'cats', k: 'alt', n: 'Salmon', st: A, base: 2, f: { skin: 1 } },
+    // ---- кошки · Araton (выгодная альтернатива; окрасов нет, fits — по официальному «для кого»)
+    { b: 'araton', sp: 'cats', k: 'alt', n: 'Kitten', st: ['starter', 'junior'], base: 3, fits: ['digestion'], why: 'why.art.kitten' },
+    { b: 'araton', sp: 'cats', k: 'alt', n: 'Sterilised', st: A, req: ['sterilised', 'weight'], base: 2, fits: ['sterilised', 'weight', 'urinary'], f: { sterilised: 4, weight: 2, urinary: 1 }, why: 'why.art.sterilised' },
+    { b: 'araton', sp: 'cats', k: 'alt', n: 'Outdoor', st: ['adult'], req: ['outdoor'], base: 2, fits: ['outdoor', 'digestion'], f: { outdoor: 5, digestion: 1 }, why: 'why.art.outdoor' },
+    { b: 'araton', sp: 'cats', k: 'alt', n: 'Salmon', st: A, base: 2, fits: ['skin', 'digestion', 'picky'], f: { skin: 2, digestion: 1, picky: 1 }, why: 'why.art.salmon' },
     // ---- кошки · влажный корм
     { b: 'np', sp: 'cats', k: 'wet', n: 'Starter Mousse — Chicken', st: ['starter', 'junior'], base: 5, why: 'why.mousse' },
     { b: 'np', sp: 'cats', k: 'wet', n: 'Prime Kitten — Chicken & Turkey', st: J, base: 5, why2: 'why.prime' },
@@ -575,17 +619,32 @@
   }
 
   // ---------- Подбор ----------
+  function eligible(d, coat) {
+    if (d.sp && d.sp !== st.sp) return false;
+    if (d.only && d.only !== st.sp) return false;
+    if (d.st && d.st.indexOf(st.age) < 0) return false;
+    if (d.sz && (st.sp !== 'dogs' || d.sz.indexOf(st.size) < 0)) return false;
+    if (d.coat && d.coat.indexOf(coat) < 0) return false;
+    if (d.not && d.not.some(has)) return false;
+    return true;
+  }
+  // Есть ли сухой корм Nature's Protection под этот вид, возраст, размер и окрас, который учитывает деталь (test)
+  const npDry = (coat, test) => P.some(d => d.k === 'dry' && d.b === 'np' && eligible(d, coat) && test(d));
+  // Выгодная альтернатива (Araton) должна быть так же точна, как основной подбор: если для этого окраса есть корм
+  // Nature's Protection — Araton не предлагаем (кормов по окрасу у него нет); каждый признак, который учитывают
+  // подходящие корма Nature's Protection, должен быть и в «для кого» корма Araton (fits)
+  function altFits(d, coat) {
+    if (coat !== 'other' && npDry(coat, x => !!x.coat)) return false;
+    return !st.feats.some(f => (d.fits || []).indexOf(f) < 0 &&
+      npDry(coat, x => (x.f && x.f[f] != null) || (x.req && x.req.indexOf(f) >= 0)));
+  }
   function pick(kind, limit) {
     const out = [], seen = [];
     const coat = skipCoat() ? 'other' : st.coat;
     P.forEach(d => {
-      if (d.k !== kind) return;
-      if (d.sp && d.sp !== st.sp) return;
-      if (d.only && d.only !== st.sp) return;
-      if (d.st && d.st.indexOf(st.age) < 0) return;
-      if (d.sz && (st.sp !== 'dogs' || d.sz.indexOf(st.size) < 0)) return;
-      if (d.coat && d.coat.indexOf(coat) < 0) return;
+      if (d.k !== kind || !eligible(d, coat)) return;
       if (d.req && !d.req.some(has)) return;
+      if (d.k === 'alt' && !altFits(d, coat)) return;
       const r = resolve(d, st.sp); if (!r || seen.indexOf(r.item) >= 0) return;
       seen.push(r.item);
       let s = d.base || 0;
@@ -598,6 +657,29 @@
     out.sort((a, b) => b.s - a.s);
     return out.slice(0, limit);
   }
+  // Основной сухой корм: два Nature's Protection и Araton как выгодная альтернатива; если Nature's Protection
+  // под эти детали нет, Araton остаётся единственным — тогда без пометки «альтернатива»
+  function dryPicks() {
+    const main = pick('dry', 2), alt = pick('alt', 1);
+    if (!main.length) alt.forEach(x => { x.solo = true; });
+    return main.concat(alt);
+  }
+  function notesFor() {
+    const n = [];
+    if (has('tears')) n.push('note.tears');
+    if (st.age === 'senior') n.push('note.senior');
+    if (st.age === 'starter') n.push('note.starter');
+    const cn = coatNote(); if (cn) n.push(cn);
+    return n;
+  }
+  // Окрас выбран, но корма по окрасу для этого возраста или размера нет — объясняем, почему подобраны обычные корма
+  function coatNote() {
+    const coat = skipCoat() ? 'other' : st.coat;
+    if (!coat || coat === 'other' || npDry(coat, x => !!x.coat)) return '';
+    const line = P.filter(d => d.k === 'dry' && d.b === 'np' && d.sp === st.sp && d.coat && d.coat.indexOf(coat) >= 0);
+    if (!line.length) return '';
+    return line.some(d => !d.st || d.st.indexOf(st.age) >= 0) ? 'note.coatSize' : 'note.coatAge';
+  }
   function reasons(x) {
     const d = x.d, R = [];
     const push = k => { const s = t(k); if (R.indexOf(s) < 0) R.push(s); };
@@ -605,9 +687,10 @@
     const whiteLine = d.coat && d.coat.length === 1 && d.coat[0] === 'white' && !d.care;
     if (d.coat && !d.care) push(d.coat.length > 1 ? 'why.coat.reddark' : 'why.coat.' + d.coat[0]);
     if (d.sz && st.size !== 'medium') push('why.size.' + st.size);
-    if (!d.quiet) x.hit.forEach(f => { if (!(f === 'tears' && (whiteLine || d.why === 'why.stainless'))) push('why.f.' + f); });
+    const fkey = f => f === 'picky' && d.k !== 'wet' ? 'why.f.picky.' + (d.k === 'extra' ? 'treat' : 'dry') : 'why.f.' + f;
+    if (!d.quiet) x.hit.forEach(f => { if (!(f === 'tears' && (whiteLine || d.why === 'why.stainless'))) push(fkey(f)); });
     if (d.vet) push('why.vet');
-    if (d.b === 'araton') push('why.araton');
+    if (d.b === 'araton' && !d.why) push('why.araton');
     if (d.why2) push(d.why2);
     if ((d.k === 'dry' || d.k === 'alt') && R.length < 3) {
       if (st.age === 'junior' && isLarge()) push('why.stage.junior.L');
@@ -738,7 +821,7 @@
     const it = x.r.item, L = lang();
     const tx = it[L] || it.ru || it.en || {};
     const id = (window.NP && NP.productId) ? NP.productId(it, x.r.brand) : '';
-    const tag = x.d.vet ? t('tag.vet') : x.d.k === 'alt' ? t('tag.alt') : x.d.care ? t('tag.care') : '';
+    const tag = x.d.vet ? t('tag.vet') : x.d.k === 'alt' ? (x.solo ? '' : t('tag.alt')) : x.d.care ? t('tag.care') : '';
     const pic = it.img ? '<img src="' + esc(it.img) + '" alt="" loading="lazy" decoding="async">' : '<span class="fnd-p__emo">' + esc(it.emoji || '🐾') + '</span>';
     return '<article class="fnd-p' + (x.d.vet ? ' fnd-p--vet' : '') + '" data-pid="' + esc(id) + '">' +
       '<div class="fnd-p__pic">' + pic + '</div>' +
@@ -752,7 +835,7 @@
   }
   function viewResults() {
     const groups = [
-      ['dry', pick('dry', 2).concat(pick('alt', 1))],
+      ['dry', dryPicks()],
       ['wet', pick('wet', 2)],
       ['extra', pick('extra', 4)],
       ['vet', pick('vet', 2)]
@@ -760,11 +843,7 @@
     const chips = summaryParts().map(s => '<li>' + esc(s) + '</li>').join('');
     let h = q('q.results') +
       '<div class="fnd-sum"><ul>' + chips + '</ul><button type="button" class="fnd-sum__edit" data-goto="breed">' + esc(t('edit')) + '</button></div>';
-    const notes = [];
-    if (has('tears')) notes.push('note.tears');
-    if (st.age === 'senior') notes.push('note.senior');
-    if (st.age === 'starter') notes.push('note.starter');
-    notes.forEach(n => { h += '<p class="fnd-note">' + ICON.info + '<span>' + esc(t(n)) + '</span></p>'; });
+    notesFor().forEach(n => { h += '<p class="fnd-note">' + ICON.info + '<span>' + esc(t(n)) + '</span></p>'; });
     if (!groups.length) h += '<p class="fnd-empty">' + esc(t('empty')) + '</p>';
     groups.forEach(g => {
       h += '<section class="fnd-g fnd-g--' + g[0] + '"><h3 class="fnd-g__h">' + esc(t('g.' + g[0])) + '</h3>' +
@@ -1047,5 +1126,5 @@
   else boot();
 
   const missing = () => { INDEX = null; return P.filter(d => (d.sp ? [d.sp] : d.only ? [d.only] : ['dogs', 'cats']).some(sp => !resolve(d, sp))).map(d => d.b + ' ' + (d.sp || '*') + ' ' + d.n); };
-  window.NPFinder = { open, close, missing, pick: (s) => { const keep = st; st = Object.assign(fresh(), s); const r = { dry: pick('dry', 2).concat(pick('alt', 1)), wet: pick('wet', 2), extra: pick('extra', 4), vet: pick('vet', 2) }; const out = {}; Object.keys(r).forEach(k => { out[k] = r[k].map(x => x.d.n + ' :: ' + reasons(x).join(' | ')); }); st = keep; return out; }, defs: P };
+  window.NPFinder = { open, close, missing, pick: (s) => { const keep = st; st = Object.assign(fresh(), s); const r = { dry: dryPicks(), wet: pick('wet', 2), extra: pick('extra', 4), vet: pick('vet', 2) }; const out = {}; Object.keys(r).forEach(k => { out[k] = r[k].map(x => x.d.n + (x.d.k === 'alt' ? (x.solo ? ' [araton]' : ' [alt]') : '') + ' :: ' + reasons(x).join(' | ')); }); out.notes = notesFor(); st = keep; return out; }, defs: P };
 })();
