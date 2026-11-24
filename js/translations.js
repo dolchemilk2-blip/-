@@ -470,14 +470,14 @@ const RANGES = [
   },
   {
     emoji: "🥫",
-    az: { name: "Wet & Mousse", desc: "Yaş qidalar və muslar: banka və paketlərdə şirəli ət parçaları." },
-    ru: { name: "Wet & Mousse", desc: "Влажные корма и муссы: сочные кусочки мяса в банках и паучах." },
+    az: { name: "Yaş qidalar və muslar", desc: "Yaş qidalar və muslar: banka və paketlərdə şirəli ət parçaları." },
+    ru: { name: "Влажные корма и муссы", desc: "Влажные корма и муссы: сочные кусочки мяса в банках и паучах." },
     en: { name: "Wet & Mousse", desc: "Wet foods and mousses: juicy meat pieces in cans and pouches." }
   },
   {
     emoji: "💊",
-    az: { name: "Supplements", desc: "Pişik və itlər üçün əlavələr, vitaminlər və detoks (MicroZeoGen sistemi)." },
-    ru: { name: "Supplements", desc: "Добавки, витамины и детокс для кошек и собак (система MicroZeoGen)." },
+    az: { name: "Qida əlavələri", desc: "Pişik və itlər üçün əlavələr, vitaminlər və detoks (MicroZeoGen sistemi)." },
+    ru: { name: "Добавки", desc: "Добавки, витамины и детокс для кошек и собак (система MicroZeoGen)." },
     en: { name: "Supplements", desc: "Supplements, vitamins and detox for cats and dogs (MicroZeoGen system)." }
   }
 ];

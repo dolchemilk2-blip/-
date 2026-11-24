@@ -26,7 +26,7 @@ Object.assign(TRANSLATIONS.az, {
   'home.coat.lead': 'Superior Care-in üç xətti tükün rəngini nəzərə alır. Heyvanınızın tük rəngini seçin.',
   'home.coat.group': 'Tük rəngi',
   'home.coat.white': 'Ağ',
-  'home.coat.red': 'Qırmızı',
+  'home.coat.red': 'Kürən',
   'home.coat.dark': 'Tünd',
   'home.coat.cta': 'Xəttə baxın',
   'home.brands.np': 'Pişik və itlər üçün qida və vitaminlər',

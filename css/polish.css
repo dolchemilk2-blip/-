@@ -1,0 +1,65 @@
+/* ===== Телефон: финальная полировка (≤720px). Подключается последним на главной и в каталоге ===== */
+
+/* короткая подпись карточки — только на телефоне */
+.product__cat .pc-short { display: none; }
+
+@media (max-width: 720px) {
+
+  /* ---------- Главная · первый экран: фото целиком сверху, текст на тёмной плашке под ним ----------
+     Раньше текст лежал поверх фото, и от снимка (16:9) на узком экране оставалось меньше половины. */
+  .hero--home { display: flex; flex-direction: column; height: auto; min-height: 0; background: #10201a; }
+  .hero--home .hero-bg { position: relative; inset: auto; z-index: 0; flex: none; order: 0; width: 100%; aspect-ratio: 16 / 10; background: #fff; }
+  .hero--home .hero-bg__scrim { display: none; }
+  /* плашка «наезжает» на фото скруглённым краем */
+  .hero--home .hero-home__controls {
+    position: relative; inset: auto; z-index: 2; order: 1;
+    display: flex; align-items: center; gap: 8px;
+    margin: -18px 0 0; padding: 16px var(--gutter) 0;
+    border-radius: 22px 22px 0 0; background: #10201a;
+    -webkit-backdrop-filter: none; backdrop-filter: none;
+  }
+  /* точки слайдера → тонкие полоски, как в «историях» */
+  .hero-home__dots { flex: 1 1 auto; display: flex; gap: 6px; padding: 0; }
+  .hero-dot { flex: 1 1 0; width: auto; height: 24px; }
+  .hero-dot::before { width: 100%; height: 3px; border-radius: 3px; background: rgba(255, 255, 255, .26); opacity: 1; scale: 1; transition: background-color 250ms ease; }
+  .hero-dot[aria-current="true"]::before { background: #fff; scale: 1; }
+  .hero-home__controls .hero-bg__toggle { flex: none; width: 36px; height: 36px; margin-right: -8px; background: transparent; color: rgba(255, 255, 255, .8); }
+  .hero-home__inner { order: 2; z-index: 2; padding-top: 10px; padding-bottom: 24px; justify-content: flex-start; background: #10201a; }
+  .hero-home__eyebrow { margin-bottom: 6px; color: #9fdcb5; letter-spacing: .06em; }
+  .hero-home__title { font-size: clamp(28px, 8vw, 32px); line-height: 1.08; }
+  .hero-home__text { margin: 8px 0 18px; color: rgba(255, 255, 255, .78); }
+  /* две кнопки рядом; если надпись не помещается (ru/en на узком экране) — друг под другом, без переноса текста */
+  .hero--home .hero-home__actions { flex-wrap: wrap; }
+  .hero--home .hero-home__actions > .btn--primary, .hero--home .hero-home__actions > .hero-home__link { flex: 1 1 140px; white-space: nowrap; }
+
+  /* ---------- Главная · «Brend haqqında»: текст сразу читается целиком (без подсветки слов при прокрутке) ---------- */
+  .mh-js .mh-words .mh-w { opacity: 1 !important; }
+  .home-about__content > p.home-about__lead { font-size: 18px; line-height: 1.45; }
+
+  /* ---------- Главная · цвет шерсти: упаковки крупнее, меньше пустоты ---------- */
+  .coat__stage { width: min(100%, 290px); }
+
+  /* ---------- Тексты целиком: короткие описания на главной и у шагов Tauro — без обрезки «…» ---------- */
+  .hero-home__text, .pick__lead, .coat__lead, .coat__text p, .home-values .value-card p, .tpl-bottle__short {
+    display: block; -webkit-line-clamp: unset; overflow: visible;
+  }
+
+  /* ---------- Каталог · карточки ---------- */
+  /* подпись над названием: короткая (последняя часть) и без «…»; если она повторяет название — её нет */
+  .product__body .product__cat .pc-full { display: none; }
+  .product__body .product__cat .pc-short { display: inline; }
+  .product__body .product__cat--none { display: none; }
+  .product__body .product__cat {
+    white-space: normal; overflow: hidden; text-overflow: clip;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+  }
+  /* название целиком: до трёх строк вместо двух с «…» */
+  .product__body .product__name, .product__body .product__open { -webkit-line-clamp: 3; }
+
+  /* заголовок полки: число идёт сразу за текстом, даже если заголовок в две строки */
+  .shelf-head__t { display: block; }
+  .shelf-head__n { display: inline; margin-left: 6px; white-space: nowrap; }
+
+  /* ---------- Окно товара: ссылка на сайт производителя — спокойнее ---------- */
+  .pmodal__src { font-size: 13px; color: var(--ink-2); text-decoration-color: rgba(0, 0, 0, .18); }
+}

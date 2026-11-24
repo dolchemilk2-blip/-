@@ -424,6 +424,16 @@ function coatOf(item) {
   return null;
 }
 
+// Короткая подпись карточки для телефона: последняя часть «A · B · C»; пусто, если она повторяет название
+function shortCat(cat, name) {
+  const parts = String(cat || '').split(' · ').map(s => s.trim()).filter(Boolean);
+  const last = parts[parts.length - 1] || '';
+  const norm = s => String(s || '').toLowerCase().replace(/<[^>]*>/g, ' ').replace(/[^0-9a-zа-яёəğıöüşç]+/gi, ' ').trim();
+  const n = ' ' + norm(name) + ' ', l = norm(last);
+  if (!l) return '';
+  return l.split(' ').every(w => w.length < 3 || n.includes(w)) ? '' : last;
+}
+
 function productCard(item, lang, id, uid, attrs) {
   const t = item[lang] || item.ru;
   const dict = TRANSLATIONS[lang] || TRANSLATIONS.ru;
@@ -443,12 +453,13 @@ function productCard(item, lang, id, uid, attrs) {
   const hasPid = !(id === undefined || id === null);
   const pid = hasPid ? ` data-pid="${id}"` : '';
   const did = uid ? ` data-id="${uid}"` : '';
+  const catHtml = x => { const s = shortCat(x.cat, x.name); return `<span class="product__cat${s ? '' : ' product__cat--none'}"><span class="pc-full">${x.cat}</span>${s ? `<span class="pc-short">${s}</span>` : ''}</span>`; };
   const more = `<span class="product__more">${dict['products.more'] || 'Подробнее'}<svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>`;
   return `
     <article class="product${coat ? ' product--coat product--coat-' + coat : ''} is-clickable spr-glare"${pid}${did}${attrs || ''}>
       <div class="product__img">${ribbon}${media}<div class="product__actions"></div></div>
       <div class="product__body">
-        <span class="product__cat">${t.cat}</span>
+        ${catHtml(t)}
         <h4 class="product__name">${hasPid ? `<button class="product__open" type="button">${t.name}</button>` : t.name}</h4>
         <p class="product__desc">${t.desc}</p>
         <div class="product__tags">${tags}</div>
