@@ -430,13 +430,9 @@ function shortCat(cat, name) {
   const last = parts[parts.length - 1] || '';
   const norm = s => String(s || '').toLowerCase().replace(/<[^>]*>/g, ' ').replace(/[^0-9a-zа-яёəğıöüşç]+/gi, ' ').trim();
   const n = ' ' + norm(name) + ' ', l = norm(last);
-  if (!l || SHORT_CAT_GENERIC.has(l)) return '';
+  if (!l) return '';
   return l.split(' ').every(w => w.length < 3 || n.includes(w)) ? '' : last;
 }
-// Общие слова, которые лишь повторяют раздел над рядом («Лакомства», «Влажный корм», «Аксессуар») — подпись не нужна
-const SHORT_CAT_GENERIC = new Set(['snacks', 'qəlyanaltılar', 'лакомства', 'long lasting snacks', 'kremli qəlyanaltılar',
-  'кремовые лакомства', 'creamy snacks', 'flowpack', 'yaş qida', 'yaş qida konserv', 'влажный корм', 'влажный корм консервы',
-  'wet food', 'wet food can', 'veterinary diet', 'aksesuar', 'аксессуар', 'accessory']);
 
 function productCard(item, lang, id, uid, attrs) {
   const t = item[lang] || item.ru;

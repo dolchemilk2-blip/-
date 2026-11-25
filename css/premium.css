@@ -1,69 +1,9 @@
-/* ===== Каталог: премиальный вид (все экраны). Подключается последним на странице каталога =====
-   Идея: карточка — снимок упаковки на мягком фоне и подпись под ним. Без «коробки», тегов, описания и «Подробнее»
-   (всё это — в окне товара), тонкая типографика, больше воздуха, нейтральные индикаторы, без коллажей перед рядами.
-   Все правила привязаны к #productsGrid — окно товара, поиск и главная не меняются. */
+/* ===== Каталог: спокойные заголовки и ряды без коллажей (все экраны). Подключается последним на странице каталога =====
+   Карточки товаров здесь НЕ меняются: описание, теги, подпись и «Ətraflı» — как были (styles.css, catalog-v2.css,
+   mobile-catalog.css). Здесь только заголовки вида / раздела / ряда, ряды без плиток-коллажей, тонкий ползунок,
+   колонки Superior Care и компактный верх страницы. Правила привязаны к #productsGrid (кроме верха страницы). */
 
-#productsGrid[data-brand="np"] { --card-bg: #f3f3ef; }
-#productsGrid { --pc-hover: rgba(0, 0, 0, .035); }
-
-/* ---------- 1. Карточка: фото + подпись ---------- */
-#productsGrid .product { background: transparent; border-radius: 0; box-shadow: none; }
-#productsGrid .product--coat-white, #productsGrid .product--coat-red, #productsGrid .product--coat-dark { box-shadow: none; }
-#productsGrid .product.spr-glare::after { display: none; }                  /* блик-«стекло» на коробке — коробки нет */
-#productsGrid .product__open::after { border-radius: 18px; }
-#productsGrid .product__img {
-  height: auto; aspect-ratio: 1 / 1; padding: 13%;
-  border-radius: 18px; background-color: var(--card-bg);
-  box-shadow: inset 0 0 0 999px transparent;
-  transition: box-shadow 300ms ease;
-}
-#productsGrid .product__img::before { left: 24%; right: 24%; bottom: 9%; height: 10px; }   /* тень под упаковкой */
-#productsGrid .product__img img { transition: transform 450ms cubic-bezier(.2, .7, .2, 1); }
-#productsGrid .product__body { flex: 1; display: flex; flex-direction: column; padding: 14px 2px 4px; }
-#productsGrid .product__cat {
-  display: block; margin: 0 0 6px; white-space: normal;
-  font: 500 11px/1.4 var(--font); letter-spacing: .07em; text-transform: uppercase; color: var(--ink-2);
-}
-#productsGrid .product__name { margin: 0; font: 500 16px/1.32 var(--font); letter-spacing: -0.01em; color: var(--ink); }
-/* подпись над названием — короткая (последняя часть «A · B · C») и только когда она не повторяет название */
-#productsGrid .product__cat .pc-full { display: none; }
-#productsGrid .product__cat .pc-short { display: inline; }
-#productsGrid .product__cat--none { display: none; }
-#productsGrid .product__desc, #productsGrid .product__tags, #productsGrid .product__more { display: none; }
-
-/* наведение: карточка не прыгает целиком — чуть темнеет фон и приподнимается упаковка */
-@media (hover: hover) and (pointer: fine) {
-  #productsGrid .product:hover { translate: none; }
-  #productsGrid .product.is-clickable:hover .product__img { box-shadow: inset 0 0 0 999px var(--pc-hover); }
-  #productsGrid .product.is-clickable:hover .product__img img { transform: translateY(-5px) scale(1.035); }
-  #productsGrid .product.is-clickable:hover .product__name { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
-}
-
-/* сердечко: тонкий значок без белого кружка; на компьютере — при наведении (или когда товар уже в избранном) */
-#productsGrid .product__actions { top: 8px; right: 8px; }
-#productsGrid .np-heart { background-color: transparent; box-shadow: none; color: rgba(29, 29, 31, .55); }
-#productsGrid .products .np-heart::before { background: transparent; box-shadow: none; }   /* телефон: без белого кружка */
-@media (hover: hover) and (pointer: fine) {
-  #productsGrid .product .np-heart:not([aria-pressed="true"]) { opacity: 0; transition: opacity 200ms ease, color 150ms ease; }
-  #productsGrid .product:hover .np-heart, #productsGrid .product:focus-within .np-heart { opacity: 1; }
-}
-
-/* метка окраса: маленькая и спокойная */
-#productsGrid .coat-ribbon {
-  top: 10px; bottom: auto; left: 10px; transform: none; gap: 5px; padding: 3px 8px 3px 6px;
-  font: 500 11px/1.2 var(--font); background: rgba(255, 255, 255, .72); box-shadow: none;
-}
-#productsGrid .coat-ribbon__dot { width: 7px; height: 7px; box-shadow: none; }
-
-/* Misoko: материал и звук — простой строкой под названием, без «пилюль» */
-#productsGrid[data-brand="misoko"] .product__cat { display: none; }   /* тип игрушки = раздел над рядом */
-#productsGrid[data-brand="misoko"] .products .product__tags { display: flex; gap: 0 8px; margin-top: 6px; max-height: none; }
-#productsGrid[data-brand="misoko"] .products .product__tags span {
-  padding: 0; background: none; font: 500 12px/1.4 var(--font); color: var(--ink-2);
-}
-#productsGrid[data-brand="misoko"] .products .product__tags span + span::before { content: '·'; margin-right: 8px; }
-
-/* ---------- 2. Заголовки: вид → раздел → ряд ---------- */
+/* ---------- 1. Заголовки: вид → раздел → ряд ---------- */
 #productsGrid .sp-band {
   margin: 0 0 28px; padding: 0 0 16px; gap: 14px; border-radius: 0;
   background: none; box-shadow: none; border-bottom: 1px solid var(--hairline);
@@ -102,7 +42,7 @@
   #productsGrid .shelf-all:hover { text-decoration: underline; text-underline-offset: 3px; }
 }
 
-/* ---------- 3. Ряды: тонкий нейтральный ползунок, сдержанные стрелки ---------- */
+/* ---------- 2. Ряды: тонкий нейтральный ползунок, сдержанные стрелки ---------- */
 #productsGrid .rail__track > .group-tile { display: none; }
 #productsGrid .rail__bar { height: 2px; margin-top: 22px; background: rgba(0, 0, 0, .06); }
 #productsGrid .rail__thumb { background: rgba(29, 29, 31, .5); }
@@ -111,20 +51,23 @@
 /* «Hamısı» на компьютере и планшете — ряд раскрывается сеткой */
 @media (min-width: 721px) {
   #productsGrid .cat-section .rail.is-grid .rail__track.products {
-    display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 210px), 1fr)); gap: 36px var(--gap);
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 210px), 1fr)); gap: var(--gap);
     overflow: visible; scroll-snap-type: none;
   }
   #productsGrid .rail.is-grid .rail__track > * { flex: none; }
   #productsGrid .rail.is-grid .rail__btn, #productsGrid .rail.is-grid .rail__bar { display: none; }
 }
+/* от 820px --per целое (3–6): в сетке столько же карточек в строке, сколько видно в ряду, — ширина та же */
+@media (min-width: 820px) {
+  #productsGrid .cat-section .rail.is-grid .rail__track.products { grid-template-columns: repeat(var(--per), minmax(0, 1fr)); }
+}
 
-/* ---------- 4. Superior Care по цвету шерсти: колонки без толстой цветной полосы ---------- */
+/* ---------- 3. Superior Care по цвету шерсти: колонки без толстой цветной полосы ---------- */
 #productsGrid .coat-col { border-top: 0; box-shadow: none; border: 1px solid var(--hairline); background: #fff; }
 #productsGrid .coat-col__dot { width: 10px; height: 10px; margin-top: 6px; box-shadow: none; }
 #productsGrid .coat-col__head h4 { font: 600 16px/1.3 var(--font); }
-#productsGrid .coat-block .products--col { gap: 20px 14px; }
 
-/* ---------- 5. Верх страницы (компьютер и планшет): сразу каталог, без большой вступительной плашки ---------- */
+/* ---------- 4. Верх страницы (компьютер и планшет): сразу каталог, без большой вступительной плашки ---------- */
 @media (min-width: 721px) {
   .page-hero { padding: 28px 0 6px; text-align: left; background-color: transparent; }
   .page-hero::before, .page-hero::after { display: none; }
@@ -134,12 +77,8 @@
   .page-hero .fnd-cta { flex: none; margin: 0; }
 }
 
-/* ---------- 6. Телефон ---------- */
+/* ---------- 5. Телефон ---------- */
 @media (max-width: 720px) {
-  #productsGrid .product__img { border-radius: 16px; padding: 12%; }
-  #productsGrid .product__body { padding: 10px 2px 2px; }
-  #productsGrid .product__cat { margin-bottom: 4px; font-size: 10.5px; }
-  #productsGrid .product__name { font-size: 15px; line-height: 1.28; min-height: 0; }
   #productsGrid .sp-band { margin-bottom: 18px; padding-bottom: 12px; }
   #productsGrid .sp-band__title { font-size: 26px; }
   #productsGrid .cat-section { margin-bottom: 36px; }
